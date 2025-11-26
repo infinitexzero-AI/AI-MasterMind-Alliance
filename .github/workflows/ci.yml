@@ -1,0 +1,103 @@
+name: CI - Mode 6 Tests & Build
+
+on:
+  push:
+    branches:
+      - automation-mode
+      - main
+      - feature/**
+  pull_request:
+    branches:
+      - automation-mode
+      - main
+
+jobs:
+  test:
+    name: Test & Lint
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Type check
+        run: npm run type-check
+
+      - name: Lint
+        run: npm run lint --if-present
+
+      - name: Run tests
+        run: npm test -- --coverage
+
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
+        with:
+          files: ./coverage/lcov.info
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false
+
+  build:
+    name: Build & Verify
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [18.x, 20.x]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Mode 6
+        run: npm run build
+
+      - name: Build Dashboard
+        run: npm run dashboard:build --if-present
+
+  integration:
+    name: Integration Check
+    runs-on: ubuntu-latest
+    needs: [test, build]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Verify Intent Router
+        run: node -e "console.log('Intent Router module loaded'); require('./automations/mode6/intent-router/intent-router.ts');"
+
+      - name: Verify Agent Dispatcher
+        run: node -e "console.log('Agent Dispatcher module loaded'); require('./automations/mode6/agent-routing/agent-dispatcher.ts');"
+
+      - name: Verify Memory Manager
+        run: node -e "console.log('Memory Manager module loaded'); require('./automations/mode6/memory/memory-manager.ts');"
