@@ -59,7 +59,7 @@ export class GrokAdapter {
       const userMessage = this.formatUserMessage(handoff);
 
       if (!this.apiKey) {
-        return this.mockExecute(handoff, userMessage);
+        return this.mockExecute(handoff);
       }
 
       const response = await this.callGrokAPI(userMessage);
@@ -80,13 +80,14 @@ export class GrokAdapter {
           duration,
         },
       };
-    } catch (error) {
+    } catch (error: unknown) {
       this.requestStats.failedRequests++;
+      const errorMessage = error instanceof Error ? error.message : typeof error === 'string' ? error : 'Unknown error';
       return {
         success: false,
         taskId: handoff.taskId,
         agentUsed: 'grok',
-        error: `Grok error: ${error instanceof Error ? error.message : String(error)}`,
+        error: `Grok error: ${errorMessage}`,
       };
     }
   }
@@ -146,14 +147,14 @@ export class GrokAdapter {
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      throw new Error(`Grok error: ${error.error?.message || 'Unknown error'}`);
+      const errorData = (await response.json()) as Record<string, any>;
+      throw new Error(`Grok error: ${errorData?.error?.message || 'Unknown error'}`);
     }
 
     return (await response.json()) as GrokResponse;
   }
 
-  private mockExecute(handoff: HandoffContext, userMessage: string): DispatchResult {
+  private mockExecute(handoff: HandoffContext): DispatchResult {
     const taskType = handoff.metadata?.taskType || 'general';
     return {
       success: true,

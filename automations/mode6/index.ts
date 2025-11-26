@@ -7,6 +7,10 @@
  * const orchestrator = new Mode6Orchestrator();
  */
 
+import { IntentRouter } from './intent-router/intent-router';
+import { AgentDispatcher } from './agent-routing/agent-dispatcher';
+import { MemoryManager } from './memory/memory-manager';
+
 export { IntentRouter } from './intent-router/intent-router';
 export type {
   TaskIntent,
@@ -18,8 +22,8 @@ export type {
   DispatchResult,
 } from './intent-router/types';
 
-export { AgentDispatcher } from '../mode6/agent-routing/agent-dispatcher';
-export { MemoryManager } from '../mode6/memory/memory-manager';
+export { AgentDispatcher } from './agent-routing/agent-dispatcher';
+export { MemoryManager } from './memory/memory-manager';
 
 // Agent Adapters
 export { default as ClaudeAdapter, type ClaudeAdapterConfig } from './agents/claude-adapter';
@@ -39,7 +43,7 @@ export class Mode6Orchestrator {
   constructor() {
     this.dispatcher = new AgentDispatcher();
     this.memory = new MemoryManager();
-    this.router = new IntentRouter(this.dispatcher, this.memory);
+    this.router = new IntentRouter();
   }
 
   /**

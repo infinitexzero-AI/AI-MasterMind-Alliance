@@ -17,7 +17,6 @@ export interface AgentAdapter {
 
 export class AdapterRegistry {
   private adapters: Map<string, AgentAdapter> = new Map();
-  private adapterConfigs: Record<string, unknown> = {};
 
   constructor() {
     this.initializeDefaultAdapters();

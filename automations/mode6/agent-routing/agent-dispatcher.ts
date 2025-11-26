@@ -88,7 +88,7 @@ export class AgentDispatcher {
   /**
    * Initialize adapter capabilities with config
    */
-  initializeCapabilities(config?: Record<string, any>) {
+  configureAdapters(config?: Record<string, any>) {
     if (config) {
       for (const [agentName, agentConfig] of Object.entries(config)) {
         // Update capabilities from config if provided
@@ -163,19 +163,19 @@ export class AgentDispatcher {
   /**
    * Execute task (legacy method for compatibility)
    */
-  private async executeTask(decision: RoutingDecision, handoff: HandoffContext): Promise<ExecutionResult> {
+  private async executeTask(_decision: RoutingDecision, _handoff: HandoffContext): Promise<ExecutionResult> {
     const startTime = Date.now();
-    const processingTime = this.estimateProcessingTime(decision.primaryAgent, handoff);
+    const processingTime = this.estimateProcessingTime('claude', _handoff);
     await new Promise((resolve) => setTimeout(resolve, processingTime));
 
     const executionTime = Date.now() - startTime;
 
     return {
-      taskId: decision.intentId,
-      agent: decision.primaryAgent,
+      taskId: _decision.intentId,
+      agent: _decision.primaryAgent,
       status: 'completed',
       output: {
-        summary: `Completed by ${decision.primaryAgent}`,
+        summary: `Completed by ${_decision.primaryAgent}`,
         timestamp: new Date().toISOString(),
       },
       metadata: {
@@ -190,7 +190,7 @@ export class AgentDispatcher {
   /**
    * Estimate processing time based on agent and task complexity
    */
-  private estimateProcessingTime(agent: AgentType, handoff: HandoffContext): number {
+  private estimateProcessingTime(agent: AgentType, _handoff: HandoffContext): number {
     const baseTime = 500;
     const agentLatencyMap = { instant: 0, standard: 200, high: 500 };
     const capabilities = this.agentCapabilities.get(agent)!;
@@ -200,32 +200,32 @@ export class AgentDispatcher {
   /**
    * Handle agent unavailability
    */
-  private async handleUnavailableAgent(
-    decision: RoutingDecision,
-    handoff: HandoffContext
+  private async _handleUnavailableAgent(
+    _decision: RoutingDecision,
+    _handoff: HandoffContext
   ): Promise<ExecutionResult> {
-    console.warn(`Agent ${decision.primaryAgent} unavailable, routing to backup`);
-    const backupAgent = this.getBackupAgent(decision.primaryAgent);
-    const backupDecision = { ...decision, primaryAgent: backupAgent };
-    return this.executeTask(backupDecision, handoff);
+    console.warn(`Agent ${_decision.primaryAgent} unavailable, routing to backup`);
+    const backupAgent = this.getBackupAgent(_decision.primaryAgent);
+    const backupDecision = { ..._decision, primaryAgent: backupAgent };
+    return this.executeTask(backupDecision, _handoff);
   }
 
   /**
    * Handle context overflow
    */
-  private async handleContextOverflow(
-    decision: RoutingDecision,
-    handoff: HandoffContext
+  private async _handleContextOverflow(
+    _decision: RoutingDecision,
+    _handoff: HandoffContext
   ): Promise<ExecutionResult> {
-    console.warn(`Context overflow for ${decision.primaryAgent}, escalating`);
+    console.warn(`Context overflow for ${_decision.primaryAgent}, escalating`);
 
     return {
-      taskId: decision.intentId,
-      agent: decision.primaryAgent,
+      taskId: _decision.intentId,
+      agent: _decision.primaryAgent,
       status: 'escalated',
       output: {
         reason: 'context-overflow',
-        escalationPath: decision.escalationPath,
+        escalationPath: _decision.escalationPath,
         recommendation: 'Split task and re-delegate with summarized context',
       },
       metadata: {
@@ -245,8 +245,10 @@ export class AgentDispatcher {
       supergrok: 'comet',
       comet: 'claude',
       chatgpt: 'claude',
+      grok: 'claude',
+      openai: 'claude',
     };
-    return modeRoutingTable[primaryAgent];
+    return modeRoutingTable[primaryAgent] || 'claude';
   }
 
   /**
@@ -263,7 +265,7 @@ export class AgentDispatcher {
   /**
    * Create sub-handoff for secondary agents
    */
-  private createSubHandoff(parentHandoff: HandoffContext, secondaryAgent: AgentType): HandoffContext {
+  private _createSubHandoff(parentHandoff: HandoffContext, secondaryAgent: AgentType): HandoffContext {
     return {
       ...parentHandoff,
       sourceMode: 'mode6-secondary',
@@ -274,7 +276,7 @@ export class AgentDispatcher {
   /**
    * Check if agent is currently available
    */
-  private isAgentAvailable(agent: AgentType): boolean {
+  private _isAgentAvailable(agent: AgentType): boolean {
     const capabilities = this.agentCapabilities.get(agent);
     return capabilities ? capabilities.availableNow : false;
   }

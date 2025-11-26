@@ -6,11 +6,6 @@
 
 import { HandoffContext, DispatchResult } from '../index';
 
-interface ClaudeMessage {
-  role: 'user' | 'assistant';
-  content: string;
-}
-
 interface ClaudeResponse {
   id: string;
   type: 'message';
@@ -101,15 +96,16 @@ export class ClaudeAdapter {
           duration,
         },
       };
-    } catch (error) {
+    } catch (error: unknown) {
       const duration = Date.now() - startTime;
       this.requestStats.failedRequests++;
 
+      const errorMessage = error instanceof Error ? error.message : typeof error === 'string' ? error : 'Unknown error';
       return {
         success: false,
         taskId: handoff.taskId,
         agentUsed: 'claude',
-        error: `Claude API error: ${error instanceof Error ? error.message : String(error)}`,
+        error: `Claude API error: ${errorMessage}`,
         metadata: { duration },
       };
     }
@@ -239,8 +235,8 @@ export class ClaudeAdapter {
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      throw new Error(`Claude API error (${response.status}): ${error.error?.message || 'Unknown error'}`);
+      const errorData = (await response.json()) as Record<string, any>;
+      throw new Error(`Claude API error (${response.status}): ${errorData?.error?.message || 'Unknown error'}`);
     }
 
     return (await response.json()) as ClaudeResponse;

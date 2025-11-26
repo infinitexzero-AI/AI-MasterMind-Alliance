@@ -58,7 +58,7 @@ export class OpenAIAdapter {
       const userMessage = this.formatUserMessage(handoff);
 
       if (!this.apiKey) {
-        return this.mockExecute(handoff, userMessage);
+        return this.mockExecute(handoff);
       }
 
       const response = await this.callOpenAIAPI(userMessage);
@@ -78,13 +78,14 @@ export class OpenAIAdapter {
           duration,
         },
       };
-    } catch (error) {
+    } catch (error: unknown) {
       this.requestStats.failedRequests++;
+      const errorMessage = error instanceof Error ? error.message : typeof error === 'string' ? error : 'Unknown error';
       return {
         success: false,
         taskId: handoff.taskId,
         agentUsed: 'openai',
-        error: `OpenAI error: ${error instanceof Error ? error.message : String(error)}`,
+        error: `OpenAI error: ${errorMessage}`,
       };
     }
   }
@@ -137,14 +138,14 @@ export class OpenAIAdapter {
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      throw new Error(`OpenAI error: ${error.error?.message || 'Unknown error'}`);
+      const errorData = (await response.json()) as Record<string, any>;
+      throw new Error(`OpenAI error: ${errorData?.error?.message || 'Unknown error'}`);
     }
 
     return (await response.json()) as OpenAICompletionResponse;
   }
 
-  private mockExecute(handoff: HandoffContext, userMessage: string): DispatchResult {
+  private mockExecute(handoff: HandoffContext): DispatchResult {
     return {
       success: true,
       taskId: handoff.taskId,
