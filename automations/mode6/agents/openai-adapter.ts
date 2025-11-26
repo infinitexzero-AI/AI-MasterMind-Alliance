@@ -3,7 +3,8 @@
  * Integrates OpenAI's GPT models and Assistants API with Mode 6 Agent Dispatcher
  */
 
-import { HandoffContext, DispatchResult } from '../index';
+import { configLoader } from '../config/env';
+import { HandoffContext, DispatchResult } from '../intent-router/types';
 
 interface OpenAICompletionResponse {
   id: string;
@@ -41,10 +42,11 @@ export class OpenAIAdapter {
   };
 
   constructor(config: OpenAIAdapterConfig = {}) {
-    this.apiKey = config.apiKey || process.env.OPENAI_API_KEY || '';
-    this.modelId = config.modelId || 'gpt-4-turbo';
-    this.maxTokens = config.maxTokens || 2048;
-    this.temperature = config.temperature || 0.7;
+    const configSettings = configLoader.getConfig();
+    this.apiKey = config.apiKey || configSettings.openai.apiKey;
+    this.modelId = config.modelId || configSettings.openai.model;
+    this.maxTokens = config.maxTokens || configSettings.openai.maxTokens;
+    this.temperature = config.temperature || configSettings.openai.temperature;
 
     if (!this.apiKey) {
       console.warn('[OpenAI Adapter] OPENAI_API_KEY not set; adapter will operate in mock mode.');
