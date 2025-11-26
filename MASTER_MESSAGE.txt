@@ -1,0 +1,24 @@
+Hello AILCC-Forge — I have new system files for the AILCC Framework.
+
+Please perform the following:
+
+1. Create the following files in the repo root:
+   - ARCHITECTURE.md
+   - MODE6_INTENT_ROUTER.md
+   - AGENT_ADAPTERS_OVERVIEW.md
+   - PERPLEXITY_SYNC_CHECKLIST.md
+   - PR_REVIEW_CHECKLIST.md
+   - AGENT_NAMING_PROTOCOL.md
+
+2. Stage, commit, and push to the branch:
+   docs/system-architecture
+
+3. Create a pull request titled:
+   "System Architecture + Agent Protocol Documentation Pack"
+
+4. After PR creation:
+   - Create PR #3 for `feature/agent-claude → automation-mode`
+   - Begin automated review of PR #2 (OpenAI)
+   - Prepare environment for Phase 3: Grok integration
+
+5. Acknowledge when completed.
