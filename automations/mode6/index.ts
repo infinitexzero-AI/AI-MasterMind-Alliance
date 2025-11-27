@@ -3,7 +3,7 @@
  * Exports core orchestration components and agent adapters
  * 
  * Usage:
- * import { Mode6Orchestrator, ClaudeAdapter, AdapterRegistry } from './automations/mode6';
+ * import { Mode6Orchestrator, ClaudeAdapter, AdapterRegistry, configLoader } from './automations/mode6';
  * const orchestrator = new Mode6Orchestrator();
  */
 
@@ -24,6 +24,9 @@ export type {
 
 export { AgentDispatcher } from './agent-routing/agent-dispatcher';
 export { MemoryManager } from './memory/memory-manager';
+
+// Configuration
+export { configLoader } from './config/env';
 
 // Agent Adapters
 export { default as ClaudeAdapter, type ClaudeAdapterConfig } from './agents/claude-adapter';
