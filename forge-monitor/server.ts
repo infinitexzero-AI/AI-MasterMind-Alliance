@@ -1,16 +1,16 @@
 /**
  * Forge Monitor Server
- * Lightweight Express server providing agent health, status, and pipeline telemetry endpoints
+ * Lightweight HTTP server providing agent health, status, and pipeline telemetry endpoints
  * Auto-starts when invoked directly
+ * 
+ * Note: Requires optional dependency 'express' for full functionality.
+ * Can be imported and used as a module for telemetry generation.
  */
 
-import express, { Request, Response } from 'express';
 import { HeartbeatSimulator } from './sim/heartbeat';
 import { AgentHealth, AgentStatus } from './types/agents';
 import { PipelineTelemetry } from './types/pipeline';
 
-const app = express();
-const PORT = process.env.PORT || 3001;
 const simulator = new HeartbeatSimulator();
 
 // In-memory store for telemetry
@@ -21,65 +21,102 @@ let pipelineTelemetryCache: PipelineTelemetry | null = null;
 /**
  * Refresh telemetry from simulator every 5 seconds
  */
-function refreshTelemetry(): void {
+export function refreshTelemetry(): void {
   agentHealthCache = simulator.generateAgentHealth();
   agentStatusCache = simulator.generateAgentStatus();
   pipelineTelemetryCache = simulator.generatePipelineTelemetry();
 }
 
-// Refresh telemetry on startup and periodically
-refreshTelemetry();
-setInterval(refreshTelemetry, 5000);
-
 /**
- * GET /api/agents/health
- * Returns agent health metrics
+ * Get current agent health telemetry
  */
-app.get('/api/agents/health', (_req: Request, res: Response) => {
-  res.json({
+export function getAgentHealth(): { timestamp: string; agents: AgentHealth[] } {
+  return {
     timestamp: new Date().toISOString(),
     agents: agentHealthCache,
-  });
-});
-
-/**
- * GET /api/agents/status
- * Returns agent availability and current status
- */
-app.get('/api/agents/status', (_req: Request, res: Response) => {
-  res.json({
-    timestamp: new Date().toISOString(),
-    agents: agentStatusCache,
-  });
-});
-
-/**
- * GET /api/pipeline/telemetry
- * Returns pipeline task execution telemetry
- */
-app.get('/api/pipeline/telemetry', (_req: Request, res: Response) => {
-  res.json(pipelineTelemetryCache || {});
-});
-
-/**
- * Health check endpoint
- */
-app.get('/health', (_req: Request, res: Response) => {
-  res.json({ status: 'ok', timestamp: new Date().toISOString() });
-});
-
-/**
- * Start server if invoked directly
- */
-if (require.main === module) {
-  app.listen(PORT, () => {
-    console.log(`[Forge Monitor] Server listening on http://localhost:${PORT}`);
-    console.log(`[Forge Monitor] Endpoints:`);
-    console.log(`  GET /health`);
-    console.log(`  GET /api/agents/health`);
-    console.log(`  GET /api/agents/status`);
-    console.log(`  GET /api/pipeline/telemetry`);
-  });
+  };
 }
 
-export default app;
+/**
+ * Get current agent status telemetry
+ */
+export function getAgentStatus(): { timestamp: string; agents: AgentStatus[] } {
+  return {
+    timestamp: new Date().toISOString(),
+    agents: agentStatusCache,
+  };
+}
+
+/**
+ * Get current pipeline telemetry
+ */
+export function getPipelineTelemetry(): PipelineTelemetry | null {
+  return pipelineTelemetryCache;
+}
+
+/**
+ * Get health status
+ */
+export function getHealth(): { status: string; timestamp: string } {
+  return {
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+  };
+}
+
+/**
+ * Start Express server (requires express to be installed)
+ */
+export async function startServer(port: number = 3001): Promise<void> {
+  try {
+    // Dynamically import express if available
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
+    const express = require('express');
+    const app = express();
+
+    // Refresh telemetry on startup
+    refreshTelemetry();
+    setInterval(refreshTelemetry, 5000);
+
+    // Endpoints
+    app.get('/health', (_req: any, res: any) => {
+      res.json(getHealth());
+    });
+
+    app.get('/api/agents/health', (_req: any, res: any) => {
+      res.json(getAgentHealth());
+    });
+
+    app.get('/api/agents/status', (_req: any, res: any) => {
+      res.json(getAgentStatus());
+    });
+
+    app.get('/api/pipeline/telemetry', (_req: any, res: any) => {
+      res.json(getPipelineTelemetry() || {});
+    });
+
+    app.listen(port, () => {
+      console.log(`[Forge Monitor] Server listening on http://localhost:${port}`);
+      console.log(`[Forge Monitor] Endpoints:`);
+      console.log(`  GET /health`);
+      console.log(`  GET /api/agents/health`);
+      console.log(`  GET /api/agents/status`);
+      console.log(`  GET /api/pipeline/telemetry`);
+    });
+  } catch (error) {
+    console.error('[Forge Monitor] Express not available. Install with: npm install express @types/express');
+    console.error('[Forge Monitor] Telemetry functions available for import.');
+    throw error;
+  }
+}
+
+/**
+ * Auto-start server if invoked directly
+ */
+if (require.main === module) {
+  const PORT = Number(process.env.PORT) || 3001;
+  startServer(PORT).catch((error) => {
+    console.error('[Forge Monitor] Failed to start server:', error.message);
+    process.exit(1);
+  });
+}
