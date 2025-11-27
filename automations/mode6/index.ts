@@ -34,6 +34,10 @@ export { default as OpenAIAdapter, type OpenAIAdapterConfig } from './agents/ope
 export { default as GrokAdapter, type GrokAdapterConfig } from './agents/grok-adapter';
 export { AdapterRegistry, type AgentAdapter } from './agents/adapter-registry';
 
+// Configuration
+export { configLoader } from './config/env';
+export type { AgentConfig } from './config/env';
+
 /**
  * Mode6Orchestrator
  * Main orchestration class that coordinates all components
