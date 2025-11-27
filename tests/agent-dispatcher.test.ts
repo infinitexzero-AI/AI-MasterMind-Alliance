@@ -3,9 +3,9 @@
  * Tests handoff protocol, agent execution routing, and error handling.
  */
 
-import { AgentDispatcher } from '../../automations/mode6/agent-routing/agent-dispatcher';
-import { createMockAgent } from './helpers/mock-agent';
-import { HandoffContext } from '../../automations/mode6/index';
+import { AgentDispatcher } from '../automations/mode6/agent-routing/agent-dispatcher';
+import { MockAgent } from './helpers/mock-agent';
+import { HandoffContext } from '../automations/mode6/index';
 
 describe('AgentDispatcher', () => {
   let dispatcher: AgentDispatcher;
@@ -96,7 +96,7 @@ describe('AgentDispatcher', () => {
 
       const results = await dispatcher.dispatchToSecondaryAgents(handoff);
       expect(results.length).toBe(2);
-      expect(results.every(r => r.success || r.error)).toBe(true);
+      expect(results.every((r: any) => r.success || r.error)).toBe(true);
     });
   });
 

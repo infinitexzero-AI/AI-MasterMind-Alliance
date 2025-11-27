@@ -3,8 +3,8 @@
  * Tests routing logic, agent selection, and handoff preparation.
  */
 
-import { IntentRouter } from '../../automations/mode6/intent-router/intent-router';
-import { TaskIntent } from '../../automations/mode6/index';
+import { IntentRouter } from '../automations/mode6/intent-router/intent-router';
+import { TaskIntent } from '../automations/mode6/index';
 
 describe('IntentRouter', () => {
   let router: IntentRouter;

@@ -7,7 +7,7 @@
     "build": "tsc --project automations/mode6/tsconfig.json",
     "test": "jest --config jest.config.js",
     "test:watch": "jest --watch",
-    "lint": "eslint automations/mode6 dashboard",
+    "lint": "eslint 'automations/mode6/**/*.{ts,tsx,js,jsx}'",
     "dashboard:dev": "next dev",
     "dashboard:build": "next build",
     "dashboard:start": "next start",
