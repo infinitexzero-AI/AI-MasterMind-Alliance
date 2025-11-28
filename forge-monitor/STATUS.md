@@ -74,3 +74,4 @@ Server listens on `http://localhost:3001` by default. Override with `PORT` envir
 - Backend: Operational (Phase 1 wiring complete)
 - Frontend: Scaffolded
 - Agents: Ready (Claude, OpenAI, Grok, CodexForge)
+Updated for TASK-3B (dashboard integration)

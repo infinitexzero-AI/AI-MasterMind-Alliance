@@ -210,3 +210,4 @@ All components and API routes fully typed:
 
 *Generated during TASK-3B: Dashboard Integration & Wiring*  
 *CodexForge Protocol Implementation*
+Updated for TASK-3B (proxy integration)
