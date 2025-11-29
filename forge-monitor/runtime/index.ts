@@ -1,55 +1,38 @@
-// AILCC Framework - Phase 4: Runtime Environment
-// Central runtime coordinator for all agent processes
+/**
+ * Forge runtime scaffold - TypeScript
+ * Exposes start/stop/status and emits telemetry events via EventEmitter
+ */
+import { EventEmitter } from "events";
 
-import { EventEmitter } from 'events';
-import { SupervisorBus } from '../supervisor/bus';
+class ForgeRuntime extends EventEmitter {
+  private running = false;
+  private interval: NodeJS.Timeout | null = null;
 
-export interface RuntimeConfig {
-  maxAgents: number;
-  heartbeatInterval: number;
-  logLevel: 'debug' | 'info' | 'warn' | 'error';
-}
-
-export class AgentRuntime extends EventEmitter {
-  private supervisor: SupervisorBus;
-  private activeAgents: Map<string, any>;
-  private config: RuntimeConfig;
-
-  constructor(config: Partial<RuntimeConfig> = {}) {
-    super();
-    this.config = {
-      maxAgents: 10,
-      heartbeatInterval: 5000,
-      logLevel: 'info',
-      ...config
-    };
-    this.supervisor = new SupervisorBus();
-    this.activeAgents = new Map();
+  start() {
+    if (this.running) return;
+    this.running = true;
+    this.emit("started", { ts: Date.now() });
+    this.interval = setInterval(() => {
+      this.emit("telemetry", {
+        ts: Date.now(),
+        latency: Math.floor(25 + Math.random() * 50),
+        load: Math.round(Math.random() * 100) / 100
+      });
+    }, 3000);
   }
 
-  async start(): Promise<void> {
-    console.log('[Runtime] Starting AILCC Agent Runtime...');
-    await this.supervisor.start();
-    this.emit('runtime:started');
+  stop() {
+    if (!this.running) return;
+    this.running = false;
+    if (this.interval) clearInterval(this.interval);
+    this.interval = null;
+    this.emit("stopped", { ts: Date.now() });
   }
 
-  async stop(): Promise<void> {
-    console.log('[Runtime] Stopping AILCC Agent Runtime...');
-    await this.supervisor.stop();
-    this.activeAgents.clear();
-    this.emit('runtime:stopped');
-  }
-
-  async spawnAgent(agentId: string, config: any): Promise<void> {
-    if (this.activeAgents.size >= this.config.maxAgents) {
-      throw new Error('Maximum agent limit reached');
-    }
-    console.log(`[Runtime] Spawning agent: ${agentId}`);
-    this.activeAgents.set(agentId, { id: agentId, config, status: 'running' });
-    this.emit('agent:spawned', agentId);
-  }
-
-  getActiveAgents(): string[] {
-    return Array.from(this.activeAgents.keys());
+  status() {
+    return { running: this.running, ts: Date.now() };
   }
 }
+
+const runtime = new ForgeRuntime();
+export default runtime;

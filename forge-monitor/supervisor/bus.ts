@@ -1,52 +1,23 @@
-// AILCC Framework - Phase 4: Supervisor Bus
-// Message bus for inter-agent communication
+/**
+ * Simple in-process message bus for supervisor to exchange simple commands.
+ */
+export type Cmd = { cmd: string; args?: any; ts?: number };
 
-import { EventEmitter } from 'events';
+class MessageBus {
+  private subs: ((c: Cmd) => void)[] = [];
 
-export interface Message {
-  from: string;
-  to: string;
-  type: string;
-  payload: any;
-  timestamp: number;
-}
-
-export class SupervisorBus extends EventEmitter {
-  private messageQueue: Message[];
-  private running: boolean;
-
-  constructor() {
-    super();
-    this.messageQueue = [];
-    this.running = false;
-  }
-
-  async start(): Promise<void> {
-    console.log('[SupervisorBus] Starting message bus...');
-    this.running = true;
-    this.emit('bus:started');
-  }
-
-  async stop(): Promise<void> {
-    console.log('[SupervisorBus] Stopping message bus...');
-    this.running = false;
-    this.messageQueue = [];
-    this.emit('bus:stopped');
-  }
-
-  send(message: Omit<Message, 'timestamp'>): void {
-    if (!this.running) {
-      throw new Error('Bus not running');
+  publish(c: Cmd) {
+    c.ts = Date.now();
+    for (const s of this.subs) {
+      try { s(c); } catch (e) { console.error("bus handler error", e); }
     }
-    const fullMessage: Message = {
-      ...message,
-      timestamp: Date.now()
-    };
-    this.messageQueue.push(fullMessage);
-    this.emit('message', fullMessage);
   }
 
-  getQueueSize(): number {
-    return this.messageQueue.length;
+  subscribe(cb: (c: Cmd) => void) {
+    this.subs.push(cb);
+    return () => { this.subs = this.subs.filter(s => s !== cb); };
   }
 }
+
+const bus = new MessageBus();
+export default bus;
