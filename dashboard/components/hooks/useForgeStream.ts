@@ -1,26 +1,29 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
-export function useForgeStream(url: string) {
-  const wsRef = useRef<WebSocket | null>(null);
-  const [data, setData] = useState<any>(null);
+export default function useForgeStream() {
+  const ws = useRef<WebSocket | null>(null);
   const [connected, setConnected] = useState(false);
+  const [data, setData] = useState<any>(null);
+  const [lastPing, setLastPing] = useState<number | null>(null);
 
   useEffect(() => {
-    const ws = new WebSocket(url);
-    wsRef.current = ws;
+    let socket = new WebSocket("ws://localhost:3001");
+    ws.current = socket;
 
-    ws.onopen = () => setConnected(true);
-    ws.onclose = () => setConnected(false);
-    ws.onerror = () => setConnected(false);
+    socket.onopen = () => setConnected(true);
+    socket.onclose = () => setConnected(false);
 
-    ws.onmessage = (msg) => {
-      try {
-        setData(JSON.parse(msg.data));
-      } catch (_) {}
+    socket.onmessage = (evt) => {
+      setLastPing(Date.now());
+      setData(JSON.parse(evt.data));
     };
 
-    return () => ws.close();
-  }, [url]);
+    return () => socket.close();
+  }, []);
 
-  return { data, connected };
+  function sendCommand(cmd: string) {
+    ws.current?.send(cmd);
+  }
+
+  return { connected, data, lastPing, sendCommand };
 }
