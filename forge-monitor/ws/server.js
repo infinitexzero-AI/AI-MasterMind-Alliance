@@ -1,4 +1,5 @@
 const WebSocket = require('ws');
+const bus = require('../bus/messageBus');
 
 function startWSServer(port = 7070) {
   const wss = new WebSocket.Server({ port });
@@ -6,7 +7,7 @@ function startWSServer(port = 7070) {
   wss.on('connection', (ws) => {
     ws.send(JSON.stringify({ type: 'connected', timestamp: Date.now() }));
 
-    const interval = setInterval(() => {
+    const telemetryInterval = setInterval(() => {
       ws.send(JSON.stringify({
         type: 'telemetry',
         status: 'ok',
@@ -15,13 +16,16 @@ function startWSServer(port = 7070) {
       }));
     }, 2000);
 
-    ws.on('close', () => clearInterval(interval));
+    bus.subscribe((cmd) => {
+      ws.send(JSON.stringify({ type: 'command', cmd, ts: Date.now() }));
+    });
+
+    ws.on('close', () => clearInterval(telemetryInterval));
   });
 
-  console.log(`Forge WS running on :${port}`);
+  console.log("Forge WS + Bus running on", port);
   return wss;
 }
 
 if (require.main === module) startWSServer();
-
 module.exports = { startWSServer };
