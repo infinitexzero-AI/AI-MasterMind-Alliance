@@ -27,16 +27,13 @@ export { MemoryManager } from './memory/memory-manager';
 
 // Configuration
 export { configLoader } from './config/env';
+export type { AgentConfig } from './config/env';
 
 // Agent Adapters
 export { default as ClaudeAdapter, type ClaudeAdapterConfig } from './agents/claude-adapter';
 export { default as OpenAIAdapter, type OpenAIAdapterConfig } from './agents/openai-adapter';
 export { default as GrokAdapter, type GrokAdapterConfig } from './agents/grok-adapter';
 export { AdapterRegistry, type AgentAdapter } from './agents/adapter-registry';
-
-// Configuration
-export { configLoader } from './config/env';
-export type { AgentConfig } from './config/env';
 
 /**
  * Mode6Orchestrator
