@@ -1,35 +1,27 @@
-const WebSocket = require("ws");
+const WebSocket = require('ws');
 
-const wss = new WebSocket.Server({ port: 3001 });
+function startWSServer(port = 7070) {
+  const wss = new WebSocket.Server({ port });
 
-console.log("Forge WS running on ws://localhost:3001");
+  wss.on('connection', (ws) => {
+    ws.send(JSON.stringify({ type: 'connected', timestamp: Date.now() }));
 
-function fakeState() {
-  return {
-    ts: Date.now(),
-    agents: {
-      router: "ok",
-      dispatcher: "ok",
-      vector: "warn",
-      memory: "ok"
-    },
-    pipeline: {
-      stage: "idle",
-      load: Math.random().toFixed(2)
-    }
-  };
-}
+    const interval = setInterval(() => {
+      ws.send(JSON.stringify({
+        type: 'telemetry',
+        status: 'ok',
+        latency: Math.floor(40 + Math.random() * 10),
+        timestamp: Date.now()
+      }));
+    }, 2000);
 
-wss.on("connection", (ws) => {
-  console.log("Client connected.");
-
-  ws.on("message", (msg) => {
-    console.log("Control received:", msg.toString());
+    ws.on('close', () => clearInterval(interval));
   });
 
-  const interval = setInterval(() => {
-    ws.send(JSON.stringify(fakeState()));
-  }, 2000);
+  console.log(`Forge WS running on :${port}`);
+  return wss;
+}
 
-  ws.on("close", () => clearInterval(interval));
-});
+if (require.main === module) startWSServer();
+
+module.exports = { startWSServer };
