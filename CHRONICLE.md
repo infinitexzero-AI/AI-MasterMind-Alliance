@@ -110,3 +110,4 @@
 - [2025-12-08T11:00:00] chronicle: Protocol: Authoring the Mastermind Protocol (Iteration 008)
 - [2025-12-09T12:00:00] chronicle: Protocol: Authoring the Mastermind Protocol (Iteration 009)
 - [2025-12-10T13:00:00] chronicle: Protocol: Authoring the Mastermind Protocol (Iteration 010)
+- [2025-12-01T14:00:00] chronicle: Bridge: Local MacOS Perimeter Synthesis (Iteration 001)
