@@ -120,3 +120,4 @@
 - [2025-12-08T21:00:00] chronicle: Bridge: Local MacOS Perimeter Synthesis (Iteration 008)
 - [2025-12-09T22:00:00] chronicle: Bridge: Local MacOS Perimeter Synthesis (Iteration 009)
 - [2025-12-10T23:00:00] chronicle: Bridge: Local MacOS Perimeter Synthesis (Iteration 010)
+- [2025-12-01T00:00:00] chronicle: Logic Pulse: Claude Desktop MCP Integration (Iteration 001)
