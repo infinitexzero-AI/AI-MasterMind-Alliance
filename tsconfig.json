@@ -22,6 +22,6 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node"
   },
-  "include": ["automations/**/*.ts", "dashboard/**/*.ts", "tests/**/*.ts"],
+  "include": ["automations/**/*.ts", "dashboard/**/*.ts", "tests/**/*.ts", "forge-monitor/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }
