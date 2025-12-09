@@ -8,10 +8,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const body = req.body || {};
     const command = body.command || body.cmd || (typeof body === "string" ? body : null);
-    // If the environment runs supervisor in-process we could import and publish:
-    // import bus from "../../../../forge-monitor/supervisor/bus";
-    // bus.publish({ cmd: command });
-    // For safety, just echo back:
+    // Connect to real supervisor bus
+    // Path: cmd.ts -> runtime -> forge -> api -> pages -> dashboard -> (root) -> forge-monitor -> supervisor
+    const bus = require("../../../../../../forge-monitor/supervisor/bus").default;
+    
+    if (command) {
+        bus.publish({ cmd: command, args: body.args });
+    }
+    
     return res.status(200).json({ ok: true, command });
   } catch (err) {
     return res.status(500).json({ error: String(err) });
