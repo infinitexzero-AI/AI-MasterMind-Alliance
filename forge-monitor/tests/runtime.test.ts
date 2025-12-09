@@ -10,7 +10,9 @@ describe('AgentRuntime', () => {
   });
 
   afterEach(async () => {
-    await runtime.stop();
+    if (runtime.isRunning()) {
+      await runtime.stop();
+    }
   });
 
   test('should start and stop successfully', async () => {
