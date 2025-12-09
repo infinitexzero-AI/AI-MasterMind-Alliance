@@ -132,4 +132,5 @@ const runtime = new AgentRuntime();
 export default runtime;
 
 // Named export for tests
-export { AgentRuntime };
+// AgentRuntime is already exported by the class definition
+
