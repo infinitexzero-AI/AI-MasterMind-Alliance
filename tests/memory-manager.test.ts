@@ -3,8 +3,8 @@
  * Tests cross-agent memory storage, retrieval, and retention policies.
  */
 
-import { MemoryManager } from '../../automations/mode6/memory/memory-manager';
-import { MemoryEntry, HandoffContext } from '../../automations/mode6/index';
+import { MemoryManager } from '../automations/mode6/memory/memory-manager';
+import { MemoryEntry, HandoffContext } from '../automations/mode6/index';
 
 describe('MemoryManager', () => {
   let memory: MemoryManager;

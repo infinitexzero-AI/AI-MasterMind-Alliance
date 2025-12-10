@@ -1,8 +1,8 @@
 module.exports = {
   preset: 'ts-jest',
   testEnvironment: 'node',
-  roots: ['<rootDir>/tests'],
-  testMatch: ['**/__tests__/**/*.ts', '**/?(*.)+(spec|test).ts'],
+  roots: ['<rootDir>'],
+  testMatch: ['**/tests/**/?(*.)+(spec|test).ts'],
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   collectCoverageFrom: [
     'automations/mode6/**/*.ts',
@@ -18,12 +18,25 @@ module.exports = {
     },
   },
   testPathIgnorePatterns: ['/node_modules/', '/dist/'],
-  transform: {
-    '^.+\\.tsx?$': ['ts-jest', {
+  globals: {
+    'ts-jest': {
       tsconfig: {
         esModuleInterop: true,
         allowSyntheticDefaultImports: true,
+        module: 'commonjs',
+        target: 'ES2020',
+        lib: ['ES2020'],
+        strict: true,
+        skipLibCheck: true,
+        forceConsistentCasingInFileNames: true,
+        resolveJsonModule: true,
+        moduleResolution: 'node',
+        declaration: true,
       },
-    }],
+    },
   },
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
+  setupFilesAfterEnv: ['<rootDir>/tests/setupTests.ts'],
 };
