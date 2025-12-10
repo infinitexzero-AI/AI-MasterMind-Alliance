@@ -4,7 +4,8 @@
  * Handles authentication, message formatting, streaming, and token management.
  */
 
-import { HandoffContext, DispatchResult } from '../index';
+import { configLoader } from '../config/env';
+import { HandoffContext, DispatchResult } from '../intent-router/types';
 
 interface ClaudeResponse {
   id: string;
@@ -46,10 +47,11 @@ export class ClaudeAdapter {
   };
 
   constructor(config: ClaudeAdapterConfig = {}) {
-    this.apiKey = config.apiKey || process.env.ANTHROPIC_API_KEY || '';
-    this.modelId = config.modelId || 'claude-3-5-sonnet-20241022';
-    this.maxTokens = config.maxTokens || 4096;
-    this.temperature = config.temperature || 0.7;
+    const configSettings = configLoader.getConfig();
+    this.apiKey = config.apiKey || configSettings.anthropic.apiKey;
+    this.modelId = config.modelId || configSettings.anthropic.model;
+    this.maxTokens = config.maxTokens || configSettings.anthropic.maxTokens;
+    this.temperature = config.temperature || configSettings.anthropic.temperature;
     this.systemPrompt = config.systemPrompt || this.getDefaultSystemPrompt();
 
     if (!this.apiKey) {

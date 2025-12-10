@@ -1,0 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* small layout tweaks */
+body { background: #f8fafc; font-family: Inter, ui-sans-serif, system-ui; }
