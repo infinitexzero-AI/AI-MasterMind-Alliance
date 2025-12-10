@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 
 export function useForgeHealth() {
   const [data, setData] = useState<any>(null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState<any>(null);
 
   async function refresh() {
     try {

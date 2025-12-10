@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "commonjs",
-    "lib": ["ES2020"],
+    "lib": ["ES2020", "DOM"],
     "outDir": "./dist",
     "rootDir": "./",
     "strict": true,
@@ -22,6 +22,6 @@
     "noFallthroughCasesInSwitch": true,
     "moduleResolution": "node"
   },
-  "include": ["automations/**/*.ts", "dashboard/**/*.ts", "tests/**/*.ts"],
+  "include": ["automations/**/*.ts", "dashboard/**/*.ts", "tests/**/*.ts", "forge-monitor/**/*.ts"],
   "exclude": ["node_modules", "dist"]
 }

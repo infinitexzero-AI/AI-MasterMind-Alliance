@@ -1,8 +1,8 @@
 import React from 'react';
-import { useForgeStream } from '../hooks/useForgeStream';
+import useForgeStream from '../hooks/useForgeStream';
 
 export default function AgentControlPanel() {
-  const { data, connected } = useForgeStream('ws://localhost:7077');
+  const { data, connected } = useForgeStream();
 
   return (
     <div className="p-4 rounded-xl border bg-neutral-900 text-white">

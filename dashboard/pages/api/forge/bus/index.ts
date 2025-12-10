@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import bus from "../../../../forge-monitor/bus/messageBus";
+import bus from "../../../../../forge-monitor/bus/messageBus";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST")

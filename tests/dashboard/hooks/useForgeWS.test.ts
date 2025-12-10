@@ -2,7 +2,7 @@
  * Hook test: we will shallow render a component that uses useForgeWS and mock WebSocket in global.
  */
 import React from 'react';
-import { renderHook, act } from '@testing-library/react-hooks';
+import { renderHook, act } from '@testing-library/react';
 import { useForgeWS } from '../../../dashboard/components/hooks/useForgeWS';
 
 class MockWS {
@@ -23,7 +23,7 @@ class MockWS {
 (global as any).WebSocket = MockWS;
 
 test('useForgeWS connects and can send', async () => {
-  const { result, waitForNextUpdate } = renderHook(() => useForgeWS('/api/forge/ws'));
+  const { result } = renderHook(() => useForgeWS('/api/forge/ws'));
   // wait for onopen
   await new Promise((r) => setTimeout(r, 20));
   expect(result.current.connected).toBe(true);

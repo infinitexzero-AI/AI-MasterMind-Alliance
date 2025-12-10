@@ -15,7 +15,7 @@ export function useForgeWS(url = '/api/forge/ws') {
     // Upgrade to ws:// from current origin
     const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
     const base = window.location.host;
-    const wsUrl = \`\${protocol}://\${base}\${url}\`;
+    const wsUrl = `${protocol}://${base}${url}`;
 
     const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
