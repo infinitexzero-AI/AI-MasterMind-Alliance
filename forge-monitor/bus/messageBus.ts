@@ -1,15 +1,15 @@
 class MessageBus {
-  constructor() {
-    this.queue = [];
-    this.subscribers = [];
-  }
+  private queue: any[] = [];
+  private subscribers: Function[] = [];
 
-  publish(message) {
+  constructor() {}
+
+  publish(message: any) {
     this.queue.push({ message, ts: Date.now() });
     this.subscribers.forEach(cb => cb(message));
   }
 
-  subscribe(cb) {
+  subscribe(cb: Function) {
     this.subscribers.push(cb);
   }
 
@@ -21,4 +21,4 @@ class MessageBus {
 }
 
 const bus = new MessageBus();
-module.exports = bus;
+export default bus;

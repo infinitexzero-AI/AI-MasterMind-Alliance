@@ -4,25 +4,29 @@
   "description": "Mode 6 Intent Routing & Multi-Agent Orchestration System for AILCC Framework",
   "main": "automations/mode6/index.ts",
   "scripts": {
-    "build": "tsc --project automations/mode6/tsconfig.json",
+    "build": "npm run dashboard:build",
     "test": "jest --config jest.config.js",
     "test:watch": "jest --watch",
     "lint": "eslint 'automations/mode6/**/*.{ts,tsx,js,jsx}'",
-    "dashboard:dev": "next dev",
-    "dashboard:build": "next build",
+    "dashboard:dev": "cd dashboard && npm run dev",
+    "dashboard:build": "cd dashboard && npm run build",
     "dashboard:start": "next start",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
     "next": "^14.0.0",
+    "node-fetch": "^3.3.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^20.0.0",
+    "@types/node-fetch": "^2.6.13",
     "@types/react": "^18.2.0",
+    "@types/ws": "^8.18.1",
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "autoprefixer": "^10.4.0",
