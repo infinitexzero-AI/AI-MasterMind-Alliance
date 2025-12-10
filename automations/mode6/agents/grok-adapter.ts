@@ -4,7 +4,8 @@
  * Optimized for multi-step reasoning and experimental reasoning patterns
  */
 
-import { HandoffContext, DispatchResult } from '../index';
+import { configLoader } from '../config/env';
+import { HandoffContext, DispatchResult } from '../intent-router/types';
 
 interface GrokResponse {
   id: string;
@@ -42,9 +43,10 @@ export class GrokAdapter {
   };
 
   constructor(config: GrokAdapterConfig = {}) {
-    this.apiKey = config.apiKey || process.env.XAI_API_KEY || '';
-    this.modelId = config.modelId || 'grok-2';
-    this.maxTokens = config.maxTokens || 4000;
+    const configSettings = configLoader.getConfig();
+    this.apiKey = config.apiKey || configSettings.xai.apiKey;
+    this.modelId = config.modelId || configSettings.xai.model;
+    this.maxTokens = config.maxTokens || configSettings.xai.maxTokens;
     this.enableReasoning = config.enableReasoning ?? true;
 
     if (!this.apiKey) {

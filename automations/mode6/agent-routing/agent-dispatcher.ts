@@ -27,16 +27,31 @@ export class AgentDispatcher {
   };
   private adapterRegistry: AdapterRegistry;
 
-  constructor() {
+  constructor(adapterRegistry?: AdapterRegistry) {
     this.agentCapabilities = this.initializeCapabilities();
-    this.adapterRegistry = new AdapterRegistry();
+    this.adapterRegistry = adapterRegistry || new AdapterRegistry();
   }
 
   /**
    * Initialize agent capability matrix
    * Maps agent strengths to task types
    */
-  private initializeCapabilities(): Map<AgentType, AgentCapabilities> {
+  public initializeCapabilities(config?: Record<string, any>): Map<AgentType, AgentCapabilities> {
+    if (config) {
+      const map = new Map<AgentType, AgentCapabilities>();
+      for (const [name, c] of Object.entries(config)) {
+        map.set(name as AgentType, {
+          agent: name as AgentType,
+          primarySkills: (c.capabilities as string[]) || [],
+          secondarySkills: [],
+          contextLimit: (c.maxContextTokens as number) || 100000,
+          latencyProfile: 'standard',
+          availableNow: true,
+        });
+      }
+      return map;
+    }
+
     return new Map([
       [
         'supergrok',
@@ -108,16 +123,80 @@ export class AgentDispatcher {
       const agentName = handoff.targetAgent || 'claude';
       const adapter = this.adapterRegistry.getAdapter(agentName);
 
+      // If adapter missing, treat as unavailable and attempt fallbacks
       if (!adapter) {
+        // try fallbacks defined in handoff.secondaryAgents
+        const secondaries = handoff.secondaryAgents || [];
+        for (const sec of secondaries) {
+          const secAdapter = this.adapterRegistry.getAdapter(sec);
+          if (!secAdapter) continue;
+          const secResult = await secAdapter.executeTask(handoff);
+          if (secResult.success) {
+            this.dispatchStats.successfulDispatches++;
+            return secResult;
+          }
+        }
+
+        this.dispatchStats.failedDispatches++;
         throw new Error(`Adapter not found for agent: ${agentName}`);
       }
 
-      // Use real adapter for execution
-      const result = await adapter.executeTask(handoff);
+      // Use adapter for execution
+      let result: DispatchResult;
+      try {
+        result = await adapter.executeTask(handoff);
+      } catch (err) {
+        // Adapter threw (timeout etc.) — attempt secondaries if provided
+        const secondaries = handoff.secondaryAgents || [];
+        for (const sec of secondaries) {
+          const secAdapter = this.adapterRegistry.getAdapter(sec);
+          if (!secAdapter) continue;
+          const secResult = await secAdapter.executeTask(handoff);
+          if (secResult.success) {
+            this.dispatchStats.successfulDispatches++;
+            return secResult;
+          }
+        }
 
+        this.dispatchStats.failedDispatches++;
+        return {
+          success: false,
+          taskId: handoff.taskId,
+          agentUsed: agentName,
+          error: err instanceof Error ? err.message : String(err),
+        };
+      }
+
+      // If primary succeeded, count it and return
       if (result.success) {
         this.dispatchStats.successfulDispatches++;
-      } else {
+        return result;
+      }
+
+      // If primary failed, attempt secondary agents
+      if (!result.success) {
+        const secondaries = handoff.secondaryAgents || [];
+        for (const sec of secondaries) {
+          const secAdapter = this.adapterRegistry.getAdapter(sec);
+          if (!secAdapter) continue;
+          const secResult = await secAdapter.executeTask(handoff);
+          if (secResult.success) {
+            this.dispatchStats.successfulDispatches++;
+            return secResult;
+          }
+        }
+
+        // If token/context overflow, escalate
+        if (result.error && String(result.error).toLowerCase().includes('context')) {
+          this.dispatchStats.failedDispatches++;
+          return {
+            success: false,
+            taskId: handoff.taskId,
+            agentUsed: agentName,
+            error: `context-overflow`,
+          };
+        }
+
         this.dispatchStats.failedDispatches++;
       }
 
