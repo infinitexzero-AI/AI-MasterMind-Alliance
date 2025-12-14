@@ -10,8 +10,8 @@
 SERVER_PORT=8000
 FRONTEND_PORT=3000
 BASE_DIR="$HOME/AILCC_PRIME/AI-MasterMind-Alliance"
-API_DIR="$BASE_DIR/api"
 DASH_DIR="$BASE_DIR/dashboard"
+API_DIR="$DASH_DIR/api"
 INSPECTOR="$HOME/AILCC_PRIME/00_Projects/Orchestration_Hub/protocols/protocol_inspector.py"
 
 # Colors

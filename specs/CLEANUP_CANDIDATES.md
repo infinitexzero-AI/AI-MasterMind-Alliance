@@ -27,7 +27,7 @@ You have multiple `node_modules` folders. `AILCC_PRIME/01_Areas/Codebases/ailcc`
 
 Files found with " copy" or "(1)" in the name.
 
-*(List populated after scan completion)*
+> (List populated after scan completion)
 
 ---
 

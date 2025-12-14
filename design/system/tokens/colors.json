@@ -1,0 +1,28 @@
+{
+    "palette": {
+        "foundation": {
+            "void-black": "#0a0a0f",
+            "matrix-black": "#0d0d12",
+            "terminal-dark": "#1a1a24",
+            "charcoal": "#2a2a3a"
+        },
+        "accent": {
+            "cyber-blue": "#00d9ff",
+            "electric-purple": "#b24bf3",
+            "neon-green": "#39ff14",
+            "hot-magenta": "#ff006e",
+            "holographic-cyan": "#00fff5"
+        },
+        "semantic": {
+            "success": "#39ff14",
+            "warning": "#ffdd00",
+            "danger": "#ff006e",
+            "info": "#00d9ff"
+        }
+    },
+    "gradients": {
+        "matrix": "linear-gradient(135deg, #00d9ff 0%, #39ff14 100%)",
+        "metaverse": "linear-gradient(135deg, #b24bf3 0%, #ff006e 50%, #00d9ff 100%)",
+        "void": "radial-gradient(circle at center, #1a1a24 0%, #0a0a0f 100%)"
+    }
+}

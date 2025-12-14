@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alliance Design Nexus</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: #0a0a0f;
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 48px;
+      background: linear-gradient(135deg, #00d9ff 0%, #b24bf3 50%, #ff006e 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px;
+    }
+
+    .header p {
+      color: #00d9ff;
+      font-family: 'Courier New', monospace;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background: rgba(26, 26, 36, 0.6);
+      -webkit-backdrop-filter: blur(20px);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(0, 217, 255, 0.2);
+      border-radius: 12px;
+      padding: 32px;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      border-color: rgba(0, 217, 255, 0.5);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 217, 255, 0.3);
+    }
+
+    .card h3 {
+      font-family: 'Orbitron', sans-serif;
+      color: #00d9ff;
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #888;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .card-link {
+      display: inline-block;
+      color: #39ff14;
+      text-decoration: none;
+      font-family: 'Courier New', monospace;
+      font-size: 14px;
+      border: 1px solid #39ff14;
+      padding: 8px 16px;
+      border-radius: 4px;
+      transition: all 0.3s ease;
+    }
+
+    .card-link:hover {
+      background: rgba(57, 255, 20, 0.1);
+      box-shadow: 0 0 20px rgba(57, 255, 20, 0.3);
+    }
+
+    .color-palette {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .color-swatch {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      position: relative;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .color-swatch:hover {
+      transform: scale(1.1);
+      box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
+    }
+
+    .color-label {
+      position: absolute;
+      bottom: -24px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 10px;
+      color: #888;
+      font-family: 'Courier New', monospace;
+    }
+
+    .section-title {
+      font-family: 'Orbitron', sans-serif;
+      color: #00d9ff;
+      font-size: 32px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+    /* Color Utility Classes */
+    .bg-void-black { background: #0a0a0f; }
+    .bg-cyber-blue { background: #00d9ff; box-shadow: 0 0 20px #00d9ff; }
+    .bg-electric-purple { background: #b24bf3; box-shadow: 0 0 20px #b24bf3; }
+    .bg-neon-green { background: #39ff14; box-shadow: 0 0 20px #39ff14; }
+    .bg-hot-magenta { background: #ff006e; box-shadow: 0 0 20px #ff006e; }
+    .bg-holographic-cyan { background: #00fff5; box-shadow: 0 0 20px #00fff5; }
+    .bg-matrix-gradient { background: linear-gradient(135deg, #00d9ff 0%, #39ff14 100%); }
+    .bg-metaverse-gradient { background: linear-gradient(135deg, #b24bf3 0%, #ff006e 50%, #00d9ff 100%); }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>ALLIANCE DESIGN NEXUS</h1>
+    <p>Matrix Metaverse Design System v2.0</p>
+  </div>
+  
+  <div class="grid">
+    <!-- Design System -->
+    <div class="card" onclick="window.open('../system/guidelines/design-principles.md', '_blank')">
+      <h3>📐 Design System</h3>
+      <p>Core tokens, components, and guidelines for the Matrix aesthetic.</p>
+      <a href="../system/guidelines/design-principles.md" class="card-link">View Guidelines →</a>
+    </div>
+
+    <!-- Visual Repository -->
+    <div class="card" onclick="window.location.href='../assets/screenshots/dashboard/'">
+      <h3>🖼️ Visual Assets</h3>
+      <p>Screenshots, mockups, icons, and brand materials.</p>
+      <a href="../assets/screenshots/" class="card-link">Browse Assets →</a>
+    </div>
+
+    <!-- Component Gallery -->
+    <div class="card" onclick="window.open('component-gallery.html', '_blank')">
+      <h3>🧩 Component Gallery</h3>
+      <p>Interactive catalog of all UI components with code samples.</p>
+      <a href="component-gallery.html" class="card-link">Explore Components →</a>
+    </div>
+
+    <!-- Live Dashboard -->
+    <div class="card" onclick="window.open('http://localhost:3000', '_blank')">
+      <h3>🚀 Live Dashboard</h3>
+      <p>Access the running Command Center in development mode.</p>
+      <a href="http://localhost:3000" class="card-link">Open Dashboard →</a>
+    </div>
+
+    <!-- Figma Files -->
+    <div class="card" onclick="alert('Link your Figma workspace here')">
+      <h3>🎨 Figma Workspace</h3>
+      <p>High-fidelity mockups and collaborative design files.</p>
+      <a href="#" class="card-link">Open Figma →</a>
+    </div>
+
+    <!-- Style Guide Site -->
+    <div class="card" onclick="window.open('style-guide-site/index.html', '_blank')">
+      <h3>📚 Style Guide</h3>
+      <p>Complete documentation of the Matrix Metaverse design language.</p>
+      <a href="style-guide-site/index.html" class="card-link">View Guide →</a>
+    </div>
+  </div>
+
+  <h2 class="section-title">Matrix Color Palette</h2>
+  
+  <div class="color-palette">
+    <div class="color-swatch bg-void-black">
+      <span class="color-label">void-black</span>
+    </div>
+    <div class="color-swatch bg-cyber-blue">
+      <span class="color-label">cyber-blue</span>
+    </div>
+    <div class="color-swatch bg-electric-purple">
+      <span class="color-label">electric-purple</span>
+    </div>
+    <div class="color-swatch bg-neon-green">
+      <span class="color-label">neon-green</span>
+    </div>
+    <div class="color-swatch bg-hot-magenta">
+      <span class="color-label">hot-magenta</span>
+    </div>
+    <div class="color-swatch bg-holographic-cyan">
+      <span class="color-label">holographic-cyan</span>
+    </div>
+    <div class="color-swatch bg-matrix-gradient">
+      <span class="color-label">matrix-gradient</span>
+    </div>
+    <div class="color-swatch bg-metaverse-gradient">
+      <span class="color-label">metaverse-gradient</span>
+    </div>
+  </div>
+
+  <script>
+    // Add click-to-copy for color values
+    document.querySelectorAll('.color-swatch').forEach(swatch => {
+      swatch.addEventListener('click', () => {
+        const color = swatch.style.background;
+        navigator.clipboard.writeText(color);
+        alert(`Copied: ${color}`);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,5 +1,4 @@
-'use client'
-/* eslint-disable react-dom/no-unsafe-inline-style */
+
 import { useEffect, useState } from 'react'
 
 export default function StorageHealthWidget() {
@@ -24,11 +23,10 @@ export default function StorageHealthWidget() {
   const { color, glow } = statusColors[statusKey] || { color: '#00d9ff', glow: '0 0 20px #00d9ff' }
 
   // Dynamic CSS variables for Matrix effects
-  // eslint-disable-next-line react-dom/no-unsafe-inline-style
   const dynamicStyle = {
     '--status-color': color,
     '--status-glow': glow,
-    '--progress-pct': `${health.free_pct}%`,
+    '--progress-pct': `${health.free_pct}% `,
     '--gradient-start': color,
     '--gradient-end': '#39ff14'
   } as React.CSSProperties
@@ -36,7 +34,6 @@ export default function StorageHealthWidget() {
   return (
     <div
       className="glass-card scanlines p-6 relative overflow-hidden bg-void-black border border-cyber-blue/20 rounded-xl group hover:border-cyber-blue/50 transition-colors duration-500"
-      // eslint-disable-next-line react-dom/no-unsafe-inline-style
       style={dynamicStyle}
     >
       {/* Scanline Overlay via CSS class 'scanlines' */}

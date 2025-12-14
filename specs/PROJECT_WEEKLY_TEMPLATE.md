@@ -1,21 +1,22 @@
 # Alliance Weekly Sync – Week of [DATE]
 
 **Mission Control:** Sunday Planning Ritual
+
 **Participants:** User (Commander), Antigravity (Exec), Claude (Architect), Comet (Research)
 
 ---
 
 ## 1. System Health 🏥
 
-* **Storage Status:** [GREEN / YELLOW / RED]
-  * *Free Space:* [XX] GB / [XX]%
-  * *Offload Status:* [Active / Idle]
-* **Active Agents:**
-  * [ ] Antigravity (Build)
-  * [ ] Claude (Plan)
-  * [ ] Comet (Research)
-  * [ ] n8n (Automation)
-* **Alerts (Last 7 Days):** [Count]
+*   **Storage Status:** [GREEN / YELLOW / RED]
+    *   *Free Space:* [XX] GB / [XX]%
+    *   *Offload Status:* [Active / Idle]
+*   **Active Agents:**
+    *   [ ] Antigravity (Build)
+    *   [ ] Claude (Plan)
+    *   [ ] Comet (Research)
+    *   [ ] n8n (Automation)
+*   **Alerts (Last 7 Days):** [Count]
 
 ---
 
@@ -23,77 +24,77 @@
 
 ### 🔶 PRIME (Orchestration & Dashboard)
 
-* **Status:** [On Track / At Risk / Blocked]
-* **Completed:**
-  * [Artifact ID]
-* **In Progress:**
-  * [Task]
-* **Blocked By:**
-  * [Issue]
-* **Next Steps:**
-  * [ ] [Action]
+*   **Status:** [On Track / At Risk / Blocked]
+*   **Completed:**
+    *   [Artifact ID]
+*   **In Progress:**
+    *   [Task]
+*   **Blocked By:**
+    *   [Issue]
+*   **Next Steps:**
+    *   [ ] [Action]
 
 ### 💖 VALENTINE (iOS Companion)
 
-* **Status:** [On Track / At Risk / Blocked]
-* **Completed:**
-  * [Artifact ID]
-* **In Progress:**
-  * [Task]
-* **Blocked By:**
-  * [Issue]
-* **Next Steps:**
-  * [ ] [Action]
+*   **Status:** [On Track / At Risk / Blocked]
+*   **Completed:**
+    *   [Artifact ID]
+*   **In Progress:**
+    *   [Task]
+*   **Blocked By:**
+    *   [Issue]
+*   **Next Steps:**
+    *   [ ] [Action]
 
 ### 🎓 SCHOLAR (Academic Tools)
 
-* **Status:** [On Track / At Risk / Blocked]
-* **Completed:**
-  * [Artifact ID]
-* **In Progress:**
-  * [Task]
-* **Blocked By:**
-  * [Issue]
-* **Next Steps:**
-  * [ ] [Action]
+*   **Status:** [On Track / At Risk / Blocked]
+*   **Completed:**
+    *   [Artifact ID]
+*   **In Progress:**
+    *   [Task]
+*   **Blocked By:**
+    *   [Issue]
+*   **Next Steps:**
+    *   [ ] [Action]
 
 ### 🎨 TEK (Poster Project)
 
-* **Status:** [On Track / At Risk / Blocked]
-* **Completed:**
-  * [Artifact ID]
-* **In Progress:**
-  * [Task]
-* **Blocked By:**
-  * [Issue]
-* **Next Steps:**
-  * [ ] [Action]
+*   **Status:** [On Track / At Risk / Blocked]
+*   **Completed:**
+    *   [Artifact ID]
+*   **In Progress:**
+    *   [Task]
+*   **Blocked By:**
+    *   [Issue]
+*   **Next Steps:**
+    *   [ ] [Action]
 
 ---
 
 ## 3. Artifact Summary 📦
 
-* **Total Created:** [Count]
-* **Breakdown:**
-  * UI Snapshots: [X]
-  * Specs/Plans: [Y]
-  * Workflows: [Z]
+*   **Total Created:** [Count]
+*   **Breakdown:**
+    *   UI Snapshots: [X]
+    *   Specs/Plans: [Y]
+    *   Workflows: [Z]
 
 ---
 
 ## 4. Key Decisions & Rationale 🧠
 
-1. **Decision:** [Title]
-   * *Context:* [Why we made this choice]
-   * *Impact:* [What changes]
+1.  **Decision:** [Title]
+    *   *Context:* [Why we made this choice]
+    *   *Impact:* [What changes]
 
 ---
 
 ## 5. Next Week Priorities (Top 3) 🚀
 
-1. [Priority 1]
-2. [Priority 2]
-3. [Priority 3]
+1.  [Priority 1]
+2.  [Priority 2]
+3.  [Priority 3]
 
 ---
 
@@ -109,4 +110,5 @@
 ---
 
 **Signed:** Commander & Antigravity
+
 **Date:** [YYYY-MM-DD]

@@ -21,7 +21,9 @@ export default function NexusLayout({ children }: { children: React.ReactNode })
                {[
                   { name: 'Dashboard', path: '/' },
                   { name: 'Antigravity', path: '/antigravity' }, // New Module
-                  { name: 'Agents', path: '/agents' }, // Placeholder
+                  { name: 'Nexus', path: '/nexus' },
+                  { name: 'Forge', path: '/nexus/forge' },
+                  { name: 'Design', path: '/design' }, // NEW
                   { name: 'Intelligence', path: '/intelligence' },
                   { name: 'Settings', path: '/settings' } // Placeholder
                ].map((item) => (
