@@ -1,0 +1,167 @@
+{
+  "name": "Storage Guardian v1.2",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 6
+            }
+          ]
+        }
+      },
+      "id": "schedule-trigger",
+      "name": "Schedule Trigger",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "command": "cd ~/AILCC_PRIME/00_Projects/Orchestration_Hub/protocols && ./protocol_inspector.py --action check_health"
+      },
+      "id": "ssh-check-health",
+      "name": "Inspector: Check Health",
+      "type": "n8n-nodes-base.ssh",
+      "typeVersion": 1,
+      "position": [450, 300],
+      "credentials": {
+        "sshPassword": {
+          "id": "ssh-local-credential",
+          "name": "Local Mac SSH"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "dataType": "number",
+        "value1": "={{ $json.exitCode }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": 0,
+              "output": 0
+            },
+            {
+              "value2": 1,
+              "output": 1
+            },
+            {
+              "value2": 2,
+              "output": 2
+            }
+          ]
+        }
+      },
+      "id": "switch-status",
+      "name": "Switch: Green/Yellow/Red",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "message": "🟢 Storage Green. All systems nominal.",
+        "channel": "system-alerts"
+      },
+      "id": "slack-green",
+      "name": "Slack: Green",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [900, 100],
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credential",
+          "name": "Alliance Slack"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "message": "🟡 Storage Warning. Plan cleanup soon.",
+        "channel": "system-alerts"
+      },
+      "id": "slack-yellow",
+      "name": "Slack: Yellow",
+      "type": "n8n-nodes-base.slack",
+      "typeVersion": 1,
+      "position": [900, 300],
+      "credentials": {
+        "slackApi": {
+          "id": "slack-credential",
+          "name": "Alliance Slack"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "teamId": "your-linear-team-id",
+        "title": "🚨 CRITICAL: Storage Red State",
+        "description": "System storage < 10% or < 15GB. Immediate action required. See Runbook Scenario 1.",
+        "priority": 1
+      },
+      "id": "linear-red",
+      "name": "Linear: Create Issue",
+      "type": "n8n-nodes-base.linear",
+      "typeVersion": 1,
+      "position": [900, 500],
+      "credentials": {
+        "linearApi": {
+          "id": "linear-credential",
+          "name": "Alliance Linear"
+        }
+      }
+    }
+  ],
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Inspector: Check Health",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Inspector: Check Health": {
+      "main": [
+        [
+          {
+            "node": "Switch: Green/Yellow/Red",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch: Green/Yellow/Red": {
+      "main": [
+        [
+          {
+            "node": "Slack: Green",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Slack: Yellow",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Linear: Create Issue",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
