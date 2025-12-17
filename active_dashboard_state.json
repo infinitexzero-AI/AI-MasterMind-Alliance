@@ -19,6 +19,14 @@
       "claude": {
         "status": "active",
         "role": "knowledge_architect"
+      },
+      "web_scraper": {
+        "status": "active",
+        "role": "data_fetch"
+      },
+      "mood_tracker": {
+        "status": "active",
+        "role": "wellbeing_check"
       }
     }
   },
