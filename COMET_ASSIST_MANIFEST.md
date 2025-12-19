@@ -9,9 +9,11 @@
 ## 1. Comet Identity & Role Definition
 
 ### Agent Name
+
 **Comet Assist** — Multi-agent supervisor and research coordinator
 
 ### Primary Functions
+
 - Real-time web research and fact verification
 - Cross-agent message routing and escalation
 - Consensus building for multi-agent disagreements
@@ -19,6 +21,7 @@
 - Rate-limit and cost monitoring for all agents
 
 ### Capabilities
+
 - Web browsing and fact-checking
 - Summarization and synthesis
 - Task verification and QA
@@ -60,7 +63,7 @@ interface CometResponse {
 ### REST Endpoints
 
 | Endpoint | Method | Purpose | Rate Limit |
-|----------|--------|---------|-----------|
+| ---------- | -------- | --------- | ----------- |
 | `/api/comet/verify` | POST | Verify agent output | 1000/min |
 | `/api/comet/research` | POST | Perform web research | 500/min |
 | `/api/comet/synthesize` | POST | Synthesize multi-agent results | 500/min |
@@ -104,7 +107,7 @@ interface CometResponse {
 
 ### Event Flow
 
-```
+```text
 [Mode 6 Dispatcher]
     ↓
 [Task Completion]
@@ -122,7 +125,7 @@ interface CometResponse {
 ### Event Types
 
 | Event | Trigger | Handler | Output |
-|-------|---------|---------|--------|
+| ------- | --------- | --------- | -------- |
 | `task-pending` | Dispatch begins | Comet logs start time | Cost pre-calculation |
 | `task-complete` | Agent finishes | Comet verifies output | Approval/retry decision |
 | `task-failed` | Agent error | Comet analyzes error | Escalation or retry |
@@ -146,6 +149,7 @@ const defaultRetryPolicy = {
 ### Comet Assist (Supervisor)
 
 **Responsibilities:**
+
 - Monitor all agent executions
 - Verify output quality and accuracy
 - Route tasks to secondary agents if needed
@@ -153,12 +157,14 @@ const defaultRetryPolicy = {
 - Escalate critical issues
 
 **Permissions:**
+
 - Read-only access to all agent outputs
 - Can trigger task reruns
 - Can escalate to human review
 - Cannot modify task parameters
 
 **Rate Limits:**
+
 - 10,000 verification checks/day
 - 1,000 web searches/day
 - 500 escalations/day
@@ -166,6 +172,7 @@ const defaultRetryPolicy = {
 ### Claude (Primary Code/Analysis Agent)
 
 **Responsibilities:**
+
 - Code generation and review
 - Complex analysis and reasoning
 - Documentation generation
@@ -176,6 +183,7 @@ const defaultRetryPolicy = {
 ### OpenAI (Quick Tasks Agent)
 
 **Responsibilities:**
+
 - Fast task execution
 - Token-efficient operations
 - Summarization
@@ -186,6 +194,7 @@ const defaultRetryPolicy = {
 ### Grok (Reasoning Agent)
 
 **Responsibilities:**
+
 - Multi-step logical reasoning
 - Complex planning
 - Experimental approaches
@@ -200,7 +209,7 @@ const defaultRetryPolicy = {
 ### Per-Agent Limits
 
 | Agent | Requests/min | Tokens/day | Concurrency |
-|-------|-------------|-----------|------------|
+| ------- | ------------- | ----------- | ------------ |
 | Claude | 60 | 5M | 10 |
 | OpenAI | 90 | 3M | 15 |
 | Grok | 40 | 2M | 5 |
@@ -246,7 +255,7 @@ if (costTracker.daily.total >= costTracker.thresholds.alertAt) {
 ### Error Classification
 
 | Category | Examples | Action |
-|----------|----------|--------|
+| ---------- | ---------- | -------- |
 | Retryable | 429, 503, timeout | Exponential backoff |
 | Transient | 500, 502 | Retry with jitter |
 | Auth | 401, 403 | Escalate to human |
@@ -255,7 +264,7 @@ if (costTracker.daily.total >= costTracker.thresholds.alertAt) {
 
 ### Recovery Flow
 
-```
+```text
 [Agent Error]
     ↓
 [Comet Error Handler]
@@ -293,7 +302,7 @@ async function healthCheck() {
 ### Alert Conditions
 
 | Condition | Severity | Action |
-|-----------|----------|--------|
+| ----------- | ---------- | -------- |
 | Agent unreachable for 5 min | 🔴 Critical | Page on-call |
 | Cost spike > 2x baseline | 🟡 High | Alert + pause low-priority tasks |
 | Webhook queue > 1000 | 🟡 High | Scale webhook consumers |
