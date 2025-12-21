@@ -1,20 +1,36 @@
 {
 	"folders": [
 		{
-			"name": "🤖 PRIME CORE (Agents & Logs)",
+			"name": "🔱 ALLIANCE HQ (Master)",
 			"path": "."
 		},
 		{
-			"name": "🖥️ COMMAND CENTER (Web UI)",
-			"path": "ailcc/src/command-center"
+			"name": "🛰️ AILCC CORE",
+			"path": "01_Areas/Codebases/ailcc"
 		},
 		{
-			"name": "📜 THE CHRONICLE (History)",
-			"path": "doc_archive"
+			"name": "🎓 SCHOLAR PROTOCOL",
+			"path": "01_Areas/modes"
 		},
 		{
-			"name": "⚙️ AUTOMATION (Scripts)",
-			"path": "ailcc/src/automation"
+			"name": "⚙️ SYSTEM ENGINE",
+			"path": "06_System"
+		},
+		{
+			"name": "📜 INTELLIGENCE VAULT",
+			"path": "04_Intelligence_Vault"
+		},
+		{
+			"name": "🗂️ AREAS",
+			"path": "01_Areas"
+		},
+		{
+			"name": "💾 RESOURCES",
+			"path": "02_Resources"
+		},
+		{
+			"name": "📂 PROJECTS",
+			"path": "00_Projects"
 		}
 	],
 	"settings": {
@@ -23,10 +39,10 @@
 			"titleBar.activeBackground": "#1E293B",
 			"titleBar.activeForeground": "#38BDF8"
 		},
-        "files.exclude": {
-            "**/.DS_Store": true,
-            "**/node_modules": true,
-            "**/.next": true
-        }
+		"files.exclude": {
+			"**/.DS_Store": true,
+			"**/node_modules": true,
+			"**/.next": true
+		}
 	}
 }

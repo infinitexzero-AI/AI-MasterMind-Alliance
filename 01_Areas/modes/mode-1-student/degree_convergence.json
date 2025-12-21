@@ -1,0 +1,35 @@
+{
+    "degree": "Bachelor of Science (2020 Calendar)",
+    "major": "Biology Major",
+    "minor": "Psychology Minor",
+    "certificate": "Biopsychology Certificate",
+    "total_credits_required": 120,
+    "credits_earned": 114,
+    "status": "Transcript Verified: CHEM 1001 & BIOL 2811 Completed.",
+    "completed_core": [
+        "CHEM 1001 (Intro Chemistry I)",
+        "BIOL 2811 (Genetics & Evolution)",
+        "BIOL 1001 (Foundations)",
+        "BIOL 1501 (Cell Biology)",
+        "BIOC 1001 (Intro Biochemistry)",
+        "PHYS 1041 (Physics for Life Sciences)"
+    ],
+    "remaining_core_blockers": [
+        "MATH 1111/1151 (Calculus I) - Critical",
+        "MATH 1311 (Intro to Data Science) - Planned Winter 2026",
+        "BIOL 2701 (Stats for Life Sciences) - Required",
+        "Distribution: 1 Arts & Letters course remaining",
+        "Distribution: 1 Humanities course remaining"
+    ],
+    "term_plans": {
+        "winter_2026_remote_focus": {
+            "strategy": "GPA Stabilization & Distribution Cleanup",
+            "courses": [
+                "MATH 1311 (Intro to Data Science) - Online",
+                "HLTH 1011 (Foundations of Health Inquiry) - Online",
+                "PSYC 3741 (Human Dev Across Cultures) - Online",
+                "ARTS_ELECTIVE (One remaining Art/Humanity) - Online"
+            ]
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+  "daily_limit": 5.0,
+  "current_spend": 4.5,
+  "last_reset": "2025-12-20",
+  "status": "WARNING",
+  "agents": {
+    "grok": {
+      "spend": 4.5,
+      "limit": 2.0,
+      "requests": 1
+    },
+    "gemini": {
+      "spend": 0.0,
+      "limit": 1.5,
+      "requests": 0
+    },
+    "claude": {
+      "spend": 0.0,
+      "limit": 1.5,
+      "requests": 0
+    }
+  },
+  "throttle_level": 50
+}

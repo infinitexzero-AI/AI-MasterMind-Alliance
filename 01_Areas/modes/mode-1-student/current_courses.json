@@ -1,0 +1,66 @@
+{
+  "semester": "Fall 2025",
+  "status": "Active",
+  "courses": [
+    {
+      "code": "COMM 3611",
+      "name": "Commercial Law",
+      "professor": "Jack Blackier",
+      "schedule": "Wednesdays 4:30 PM - 7:20 PM",
+      "credits": 3,
+      "status": "In Progress",
+      "exam_date": "2025-12-17T19:00:00",
+      "active_topics": [
+        "Torts & Negligence (Ch 3-6)",
+        "Contracts (Ch 7-13)",
+        "Property Law (Ch 14-16)",
+        "Business Organizations (Ch 19-21)",
+        "Employment Law (Ch 25-26)",
+        "Intellectual Property (Ch 17-18)",
+        "Tax Law (Ch 24)"
+      ],
+      "covered_topics": [
+        "Torts & Negligence (Ch 3-6)",
+        "Contracts (Ch 7-13)",
+        "Property Law (Ch 14-16)",
+        "Business Organizations (Ch 19-21)"
+      ],
+      "resources": [
+        {
+          "type": "syllabus",
+          "path": "/Users/infinite27/Library/CloudStorage/OneDrive-Personal/School/2025/Comm Law 2025 syllabus.docx"
+        },
+        {
+          "type": "exam_instructions",
+          "path": "/Users/infinite27/Library/CloudStorage/OneDrive-Personal/School/2025/Comm3611FinalExamDec2025Instructions.docx"
+        },
+        {
+          "type": "midterm_1",
+          "path": "/Users/infinite27/Library/CloudStorage/OneDrive-Personal/School/2025/Comm Law MT 1 FALL 2025.docx"
+        },
+        {
+          "type": "textbook",
+          "name": "Canadian Business Law"
+        }
+      ],
+      "deliverables": [
+        {
+          "title": "Essay 1",
+          "due_date": "2025-11-15",
+          "status": "Completed"
+        },
+        {
+          "title": "Final Exam",
+          "due_date": "2025-12-20",
+          "status": "Completed",
+          "weight": "40%"
+        }
+      ]
+    }
+  ],
+  "study_agents": {
+    "researcher": "Perplexity",
+    "tutor": "Claude",
+    "quiz_master": "Grok"
+  }
+}
