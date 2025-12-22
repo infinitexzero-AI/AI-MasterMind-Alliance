@@ -1,0 +1,17 @@
+{
+    "spec_version": "1.0",
+    "name": "Antigravity Inbound Task",
+    "description": "Payload structure for tasks routed from n8n to Antigravity's local context.",
+    "schema": {
+        "task_id": "recxxxxxxxxxxxxxx",
+        "name": "Fix Dashboard CSS",
+        "mission_context": "Phase 6 / Cognitive Expansion",
+        "priority": "High",
+        "instructions": "Update the H1 headers to be slate-200 and add a glassmorphism effect to .card elements.",
+        "files_to_touch": [
+            "dashboard/index.css",
+            "dashboard/components/Card.tsx"
+        ]
+    },
+    "example_curl": "curl -X POST http://localhost:3000/api/agent/dispatch -H 'Content-Type: application/json' -d @payload.json"
+}

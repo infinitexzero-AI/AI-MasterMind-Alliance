@@ -1,7 +1,10 @@
 {
   "system": {
     "version": "1.0.0",
-    "workspace_root": "/Users/infinite27/AILCC_PRIME"
+    "workspace_root": "/Users/infinite27/AILCC_PRIME",
+    "autonomy_level": 5,
+    "feedback_loop_enabled": true,
+    "self_improvement": true
   },
   "launcher": {
     "browser": "Google Chrome",

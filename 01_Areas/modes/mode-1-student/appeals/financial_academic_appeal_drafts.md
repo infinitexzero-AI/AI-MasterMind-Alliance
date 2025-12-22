@@ -1,19 +1,21 @@
 # 📄 Mount Allison: Integrated Financial & Academic Appeal Strategy
+
 **Prepared for**: Joel Palk-Ricard | **Date**: Dec 21, 2025
 
 ---
 
 ## 📧 EMAIL 1: FINANCIAL AID (EMERGENCY BURSARY & LOAN DELAY)
-**To**: financialaid@mta.ca
+
+**To**: `financialaid@mta.ca`
 **Subject**: URGENT: Emergency Bursary Request & Financial Hardship - Joel Palk-Ricard (026004)
 
 Dear Financial Aid Office,
 
 I am writing to formally request an **emergency bursary** and to discuss a critical financial situation that is currently blocking my academic progress for the upcoming Winter 2026 term.
 
-Currently, my student loans for the Fall 2025 term have been significantly delayed, leaving me with a balance owing to the university and several months behind on essential living expenses. As I am currently in a state of extreme financial hardship, I am requesting any available emergency funding to cover immediate costs while the loan processing is finalized.
+Currently, my student loans for the Fall 2025 term have been significantly delayed, leaving me with a balance owing to the university and several months behind on essential living expenses. This outstanding balance has created a severe **procedural block**: because of the hold on my account, I am unable to modify my registration or withdraw from courses if necessary, which previously led to academic penalties in 2023.
 
-Additionally, because of this outstanding balance, I am currently blocked from making necessary changes to my Winter 2026 schedule in Self-Service. I am requesting a temporary waiver of this hold so that I may enroll in the remote courses required for my degree convergence, ensuring my graduation timeline remains intact for Spring 2027.
+I am requesting any available emergency funding to cover immediate costs while the loan processing is finalized. Additionally, I am requesting a temporary waiver of the registration hold so that I may enroll in the remote courses required for my degree convergence (MATH 1311, HLTH 1011), ensuring my graduation timeline remains intact for Spring 2027.
 
 Thank you for your immediate attention to this matter.
 
@@ -23,8 +25,9 @@ Joel Palk-Ricard (026004)
 ---
 
 ## 📧 EMAIL 2: REGISTRAR (SCHOLASTIC STANDING & 2023 RETROACTIVE WITHDRAWAL)
-**To**: regoffice@mta.ca
-**Cc**: financialaid@mta.ca
+
+**To**: `regoffice@mta.ca`
+**Cc**: `financialaid@mta.ca`
 **Subject**: Appeal for Retroactive Withdrawal and Correction of Scholastic Standing - Joel Palk-Ricard (026004)
 
 Dear Registrar’s Office,
@@ -45,6 +48,7 @@ Joel Palk-Ricard (026004)
 ---
 
 ## 📞 PHONE SCRIPT (IF CALLING STUDENT ACCOUNTS)
+
 **Contact**: 506-364-2269 (General Student Services)
 
 "Hello, my name is Joel Palk-Ricard (ID 026004). I am calling regarding a financial hold on my account that is preventing me from registering for my Winter courses. My student loans are delayed, but I have a graduation roadmap finalized for Spring 2027. I need a temporary lift of the registration hold so I can finalize my remote courses for January before the sections fill up. Who can I speak with to authorize this waiver given the loan delay?"
@@ -52,6 +56,7 @@ Joel Palk-Ricard (026004)
 ---
 
 ## 📝 NEXT STEPS
+
 1. **Send Email 1 (Financial Aid)** immediately to flag the emergency.
 2. **Send Email 2 (Registrar)** once you have sent the first one.
 3. **Check Self-Service** daily. If the hold is not lifted within 48 hours, use the phone script above.

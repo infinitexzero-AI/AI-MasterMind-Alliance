@@ -1,13 +1,13 @@
 {
   "daily_limit": 5.0,
-  "current_spend": 4.5,
-  "last_reset": "2025-12-20",
-  "status": "WARNING",
+  "current_spend": 0.0,
+  "last_reset": "2025-12-21",
+  "status": "HEALTHY",
   "agents": {
     "grok": {
-      "spend": 4.5,
+      "spend": 0.0,
       "limit": 2.0,
-      "requests": 1
+      "requests": 0
     },
     "gemini": {
       "spend": 0.0,
@@ -20,5 +20,5 @@
       "requests": 0
     }
   },
-  "throttle_level": 50
+  "throttle_level": 0
 }
