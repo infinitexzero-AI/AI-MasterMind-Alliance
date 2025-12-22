@@ -162,7 +162,7 @@ This document tracks the granular execution of the roadmap defined in `MISSION_M
   - Forecast funding vs. expenses model for 2026-2027.
   - *Delegated to Strategist (Finance).*
 
-- [ ] **Task 137: Email Archive Ingestion**
+- [/] **Task 137: Email Archive Ingestion (Comet Transition)**
   - Backup 2016-2025 Outlook emails to local searchable archive.
   - *Delegated to Comet (Archivist).*
 

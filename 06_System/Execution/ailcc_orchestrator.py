@@ -78,6 +78,16 @@ def launch_core():
         subprocess.Popen([PYTHON, judge_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         log("✅ The Judge launched.")
 
+    # 3. Start Neural Relay (WebSocket Server)
+    log("📡 Engaging NEURAL RELAY (Port 3001)...")
+    if is_port_in_use(3001):
+        log("⚠️ Port 3001 active. Relay likely running.")
+    else:
+        relay_path = f"{EXEC_DIR}/system_relay.py"
+        with open(f"{ROOT}/06_System/Logs/system_relay.log", "a") as out:
+             subprocess.Popen([PYTHON, relay_path], stdout=out, stderr=subprocess.STDOUT)
+        log("✅ Neural Relay launched.")
+
 def open_interface():
     log("🖥️ Opening Dashboard & Diagnostics...")
     webbrowser.open("http://localhost:3000/antigravity")

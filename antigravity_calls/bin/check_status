@@ -1,0 +1,10 @@
+#!/bin/bash
+# Antigravity System Status Check
+# Wrapper for the core python status command
+
+# Ensure we are in the workspace root or can resolve it
+WORKSPACE_ROOT="/Users/infinite27/AILCC_PRIME"
+cd "$WORKSPACE_ROOT"
+
+# Run the python status command
+python3 06_System/Execution/antigravity.py status

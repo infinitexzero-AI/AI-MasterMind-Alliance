@@ -45,16 +45,16 @@ This document defines the schema for the "Brain" of the operation, ensuring Anti
 
 Based on `Agent` field:
 
-1.  **Case: `Antigravity`**
-    *   **Action**: Send Webhook to local Listener (if active) OR create a `TODO.md` entry in the repo via GitHub API.
-    *   **Payload**: `{"task": "Name", "context": "Payload"}`.
+1. **Case: `Antigravity`**
+   * **Action**: Send Webhook to local Listener (if active) OR create a `TODO.md` entry in the repo via GitHub API.
+   * **Payload**: `{"task": "Name", "context": "Payload"}`.
 
-2.  **Case: `Comet`**
-    *   **Action**: Send email/notification to user with "Comet Prompt".
-    *   **Payload**: `Please execute this in Browser: [Context]`.
+2. **Case: `Comet`**
+   * **Action**: Send email/notification to user with "Comet Prompt".
+   * **Payload**: `Please execute this in Browser: [Context]`.
 
-3.  **Case: `Other` (Grok/Claude)**
-    *   **Action**: Log to specific research queue or document.
+3. **Case: `Other` (Grok/Claude)**
+   * **Action**: Log to specific research queue or document.
 
 ---
 
