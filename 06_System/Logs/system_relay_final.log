@@ -1,0 +1,121 @@
+2025-12-23 00:19:54,322 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2025-12-23 00:19:55,761 [INFO] server listening on 0.0.0.0:3001
+2025-12-23 00:33:00,913 [INFO] connection rejected (426 Upgrade Required)
+2025-12-23 00:33:01,077 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+    ...<3 lines>...
+    )
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+        "Connection", ", ".join(connection) if connection else None
+    )
+websockets.exceptions.InvalidUpgrade: missing Connection header
+2025-12-23 00:44:43,166 [INFO] connection rejected (426 Upgrade Required)
+2025-12-23 00:44:43,427 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+    ...<3 lines>...
+    )
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+        "Connection", ", ".join(connection) if connection else None
+    )
+websockets.exceptions.InvalidUpgrade: invalid Connection header: keep-alive
+2025-12-23 00:45:23,541 [INFO] connection rejected (426 Upgrade Required)
+2025-12-23 00:45:24,028 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+    ...<3 lines>...
+    )
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+        "Connection", ", ".join(connection) if connection else None
+    )
+websockets.exceptions.InvalidUpgrade: invalid Connection header: keep-alive
+2025-12-23 00:45:26,257 [INFO] connection rejected (426 Upgrade Required)
+2025-12-23 00:45:26,268 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+    ...<3 lines>...
+    )
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+        ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+        "Connection", ", ".join(connection) if connection else None
+    )
+websockets.exceptions.InvalidUpgrade: invalid Connection header: keep-alive
+2025-12-23 01:55:04,070 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.reader.read_line,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+    ...<3 lines>...
+    )
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+2025-12-23 10:26:16,636 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+    ...<3 lines>...
+    )
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/server.py", line 142, in handshake
+    async with self.send_context(expected_state=CONNECTING):
+               ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/contextlib.py", line 214, in __aenter__
+    return await anext(self.gen)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/websockets/asyncio/connection.py", line 957, in send_context
+    raise self.protocol.close_exc from original_exc
+websockets.exceptions.ConnectionClosedError: no close frame received or sent

@@ -66,6 +66,7 @@ def launch_core():
         try:
             subprocess.run([PYTHON, path], check=True, capture_output=True, text=True)
             log(f"✅ {script} Initialized.")
+            time.sleep(1) # Staggered startup to prevent load spikes
         except subprocess.CalledProcessError as e:
             log(f"❌ Error launching {script}: {e.stderr}")
 

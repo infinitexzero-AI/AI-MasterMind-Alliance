@@ -17,7 +17,7 @@ logger = logging.getLogger("NeuralRelay")
 
 CLIENTS = set()
 
-async def handler(websocket, path):
+async def handler(websocket):
     CLIENTS.add(websocket)
     logger.info(f"🔗 Client Connected: {websocket.remote_address}")
     
