@@ -1,12 +1,14 @@
 # 📧 Final Appeal Emails: Ready to Send
+
 **Date**: December 22, 2025
 **Status**: Copy-Paste Ready
 
 ---
 
 ## 📩 Email #1 – Academic Appeals Committee
+
 **To**: [Chair, Academic Appeals Committee] (Check directory for current contact)
-**CC**: regoffice@mta.ca
+**CC**: <regoffice@mta.ca>
 **Subject**: Request for Academic Standing Review – 2023 Winter and Fall Terms (New Evidence & Disability Context)
 
 Dear Chair, Academic Appeals Committee,
@@ -16,8 +18,9 @@ I am writing to request a review of my academic standing for the 2023 Winter and
 ---
 
 ## 💰 Email #2 – Student Financial Services
-**To**: financialaid@mta.ca
-**CC**: accountsreceivable@mta.ca (Attn: Shane Carroll)
+
+**To**: <financialaid@mta.ca>
+**CC**: <accountsreceivable@mta.ca> (Attn: Shane Carroll)
 **Subject**: Request for Fee Relief – Documented Loan Disbursement and Processing Delays
 
 Dear Student Financial Services,
@@ -27,6 +30,7 @@ I am writing to request a review of late-payment fees and related penalties that
 ---
 
 ## 🏦 Email #3 – NSLSC (Loan Account Review)
+
 **To**: [NSLSC Secure Message or Support Email]
 **Subject**: Loan Account Review Request – Academic Disruptions and Pending University Appeal
 
@@ -37,6 +41,7 @@ I am writing to request a review of my Canada Student Loan account in light of d
 ---
 
 ## 📁 Suggested Attachment Strategy
-1.  **Attachment A**: `FINAL_Academic_Appeal_Document.pdf` (The 2.5 page summary)
-2.  **Attachment B**: `email_evidence_dump.pdf` (Selected screenshots or text of the Oct/Nov 2023 emails)
-3.  **Attachment C**: `Scholar_Readiness_Statement.pdf` (Proof of 95% degree completion)
+
+1. **Attachment A**: `FINAL_Academic_Appeal_Document.pdf` (The 2.5 page summary)
+2. **Attachment B**: `email_evidence_dump.pdf` (Selected screenshots or text of the Oct/Nov 2023 emails)
+3. **Attachment C**: `Scholar_Readiness_Statement.pdf` (Proof of 95% degree completion)

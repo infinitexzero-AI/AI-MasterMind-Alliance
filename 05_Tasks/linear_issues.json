@@ -1,0 +1,26 @@
+[
+  {
+    "id": "65a5b004-bc36-4815-af4c-f2a2e3808bc3",
+    "identifier": "AI001-17",
+    "title": "[SCHOLAR] Follow-up on Administrative Appeals (72-Hour Pulse)",
+    "description": "Initiate the 'Administrative Convergence' sequence by following up on the financial and academic appeals. If no response within 72 hours, trigger the provided phone script. Update administrative status in current_context.json.",
+    "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-17/scholar-follow-up-on-administrative-appeals-72-hour-pulse",
+    "state": { "name": "Backlog" }
+  },
+  {
+    "id": "1e22c836-29cb-417d-bfcc-496971747de6",
+    "identifier": "AI001-16",
+    "title": "[STRATEGY] Engage Daily Feedback Loop (The Judge)",
+    "description": "Engage 'The Judge' to analyze system logs daily and provide tactical adjustments to Antigravity's autonomy levels and resource allocation. Monitor productivity trends versus mental health metrics.",
+    "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-16/strategy-engage-daily-feedback-loop-the-judge",
+    "state": { "name": "Backlog" }
+  },
+  {
+    "id": "182033d5-45ad-42ab-846e-ac7f9e99c0b3",
+    "identifier": "AI001-15",
+    "title": "[SCHOLAR] Deep Credit Audit & Roadmap Alignment (Post-MTA Access)",
+    "description": "Engage the 'Scholar' role to perform a deep credit audit and academic roadmap alignment once MTA email access is secured.",
+    "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-15/scholar-deep-credit-audit-roadmap-alignment-post-mta-access",
+    "state": { "name": "Backlog" }
+  }
+]

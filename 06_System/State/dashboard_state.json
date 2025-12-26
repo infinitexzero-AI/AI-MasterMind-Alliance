@@ -67,5 +67,12 @@
   ],
   "system": {
     "cloud_log_id": "1LKXW2iSIX_K6TbvcCSD53EkjHNak_AfKKpU4U5uT8u8"
+  },
+  "components": {
+    "grok_web_reading": {
+      "status": "OFFLINE",
+      "last_checked": "2025-12-24T01:17:55.312827",
+      "fallback_active": true
+    }
   }
 }
