@@ -17,7 +17,10 @@ SCRIPTS = [
     "vault_rag.py",
     "budget_governor.py",
     "finance_tracker.py",
-    "convergence_audit.py"
+    "convergence_audit.py",
+    "web_daemon.py",
+    "nexus_server.py",
+    "sync_daemon.py"
 ]
 
 def log(message):
@@ -59,16 +62,19 @@ def launch_dashboard():
 def launch_core():
     log("🚀 INITIALIZING AILCC ORCHESTRATOR...")
     
-    # 1. Start Core Services (Sequential Init)
+    # 1. Start Core Services (Background Init)
     for script in SCRIPTS:
         path = f"{EXEC_DIR}/{script}"
-        log(f"⚡ Initializing {script}...")
+        log(f"⚡ Launching {script} in background...")
         try:
-            subprocess.run([PYTHON, path], check=True, capture_output=True, text=True)
-            log(f"✅ {script} Initialized.")
+            # Use Popen to launch in background without waiting
+            log_path = f"{ROOT}/06_System/Logs/{script.replace('.py', '.log')}"
+            with open(log_path, "a") as out:
+                subprocess.Popen([PYTHON, path], stdout=out, stderr=subprocess.STDOUT)
+            log(f"✅ {script} launched.")
             time.sleep(1) # Staggered startup to prevent load spikes
-        except subprocess.CalledProcessError as e:
-            log(f"❌ Error launching {script}: {e.stderr}")
+        except Exception as e:
+            log(f"❌ Error launching {script}: {str(e)}")
 
     # 2. Start Persistent Background Loop (The Judge)
     log("⚖️ Engaging THE JUDGE (Strategic Growth Advisory)...")
@@ -93,6 +99,9 @@ def open_interface():
     log("🖥️ Opening Dashboard & Diagnostics...")
     webbrowser.open("http://localhost:3000/antigravity")
     
+    # Mode 5 NEXUS
+    webbrowser.open("http://localhost:8000")
+    
     diag_path = f"file://{EXEC_DIR}/ailcc-diagnostic.html"
     webbrowser.open(diag_path)
 
@@ -104,6 +113,7 @@ if __name__ == "__main__":
     launch_dashboard()
     open_interface()
     
-    log("✅ SYSTEM LAUNCH COMPLETE. Monitoring Heartbeat...")
+    log("✅ SYSTEM LAUNCH COMPLETE (MODE 5: ACTIVE). Monitoring Heartbeat...")
     log("🌐 Neural Relay: ONLINE")
+    log("📊 NEXUS Dashboard: http://localhost:8000")
     log("🧠 Singularity Alignment: 100%")

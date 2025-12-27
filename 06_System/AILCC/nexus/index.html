@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AILCC // NEXUS PRO</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --accent: #00ff41;
+            --accent-dim: rgba(0, 255, 65, 0.2);
+            --bg: #0a0a0c;
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #e0e0e0;
+            --text-muted: #888;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 255, 65, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 255, 65, 0.05) 0%, transparent 40%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 60px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -1px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .blink {
+            width: 12px;
+            height: 12px;
+            background: var(--accent);
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 15px var(--accent);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(0.9); }
+            100% { opacity: 1; transform: scale(1); }
+        }
+
+        .system-meta {
+            text-align: right;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        #mode-display {
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 25px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            border-color: var(--accent-dim);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--accent);
+            opacity: 0.3;
+        }
+
+        .card.active::before {
+            opacity: 1;
+            box-shadow: 0 0 10px var(--accent);
+        }
+
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .agent-name {
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-badge {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 4px;
+            background: var(--border);
+            color: var(--text-muted);
+        }
+
+        .active .status-badge {
+            background: var(--accent-dim);
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .task-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .task-content {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            min-height: 3em;
+        }
+
+        .section-header {
+            margin: 40px 0 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-header::after {
+            content: '';
+            flex-grow: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+        .health-card {
+            border-left: 4px solid var(--accent);
+        }
+
+        .health-card.warn {
+            border-left-color: #ff9800;
+        }
+
+        .health-card.error {
+            border-left-color: #ff4141;
+        }
+
+        .event-log {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            margin-top: 15px;
+            max-height: 150px;
+            overflow-y: auto;
+            border-top: 1px solid var(--border);
+            padding-top: 10px;
+        }
+
+        .event-item {
+            margin-bottom: 5px;
+            padding-left: 10px;
+            border-left: 1px solid var(--accent-dim);
+        }
+
+        .event-time {
+            color: var(--accent);
+            opacity: 0.6;
+            margin-right: 5px;
+        }
+
+        .footer {
+            margin-top: 60px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div>
+                <h1>AILCC // NEXUS <span class="blink"></span></h1>
+                <p class="subtitle">Ailcc Primordial Network Interface</p>
+            </div>
+            <div class="system-meta">
+                <div>MODE: <span id="mode-display">INITIALIZING...</span></div>
+                <div id="last-sync">SYNC: --:--:--</div>
+            </div>
+        </header>
+
+        <div class="section-header">Agent Intelligence Swarm</div>
+        <div class="grid" id="agent-grid">
+            <!-- Agent cards will be injected here -->
+        </div>
+
+        <div class="section-header">System Health & Digital Sync</div>
+        <div class="grid" id="health-grid">
+            <!-- Health cards will be injected here -->
+        </div>
+
+        <div class="footer">
+            &copy; 2025 MODE 5 PROTOCOL // SECURE NODE v1.2.0
+        </div>
+    </div>
+
+    <script>
+        async function fetchData() {
+            try {
+                // Fetch Master Status
+                const statusRes = await fetch('/status.json');
+                const statusData = await statusRes.json();
+                
+                document.getElementById('mode-display').innerText = statusData.current_mode;
+                
+                const lastUpdated = new Date(statusData.last_updated);
+                document.getElementById('last-sync').innerText = "SYNC: " + lastUpdated.toLocaleTimeString();
+                
+                const agentGrid = document.getElementById('agent-grid');
+                agentGrid.innerHTML = '';
+                
+                for (const [name, info] of Object.entries(statusData.agents)) {
+                    const isActive = info.status === 'ACTIVE';
+                    const cardClass = isActive ? 'card active' : 'card';
+                    
+                    agentGrid.innerHTML += `
+                        <div class="${cardClass}">
+                            <div class="agent-header">
+                                <span class="agent-name">${name}</span>
+                                <span class="status-badge">${info.status}</span>
+                            </div>
+                            <div class="task-label">CURRENT_OBJECTIVE</div>
+                            <div class="task-content">${info.task}</div>
+                        </div>`;
+                }
+
+                // Fetch Sync State (Phase 5)
+                const syncRes = await fetch('/status.json').then(r => fetch('/sync_state.json'));
+                if (syncRes.ok) {
+                    const syncData = await syncRes.json();
+                    const healthGrid = document.getElementById('health-grid');
+                    healthGrid.innerHTML = '';
+
+                    for (const [comp, state] of Object.entries(syncData.system_health)) {
+                        if (typeof state !== 'string') continue;
+                        const statusClass = state === 'healthy' || state === 'synced' ? '' : (state === 'initializing' ? 'warn' : 'error');
+                        healthGrid.innerHTML += `
+                            <div class="card health-card ${statusClass}">
+                                <div class="agent-header">
+                                    <span class="agent-name">${comp.replace('_', ' ')}</span>
+                                    <span class="status-badge">${state.toUpperCase()}</span>
+                                </div>
+                                <div class="task-label">Sync Status</div>
+                                <div class="task-content">Real-time CDC Active</div>
+                            </div>`;
+                    }
+
+                    // Add Events Log to the first card or a separate log
+                    if (syncData.events && syncData.events.length > 0) {
+                        const logHtml = syncData.events.reverse().map(e => `
+                            <div class="event-item">
+                                <span class="event-time">${new Date(e.timestamp).toLocaleTimeString()}</span>
+                                <span>${e.message}</span>
+                            </div>
+                        `).join('');
+                        
+                        healthGrid.innerHTML += `
+                            <div class="card" style="grid-column: 1 / -1;">
+                                <div class="agent-header"><span class="agent-name">Recent CDC Pulse Log</span></div>
+                                <div class="event-log">${logHtml}</div>
+                            </div>`;
+                    }
+                }
+            } catch (e) { 
+                console.error("Link severed:", e);
+                document.getElementById('mode-display').innerText = "OFFLINE";
+                document.getElementById('mode-display').style.color = "#ff4141";
+            }
+        }
+
+        setInterval(fetchData, 2000);
+        fetchData();
+    </script>
+</body>
+</html>
