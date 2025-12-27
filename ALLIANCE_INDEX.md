@@ -8,7 +8,8 @@
 
 ### 1. PRIME (Orchestration Framework)
 
-- **Location:** `~/AILCC_PRIME/AI-MasterMind-Alliance`
+- **Master Definition**: [AI_MASTERMIND_ALLIANCE_MASTER_DEFINITION.md](file:///Users/infinite27/AILCC_PRIME/AI_MASTERMIND_ALLIANCE_MASTER_DEFINITION.md)
+- **Location**: `~/AILCC_PRIME/AI-MasterMind-Alliance`
 - **Repo:** `infinitexzero-AI/AI-MasterMind-Alliance`
 - **Key Components:**
   - **Orchestration Hub:** `00_Projects/Orchestration_Hub`
