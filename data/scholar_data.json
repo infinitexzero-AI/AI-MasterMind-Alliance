@@ -4,7 +4,7 @@
     "major": "Biology",
     "total_credits_required": 120,
     "credits_earned": 114,
-    "current_gpa": 3.7,
+    "current_gpa": 0,
     "status": "In Progress",
     "graduation_readiness": 95,
     "remaining_courses_needed": [
@@ -19,42 +19,52 @@
       "name": "Commercial Law",
       "exam_date": "2025-12-17T19:00:00",
       "active_topics": [],
-      "covered_topics": ["Torts", "Contracts", "Property", "Business Orgs", "Employment"],
+      "covered_topics": [
+        "Torts",
+        "Contracts",
+        "Property",
+        "Business Orgs",
+        "Employment"
+      ],
       "deliverables": [
         {
-            "title": "Final Grade",
-            "due_date": "2025-12-20",
-            "status": "Completed"
+          "title": "Final Grade",
+          "due_date": "2025-12-20",
+          "status": "Completed"
         }
       ]
     },
     {
-        "code": "VMCS 1201",
-        "name": "Visual Culture",
-        "exam_date": "N/A",
-        "active_topics": [],
-        "covered_topics": ["All Modules"],
-        "deliverables": [
-            {
-                "title": "Final Portfolio",
-                "due_date": "2025-12-15",
-                "status": "Completed"
-            }
-        ]
+      "code": "VMCS 1201",
+      "name": "Visual Culture",
+      "exam_date": "N/A",
+      "active_topics": [],
+      "covered_topics": [
+        "All Modules"
+      ],
+      "deliverables": [
+        {
+          "title": "Final Portfolio",
+          "due_date": "2025-12-15",
+          "status": "Completed"
+        }
+      ]
     },
     {
-        "code": "INDG 2881",
-        "name": "Indigenous Studies",
-        "exam_date": "N/A",
-        "active_topics": [],
-        "covered_topics": ["All Modules"],
-        "deliverables": [
-            {
-                "title": "Final Reflection",
-                "due_date": "2025-12-18",
-                "status": "Completed"
-            }
-        ]
+      "code": "INDG 2881",
+      "name": "Indigenous Studies",
+      "exam_date": "N/A",
+      "active_topics": [],
+      "covered_topics": [
+        "All Modules"
+      ],
+      "deliverables": [
+        {
+          "title": "Final Reflection",
+          "due_date": "2025-12-18",
+          "status": "Completed"
+        }
+      ]
     }
   ]
 }
