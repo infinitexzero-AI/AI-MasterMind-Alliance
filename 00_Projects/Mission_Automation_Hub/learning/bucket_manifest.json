@@ -1,0 +1,7 @@
+{
+  "bucket": "learning",
+  "name": "Bio/Psych/Neuro Learning Tracks",
+  "task_count": 40,
+  "status": "initialized",
+  "priorities": ["Academic Synthesis", "Exam Preparation", "Research Logging"]
+}

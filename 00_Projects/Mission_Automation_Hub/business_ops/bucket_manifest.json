@@ -1,0 +1,7 @@
+{
+  "bucket": "business_ops",
+  "name": "Fresh Coats Business Operations",
+  "task_count": 60,
+  "status": "initialized",
+  "priorities": ["Client Retrieval", "Automation Implementation", "Inventory Management"]
+}

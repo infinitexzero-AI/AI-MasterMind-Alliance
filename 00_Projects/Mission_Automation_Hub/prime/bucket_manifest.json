@@ -1,0 +1,7 @@
+{
+  "bucket": "prime",
+  "name": "Ritual Orchestration",
+  "task_count": 10,
+  "status": "initialized",
+  "priorities": ["Ritual Design", "Execution Logs", "Optimization Loops"]
+}
