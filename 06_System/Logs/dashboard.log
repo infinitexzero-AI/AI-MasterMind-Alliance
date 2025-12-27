@@ -2314,3 +2314,8 @@
  GET /api/system_logs 200 in 98ms (compile: 2ms, render: 96ms)
  GET /api/system_logs 200 in 162ms (compile: 6ms, render: 155ms)
  GET /api/budget 404 in 5ms (compile: 3ms, render: 1996µs)
+ GET /api/system_logs 200 in 206ms (compile: 1953µs, render: 204ms)
+ GET /api/context 304 in 17ms (compile: 9ms, render: 9ms)
+ GET /api/system_logs 200 in 156ms (compile: 1136µs, render: 155ms)
+ GET /api/budget 404 in 22ms (compile: 7ms, render: 15ms)
+ GET /api/system_logs 200 in 111ms (compile: 7ms, render: 104ms)
