@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Dashboard | AILCC 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        glass: 'rgba(255, 255, 255, 0.05)',
+                        'glass-border': 'rgba(255, 255, 255, 0.1)',
+                        accent: '#00f2fe',
+                        secondary: '#4facfe',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background: radial-gradient(circle at top right, #0a0a0c, #1a1a2e);
+            color: #e0e0e0;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .glass-panel {
+            background: rgba(15, 23, 42, 0.6);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1rem;
+        }
+        .glass-card {
+            background: var(--glass);
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.9);
+        }
+        .glow-text {
+            text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+        }
+        .pulse {
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .progress-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #4facfe 0%, #00f2fe 100%);
+            width: 0%;
+            transition: width 1s ease-in-out;
+        }
+        /* Refactored dynamic widths for linting compliance */
+        .w-24-pct { width: 24%; }
+        .w-52-pct { width: 52%; }
+        .w-74-pct { width: 74.2%; }
+        .w-88-pct { width: 88%; }
+        .w-42-pct { width: 42%; }
+    </style>
+</head>
+<body class="p-8 font-sans">
+    <header class="flex justify-between items-center mb-12">
+        <div>
+            <h1 class="text-4xl font-extrabold tracking-tight glow-text bg-clip-text text-transparent bg-linear-to-r from-secondary to-accent">
+                NEXUS COMMAND
+            </h1>
+            <p class="text-sm text-gray-400 font-mono mt-2">AILCC_PRIME // MODE_5_DIRECTIVE</p>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div id="status-dot" class="w-3 h-3 bg-green-500 rounded-full pulse"></div>
+            <span class="font-mono text-sm">SYSTEM_READY</span>
+            <span id="clock" class="text-xl font-bold ml-4">--:--:--</span>
+        </div>
+    </header>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- System Health Card -->
+        <section class="glass-card p-6">
+            <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">System Vitality</h2>
+            <div class="space-y-4">
+                <div>
+                    <div class="flex justify-between text-sm mb-1">
+                        <span>CPU Load</span>
+                        <span class="font-mono">24%</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill w-24-pct"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-sm mb-1">
+                        <span>Memory</span>
+                        <span class="font-mono">8.4GB / 16GB</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill w-52-pct"></div></div>
+                </div>
+                <div class="flex items-center justify-between text-sm pt-2">
+                    <span>Sync Heartbeat</span>
+                    <span class="text-accent underline font-mono">300ms</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agent Status Card -->
+        <section class="glass-card p-6 col-span-1 lg:col-span-2">
+            <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Agent Swarm Registry</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
+                    <p class="text-[10px] text-gray-500 font-mono">ARBITER</p>
+                    <p class="font-bold text-secondary">Valentine</p>
+                    <span class="text-[10px] text-green-400 mt-1 block">ACTIVE</span>
+                </div>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
+                    <p class="text-[10px] text-gray-500 font-mono">WEB_SCOUT</p>
+                    <p class="font-bold text-accent">Comet</p>
+                    <span class="text-[10px] text-green-400 mt-1 block">SYNCING</span>
+                </div>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
+                    <p class="text-[10px] text-gray-500 font-mono">KERNEL</p>
+                    <p class="font-bold text-purple-400">Antigravity</p>
+                    <div class="h-2 bg-slate-700 rounded-full overflow-hidden mt-1">
+                        <div class="h-full bg-blue-500 w-74-pct"></div>
+                    </div>
+                </div>
+                <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
+                    <p class="text-[10px] text-gray-500 font-mono">STRATEGIST</p>
+                    <p class="font-bold text-orange-400">The Judge</p>
+                    <span class="text-[10px] text-yellow-400 mt-1 block">MONITORING</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Task Routing Feed -->
+        <section class="glass-card p-6 col-span-1 md:col-span-1">
+            <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Real-Time Task Routing</h2>
+            <div id="task-feed" class="space-y-3 h-48 overflow-y-auto pr-2 custom-scrollbar">
+                <div class="p-3 bg-white/5 rounded-lg border-l-2 border-secondary text-xs">
+                    <p class="text-gray-400 mb-1">08:32:15 - [Valentine]</p>
+                    <p><span class="text-secondary font-bold">ROUTE:</span> iPhone prompt -> Research (Perplexity)</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-lg border-l-2 border-accent text-xs">
+                    <p class="text-gray-400 mb-1">08:31:40 - [Comet]</p>
+                    <p><span class="text-accent font-bold">SIGNAL:</span> MS Forms update detected (Academic Appeal)</p>
+                </div>
+                <div class="p-3 bg-white/5 rounded-lg border-l-2 border-purple-400 text-xs">
+                    <p class="text-gray-400 mb-1">08:29:10 - [System]</p>
+                    <p><span class="text-purple-400 font-bold">SYNC:</span> Antigravity -> iCloud (Knowledge Base)</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mission Progress Card -->
+        <section class="glass-card p-6 col-span-1 md:col-span-2 lg:col-span-2">
+            <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Scholar Convergence 2027</h2>
+            <div class="flex items-center space-x-6">
+                <div class="flex-1">
+                    <p class="text-sm text-gray-400 mb-2">Phase 1: Integration Foundation</p>
+                    <div class="progress-bar mb-4"><div class="progress-fill w-85-pct"></div></div>
+                    <div class="flex justify-between text-xs font-mono">
+                        <span class="text-secondary">EST. COMPLETE: 2025-12-30</span>
+                        <span class="text-gray-500">85% COMPLETE</span>
+                    </div>
+                </div>
+                <div class="w-24 h-24 rounded-full border-4 border-accent border-t-transparent animate-spin ml-4"></div>
+            </div>
+        </section>
+        <!-- Hippocampus Storage Card -->
+        <section class="glass-card p-6">
+            <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Hippocampus Storage</h2>
+            <div class="space-y-4">
+                <div class="flex items-center justify-between text-sm">
+                    <span>XDrive Alpha</span>
+                    <span class="text-green-400 font-mono">MOUNTED</span>
+                </div>
+                <div class="flex items-center justify-between text-sm">
+                    <span>XDrive Beta</span>
+                    <span class="text-green-400 font-mono">MOUNTED</span>
+                </div>
+                <div class="pt-2 border-t border-white/5">
+                    <p class="text-[10px] text-gray-500 mb-2">ARCHIVE MIGRATION STATUS</p>
+                    <div class="flex justify-between text-xs mb-1">
+                        <span>iCloud -> Alpha</span>
+                        <span class="text-accent animate-pulse">EXECUTING...</span>
+                    </div>
+                    <div class="progress-bar"><div class="progress-fill w-42-pct"></div></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-12 text-center text-gray-600 font-mono text-[10px] tracking-tighter">
+        AILCC_PRIME // SYNC_CODE: CREEK BONE ALLEY SLIM // ENCRYPTION_ACTIVE
+    </footer>
+
+    <script>
+        // Real-time clock
+        function updateClock() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { hour12: false });
+            document.getElementById('clock').textContent = timeString;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Simulate some interactivity
+        setTimeout(() => {
+            const fills = document.querySelectorAll('.progress-fill');
+            fills.forEach(fill => {
+                const target = fill.style.width;
+                fill.style.width = '0%';
+                setTimeout(() => fill.style.width = target, 100);
+            });
+        }, 500);
+    </script>
+</body>
+</html>

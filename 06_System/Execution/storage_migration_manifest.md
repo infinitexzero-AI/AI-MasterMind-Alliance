@@ -10,6 +10,7 @@
 | `/Users/infinite27/Library/Application Support/Google/Chrome` | ~4 GB | PENDING | `XDriveBeta/Backup/Chrome` |
 | `/Users/infinite27/Library/Mail` | 1.3 GB | PENDING | `XDriveBeta/Backup/Mail` |
 | `/Users/infinite27/Library/Application Support/Antigravity` | 571 MB | PENDING | `XDriveAlpha/Backup/Antigravity` |
+| `/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs` | TBD | PENDING | `XDriveAlpha/Vault/iCloud_Migration` |
 | `/Users/infinite27/Library/Caches` | 640 MB | COMPLETE | *Purged* |
 
 ## 🛠️ Migration Strategy

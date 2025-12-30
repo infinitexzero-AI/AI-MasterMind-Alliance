@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-12-29T00:20:00Z",
+  "agents": [
+    {"agent_id": "comet", "name": "Comet Assistant", "role": "web_research_orchestration", "capabilities": ["web_scraping", "search", "task_delegation"], "status": "active", "endpoint": "perplexity_browser"},
+    {"agent_id": "valentine", "name": "Valentine", "role": "task_routing", "capabilities": ["decision_logic", "agent_selection", "priority_queuing"], "status": "active", "endpoint": "local_logic"},
+    {"agent_id": "grok", "name": "Grok", "role": "planning_strategy", "capabilities": ["strategic_planning", "optimization", "scenario_analysis"], "status": "active", "endpoint": "x_ai"},
+    {"agent_id": "claude", "name": "Claude Desktop", "role": "logic_logs_mcp", "capabilities": ["file_operations", "log_analysis", "mcp_access"], "status": "offline_until_2am", "endpoint": "mcp_filesystem"},
+    {"agent_id": "antigravity", "name": "Antigravity", "role": "code_schemas", "capabilities": ["code_generation", "schema_design", "database_ops"], "status": "active", "endpoint": "gemini_api"},
+    {"agent_id": "chatgpt", "name": "ChatGPT", "role": "general_assistant", "capabilities": ["general_queries", "brainstorming", "documentation"], "status": "active", "endpoint": "openai_api"},
+    {"agent_id": "gemini", "name": "Gemini", "role": "synthesis", "capabilities": ["summarization", "synthesis", "analysis"], "status": "active", "endpoint": "google_ai"}
+  ]
+}

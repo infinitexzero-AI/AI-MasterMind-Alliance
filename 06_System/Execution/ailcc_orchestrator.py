@@ -12,16 +12,20 @@ EXEC_DIR = f"{ROOT}/06_System/Execution"
 DASHBOARD_DIR = f"{ROOT}/01_Areas/Codebases/ailcc/dashboard"
 LOG_FILE = f"{ROOT}/06_System/Logs/system_heartbeat.log"
 
+# Canonical Paths
 SCRIPTS = [
-    "context_orchestrator.py",
-    "vault_rag.py",
-    "budget_governor.py",
-    "finance_tracker.py",
-    "convergence_audit.py",
-    "web_daemon.py",
-    "nexus_server.py",
-    "sync_daemon.py"
+    ("EXEC", "context_orchestrator.py"),
+    ("EXEC", "vault_rag.py"),
+    ("EXEC", "budget_governor.py"),
+    ("EXEC", "finance_tracker.py"),
+    ("EXEC", "convergence_audit.py"),
+    ("EXEC", "web_daemon.py"),
+    ("EXEC", "nexus_server.py"),
+    ("EXEC", "sync_daemon.py"),
+    ("SCRIPT", "route_task.py")
 ]
+SCRIPTS_DIR = f"{ROOT}/scripts"
+DB_PATH = "/Users/infinite27/Antigravity/knowledge.db"
 
 def log(message):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -63,8 +67,12 @@ def launch_core():
     log("🚀 INITIALIZING AILCC ORCHESTRATOR...")
     
     # 1. Start Core Services (Background Init)
-    for script in SCRIPTS:
-        path = f"{EXEC_DIR}/{script}"
+    for category, script in SCRIPTS:
+        if category == "EXEC":
+            path = f"{EXEC_DIR}/{script}"
+        else:
+            path = f"{SCRIPTS_DIR}/{script}"
+            
         log(f"⚡ Launching {script} in background...")
         try:
             # Use Popen to launch in background without waiting
@@ -95,15 +103,25 @@ def launch_core():
              subprocess.Popen([PYTHON, relay_path], stdout=out, stderr=subprocess.STDOUT)
         log("✅ Neural Relay launched.")
 
+    # 4. Start MCP SuperAssistant Proxy (Port 3006)
+    log("🔌 Engaging MCP PROXY (Port 3006)...")
+    if is_port_in_use(3006):
+        log("⚠️ Port 3006 active. Proxy likely running.")
+    else:
+        proxy_path = f"{EXEC_DIR}/mcp_proxy.sh"
+        subprocess.Popen(["bash", proxy_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        log("✅ MCP Proxy launched.")
+
 def open_interface():
     log("🖥️ Opening Dashboard & Diagnostics...")
-    webbrowser.open("http://localhost:3000/antigravity")
+    # webbrowser.open("http://localhost:3000/antigravity")
     
     # Mode 5 NEXUS
-    webbrowser.open("http://localhost:8000")
+    # webbrowser.open("http://localhost:8000")
     
     diag_path = f"file://{EXEC_DIR}/ailcc-diagnostic.html"
-    webbrowser.open(diag_path)
+    log(f"   Diagnostics available at: {diag_path}")
+    # webbrowser.open(diag_path)
 
 if __name__ == "__main__":
     # Ensure log dir exists

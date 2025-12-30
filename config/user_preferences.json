@@ -1,0 +1,16 @@
+{
+  "default_project": "AILCC_Orchestration",
+  "preferred_routing": {
+    "code": "antigravity",
+    "research": "comet",
+    "logic": "claude",
+    "synthesis": "gemini"
+  },
+  "notification_settings": {
+    "alerts": "on",
+    "daily_summary": "off",
+    "critical_only": "on"
+  },
+  "auto_sync_interval": 300,
+  "mcp_port": 3006
+}

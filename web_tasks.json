@@ -1,0 +1,38 @@
+[
+  {
+    "id": "task_001",
+    "title": "Verify MCP connection and read system status.",
+    "description": "Verify MCP connection and read system status.",
+    "assignee": "unassigned",
+    "status": "pending",
+    "priority": "high",
+    "updated_at": "Sun 28 Dec 2025 23:34:12 AST"
+  },
+  {
+    "id": "AILCC-2025-WAVE1",
+    "title": "Wave 1 Infrastructure Setup",
+    "description": "Complete bootstrap and enhancement of AILCC_PRIME core.",
+    "assignee": "antigravity",
+    "status": "completed",
+    "priority": 1,
+    "updated_at": "2025-12-29 04:53:38"
+  },
+  {
+    "id": "MISSION-COMET-EMAIL-001",
+    "title": "Execute Academic Appeal Emails",
+    "description": "Email 1 (Academic) SENT MANUALLY. Now Drafting/Sending Email 2 (Financial Aid) and Email 3 (NSLSC) from comet_email_queue.json.",
+    "assignee": "comet",
+    "status": "in-progress",
+    "priority": "high",
+    "updated_at": "2025-12-30 16:05:00"
+  },
+  {
+    "id": "MISSION-COMET-PHASE-6",
+    "title": "Post-Appeal Deep-Scan & Procurement",
+    "description": "1. Search for Nov 2, 2023 withdrawal confirmation. 2. Download SSS Review Form.",
+    "assignee": "comet",
+    "status": "pending",
+    "priority": "critical",
+    "updated_at": "2025-12-30 15:58:00"
+  }
+]

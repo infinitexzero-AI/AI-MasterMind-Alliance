@@ -1,0 +1,42 @@
+# AI Mastermind Alliance - Memory & Retention Policy
+# Version: 1.0
+
+policy:
+  description: "Strict, agent-centric memory policy: only keep what improves coordination, decision-making, or safety."
+  
+  tiers:
+    core:
+      description: "Mission, values, global constraints, identity."
+      retention: "Permanent"
+      criteria: "Safety-critical, fundamental identity, or global policy."
+    
+    semantic:
+      description: "Entity mappings, stable domain facts, project IDs."
+      retention: "Project-lifetime (Prune after project closure)"
+      criteria: "Actionable project links or cross-agent domain mappings."
+      prune_rules:
+        - "Discard personal shorthand or casual aliases."
+        - "Discard course nicknames after canonical ID mapping."
+    
+    procedural:
+      description: "SOPs, workflows, and tool-use patterns."
+      retention: "Active-use (Prune if unused for 90 days)"
+      criteria: "Reusable execution logic or automation routines."
+    
+    episodic:
+      description: "Interaction history and specific session outcomes."
+      retention: "30 days (Unless flagged for strategy insight)"
+      criteria: "Feeds back into strategy, constraints, or long-term growth."
+      prune_rules:
+        - "Prune one-off chats or dead-end experiments nightly."
+
+  write_decisions:
+    rule: "Store ONLY if all are true:"
+    conditions:
+      - "Multi-agent relevance (2+ agents will use this)"
+      - "Cross-session value (Matters beyond current episode)"
+      - "Actionability (Changes routing, decision, or constraints)"
+
+  pruning:
+    schedule: "Daily at 03:00 AM"
+    process: "Weighted consensus: agents vote on relevance based on temporal decay and semantic overlap."

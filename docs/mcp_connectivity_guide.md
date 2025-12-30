@@ -36,16 +36,29 @@ The Alliance uses a "Neural Connectivity Mesh" where different agents play speci
 3. **Gemini (The Craftsman)**: Primary implementation agent, utilizing Antigravity's built-in MCP bridge.
 4. **Grok (The Judge)**: Strategic reasoning, monitoring logs via the shared filesystem.
 
-## 📡 Neural Relay
+## 📡 Browser Assistant Integration (SSE Proxy)
 
-The system uses a WebSocket relay server (`relay.js`) on port **3001** to bridge real-time agent signals to the **NEXUS Dashboard** (port 3000).
+The Gemini browser assistant requires a Server-Sent Events (SSE) bridge to communicate with local MCP servers.
+
+| Component | Endpoint | Port | Status |
+| :--- | :--- | :--- | :--- |
+| **MCP Proxy** | `http://localhost:3006/sse` | 3006 | ✅ Active |
+
+### Proxy Commands
+Integrated via `mcp_proxy.sh` using localized binaries to bypass registry errors:
+- **Linear**: `mcp-remote https://mcp.linear.app/sse`
+- **GitHub**: `server-github` (local cache)
+- **Git**: `gk mcp` (GitKraken)
+- **CloudRun**: `cloud-run-mcp`
+
+## 🧠 Neural Relay
+The system uses a WebSocket relay server (`relay.js`) on port **3001** for inter-agent signaling.
 
 ## 🆘 Troubleshooting
-
-- **Server Not Responding**: Restart the Claude Desktop app or the corresponding Node.js process.
-- **Permission Denied**: Ensure the path is included in the `filesystem` server configuration.
-- **API Errors**: Verify API keys in `claude_desktop_config.json`.
+- **SSE Error**: Ensure the proxy is running (`lsof -i :3006`).
+- **Missing Tools**: Check `config.json` absolute paths.
+- **Disconnected**: Refresh the "MCP SuperAssistant" panel in Gemini.
 
 ---
 **Last Updated**: 2025-12-27
-**Status**: Mode 5 (Automated Abundance)
+**Status**: Mode 5 (Automated Abundance) - MCP Bridge Fully Restored

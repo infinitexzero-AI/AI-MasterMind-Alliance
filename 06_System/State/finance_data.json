@@ -1,8 +1,8 @@
 {
   "currency": "USD",
-  "last_updated": "2025-12-27T04:00:31.568408",
+  "last_updated": "2025-12-28T21:35:59.733714",
   "metrics": {
-    "net_worth": 12554.25,
+    "net_worth": 12560.5,
     "income_projected_monthly": 4500.0,
     "burn_rate_daily": 42.15,
     "savings_rate_percent": 32.5
@@ -15,7 +15,7 @@
     },
     {
       "name": "Strategic Savings",
-      "balance": 8213.75,
+      "balance": 8220.0,
       "trend": "stable"
     },
     {

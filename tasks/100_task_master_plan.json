@@ -1,0 +1,56 @@
+{
+  "project": "AILCC Orchestration & Evidence",
+  "version": "2.0",
+  "waves": [
+    {
+      "wave_id": 1,
+      "title": "Core Infrastructure & Agent Registry",
+      "tasks": [
+        { "id": 1, "description": "Create agents/registry.json", "status": "pending" },
+        { "id": 2, "description": "Create spellbooks/master_commands.json", "status": "pending" },
+        { "id": 3, "description": "Create protocols/valentine_routing_v2.md", "status": "pending" },
+        { "id": 4, "description": "Create dashboards/alliance_status_spec.md", "status": "pending" },
+        { "id": 5, "description": "Create protocols/iacp_v1.1_spec.md", "status": "pending" }
+      ]
+    },
+    {
+      "wave_id": 2,
+      "title": "Inter-Agent Communication Testing",
+      "tasks": [
+        { "id": 26, "description": "Create tests/handoff_tests.json", "status": "pending" },
+        { "id": 27, "description": "Build scripts/test_handoffs.py", "status": "pending" },
+        { "id": 28, "description": "Create failure simulation scenarios", "status": "pending" }
+      ]
+    },
+    {
+      "wave_id": 3,
+      "title": "Knowledge Base & State Sync",
+      "tasks": [
+        { "id": 46, "description": "Create bidirectional sync: knowledge.db <-> web_tasks.json", "status": "pending" },
+        { "id": 47, "description": "Build sync_state.json validator", "status": "pending" },
+        { "id": 48, "description": "Implement health check cron", "status": "pending" },
+        { "id": 49, "description": "Create conflict resolution protocol", "status": "pending" }
+      ]
+    },
+    {
+      "wave_id": 4,
+      "title": "User Pattern Learning & Spellbook",
+      "tasks": [
+        { "id": 66, "description": "Mine user_bio for top 20 workflows", "status": "pending" },
+        { "id": 67, "description": "Build context-aware suggestion engine", "status": "pending" },
+        { "id": 68, "description": "Expand spellbooks/aliases.json (50 commands)", "status": "pending" },
+        { "id": 69, "description": "Create intuitive environment config", "status": "pending" }
+      ]
+    },
+    {
+      "wave_id": 5,
+      "title": "Full Integration & Stress Testing",
+      "tasks": [
+        { "id": 86, "description": "Run 100-task batch through Valentine routing", "status": "pending" },
+        { "id": 87, "description": "Load test: 10 concurrent agent handoffs", "status": "pending" },
+        { "id": 88, "description": "Generate integration test report", "status": "pending" },
+        { "id": 89, "description": "Update MASTER_PROJECT_MANIFEST.md to v2.0", "status": "pending" }
+      ]
+    }
+  ]
+}

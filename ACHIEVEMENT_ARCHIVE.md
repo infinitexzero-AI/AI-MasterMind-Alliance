@@ -21,6 +21,8 @@
 - [x] **2026-2027 BSc Biology Roadmap**: Successfully pivoted and finalized course selection.
 - [x] **Transcript Reconciliation Engine**: Logic for auditing credits and prerequisites.
 - [x] **MATH 1311 & HLTH 1011**: Remote Winter 2026 courses secured in roadmap.
+- [x] **Academic Appeal Submission (Email 1)**: Comprehensive 2023 retroactive withdrawal appeal sent Dec 30, 2025.
+- [x] **Hardship Chronicles Vault**: Established a high-resolution evidence repository for institutional accountability.
 
 ## 👥 Agent Intelligence
 
@@ -35,8 +37,8 @@
 
 ## ⚖️ Administrative & Legal
 
-- [ ] **Lifting Holds**: Submit comprehensive financial/academic appeals to Mount Allison.
-- [ ] **2023 "F" Grade Reversal**: Evidence-based appeal submission.
+- [/] **Lifting Holds**: Primary academic appeal sent; awaiting response.
+- [/] **2023 "F" Grade Reversal**: Formal request submitted; evidence-based narrative logged.
 - [ ] **NSLSC Alignment**: Student loan status consolidation and relief request.
 
 ## 🧠 Autonomous Expansion

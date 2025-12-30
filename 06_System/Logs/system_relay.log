@@ -1,2 +1,930 @@
 2025-12-27 15:35:03,009 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
 2025-12-27 15:35:04,081 [INFO] server listening on 0.0.0.0:3001
+2025-12-28 09:54:43,975 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2025-12-28 09:54:43,975 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2025-12-28 09:54:54,341 [INFO] server listening on 0.0.0.0:3001
+2025-12-28 09:54:54,341 [INFO] server listening on 0.0.0.0:3001
+2025-12-28 09:54:57,143 [INFO] connection open
+2025-12-28 09:54:57,143 [INFO] connection open
+2025-12-28 09:54:57,144 [INFO] 🔗 Client Connected: ('127.0.0.1', 61345)
+2025-12-28 09:54:57,144 [INFO] 🔗 Client Connected: ('127.0.0.1', 61345)
+2025-12-28 09:54:57,204 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T09:54:57.201079'}
+2025-12-28 09:54:57,204 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T09:54:57.201079'}
+2025-12-28 09:56:56,464 [INFO] connection open
+2025-12-28 09:56:56,464 [INFO] connection open
+2025-12-28 09:56:56,509 [INFO] 🔗 Client Connected: ('127.0.0.1', 61528)
+2025-12-28 09:56:56,509 [INFO] 🔗 Client Connected: ('127.0.0.1', 61528)
+2025-12-28 09:56:56,688 [INFO] connection open
+2025-12-28 09:56:56,688 [INFO] connection open
+2025-12-28 09:56:56,701 [INFO] 🔗 Client Connected: ('127.0.0.1', 61530)
+2025-12-28 09:56:56,701 [INFO] 🔗 Client Connected: ('127.0.0.1', 61530)
+2025-12-28 09:59:57,337 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T09:59:57.217614'}
+2025-12-28 09:59:57,337 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T09:59:57.217614'}
+2025-12-28 10:04:57,081 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:04:57.020823'}
+2025-12-28 10:04:57,081 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:04:57.020823'}
+2025-12-28 10:09:57,088 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:09:57.056510'}
+2025-12-28 10:09:57,088 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:09:57.056510'}
+2025-12-28 10:14:57,098 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:14:57.065739'}
+2025-12-28 10:14:57,098 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:14:57.065739'}
+2025-12-28 10:19:57,091 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:19:57.063528'}
+2025-12-28 10:19:57,091 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:19:57.063528'}
+2025-12-28 10:24:57,089 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:24:57.050934'}
+2025-12-28 10:24:57,089 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:24:57.050934'}
+2025-12-28 10:29:57,098 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:29:57.067635'}
+2025-12-28 10:29:57,098 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:29:57.067635'}
+2025-12-28 10:34:57,129 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:34:57.084014'}
+2025-12-28 10:34:57,129 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:34:57.084014'}
+2025-12-28 10:38:59,125 [INFO] 📨 Received: {'type': 'PROCESS_TASK', 'payload': {'prompt': 'Have Claude Draft up all emails for Emergency bursary and appeals to the appropriate departments using known draft and evidence , refine if needed', 'source': 'ANTIGRAVITY_UI'}}
+2025-12-28 10:38:59,125 [INFO] 📨 Received: {'type': 'PROCESS_TASK', 'payload': {'prompt': 'Have Claude Draft up all emails for Emergency bursary and appeals to the appropriate departments using known draft and evidence , refine if needed', 'source': 'ANTIGRAVITY_UI'}}
+2025-12-28 10:39:32,912 [INFO] 📨 Received: {'type': 'PROCESS_TASK', 'payload': {'prompt': 'Processing Task...', 'source': 'ANTIGRAVITY_UI'}}
+2025-12-28 10:39:32,912 [INFO] 📨 Received: {'type': 'PROCESS_TASK', 'payload': {'prompt': 'Processing Task...', 'source': 'ANTIGRAVITY_UI'}}
+2025-12-28 10:39:57,104 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:39:57.097841'}
+2025-12-28 10:39:57,104 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:39:57.097841'}
+2025-12-28 10:40:17,817 [INFO] connection open
+2025-12-28 10:40:17,817 [INFO] connection open
+2025-12-28 10:40:17,827 [INFO] 🔗 Client Connected: ('127.0.0.1', 62138)
+2025-12-28 10:40:17,827 [INFO] 🔗 Client Connected: ('127.0.0.1', 62138)
+2025-12-28 10:44:57,255 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:44:57.103477'}
+2025-12-28 10:44:57,255 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:44:57.103477'}
+2025-12-28 10:49:57,139 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:49:57.126551'}
+2025-12-28 10:49:57,139 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:49:57.126551'}
+2025-12-28 10:54:57,140 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:54:57.126431'}
+2025-12-28 10:54:57,140 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:54:57.126431'}
+2025-12-28 10:59:57,141 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:59:57.129470'}
+2025-12-28 10:59:57,141 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T10:59:57.129470'}
+2025-12-28 11:04:57,080 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:04:57.072976'}
+2025-12-28 11:04:57,080 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:04:57.072976'}
+2025-12-28 11:09:57,079 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:09:57.071099'}
+2025-12-28 11:09:57,079 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:09:57.071099'}
+2025-12-28 11:14:17,357 [INFO] connection open
+2025-12-28 11:14:17,357 [INFO] connection open
+2025-12-28 11:14:17,370 [INFO] 🔗 Client Connected: ('127.0.0.1', 62798)
+2025-12-28 11:14:17,370 [INFO] 🔗 Client Connected: ('127.0.0.1', 62798)
+2025-12-28 11:14:57,478 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:14:57.090854'}
+2025-12-28 11:14:57,478 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:14:57.090854'}
+2025-12-28 11:19:58,244 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:19:57.709687'}
+2025-12-28 11:19:58,244 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:19:57.709687'}
+2025-12-28 11:22:35,622 [INFO] connection open
+2025-12-28 11:22:35,622 [INFO] connection open
+2025-12-28 11:22:35,652 [INFO] 🔗 Client Connected: ('127.0.0.1', 63038)
+2025-12-28 11:22:35,652 [INFO] 🔗 Client Connected: ('127.0.0.1', 63038)
+2025-12-28 11:24:58,529 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:24:58.116149'}
+2025-12-28 11:24:58,529 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:24:58.116149'}
+2025-12-28 11:29:58,450 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:29:58.355042'}
+2025-12-28 11:29:58,450 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:29:58.355042'}
+2025-12-28 11:34:58,450 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:34:58.416048'}
+2025-12-28 11:34:58,450 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:34:58.416048'}
+2025-12-28 11:39:58,446 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:39:58.432363'}
+2025-12-28 11:39:58,446 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:39:58.432363'}
+2025-12-28 11:44:58,518 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:44:58.445640'}
+2025-12-28 11:44:58,518 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:44:58.445640'}
+2025-12-28 11:49:58,517 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:49:58.459359'}
+2025-12-28 11:49:58,517 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:49:58.459359'}
+2025-12-28 11:54:58,567 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:54:58.501230'}
+2025-12-28 11:54:58,567 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:54:58.501230'}
+2025-12-28 11:59:58,549 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:59:58.544578'}
+2025-12-28 11:59:58,549 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T11:59:58.544578'}
+2025-12-28 12:04:58,583 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:04:58.540246'}
+2025-12-28 12:04:58,583 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:04:58.540246'}
+2025-12-28 12:07:03,402 [INFO] connection open
+2025-12-28 12:07:03,402 [INFO] connection open
+2025-12-28 12:07:03,666 [INFO] 🔗 Client Connected: ('127.0.0.1', 63841)
+2025-12-28 12:07:03,666 [INFO] 🔗 Client Connected: ('127.0.0.1', 63841)
+2025-12-28 12:07:57,755 [INFO] connection open
+2025-12-28 12:07:57,755 [INFO] connection open
+2025-12-28 12:07:57,763 [INFO] 🔗 Client Connected: ('127.0.0.1', 63876)
+2025-12-28 12:07:57,763 [INFO] 🔗 Client Connected: ('127.0.0.1', 63876)
+2025-12-28 12:09:59,168 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:09:58.938472'}
+2025-12-28 12:09:59,168 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:09:58.938472'}
+2025-12-28 12:12:11,974 [INFO] connection open
+2025-12-28 12:12:11,974 [INFO] connection open
+2025-12-28 12:12:12,292 [INFO] 🔗 Client Connected: ('127.0.0.1', 64177)
+2025-12-28 12:12:12,292 [INFO] 🔗 Client Connected: ('127.0.0.1', 64177)
+2025-12-28 12:12:12,354 [INFO] connection open
+2025-12-28 12:12:12,354 [INFO] connection open
+2025-12-28 12:12:12,357 [INFO] 🔗 Client Connected: ('127.0.0.1', 64179)
+2025-12-28 12:12:12,357 [INFO] 🔗 Client Connected: ('127.0.0.1', 64179)
+2025-12-28 12:14:59,743 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:14:59.223461'}
+2025-12-28 12:14:59,743 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:14:59.223461'}
+2025-12-28 12:20:00,172 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:19:59.587331'}
+2025-12-28 12:20:00,172 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:19:59.587331'}
+2025-12-28 12:24:59,857 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:24:59.722169'}
+2025-12-28 12:24:59,857 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:24:59.722169'}
+2025-12-28 12:26:42,641 [INFO] 📨 Received: {'type': 'PROCESS_TASK', 'payload': {'prompt': 'continue', 'source': 'ANTIGRAVITY_UI'}}
+2025-12-28 12:26:42,641 [INFO] 📨 Received: {'type': 'PROCESS_TASK', 'payload': {'prompt': 'continue', 'source': 'ANTIGRAVITY_UI'}}
+2025-12-28 12:26:51,270 [INFO] 📨 Received: {'type': 'PROCESS_TASK', 'payload': {'prompt': 'Processing Task...', 'source': 'ANTIGRAVITY_UI'}}
+2025-12-28 12:26:51,270 [INFO] 📨 Received: {'type': 'PROCESS_TASK', 'payload': {'prompt': 'Processing Task...', 'source': 'ANTIGRAVITY_UI'}}
+2025-12-28 12:27:40,328 [INFO] connection open
+2025-12-28 12:27:40,328 [INFO] connection open
+2025-12-28 12:27:40,335 [INFO] 🔗 Client Connected: ('127.0.0.1', 65039)
+2025-12-28 12:27:40,335 [INFO] 🔗 Client Connected: ('127.0.0.1', 65039)
+2025-12-28 12:30:00,116 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:29:59.934852'}
+2025-12-28 12:30:00,116 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:29:59.934852'}
+2025-12-28 12:34:41,488 [INFO] connection rejected (426 Upgrade Required)
+2025-12-28 12:34:41,488 [INFO] connection rejected (426 Upgrade Required)
+2025-12-28 12:34:41,643 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+websockets.exceptions.InvalidUpgrade: invalid Connection header: keep-alive
+2025-12-28 12:34:41,643 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+websockets.exceptions.InvalidUpgrade: invalid Connection header: keep-alive
+2025-12-28 12:34:43,244 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+2025-12-28 12:34:43,244 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+2025-12-28 12:35:00,134 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:35:00.029345'}
+2025-12-28 12:35:00,134 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:35:00.029345'}
+2025-12-28 12:37:35,266 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+2025-12-28 12:37:35,266 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+2025-12-28 12:37:37,098 [INFO] connection rejected (426 Upgrade Required)
+2025-12-28 12:37:37,098 [INFO] connection rejected (426 Upgrade Required)
+2025-12-28 12:37:37,339 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+websockets.exceptions.InvalidUpgrade: invalid Connection header: keep-alive
+2025-12-28 12:37:37,339 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 138, in accept
+    ) = self.process_request(request)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 233, in process_request
+    raise InvalidUpgrade(
+websockets.exceptions.InvalidUpgrade: invalid Connection header: keep-alive
+2025-12-28 12:38:32,836 [INFO] connection open
+2025-12-28 12:38:32,836 [INFO] connection open
+2025-12-28 12:38:32,853 [INFO] 🔗 Client Connected: ('127.0.0.1', 65523)
+2025-12-28 12:38:32,853 [INFO] 🔗 Client Connected: ('127.0.0.1', 65523)
+2025-12-28 12:38:32,917 [INFO] connection open
+2025-12-28 12:38:32,917 [INFO] connection open
+2025-12-28 12:38:32,966 [INFO] 🔗 Client Connected: ('127.0.0.1', 65525)
+2025-12-28 12:38:32,966 [INFO] 🔗 Client Connected: ('127.0.0.1', 65525)
+2025-12-28 12:40:00,189 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:40:00.122105'}
+2025-12-28 12:40:00,189 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:40:00.122105'}
+2025-12-28 12:45:00,211 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:45:00.175594'}
+2025-12-28 12:45:00,211 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:45:00.175594'}
+2025-12-28 12:50:00,258 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:50:00.211788'}
+2025-12-28 12:50:00,258 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:50:00.211788'}
+2025-12-28 12:55:00,310 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:55:00.249484'}
+2025-12-28 12:55:00,310 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T12:55:00.249484'}
+2025-12-28 13:00:00,924 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:00:00.301686'}
+2025-12-28 13:00:00,924 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:00:00.301686'}
+2025-12-28 13:05:00,374 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:05:00.363757'}
+2025-12-28 13:05:00,374 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:05:00.363757'}
+2025-12-28 13:10:00,405 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:10:00.380925'}
+2025-12-28 13:10:00,405 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:10:00.380925'}
+2025-12-28 13:15:00,419 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:15:00.397560'}
+2025-12-28 13:15:00,419 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:15:00.397560'}
+2025-12-28 13:19:23,765 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+2025-12-28 13:19:23,765 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+  File "/Users/infinite27/Library/Python/3.9/lib/python/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+2025-12-28 13:20:00,604 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:20:00.428836'}
+2025-12-28 13:20:00,604 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:20:00.428836'}
+2025-12-28 13:20:32,689 [INFO] connection open
+2025-12-28 13:20:32,689 [INFO] connection open
+2025-12-28 13:20:32,742 [INFO] 🔗 Client Connected: ('127.0.0.1', 50207)
+2025-12-28 13:20:32,742 [INFO] 🔗 Client Connected: ('127.0.0.1', 50207)
+2025-12-28 13:20:32,997 [INFO] connection open
+2025-12-28 13:20:32,997 [INFO] connection open
+2025-12-28 13:20:33,002 [INFO] 🔗 Client Connected: ('127.0.0.1', 50210)
+2025-12-28 13:20:33,002 [INFO] 🔗 Client Connected: ('127.0.0.1', 50210)
+2025-12-28 13:25:00,662 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:25:00.541877'}
+2025-12-28 13:25:00,662 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:25:00.541877'}
+2025-12-28 13:30:00,657 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:30:00.608705'}
+2025-12-28 13:30:00,657 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:30:00.608705'}
+2025-12-28 13:35:00,771 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:35:00.651972'}
+2025-12-28 13:35:00,771 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:35:00.651972'}
+2025-12-28 13:40:00,746 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:40:00.711053'}
+2025-12-28 13:40:00,746 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:40:00.711053'}
+2025-12-28 13:45:00,893 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:45:00.739077'}
+2025-12-28 13:45:00,893 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:45:00.739077'}
+2025-12-28 13:50:00,981 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:50:00.858677'}
+2025-12-28 13:50:00,981 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:50:00.858677'}
+2025-12-28 13:52:11,511 [INFO] 📨 Received: {'type': 'PROCESS_TASK', 'payload': {'prompt': 'dispatch to Claude', 'source': 'ANTIGRAVITY_UI'}}
+2025-12-28 13:52:11,511 [INFO] 📨 Received: {'type': 'PROCESS_TASK', 'payload': {'prompt': 'dispatch to Claude', 'source': 'ANTIGRAVITY_UI'}}
+2025-12-28 13:55:01,193 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:55:00.933868'}
+2025-12-28 13:55:01,193 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T13:55:00.933868'}
+2025-12-28 14:00:01,578 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:00:01.158539'}
+2025-12-28 14:00:01,578 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:00:01.158539'}
+2025-12-28 14:05:01,812 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:05:01.465203'}
+2025-12-28 14:05:01,812 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:05:01.465203'}
+2025-12-28 14:10:02,034 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:10:01.674438'}
+2025-12-28 14:10:02,034 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:10:01.674438'}
+2025-12-28 14:15:01,896 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:15:01.766548'}
+2025-12-28 14:15:01,896 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:15:01.766548'}
+2025-12-28 14:20:02,087 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:20:01.860152'}
+2025-12-28 14:20:02,087 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:20:01.860152'}
+2025-12-28 14:25:02,503 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:25:02.056962'}
+2025-12-28 14:25:02,503 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:25:02.056962'}
+2025-12-28 14:30:02,428 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:30:02.275174'}
+2025-12-28 14:30:02,428 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:30:02.275174'}
+2025-12-28 14:35:02,482 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:35:02.358240'}
+2025-12-28 14:35:02,482 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:35:02.358240'}
+2025-12-28 14:40:02,636 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:40:02.425669'}
+2025-12-28 14:40:02,636 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:40:02.425669'}
+2025-12-28 14:45:02,672 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:45:02.515744'}
+2025-12-28 14:45:02,672 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:45:02.515744'}
+2025-12-28 14:50:03,022 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:50:02.691741'}
+2025-12-28 14:50:03,022 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:50:02.691741'}
+2025-12-28 14:55:03,334 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:55:02.956752'}
+2025-12-28 14:55:03,334 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T14:55:02.956752'}
+2025-12-28 15:00:03,510 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:00:03.223650'}
+2025-12-28 15:00:03,510 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:00:03.223650'}
+2025-12-28 15:05:03,827 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:05:03.381040'}
+2025-12-28 15:05:03,827 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:05:03.381040'}
+2025-12-28 15:10:03,883 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:10:03.610315'}
+2025-12-28 15:10:03,883 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:10:03.610315'}
+2025-12-28 15:15:04,490 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:15:03.774015'}
+2025-12-28 15:15:04,490 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:15:03.774015'}
+2025-12-28 15:20:04,284 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:20:04.071248'}
+2025-12-28 15:20:04,284 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:20:04.071248'}
+2025-12-28 15:25:04,713 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:25:04.211346'}
+2025-12-28 15:25:04,713 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:25:04.211346'}
+2025-12-28 15:30:04,845 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:30:04.528304'}
+2025-12-28 15:30:04,845 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:30:04.528304'}
+2025-12-28 15:35:05,070 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:35:04.633885'}
+2025-12-28 15:35:05,070 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:35:04.633885'}
+2025-12-28 15:40:05,015 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:40:04.776206'}
+2025-12-28 15:40:05,015 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:40:04.776206'}
+2025-12-28 15:45:05,166 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:45:04.958945'}
+2025-12-28 15:45:05,166 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:45:04.958945'}
+2025-12-28 15:50:05,424 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:50:05.104460'}
+2025-12-28 15:50:05,424 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:50:05.104460'}
+2025-12-28 15:55:05,590 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:55:05.404535'}
+2025-12-28 15:55:05,590 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T15:55:05.404535'}
+2025-12-28 16:00:05,835 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T16:00:05.526494'}
+2025-12-28 16:00:05,835 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T16:00:05.526494'}
+2025-12-28 16:05:05,847 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T16:05:05.661807'}
+2025-12-28 16:05:05,847 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T16:05:05.661807'}
+2025-12-28 21:09:30,484 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2025-12-28 21:09:30,484 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2025-12-28 21:09:30,904 [INFO] server listening on 0.0.0.0:3001
+2025-12-28 21:09:30,904 [INFO] server listening on 0.0.0.0:3001
+2025-12-28 21:09:31,994 [INFO] connection open
+2025-12-28 21:09:31,994 [INFO] connection open
+2025-12-28 21:09:31,994 [INFO] 🔗 Client Connected: ('127.0.0.1', 60459)
+2025-12-28 21:09:31,994 [INFO] 🔗 Client Connected: ('127.0.0.1', 60459)
+2025-12-28 21:09:32,084 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:09:32.083326'}
+2025-12-28 21:09:32,084 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:09:32.083326'}
+2025-12-28 21:14:33,592 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:14:32.133998'}
+2025-12-28 21:14:33,592 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:14:32.133998'}
+2025-12-28 21:19:33,086 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:19:32.807400'}
+2025-12-28 21:19:33,086 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:19:32.807400'}
+2025-12-28 21:24:32,996 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:24:32.958161'}
+2025-12-28 21:24:32,996 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:24:32.958161'}
+2025-12-28 21:29:32,991 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:29:32.972845'}
+2025-12-28 21:29:32,991 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:29:32.972845'}
+2025-12-28 21:34:33,160 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:34:32.995693'}
+2025-12-28 21:34:33,160 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:34:32.995693'}
+2025-12-28 21:36:06,828 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2025-12-28 21:36:06,828 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2025-12-28 21:36:07,230 [INFO] server listening on 0.0.0.0:3001
+2025-12-28 21:36:07,230 [INFO] server listening on 0.0.0.0:3001
+2025-12-28 21:36:08,141 [INFO] connection open
+2025-12-28 21:36:08,141 [INFO] connection open
+2025-12-28 21:36:08,143 [INFO] 🔗 Client Connected: ('127.0.0.1', 61547)
+2025-12-28 21:36:08,143 [INFO] 🔗 Client Connected: ('127.0.0.1', 61547)
+2025-12-28 21:36:08,367 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:36:08.366003'}
+2025-12-28 21:36:08,367 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:36:08.366003'}
+2025-12-28 21:41:08,780 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:41:08.385137'}
+2025-12-28 21:41:08,780 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:41:08.385137'}
+2025-12-28 21:46:08,802 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:46:08.628458'}
+2025-12-28 21:46:08,802 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:46:08.628458'}
+2025-12-28 21:51:09,006 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:51:08.815638'}
+2025-12-28 21:51:09,006 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:51:08.815638'}
+2025-12-28 21:56:09,017 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:56:08.917192'}
+2025-12-28 21:56:09,017 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T21:56:08.917192'}
+2025-12-28 22:01:09,104 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:01:09.046728'}
+2025-12-28 22:01:09,104 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:01:09.046728'}
+2025-12-28 22:06:09,098 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:06:09.058437'}
+2025-12-28 22:06:09,098 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:06:09.058437'}
+2025-12-28 22:11:09,199 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:11:09.073885'}
+2025-12-28 22:11:09,199 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:11:09.073885'}
+2025-12-28 22:16:09,268 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:16:09.119274'}
+2025-12-28 22:16:09,268 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:16:09.119274'}
+2025-12-28 22:21:09,365 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:21:09.195841'}
+2025-12-28 22:21:09,365 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:21:09.195841'}
+2025-12-28 22:26:09,610 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:26:09.257730'}
+2025-12-28 22:26:09,610 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:26:09.257730'}
+2025-12-28 22:31:09,580 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:31:09.382432'}
+2025-12-28 22:31:09,580 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:31:09.382432'}
+2025-12-28 22:36:09,672 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:36:09.475218'}
+2025-12-28 22:36:09,672 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:36:09.475218'}
+2025-12-28 22:41:18,362 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:41:11.652663'}
+2025-12-28 22:41:18,362 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:41:11.652663'}
+2025-12-28 22:46:15,182 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:46:14.910195'}
+2025-12-28 22:46:15,182 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:46:14.910195'}
+2025-12-28 22:51:17,887 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:51:15.349175'}
+2025-12-28 22:51:17,887 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:51:15.349175'}
+2025-12-28 22:56:16,718 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:56:16.643756'}
+2025-12-28 22:56:16,718 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T22:56:16.643756'}
+2025-12-28 23:01:16,867 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:01:16.711870'}
+2025-12-28 23:01:16,867 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:01:16.711870'}
+2025-12-28 23:06:17,013 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:06:16.841756'}
+2025-12-28 23:06:17,013 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:06:16.841756'}
+2025-12-28 23:11:17,005 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:11:16.917446'}
+2025-12-28 23:11:17,005 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:11:16.917446'}
+2025-12-28 23:16:17,227 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:16:17.113797'}
+2025-12-28 23:16:17,227 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:16:17.113797'}
+2025-12-28 23:21:17,237 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:21:17.160365'}
+2025-12-28 23:21:17,237 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:21:17.160365'}
+2025-12-28 23:26:17,216 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:26:17.185087'}
+2025-12-28 23:26:17,216 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:26:17.185087'}
+2025-12-28 23:31:17,729 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:31:17.300243'}
+2025-12-28 23:31:17,729 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:31:17.300243'}
+2025-12-28 23:36:17,797 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:36:17.553744'}
+2025-12-28 23:36:17,797 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:36:17.553744'}
+2025-12-28 23:41:17,820 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:41:17.656568'}
+2025-12-28 23:41:17,820 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:41:17.656568'}
+2025-12-28 23:46:18,019 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:46:17.782914'}
+2025-12-28 23:46:18,019 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:46:17.782914'}
+2025-12-28 23:51:18,108 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:51:17.936224'}
+2025-12-28 23:51:18,108 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:51:17.936224'}
+2025-12-28 23:56:18,260 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:56:18.034315'}
+2025-12-28 23:56:18,260 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-28T23:56:18.034315'}
+2025-12-29 00:01:18,548 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:01:18.183118'}
+2025-12-29 00:01:18,548 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:01:18.183118'}
+2025-12-29 00:06:18,516 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:06:18.388983'}
+2025-12-29 00:06:18,516 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:06:18.388983'}
+2025-12-29 00:11:18,645 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:11:18.474731'}
+2025-12-29 00:11:18,645 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:11:18.474731'}
+2025-12-29 00:16:18,634 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:16:18.573585'}
+2025-12-29 00:16:18,634 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:16:18.573585'}
+2025-12-29 00:21:18,686 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:21:18.619852'}
+2025-12-29 00:21:18,686 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:21:18.619852'}
+2025-12-29 00:26:18,945 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:26:18.682776'}
+2025-12-29 00:26:18,945 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:26:18.682776'}
+2025-12-29 00:31:19,246 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:31:18.894222'}
+2025-12-29 00:31:19,246 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:31:18.894222'}
+2025-12-29 00:36:19,163 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:36:19.051822'}
+2025-12-29 00:36:19,163 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:36:19.051822'}
+2025-12-29 00:41:19,471 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:41:19.114581'}
+2025-12-29 00:41:19,471 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:41:19.114581'}
+2025-12-29 00:46:19,502 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:46:19.378712'}
+2025-12-29 00:46:19,502 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:46:19.378712'}
+2025-12-29 00:51:19,567 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:51:19.464838'}
+2025-12-29 00:51:19,567 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:51:19.464838'}
+2025-12-29 00:56:19,637 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:56:19.501614'}
+2025-12-29 00:56:19,637 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T00:56:19.501614'}
+2025-12-29 01:01:19,626 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:01:19.560368'}
+2025-12-29 01:01:19,626 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:01:19.560368'}
+2025-12-29 01:06:19,649 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:06:19.601763'}
+2025-12-29 01:06:19,649 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:06:19.601763'}
+2025-12-29 01:11:19,602 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:11:19.427320'}
+2025-12-29 01:11:19,602 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:11:19.427320'}
+2025-12-29 01:16:19,657 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:16:19.546255'}
+2025-12-29 01:16:19,657 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:16:19.546255'}
+2025-12-29 01:21:19,700 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:21:19.599146'}
+2025-12-29 01:21:19,700 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:21:19.599146'}
+2025-12-29 01:26:19,766 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:26:19.623799'}
+2025-12-29 01:26:19,766 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:26:19.623799'}
+2025-12-29 01:31:19,838 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:31:19.689238'}
+2025-12-29 01:31:19,838 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:31:19.689238'}
+2025-12-29 01:36:25,128 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:36:21.514912'}
+2025-12-29 01:36:25,128 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:36:21.514912'}
+2025-12-29 01:41:23,537 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:41:23.287279'}
+2025-12-29 01:41:23,537 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:41:23.287279'}
+2025-12-29 01:46:25,522 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:46:23.789606'}
+2025-12-29 01:46:25,522 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:46:23.789606'}
+2025-12-29 01:51:25,269 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:51:25.058300'}
+2025-12-29 01:51:25,269 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:51:25.058300'}
+2025-12-29 01:56:26,744 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:56:25.465075'}
+2025-12-29 01:56:26,744 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T01:56:25.465075'}
+2025-12-29 02:01:26,489 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:01:26.297217'}
+2025-12-29 02:01:26,489 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:01:26.297217'}
+2025-12-29 02:06:26,524 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:06:26.410979'}
+2025-12-29 02:06:26,524 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:06:26.410979'}
+2025-12-29 02:11:26,598 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:11:26.504607'}
+2025-12-29 02:11:26,598 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:11:26.504607'}
+2025-12-29 02:16:26,754 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:16:26.600660'}
+2025-12-29 02:16:26,754 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:16:26.600660'}
+2025-12-29 02:21:26,829 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:21:26.705768'}
+2025-12-29 02:21:26,829 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:21:26.705768'}
+2025-12-29 02:26:26,844 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:26:26.796766'}
+2025-12-29 02:26:26,844 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:26:26.796766'}
+2025-12-29 02:31:26,946 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:31:26.774075'}
+2025-12-29 02:31:26,946 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:31:26.774075'}
+2025-12-29 02:36:26,925 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:36:26.858188'}
+2025-12-29 02:36:26,925 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:36:26.858188'}
+2025-12-29 02:41:26,994 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:41:26.882869'}
+2025-12-29 02:41:26,994 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:41:26.882869'}
+2025-12-29 02:46:27,058 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:46:26.959281'}
+2025-12-29 02:46:27,058 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:46:26.959281'}
+2025-12-29 02:51:27,139 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:51:26.991868'}
+2025-12-29 02:51:27,139 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:51:26.991868'}
+2025-12-29 02:56:27,072 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:56:27.048559'}
+2025-12-29 02:56:27,072 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T02:56:27.048559'}
+2025-12-29 03:01:27,267 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:01:27.114361'}
+2025-12-29 03:01:27,267 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:01:27.114361'}
+2025-12-29 03:06:27,240 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:06:27.194672'}
+2025-12-29 03:06:27,240 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:06:27.194672'}
+2025-12-29 03:11:27,223 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:11:27.213916'}
+2025-12-29 03:11:27,223 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:11:27.213916'}
+2025-12-29 03:16:27,133 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:16:27.117839'}
+2025-12-29 03:16:27,133 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:16:27.117839'}
+2025-12-29 03:21:27,129 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:21:27.122653'}
+2025-12-29 03:21:27,129 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:21:27.122653'}
+2025-12-29 03:26:27,127 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:26:27.123645'}
+2025-12-29 03:26:27,127 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:26:27.123645'}
+2025-12-29 03:31:27,242 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:31:27.226038'}
+2025-12-29 03:31:27,242 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:31:27.226038'}
+2025-12-29 03:36:27,242 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:36:27.238019'}
+2025-12-29 03:36:27,242 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:36:27.238019'}
+2025-12-29 03:41:27,252 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:41:27.250491'}
+2025-12-29 03:41:27,252 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:41:27.250491'}
+2025-12-29 03:46:27,263 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:46:27.259817'}
+2025-12-29 03:46:27,263 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:46:27.259817'}
+2025-12-29 03:51:27,276 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:51:27.270217'}
+2025-12-29 03:51:27,276 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:51:27.270217'}
+2025-12-29 03:56:27,287 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:56:27.283534'}
+2025-12-29 03:56:27,287 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T03:56:27.283534'}
+2025-12-29 04:01:27,324 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:01:27.303664'}
+2025-12-29 04:01:27,324 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:01:27.303664'}
+2025-12-29 04:06:27,325 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:06:27.317039'}
+2025-12-29 04:06:27,325 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:06:27.317039'}
+2025-12-29 04:11:27,330 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:11:27.327943'}
+2025-12-29 04:11:27,330 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:11:27.327943'}
+2025-12-29 04:16:27,317 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:16:27.292763'}
+2025-12-29 04:16:27,317 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:16:27.292763'}
+2025-12-29 04:21:27,311 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:21:27.301889'}
+2025-12-29 04:21:27,311 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:21:27.301889'}
+2025-12-29 04:26:27,321 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:26:27.311049'}
+2025-12-29 04:26:27,321 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:26:27.311049'}
+2025-12-29 04:31:27,271 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:31:27.261892'}
+2025-12-29 04:31:27,271 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:31:27.261892'}
+2025-12-29 04:36:27,270 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:36:27.265910'}
+2025-12-29 04:36:27,270 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:36:27.265910'}
+2025-12-29 04:41:27,270 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:41:27.267313'}
+2025-12-29 04:41:27,270 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:41:27.267313'}
+2025-12-29 04:46:27,214 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:46:27.206831'}
+2025-12-29 04:46:27,214 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:46:27.206831'}
+2025-12-29 04:51:27,219 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:51:27.206704'}
+2025-12-29 04:51:27,219 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:51:27.206704'}
+2025-12-29 04:56:27,220 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:56:27.206215'}
+2025-12-29 04:56:27,220 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T04:56:27.206215'}
+2025-12-29 05:01:27,246 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:01:27.242516'}
+2025-12-29 05:01:27,246 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:01:27.242516'}
+2025-12-29 05:06:27,249 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:06:27.244542'}
+2025-12-29 05:06:27,249 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:06:27.244542'}
+2025-12-29 05:11:27,251 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:11:27.245541'}
+2025-12-29 05:11:27,251 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:11:27.245541'}
+2025-12-29 05:16:27,385 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:16:27.292184'}
+2025-12-29 05:16:27,385 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:16:27.292184'}
+2025-12-29 05:21:27,371 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:21:27.356253'}
+2025-12-29 05:21:27,371 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:21:27.356253'}
+2025-12-29 05:26:27,375 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:26:27.367488'}
+2025-12-29 05:26:27,375 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:26:27.367488'}
+2025-12-29 05:31:27,478 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:31:27.471243'}
+2025-12-29 05:31:27,478 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:31:27.471243'}
+2025-12-29 05:36:27,489 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:36:27.483316'}
+2025-12-29 05:36:27,489 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:36:27.483316'}
+2025-12-29 05:41:27,499 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:41:27.496505'}
+2025-12-29 05:41:27,499 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:41:27.496505'}
+2025-12-29 05:46:27,480 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:46:27.472215'}
+2025-12-29 05:46:27,480 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:46:27.472215'}
+2025-12-29 05:51:27,483 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:51:27.479407'}
+2025-12-29 05:51:27,483 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:51:27.479407'}
+2025-12-29 05:56:27,487 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:56:27.486419'}
+2025-12-29 05:56:27,487 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T05:56:27.486419'}
+2025-12-29 06:01:27,565 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:01:27.555176'}
+2025-12-29 06:01:27,565 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:01:27.555176'}
+2025-12-29 06:06:27,576 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:06:27.569494'}
+2025-12-29 06:06:27,576 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:06:27.569494'}
+2025-12-29 06:11:27,591 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:11:27.581678'}
+2025-12-29 06:11:27,591 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:11:27.581678'}
+2025-12-29 06:16:27,536 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:16:27.529255'}
+2025-12-29 06:16:27,536 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:16:27.529255'}
+2025-12-29 06:21:27,533 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:21:27.532232'}
+2025-12-29 06:21:27,533 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:21:27.532232'}
+2025-12-29 06:26:27,536 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:26:27.534092'}
+2025-12-29 06:26:27,536 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:26:27.534092'}
+2025-12-29 06:31:27,579 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:31:27.576166'}
+2025-12-29 06:31:27,579 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:31:27.576166'}
+2025-12-29 06:36:27,600 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:36:27.585893'}
+2025-12-29 06:36:27,600 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:36:27.585893'}
+2025-12-29 06:41:27,630 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:41:27.598786'}
+2025-12-29 06:41:27,630 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:41:27.598786'}
+2025-12-29 06:46:27,629 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:46:27.627046'}
+2025-12-29 06:46:27,629 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:46:27.627046'}
+2025-12-29 06:51:27,640 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:51:27.637426'}
+2025-12-29 06:51:27,640 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:51:27.637426'}
+2025-12-29 06:56:27,652 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:56:27.646141'}
+2025-12-29 06:56:27,652 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T06:56:27.646141'}
+2025-12-29 07:01:27,660 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:01:27.657804'}
+2025-12-29 07:01:27,660 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:01:27.657804'}
+2025-12-29 07:06:27,635 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:06:27.629542'}
+2025-12-29 07:06:27,635 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:06:27.629542'}
+2025-12-29 07:11:27,642 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:11:27.636715'}
+2025-12-29 07:11:27,642 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:11:27.636715'}
+2025-12-29 07:16:27,653 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:16:27.644636'}
+2025-12-29 07:16:27,653 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:16:27.644636'}
+2025-12-29 07:21:27,638 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:21:27.636220'}
+2025-12-29 07:21:27,638 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:21:27.636220'}
+2025-12-29 07:26:27,645 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:26:27.642623'}
+2025-12-29 07:26:27,645 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:26:27.642623'}
+2025-12-29 07:31:27,649 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:31:27.648038'}
+2025-12-29 07:31:27,649 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:31:27.648038'}
+2025-12-29 07:36:27,650 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:36:27.645348'}
+2025-12-29 07:36:27,650 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:36:27.645348'}
+2025-12-29 07:41:27,650 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:41:27.649950'}
+2025-12-29 07:41:27,650 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:41:27.649950'}
+2025-12-29 07:46:27,659 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:46:27.655449'}
+2025-12-29 07:46:27,659 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:46:27.655449'}
+2025-12-29 07:51:27,663 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:51:27.661336'}
+2025-12-29 07:51:27,663 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:51:27.661336'}
+2025-12-29 07:56:27,668 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:56:27.667657'}
+2025-12-29 07:56:27,668 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T07:56:27.667657'}
+2025-12-29 08:01:27,680 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:01:27.674666'}
+2025-12-29 08:01:27,680 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:01:27.674666'}
+2025-12-29 08:06:27,688 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:06:27.683979'}
+2025-12-29 08:06:27,688 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:06:27.683979'}
+2025-12-29 08:11:27,694 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:11:27.693879'}
+2025-12-29 08:11:27,694 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:11:27.693879'}
+2025-12-29 08:16:27,709 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:16:27.699705'}
+2025-12-29 08:16:27,709 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:16:27.699705'}
+2025-12-29 08:21:27,732 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:21:27.710324'}
+2025-12-29 08:21:27,732 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:21:27.710324'}
+2025-12-29 08:26:27,727 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:26:27.723962'}
+2025-12-29 08:26:27,727 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:26:27.723962'}
+2025-12-29 08:31:27,739 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:31:27.705103'}
+2025-12-29 08:31:27,739 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:31:27.705103'}
+2025-12-29 08:36:27,734 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:36:27.725859'}
+2025-12-29 08:36:27,734 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:36:27.725859'}
+2025-12-29 08:41:27,739 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:41:27.735025'}
+2025-12-29 08:41:27,739 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:41:27.735025'}
+2025-12-29 08:46:27,745 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:46:27.743981'}
+2025-12-29 08:46:27,745 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:46:27.743981'}
+2025-12-29 08:51:27,755 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:51:27.749962'}
+2025-12-29 08:51:27,755 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:51:27.749962'}
+2025-12-29 08:56:27,759 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:56:27.758550'}
+2025-12-29 08:56:27,759 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T08:56:27.758550'}
+2025-12-29 09:01:27,771 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:01:27.765399'}
+2025-12-29 09:01:27,771 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:01:27.765399'}
+2025-12-29 09:06:27,778 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:06:27.777686'}
+2025-12-29 09:06:27,778 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:06:27.777686'}
+2025-12-29 09:11:27,787 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:11:27.784815'}
+2025-12-29 09:11:27,787 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:11:27.784815'}
+2025-12-29 09:16:27,807 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:16:27.791289'}
+2025-12-29 09:16:27,807 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:16:27.791289'}
+2025-12-29 09:21:27,811 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:21:27.806887'}
+2025-12-29 09:21:27,811 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:21:27.806887'}
+2025-12-29 09:26:27,866 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:26:27.865742'}
+2025-12-29 09:26:27,866 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:26:27.865742'}
+2025-12-29 09:31:27,884 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:31:27.878378'}
+2025-12-29 09:31:27,884 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:31:27.878378'}
+2025-12-29 09:36:27,891 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:36:27.890391'}
+2025-12-29 09:36:27,891 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:36:27.890391'}
+2025-12-29 09:41:27,932 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:41:27.928888'}
+2025-12-29 09:46:27,940 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:46:27.939901'}
+2025-12-29 09:51:27,951 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:51:27.950667'}
+2025-12-29 09:56:27,895 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:56:27.884270'}
+2025-12-29 09:41:27,932 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:41:27.928888'}
+--- Logging error ---
+--- Logging error ---
+2025-12-29 09:46:27,940 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:46:27.939901'}
+--- Logging error ---
+--- Logging error ---
+2025-12-29 09:51:27,951 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:51:27.950667'}
+--- Logging error ---
+2025-12-29 09:56:27,895 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T09:56:27.884270'}
+2025-12-29 10:01:27,888 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:01:27.887235'}
+2025-12-29 10:01:27,888 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:01:27.887235'}
+2025-12-29 10:06:27,893 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:06:27.887075'}
+2025-12-29 10:06:27,893 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:06:27.887075'}
+2025-12-29 10:11:27,863 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:11:27.861183'}
+2025-12-29 10:11:27,863 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:11:27.861183'}
+2025-12-29 10:16:27,864 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:16:27.857500'}
+2025-12-29 10:16:27,864 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:16:27.857500'}
+2025-12-29 10:21:27,856 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:21:27.853693'}
+2025-12-29 10:21:27,856 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:21:27.853693'}
+2025-12-29 10:26:27,895 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:26:27.888170'}
+2025-12-29 10:26:27,895 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:26:27.888170'}
+2025-12-29 10:31:27,896 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:31:27.890426'}
+2025-12-29 10:31:27,896 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:31:27.890426'}
+2025-12-29 10:36:27,896 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:36:27.893486'}
+2025-12-29 10:36:27,896 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:36:27.893486'}
+2025-12-29 10:41:27,854 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:41:27.848053'}
+2025-12-29 10:41:27,854 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:41:27.848053'}
+2025-12-29 10:46:27,844 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:46:27.843201'}
+2025-12-29 10:51:27,845 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:51:27.841683'}
+2025-12-29 10:56:27,854 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:56:27.835121'}
+2025-12-29 11:01:27,841 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:01:27.837575'}
+2025-12-29 10:46:27,844 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:46:27.843201'}
+--- Logging error ---
+--- Logging error ---
+2025-12-29 10:51:27,845 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:51:27.841683'}
+--- Logging error ---
+--- Logging error ---
+2025-12-29 10:56:27,854 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T10:56:27.835121'}
+--- Logging error ---
+2025-12-29 11:01:27,841 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:01:27.837575'}
+2025-12-29 11:06:27,927 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:06:27.915397'}
+2025-12-29 11:06:27,927 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:06:27.915397'}
+2025-12-29 11:11:27,921 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:11:27.921321'}
+2025-12-29 11:11:27,921 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:11:27.921321'}
+2025-12-29 11:16:27,934 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:16:27.924942'}
+2025-12-29 11:16:27,934 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:16:27.924942'}
+2025-12-29 11:21:28,013 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:21:28.007822'}
+2025-12-29 11:21:28,013 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:21:28.007822'}
+2025-12-29 11:26:28,021 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:26:28.021019'}
+2025-12-29 11:26:28,021 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:26:28.021019'}
+2025-12-29 11:31:28,030 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:31:28.029308'}
+2025-12-29 11:31:28,030 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:31:28.029308'}
+2025-12-29 11:36:28,041 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:36:28.038538'}
+2025-12-29 11:36:28,041 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:36:28.038538'}
+2025-12-29 11:41:28,062 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:41:28.061195'}
+2025-12-29 11:41:28,062 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:41:28.061195'}
+2025-12-29 11:46:28,074 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:46:28.071916'}
+2025-12-29 11:46:28,074 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:46:28.071916'}
+2025-12-29 11:51:28,089 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:51:28.082440'}
+2025-12-29 11:51:28,089 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:51:28.082440'}
+2025-12-29 11:56:28,096 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:56:28.093898'}
+2025-12-29 11:56:28,096 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T11:56:28.093898'}
+2025-12-29 12:01:28,112 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:01:28.104414'}
+2025-12-29 12:01:28,112 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:01:28.104414'}
+2025-12-29 12:06:28,125 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:06:28.118640'}
+2025-12-29 12:06:28,125 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:06:28.118640'}
+2025-12-29 12:11:28,081 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:11:28.071402'}
+2025-12-29 12:11:28,081 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:11:28.071402'}
+2025-12-29 12:16:28,079 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:16:28.078748'}
+2025-12-29 12:16:28,079 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:16:28.078748'}
+2025-12-29 12:21:28,090 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:21:28.082135'}
+2025-12-29 12:21:28,090 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:21:28.082135'}
+2025-12-29 12:26:28,058 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:26:28.053734'}
+2025-12-29 12:26:28,058 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:26:28.053734'}
+2025-12-29 12:31:28,059 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:31:28.053605'}
+2025-12-29 12:31:28,059 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:31:28.053605'}
+2025-12-29 12:36:28,074 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:36:28.056419'}
+2025-12-29 12:36:28,074 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:36:28.056419'}
+2025-12-29 12:41:28,063 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:41:28.059477'}
+2025-12-29 12:41:28,063 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:41:28.059477'}
+2025-12-29 12:46:28,061 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:46:28.059727'}
+2025-12-29 12:46:28,061 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:46:28.059727'}
+2025-12-29 12:51:28,059 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:51:28.058417'}
+2025-12-29 12:51:28,059 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:51:28.058417'}
+2025-12-29 12:56:28,188 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:56:28.180950'}
+2025-12-29 12:56:28,188 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T12:56:28.180950'}
+2025-12-29 13:01:28,193 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:01:28.192132'}
+2025-12-29 13:01:28,193 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:01:28.192132'}
+2025-12-29 13:06:28,208 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:06:28.202609'}
+2025-12-29 13:06:28,208 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:06:28.202609'}
+2025-12-29 13:11:28,182 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:11:28.181756'}
+2025-12-29 13:11:28,182 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:11:28.181756'}
+2025-12-29 13:16:28,217 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:16:28.195193'}
+2025-12-29 13:16:28,217 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:16:28.195193'}
+2025-12-29 13:21:28,207 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:21:28.205505'}
+2025-12-29 13:21:28,207 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:21:28.205505'}
+2025-12-29 13:26:28,261 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:26:28.246319'}
+2025-12-29 13:26:28,261 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:26:28.246319'}
+2025-12-29 13:31:28,270 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:31:28.260344'}
+2025-12-29 13:31:28,270 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:31:28.260344'}
+2025-12-29 13:36:28,277 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:36:28.274081'}
+2025-12-29 13:36:28,277 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:36:28.274081'}
+2025-12-29 13:41:28,286 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:41:28.285785'}
+2025-12-29 13:41:28,286 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:41:28.285785'}
+2025-12-29 13:46:28,288 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:46:28.283693'}
+2025-12-29 13:46:28,288 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:46:28.283693'}
+2025-12-29 13:51:28,299 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:51:28.293086'}
+2025-12-29 13:51:28,299 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:51:28.293086'}
+2025-12-29 13:56:28,306 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:56:28.305162'}
+2025-12-29 13:56:28,306 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T13:56:28.305162'}
+2025-12-29 14:01:28,310 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:01:28.310377'}
+2025-12-29 14:01:28,310 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:01:28.310377'}
+2025-12-29 14:06:28,326 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:06:28.320517'}
+2025-12-29 14:06:28,326 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:06:28.320517'}
+2025-12-29 14:11:28,399 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:11:28.334690'}
+2025-12-29 14:11:28,399 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:11:28.334690'}
+2025-12-29 14:16:28,383 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:16:28.380977'}
+2025-12-29 14:16:28,383 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:16:28.380977'}
+2025-12-29 14:21:28,394 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:21:28.391973'}
+2025-12-29 14:21:28,394 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:21:28.391973'}
+2025-12-29 14:26:28,308 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:26:28.300231'}
+2025-12-29 14:26:28,308 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:26:28.300231'}
+2025-12-29 14:31:28,307 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:31:28.306700'}
+2025-12-29 14:31:28,307 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:31:28.306700'}
+2025-12-29 14:36:28,351 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:36:28.315161'}
+2025-12-29 14:36:28,351 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:36:28.315161'}
+2025-12-29 14:41:28,381 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:41:28.378285'}
+2025-12-29 14:41:28,381 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:41:28.378285'}
+2025-12-29 14:46:28,396 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:46:28.389756'}
+2025-12-29 14:46:28,396 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:46:28.389756'}
+2025-12-29 14:51:28,403 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:51:28.399498'}
+2025-12-29 14:51:28,403 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:51:28.399498'}
+2025-12-29 14:56:28,393 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:56:28.385438'}
+2025-12-29 14:56:28,393 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T14:56:28.385438'}
+2025-12-29 15:01:28,397 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:01:28.378845'}
+2025-12-29 15:01:28,397 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:01:28.378845'}
+2025-12-29 15:06:28,410 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:06:28.396945'}
+2025-12-29 15:06:28,410 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:06:28.396945'}
+2025-12-29 15:11:28,438 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:11:28.413353'}
+2025-12-29 15:11:28,438 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:11:28.413353'}
+2025-12-29 15:16:28,497 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:16:28.442930'}
+2025-12-29 15:16:28,497 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:16:28.442930'}
+2025-12-29 15:21:28,497 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:21:28.462636'}
+2025-12-29 15:21:28,497 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:21:28.462636'}
+2025-12-29 15:26:28,497 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:26:28.492971'}
+2025-12-29 15:26:28,497 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:26:28.492971'}
+2025-12-29 15:31:28,510 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:31:28.502886'}
+2025-12-29 15:31:28,510 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:31:28.502886'}
+2025-12-29 15:36:28,508 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:36:28.508332'}
+2025-12-29 15:36:28,508 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:36:28.508332'}
+2025-12-29 15:41:28,519 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:41:28.517665'}
+2025-12-29 15:41:28,519 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:41:28.517665'}
+2025-12-29 15:46:28,529 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:46:28.527166'}
+2025-12-29 15:46:28,529 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:46:28.527166'}
+2025-12-29 15:51:28,566 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:51:28.561369'}
+2025-12-29 15:51:28,566 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:51:28.561369'}
+2025-12-29 15:56:28,575 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:56:28.571631'}
+2025-12-29 15:56:28,575 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T15:56:28.571631'}
+2025-12-29 16:01:28,582 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:01:28.581803'}
+2025-12-29 16:01:28,582 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:01:28.581803'}
+2025-12-29 16:06:28,531 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:06:28.529655'}
+2025-12-29 16:06:28,531 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:06:28.529655'}
+2025-12-29 16:11:28,533 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:11:28.532600'}
+2025-12-29 16:11:28,533 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:11:28.532600'}
+2025-12-29 16:16:28,541 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:16:28.537609'}
+2025-12-29 16:16:28,541 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:16:28.537609'}
+2025-12-29 16:21:28,568 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:21:28.565855'}
+2025-12-29 16:21:28,568 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:21:28.565855'}
+2025-12-29 16:26:28,580 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:26:28.579723'}
+2025-12-29 16:26:28,580 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:26:28.579723'}
+2025-12-29 16:31:28,589 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:31:28.589119'}
+2025-12-29 16:31:28,589 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:31:28.589119'}

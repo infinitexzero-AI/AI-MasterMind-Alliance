@@ -8,7 +8,8 @@ SOURCE_TARGETS = [
     "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases",
     "/Users/infinite27/Library/Application Support/Google/Chrome",
     "/Users/infinite27/Library/Mail",
-    "/Users/infinite27/Library/Application Support/Antigravity"
+    "/Users/infinite27/Library/Application Support/Antigravity",
+    "/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs"
 ]
 DESTINATION_HUB = "/Volumes/XDriveAlpha/Vault/Migration_Archive"
 LOG_FILE = "/Users/infinite27/AILCC_PRIME/06_System/Logs/migration_pulse.log"

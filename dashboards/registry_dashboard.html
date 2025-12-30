@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AILCC Registry Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a0a0c;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(255, 255, 255, 0.1);
+            --accent-blue: #00d2ff;
+            --accent-purple: #9d50bb;
+            --text: #e0e0e0;
+            --status-active: #00ff88;
+            --status-offline: #ff4b2b;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 20% 30%, rgba(0, 210, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(157, 80, 187, 0.05) 0%, transparent 50%);
+        }
+
+        header {
+            padding: 40px;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin: 0;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1200px;
+            padding: 20px;
+        }
+
+        .agent-card {
+            background: var(--glass);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 25px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .agent-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .agent-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--accent-blue);
+        }
+
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .agent-id {
+            font-weight: 600;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+        }
+
+        .status-badge {
+            font-size: 0.8em;
+            padding: 4px 12px;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .status-active { background: rgba(0, 255, 136, 0.1); color: var(--status-active); border: 1px solid var(--status-active); }
+        .status-offline { background: rgba(255, 75, 43, 0.1); color: var(--status-offline); border: 1px solid var(--status-offline); }
+
+        .role {
+            font-size: 0.9em;
+            color: #aaa;
+            margin-bottom: 15px;
+        }
+
+        .capabilities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .cap-tag {
+            font-size: 0.75em;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 2px 8px;
+            border-radius: 4px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 40px;
+            font-size: 0.8em;
+            color: #555;
+        }
+
+        .sub-header-text {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .valentine-override {
+            border-color: var(--accent-purple);
+        }
+
+        .offline-note {
+            font-size: 0.7em;
+            color: var(--status-offline);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alliance Registry</h1>
+        <p class="sub-header-text">AILCC Mode 5 • Real-time Observability</p>
+    </header>
+
+    <div class="dashboard-grid">
+        <!-- Agent cards will be dynamically rendered or updated -->
+        <div class="agent-card">
+            <div class="agent-header">
+                <div class="agent-id">Antigravity</div>
+                <div class="status-badge status-active">Active</div>
+            </div>
+            <div class="role">Protocol Engineer & Code Synthesis</div>
+            <div class="capabilities">
+                <span class="cap-tag">code_gen</span>
+                <span class="cap-tag">schema_design</span>
+                <span class="cap-tag">database_ops</span>
+            </div>
+        </div>
+
+        <div class="agent-card valentine-override">
+            <div class="agent-header">
+                <div class="agent-id">Valentine</div>
+                <div class="status-badge status-active">Active</div>
+            </div>
+            <div class="role">Neural Router & Orchestrator</div>
+            <div class="capabilities">
+                <span class="cap-tag">decision_logic</span>
+                <span class="cap-tag">agent_selection</span>
+                <span class="cap-tag">priority_queuing</span>
+            </div>
+        </div>
+
+        <div class="agent-card">
+            <div class="agent-header">
+                <div class="agent-id">Claude</div>
+                <div class="status-badge status-offline">Offline</div>
+            </div>
+            <div class="role">Chief Architect & Reasoning</div>
+            <div class="capabilities">
+                <span class="cap-tag">file_ops</span>
+                <span class="cap-tag">log_analysis</span>
+                <span class="cap-tag">mcp_access</span>
+            </div>
+            <p class="offline-note">Returning at 2:00 AM AST</p>
+        </div>
+
+        <!-- Add more cards as needed -->
+    </div>
+
+    <footer>
+        &copy; 2025 AI Mastermind Alliance • System State: Synchronized
+    </footer>
+</body>
+</html>

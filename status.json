@@ -1,0 +1,8 @@
+{
+  "last_check": "2025-12-29T04:59:58Z",
+  "system_integrity": "ok",
+  "config_integrity": "ok",
+  "agent_service": "active",
+  "storage_status": "critical",
+  "available_gb": 1
+}
