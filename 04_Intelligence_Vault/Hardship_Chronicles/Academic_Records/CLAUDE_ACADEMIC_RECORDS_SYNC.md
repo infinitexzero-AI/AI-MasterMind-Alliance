@@ -1,12 +1,12 @@
 # 🔄 Claude Intelligence Sync: Academic Records & Appeals
 
-**Context**: This document encodes the core evidence and strategic positioning for Joel Palk-Ricard's (ID: 026004) academic and financial appeals at Mount Allison University (2025-2026).
+**Context**: This document encodes the core evidence and strategic positioning for Joel Palk-Ricard's (ID: 0260004) academic and financial appeals at Mount Allison University (2025-2026).
 
 ---
 
 ## 📧 Current Email Draft (Emergency Bursary)
 
-**Subject**: Urgent: Emergency Bursary Request & Financial Hold Review – Joel Palk‑Ricard (026004)
+**Subject**: Urgent: Emergency Bursary Request & Financial Hold Review – Joel Palk‑Ricard (0260004)
 
 Dear Financial Aid Office,
 
@@ -26,7 +26,8 @@ I would greatly appreciate the opportunity to speak with a Financial Aid & Award
 Thank you very much for your urgent attention and understanding.
 
 Sincerely,
-Joel Palk‑Ricard (026004)
+Joel Palk‑Ricard
+Student ID: 0260004
 
 ---
 
@@ -34,7 +35,7 @@ Joel Palk‑Ricard (026004)
 
 **Date**: December 30, 2025
 **To**: Academic Appeals Committee, Mount Allison University
-**From**: Joel Alfred Palk-Ricard (Student ID: 026004)
+**From**: Joel Alfred Palk-Ricard (Student ID: 0260004)
 
 ### EXECUTIVE SUMMARY
 

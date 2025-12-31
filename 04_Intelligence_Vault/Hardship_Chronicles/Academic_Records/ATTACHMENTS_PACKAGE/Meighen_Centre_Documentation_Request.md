@@ -1,7 +1,7 @@
 # Documentation Request: Meighen Centre for Learning Assistance
 
 **To**: accessibility@mta.ca
-**Subject**: Request for Updated Documentation Support – Joel Palk-Ricard (026004)
+**Subject**: Request for Updated Documentation Support – Joel Palk-Ricard (0260004)
 
 ---
 
@@ -24,6 +24,6 @@ Thank you for your ongoing support.
 Sincerely,
 
 **Joel Palk-Ricard**
-Student ID: 026004
+Student ID: 0260004
 Email: japalkricard@mta.ca
 Phone: 1(506) 889-5037

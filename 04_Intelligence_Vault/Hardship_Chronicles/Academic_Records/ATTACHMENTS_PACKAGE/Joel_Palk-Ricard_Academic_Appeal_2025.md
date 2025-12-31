@@ -2,7 +2,7 @@
 
 **Date**: December 22, 2025
 **To**: Academic Appeals Committee, Mount Allison University
-**From**: Joel Alfred Palk-Ricard (Student ID: 026004)
+**From**: Joel Alfred Palk-Ricard (Student ID: 0260004)
 
 ---
 
@@ -40,7 +40,7 @@ The evidence demonstrates that the student was not academically incapable, as pr
 
 ---
 **Joel Alfred Palk-Ricard**
-Student ID: 026004
+Student ID: 0260004
 Phone: 1(506) 889-5037
 Email: japalkricard@mta.ca
 *95% Degree Readiness*

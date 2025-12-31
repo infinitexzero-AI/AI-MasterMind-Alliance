@@ -1,4 +1,4 @@
-# Emergency Bursary Request: Joel Palk-Ricard (ID: 026004)
+# Emergency Bursary Request: Joel Palk-Ricard (ID: 0260004)
 
 **To**: Financial Aid Office, Mount Allison University
 **Date**: December 30, 2025
@@ -23,6 +23,6 @@ I would appreciate the opportunity to speak with a Financial Aid & Awards Counse
 Sincerely,
 
 **Joel Palk-Ricard**
-Student ID: 026004
+Student ID: 0260004
 Email: japalkricard@mta.ca
 Phone: 1(506) 889-5037
