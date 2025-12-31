@@ -22,6 +22,7 @@
 - [x] **Transcript Reconciliation Engine**: Logic for auditing credits and prerequisites.
 - [x] **MATH 1311 & HLTH 1011**: Remote Winter 2026 courses secured in roadmap.
 - [x] **Academic Appeal Submission (Email 1)**: Comprehensive 2023 retroactive withdrawal appeal sent Dec 30, 2025.
+- [x] **Emergency Bursary Request (Email 2)**: Finalized and ready for submission to Financial Aid Office (Dec 30, 2025).
 - [x] **Hardship Chronicles Vault**: Established a high-resolution evidence repository for institutional accountability.
 
 ## 👥 Agent Intelligence

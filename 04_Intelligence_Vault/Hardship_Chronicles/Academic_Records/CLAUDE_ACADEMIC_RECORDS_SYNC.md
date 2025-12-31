@@ -30,18 +30,18 @@ Joel Palk‑Ricard (026004)
 
 ---
 
-## 🎓 Attachment 1: Formal Appeal Document
+## 🎓 Attachment 1: Formal Appeal Document Summary
 
-# Formal Appeal: Academic Standing & Systemic Barriers Review
-
-**Date**: December 22, 2025
+**Date**: December 30, 2025
 **To**: Academic Appeals Committee, Mount Allison University
 **From**: Joel Alfred Palk-Ricard (Student ID: 026004)
 
 ### EXECUTIVE SUMMARY
+
 This document provides a comprehensive analysis of the systemic, administrative, and disability-related barriers that impeded Joel Palk-Ricard’s academic performance during the 2023 academic year. It argues for the conversion of specific 2023 failing grades to Withdrawals (W) based on the "Catch-22" created by institutional holds and documented good-faith efforts to comply with regulations.
 
 ### CHRONOLOGICAL EVIDENCE TIMELINE
+
 - **2016 (The Origin)**: Enrollment via Labour/PETL funding project.
 - **2018-19 (Core Success)**: Passed CHEM 1001 (C) and BIOL 2811 (C-).
 - **Winter 2023 (The Derailment)**: Personal/Medical issues leading to course failure.
@@ -49,12 +49,14 @@ This document provides a comprehensive analysis of the systemic, administrative,
 - **Fall 2025 (The Recovery)**: Current progress in COMM 3611, VMCS 1201, INDG 2881 (95% complete).
 
 ### BARRIER CLASSIFICATION MATRIX
+
 1. **Administrative Blockage**: Institutional holds prevented the student from exercising the right to withdraw from courses in 2023, effectively "forcing" a failure by process.
 2. **Technical Barrier**: Documented system access issues on Oct 27, 2023, prevented self-service withdrawal before critical deadlines.
 3. **Financial Catch-22**: Student loan suspensions created an environment where academic recovery was impossible without immediate capital, which the suspension itself prevented.
 4. **Disability Misalignment**: Discrepancies between Meighen Centre load recommendations and Student Loan "full-time" definitions created unsustainable registration patterns.
 
 ### REQUESTED REMEDIES
+
 1. **Grade Conversion**: Retroactive withdrawal (W) for terms where institutional blocks prevented proper course exit.
 2. **Hold Waiver**: Immediate release of the registration hold for Winter 2026 remote courses to maintain graduation timeline.
 3. **GPA Stabilization**: Recognition of the last terms of success (2025) as proof of academic reintegration.
@@ -64,10 +66,12 @@ This document provides a comprehensive analysis of the systemic, administrative,
 ## 🕵️ Attachment 2: Systematic Barriers Evidence
 
 ### THE "GATEKEEPER" VALIDATION
+
 - Success in **CHEM 1001** and **BIOL 2811** (Science Core) proves academic capability.
 - Graduation readiness is at **95%** (114/120 credits).
 
 ### THE 2023 SYSTEMIC FAILURE
+
 - **The Barrier**: User attempted to withdraw from courses but was **blocked by the university portal** due to an outstanding financial balance.
 - **The Result**: Forced enrollment led to multiple "F" grades.
 - **Analysis**: The school's policy of using registration/withdrawal access as a debt-collection tool directly sabotaged the student's academic standing, creating a "downward spiral" with student loan eligibility.
