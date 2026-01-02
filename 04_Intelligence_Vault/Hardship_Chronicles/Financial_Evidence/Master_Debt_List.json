@@ -1,0 +1,36 @@
+{
+  "debt_inventory": {
+    "student_loans": {
+      "provider": "NB Student Loans / NSLSC",
+      "status": "In Repayment / Collection",
+      "history": [
+        "Placed in collection September 2025",
+        "Rehabilitated November 2025",
+        "Back in repayment/collection December 2025"
+      ],
+      "point_of_contact": "Shane Carroll (Historical)",
+      "associated_evidence": [
+        "NBstudentloansrestrictionletter.pdf"
+      ]
+    },
+    "government_obligations": {
+      "entity": "Canada Revenue Agency (CRA)",
+      "type": "Requirement to Pay (RTP)",
+      "status": "Active automatic withdrawals",
+      "context": "Withdrawing funds from any incoming bank deposits"
+    },
+    "banking": {
+      "status": "Frozen",
+      "entities_to_verify": [
+        "BMO",
+        "TD",
+        "RBC"
+      ]
+    }
+  },
+  "score_baseline": {
+    "current": 380,
+    "source": "User Information",
+    "last_noted": "2025-12-31"
+  }
+}

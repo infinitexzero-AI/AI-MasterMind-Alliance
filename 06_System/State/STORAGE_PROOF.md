@@ -30,7 +30,7 @@ This report compares the documented '2nd Brain' structure against the current co
 | `Word` | 0 files/folders | 0 items | ✅ COMPLETE |
 | `Documents` | 2 items | - | 🏠 KEPT IN CLOUD |
 | `BDC Funding Request` | 0 files/folders | 0 items | ✅ COMPLETE |
-| `3D Scan 2024` | 4 files/folders | 5 items | 🔄 IN_PROGRESS (5/4 groups) |
+| `3D Scan 2024` | 4 files/folders | 16 items | 🔄 IN_PROGRESS (16/4 groups) |
 | `Downloads` | 1 items | - | 🏠 KEPT IN CLOUD |
 | `Next 5 Moves Worksheets` | 1 files/folders | 1 items | ✅ COMPLETE |
 | `04-Archives` | 0 items | ❌ NOT FOUND | 🚫 PENDING |

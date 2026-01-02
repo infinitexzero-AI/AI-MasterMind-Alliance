@@ -1,0 +1,14 @@
+
+--- Results for /Users/infinite27/AILCC_PRIME ---
+114.35 MB | Sun Dec 21 13:45:14 2025 | /Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/playwright/driver/node
+52.50 MB | Sun Dec 21 14:24:46 2025 | /Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/lance/lance.abi3.so
+
+--- Results for /Users/infinite27/Downloads ---
+
+--- Results for /Users/infinite27/Desktop ---
+298.55 MB | Wed Dec 31 00:33:01 2025 | /Users/infinite27/Desktop/AI Apps/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+172.43 MB | Sat Dec 27 15:28:00 2025 | /Users/infinite27/Desktop/Code Life/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+68.88 MB | Wed Dec 10 15:58:41 2025 | /Users/infinite27/Desktop/Code Life/ttl/30d/export_data/ec10015a-91de-4ada-83eb-a41e915155a9/prod-grok-backend.json
+56.97 MB | Sat Dec 13 19:59:39 2025 | /Users/infinite27/Desktop/Google Downloads/Ollama.dmg
+
+--- Results for /Users/infinite27/Documents/AI-Mastermind-Alliance-2025 ---

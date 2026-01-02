@@ -1,0 +1,19 @@
+
+--- Results for /Users/infinite27/AILCC_PRIME ---
+115.22 MB | Sun Dec 28 21:37:49 2025 | /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/node_modules/@next/swc-darwin-x64/next-swc.darwin-x64.node
+114.35 MB | Sun Dec 21 13:45:14 2025 | /Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/playwright/driver/node
+111.53 MB | Sun Dec 21 23:56:42 2025 | /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/node_modules/@next/swc-darwin-x64/next-swc.darwin-x64.node
+52.50 MB | Sun Dec 21 14:24:46 2025 | /Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/lance/lance.abi3.so
+
+--- Results for /Users/infinite27/Downloads ---
+
+--- Results for /Users/infinite27/Desktop ---
+298.55 MB | Wed Dec 31 00:33:01 2025 | /Users/infinite27/Desktop/AI Apps/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+172.43 MB | Sat Dec 27 15:28:00 2025 | /Users/infinite27/Desktop/Code Life/Visual Studio Code.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+82.01 MB | Fri Oct 31 18:11:11 2025 | /Users/infinite27/Desktop/Joel's Personal Documents/Officer Blin, oct 14th, 2025.MOV
+80.71 MB | Wed Dec 17 22:11:17 2025 | /Users/infinite27/Desktop/MTA FALL SEMESTER 2025/Commercial Law 2025/Comm law 3611 final review.m4a
+68.88 MB | Wed Dec 10 15:58:41 2025 | /Users/infinite27/Desktop/Code Life/ttl/30d/export_data/ec10015a-91de-4ada-83eb-a41e915155a9/prod-grok-backend.json
+61.25 MB | Sat Dec 27 15:33:01 2025 | /Users/infinite27/Desktop/ Entrepreneurship 2025-2026/ECFC General Documents/Official Papers/System Implementation Ideas/10X Business Plan Workbook.pdf
+56.97 MB | Sat Dec 13 19:59:39 2025 | /Users/infinite27/Desktop/Google Downloads/Ollama.dmg
+
+--- Results for /Users/infinite27/Documents/AI-Mastermind-Alliance-2025 ---

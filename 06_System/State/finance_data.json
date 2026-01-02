@@ -24,5 +24,21 @@
       "trend": "down"
     }
   ],
+  "pending_receipts": [
+    {
+      "id": "Bursary-2025-Dec",
+      "source": "Mount Allison Emergency Bursary",
+      "expected_amount": 1500.0,
+      "status": "AWAITING_SUBMISSION",
+      "priority": "critical"
+    },
+    {
+      "id": "NSLSC-2025-Term-W26",
+      "source": "NSLSC Student Loan",
+      "expected_amount": 4200.0,
+      "status": "PROCESSING_DELAYED",
+      "priority": "high"
+    }
+  ],
   "abundance_score": 90
 }

@@ -1,52 +1,26 @@
 #!/bin/bash
+# AILCC Protocol Alpha - System Health Watchdog
+# Monitors critical services and disk space
 
-# Configuration
-ROOT_DIR="/Users/infinite27/AILCC_PRIME"
-STATUS_FILE="$ROOT_DIR/status.json"
-CHECK_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+LOG_FILE="/Users/infinite27/AILCC_PRIME/logs/system_health.log"
+DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
-echo "[*] Starting Alliance Health Check..."
-
-# 1. Directory Integrity
-DIRS=("agents" "spellbooks" "protocols" "scripts" "logs" "tasks")
-STATUS_DIRS="ok"
-for dir in "${DIRS[@]}"; do
-    if [ ! -d "$ROOT_DIR/$dir" ]; then
-        echo " [!] Missing directory: $dir"
-        STATUS_DIRS="degraded"
-    fi
-done
-
-# 2. JSON Validation
-STATUS_JSON="ok"
-JSON_FILES=("agents/registry.json" "spellbooks/master_commands.json" "tasks/100_task_master_plan.json")
-for file in "${JSON_FILES[@]}"; do
-    if ! jq . "$ROOT_DIR/$file" > /dev/null 2>&1; then
-        echo " [!] Invalid JSON: $file"
-        STATUS_JSON="error"
-    fi
-done
-
-# 3. Agent Pulse (Static check for now)
-STATUS_AGENTS="active"
-
-# 4. Storage Pressure
-AVAILABLE_GB=$(df -g / | awk 'NR==2 {print $4}')
-STORAGE_STATUS="ok"
-if [ "$AVAILABLE_GB" -lt 2 ]; then
-    STORAGE_STATUS="critical"
+# 1. Check Disk Space
+FREE_DISK=$(df -h /System/Volumes/Data | awk 'NR==2 {print $4}' | sed 's/Gi//')
+if (( $(echo "$FREE_DISK < 5" | bc -l) )); then
+    echo "[$DATE] CRITICAL: Disk space low ($FREE_DISK Gi)" >> "$LOG_FILE"
 fi
 
-# Write to status.json
-cat <<EOF > "$STATUS_FILE"
-{
-  "last_check": "$CHECK_TIME",
-  "system_integrity": "$STATUS_DIRS",
-  "config_integrity": "$STATUS_JSON",
-  "agent_service": "$STATUS_AGENTS",
-  "storage_status": "$STORAGE_STATUS",
-  "available_gb": $AVAILABLE_GB
-}
-EOF
+# 2. Check remoted service
+REMOTED_COUNT=$(ps aux | grep -c "[r]emoted")
+if [ "$REMOTED_COUNT" -eq 0 ]; then
+    echo "[$DATE] WARNING: remoted service is not running" >> "$LOG_FILE"
+fi
 
-echo "[!] Health Check Complete. Status written to status.json"
+# 3. Check Memory Pressure (simple check)
+COMPRESSED=$(vm_stat | grep "occupied by compressor" | awk '{print $5}' | sed 's/\.//')
+if [ "$COMPRESSED" -gt 500000 ]; then
+    echo "[$DATE] INFO: High memory pressure detected" >> "$LOG_FILE"
+fi
+
+echo "[$DATE] Heartbeat: Disk=${FREE_DISK}Gi | remoted=${REMOTED_COUNT}" >> "$LOG_FILE"

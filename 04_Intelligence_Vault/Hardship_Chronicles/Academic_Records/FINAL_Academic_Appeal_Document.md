@@ -8,7 +8,7 @@
 
 ## 🏛️ EXECUTIVE SUMMARY
 
-This document provides a comprehensive analysis of the systemic, administrative, and disability-related barriers that impeded Joel Palk-Ricard’s academic performance during the 2023 academic year. It argues for the conversion of specific 2023 failing grades to Withdrawals (W) based on the "Catch-22" created by institutional holds and documented good-faith efforts to comply with regulations.
+This document provides a comprehensive analysis of the systemic, administrative, and disability-related barriers that impeded Joel Palk-Ricard’s academic performance during the 2023 academic year. It argues for the conversion of specific 2023 failing grades to Withdrawals (W) based on the **"Mistake Paradox"**: where the institution corrected a registration error but failed to address the primary procedural block that prevented course withdrawal. This created an unavoidable **"Catch-22"** that sabotaged the student's standing despite good-faith efforts.
 
 ## 📅 CHRONOLOGICAL EVIDENCE TIMELINE
 
@@ -28,10 +28,9 @@ This document provides a comprehensive analysis of the systemic, administrative,
 2. **Technical Barrier**: Documented system access issues on Oct 27, 2023, prevented self-service withdrawal before critical deadlines.
 3. **Financial Catch-22**: Student loan suspensions created an environment where academic recovery was impossible without immediate capital, which the suspension itself prevented.
 4. **Disability Misalignment**: Discrepancies between Meighen Centre load recommendations and Student Loan "full-time" definitions created unsustainable registration patterns.
+5. **External Systematic Pressure (RCMP Context)**: The 2023 period coincided with documented misconduct and harassment within the student's employment environment. National 2024-2025 reports (e.g., *Sexual victimization among Royal Canadian Mounted Police* research and CRCC public complaint audits) highlight the systemic vulnerability of student-level workers in federal programs, providing critical context for the "vulnerability spike" that intersected with academic administration failures.
 
-## 🎯 PATTERN ANALYSIS: CASCADING FAILURE
-
-The evidence demonstrates that the user was not academically incapable, as proven by successes in **Chemistry and Biology cores**. Instead, the 2023 failures represent a **cascading system failure** where a single financial hold blocked a withdrawal, which then triggered a loan suspension, which then prevented future payment, leading to the current registration block for Winter 2026.
+The evidence demonstrates that the user was not academically incapable, as proven by successes in **Chemistry and Biology cores**. Instead, the 2023 failures represent a **cascading system failure** and the **Mistake Paradox**: the university acknowledged the existence of technical blocks on Oct 27, 2023, but placed the burden of "navigating the impossible" on a student who was technically and financially barred from the very portal required for compliance.
 
 ## ⚖️ REQUESTED REMEDIES
 

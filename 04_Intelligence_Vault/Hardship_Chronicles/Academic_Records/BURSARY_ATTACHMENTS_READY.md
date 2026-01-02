@@ -8,6 +8,7 @@ Ensure the following files are exported to PDF and attached to your email to the
 | :--- | :--- | :--- |
 | **Formal Appeal Document** | `FINAL_Academic_Appeal_Document.md` | `Joel_Palk-Ricard_Academic_Appeal_2025.pdf` |
 | **Systematic Barriers Evidence** | `systematic_barriers_evidence.md` | `Evidence_Summary_Systemic_Barriers_JPR.pdf` |
+| **Evidence Manifest** | `evidence_manifest.md` | `Evidence_Manifest_Summary_JPR.pdf` |
 
 ## 🛠️ Verification Steps before Sending
 

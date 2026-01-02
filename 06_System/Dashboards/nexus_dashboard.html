@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Dashboard | AILCC 2025</title>
+    <title>Nexus Dashboard | AI Mastermind Alliance</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -15,6 +15,9 @@
                         'glass-border': 'rgba(255, 255, 255, 0.1)',
                         accent: '#00f2fe',
                         secondary: '#4facfe',
+                        success: '#00ff9d',
+                        warning: '#ffb302',
+                        danger: '#ff4b4b'
                     },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
@@ -31,18 +34,13 @@
             min-height: 100vh;
             overflow-x: hidden;
         }
-        .glass-panel {
+        .glass-panel, .glass-card {
             background: rgba(15, 23, 42, 0.6);
             -webkit-backdrop-filter: blur(12px);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 1rem;
         }
         .glass-card {
-            background: var(--glass);
-            -webkit-backdrop-filter: blur(12px);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 1.5rem;
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -52,16 +50,9 @@
             transform: translateY(-5px);
             box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.9);
         }
-        .glow-text {
-            text-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
-        }
-        .pulse {
-            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
+        .glow-text { text-shadow: 0 0 15px rgba(0, 242, 254, 0.5); }
+        .pulse { animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
         .progress-bar {
             height: 4px;
             background: rgba(255, 255, 255, 0.1);
@@ -74,144 +65,183 @@
             width: 0%;
             transition: width 1s ease-in-out;
         }
-        /* Refactored dynamic widths for linting compliance */
+        /* Dynamic widths */
+        .w-15-pct { width: 15%; }
         .w-24-pct { width: 24%; }
-        .w-52-pct { width: 52%; }
-        .w-74-pct { width: 74.2%; }
+        .w-30-pct { width: 30%; }
+        .w-60-pct { width: 60%; }
+        .w-85-pct { width: 85%; }
         .w-88-pct { width: 88%; }
-        .w-42-pct { width: 42%; }
+        .w-90-pct { width: 90%; }
+        .w-100-pct { width: 100%; }
+        /* Blink annotation for critical items */
+        .blink { animation: blink 1s infinite; }
+        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
     </style>
 </head>
 <body class="p-8 font-sans">
     <header class="flex justify-between items-center mb-12">
         <div>
-            <h1 class="text-4xl font-extrabold tracking-tight glow-text bg-clip-text text-transparent bg-linear-to-r from-secondary to-accent">
+            <h1 class="text-4xl font-extrabold tracking-tight glow-text bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent">
                 NEXUS COMMAND
             </h1>
-            <p class="text-sm text-gray-400 font-mono mt-2">AILCC_PRIME // MODE_5_DIRECTIVE</p>
+            <p class="text-sm text-gray-400 font-mono mt-2">AI_MASTERMIND_ALLIANCE // LOCKSTEP_PROTOCOL_V1</p>
         </div>
         <div class="flex items-center space-x-4">
-            <div id="status-dot" class="w-3 h-3 bg-green-500 rounded-full pulse"></div>
-            <span class="font-mono text-sm">SYSTEM_READY</span>
+            <div id="status-dot" class="w-3 h-3 bg-success rounded-full pulse"></div>
+            <span class="font-mono text-sm">SYSTEM_OPTIMAL</span>
             <span id="clock" class="text-xl font-bold ml-4">--:--:--</span>
         </div>
     </header>
 
     <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- System Health Card -->
+        
+        <!-- Shared Brain Bridge (New Module) -->
+        <section class="glass-card p-6 border-l-4 border-warning col-span-1 lg:col-span-3">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                <h2 class="text-xs uppercase tracking-widest text-warning font-bold">⚠️ AI ALLIANCE BRIDGE (CLAUDE STATUS: OFFLINE)</h2>
+                <span class="text-[10px] font-mono bg-white/10 px-2 py-1 rounded text-gray-300 mt-2 md:mt-0">SHARED MEMORY: ACTIVE</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono text-xs">
+                 <div class="p-3 bg-white/5 rounded-lg border border-white/5">
+                    <p class="text-gray-500 mb-1">STRATEGY LAYER</p>
+                    <p class="text-white font-bold">~/AI_Mastermind_Alliance/Context</p>
+                    <div class="flex items-center mt-2 text-warning">
+                        <span class="w-2 h-2 bg-warning rounded-full mr-2 blink"></span>
+                        WAITING FOR EXECUTIVE
+                    </div>
+                 </div>
+                 <div class="p-3 bg-white/5 rounded-lg border border-white/5">
+                    <p class="text-gray-500 mb-1">BUILD LAYER (ANTIGRAVITY)</p>
+                    <p class="text-white font-bold">~/AI_Mastermind_Alliance/Builds</p>
+                    <div class="flex items-center mt-2 text-success">
+                        <span class="w-2 h-2 bg-success rounded-full mr-2"></span>
+                        READY FOR INGESTION
+                    </div>
+                 </div>
+                 <div class="p-3 bg-white/5 rounded-lg border border-white/5">
+                    <p class="text-gray-500 mb-1">LOCKSTEP PROTOCOL</p>
+                    <p class="text-white font-bold">MANUAL_OVERRIDE_ACTIVE</p>
+                    <div class="h-1 bg-gray-700 rounded-full mt-2 overflow-hidden">
+                        <div class="h-full bg-warning w-100"></div>
+                    </div>
+                 </div>
+            </div>
+        </section>
+
+        <!-- System Vitality -->
         <section class="glass-card p-6">
             <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">System Vitality</h2>
             <div class="space-y-4">
                 <div>
                     <div class="flex justify-between text-sm mb-1">
-                        <span>CPU Load</span>
-                        <span class="font-mono">24%</span>
+                        <span>Load Average (1m)</span>
+                        <span class="font-mono text-green-400">4.44 (Safe)</span>
                     </div>
-                    <div class="progress-bar"><div class="progress-fill w-24-pct"></div></div>
+                    <div class="progress-bar"><div class="progress-fill w-30-pct"></div></div>
                 </div>
                 <div>
                     <div class="flex justify-between text-sm mb-1">
-                        <span>Memory</span>
-                        <span class="font-mono">8.4GB / 16GB</span>
+                        <span>Disk Free (Boot)</span>
+                        <span class="font-mono">14GB / 113GB</span>
                     </div>
-                    <div class="progress-bar"><div class="progress-fill w-52-pct"></div></div>
+                    <!-- 14GB is ~12% free, warning zone -->
+                    <div class="progress-bar"><div class="progress-fill bg-warning w-88-pct"></div></div>
                 </div>
                 <div class="flex items-center justify-between text-sm pt-2">
-                    <span>Sync Heartbeat</span>
-                    <span class="text-accent underline font-mono">300ms</span>
+                    <span>Watchdog Service</span>
+                    <span class="text-success font-bold font-mono">REMOTED_ACTIVE</span>
                 </div>
             </div>
         </section>
 
-        <!-- Agent Status Card -->
+        <!-- Agent Status -->
         <section class="glass-card p-6 col-span-1 lg:col-span-2">
             <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Agent Swarm Registry</h2>
             <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
-                <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
-                    <p class="text-[10px] text-gray-500 font-mono">ARBITER</p>
-                    <p class="font-bold text-secondary">Valentine</p>
-                    <span class="text-[10px] text-green-400 mt-1 block">ACTIVE</span>
+                <!-- Claude -->
+                <div class="p-4 bg-white/5 rounded-xl border border-warning/30 text-center opacity-70">
+                    <p class="text-[10px] text-gray-500 font-mono">EXECUTIVE</p>
+                    <p class="font-bold text-gray-300">Claude Desktop</p>
+                    <span class="text-[10px] text-warning mt-1 block">OFFLINE (RATE_LIMIT)</span>
                 </div>
-                <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
-                    <p class="text-[10px] text-gray-500 font-mono">WEB_SCOUT</p>
+                <!-- Comet -->
+                <div class="p-4 bg-white/5 rounded-xl border border-accent/30 text-center">
+                    <p class="text-[10px] text-gray-500 font-mono">SCOUT / HEALER</p>
                     <p class="font-bold text-accent">Comet</p>
-                    <span class="text-[10px] text-green-400 mt-1 block">SYNCING</span>
+                    <span class="text-[10px] text-accent mt-1 block blink">RESTORING (60%)</span>
                 </div>
-                <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
-                    <p class="text-[10px] text-gray-500 font-mono">KERNEL</p>
-                    <p class="font-bold text-purple-400">Antigravity</p>
+                <!-- Antigravity -->
+                <div class="p-4 bg-white/5 rounded-xl border border-success/30 text-center">
+                    <p class="text-[10px] text-gray-500 font-mono">BUILDER</p>
+                    <p class="font-bold text-success">Antigravity</p>
                     <div class="h-2 bg-slate-700 rounded-full overflow-hidden mt-1">
-                        <div class="h-full bg-blue-500 w-74-pct"></div>
+                        <div class="h-full bg-success w-90-pct animate-pulse"></div>
                     </div>
                 </div>
-                <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-center">
-                    <p class="text-[10px] text-gray-500 font-mono">STRATEGIST</p>
-                    <p class="font-bold text-orange-400">The Judge</p>
-                    <span class="text-[10px] text-yellow-400 mt-1 block">MONITORING</span>
+                <!-- Gemini Web -->
+                <div class="p-4 bg-white/5 rounded-xl border border-blue-400/30 text-center">
+                    <p class="text-[10px] text-gray-500 font-mono">CONSULTANT</p>
+                    <p class="font-bold text-blue-400">Gemini Web</p>
+                    <span class="text-[10px] text-gray-400 mt-1 block">STANDBY</span>
                 </div>
             </div>
         </section>
 
-        <!-- Task Routing Feed -->
-        <section class="glass-card p-6 col-span-1 md:col-span-1">
-            <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Real-Time Task Routing</h2>
-            <div id="task-feed" class="space-y-3 h-48 overflow-y-auto pr-2 custom-scrollbar">
-                <div class="p-3 bg-white/5 rounded-lg border-l-2 border-secondary text-xs">
-                    <p class="text-gray-400 mb-1">08:32:15 - [Valentine]</p>
-                    <p><span class="text-secondary font-bold">ROUTE:</span> iPhone prompt -> Research (Perplexity)</p>
-                </div>
-                <div class="p-3 bg-white/5 rounded-lg border-l-2 border-accent text-xs">
-                    <p class="text-gray-400 mb-1">08:31:40 - [Comet]</p>
-                    <p><span class="text-accent font-bold">SIGNAL:</span> MS Forms update detected (Academic Appeal)</p>
-                </div>
-                <div class="p-3 bg-white/5 rounded-lg border-l-2 border-purple-400 text-xs">
-                    <p class="text-gray-400 mb-1">08:29:10 - [System]</p>
-                    <p><span class="text-purple-400 font-bold">SYNC:</span> Antigravity -> iCloud (Knowledge Base)</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Mission Progress Card -->
-        <section class="glass-card p-6 col-span-1 md:col-span-2 lg:col-span-2">
-            <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Scholar Convergence 2027</h2>
-            <div class="flex items-center space-x-6">
-                <div class="flex-1">
-                    <p class="text-sm text-gray-400 mb-2">Phase 1: Integration Foundation</p>
-                    <div class="progress-bar mb-4"><div class="progress-fill w-85-pct"></div></div>
-                    <div class="flex justify-between text-xs font-mono">
-                        <span class="text-secondary">EST. COMPLETE: 2025-12-30</span>
-                        <span class="text-gray-500">85% COMPLETE</span>
-                    </div>
-                </div>
-                <div class="w-24 h-24 rounded-full border-4 border-accent border-t-transparent animate-spin ml-4"></div>
-            </div>
-        </section>
-        <!-- Hippocampus Storage Card -->
-        <section class="glass-card p-6">
-            <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Hippocampus Storage</h2>
+        <!-- Active Mission: Manual Sync -->
+        <section class="glass-card p-6 col-span-1 md:col-span-1 border-l-4 border-danger">
+            <h2 class="text-xs uppercase tracking-widest text-danger font-bold mb-4">CRITICAL ACTION REQUIRED</h2>
             <div class="space-y-4">
-                <div class="flex items-center justify-between text-sm">
-                    <span>XDrive Alpha</span>
-                    <span class="text-green-400 font-mono">MOUNTED</span>
-                </div>
-                <div class="flex items-center justify-between text-sm">
-                    <span>XDrive Beta</span>
-                    <span class="text-green-400 font-mono">MOUNTED</span>
-                </div>
-                <div class="pt-2 border-t border-white/5">
-                    <p class="text-[10px] text-gray-500 mb-2">ARCHIVE MIGRATION STATUS</p>
-                    <div class="flex justify-between text-xs mb-1">
-                        <span>iCloud -> Alpha</span>
-                        <span class="text-accent animate-pulse">EXECUTING...</span>
+                 <div class="p-4 bg-red-500/10 rounded-lg">
+                    <p class="text-sm font-bold text-danger mb-2">GOOGLE DRIVE SYNC</p>
+                    <p class="text-xs text-gray-400 mb-3">Sync configuration database scheme mismatch detected. Manual intervention required to prevent corruption.</p>
+                    <button class="w-full py-2 bg-danger text-white font-bold text-xs rounded hover:bg-red-600 transition" onclick="alert('Please execute the 3-click manual sync in Google Drive preferences now.')">CONFIRM SYNC (CLICK ME)</button>
+                 </div>
+                 <div class="text-xs font-mono text-gray-500 text-center mt-2">
+                    TARGET: <span class="text-white">/Volumes/XDriveAlpha/MASTER_ARCHIVE_2025</span> (185GB)
+                 </div>
+            </div>
+        </section>
+
+        <!-- Storage Metrics -->
+        <section class="glass-card p-6 col-span-1 md:col-span-2 lg:col-span-2">
+            <h2 class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-4">Hippocampus Storage Grid</h2>
+            <div class="flex items-center space-x-6">
+                <div class="flex-1 space-y-4">
+                    <!-- XDriveAlpha -->
+                    <div>
+                         <div class="flex justify-between text-xs font-mono mb-1">
+                            <span class="text-white">XDriveAlpha (Root)</span>
+                            <span class="text-gray-400">260GB Used / 2TB</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill w-15-pct bg-blue-500"></div></div>
                     </div>
-                    <div class="progress-bar"><div class="progress-fill w-42-pct"></div></div>
+                    <!-- Master Archive -->
+                    <div>
+                         <div class="flex justify-between text-xs font-mono mb-1">
+                            <span class="text-accent">MASTER_ARCHIVE_2025</span>
+                            <span class="text-accent">185GB (Ready for Cloud)</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill bg-accent w-100-pct"></div></div>
+                    </div>
+                </div>
+                <!-- Comet Restoration Progress -->
+                <div class="flex flex-col items-center">
+                    <div class="relative w-24 h-24">
+                         <svg class="w-full h-full transform -rotate-90">
+                            <circle cx="48" cy="48" r="40" stroke="rgba(255,255,255,0.1)" stroke-width="8" fill="none"></circle>
+                            <circle cx="48" cy="48" r="40" stroke="#00f2fe" stroke-width="8" fill="none" stroke-dasharray="251.2" stroke-dashoffset="100.48" class="transition-all duration-1000"></circle>
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center font-bold text-lg text-accent">60%</div>
+                    </div>
+                    <span class="text-[10px] font-mono text-gray-400 mt-2">COMET RESTORE</span>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="mt-12 text-center text-gray-600 font-mono text-[10px] tracking-tighter">
-        AILCC_PRIME // SYNC_CODE: CREEK BONE ALLEY SLIM // ENCRYPTION_ACTIVE
+        AILCC_PRIME // SHARED_BRAIN_ID: 103|1ZDflY... // ENCRYPTION_ACTIVE
     </footer>
 
     <script>
@@ -224,7 +254,7 @@
         setInterval(updateClock, 1000);
         updateClock();
 
-        // Simulate some interactivity
+        // Animate bars on load
         setTimeout(() => {
             const fills = document.querySelectorAll('.progress-fill');
             fills.forEach(fill => {
