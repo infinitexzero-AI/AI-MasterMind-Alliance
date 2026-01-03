@@ -928,3 +928,89 @@ websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
 2025-12-29 16:26:28,580 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:26:28.579723'}
 2025-12-29 16:31:28,589 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:31:28.589119'}
 2025-12-29 16:31:28,589 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2025-12-29T16:31:28.589119'}
+2026-01-03 02:35:16,709 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2026-01-03 02:35:16,765 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2026-01-03 02:35:18,026 [INFO] server listening on 0.0.0.0:3001
+2026-01-03 02:35:18,628 [INFO] connection open
+2026-01-03 02:35:18,634 [INFO] 🔗 Client Connected: ('127.0.0.1', 62500)
+2026-01-03 02:35:18,714 [INFO] connection open
+2026-01-03 02:35:18,714 [INFO] 🔗 Client Connected: ('127.0.0.1', 62502)
+2026-01-03 02:36:39,836 [ERROR] opening handshake failed
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/websockets/http11.py", line 138, in parse
+    request_line = yield from parse_line(read_line)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/websockets/http11.py", line 309, in parse_line
+    line = yield from read_line(MAX_LINE_LENGTH)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/websockets/streams.py", line 46, in read_line
+    raise EOFError(f"stream ends after {p} bytes, before end of line")
+EOFError: stream ends after 0 bytes, before end of line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/websockets/server.py", line 545, in parse
+    request = yield from Request.parse(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.reader.read_line,
+        ^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/websockets/http11.py", line 140, in parse
+    raise EOFError("connection closed while reading HTTP request line") from exc
+EOFError: connection closed while reading HTTP request line
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/websockets/asyncio/server.py", line 356, in conn_handler
+    await connection.handshake(
+    ...<3 lines>...
+    )
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/websockets/asyncio/server.py", line 207, in handshake
+    raise self.protocol.handshake_exc
+websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
+2026-01-03 02:36:39,965 [INFO] connection open
+2026-01-03 02:36:39,966 [INFO] 🔗 Client Connected: ('127.0.0.1', 62568)
+2026-01-03 02:36:40,101 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T02:36:40.094562'}
+2026-01-03 02:37:15,083 [INFO] connection open
+2026-01-03 02:37:16,383 [INFO] 🔗 Client Connected: ('127.0.0.1', 62599)
+2026-01-03 02:40:38,368 [INFO] connection open
+2026-01-03 02:40:38,427 [INFO] 🔗 Client Connected: ('127.0.0.1', 62744)
+2026-01-03 02:41:40,506 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T02:41:40.148640'}
+2026-01-03 02:46:40,817 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T02:46:40.412190'}
+2026-01-03 02:50:16,993 [INFO] 🚀 Starting Neural Relay v2.0 on 0.0.0.0:3001
+2026-01-03 02:50:17,441 [INFO] server listening on 0.0.0.0:3001
+2026-01-03 02:50:18,375 [INFO] connection open
+2026-01-03 02:50:18,378 [INFO] 🔗 Client Connected: ('127.0.0.1', 63280)
+2026-01-03 02:50:18,984 [INFO] connection open
+2026-01-03 02:50:19,333 [INFO] 🔗 Client Connected: ('127.0.0.1', 63282)
+2026-01-03 02:50:19,954 [INFO] connection open
+2026-01-03 02:50:19,955 [INFO] 🔗 Client Connected: ('127.0.0.1', 63284)
+2026-01-03 02:50:20,632 [INFO] connection open
+2026-01-03 02:50:20,633 [INFO] 🔗 Client Connected: ('127.0.0.1', 63286)
+2026-01-03 02:51:58,803 [INFO] connection open
+2026-01-03 02:51:58,867 [INFO] 🔗 Client Connected: ('127.0.0.1', 63353)
+2026-01-03 02:51:59,057 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T02:51:59.055572'}
+2026-01-03 02:52:46,135 [INFO] connection open
+2026-01-03 02:52:46,184 [INFO] 🔗 Client Connected: ('127.0.0.1', 63382)
+2026-01-03 02:52:49,025 [INFO] ❌ Client Disconnected
+2026-01-03 02:52:49,060 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 02:54:12,910 [INFO] connection open
+2026-01-03 02:54:13,046 [INFO] 🔗 Client Connected: ('127.0.0.1', 63458)
+2026-01-03 02:57:19,316 [INFO] connection open
+2026-01-03 02:57:19,400 [INFO] 🔗 Client Connected: ('127.0.0.1', 63629)
+2026-01-03 02:57:19,650 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T02:57:19.622398'}
+2026-01-03 02:58:09,526 [INFO] ❌ Client Disconnected
+2026-01-03 02:58:09,611 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 03:02:50,598 [INFO] connection open
+2026-01-03 03:02:50,697 [INFO] 🔗 Client Connected: ('127.0.0.1', 63951)
+2026-01-03 03:02:51,588 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T03:02:51.525096'}
+2026-01-03 03:03:40,884 [INFO] ❌ Client Disconnected
+2026-01-03 03:03:41,169 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 03:08:19,208 [INFO] connection open
+2026-01-03 03:08:19,218 [INFO] 🔗 Client Connected: ('127.0.0.1', 64164)
+2026-01-03 03:08:19,736 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T03:08:19.719207'}
+2026-01-03 03:09:09,557 [INFO] ❌ Client Disconnected
+2026-01-03 03:09:09,839 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received

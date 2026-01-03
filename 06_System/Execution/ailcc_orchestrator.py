@@ -25,7 +25,7 @@ SCRIPTS = [
     ("SCRIPT", "route_task.py")
 ]
 SCRIPTS_DIR = f"{ROOT}/scripts"
-DB_PATH = "/Users/infinite27/Antigravity/knowledge.db"
+DB_PATH = "/Users/infinite27/AILCC_PRIME/06_System/State/knowledge-base.db"
 
 def log(message):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
