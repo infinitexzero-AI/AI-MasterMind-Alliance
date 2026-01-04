@@ -2034,3 +2034,5 @@ websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
 2026-01-03 21:18:37,330 [INFO] connection open
 2026-01-03 21:18:37,332 [INFO] 🔗 Client Connected: ('127.0.0.1', 49952)
 2026-01-03 21:18:37,446 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T21:18:37.443571'}
+2026-01-03 21:19:27,398 [INFO] ❌ Client Disconnected
+2026-01-03 21:19:27,438 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
