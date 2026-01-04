@@ -1054,3 +1054,196 @@
 2026-01-03 21:18:37,446 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T21:18:37.443571'}
 2026-01-03 21:19:27,398 [INFO] ❌ Client Disconnected
 2026-01-03 21:19:27,438 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 21:23:50,345 [INFO] connection open
+2026-01-03 21:23:50,407 [INFO] 🔗 Client Connected: ('127.0.0.1', 50077)
+2026-01-03 21:23:50,481 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T21:23:50.473877'}
+2026-01-03 21:24:40,611 [INFO] ❌ Client Disconnected
+2026-01-03 21:24:40,632 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 21:29:04,401 [INFO] connection open
+2026-01-03 21:29:04,418 [INFO] 🔗 Client Connected: ('127.0.0.1', 50248)
+2026-01-03 21:29:04,625 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T21:29:04.620440'}
+2026-01-03 21:29:54,671 [INFO] ❌ Client Disconnected
+2026-01-03 21:29:54,789 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 21:30:27,610 [INFO] connection open
+2026-01-03 21:30:27,792 [INFO] 🔗 Client Connected: ('127.0.0.1', 50328)
+2026-01-03 21:30:28,411 [INFO] connection open
+2026-01-03 21:30:28,427 [INFO] 🔗 Client Connected: ('127.0.0.1', 50330)
+2026-01-03 21:34:30,420 [INFO] connection open
+2026-01-03 21:34:30,629 [INFO] 🔗 Client Connected: ('127.0.0.1', 50574)
+2026-01-03 21:34:32,124 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T21:34:32.109743'}
+2026-01-03 21:35:20,856 [INFO] ❌ Client Disconnected
+2026-01-03 21:35:21,007 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 21:36:11,252 [INFO] connection open
+2026-01-03 21:36:11,333 [INFO] 🔗 Client Connected: ('127.0.0.1', 50700)
+2026-01-03 21:37:32,744 [INFO] connection open
+2026-01-03 21:37:32,758 [INFO] 🔗 Client Connected: ('127.0.0.1', 50776)
+2026-01-03 21:39:48,654 [INFO] connection open
+2026-01-03 21:39:48,667 [INFO] 🔗 Client Connected: ('127.0.0.1', 50924)
+2026-01-03 21:39:48,885 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T21:39:48.856021'}
+2026-01-03 21:40:38,725 [INFO] ❌ Client Disconnected
+2026-01-03 21:40:38,757 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 21:42:00,774 [INFO] connection open
+2026-01-03 21:42:00,871 [INFO] 🔗 Client Connected: ('127.0.0.1', 51038)
+2026-01-03 21:45:07,647 [INFO] connection open
+2026-01-03 21:45:07,695 [INFO] 🔗 Client Connected: ('127.0.0.1', 51206)
+2026-01-03 21:45:07,787 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T21:45:07.778894'}
+2026-01-03 21:45:52,899 [INFO] connection open
+2026-01-03 21:45:52,947 [INFO] 🔗 Client Connected: ('127.0.0.1', 51248)
+2026-01-03 21:45:57,801 [INFO] ❌ Client Disconnected
+2026-01-03 21:45:57,806 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 21:50:19,842 [INFO] connection open
+2026-01-03 21:50:19,846 [INFO] 🔗 Client Connected: ('127.0.0.1', 51397)
+2026-01-03 21:50:19,920 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T21:50:19.913772'}
+2026-01-03 21:51:09,933 [INFO] ❌ Client Disconnected
+2026-01-03 21:51:09,955 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 21:55:33,255 [INFO] connection open
+2026-01-03 21:55:33,293 [INFO] 🔗 Client Connected: ('127.0.0.1', 51547)
+2026-01-03 21:55:33,728 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T21:55:33.718000'}
+2026-01-03 21:56:23,463 [INFO] ❌ Client Disconnected
+2026-01-03 21:56:23,506 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:00:47,375 [INFO] connection open
+2026-01-03 22:00:47,388 [INFO] 🔗 Client Connected: ('127.0.0.1', 51696)
+2026-01-03 22:00:47,555 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:00:47.553473'}
+2026-01-03 22:01:37,441 [INFO] ❌ Client Disconnected
+2026-01-03 22:01:37,451 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:06:02,680 [INFO] connection open
+2026-01-03 22:06:02,713 [INFO] 🔗 Client Connected: ('127.0.0.1', 51845)
+2026-01-03 22:06:02,844 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:06:02.827160'}
+2026-01-03 22:06:52,773 [INFO] ❌ Client Disconnected
+2026-01-03 22:06:52,816 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:11:17,567 [INFO] connection open
+2026-01-03 22:11:17,606 [INFO] 🔗 Client Connected: ('127.0.0.1', 51988)
+2026-01-03 22:11:17,721 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:11:17.694975'}
+2026-01-03 22:12:07,660 [INFO] ❌ Client Disconnected
+2026-01-03 22:12:07,675 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:16:30,264 [INFO] connection open
+2026-01-03 22:16:30,273 [INFO] 🔗 Client Connected: ('127.0.0.1', 52106)
+2026-01-03 22:16:30,339 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:16:30.334250'}
+2026-01-03 22:17:20,326 [INFO] ❌ Client Disconnected
+2026-01-03 22:17:20,354 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:21:42,390 [INFO] connection open
+2026-01-03 22:21:42,399 [INFO] 🔗 Client Connected: ('127.0.0.1', 52237)
+2026-01-03 22:21:42,432 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:21:42.426555'}
+2026-01-03 22:22:32,427 [INFO] ❌ Client Disconnected
+2026-01-03 22:22:32,441 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:26:54,350 [INFO] connection open
+2026-01-03 22:26:54,358 [INFO] 🔗 Client Connected: ('127.0.0.1', 52353)
+2026-01-03 22:26:54,394 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:26:54.390613'}
+2026-01-03 22:27:44,381 [INFO] ❌ Client Disconnected
+2026-01-03 22:27:45,281 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:32:06,640 [INFO] connection open
+2026-01-03 22:32:06,648 [INFO] 🔗 Client Connected: ('127.0.0.1', 52462)
+2026-01-03 22:32:06,689 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:32:06.684669'}
+2026-01-03 22:32:56,686 [INFO] ❌ Client Disconnected
+2026-01-03 22:32:56,696 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:37:18,415 [INFO] connection open
+2026-01-03 22:37:18,424 [INFO] 🔗 Client Connected: ('127.0.0.1', 52583)
+2026-01-03 22:37:18,464 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:37:18.461398'}
+2026-01-03 22:38:08,492 [INFO] ❌ Client Disconnected
+2026-01-03 22:38:08,577 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:42:30,284 [INFO] connection open
+2026-01-03 22:42:30,296 [INFO] 🔗 Client Connected: ('127.0.0.1', 52706)
+2026-01-03 22:42:30,357 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:42:30.352623'}
+2026-01-03 22:43:20,362 [INFO] ❌ Client Disconnected
+2026-01-03 22:43:20,462 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:47:42,226 [INFO] connection open
+2026-01-03 22:47:42,231 [INFO] 🔗 Client Connected: ('127.0.0.1', 52832)
+2026-01-03 22:47:42,286 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:47:42.284365'}
+2026-01-03 22:48:32,277 [INFO] ❌ Client Disconnected
+2026-01-03 22:48:32,296 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:52:53,957 [INFO] connection open
+2026-01-03 22:52:53,969 [INFO] 🔗 Client Connected: ('127.0.0.1', 52957)
+2026-01-03 22:52:54,012 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:52:54.008131'}
+2026-01-03 22:53:44,042 [INFO] ❌ Client Disconnected
+2026-01-03 22:53:44,080 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 22:58:06,753 [INFO] connection open
+2026-01-03 22:58:06,791 [INFO] 🔗 Client Connected: ('127.0.0.1', 53075)
+2026-01-03 22:58:06,918 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T22:58:06.912661'}
+2026-01-03 22:58:56,891 [INFO] ❌ Client Disconnected
+2026-01-03 22:58:56,899 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:03:18,716 [INFO] connection open
+2026-01-03 23:03:18,724 [INFO] 🔗 Client Connected: ('127.0.0.1', 53190)
+2026-01-03 23:03:18,759 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:03:18.758659'}
+2026-01-03 23:04:08,758 [INFO] ❌ Client Disconnected
+2026-01-03 23:04:08,769 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:08:31,369 [INFO] connection open
+2026-01-03 23:08:31,380 [INFO] 🔗 Client Connected: ('127.0.0.1', 53295)
+2026-01-03 23:08:31,485 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:08:31.456182'}
+2026-01-03 23:09:21,407 [INFO] ❌ Client Disconnected
+2026-01-03 23:09:21,417 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:13:42,962 [INFO] connection open
+2026-01-03 23:13:42,976 [INFO] 🔗 Client Connected: ('127.0.0.1', 53409)
+2026-01-03 23:13:43,013 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:13:43.007791'}
+2026-01-03 23:14:33,018 [INFO] ❌ Client Disconnected
+2026-01-03 23:14:33,029 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:18:54,760 [INFO] connection open
+2026-01-03 23:18:54,772 [INFO] 🔗 Client Connected: ('127.0.0.1', 53518)
+2026-01-03 23:18:54,814 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:18:54.811933'}
+2026-01-03 23:19:44,790 [INFO] ❌ Client Disconnected
+2026-01-03 23:19:44,798 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:24:08,033 [INFO] connection open
+2026-01-03 23:24:08,042 [INFO] 🔗 Client Connected: ('127.0.0.1', 53661)
+2026-01-03 23:24:08,109 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:24:08.104936'}
+2026-01-03 23:24:58,079 [INFO] ❌ Client Disconnected
+2026-01-03 23:24:58,091 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:29:20,878 [INFO] connection open
+2026-01-03 23:29:20,905 [INFO] 🔗 Client Connected: ('127.0.0.1', 53784)
+2026-01-03 23:29:20,945 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:29:20.944343'}
+2026-01-03 23:30:11,062 [INFO] ❌ Client Disconnected
+2026-01-03 23:30:11,072 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:34:32,754 [INFO] connection open
+2026-01-03 23:34:32,773 [INFO] 🔗 Client Connected: ('127.0.0.1', 53897)
+2026-01-03 23:34:32,828 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:34:32.822808'}
+2026-01-03 23:35:23,061 [INFO] ❌ Client Disconnected
+2026-01-03 23:35:23,113 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:39:44,601 [INFO] connection open
+2026-01-03 23:39:44,622 [INFO] 🔗 Client Connected: ('127.0.0.1', 54008)
+2026-01-03 23:39:44,699 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:39:44.693889'}
+2026-01-03 23:40:34,671 [INFO] ❌ Client Disconnected
+2026-01-03 23:40:34,689 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:44:57,190 [INFO] connection open
+2026-01-03 23:44:57,216 [INFO] 🔗 Client Connected: ('127.0.0.1', 54117)
+2026-01-03 23:44:57,289 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:44:57.277104'}
+2026-01-03 23:45:47,246 [INFO] ❌ Client Disconnected
+2026-01-03 23:45:47,256 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:50:09,012 [INFO] connection open
+2026-01-03 23:50:09,022 [INFO] 🔗 Client Connected: ('127.0.0.1', 54227)
+2026-01-03 23:50:09,054 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:50:09.052043'}
+2026-01-03 23:50:59,074 [INFO] ❌ Client Disconnected
+2026-01-03 23:50:59,104 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-03 23:55:21,292 [INFO] connection open
+2026-01-03 23:55:21,299 [INFO] 🔗 Client Connected: ('127.0.0.1', 54355)
+2026-01-03 23:55:21,332 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-03T23:55:21.329959'}
+2026-01-03 23:56:11,601 [INFO] ❌ Client Disconnected
+2026-01-03 23:56:11,624 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-04 00:00:44,387 [INFO] connection open
+2026-01-04 00:00:44,422 [INFO] 🔗 Client Connected: ('127.0.0.1', 54504)
+2026-01-04 00:00:45,285 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-04T00:00:45.249553'}
+2026-01-04 00:01:34,476 [INFO] ❌ Client Disconnected
+2026-01-04 00:01:34,554 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-04 00:03:37,737 [ERROR] Broadcast Error: received 1001 (going away); then sent 1001 (going away)
+2026-01-04 00:06:01,128 [INFO] connection open
+2026-01-04 00:06:01,979 [INFO] 🔗 Client Connected: ('127.0.0.1', 54759)
+2026-01-04 00:06:02,649 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-04T00:06:02.456981'}
+2026-01-04 00:06:52,312 [INFO] ❌ Client Disconnected
+2026-01-04 00:06:52,338 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-04 00:11:19,714 [INFO] connection open
+2026-01-04 00:11:19,749 [INFO] 🔗 Client Connected: ('127.0.0.1', 55051)
+2026-01-04 00:11:19,940 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-04T00:11:19.927808'}
+2026-01-04 00:12:09,789 [INFO] ❌ Client Disconnected
+2026-01-04 00:12:09,817 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-04 00:16:33,081 [INFO] connection open
+2026-01-04 00:16:33,089 [INFO] 🔗 Client Connected: ('127.0.0.1', 55358)
+2026-01-04 00:16:33,235 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-04T00:16:33.210147'}
+2026-01-04 00:17:23,141 [INFO] ❌ Client Disconnected
+2026-01-04 00:17:23,174 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-04 00:21:53,644 [INFO] connection open
+2026-01-04 00:21:53,689 [INFO] 🔗 Client Connected: ('127.0.0.1', 55720)
+2026-01-04 00:21:53,827 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-04T00:21:53.797518'}
+2026-01-04 00:22:43,789 [INFO] ❌ Client Disconnected
+2026-01-04 00:22:43,850 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-04 00:27:10,559 [INFO] connection open
+2026-01-04 00:27:10,594 [INFO] 🔗 Client Connected: ('127.0.0.1', 56025)
+2026-01-04 00:27:10,712 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-04T00:27:10.706782'}
+2026-01-04 00:28:00,807 [INFO] ❌ Client Disconnected
+2026-01-04 00:28:01,235 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
