@@ -1,0 +1,9 @@
+[submodule "01_Areas/Codebases/ailcc"]
+	path = 01_Areas/Codebases/ailcc
+	url = https://github.com/infinitexzero-AI/ailcc-framework.git
+[submodule "01_Areas/Codebases/ailcc-framework"]
+	path = 01_Areas/Codebases/ailcc-framework
+	url = https://github.com/infinitexzero-AI/ailcc-framework.git
+[submodule "AI-MasterMind-Alliance"]
+	path = AI-MasterMind-Alliance
+	url = https://github.com/infinitexzero-AI/AI-MasterMind-Alliance.git
