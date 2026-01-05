@@ -22,7 +22,9 @@ SCRIPTS = [
     ("EXEC", "web_daemon.py"),
     ("EXEC", "nexus_server.py"),
     ("EXEC", "sync_daemon.py"),
-    ("SCRIPT", "route_task.py")
+    ("SCRIPT", "route_task.py"),
+    ("SCRIPT", "log_scout.py"),
+    ("SCRIPT", "maintenance_scheduler.sh")
 ]
 SCRIPTS_DIR = f"{ROOT}/scripts"
 DB_PATH = "/Users/infinite27/AILCC_PRIME/06_System/State/knowledge-base.db"
@@ -75,12 +77,16 @@ def launch_core():
             
         log(f"⚡ Launching {script} in background...")
         try:
-            # Use Popen to launch in background without waiting
-            log_path = f"{ROOT}/06_System/Logs/{script.replace('.py', '.log')}"
+            # Polymorphic launcher: Handles .py via python3 and .sh via bash
+            cmd = [PYTHON, path]
+            if script.endswith(".sh"):
+                cmd = ["bash", path]
+                
+            log_path = f"{ROOT}/06_System/Logs/{script.replace('.py', '').replace('.sh', '')}.log"
             with open(log_path, "a") as out:
-                subprocess.Popen([PYTHON, path], stdout=out, stderr=subprocess.STDOUT)
+                subprocess.Popen(cmd, stdout=out, stderr=subprocess.STDOUT)
             log(f"✅ {script} launched.")
-            time.sleep(1) # Staggered startup to prevent load spikes
+            time.sleep(1) 
         except Exception as e:
             log(f"❌ Error launching {script}: {str(e)}")
 

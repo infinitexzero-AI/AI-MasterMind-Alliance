@@ -1,25 +1,28 @@
 {
   "mcpServers": {
     "linear": {
-      "command": "/Users/infinite27/.nvm/versions/node/v24.11.1/bin/node",
+      "command": "npx",
       "args": [
-        "/Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/.bin/mcp-remote",
+        "-y",
+        "mcp-remote",
         "https://mcp.linear.app/sse"
       ]
     },
     "github": {
-      "command": "/Users/infinite27/.nvm/versions/node/v24.11.1/bin/node",
+      "command": "npx",
       "args": [
-        "/Users/infinite27/.npm/_npx/3dfbf5a9eea4a1b3/node_modules/@modelcontextprotocol/server-github/dist/index.js"
+        "-y",
+        "@modelcontextprotocol/server-github"
       ],
       "env": {
         "GITHUB_PERSONAL_ACCESS_TOKEN": "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"
       }
     },
     "cloudrun": {
-      "command": "/Users/infinite27/.nvm/versions/node/v24.11.1/bin/node",
+      "command": "npx",
       "args": [
-        "/Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/.bin/cloud-run-mcp"
+        "-y",
+        "@google-cloud/cloud-run-mcp"
       ]
     },
     "git": {

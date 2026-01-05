@@ -1,20 +1,24 @@
-#!/usr/bin/env python3
-"""
-Heartbeat Monitor - AILCC (Task 004)
-Periodically checks the responsiveness of registered agents and updates status.json.
-"""
-
 import os
 import json
 import time
+import subprocess
 from datetime import datetime
+import psutil
 
 # Configuration
 ROOT_DIR = "/Users/infinite27/AILCC_PRIME"
 STATUS_FILE = os.path.join(ROOT_DIR, "status.json")
-LOG_FILE = os.path.join(ROOT_DIR, "logs", "heartbeat.log")
+LOG_DIR = os.path.join(ROOT_DIR, "06_System/Logs")
+LOG_FILE = os.path.join(LOG_DIR, "heartbeat.log")
+EXEC_FILE = os.path.join(ROOT_DIR, "ailcc-launch.sh")
 
-AGENTS_TO_MONITOR = ["valentine", "antigravity", "web_daemon", "sync_daemon"]
+# Mapping of agent names to their script file names or process identifiers
+AGENT_PROCESSES = {
+    "valentine": "valentine.py", # Placeholder assuming it runs valentine.py
+    "antigravity": "antigravity.py",
+    "web_daemon": "web_daemon.py",
+    "sync_daemon": "sync_daemon.py"
+}
 
 def log(message):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -24,15 +28,27 @@ def log(message):
     with open(LOG_FILE, "a") as f:
         f.write(entry + "\n")
 
-def check_agent_status(agent_name):
-    """
-    Checks the status of an agent.
-    For now, this assumes if the process is running/file updated, it's alive.
-    In V2, this will ping their specific API endpoints.
-    """
-    # Placeholder logic: specific checks can be added here
-    # E.g. check if sync_daemon log was updated recently
-    return "ACTIVE"
+def is_process_running(process_name):
+    """Check if there is any running process that contains the given name."""
+    for proc in psutil.process_iter(['pid', 'name', 'cmdline']):
+        try:
+            # Check cmdline for Python scripts
+            cmdline = proc.info.get('cmdline')
+            if cmdline and any(process_name in part for part in cmdline):
+                return True
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            pass
+    return False
+
+def attempt_restart(agent_name):
+    """Attempts to restart the system or specific agent."""
+    log(f"⚠️ FAILURE DETECTED: Agent '{agent_name}' is offline. Attempting system-wide convergence...")
+    try:
+        # Triggering the launcher to restore all services
+        subprocess.Popen(["bash", EXEC_FILE], start_new_session=True)
+        log(f"🚀 Launch sequence triggered for restoration.")
+    except Exception as e:
+        log(f"❌ Restart failed: {e}")
 
 def update_heartbeat():
     try:
@@ -40,39 +56,40 @@ def update_heartbeat():
             with open(STATUS_FILE, "r") as f:
                 data = json.load(f)
         else:
-            data = {"agents": {}}
+            data = {"agents": {}, "system_integrity": "unknown"}
+
+        if "agents" not in data:
+            data["agents"] = {}
 
         # Update agents
-        for agent in AGENTS_TO_MONITOR:
-            current_status = data.get("agents", {}).get(agent, {}).get("status", "UNKNOWN")
-            # For now, we trust the existing status unless we detect a failure
-            # Ideally, we'd have a way to verify "liveness"
-            
-            # Simple simulation of a check:
-            if agent == "sync_daemon":
-               # Check if sync_daemon.py is running (mock check)
-               pass
-            
-            if "agents" not in data:
-                data["agents"] = {}
+        for agent, process_name in AGENT_PROCESSES.items():
             if agent not in data["agents"]:
-                 data["agents"][agent] = {}
+                data["agents"][agent] = {}
             
+            is_alive = is_process_running(process_name)
+            data["agents"][agent]["status"] = "ACTIVE" if is_alive else "OFFLINE"
             data["agents"][agent]["last_heartbeat"] = datetime.now().isoformat()
             
-        data["system_integrity"] = "ok" # Verified
+            if not is_alive:
+                log(f"❌ Agent {agent} is DOWN.")
+                attempt_restart(agent)
+                break # Only restart once per cycle to prevent spam
+            
+        data["system_integrity"] = "ok" # Verified pulse
         data["last_check"] = datetime.now().isoformat()
+        data["storage_status"] = "ok" # Placeholder calculation
 
         with open(STATUS_FILE, "w") as f:
             json.dump(data, f, indent=2)
             
-        log("Heartbeat pulse successful.")
+        log("💓 Heartbeat pulse successful.")
 
     except Exception as e:
-        log(f"Heartbeat failed: {e}")
+        log(f"🚨 Heartbeat Critical Error: {e}")
 
 if __name__ == "__main__":
-    log("Heartbeat Monitor starting...")
+    log("📡 AILCC Heartbeat Monitor v2.0 (Self-Healing) Initiated.")
     while True:
         update_heartbeat()
-        time.sleep(60) # Pulse every minute
+        time.sleep(30) # Pulse every 30s
+

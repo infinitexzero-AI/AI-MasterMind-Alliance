@@ -1,4 +1,1559 @@
 Stopping any existing proxy on port 3006...
 Starting Localized MCP SuperAssistant Proxy on port 3006...
-Proxy launched in background (PID: 21094)
-nohup: /Users/infinite27/.npm/_npx/63cc4b2a7e73c390/node_modules/.bin/mcp-superassistant-proxy: No such file or directory
+Proxy launched in background (PID: 88930)
+[MCPSuperAssistantProxy] Starting session cleanup intervals
+Initializing MCP SuperAssistant proxy...
+Connecting to linear (stdio - inferred)...
+[89014] Using existing client port: 14881
+[89014] Discovering OAuth server configuration...
+[89014] [89014] Connecting to remote server: https://mcp.linear.app/sse
+[89014] Using transport strategy: http-first
+[89014] Received error (status unknown): Error POSTing to endpoint (HTTP 404): Not Found
+[89014] Recursively reconnecting for reason: falling-back-to-alternate-transport
+[89014] [89014] Connecting to remote server: https://mcp.linear.app/sse
+[89014] Using transport strategy: sse-only
+[89014] Connected to remote server using SSEClientTransport
+[89014] Local STDIO server running
+[89014] Proxy established successfully between local STDIO and remote SSEClientTransport
+[89014] Press Ctrl+C to exit
+[89014] [Local→Remote] initialize
+[89014] {
+  "jsonrpc": "2.0",
+  "id": 0,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "tools": {},
+      "resources": {},
+      "prompts": {}
+    },
+    "clientInfo": {
+      "name": "MCP-SuperAssistant-Proxy-Client-linear (via mcp-remote 0.1.36)",
+      "version": "1.0.0"
+    }
+  }
+}
+[89014] [Remote→Local] 0
+[89014] [Local→Remote] notifications/initialized
+[89014] [Local→Remote] tools/list
+[89014] [Local→Remote] resources/list
+[89014] [Local→Remote] prompts/list
+[89014] [Remote→Local] 3
+[89014] [Remote→Local] 2
+[89014] [Remote→Local] 1
+Connected to linear: 25 tools, 0 resources, 0 prompts
+Connecting to github (stdio - inferred)...
+GitHub MCP Server running on stdio
+Connected to github: 26 tools, 0 resources, 0 prompts
+Connecting to cloudrun (stdio - inferred)...
+Checking for Google Cloud Application Default Credentials...
+ERROR: Google Cloud Application Default Credentials are not set up.
+An unexpected error occurred during credential verification.
+
+For more details or alternative setup methods, consider:
+1. If running locally, run: gcloud auth application-default login.
+2. Ensuring the `GOOGLE_APPLICATION_CREDENTIALS` environment variable points to a valid service account key file.
+3. If on a Google Cloud environment (e.g., GCE, Cloud Run), verify the associated service account has necessary permissions.
+
+Original error message from Google Auth Library: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+Error stack: Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (/Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/google-auth-library/build/src/auth/googleauth.js:287:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async GoogleAuth._GoogleAuth_determineClient (/Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/google-auth-library/build/src/auth/googleauth.js:834:32)
+    at async GoogleAuth.getClient (/Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/google-auth-library/build/src/auth/googleauth.js:698:20)
+    at async ensureGCPCredentials (file:///Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/@google-cloud/cloud-run-mcp/lib/cloud-api/auth.js:31:20)
+    at async file:///Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/@google-cloud/cloud-run-mcp/mcp-server.js:123:29
+Using tools optimized for local or stdio mode.
+Cloud Run MCP server stdio transport connected
+Connected to cloudrun: 8 tools, 0 resources, 2 prompts
+Connecting to git (stdio - inferred)...
+Connected to git: 19 tools, 0 resources, 1 prompts
+Successfully initialized mcpsuperassistantproxy with 4 servers
+MCP SuperAssistant Proxy running with backwards compatibility at:
+  - Modern Streamable HTTP: http://localhost:3006/mcp
+  - Legacy SSE: http://localhost:3006/sse
+  - Legacy messages: http://localhost:3006/messages
+
+Clients should connect to http://localhost:3006/mcp for automatic backwards compatibility.
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: other side closed
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: other side closed',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 93577.934546
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 398450.009588
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 703423.54739
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 1008134.851794
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 1313070.748032
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 1617894.025072
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 1922707.865032
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 2227491.825841
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 2532451.405595
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 2837319.121664
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 3143166.843278
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 3448216.13594
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 3753021.213844
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 4057710.812827
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 4367093.62861
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 4672630.195461
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 4977256.664106
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 5282176.631096
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 5587118.497836
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 5891890.215175
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 6196666.438391
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 6501515.851565
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 6806387.851417
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 7111266.860332
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 7416108.321879
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 7720880.952865
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 8025770.909276
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 8330716.059908
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 8635541.280859
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 8940413.054049
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 9245241.204693
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 9549926.539085
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 9854822.900335
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 10161623.252955
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 10466310.687902
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 10771123.028444
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 11076163.596668
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 11384829.973101
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 11689717.886876
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 11996827.378052
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 12301674.012944
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 12606588.805411
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 12911316.14874
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 13216211.224805
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 13521026.699454
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 13825767.319565
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 14130820.958347
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 14435730.92018
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 14740687.14543
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 15045640.803186
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 15350481.042592
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 15655341.995416
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 15960139.90468
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 16265200.012989
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 16569952.130736
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 16874742.278524
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 17179696.024677
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 17484475.342183
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 17790388.65184
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 18097202.280981
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 18419516.08551
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 18724600.868121
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 19029320.696995
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 19334315.721496
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 19639259.640549
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 19945478.551727
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 20253223.930773
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 20560564.956983
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 20865437.000761
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 21170443.538065
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 21475410.811874
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 21780412.824618
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 22085445.627939
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 22390499.656083
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 22695952.311541
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 24198840.285695
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 25491610.317634
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 25796367.007232
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 26101173.213707
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 26406199.58988
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 26711159.366377
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 27016067.296486
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 27320829.522626
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 27625638.979258
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 27930377.152212
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 28235266.944812
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 28540677.148064
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 28845557.024038
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 29150294.979697
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 29455191.335751
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 29759966.632255
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 30064712.47229
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 30369415.980917
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 30674195.098152
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 30979005.730185
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 31283815.386224
+  }
+}
+[89014] Error from remote server: SseError: SSE error: TypeError: terminated: Body Timeout Error
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.scheduleReconnect_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17948:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17798:174
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: undefined,
+  event: {
+    type: 'error',
+    message: 'TypeError: terminated: Body Timeout Error',
+    code: undefined,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 31588689.963951
+  }
+}
+[89014] Error from remote server: SseError: SSE error: Non-200 status code (500)
+    at _eventSource.onerror (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:18080:24)
+    at EventSource.failConnection_fn (file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17934:55)
+    at file:///Users/infinite27/.npm/_npx/705d23756ff7dacc/node_modules/mcp-remote/dist/chunk-F76MHFRJ.js:17776:74
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5) {
+  code: 500,
+  event: {
+    type: 'error',
+    message: 'Non-200 status code (500)',
+    code: 500,
+    defaultPrevented: false,
+    cancelable: false,
+    timeStamp: 31622517.041112
+  }
+}
+
+Received SIGTERM, shutting down MCP SuperAssistant proxy gracefully...
+Starting graceful shutdown...
+Clearing all intervals and timeouts...
+Disconnected from github
+Disconnected from cloudrun
+Disconnected from linear
+Disconnected from git
+HTTP server closed successfully
+MCP SuperAssistant Proxy stopped
+Graceful shutdown completed

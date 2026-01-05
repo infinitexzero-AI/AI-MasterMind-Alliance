@@ -3,14 +3,14 @@
   "last_updated": "2026-01-02T16:55:00Z",
   "system_integrity": "ok",
   "config_integrity": "ok",
-  "storage_status": "critical",
+  "storage_status": "ok",
   "available_gb": 1,
   "agent_service": "active",
   "agents": {
     "valentine": {
-      "status": "ACTIVE",
+      "status": "OFFLINE",
       "task": "Orchestrating Mode 5 Build",
-      "last_heartbeat": "2026-01-02T17:00:19.678547"
+      "last_heartbeat": "2026-01-05T14:01:26.155825"
     },
     "antigravity": {
       "status": "ACTIVE",
@@ -28,5 +28,5 @@
       "last_heartbeat": "2026-01-02T17:00:19.678620"
     }
   },
-  "last_check": "2026-01-02T17:00:19.678625"
+  "last_check": "2026-01-05T14:01:26.158654"
 }

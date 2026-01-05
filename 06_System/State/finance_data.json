@@ -1,8 +1,8 @@
 {
   "currency": "USD",
-  "last_updated": "2026-01-03T02:36:32.407368",
+  "last_updated": "2026-01-04T18:18:35.539320",
   "metrics": {
-    "net_worth": 12561.75,
+    "net_worth": 12849.25,
     "income_projected_monthly": 4500.0,
     "burn_rate_daily": 42.15,
     "savings_rate_percent": 32.5
@@ -15,7 +15,7 @@
     },
     {
       "name": "Strategic Savings",
-      "balance": 8221.25,
+      "balance": 8508.75,
       "trend": "stable"
     },
     {
@@ -29,15 +29,17 @@
       "id": "Bursary-2025-Dec",
       "source": "Mount Allison Emergency Bursary",
       "expected_amount": 1500.0,
-      "status": "AWAITING_SUBMISSION",
-      "priority": "critical"
+      "status": "SUBMITTED",
+      "priority": "critical",
+      "submitted_at": "2026-01-04T16:38:02.963547"
     },
     {
       "id": "NSLSC-2025-Term-W26",
       "source": "NSLSC Student Loan",
       "expected_amount": 4200.0,
       "status": "PROCESSING_DELAYED",
-      "priority": "high"
+      "priority": "high",
+      "internal_note": "Linked to appeal JP-MTA-2026-AB1 for hold removal."
     }
   ],
   "abundance_score": 90

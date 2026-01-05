@@ -13,7 +13,13 @@ if [ -f "$LOG_FILE" ]; then
 fi
 echo "--- NEW SESSION $(date) ---" > "$LOG_FILE"
 
-# 2. Execute Orchestrator
+# 2. Sync Intelligence & Aggregate Logs
+printf "🧠 Syncing Intelligence Vault...\n"
+python3 "$AILCC_ROOT/scripts/sync_memory_pulse.py"
+printf "📊 Aggregating System Logs...\n"
+python3 "$AILCC_ROOT/scripts/log_aggregator.py"
+
+# 3. Execute Orchestrator
 printf "⚡ Executing Python Orchestrator...\n"
 python3 "$AILCC_ROOT/06_System/Execution/ailcc_orchestrator.py"
 
