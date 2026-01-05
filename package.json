@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "ailcc-mode6",
   "version": "1.0.0",
   "description": "Mode 6 Intent Routing & Multi-Agent Orchestration System for AILCC Framework",
@@ -15,10 +14,14 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.23.25",
+    "lucide-react": "^0.556.0",
     "next": "^14.0.0",
     "node-fetch": "^3.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "tailwind-merge": "^3.4.0",
     "ws": "^8.18.3"
   },
   "devDependencies": {
@@ -40,17 +43,5 @@
   },
   "engines": {
     "node": ">=18.0.0"
-=======
-  "devDependencies": {
-    "autoprefixer": "^10.4.22",
-    "postcss": "^8.5.6",
-    "tailwindcss": "^4.1.17"
-  },
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "framer-motion": "^12.23.25",
-    "lucide-react": "^0.556.0",
-    "tailwind-merge": "^3.4.0"
->>>>>>> ce9003b (feat(chamber): activate neural forge orchestration V1)
   }
 }
