@@ -1,0 +1,7 @@
+## Agent: [Name]
+Date: [Today]
+Status: [Active/Idle/Blocked]
+Completed Today: [Tasks]
+In Progress: [Tasks]  
+Blockers: [Issues]
+Next Actions: [Plans]

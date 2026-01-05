@@ -1,0 +1,15 @@
+{
+  "date": "2025-12-06",
+  "metrics": {
+    "sleep_hours": 6.2,
+    "hrv": 38,
+    "resting_hr": 62
+  },
+  "subjective": {
+    "cognitive_clarity": 5,
+    "fatigue_level": 7,
+    "mood": "Stressed"
+  },
+  "symptoms": ["Brain Fog", "Lower Back Pain"],
+  "interventions": ["Caffeine", "Stretching"]
+}

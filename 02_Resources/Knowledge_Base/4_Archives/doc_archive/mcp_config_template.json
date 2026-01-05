@@ -1,0 +1,25 @@
+{
+  "mcpServers": {
+    "github-mcp": {
+      "command": "npx",
+      "args": ["-y", "@github/github-mcp-server@latest"],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "REQUIRES_USER_INPUT_REPLACE_THIS"
+      }
+    },
+    "supabase-mcp": {
+      "command": "npx",
+      "args": ["-y", "@supabase/mcp-server-supabase@latest", "--access-token"],
+      "env": {
+        "SUPABASE_TOKEN": "REQUIRES_USER_INPUT_REPLACE_THIS"
+      }
+    },
+    "linear-mcp": {
+      "command": "npx",
+      "args": ["-y", "@linear/mcp-server@latest"],
+      "env": {
+        "LINEAR_API_KEY": "REQUIRES_USER_INPUT_REPLACE_THIS"
+      }
+    }
+  }
+}

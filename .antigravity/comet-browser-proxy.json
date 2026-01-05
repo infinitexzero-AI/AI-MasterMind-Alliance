@@ -1,0 +1,20 @@
+{
+    "browserProvider": "comet-assistant",
+    "allowBrowserLaunch": true,
+    "status": "connected",
+    "services": {
+        "gemini": {
+            "authenticated": true,
+            "account": "eastcoastfreshcoats@gmail.com",
+            "tier": "free",
+            "keys_available": 2
+        },
+        "claude": {
+            "authenticated": true,
+            "account": "AIMAGE Individual Org",
+            "tier": "evaluation",
+            "keys_available": 0
+        }
+    },
+    "lastSync": "2025-12-14T22:23:00-04:00"
+}

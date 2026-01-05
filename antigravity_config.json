@@ -1,0 +1,20 @@
+{
+  "system": {
+    "version": "1.0.0",
+    "workspace_root": "/Users/infinite27/AILCC_PRIME"
+  },
+  "launcher": {
+    "browser": "Google Chrome",
+    "urls": [
+      "https://www.google.com",
+      "https://www.perplexity.ai",
+      "http://localhost:3000"
+    ]
+  },
+  "modules": {
+    "gemini_images": {
+      "enabled": true,
+      "provider": "vertex_ai"
+    }
+  }
+}

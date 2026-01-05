@@ -1,0 +1,151 @@
+{
+  "protocol": "Antigravity_Storage_v1.2",
+  "version": "1.2.0",
+  "lastUpdated": "2025-12-13",
+  "description": "Production-grade storage contract with patterns, structured triggers, and audit logging.",
+  "ids": {
+    "root_project_dir": "~/Projects",
+    "root_archive_dir": "~/Projects/ARCHIVED_LOCAL",
+    "root_alliance_dir": "~/AILCC_PRIME"
+  },
+  "tiers": {
+    "ssd_hot": {
+      "path": "~/Projects/ACTIVE",
+      "aliases": [
+        "~/AILCC_PRIME"
+      ],
+      "min_free_percent": 20,
+      "description": "Active code, current semester, live experiments"
+    },
+    "ssd_cool": {
+      "path": "~/Projects/ARCHIVED_LOCAL",
+      "description": "Recently completed projects, ready for offload"
+    },
+    "lacie_archive": {
+      "path": "/Volumes/LaCie/ARCHIVE",
+      "description": "Long-term project and media archive"
+    },
+    "cloud_backup": {
+      "providers": [
+        "iCloud",
+        "Google Drive",
+        "GitHub"
+      ],
+      "description": "Critical configs, journals, Alliance blueprints"
+    }
+  },
+  "path_patterns": {
+    "critical": [
+      "**/journals/**",
+      "**/Alliance_configs/**",
+      "**/TEK_data/**"
+    ],
+    "rebuildable": [
+      "**/node_modules/**",
+      "**/.venv/**",
+      "**/cache/**",
+      "**/logs/**"
+    ],
+    "large_static": [
+      "**/media_raw/**",
+      "**/old_browser_profiles/**",
+      "**/vm_images/**"
+    ]
+  },
+  "actions": {
+    "promote_to_hot": {
+      "from": [
+        "ssd_cool"
+      ],
+      "to": "ssd_hot",
+      "trigger": {
+        "type": "access_time_within_days",
+        "value": 30
+      }
+    },
+    "cool_to_archive": {
+      "from": [
+        "ssd_hot"
+      ],
+      "to": "ssd_cool",
+      "trigger": {
+        "type": "inactive_for_days",
+        "value": 30
+      }
+    },
+    "archive_to_lacie": {
+      "from": [
+        "ssd_cool"
+      ],
+      "to": "lacie_archive",
+      "trigger": {
+        "type": "inactive_for_days",
+        "value": 90
+      }
+    },
+    "snapshot_to_cloud": {
+      "from": [
+        "ssd_hot",
+        "ssd_cool"
+      ],
+      "to": "cloud_backup",
+      "trigger": "on_state_change_or_weekly"
+    }
+  },
+  "class_policies": {
+    "critical": {
+      "must_have_cloud_backup": true,
+      "keep_local_min_days": 365,
+      "never_delete_without_manual_review": true
+    },
+    "rebuildable": {
+      "eligible_for_auto_delete": true,
+      "delete_after_days": 7,
+      "no_cloud_backup_required": true
+    },
+    "large_static": {
+      "prefer_lacie_archive": true,
+      "move_off_ssd_after_days": 14
+    }
+  },
+  "agents": {
+    "antigravity": {
+      "workspace_root": "~/Projects/ACTIVE",
+      "read_only_paths": [
+        "/Volumes/LaCie",
+        "~/Projects/ARCHIVED_LOCAL"
+      ],
+      "forbidden_patterns": [
+        "*/TEK_data/raw/*",
+        "*/journals/private/*"
+      ],
+      "backup_before_mass_edit": true
+    },
+    "shell_agents": {
+      "allow_rm_rf": false,
+      "allowed_commands": [
+        "git",
+        "npm",
+        "pnpm",
+        "python",
+        "pytest"
+      ],
+      "require_git_clean_before_run": true
+    }
+  },
+  "health": {
+    "ssd_hot": {
+      "yellow_percent": 20,
+      "red_percent": 10,
+      "min_safe_gb": 15,
+      "action_on_yellow": "block_new_media_raw",
+      "action_on_red": "block_new_projects_and_force_offload"
+    }
+  },
+  "audit": {
+    "last_enforced": "2025-12-13T21:44:46.637752",
+    "last_enforced_by": "system_cleanup.sh",
+    "last_health_check": null,
+    "notes": ""
+  }
+}

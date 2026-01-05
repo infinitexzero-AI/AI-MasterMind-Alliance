@@ -1,0 +1,29 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "🚀 Launch Antigravity",
+            "type": "shell",
+            "command": "./01_Areas/Codebases/ailcc/launch_protocol.sh",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "always",
+                "panel": "new",
+                "focus": true
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "🧠 Request UX Design",
+            "type": "shell",
+            "command": "echo 'Design Request Sent to Agents'",
+            "problemMatcher": [],
+            "presentation": {
+                "reveal": "silent"
+            }
+        }
+    ]
+}

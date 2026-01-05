@@ -1,0 +1,40 @@
+/Users/infinite27/AILCC_PRIME
+/Users/infinite27/AILCC_PRIME/core/scripts/AI-Mastermind-Core
+/Users/infinite27/AILCC_PRIME/ailcc
+/Users/infinite27/AILCC_PRIME/.agent
+/Users/infinite27/Library/CloudStorage/OneDrive-Personal/AI_Word_Docs
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/.Encrypted/My Drive/Google AI Studio
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/.Encrypted/My Drive/AICC
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/.Encrypted/My Drive/AI_AGENT_MASTERMIND
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/Google AI Studio
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AICC
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/System_Backups/Organized_Docs/AI_Word_Docs
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AILCC_ARCHIVE
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AILCC_ARCHIVE/Documents/AILCC_Mobile_Access
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AILCC_ARCHIVE/Documents/2nd Brain
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AILCC_ARCHIVE/Documents/AI_Agents
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AILCC_ARCHIVE/Documents/AI_Mastermind_Exports
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AILCC_ARCHIVE/Documents/AILCC_Backup
+/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AI_AGENT_MASTERMIND
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/CHAT GPT LEADS LISTS
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/LifeLibrary_Mobile/AI_Active
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/AILCC_ARCHIVE
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/AILCC_ARCHIVE/AI-Mastermind-Core_LEGACY
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/AILCC_ARCHIVE/AI-Mastermind-Core_LEGACY/AI-MasterMind-Alliance
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/AILCC_ARCHIVE/AI-Mastermind-Core_LEGACY/ailcc-framework
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/AILCC_ARCHIVE/AI-Mastermind-Core_LEGACY/AI-Mastermind-Core
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/Joel_LifeLibrary/AI_Tech
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/Photos Library.photoslibrary/private/com.apple.mbfloagent
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/Photos Library.photoslibrary/private/com.apple.imagent
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/Photos Library.photoslibrary/external/com.apple.mbfloagent
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/Photos Library.photoslibrary/external/com.apple.imagent
+/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/AI-Command-Center
+/Volumes/LaCie/.Spotlight-V100/Store-V2/AA0F4834-D294-488D-B50F-F10DCDE4B847/journals.repair
+/Volumes/LaCie/Blizzard/Warcraft III/_retail_
+/Volumes/LaCie/Blizzard/StarCraft/Maps/campaign
+/Volumes/LaCie/AILCC_STORAGE_OFFLOAD
+/Volumes/LaCie/Mail Chimp Content
+/Volumes/LaCie/Applications/Email.app
+/Volumes/LaCie/Applications/DEVONagent Lite.app
+/Volumes/LaCie/Backups/AI_Agents

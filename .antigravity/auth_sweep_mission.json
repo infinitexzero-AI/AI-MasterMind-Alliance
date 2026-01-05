@@ -1,0 +1,38 @@
+{
+    "mission_id": "AUTH_SWEEP_001",
+    "priority": "CRITICAL",
+    "intent": "infrastructure_setup",
+    "agent_protocol": "Mode_6_Orchestration",
+    "browser_bridge": "Comet_Assistant_Proxy",
+    "tasks": [
+        {
+            "id": "extract_gemini",
+            "target": "https://aistudio.google.com/app/apikey",
+            "action": "scrape_key",
+            "selector": "button[aria-label='Copy API key']",
+            "output_var": "GOOGLE_AI_STUDIO_KEY"
+        },
+        {
+            "id": "extract_claude",
+            "target": "https://console.anthropic.com/settings/keys",
+            "action": "check_existence_or_create",
+            "output_var": "ANTHROPIC_API_KEY"
+        },
+        {
+            "id": "extract_grok",
+            "target": "https://console.x.ai/",
+            "action": "verify_tier_paid",
+            "output_var": "XAI_API_KEY"
+        }
+    ],
+    "output_configuration": {
+        "destination": "~/.ailcc/credentials.env",
+        "format": "env",
+        "encryption": "system_keychain"
+    },
+    "handshake_protocol": {
+        "supervisor": "Comet",
+        "verification_endpoint": "ws://localhost:3001/verify",
+        "on_failure": "escalate_to_human"
+    }
+}

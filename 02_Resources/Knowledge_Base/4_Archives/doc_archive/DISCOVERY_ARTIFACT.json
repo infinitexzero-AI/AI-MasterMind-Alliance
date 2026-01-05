@@ -1,0 +1,32 @@
+{
+  "root": "/Users/infinite27/AILCC_PRIME",
+  "timestamp": "2025-12-06T20:10:00",
+  "structure": {
+    "ailcc": {
+      "description": "The AILCC Framework root",
+      "found": true
+    },
+    "core": {
+      "description": "Legacy AI-Mastermind-Core content",
+      "found": true
+    },
+    "doc_archive": {
+      "description": "White Paper and Manuals",
+      "contents": [
+        "AGENT_MANUAL.md",
+        "CRITIQUE.md",
+        "MASTER_CONTEXT_PROMPT.md",
+        "SYNOPSIS.md",
+        "MIGRATION_LOG.md"
+      ]
+    },
+    "logs": {
+      "description": "System telemetry",
+      "found": true
+    }
+  },
+  "key_files": {
+    "SystemProfile": "Found in core/SystemProfile.markdown",
+    "TaskBoard": "Found in core/TaskBoard.csv"
+  }
+}

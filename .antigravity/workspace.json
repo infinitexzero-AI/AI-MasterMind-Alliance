@@ -1,0 +1,48 @@
+{
+    "version": "1.0",
+    "workspace": {
+        "name": "AILCC_PRIME",
+        "root": "/Users/infinite27/AILCC_PRIME",
+        "rules": {
+            "restricted_paths": [
+                ".git",
+                "node_modules",
+                ".env",
+                "credentials.env"
+            ],
+            "allowed_extensions": [
+                ".py",
+                ".ts",
+                ".tsx",
+                ".js",
+                ".json",
+                ".md",
+                ".txt",
+                ".sh",
+                ".css",
+                ".html"
+            ],
+            "max_file_size_mb": 50
+        },
+        "agents": {
+            "default": "gemini",
+            "permissions": {
+                "gemini": [
+                    "read",
+                    "write",
+                    "execute"
+                ],
+                "comet": [
+                    "read",
+                    "write",
+                    "execute",
+                    "network"
+                ],
+                "claude": [
+                    "read",
+                    "write"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "name": "AILCC Ecosystem Sync",
+    "nodes": [
+        {
+            "parameters": {
+                "path": "ailcc-trigger",
+                "responseMode": "responseNode",
+                "options": {}
+            },
+            "name": "Webhook",
+            "type": "n8n-nodes-base.webhook",
+            "position": [
+                250,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "method": "POST",
+                "url": "https://www.googleapis.com/drive/v3/files",
+                "authentication": "oAuth2",
+                "sendBody": true,
+                "bodyParameters": {
+                    "parameters": [
+                        {
+                            "name": "name",
+                            "value": "={{$json[\"query\"]}}_chamber_output.tar.gz"
+                        }
+                    ]
+                }
+            },
+            "name": "Google Drive Upload",
+            "type": "n8n-nodes-base.httpRequest",
+            "position": [
+                450,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "calendar": "primary",
+                "start": "={{$now}}",
+                "end": "={{$now.plus({hours: 1})}}",
+                "summary": "Review: {{$json[\"query\"]}}",
+                "description": "AILCC Chamber Output Ready"
+            },
+            "name": "Apple Calendar Event",
+            "type": "n8n-nodes-base.googleCalendar",
+            "position": [
+                650,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "Google Drive Upload",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Google Drive Upload": {
+            "main": [
+                [
+                    {
+                        "node": "Apple Calendar Event",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}

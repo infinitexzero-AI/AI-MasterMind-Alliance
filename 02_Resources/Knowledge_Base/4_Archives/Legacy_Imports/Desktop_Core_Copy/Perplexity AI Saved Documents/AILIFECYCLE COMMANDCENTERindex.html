@@ -1,0 +1,973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Lifecycle Command Center</title>
+    <style>
+        :root {
+            --color-background: #0f172a;
+            --color-surface: #1e293b;
+            --color-text: #f1f5f9;
+            --color-text-secondary: #94a3b8;
+            --color-primary: #6366f1;
+            --color-primary-hover: #4f46e5;
+            --color-success: #10b981;
+            --color-warning: #f59e0b;
+            --color-error: #ef4444;
+            --color-border: #334155;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #581c87 50%, #0f172a 100%);
+            color: var(--color-text);
+            padding: 1.5rem;
+            min-height: 100vh;
+        }
+
+        .container { max-width: 1400px; margin: 0 auto; }
+
+        .header {
+            background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+        }
+
+        .header-content { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+        .header h1 { font-size: 2rem; font-weight: 700; display: flex; align-items: center; gap: 0.75rem; }
+        .header p { color: #c7d2fe; margin-top: 0.5rem; }
+
+        .health-indicator { text-align: right; }
+        .health-dots { display: flex; gap: 0.25rem; margin-top: 0.5rem; }
+        .health-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .health-dot.active { background: #10b981; }
+        .health-dot.inactive { background: #475569; }
+
+        .mode-selector {
+            background: var(--color-surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .mode-label { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; font-weight: 600; }
+        .mode-buttons { display: flex; gap: 0.75rem; flex-wrap: wrap; }
+        
+        .mode-btn {
+            padding: 0.75rem 1.25rem;
+            border-radius: 8px;
+            border: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #334155;
+            color: var(--color-text);
+        }
+        
+        .mode-btn:hover { background: #475569; transform: translateY(-2px); }
+        .mode-btn.active { background: var(--color-primary); color: white; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4); }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .stat-card {
+            background: var(--color-surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            border-left: 4px solid;
+        }
+
+        .stat-card.total { border-color: #3b82f6; }
+        .stat-card.active { border-color: #f59e0b; }
+        .stat-card.complete { border-color: #10b981; }
+        .stat-card.blocked { border-color: #ef4444; }
+
+        .stat-value { font-size: 2rem; font-weight: 700; }
+        .stat-label { color: var(--color-text-secondary); font-size: 0.875rem; margin-top: 0.25rem; }
+
+        .agents-panel {
+            background: var(--color-surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .agent-card {
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .agent-header { display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem; }
+        .agent-status { width: 8px; height: 8px; border-radius: 50%; }
+        .agent-status.active { background: #10b981; }
+        .agent-status.standby { background: #f59e0b; }
+        .agent-status.ready { background: #3b82f6; }
+        .agent-name { font-weight: 600; font-size: 0.875rem; }
+        .agent-role { color: var(--color-text-secondary); font-size: 0.75rem; }
+
+        .alert-box {
+            background: #78350f;
+            border-left: 4px solid #f59e0b;
+            border-radius: 8px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .alert-content h3 { color: #fef3c7; font-size: 1rem; margin-bottom: 0.5rem; }
+        .alert-content p { color: #fde68a; font-size: 0.875rem; margin-bottom: 0.75rem; }
+        .alert-buttons { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        
+        .alert-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .alert-btn.primary { background: #d97706; color: white; }
+        .alert-btn.primary:hover { background: #b45309; }
+        .alert-btn.secondary { background: white; color: #78350f; border: 1px solid #f59e0b; }
+        .alert-btn.secondary:hover { background: #fef3c7; }
+
+        .filter-bar {
+            background: var(--color-surface);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            border: none;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #334155;
+            color: var(--color-text);
+        }
+        
+        .filter-btn:hover { background: #475569; }
+        .filter-btn.active { background: var(--color-primary); color: white; }
+
+        .task-card {
+            background: var(--color-surface);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+
+        .task-card:hover { box-shadow: 0 8px 30px rgba(0,0,0,0.3); }
+
+        .task-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .task-main { display: flex; gap: 1rem; flex: 1; }
+        .task-details { flex: 1; }
+        .task-title-row { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 0.75rem; }
+        
+        .task-id {
+            font-family: monospace;
+            font-size: 0.75rem;
+            background: #334155;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+
+        .task-name { font-size: 1.125rem; font-weight: 600; }
+
+        .priority-badge {
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            border: 1px solid;
+        }
+
+        .priority-critical { background: #7f1d1d; color: #fecaca; border-color: #ef4444; }
+        .priority-high { background: #78350f; color: #fed7aa; border-color: #f59e0b; }
+        .priority-medium { background: #713f12; color: #fef08a; border-color: #eab308; }
+        .priority-low { background: #374151; color: #d1d5db; border-color: #6b7280; }
+
+        .mode-badge {
+            font-size: 0.75rem;
+            background: #581c87;
+            color: #e9d5ff;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+        }
+
+        .task-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: var(--color-text-secondary);
+            font-size: 0.875rem;
+        }
+
+        .task-meta-item { display: flex; align-items: center; gap: 0.5rem; }
+
+        .status-select {
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+            background: #334155;
+            color: var(--color-text);
+            font-size: 0.875rem;
+            cursor: pointer;
+        }
+
+        .status-select:focus { outline: 2px solid var(--color-primary); }
+
+        .steps-section {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--color-border);
+        }
+
+        .steps-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .step-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .step-item:hover { background: #334155; }
+
+        .step-checkbox {
+            width: 1rem;
+            height: 1rem;
+            accent-color: var(--color-primary);
+            cursor: pointer;
+        }
+
+        .step-text { font-size: 0.875rem; }
+        .step-text.complete { text-decoration: line-through; color: var(--color-text-secondary); }
+
+        .step-progress {
+            margin-top: 0.75rem;
+            font-size: 0.75rem;
+            color: var(--color-text-secondary);
+        }
+
+        .status-icon {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .empty-state {
+            background: var(--color-surface);
+            border-radius: 12px;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .empty-state p { color: var(--color-text-secondary); font-size: 1.125rem; }
+
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.5rem; }
+            .task-header { flex-direction: column; }
+            .stats-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-content">
+                <div>
+                    <h1>
+                        <svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="6" y1="3" x2="6" y2="15"></line>
+                            <circle cx="18" cy="6" r="3"></circle>
+                            <circle cx="6" cy="18" r="3"></circle>
+                            <path d="M18 9a9 9 0 0 1-9 9"></path>
+                        </svg>
+                        AI Lifecycle Command Center
+                    </h1>
+                    <p>Multi-Agent Orchestration &amp; Integration Hub</p>
+                </div>
+                <div class="health-indicator">
+                    <div style="font-size: 0.875rem; color: #c7d2fe;">System Health</div>
+                    <div class="health-dots" id="healthDots"></div>
+                    <div style="font-size: 0.75rem; color: #c7d2fe; margin-top: 0.25rem;" id="healthText"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mode Selector -->
+        <div class="mode-selector">
+            <div class="mode-label">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+                <span>Active Mode:</span>
+            </div>
+            <div class="mode-buttons" id="modeButtons"></div>
+        </div>
+
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="stat-value" id="statTotal">0</div>
+                <div class="stat-label">Total Tasks</div>
+            </div>
+            <div class="stat-card active">
+                <div class="stat-value" id="statActive">0</div>
+                <div class="stat-label">Active</div>
+            </div>
+            <div class="stat-card complete">
+                <div class="stat-value" id="statComplete">0</div>
+                <div class="stat-label">Complete</div>
+            </div>
+            <div class="stat-card blocked">
+                <div class="stat-value" id="statBlocked">0</div>
+                <div class="stat-label">Blocked</div>
+            </div>
+        </div>
+
+        <!-- AI Agents -->
+        <div class="agents-panel">
+            <h2 style="font-size: 1.125rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+                AI Team Status
+            </h2>
+            <div class="agents-grid" id="agentsGrid"></div>
+        </div>
+
+        <!-- Security Alert -->
+        <div class="alert-box">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+            </svg>
+            <div class="alert-content">
+                <h3>Security Setup Required</h3>
+                <p>GitHub authentication needed for AILCC Framework repository. Complete L-003 to unlock automated deployments.</p>
+                <div class="alert-buttons">
+                    <button class="alert-btn primary" onclick="window.open('https://github.com/settings/tokens', '_blank')">
+                        🔑 Generate PAT
+                    </button>
+                    <button class="alert-btn secondary" onclick="toggleScriptPanel()">
+                        📜 Post-Clone Setup
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Setup Script Panel -->
+        <div id="scriptPanel" style="display: none;">
+            <div class="agents-panel">
+                <h2 style="font-size: 1.125rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="4 17 10 11 4 5"></polyline>
+                        <line x1="12" y1="19" x2="20" y2="19"></line>
+                    </svg>
+                    AILCC Post-Clone Setup Script
+                </h2>
+                
+                <div style="background: #1e293b; border: 1px solid #334155; border-radius: 8px; padding: 1rem; margin-bottom: 1rem; font-family: monospace; font-size: 0.75rem; max-height: 400px; overflow-y: auto;">
+                    <pre style="color: #10b981; margin: 0; white-space: pre-wrap; word-wrap: break-word;">#!/bin/bash
+
+
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+YELLOW='\033[1;33m'
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+
+echo -e "${BLUE}╔════════════════════════════════════════════════════════╗${NC}"
+echo -e "${BLUE}║   AILCC Framework - Post-Clone Setup Automation       ║${NC}"
+echo -e "${BLUE}╔════════════════════════════════════════════════════════╗${NC}"
+echo ""
+
+echo -e "${YELLOW}[Step 1/5]${NC} Navigating to ailcc-framework directory..."
+if [ -d "$HOME/ailcc-framework" ]; then
+    cd "$HOME/ailcc-framework" || exit 1
+    echo -e "${GREEN}✓${NC} Changed to directory: $(pwd)"
+elif [ -d "ailcc-framework" ]; then
+    cd ailcc-framework || exit 1
+    echo -e "${GREEN}✓${NC} Changed to directory: $(pwd)"
+else
+    echo -e "${RED}✗${NC} Error: ailcc-framework directory not found!"
+    echo "Please run this script from the directory containing ailcc-framework"
+    exit 1
+fi
+echo ""
+
+echo -e "${YELLOW}[Step 2/5]${NC} Setting up Git credential caching..."
+git config --global credential.helper osxkeychain
+if [ $? -eq 0 ]; then
+    echo -e "${GREEN}✓${NC} Credential helper configured (osxkeychain)"
+    echo "  Your GitHub credentials will be saved securely in macOS Keychain"
+else
+    echo -e "${RED}✗${NC} Failed to configure credential helper"
+fi
+echo ""
+
+echo -e "${YELLOW}[Step 3/5]${NC} Verifying repository contents..."
+echo -e "${BLUE}Repository files:${NC}"
+ls -la
+echo ""
+
+echo -e "${YELLOW}[Step 4/5]${NC} Checking repository status..."
+git status
+echo ""
+
+echo -e "${YELLOW}[Step 5/5]${NC} Repository Information:"
+echo -e "${BLUE}Remote URL:${NC}"
+git remote -v
+echo ""
+echo -e "${BLUE}Current Branch:${NC}"
+git branch --show-current
+echo ""
+echo -e "${BLUE}Latest Commit:${NC}"
+git log -1 --oneline
+echo ""
+
+echo -e "${GREEN}╔════════════════════════════════════════════════════════╗${NC}"
+echo -e "${GREEN}║           Setup Complete! ✓                            ║${NC}"
+echo -e "${GREEN}╚════════════════════════════════════════════════════════╝${NC}"
+echo ""
+echo -e "${BLUE}Next Steps:${NC}"
+echo "  1. Start adding your AILCC framework files"
+echo "  2. Use 'git add .' to stage changes"
+echo "  3. Use 'git commit -m \"your message\"' to commit"
+echo "  4. Use 'git push' to sync with GitHub"
+echo ""
+echo -e "${YELLOW}Tip:${NC} Credentials are now cached. Future git commands won't prompt for password!"
+echo ""</pre>
+                </div>
+
+                <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+                    <button class="alert-btn primary" onclick="copyScript()">
+                        📋 Copy Script
+                    </button>
+                    <button class="alert-btn secondary" onclick="downloadScript()">
+                        💾 Download setup.sh
+                    </button>
+                    <button class="alert-btn secondary" onclick="toggleScriptPanel()">
+                        ✕ Close
+                    </button>
+                </div>
+
+                <div id="copyNotification" style="display: none; margin-top: 1rem; padding: 0.75rem; background: #065f46; border-radius: 6px; color: #d1fae5;">
+                    ✓ Script copied to clipboard! Run in Terminal: chmod +x setup.sh && ./setup.sh
+                </div>
+
+                <div style="margin-top: 1.5rem; padding: 1rem; background: #334155; border-radius: 8px;">
+                    <h3 style="font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem; color: #10b981;">What This Script Does:</h3>
+                    <ul style="font-size: 0.875rem; color: #cbd5e1; line-height: 1.6; margin: 0; padding-left: 1.5rem;">
+                        <li>Navigates to your ailcc-framework directory</li>
+                        <li>Configures Git credential caching (macOS Keychain)</li>
+                        <li>Verifies repository contents and structure</li>
+                        <li>Displays current git status and remote info</li>
+                        <li>Shows latest commit and branch information</li>
+                        <li>Provides next steps for development workflow</li>
+                    </ul>
+                </div>
+
+                <div style="margin-top: 1rem; padding: 1rem; background: #78350f; border-left: 3px solid #f59e0b; border-radius: 8px;">
+                    <h3 style="font-size: 0.875rem; font-weight: 600; margin-bottom: 0.5rem; color: #fef3c7;">Terminal Instructions:</h3>
+                    <ol style="font-size: 0.875rem; color: #fed7aa; line-height: 1.6; margin: 0; padding-left: 1.5rem;">
+                        <li>Copy the script using the button above</li>
+                        <li>Open Terminal and navigate to your project directory</li>
+                        <li>Create file: <code style="background: #451a03; padding: 0.125rem 0.5rem; border-radius: 4px;">nano setup.sh</code></li>
+                        <li>Paste the script (Cmd+V) and save (Ctrl+O, Enter, Ctrl+X)</li>
+                        <li>Make executable: <code style="background: #451a03; padding: 0.125rem 0.5rem; border-radius: 4px;">chmod +x setup.sh</code></li>
+                        <li>Run: <code style="background: #451a03; padding: 0.125rem 0.5rem; border-radius: 4px;">./setup.sh</code></li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="filter-bar">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon>
+            </svg>
+            <span style="font-weight: 500; font-size: 0.875rem;">Filter:</span>
+            <button class="filter-btn active" onclick="setFilter('all')">All Tasks</button>
+            <button class="filter-btn" onclick="setFilter('active')">Active Only</button>
+            <button class="filter-btn" onclick="setFilter('mode')">Current Mode</button>
+        </div>
+
+        <!-- Tasks -->
+        <div id="tasksList"></div>
+    </div>
+
+    <script>
+        const modes = {
+            student: { icon: '🎓', label: 'Student', color: '#3b82f6' },
+            professional: { icon: '💼', label: 'Professional', color: '#6366f1' },
+            life: { icon: '🏡', label: 'Life/Adult', color: '#10b981' },
+            creative: { icon: '🌟', label: 'Self-Actualized', color: '#7c3aed' },
+            automation: { icon: '🤖', label: 'Automation', color: '#f59e0b' }
+        };
+
+        const aiAgents = [
+            { name: 'SuperGrok', status: 'active', role: 'Orchestration' },
+            { name: 'Claude Desktop', status: 'standby', role: 'Analysis & Development' },
+            { name: 'Comet Assistant', status: 'ready', role: 'Mobile Support' },
+            { name: 'Perplexity', status: 'ready', role: 'Research' }
+        ];
+
+        let tasks = [
+            {
+                id: 'L-003',
+                name: 'Secure GitHub Access Setup',
+                assignedTo: 'Human',
+                status: 'In Progress',
+                priority: 'High',
+                dueDate: '2025-11-24',
+                mode: 'professional',
+                steps: [
+                    { id: 1, text: 'Generate Personal Access Token (PAT)', complete: false },
+                    { id: 2, text: 'Resume clone with PAT credentials', complete: false },
+                    { id: 3, text: 'Configure credential caching', complete: false },
+                    { id: 4, text: 'Optional: Switch to SSH', complete: false },
+                    { id: 5, text: 'Verify clone and test push', complete: false }
+                ]
+            },
+            {
+                id: 'T001',
+                name: 'Setup Core Infrastructure',
+                assignedTo: 'Human',
+                status: 'Complete',
+                priority: 'High',
+                dueDate: '2025-10-24',
+                mode: 'professional'
+            },
+            {
+                id: 'T002',
+                name: 'Configure Google Drive API',
+                assignedTo: 'ChatGPT',
+                status: 'In Progress',
+                priority: 'High',
+                dueDate: '2025-10-25',
+                mode: 'automation'
+            },
+            {
+                id: 'T003',
+                name: 'Research AI Collaboration Best Practices',
+                assignedTo: 'Claude',
+                status: 'Complete',
+                priority: 'Medium',
+                dueDate: '2025-10-27',
+                mode: 'professional'
+            }
+        ];
+
+        let activeMode = 'professional';
+        let filter = 'all';
+        let systemHealth = 4;
+
+        function renderModes() {
+            const container = document.getElementById('modeButtons');
+            container.innerHTML = Object.entries(modes).map(([key, mode]) => `
+                <button class="mode-btn ${activeMode === key ? 'active' : ''}" onclick="setMode('${key}')">
+                    ${mode.icon} ${mode.label}
+                </button>
+            `).join('');
+        }
+
+        function renderAgents() {
+            const container = document.getElementById('agentsGrid');
+            container.innerHTML = aiAgents.map(agent => `
+                <div class="agent-card">
+                    <div class="agent-header">
+                        <div class="agent-status ${agent.status}"></div>
+                        <span class="agent-name">${agent.name}</span>
+                    </div>
+                    <div class="agent-role">${agent.role}</div>
+                </div>
+            `).join('');
+        }
+
+        function renderHealth() {
+            const dotsContainer = document.getElementById('healthDots');
+            const textContainer = document.getElementById('healthText');
+            
+            dotsContainer.innerHTML = [1,2,3,4,5].map(i => 
+                `<div class="health-dot ${i <= systemHealth ? 'active' : 'inactive'}"></div>`
+            ).join('');
+            
+            textContainer.textContent = `${systemHealth}/5 Integrations`;
+        }
+
+        function getStatusIcon(status) {
+            switch (status) {
+                case 'Complete':
+                    return '<svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>';
+                case 'In Progress':
+                    return '<svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>';
+                case 'Blocked':
+                    return '<svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>';
+                default:
+                    return '<svg class="status-icon" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="2"><circle cx="12" cy="12" r="10"></circle></svg>';
+            }
+        }
+
+        function updateStats() {
+            const stats = {
+                total: tasks.length,
+                active: tasks.filter(t => !['Complete', 'Cancelled'].includes(t.status)).length,
+                complete: tasks.filter(t => t.status === 'Complete').length,
+                blocked: tasks.filter(t => t.status === 'Blocked').length
+            };
+
+            document.getElementById('statTotal').textContent = stats.total;
+            document.getElementById('statActive').textContent = stats.active;
+            document.getElementById('statComplete').textContent = stats.complete;
+            document.getElementById('statBlocked').textContent = stats.blocked;
+        }
+
+        function renderTasks() {
+            const filteredTasks = tasks.filter(task => {
+                if (filter === 'all') return true;
+                if (filter === 'active') return !['Complete', 'Cancelled'].includes(task.status);
+                if (filter === 'mode') return task.mode === activeMode;
+                return task.status === filter;
+            });
+
+            const container = document.getElementById('tasksList');
+            
+            if (filteredTasks.length === 0) {
+                container.innerHTML = '<div class="empty-state"><p>No tasks match the current filter.</p></div>';
+                return;
+            }
+
+            container.innerHTML = filteredTasks.map(task => `
+                <div class="task-card">
+                    <div class="task-header">
+                        <div class="task-main">
+                            ${getStatusIcon(task.status)}
+                            <div class="task-details">
+                                <div class="task-title-row">
+                                    <span class="task-id">${task.id}</span>
+                                    <h3 class="task-name">${task.name}</h3>
+                                    <span class="priority-badge priority-${task.priority.toLowerCase()}">${task.priority}</span>
+                                    ${task.mode ? `<span class="mode-badge">${modes[task.mode].icon} ${modes[task.mode].label}</span>` : ''}
+                                </div>
+                                <div class="task-meta">
+                                    <div class="task-meta-item">
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                            <circle cx="12" cy="7" r="4"></circle>
+                                        </svg>
+                                        ${task.assignedTo}
+                                    </div>
+                                    ${task.dueDate ? `
+                                        <div class="task-meta-item">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                            </svg>
+                                            ${task.dueDate}
+                                        </div>
+                                    ` : ''}
+                                </div>
+                            </div>
+                        </div>
+                        <select class="status-select" onchange="updateTaskStatus('${task.id}', this.value)" value="${task.status}">
+                            <option value="Not Started" ${task.status === 'Not Started' ? 'selected' : ''}>Not Started</option>
+                            <option value="In Progress" ${task.status === 'In Progress' ? 'selected' : ''}>In Progress</option>
+                            <option value="Blocked" ${task.status === 'Blocked' ? 'selected' : ''}>Blocked</option>
+                            <option value="Under Review" ${task.status === 'Under Review' ? 'selected' : ''}>Under Review</option>
+                            <option value="Complete" ${task.status === 'Complete' ? 'selected' : ''}>Complete</option>
+                        </select>
+                    </div>
+                    ${task.steps ? `
+                        <div class="steps-section">
+                            <div class="steps-header">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="4 17 10 11 4 5"></polyline>
+                                    <line x1="12" y1="19" x2="20" y2="19"></line>
+                                </svg>
+                                Implementation Steps
+                            </div>
+                            ${task.steps.map(step => `
+                                <label class="step-item">
+                                    <input type="checkbox" class="step-checkbox" ${step.complete ? 'checked' : ''} onchange="toggleStep('${task.id}', ${step.id})">
+                                    <span class="step-text ${step.complete ? 'complete' : ''}">${step.text}</span>
+                                </label>
+                            `).join('')}
+                            <div class="step-progress">
+                                Progress: ${task.steps.filter(s => s.complete).length}/${task.steps.length} steps completed
+                            </div>
+                        </div>
+                    ` : ''}
+                </div>
+            `).join('');
+        }
+
+        function setMode(mode) {
+            activeMode = mode;
+            renderModes();
+            renderTasks();
+        }
+
+        function setFilter(newFilter) {
+            filter = newFilter;
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+            renderTasks();
+        }
+
+        function updateTaskStatus(taskId, newStatus) {
+            const task = tasks.find(t => t.id === taskId);
+            if (task) {
+                task.status = newStatus;
+                updateStats();
+                renderTasks();
+            }
+        }
+
+        function toggleStep(taskId, stepId) {
+            const task = tasks.find(t => t.id === taskId);
+            if (task && task.steps) {
+                const step = task.steps.find(s => s.id === stepId);
+                if (step) {
+                    step.complete = !step.complete;
+                    renderTasks();
+                }
+            }
+        }
+
+        function toggleScriptPanel() {
+            const panel = document.getElementById('scriptPanel');
+            panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+        }
+
+        function copyScript() {
+            const scriptText = `#!/bin/bash
+
+
+GREEN='\\033[0;32m'
+BLUE='\\033[0;34m'
+YELLOW='\\033[1;33m'
+RED='\\033[0;31m'
+NC='\\033[0m' # No Color
+
+echo -e "\${BLUE}╔════════════════════════════════════════════════════════╗\${NC}"
+echo -e "\${BLUE}║   AILCC Framework - Post-Clone Setup Automation       ║\${NC}"
+echo -e "\${BLUE}╔════════════════════════════════════════════════════════╗\${NC}"
+echo ""
+
+echo -e "\${YELLOW}[Step 1/5]\${NC} Navigating to ailcc-framework directory..."
+if [ -d "$HOME/ailcc-framework" ]; then
+    cd "$HOME/ailcc-framework" || exit 1
+    echo -e "\${GREEN}✓\${NC} Changed to directory: $(pwd)"
+elif [ -d "ailcc-framework" ]; then
+    cd ailcc-framework || exit 1
+    echo -e "\${GREEN}✓\${NC} Changed to directory: $(pwd)"
+else
+    echo -e "\${RED}✗\${NC} Error: ailcc-framework directory not found!"
+    echo "Please run this script from the directory containing ailcc-framework"
+    exit 1
+fi
+echo ""
+
+echo -e "\${YELLOW}[Step 2/5]\${NC} Setting up Git credential caching..."
+git config --global credential.helper osxkeychain
+if [ $? -eq 0 ]; then
+    echo -e "\${GREEN}✓\${NC} Credential helper configured (osxkeychain)"
+    echo "  Your GitHub credentials will be saved securely in macOS Keychain"
+else
+    echo -e "\${RED}✗\${NC} Failed to configure credential helper"
+fi
+echo ""
+
+echo -e "\${YELLOW}[Step 3/5]\${NC} Verifying repository contents..."
+echo -e "\${BLUE}Repository files:\${NC}"
+ls -la
+echo ""
+
+echo -e "\${YELLOW}[Step 4/5]\${NC} Checking repository status..."
+git status
+echo ""
+
+echo -e "\${YELLOW}[Step 5/5]\${NC} Repository Information:"
+echo -e "\${BLUE}Remote URL:\${NC}"
+git remote -v
+echo ""
+echo -e "\${BLUE}Current Branch:\${NC}"
+git branch --show-current
+echo ""
+echo -e "\${BLUE}Latest Commit:\${NC}"
+git log -1 --oneline
+echo ""
+
+echo -e "\${GREEN}╔════════════════════════════════════════════════════════╗\${NC}"
+echo -e "\${GREEN}║           Setup Complete! ✓                            ║\${NC}"
+echo -e "\${GREEN}╚════════════════════════════════════════════════════════╝\${NC}"
+echo ""
+echo -e "\${BLUE}Next Steps:\${NC}"
+echo "  1. Start adding your AILCC framework files"
+echo "  2. Use 'git add .' to stage changes"
+echo "  3. Use 'git commit -m \\"your message\\"' to commit"
+echo "  4. Use 'git push' to sync with GitHub"
+echo ""
+echo -e "\${YELLOW}Tip:\${NC} Credentials are now cached. Future git commands won't prompt for password!"
+echo ""`;
+
+            navigator.clipboard.writeText(scriptText).then(() => {
+                const notification = document.getElementById('copyNotification');
+                notification.style.display = 'block';
+                setTimeout(() => {
+                    notification.style.display = 'none';
+                }, 4000);
+            }).catch(err => {
+                alert('Failed to copy script. Please copy manually from the display above.');
+            });
+        }
+
+        function downloadScript() {
+            const scriptText = `#!/bin/bash
+
+
+GREEN='\\033[0;32m'
+BLUE='\\033[0;34m'
+YELLOW='\\033[1;33m'
+RED='\\033[0;31m'
+NC='\\033[0m' # No Color
+
+echo -e "\${BLUE}╔════════════════════════════════════════════════════════╗\${NC}"
+echo -e "\${BLUE}║   AILCC Framework - Post-Clone Setup Automation       ║\${NC}"
+echo -e "\${BLUE}╔════════════════════════════════════════════════════════╗\${NC}"
+echo ""
+
+echo -e "\${YELLOW}[Step 1/5]\${NC} Navigating to ailcc-framework directory..."
+if [ -d "$HOME/ailcc-framework" ]; then
+    cd "$HOME/ailcc-framework" || exit 1
+    echo -e "\${GREEN}✓\${NC} Changed to directory: $(pwd)"
+elif [ -d "ailcc-framework" ]; then
+    cd ailcc-framework || exit 1
+    echo -e "\${GREEN}✓\${NC} Changed to directory: $(pwd)"
+else
+    echo -e "\${RED}✗\${NC} Error: ailcc-framework directory not found!"
+    echo "Please run this script from the directory containing ailcc-framework"
+    exit 1
+fi
+echo ""
+
+echo -e "\${YELLOW}[Step 2/5]\${NC} Setting up Git credential caching..."
+git config --global credential.helper osxkeychain
+if [ $? -eq 0 ]; then
+    echo -e "\${GREEN}✓\${NC} Credential helper configured (osxkeychain)"
+    echo "  Your GitHub credentials will be saved securely in macOS Keychain"
+else
+    echo -e "\${RED}✗\${NC} Failed to configure credential helper"
+fi
+echo ""
+
+echo -e "\${YELLOW}[Step 3/5]\${NC} Verifying repository contents..."
+echo -e "\${BLUE}Repository files:\${NC}"
+ls -la
+echo ""
+
+echo -e "\${YELLOW}[Step 4/5]\${NC} Checking repository status..."
+git status
+echo ""
+
+echo -e "\${YELLOW}[Step 5/5]\${NC} Repository Information:"
+echo -e "\${BLUE}Remote URL:\${NC}"
+git remote -v
+echo ""
+echo -e "\${BLUE}Current Branch:\${NC}"
+git branch --show-current
+echo ""
+echo -e "\${BLUE}Latest Commit:\${NC}"
+git log -1 --oneline
+echo ""
+
+echo -e "\${GREEN}╔════════════════════════════════════════════════════════╗\${NC}"
+echo -e "\${GREEN}║           Setup Complete! ✓                            ║\${NC}"
+echo -e "\${GREEN}╚════════════════════════════════════════════════════════╝\${NC}"
+echo ""
+echo -e "\${BLUE}Next Steps:\${NC}"
+echo "  1. Start adding your AILCC framework files"
+echo "  2. Use 'git add .' to stage changes"
+echo "  3. Use 'git commit -m \\"your message\\"' to commit"
+echo "  4. Use 'git push' to sync with GitHub"
+echo ""
+echo -e "\${YELLOW}Tip:\${NC} Credentials are now cached. Future git commands won't prompt for password!"
+echo ""`;
+
+            const blob = new Blob([scriptText], { type: 'text/plain' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'setup.sh';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            window.URL.revokeObjectURL(url);
+        }
+
+        // Initialize
+        renderModes();
+        renderAgents();
+        renderHealth();
+        updateStats();
+        renderTasks();
+    </script>
+</body>
+</html>
+

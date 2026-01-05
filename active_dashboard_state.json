@@ -1,0 +1,47 @@
+{
+  "meta_orchestrator": {
+    "status": "active",
+    "last_sync": "2025-12-11T01:15:00-04:00",
+    "github_issue_id": 1,
+    "agents": {
+      "comet": {
+        "status": "connected",
+        "role": "browser_automation"
+      },
+      "supergrok": {
+        "status": "pending",
+        "role": "github_monitor"
+      },
+      "valentine": {
+        "status": "pending",
+        "role": "ios_notifier"
+      },
+      "claude": {
+        "status": "active",
+        "role": "knowledge_architect"
+      }
+    }
+  },
+  "phases": {
+    "protocol_alpha": {
+      "status": "in_progress",
+      "checkpoints": {
+        "folder_structure": true,
+        "n8n_oauth": true,
+        "claude_export": true
+      }
+    }
+  },
+  "tasks": [
+    {
+      "title": "Verify API Post-Build",
+      "context": "Verification after rebuild",
+      "source": "touchbar",
+      "priority": "high",
+      "target_agent": "comet",
+      "id": "task_1765439430779_67ut2m911",
+      "timestamp": "2025-12-11T07:50:30.779Z",
+      "status": "pending"
+    }
+  ]
+}

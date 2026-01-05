@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IQ Test - Measure Your Cognitive Abilities</title>
+    <style>
+        :root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  /* Common style patterns */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+
+  /* RGB versions for opacity control */
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
+
+  /* Typography */
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    --color-bg-1: rgba(29, 78, 216, 0.15);
+    --color-bg-2: rgba(180, 83, 9, 0.15);
+    --color-bg-3: rgba(21, 128, 61, 0.15);
+    --color-bg-4: rgba(185, 28, 28, 0.15);
+    --color-bg-5: rgba(107, 33, 168, 0.15);
+    --color-bg-6: rgba(194, 65, 12, 0.15);
+    --color-bg-7: rgba(190, 24, 93, 0.15);
+    --color-bg-8: rgba(8, 145, 178, 0.15);
+
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+    format('woff2');
+}
+
+html {
+  font-size: var(--font-size-base);
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Custom styles for IQ Test */
+.app-container {
+  min-height: 100vh;
+  padding: var(--space-24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.test-card {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-card-border);
+  box-shadow: var(--shadow-lg);
+  max-width: 800px;
+  width: 100%;
+  padding: var(--space-32);
+}
+
+.intro-screen {
+  text-align: center;
+}
+
+.intro-screen h1 {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-16);
+  color: var(--color-text);
+}
+
+.intro-screen p {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-24);
+  line-height: 1.6;
+}
+
+.test-info {
+  background-color: var(--color-bg-1);
+  border-radius: var(--radius-base);
+  padding: var(--space-20);
+  margin: var(--space-24) 0;
+  text-align: left;
+}
+
+.test-info h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-12);
+  color: var(--color-text);
+}
+
+.test-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.test-info li {
+  padding: var(--space-8) 0;
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+}
+
+.test-info li::before {
+  content: "✓";
+  color: var(--color-success);
+  font-weight: var(--font-weight-bold);
+  margin-right: var(--space-8);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-12) var(--space-32);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-normal) var(--ease-standard);
+  border: none;
+  text-decoration: none;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn--primary:active {
+  background: var(--color-primary-active);
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: var(--color-text);
+}
+
+.btn--secondary:hover {
+  background: var(--color-secondary-hover);
+}
+
+.btn:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Progress Bar */
+.progress-section {
+  margin-bottom: var(--space-24);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-12);
+}
+
+.progress-text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.category-badge {
+  display: inline-block;
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  background-color: var(--color-bg-5);
+  color: var(--color-text);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--color-primary);
+  transition: width var(--duration-normal) var(--ease-standard);
+  border-radius: var(--radius-full);
+}
+
+/* Question Section */
+.question-section {
+  margin-bottom: var(--space-32);
+}
+
+.question-header {
+  margin-bottom: var(--space-24);
+}
+
+.question-number {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-8);
+}
+
+.question-text {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  line-height: 1.4;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.option-btn {
+  width: 100%;
+  padding: var(--space-16);
+  text-align: left;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-base);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.option-btn:hover {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-1);
+}
+
+.option-btn.selected {
+  border-color: var(--color-primary);
+  background-color: var(--color-bg-1);
+}
+
+.option-btn:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+}
+
+.option-letter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-secondary);
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.option-btn.selected .option-letter {
+  background-color: var(--color-primary);
+  color: var(--color-btn-primary-text);
+}
+
+/* Navigation */
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-16);
+  margin-top: var(--space-24);
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  gap: var(--space-12);
+}
+
+/* Results Screen */
+.results-screen {
+  text-align: center;
+}
+
+.results-screen h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-16);
+  color: var(--color-text);
+}
+
+.iq-score-display {
+  background: linear-gradient(135deg, var(--color-bg-1), var(--color-bg-5));
+  border-radius: var(--radius-lg);
+  padding: var(--space-32);
+  margin: var(--space-24) 0;
+}
+
+.iq-score-number {
+  font-size: 72px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--space-8);
+}
+
+.iq-score-label {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+}
+
+.score-interpretation {
+  background-color: var(--color-bg-3);
+  border-radius: var(--radius-base);
+  padding: var(--space-16);
+  margin: var(--space-24) 0;
+}
+
+.score-interpretation h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-8);
+  color: var(--color-text);
+}
+
+.percentile {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+}
+
+.category-breakdown {
+  text-align: left;
+  margin: var(--space-32) 0;
+}
+
+.category-breakdown h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-20);
+  color: var(--color-text);
+}
+
+.category-item {
+  margin-bottom: var(--space-20);
+}
+
+.category-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-8);
+}
+
+.category-name {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text);
+}
+
+.category-score {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-primary);
+}
+
+.category-bar {
+  width: 100%;
+  height: 12px;
+  background-color: var(--color-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.category-bar-fill {
+  height: 100%;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+  transition: width 0.6s var(--ease-standard);
+}
+
+.results-actions {
+  display: flex;
+  gap: var(--space-16);
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: var(--space-32);
+}
+
+/* Review Section */
+.review-section {
+  text-align: left;
+}
+
+.review-section h2 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-24);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.review-question {
+  background-color: var(--color-bg-1);
+  border-radius: var(--radius-base);
+  padding: var(--space-20);
+  margin-bottom: var(--space-16);
+}
+
+.review-question-header {
+  font-size: var(--font-size-base);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-8);
+}
+
+.review-question-text {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-16);
+}
+
+.review-answer {
+  margin-bottom: var(--space-12);
+  font-size: var(--font-size-base);
+}
+
+.review-answer.correct {
+  color: var(--color-success);
+}
+
+.review-answer.incorrect {
+  color: var(--color-error);
+}
+
+.review-explanation {
+  background-color: var(--color-surface);
+  border-left: 3px solid var(--color-primary);
+  padding: var(--space-12);
+  margin-top: var(--space-12);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  border-radius: var(--radius-sm);
+}
+
+.hidden {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .app-container {
+    padding: var(--space-16);
+  }
+
+  .test-card {
+    padding: var(--space-20);
+  }
+
+  .intro-screen h1 {
+    font-size: var(--font-size-3xl);
+  }
+
+  .iq-score-number {
+    font-size: 56px;
+  }
+
+  .navigation {
+    flex-direction: column;
+  }
+
+  .nav-left,
+  .nav-right {
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="app-container">
+        <div class="test-card">
+            <!-- Intro Screen -->
+            <div id="intro-screen" class="intro-screen">
+                <h1>IQ Test</h1>
+                <p>Measure your cognitive abilities across multiple domains with this comprehensive assessment.</p>
+                
+                <div class="test-info">
+                    <h3>What to Expect:</h3>
+                    <ul>
+                        <li>25 questions across 5 cognitive domains</li>
+                        <li>Logical Reasoning</li>
+                        <li>Verbal Comprehension</li>
+                        <li>Spatial Visualization</li>
+                        <li>Mathematical Reasoning</li>
+                        <li>Pattern Recognition</li>
+                        <li>Approximately 30-40 minutes to complete</li>
+                        <li>Detailed results with category breakdown</li>
+                    </ul>
+                </div>
+
+                <p style="margin-top: var(--space-24); color: var(--color-text-secondary); font-size: var(--font-size-sm);">Find a quiet place, eliminate distractions, and work at a comfortable pace. You can navigate between questions, but try to answer each one thoughtfully.</p>
+
+                <button class="btn btn--primary" onclick="startTest()" style="margin-top: var(--space-24);">Begin Test</button>
+            </div>
+
+            <!-- Test Screen -->
+            <div id="test-screen" class="hidden">
+                <div class="progress-section">
+                    <div class="progress-header">
+                        <span class="progress-text" id="progress-text">Question 1 of 25</span>
+                        <span class="category-badge" id="category-badge">Logical Reasoning</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill" style="width: 0%;"></div>
+                    </div>
+                </div>
+
+                <div class="question-section">
+                    <div class="question-header">
+                        <div class="question-number" id="question-number">Question 1</div>
+                        <div class="question-text" id="question-text"></div>
+                    </div>
+
+                    <div class="options-container" id="options-container"></div>
+                </div>
+
+                <div class="navigation">
+                    <div class="nav-left">
+                        <button class="btn btn--secondary" onclick="previousQuestion()" id="prev-btn" disabled>Previous</button>
+                    </div>
+                    <div class="nav-right">
+                        <button class="btn btn--secondary" onclick="skipQuestion()">Skip</button>
+                        <button class="btn btn--primary" onclick="nextQuestion()" id="next-btn">Next</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div id="results-screen" class="results-screen hidden">
+                <h2>Your IQ Test Results</h2>
+                
+                <div class="iq-score-display">
+                    <div class="iq-score-number" id="iq-score">120</div>
+                    <div class="iq-score-label">IQ Score</div>
+                </div>
+
+                <div class="score-interpretation">
+                    <h3 id="interpretation-title">Above Average</h3>
+                    <p class="percentile" id="percentile-text">You scored higher than 85% of test takers</p>
+                </div>
+
+                <div class="category-breakdown">
+                    <h3>Performance by Category</h3>
+                    <div id="category-results"></div>
+                </div>
+
+                <div class="results-actions">
+                    <button class="btn btn--primary" onclick="showReview()">Review Answers</button>
+                    <button class="btn btn--secondary" onclick="retakeTest()">Retake Test</button>
+                </div>
+            </div>
+
+            <!-- Review Screen -->
+            <div id="review-screen" class="review-section hidden">
+                <h2>Answer Review</h2>
+                <div id="review-container"></div>
+                <div class="results-actions">
+                    <button class="btn btn--primary" onclick="backToResults()">Back to Results</button>
+                    <button class="btn btn--secondary" onclick="retakeTest()">Retake Test</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Test data
+        const testData = {
+            logical_reasoning: [
+                {
+                    question: "If all roses are flowers, and all flowers are plants, then all roses are definitely plants.",
+                    options: ["True", "False", "Cannot determine", "Partially true"],
+                    correct: 0,
+                    explanation: "This follows the logical chain: roses → flowers → plants, so the conclusion is True."
+                },
+                {
+                    question: "A ball is placed in box A. The box is placed in box B. Box B is placed in box C. Where is the ball?",
+                    options: ["In box A", "In box B", "In box C", "Outside all boxes"],
+                    correct: 0,
+                    explanation: "The ball remains in box A. The boxes are nested, but the ball's location doesn't change."
+                },
+                {
+                    question: "What comes next in the sequence: 2, 5, 10, 17, 26, ?",
+                    options: ["35", "36", "37", "38"],
+                    correct: 2,
+                    explanation: "The pattern is n² + 1. So: 1²+1=2, 2²+1=5, 3²+1=10, 4²+1=17, 5²+1=26, 6²+1=37"
+                },
+                {
+                    question: "All programmers are logical. John is logical. Therefore, John is a programmer.",
+                    options: ["True", "False", "Cannot determine", "Insufficient information"],
+                    correct: 2,
+                    explanation: "This is a logical fallacy. Being logical doesn't mean you must be a programmer."
+                },
+                {
+                    question: "If A = 3, B = 6, C = 9, D = 12, what is E?",
+                    options: ["13", "14", "15", "16"],
+                    correct: 2,
+                    explanation: "Each letter represents a multiple of 3. A=3(1), B=3(2), C=3(3), D=3(4), E=3(5)=15"
+                }
+            ],
+            verbal_comprehension: [
+                {
+                    question: "What is a synonym for 'ephemeral'?",
+                    options: ["Permanent", "Temporary", "Ancient", "Beautiful"],
+                    correct: 1,
+                    explanation: "Ephemeral means lasting for a very short time; temporary is the closest match."
+                },
+                {
+                    question: "Which word does NOT belong in this group?",
+                    options: ["Jubilant", "Elated", "Melancholy", "Ecstatic"],
+                    correct: 2,
+                    explanation: "Jubilant, elated, and ecstatic all express joy. Melancholy expresses sadness."
+                },
+                {
+                    question: "What is the meaning of 'meticulous'?",
+                    options: ["Careless", "Showing great attention to detail", "Hasty", "Obvious"],
+                    correct: 1,
+                    explanation: "Meticulous means very careful and precise; showing great attention to detail."
+                },
+                {
+                    question: "Serendipity most closely means:",
+                    options: ["Coincidence", "The occurrence of events by chance in a happy way", "Luck", "Fate"],
+                    correct: 1,
+                    explanation: "Serendipity refers to finding something valuable by chance—a fortunate discovery."
+                },
+                {
+                    question: "Select the word that best completes the analogy: Cat is to Feline as Dog is to:",
+                    options: ["Animal", "Canine", "Pet", "Mammal"],
+                    correct: 1,
+                    explanation: "Cat is to Feline (the taxonomic family) as Dog is to Canine (the taxonomic family)."
+                }
+            ],
+            spatial_visualization: [
+                {
+                    question: "A cube is painted on all sides and then cut into 27 smaller cubes. How many have no paint?",
+                    options: ["1", "6", "8", "12"],
+                    correct: 0,
+                    explanation: "Only the center cube (1) is completely surrounded and unpainted. The 3x3x3 cube has 1 unpainted center."
+                },
+                {
+                    question: "If you fold a flat cross pattern into a cube, which face is opposite to the top face?",
+                    options: ["Bottom face in the pattern", "The face directly below in the pattern", "The face two squares away", "Cannot be determined"],
+                    correct: 0,
+                    explanation: "In a standard cube net (cross pattern), the top and bottom faces of the pattern become opposite faces."
+                },
+                {
+                    question: "You are facing north. You turn right 90°, then left 45°. Which direction are you facing?",
+                    options: ["Northeast", "Southeast", "Southwest", "Northwest"],
+                    correct: 0,
+                    explanation: "Facing north, turn right 90° = facing east. Turn left 45° from east = facing northeast."
+                },
+                {
+                    question: "A piece of paper is folded in half twice, then a corner is cut off. How many holes will there be when unfolded?",
+                    options: ["1", "2", "3", "4"],
+                    correct: 3,
+                    explanation: "Each fold doubles the layers. Two folds = 4 layers, so cutting once creates 4 holes."
+                },
+                {
+                    question: "Which 3D shape has exactly 12 edges?",
+                    options: ["Cube", "Pyramid", "Cylinder", "Sphere"],
+                    correct: 0,
+                    explanation: "A cube has 12 edges (4 on top, 4 on bottom, 4 vertical connecting edges)."
+                }
+            ],
+            mathematical_reasoning: [
+                {
+                    question: "If 2x + 5 = 17, what is x?",
+                    options: ["4", "5", "6", "7"],
+                    correct: 2,
+                    explanation: "2x + 5 = 17. Subtract 5: 2x = 12. Divide by 2: x = 6"
+                },
+                {
+                    question: "What is 15% of 80?",
+                    options: ["10", "12", "15", "20"],
+                    correct: 1,
+                    explanation: "15% of 80 = 0.15 × 80 = 12"
+                },
+                {
+                    question: "If a train travels at 60 mph for 2.5 hours, how far does it travel?",
+                    options: ["120 miles", "150 miles", "180 miles", "200 miles"],
+                    correct: 1,
+                    explanation: "Distance = Speed × Time = 60 × 2.5 = 150 miles"
+                },
+                {
+                    question: "What is the next number? 1, 1, 2, 3, 5, 8, 13, ?",
+                    options: ["18", "19", "20", "21"],
+                    correct: 3,
+                    explanation: "This is the Fibonacci sequence where each number is the sum of the two before it. 8 + 13 = 21"
+                },
+                {
+                    question: "A rectangle has a length of 12 cm and a width of 5 cm. What is its area?",
+                    options: ["17 cm²", "34 cm²", "60 cm²", "120 cm²"],
+                    correct: 2,
+                    explanation: "Area of rectangle = length × width = 12 × 5 = 60 cm²"
+                }
+            ],
+            pattern_recognition: [
+                {
+                    question: "What comes next? A, B, D, G, K, ?",
+                    options: ["O", "P", "Q", "R"],
+                    correct: 1,
+                    explanation: "Pattern: A(+1)B(+2)D(+3)G(+4)K(+4)P. The gaps increase: +1, +2, +3, +4, +4."
+                },
+                {
+                    question: "O is to 15 as X is to ?",
+                    options: ["20", "22", "24", "26"],
+                    correct: 2,
+                    explanation: "O is the 15th letter of alphabet. X is the 24th letter."
+                },
+                {
+                    question: "What number should replace the question mark? 4, 16, 64, ?",
+                    options: ["128", "256", "384", "512"],
+                    correct: 1,
+                    explanation: "Each number is multiplied by 4. 4×4=16, 16×4=64, 64×4=256"
+                },
+                {
+                    question: "Complete the pattern: 3, 6, 12, 24, ?",
+                    options: ["36", "42", "48", "54"],
+                    correct: 2,
+                    explanation: "Each number is doubled. 3×2=6, 6×2=12, 12×2=24, 24×2=48"
+                },
+                {
+                    question: "What comes next? 1, 4, 9, 16, 25, ?",
+                    options: ["30", "35", "36", "40"],
+                    correct: 2,
+                    explanation: "These are perfect squares: 1², 2², 3², 4², 5², 6² = 36"
+                }
+            ]
+        };
+
+        // State management
+        let currentQuestionIndex = 0;
+        let allQuestions = [];
+        let userAnswers = [];
+        let startTime;
+
+        // Category names mapping
+        const categoryNames = {
+            logical_reasoning: "Logical Reasoning",
+            verbal_comprehension: "Verbal Comprehension",
+            spatial_visualization: "Spatial Visualization",
+            mathematical_reasoning: "Mathematical Reasoning",
+            pattern_recognition: "Pattern Recognition"
+        };
+
+        // Initialize test
+        function startTest() {
+            // Flatten all questions and add category info
+            allQuestions = [];
+            Object.keys(testData).forEach(category => {
+                testData[category].forEach(q => {
+                    allQuestions.push({
+                        ...q,
+                        category: category
+                    });
+                });
+            });
+
+            // Initialize user answers array
+            userAnswers = new Array(allQuestions.length).fill(null);
+            
+            // Reset state
+            currentQuestionIndex = 0;
+            startTime = Date.now();
+
+            // Show test screen
+            document.getElementById('intro-screen').classList.add('hidden');
+            document.getElementById('test-screen').classList.remove('hidden');
+
+            // Display first question
+            displayQuestion();
+        }
+
+        // Display current question
+        function displayQuestion() {
+            const question = allQuestions[currentQuestionIndex];
+            const totalQuestions = allQuestions.length;
+
+            // Update progress
+            document.getElementById('progress-text').textContent = `Question ${currentQuestionIndex + 1} of ${totalQuestions}`;
+            document.getElementById('progress-fill').style.width = `${((currentQuestionIndex + 1) / totalQuestions) * 100}%`;
+            document.getElementById('category-badge').textContent = categoryNames[question.category];
+
+            // Update question
+            document.getElementById('question-number').textContent = `Question ${currentQuestionIndex + 1}`;
+            document.getElementById('question-text').textContent = question.question;
+
+            // Update options
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach((option, index) => {
+                const optionBtn = document.createElement('button');
+                optionBtn.className = 'option-btn';
+                if (userAnswers[currentQuestionIndex] === index) {
+                    optionBtn.classList.add('selected');
+                }
+                optionBtn.onclick = () => selectOption(index);
+                
+                const letterSpan = document.createElement('span');
+                letterSpan.className = 'option-letter';
+                letterSpan.textContent = String.fromCharCode(65 + index);
+                
+                const textSpan = document.createElement('span');
+                textSpan.textContent = option;
+                
+                optionBtn.appendChild(letterSpan);
+                optionBtn.appendChild(textSpan);
+                optionsContainer.appendChild(optionBtn);
+            });
+
+            // Update navigation buttons
+            document.getElementById('prev-btn').disabled = currentQuestionIndex === 0;
+            document.getElementById('next-btn').textContent = currentQuestionIndex === totalQuestions - 1 ? 'Finish' : 'Next';
+        }
+
+        // Select an option
+        function selectOption(index) {
+            userAnswers[currentQuestionIndex] = index;
+            displayQuestion();
+        }
+
+        // Skip question
+        function skipQuestion() {
+            userAnswers[currentQuestionIndex] = null;
+            nextQuestion();
+        }
+
+        // Next question
+        function nextQuestion() {
+            if (currentQuestionIndex < allQuestions.length - 1) {
+                currentQuestionIndex++;
+                displayQuestion();
+            } else {
+                // Test complete, show results
+                calculateResults();
+            }
+        }
+
+        // Previous question
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                displayQuestion();
+            }
+        }
+
+        // Calculate results
+        function calculateResults() {
+            // Calculate score
+            let correctCount = 0;
+            let categoryScores = {};
+            
+            // Initialize category scores
+            Object.keys(categoryNames).forEach(cat => {
+                categoryScores[cat] = { correct: 0, total: 0 };
+            });
+
+            // Count correct answers
+            allQuestions.forEach((question, index) => {
+                const category = question.category;
+                categoryScores[category].total++;
+                
+                if (userAnswers[index] === question.correct) {
+                    correctCount++;
+                    categoryScores[category].correct++;
+                }
+            });
+
+            // Calculate IQ score
+            const rawScore = correctCount;
+            const totalQuestions = allQuestions.length;
+            const percentage = (rawScore / totalQuestions) * 100;
+            
+            // Convert to IQ scale (mean=100, SD=15)
+            // This is a simplified conversion
+            let iqScore = Math.round(85 + (percentage / 100) * 30);
+            
+            // Ensure IQ is within reasonable bounds
+            iqScore = Math.max(70, Math.min(145, iqScore));
+
+            // Calculate percentile (simplified)
+            let percentile;
+            if (iqScore >= 130) percentile = 98;
+            else if (iqScore >= 120) percentile = 91;
+            else if (iqScore >= 110) percentile = 75;
+            else if (iqScore >= 100) percentile = 50;
+            else if (iqScore >= 90) percentile = 25;
+            else if (iqScore >= 80) percentile = 9;
+            else percentile = 2;
+
+            // Get interpretation
+            let interpretation;
+            if (iqScore >= 130) interpretation = "Very Superior";
+            else if (iqScore >= 120) interpretation = "Superior";
+            else if (iqScore >= 110) interpretation = "High Average";
+            else if (iqScore >= 90) interpretation = "Average";
+            else if (iqScore >= 80) interpretation = "Low Average";
+            else interpretation = "Below Average";
+
+            // Display results
+            document.getElementById('iq-score').textContent = iqScore;
+            document.getElementById('interpretation-title').textContent = interpretation;
+            document.getElementById('percentile-text').textContent = `You scored higher than ${percentile}% of test takers`;
+
+            // Display category breakdown
+            const categoryResultsContainer = document.getElementById('category-results');
+            categoryResultsContainer.innerHTML = '';
+            
+            Object.keys(categoryScores).forEach(category => {
+                const score = categoryScores[category];
+                const percentage = (score.correct / score.total) * 100;
+                
+                const categoryDiv = document.createElement('div');
+                categoryDiv.className = 'category-item';
+                
+                categoryDiv.innerHTML = `
+                    <div class="category-header">
+                        <span class="category-name">${categoryNames[category]}</span>
+                        <span class="category-score">${score.correct}/${score.total}</span>
+                    </div>
+                    <div class="category-bar">
+                        <div class="category-bar-fill" style="width: ${percentage}%;"></div>
+                    </div>
+                `;
+                
+                categoryResultsContainer.appendChild(categoryDiv);
+            });
+
+            // Show results screen
+            document.getElementById('test-screen').classList.add('hidden');
+            document.getElementById('results-screen').classList.remove('hidden');
+        }
+
+        // Show review
+        function showReview() {
+            const reviewContainer = document.getElementById('review-container');
+            reviewContainer.innerHTML = '';
+
+            allQuestions.forEach((question, index) => {
+                const userAnswer = userAnswers[index];
+                const isCorrect = userAnswer === question.correct;
+                const wasAnswered = userAnswer !== null;
+
+                const reviewDiv = document.createElement('div');
+                reviewDiv.className = 'review-question';
+                
+                let userAnswerText = wasAnswered ? question.options[userAnswer] : 'Not answered';
+                let correctAnswerText = question.options[question.correct];
+                
+                reviewDiv.innerHTML = `
+                    <div class="review-question-header">
+                        Question ${index + 1} - ${categoryNames[question.category]}
+                    </div>
+                    <div class="review-question-text">${question.question}</div>
+                    <div class="review-answer ${isCorrect ? 'correct' : 'incorrect'}">
+                        <strong>Your answer:</strong> ${userAnswerText} ${isCorrect ? '✓' : '✗'}
+                    </div>
+                    ${!isCorrect ? `<div class="review-answer correct"><strong>Correct answer:</strong> ${correctAnswerText}</div>` : ''}
+                    <div class="review-explanation">
+                        <strong>Explanation:</strong> ${question.explanation}
+                    </div>
+                `;
+                
+                reviewContainer.appendChild(reviewDiv);
+            });
+
+            document.getElementById('results-screen').classList.add('hidden');
+            document.getElementById('review-screen').classList.remove('hidden');
+        }
+
+        // Back to results
+        function backToResults() {
+            document.getElementById('review-screen').classList.add('hidden');
+            document.getElementById('results-screen').classList.remove('hidden');
+        }
+
+        // Retake test
+        function retakeTest() {
+            document.getElementById('results-screen').classList.add('hidden');
+            document.getElementById('review-screen').classList.add('hidden');
+            document.getElementById('intro-screen').classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>

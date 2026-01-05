@@ -1,0 +1,34 @@
+{
+    "project_name": "AI-MasterMind-Alliance",
+    "version": "1.0.0",
+    "environment": "production",
+    "cloud_resources": {
+        "google_drive": {
+            "root_folder_name": "AICC",
+            "subfolders": [
+                "Blueprints",
+                "Tasks",
+                "Logs",
+                "Errors"
+            ]
+        },
+        "n8n": {
+            "webhook_base": "https://infinitexzeroai.app.n8n.cloud/webhook",
+            "endpoints": {
+                "blueprint_ingest": "aicc/blueprint",
+                "task_update": "aicc/task-update"
+            }
+        },
+        "linear": {
+            "team_id": "AI",
+            "project_label": "AICC-Auto"
+        },
+        "notion": {
+            "database_id": "80c821589a934569887e8cc339eb0ecb"
+        },
+        "github": {
+            "repo": "infinitexzero-AI/AI-MasterMind-Alliance",
+            "branch": "main"
+        }
+    }
+}
