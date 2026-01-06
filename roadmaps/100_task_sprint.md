@@ -14,13 +14,13 @@ Goal: "Who is doing what?" - Establish the global source of truth for agent stat
 | 001 | Initialize `knowledge.db` | Antigravity | [x] | Create SQLite schema for agents/tasks. |
 | 002 | Agent ID Standardization | Valentine | [x] | Finalize UUID/slugs for all 7 agents. |
 | 003 | Registry Sync Script | Antigravity | [x] | Automate JSON -> SQLite registry mirroring. |
-| 004 | Heartbeat Monitor | Comet | [ ] | Periodic check of agent responsiveness. |
+| 004 | Heartbeat Monitor | Comet | [/] | Periodic check of agent responsiveness. |
 | 005 | Registry Dashboard UI | Antigravity | [x] | Simple glassmorphism view of active nodes. |
-| 006 | Capability Audit | Claude | [ ] | Map precise toolsets to each agent ID. |
+| 006 | Capability Audit | Claude | [/] | Map precise toolsets to each agent ID. |
 | 007 | System Telemetry Table | Antigravity | [x] | Schema for logging event latencies. |
-| 008 | Log Aggregator | Grok | [ ] | Consolidate logs into a searchable index. |
+| 008 | Log Aggregator | Grok | [/] | Consolidate logs into a searchable index. |
 | 009 | Health Check (v1.1) | Antigravity | [x] | Script to verify filesystem health. |
-| 010 | Node Auto-Discovery | Valentine | [ ] | Pattern for agents to signal arrival. |
+| 010 | Node Auto-Discovery | Valentine | [/] | Pattern for agents to signal arrival. |
 | 011 | State Snapshot Utility | Claude | [ ] | Zip current context/ to backup. |
 | 012 | Observer Role Definition | Gemini | [ ] | Protocol for "Auditor" agent access. |
 | 013 | Task History Indexing | Antigravity | [x] | Migration of legacy tasks to new db. |
@@ -36,9 +36,9 @@ Goal: "Who is doing what?" - Establish the global source of truth for agent stat
 
 ## 🚩 Current Focus
 
-1. **DB Sync Reliability:** Ensuring `knowledge.db` remains 100% consistent with `/context`.
-2. **Registry UI:** Visualizing the alliance so Joel can see the hierarchy.
-3. **Claude 2am Readiness:** Preparing all SOPs for when Claude returns to reasoning.
+1. **Storage Optimization (Hippocampus):** Critical disk space (1GiB). Purging duplicates and migrating to LaCie/iCloud.
+2. **DB Sync Reliability:** Ensuring `knowledge.db` remains 100% consistent with `/context`.
+3. **Registry UI:** Visualizing the alliance so Joel can see the hierarchy.
 
 ---
 

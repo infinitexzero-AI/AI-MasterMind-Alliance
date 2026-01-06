@@ -4,7 +4,7 @@
   "system_integrity": "ok",
   "config_integrity": "ok",
   "storage_status": "ok",
-  "available_gb": 1,
+  "available_gb": 5.8,
   "agent_service": "active",
   "agents": {
     "valentine": {
@@ -28,5 +28,5 @@
       "last_heartbeat": "2026-01-02T17:00:19.678620"
     }
   },
-  "last_check": "2026-01-05T14:01:26.158654"
+  "last_check": "2026-01-06T05:17:56Z"
 }

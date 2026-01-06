@@ -1,48 +1,49 @@
 {
 	"folders": [
 		{
-			"name": "🔱 ALLIANCE HQ (Master)",
+			"name": "🚀 MOTHERSHIP (ROOT)",
 			"path": "."
 		},
 		{
-			"name": "🛰️ AILCC CORE",
+			"name": "⚙️ CORE ENGINE (SWARM)",
+			"path": "AI-MasterMind-Alliance"
+		},
+		{
+			"name": "🧠 AILCC LOGIC",
 			"path": "01_Areas/Codebases/ailcc"
-		},
-		{
-			"name": "🎓 SCHOLAR PROTOCOL",
-			"path": "01_Areas/modes"
-		},
-		{
-			"name": "⚙️ SYSTEM ENGINE",
-			"path": "06_System"
 		},
 		{
 			"name": "📜 INTELLIGENCE VAULT",
 			"path": "04_Intelligence_Vault"
 		},
 		{
-			"name": "🗂️ AREAS",
-			"path": "01_Areas"
+			"name": "🎓 ACADEMIC RECORDS",
+			"path": "04_Intelligence_Vault/Hardship_Chronicles/Academic_Records"
 		},
 		{
-			"name": "💾 RESOURCES",
-			"path": "02_Resources"
+			"name": "📊 SYSTEM DASHBOARD",
+			"path": "01_Areas/Codebases/ailcc/dashboard"
 		},
 		{
-			"name": "📂 PROJECTS",
-			"path": "00_Projects"
+			"name": "📡 SYSTEM LOGS",
+			"path": "logs"
 		}
 	],
 	"settings": {
 		"workbench.colorCustomizations": {
 			"activityBar.background": "#0F172A",
+			"sideBar.background": "#0F172A",
 			"titleBar.activeBackground": "#1E293B",
 			"titleBar.activeForeground": "#38BDF8"
 		},
 		"files.exclude": {
 			"**/.DS_Store": true,
 			"**/node_modules": true,
-			"**/.next": true
+			"**/.next": true,
+			"**/.git": true
+		},
+		"files.readonlyInclude": {
+			"**/04_Intelligence_Vault/Hardship_Chronicles/Academic_Records/**": true
 		}
 	}
 }

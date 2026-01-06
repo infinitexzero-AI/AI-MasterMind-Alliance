@@ -34,5 +34,41 @@
     "status": "pending",
     "priority": "critical",
     "updated_at": "2025-12-30 15:58:00"
+  },
+  {
+    "id": "AI001-22",
+    "title": "Administrative Appeal: 2023 Withdrawal Restoration",
+    "description": "Execute the 2023 Withdrawal Appeal for Joel Palk-Ricard. Submit the evidence bundle to the Registrar/Meighen Centre.",
+    "assignee": "comet",
+    "status": "pending",
+    "priority": "high",
+    "updated_at": "2026-01-06 03:24:48"
+  },
+  {
+    "id": "AI001-21",
+    "title": "[VALENTINE] NEXUS UI Refinement & Interaction Polish",
+    "description": "Refine NEXUS UI components and polish interaction patterns for the AIMmA dashboard.",
+    "assignee": "valentine",
+    "status": "pending",
+    "priority": "medium",
+    "updated_at": "2026-01-06 03:24:48"
+  },
+  {
+    "id": "AI001-20",
+    "title": "[SCHOLAR] BSc Core Biology Audit & Roadmap Synthesis",
+    "description": "Perform deep audit of BSc core biology credits and synthesize the final 2027 roadmap.",
+    "assignee": "scholar",
+    "status": "pending",
+    "priority": "medium",
+    "updated_at": "2026-01-06 03:24:48"
+  },
+  {
+    "id": "AI001-19",
+    "title": "[ANTIGRAVITY] Storage Migration Protocol Implementation",
+    "description": "Implement the core storage migration protocol (Phase 1) for the unified vault.",
+    "assignee": "antigravity",
+    "status": "pending",
+    "priority": "high",
+    "updated_at": "2026-01-06 03:24:48"
   }
 ]

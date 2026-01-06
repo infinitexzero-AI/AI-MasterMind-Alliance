@@ -9,8 +9,20 @@ DB_PATH = "/Users/infinite27/Antigravity/knowledge.db"
 JSON_PATH = "/Users/infinite27/AILCC_PRIME/web_tasks.json"
 REGISTRY_JSON_PATH = "/Users/infinite27/AILCC_PRIME/agents/registry.json"
 
+DRY_RUN = False
+
+def log(msg):
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] {msg}")
+
 def get_db_connection():
-    return sqlite3.connect(DB_PATH)
+    try:
+        if not os.path.exists(DB_PATH):
+            log(f"ERROR: Database not found at {DB_PATH}")
+            return None
+        return sqlite3.connect(DB_PATH)
+    except sqlite3.Error as e:
+        log(f"ERROR: Could not connect to database: {e}")
+        return None
 
 def load_json_file(path):
     if not os.path.exists(path):
