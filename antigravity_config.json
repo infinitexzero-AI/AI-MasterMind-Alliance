@@ -18,6 +18,11 @@
     "gemini_images": {
       "enabled": true,
       "provider": "vertex_ai"
+    },
+    "memory_bridge": {
+      "enabled": true,
+      "hook_script": "scripts/auto_context_sorter.py",
+      "auto_archive": true
     }
   }
 }

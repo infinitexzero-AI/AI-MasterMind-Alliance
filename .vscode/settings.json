@@ -10,7 +10,8 @@
         "**/dist": false,
         "**/.next": true,
         "**/build": false,
-        "**/.venv": false
+        "**/.venv": false,
+        "04_Archive": true
     },
     "search.exclude": {
         "**/node_modules": true,
@@ -21,7 +22,8 @@
         "**/.git": true,
         "**/.DS_Store": true,
         "**/*.lock": true,
-        "**/*.min.js": true
+        "**/*.min.js": true,
+        "04_Archive": true
     },
     "files.watcherExclude": {
         "**/.git/objects/**": true,
@@ -31,7 +33,8 @@
         "**/.venv/**": true,
         "**/dist/**": true,
         "**/build/**": true,
-        "**/coverage/**": true
+        "**/coverage/**": true,
+        "04_Archive/**": true
     },
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "vscode.typescript-language-features",
