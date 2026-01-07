@@ -68,5 +68,7 @@
     "files.associations": {
         "*.md": "markdown",
         "*.css": "tailwindcss"
-    }
+    },
+    "css.lint.unknownAtRules": "ignore",
+    "scss.lint.unknownAtRules": "ignore"
 }
