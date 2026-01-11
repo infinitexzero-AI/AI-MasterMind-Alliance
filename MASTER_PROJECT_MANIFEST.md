@@ -72,3 +72,6 @@ The **AILCC (AI Lifecycle Command Center)** is a unified project designed to ach
 - **Shared Workspace**: `/Users/infinite27/AILCC_PRIME`
 
 > **"The consolidation is complete. We are no longer a collection of scripts; we are a Singular Project with a Singular Goal. Lock In." — Valentine**
+
+## Neurobiological Architecture Model
+- [System Architecture Deep Dive](./docs/system_architecture_neuroscience_model.md)

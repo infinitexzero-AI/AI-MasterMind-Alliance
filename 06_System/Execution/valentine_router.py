@@ -18,15 +18,15 @@ def log(message):
     with open(LOG_FILE, "a") as f:
         f.write(entry + "\n")
 
+from slm_router import SLMRouter
+
+# Initialize SLM Component
+slm = SLMRouter()
+
 def classify_agent(description):
-    desc = description.lower()
-    if any(k in desc for k in ["scrape", "search", "web", "find"]):
-        return "comet"
-    if any(k in desc for k in ["code", "script", "implement", "fix", "debug"]):
-        return "antigravity"
-    if any(k in desc for k in ["analyze", "summary", "draft", "reconcile"]):
-        return "claude"
-    return "valentine"
+    analysis = slm.classify_task(description)
+    log(f"SLM Analysis: {analysis['category']} ({analysis['complexity']}) -> {analysis['route']}")
+    return analysis.get('target', 'valentine')
 
 def process_inbox():
     if not os.path.exists(INBOX):

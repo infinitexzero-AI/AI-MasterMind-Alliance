@@ -9,10 +9,21 @@ Tasks are classified into one of these buckets:
 | Category | Agent | Keywords | Description |
 | :--- | :--- | :--- | :--- |
 | **CODE** | Antigravity | `fix, implement, refactor, debug, python, script` | Deep technical implementation and IDE actions. |
-| **LOGIC** | Claude | `analyze, summary, plan, reconcile, drafting` | Complex reasoning, document synthesis, and brainstorming. |
+| **LOGIC** | Claude | `analyze, summary, plan, reconcile, drafting` | Complex reasoning, document synthesis, and text-based drafting. |
+| **MULTIMODAL** | Gemini | `pdf, image, ocr, extract, multimodal, analyze docs` | PDF analysis, visual processing, and documentation extraction. |
 | **WEB** | Comet | `scrape, search, find, extract, pulse, check` | Real-time data retrieval and web-based research. |
 | **JUDGMENT** | Valentine | `approve, prioritize, route, decide, budget` | High-level system strategy and resource allocation. |
 | **SYNC** | System | `backup, mirror, archive, setup` | Maintenance and background infrastructure tasks. |
+
+## 🕹️ Multi-Agent Delegation Flow (The "Handshake")
+
+When a task requires high-level coordination, the following sequence applies:
+
+1. **Strategist (Valentine)**: Initiates the need (e.g., "We need to appeal this grade").
+2. **Orchestrator (Antigravity)**: Receives the intent and delegates:
+   - To **Claude** for the core narrative and reasoning.
+   - To **Gemini** if PDFs or evidence documentation are required.
+3. **Execution**: The agent generates the draft and identifies optimal attachments.
 
 ## 🛤️ Routing Algorithm (Pseudocode)
 
