@@ -8,3 +8,7 @@
 | **EV-04** | Email Nov 1, 2023 | Proof of institutional block / loan suspension. |
 | **EV-05** | RCMP Misconduct Benchmark | Context for employment vulnerability during 2023. |
 | **EV-06** | Systematic Barriers Log | Detailed chronological roadmap and pattern analysis. |
+| **EV-07** | Winter 2026 Enrollment | Confirmation of current integration at Mount Allison. |
+| **EV-08** | NSLSC Funding 2025 | Proof of financial eligibility and government backing. |
+| **EV-09** | CRA Tax History Audit | Verification of long-term educational engagement. |
+| **EV-10** | COMM 3611 Syllabus | Documentation of academic rigour (Fall 2025). |
