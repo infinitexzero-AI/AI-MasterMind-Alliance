@@ -1,33 +1,106 @@
 {
-  "student": {
-    "name": "Joel Palk-Ricard",
-    "id": "0260004",
-    "degree": "BSc Biopsychology"
+  "student_profile": {
+    "name": "Joel",
+    "program": "BSc Biology",
+    "institution": "Mount Allison University"
   },
-  "progress": {
+  "degree_progress": {
+    "degree": "BSc Biology",
+    "major": "Biology",
+    "total_credits_required": 120,
+    "credits_completed": 114,
     "credits_earned": 114,
-    "credits_total": 120,
-    "percentage": 95,
+    "credits_remaining": 6,
+    "current_gpa": 0,
+    "status": "In Progress",
+    "completion_percentage": 95,
+    "graduation_readiness": "95%"
+  },
+  "semester_breakdown": {
+    "completed_semesters": 7,
+    "current_semester": "Winter 2026",
     "remaining_courses": [
-      "MATH 1311",
-      "HLTH 1011"
+      "BIOL4XXX - Senior Seminar (3 credits)",
+      "ELEC4XXX - Elective (3 credits)"
     ]
   },
-  "deadlines": [
+  "courses": [
     {
-      "task": "Winter 2026 Registration",
-      "date": "2026-01-15",
-      "status": "URGENT"
+      "code": "COMM 3611",
+      "name": "Commercial Law",
+      "exam_date": "2025-12-17T19:00:00",
+      "active_topics": [],
+      "covered_topics": [
+        "Torts",
+        "Contracts",
+        "Property",
+        "Business Orgs",
+        "Employment"
+      ],
+      "deliverables": [
+        {
+          "title": "Final Grade",
+          "due_date": "2025-12-20",
+          "status": "Completed"
+        }
+      ]
     },
     {
-      "task": "Hardship Settlement Appeal",
-      "date": "2026-01-30",
-      "status": "RESOLVED_PENDING_PORTAL",
-      "resolution_date": "2026-01-04"
+      "code": "VMCS 1201",
+      "name": "Visual Culture",
+      "exam_date": "N/A",
+      "active_topics": [],
+      "covered_topics": [
+        "All Modules"
+      ],
+      "deliverables": [
+        {
+          "title": "Final Portfolio",
+          "due_date": "2025-12-15",
+          "status": "Completed"
+        }
+      ]
+    },
+    {
+      "code": "INDG 2881",
+      "name": "Indigenous Studies",
+      "exam_date": "N/A",
+      "active_topics": [],
+      "covered_topics": [
+        "All Modules"
+      ],
+      "deliverables": [
+        {
+          "title": "Final Reflection",
+          "due_date": "2025-12-18",
+          "status": "Completed"
+        }
+      ]
     }
   ],
-  "gpa": {
-    "cumulative": 3.8,
-    "standing": "Good"
-  }
+  "appeal_evidence": {
+    "status": "EVIDENCE_STAGED",
+    "last_sync": "2026-01-11T22:45:00Z",
+    "vault_links": [
+      {
+        "id": "EVD_001",
+        "title": "MTA_Winter2026_Enrollment_Confirmation.pdf",
+        "path": "/04_Intelligence_Vault/EVD_001_MTA_Enrollment.pdf",
+        "agent_signature": "Scholar"
+      },
+      {
+        "id": "EVD_002",
+        "title": "NSLSC_Funding_Approval_2025.pdf",
+        "path": "/04_Intelligence_Vault/EVD_002_NSLSC.pdf",
+        "agent_signature": "Sentinel"
+      },
+      {
+        "id": "EVD_003",
+        "title": "CRA_T2202_Tax_History_Audit.json",
+        "path": "/04_Intelligence_Vault/EVD_003_CRA.json",
+        "agent_signature": "Scribe"
+      }
+    ]
+  },
+  "last_updated": "2026-01-11T22:45:00Z"
 }

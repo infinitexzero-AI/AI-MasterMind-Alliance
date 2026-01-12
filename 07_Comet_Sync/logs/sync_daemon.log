@@ -1,0 +1,8 @@
+[2026-01-12T02:45:53.086954Z] [INFO] Sync daemon started
+[2026-01-12T02:45:53.087841Z] [INFO] ============================================================
+[2026-01-12T02:45:53.087917Z] [INFO] Starting sync cycle
+[2026-01-12T02:45:53.087972Z] [INFO] Exporting Comet history...
+[2026-01-12T02:45:53.088270Z] [INFO] Exporting Antigravity history...
+[2026-01-12T02:45:53.092557Z] [WARNING] Antigravity DB not found at /Users/infinite27/.antigravity/workspace.db
+[2026-01-12T02:45:53.099776Z] [INFO] MAS Broadcast: {"timestamp": "2026-01-12T02:45:53.092749Z", "comet": {"source": "comet", "count": 0}, "antigravity": {"source": "antigravity", "count": 0}, "total_synced": 0}
+[2026-01-12T02:45:53.099869Z] [INFO] Sync cycle complete: 0 items

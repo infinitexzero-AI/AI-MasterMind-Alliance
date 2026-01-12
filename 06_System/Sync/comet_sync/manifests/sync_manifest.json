@@ -1,0 +1,33 @@
+{
+  "sync_id": "SY-1768184992",
+  "version": "1.0",
+  "status": "INITIALIZED",
+  "last_sync": "2026-01-11T22:29:52",
+  "entities": {
+    "antigravity": {
+      "role": "Lead Architect / Executor",
+      "status": "ACTIVE",
+      "workspace": "/Users/infinite27/AILCC_PRIME"
+    },
+    "comet": {
+      "role": "Strategic Overseer",
+      "status": "STANDBY",
+      "workspace": "Perplexity_Cloud_Space"
+    }
+  },
+  "protocols": {
+    "n8n": {
+      "enabled": true,
+      "endpoint": "http://localhost:5678/webhook/sync"
+    },
+    "github": {
+      "enabled": false,
+      "repo": "TBD"
+    }
+  },
+  "watched_paths": [
+    "/Users/infinite27/AILCC_PRIME/tasks",
+    "/Users/infinite27/AILCC_PRIME/06_System/State",
+    "/Users/infinite27/.gemini/antigravity/brain"
+  ]
+}
