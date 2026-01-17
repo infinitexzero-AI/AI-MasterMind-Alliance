@@ -30,6 +30,13 @@
 * **System Component**: **API Gateway / MCP Server**
 * **Role**: Routing external inputs (User, Web) to the appropriate processing center (Agent).
 
+### 5. Limbic System (Emotional & Capture Processing)
+
+* **System Component**: **Valentine Companion (iPhone)**
+* **Role**: "Capture Hub" for raw ideas, emotional context, and rapid inputs.
+* **Analogy**: The limbic system processes emotional responses and memory formation; Valentine captures the "spark" of an idea before it's sent to the Prefrontal Cortex (Core) for processing.
+* **Visual Reference**: Deep structures (Amygdala/Hippocampus) - Verify in scan.
+
 ## Integration Notes
 
 This mapping guides the "Visual Intelligence" phase. Future dashboard iterations should overlay these labels directly onto the rendered 3D brain model.
