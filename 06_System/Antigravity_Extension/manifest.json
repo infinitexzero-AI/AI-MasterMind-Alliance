@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Antigravity Link",
+  "version": "1.0",
+  "description": "Neural Link between Comet/Chrome and the AICC System Bridge.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "nativeMessaging",
+    "storage"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Antigravity Command"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}

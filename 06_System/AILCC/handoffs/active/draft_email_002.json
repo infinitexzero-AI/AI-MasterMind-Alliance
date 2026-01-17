@@ -1,0 +1,18 @@
+{
+  "sender": "antigravity",
+  "recipient": "antigravity",
+  "content": {
+    "task_id": "draft_email_002",
+    "description": "Draft an email for an Academic Appeal Request (email_002) with PDF attachments. Delegate to Claude for text and Gemini for grade verification.",
+    "context": {
+      "queue_id": "email_002",
+      "target": "regoffice@mta.ca",
+      "subject": "Appeal for Retroactive Withdrawal and Correction of Scholastic Standing - Joel Palk-Ricard (026004)"
+    }
+  },
+  "metadata": {
+    "priority": "high",
+    "timestamp": "2026-01-09T20:17:00Z",
+    "processed_by": "valentine_router"
+  }
+}

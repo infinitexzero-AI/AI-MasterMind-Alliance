@@ -1,7 +1,7 @@
 {
   "daily_limit": 5.0,
   "current_spend": 0.0,
-  "last_reset": "2026-01-04",
+  "last_reset": "2026-01-11",
   "status": "HEALTHY",
   "agents": {
     "grok": {

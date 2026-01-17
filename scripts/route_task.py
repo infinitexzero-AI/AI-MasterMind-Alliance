@@ -36,9 +36,14 @@ def classify_agent(description):
     desc = description.lower()
     if any(k in desc for k in ["scrape", "search", "web", "find"]):
         return "comet"
+    if any(k in desc for k in ["pdf", "image", "ocr", "multimodal", "attachment"]):
+        return "gemini"
     if any(k in desc for k in ["code", "script", "implement", "fix", "debug"]):
         return "antigravity"
     if any(k in desc for k in ["analyze", "summary", "draft", "reconcile"]):
+        # If it's a draft but mentions a PDF/attachment, routing to Antigravity for delegation is preferred
+        if "pdf" in desc or "attachment" in desc:
+            return "antigravity"
         return "claude"
     return "valentine"
 

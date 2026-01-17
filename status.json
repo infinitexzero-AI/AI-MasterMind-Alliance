@@ -26,7 +26,15 @@
       "status": "ACTIVE",
       "task": "Monitoring Digital Sync (15m Interval)",
       "last_heartbeat": "2026-01-02T17:00:19.678620"
+    },
+    "orchestrator": {
+      "status": "OFFLINE",
+      "last_heartbeat": "2026-01-12T03:05:56.591048"
+    },
+    "context_orchestrator": {
+      "status": "OFFLINE",
+      "last_heartbeat": "2026-01-11T21:51:44.526165"
     }
   },
-  "last_check": "2026-01-06T05:17:56Z"
+  "last_check": "2026-01-12T03:05:56.594210"
 }

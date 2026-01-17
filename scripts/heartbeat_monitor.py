@@ -14,11 +14,15 @@ EXEC_FILE = os.path.join(ROOT_DIR, "ailcc-launch.sh")
 
 # Mapping of agent names to their script file names or process identifiers
 AGENT_PROCESSES = {
-    "valentine": "valentine.py", # Placeholder assuming it runs valentine.py
-    "antigravity": "antigravity.py",
+    "orchestrator": "ailcc_orchestrator.py",
+    "context_orchestrator": "context_orchestrator.py",
     "web_daemon": "web_daemon.py",
-    "sync_daemon": "sync_daemon.py"
+    "sync_daemon": "sync_daemon.py",
+    "system_relay": "system_relay.py"
 }
+
+LAST_RESTART_TIME = 0
+RESTART_COOLDOWN = 300 # 5 minutes cooldown between system-wide restarts
 
 def log(message):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
@@ -42,11 +46,19 @@ def is_process_running(process_name):
 
 def attempt_restart(agent_name):
     """Attempts to restart the system or specific agent."""
+    global LAST_RESTART_TIME
+    current_time = time.time()
+    
+    if current_time - LAST_RESTART_TIME < RESTART_COOLDOWN:
+        log(f"⏳ Cooldown active. Skipping restart for '{agent_name}'.")
+        return
+
     log(f"⚠️ FAILURE DETECTED: Agent '{agent_name}' is offline. Attempting system-wide convergence...")
     try:
         # Triggering the launcher to restore all services
         subprocess.Popen(["bash", EXEC_FILE], start_new_session=True)
         log(f"🚀 Launch sequence triggered for restoration.")
+        LAST_RESTART_TIME = current_time
     except Exception as e:
         log(f"❌ Restart failed: {e}")
 

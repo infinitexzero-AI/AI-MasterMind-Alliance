@@ -1,0 +1,28 @@
+2026-01-10 02:22:55,157 [INFO] 🚀 Starting Neural Relay v2.0 on 0.0.0.0:3001
+2026-01-10 02:22:55,539 [INFO] server listening on 0.0.0.0:3001
+2026-01-10 02:23:01,807 [INFO] connection open
+2026-01-10 02:23:01,824 [INFO] 🔗 Client Connected: ('127.0.0.1', 59286)
+2026-01-10 02:32:02,984 [INFO] connection open
+2026-01-10 02:32:03,334 [INFO] 🔗 Client Connected: ('127.0.0.1', 60001)
+2026-01-10 03:17:33,626 [INFO] connection open
+2026-01-10 03:17:33,687 [INFO] 🔗 Client Connected: ('127.0.0.1', 62387)
+2026-01-10 03:17:38,011 [INFO] connection open
+2026-01-10 03:17:38,016 [INFO] 🔗 Client Connected: ('127.0.0.1', 62391)
+2026-01-10 03:42:21,088 [INFO] connection open
+2026-01-10 03:42:21,106 [INFO] 🔗 Client Connected: ('127.0.0.1', 63178)
+2026-01-10 03:42:21,199 [INFO] 📨 Received: {'type': 'AGENT_HEARTBEAT', 'payload': {'name': 'SLM_ROUTER', 'status': 'ACTIVE', 'role': 'Classification'}}
+2026-01-10 03:50:20,412 [INFO] connection open
+2026-01-10 03:50:20,466 [INFO] 🔗 Client Connected: ('127.0.0.1', 63542)
+2026-01-10 15:59:44,485 [INFO] connection open
+2026-01-10 15:59:44,555 [INFO] 🔗 Client Connected: ('127.0.0.1', 55467)
+2026-01-10 15:59:44,615 [INFO] 📨 Received: {'type': 'AGENT_HEARTBEAT', 'payload': {'name': 'SLM_ROUTER', 'status': 'ACTIVE', 'role': 'Classification'}}
+2026-01-10 16:36:51,562 [INFO] connection open
+2026-01-10 16:36:51,685 [INFO] 🔗 Client Connected: ('127.0.0.1', 55886)
+2026-01-10 16:38:01,565 [INFO] connection open
+2026-01-10 16:38:01,686 [INFO] 🔗 Client Connected: ('127.0.0.1', 55916)
+2026-01-10 16:39:22,822 [INFO] connection open
+2026-01-10 16:39:22,851 [INFO] 🔗 Client Connected: ('127.0.0.1', 56025)
+2026-01-10 16:51:17,448 [INFO] ❌ Client Disconnected
+2026-01-10 16:51:17,510 [ERROR] Broadcast Error: sent 1011 (internal error) keepalive ping timeout; no close frame received
+2026-01-10 16:52:20,810 [INFO] connection open
+2026-01-10 16:52:20,829 [INFO] 🔗 Client Connected: ('127.0.0.1', 56284)

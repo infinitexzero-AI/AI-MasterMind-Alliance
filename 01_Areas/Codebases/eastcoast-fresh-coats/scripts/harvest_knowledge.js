@@ -1,5 +1,4 @@
 import fs from 'fs';
-import path from 'path';
 
 // Protocol Alpha: Knowledge Extraction
 // Target: master_index.json

@@ -23,8 +23,7 @@ SCRIPTS = [
     ("EXEC", "nexus_server.py"),
     ("EXEC", "sync_daemon.py"),
     ("SCRIPT", "route_task.py"),
-    ("SCRIPT", "log_scout.py"),
-    ("SCRIPT", "maintenance_scheduler.sh")
+    ("SCRIPT", "log_scout.py")
 ]
 SCRIPTS_DIR = f"{ROOT}/scripts"
 DB_PATH = "/Users/infinite27/AILCC_PRIME/06_System/State/knowledge-base.db"
@@ -75,6 +74,10 @@ def launch_core():
         else:
             path = f"{SCRIPTS_DIR}/{script}"
             
+        if is_process_running(script):
+            log(f"⚠️ {script} is already running. Skipping.")
+            continue
+
         log(f"⚡ Launching {script} in background...")
         try:
             # Polymorphic launcher: Handles .py via python3 and .sh via bash

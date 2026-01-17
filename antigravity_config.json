@@ -1,6 +1,7 @@
 {
   "system": {
-    "version": "1.0.0",
+    "version": "1.0.4",
+    "protocols": ["UCP-P"],
     "workspace_root": "/Users/infinite27/AILCC_PRIME",
     "autonomy_level": 5,
     "feedback_loop_enabled": true,

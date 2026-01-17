@@ -54,7 +54,7 @@ class SyncDaemon:
         try:
             conn = sqlite3.connect(db_path)
             cursor = conn.cursor()
-            cursor.execute("SELECT COUNT(*) FROM conversations WHERE updated_at > datetime('now', '-1 hour')")
+            cursor.execute("SELECT COUNT(*) FROM conversations WHERE last_updated > datetime('now', '-1 hour')")
             count = cursor.fetchone()[0]
             conn.close()
             self.log(f"Antigravity: {count} new conversations")

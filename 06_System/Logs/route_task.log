@@ -1,0 +1,6 @@
+[2026-01-08 19:22:53] [VALENTINE] Valentine Router Service v1.1 Initialized.
+Traceback (most recent call last):
+  File "/Users/infinite27/AILCC_PRIME/scripts/route_task.py", line 91, in <module>
+    time.sleep(10)
+    ~~~~~~~~~~^^^^
+KeyboardInterrupt

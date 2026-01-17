@@ -24,6 +24,18 @@ def check_disk_space(path):
     total, used, free = shutil.disk_usage(path)
     return free // (2**30) # GB
 
+def get_size(path):
+    if os.path.isfile(path):
+        return os.path.getsize(path) / (1024**3)
+    total_size = 0
+    for dirpath, dirnames, filenames in os.walk(path):
+        for f in filenames:
+            fp = os.path.join(dirpath, f)
+            # skip if it is symbolic link
+            if not os.path.islink(fp):
+                total_size += os.path.getsize(fp)
+    return total_size / (1024**3) # GB
+
 def migrate_data():
     log_event("🚀 Starting Dual-Drive Nexus Migration...")
     
@@ -43,7 +55,12 @@ def migrate_data():
         basename = os.path.basename(source)
         dest = os.path.join(DESTINATION_HUB, basename)
         
-        log_event(f"📦 Migrating {source} -> {dest}...")
+        try:
+            size_gb = get_size(source)
+            log_event(f"📦 Migrating {source} ({size_gb:.2f} GB) -> {dest}...")
+        except Exception as e:
+            log_event(f"⚠️ Could not calculate size for {source}: {e}")
+            log_event(f"📦 Migrating {source} -> {dest}...")
         
         # Using rsync for safe transfer
         try:

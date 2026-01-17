@@ -1,0 +1,18 @@
+{
+  "sender": "antigravity",
+  "recipient": "antigravity",
+  "content": {
+    "task_id": "draft_email_003",
+    "description": "Draft an email for a Loan Account Review Request (email_003) with PDF attachments. Delegate to Claude for text and Gemini for multimodal document processing.",
+    "context": {
+      "queue_id": "email_003",
+      "target": "nslsc@servicecorp.ca",
+      "subject": "Loan Account Review Request \u2013 Academic Disruptions and Pending University Appeal"
+    }
+  },
+  "metadata": {
+    "priority": "normal",
+    "timestamp": "2026-01-09T20:17:00Z",
+    "processed_by": "valentine_router"
+  }
+}

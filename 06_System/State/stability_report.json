@@ -1,0 +1,8 @@
+{
+  "timestamp": "2026-01-12T01:22:07Z",
+  "health_category": "CRITICAL",
+  "recent_crashes":        6,
+  "sigtrap_events":        0,
+  "top_cpu": "%CPU%",
+  "uptime": ""
+}

@@ -1,0 +1,63 @@
+
+> dev
+> next dev
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Users/infinite27/AILCC_PRIME/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/package-lock.json
+   * /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/package-lock.json
+
+▲ Next.js 16.1.1 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://10.0.0.244:3000
+- Environments: .env.local
+
+✓ Starting...
+✓ Ready in 17.2s
+○ Compiling /agents ...
+ GET /agents 200 in 17.3s (compile: 16.1s, render: 1149ms)
+node(94800) MallocStackLogging: can't turn off malloc stack logging because it was not enabled.
+✓ Compiled in 8.6s
+ HEAD /agents 200 in 18.8s (compile: 14.1s, render: 4.7s)
+○ Compiling /system ...
+ HEAD /system 200 in 28.3s (compile: 26.5s, render: 1803ms)
+ HEAD /comet 200 in 6.6s (compile: 3.4s, render: 3.2s)
+ HEAD /agents 200 in 4.2s (compile: 1380ms, render: 2.8s)
+ HEAD /system 200 in 2.1s (compile: 1150ms, render: 975ms)
+ HEAD /agents 200 in 3.7s (compile: 1452ms, render: 2.3s)
+ HEAD /agents 200 in 3.5s (compile: 1055ms, render: 2.5s)
+○ Compiling / ...
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+ GET / 200 in 9.0s (compile: 7.6s, render: 1449ms)
+The width(-1) and height(-1) of chart should be greater than 0,
+       please check the style of container, or the props width(100%) and height(100%),
+       or add a minWidth(0) or minHeight(undefined) or use aspect(undefined) to control the
+       height and width.
+ GET / 200 in 1265ms (compile: 402ms, render: 864ms)
+ GET /api/budget 304 in 1724ms (compile: 1145ms, render: 579ms)
+ GET /api/macros 304 in 1713ms (compile: 1701ms, render: 12ms)
+ GET /api/context 304 in 1656ms (compile: 1647ms, render: 9ms)
+ GET /api/context 304 in 149ms (compile: 71ms, render: 78ms)
+ GET /api/budget 304 in 48ms (compile: 22ms, render: 27ms)
+ GET /api/budget 304 in 46ms (compile: 30ms, render: 17ms)
+ GET /api/budget 304 in 63ms (compile: 24ms, render: 39ms)
+ GET /nexus 200 in 9.1s (compile: 4.5s, render: 4.6s)
+ GET /api/budget 304 in 27ms (compile: 7ms, render: 20ms)
+ GET /nexus 200 in 2.8s (compile: 96ms, render: 2.7s)
+ GET /central-command 200 in 3.1s (compile: 2.4s, render: 776ms)
+ GET /central-command 200 in 1623ms (compile: 792ms, render: 832ms)
+✓ Compiled in 15s
+✓ Compiled in 18.4s
+✓ Finished writing to filesystem cache in 35.5s
+○ Compiling /api/monitor/health ...
+ GET /api/monitor/status 200 in 3.4s (compile: 2.8s, render: 616ms)
+ GET /api/monitor/health 200 in 7.8s (compile: 2.2s, render: 5.6s)
+✓ Compiled in 9.9s
+✓ Compiled in 8.6s
+✓ Compiled in 9.9s

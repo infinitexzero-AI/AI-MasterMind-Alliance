@@ -54,6 +54,11 @@ Adapters share a unified structure:
 - Endpoint: `https://api.x.ai/v1/chat/completions`
 - Real + mock mode
 
+### 2.4 Replit Adapter (Phase 6)
+- Endpoint: `https://api.replit.com/v1/repls` (Mock)
+- Role: Cloud Sandbox & Prototyping
+- Real + mock mode
+
 ---
 
 # 3. ConfigLoader

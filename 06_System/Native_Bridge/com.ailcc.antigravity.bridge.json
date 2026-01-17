@@ -1,0 +1,9 @@
+{
+  "name": "com.ailcc.antigravity.bridge",
+  "description": "Antigravity Bridge Host",
+  "path": "/Users/infinite27/AILCC_PRIME/06_System/Native_Bridge/bridge_host.py",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://kkedoppemlmaimecgpcieigdemdkjeca/"
+  ]
+}

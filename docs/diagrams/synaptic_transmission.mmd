@@ -1,0 +1,29 @@
+graph TB
+    subgraph "Presynaptic Terminal (Source Agent)"
+        A1[Task Generation]
+        A2[Package as JSON]
+        A3[Release to Queue]
+    end
+    
+    subgraph "Synaptic Cleft (Message Queue)"
+        B1[Redis Buffer]
+        B2[Task Serialization]
+        B3[Priority Sorting]
+    end
+    
+    subgraph "Postsynaptic Terminal (Target Agent)"
+        C1[Task Receipt]
+        C2[Deserialize Context]
+        C3[Execute Function]
+        C4[Generate Response]
+    end
+    
+    A1 --> A2 --> A3
+    A3 --> B1 --> B2 --> B3
+    B3 --> C1 --> C2 --> C3 --> C4
+    
+    C4 -.->|Feedback| A1
+    
+    style A3 fill:#22c55e,stroke:#16a34a
+    style B2 fill:#3b82f6,stroke:#1d4ed8
+    style C1 fill:#f97316,stroke:#ea580c

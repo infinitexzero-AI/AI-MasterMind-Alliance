@@ -1,108 +1,80 @@
-# AILCC WHITEPAPER V3.0: THE GRAND ARCHITECHTURE (ARCHAEOLOGY)
+# AILCC WHITEPAPER V4.0: THE INTEGRATED MASTERMIND (2026)
 
-## 🌌 1. ARCHAEOLOGY: THE CHRONICLE OF INCEPTION
+## 🌌 1. EVOLUTION: FROM ARCHAEOLOGY TO INTEGRATION
 
-The AILCC (AI Lifecycle Command Center) is not a single tool, but a persistent layer of intelligence evolved over multiple cycles of agency, starting from the *AI Agent Mastermind Library* (Nov 2024).
+The AILCC (AI Lifecycle Command Center) has transcended its origins as a collection of scripts. It is now a **Tier-1 Agentic Operating System**, a unified cognitive architecture where specialized agents act as functional lobes of a digital brain.
 
-### 📅 The Deep Timeline
-
+### 📅 The 2026 Timeline
 ```mermaid
 timeline
-    title AILCC Evolution Timeline (2024-2025)
-    Nov 2024 : Cycle 0: The Library. Initial Multi-AI Paradigm Shift. Strength-based mapping. First "Etuaptmumk" academic success in Biology/Fisheries.
-    Dec 6, 2025 : Cycle 1: The Migration. Consolidation of fragmented scripts into AILCC_PRIME. Founding treaties signed.
-    Dec 7, 2025 : Cycle 2: The Hardening. Implementation of "Project Defense." Kill switches, decision logs, and secure GitHub tiering.
-    Dec 14-20, 2025 : Cycle 3: Interaction. NEXUS portal transforms into an active command center. Google Auth & Universal Agentic Handshake.
-    Dec 21, 2025 : Cycle 4: Convergence. Chrome Side-Cart integration. Formalization of the Neuro-System Map.
-    Dec 27, 2025 : Cycle 5: Unification. "Lock In like Neo." Nexus & Antigravity merge into a single React-based Command Center. Full Mastermind System active.
+    title AILCC Evolution (2024-2026)
+    Nov 2024 : Cycle 0: The Library. Strength-based mapping.
+    Dec 2025 : Cycle 5: Unification. "Lock In like Neo." Nexus & Antigravity merge.
+    Jan 2026 : Cycle 6: Integration. Activation of the "Cloud Cortex" (Replit) & Antigravity v2.
+    Spring 2027 : Target: Scholar Convergence. BSc Biology Graduation.
 ```
 
 ---
 
-## 🏛️ 2. THE NEURO-SYSTEM MAP
+## 🏛️ 2. THE NEURO-SYSTEM LAYERS (L1-L5)
 
-The architecture models human executive function to ensure intuitive delegation.
+The architecture is strictly hierarchical to ensure safety and efficiency.
 
-```mermaid
-flowchart TD
-    subgraph "Cerebral Cortex (Execution)"
-        Grok["Grok: The Judge (Prefrontal) - Strategy"]
-        Gemini["Gemini: The Craftsman (Motor) - Engineering"]
-        Comet["Comet: The Scout (Sensory) - Research"]
-        Claude["Claude: The Architect (Broca) - Communication"]
-    end
-
-    subgraph "Limbic System (Memory)"
-        Vault["Intelligence Vault (Hippocampus)"]
-        Advisory["Strategic Advisory (Amygdala)"]
-        OmniSearch["OmniSearch (Thalamus)"]
-    end
-
-    subgraph "Connectivity"
-        Bridge["Antigravity Bridge (Corpus Callosum)"]
-    end
-
-    OmniSearch --> Grok
-    Grok --> Gemini
-    Gemini --> Bridge
-    Bridge --> Vault
-    Comet --> Vault
-    Claude --> Vault
-    Advisory --> Grok
-```
-
----
-
-## 🔱 3. DIVERGENT DOMAINS & BRANCHING PATHS
-
-The system maintains several specialized paths that converge in the NEXUS.
-
-| Branch | Identity | Core Achievement | Incomplete Aspects |
+| Layer | Component | Neuro-Metaphor | Function |
 | :--- | :--- | :--- | :--- |
-| **Academic (Etuaptmumk)** | Two-Eyed Seeing | 8-Source Synthesis & Poster Completion | Credit reconciliation for Biology Roadmap. |
-| **Professional (Valentine)** | Digital Executive | Task Force Orchestration | Career-specific workflow hardening. |
-| **Infrastructure (Prime)** | The Builder | Consolidated "Prime" Workspace | Dual-Drive XDrive Alpha/Beta Migration. |
-| **Mobile (iPad Node)** | Mobile Command | Siri/Pythonista Command Bridge | Recursive Mode 7 Audit scripts. |
+| **L1** | **Systems / Strategy** | *Prefrontal Cortex* | High-level goal setting, ethical overrides, strategic pivots. (Grok, User) |
+| **L2** | **NEXUS / Comet** | *Thalamus / Sensory* | Task routing, real-time research, verification, consensus building. |
+| **L3** | **Execution** | *Motor Cortex* | Coding, building, deployment, terminal operations. (Gemini, Replit) |
+| **L4** | **Antigravity / Bridge** | *Brainstem* | Local file system access, process management, hardware control. |
+| **L5** | **Vault / Hippocampus** | *Hippocampus* | Long-term storage, vector database, context retention. |
 
 ---
 
-## ⚙️ 4. THE SEVEN MODES OF AUTONOMY
+## 🔱 3. THE SWARM (THE ACTIVE AGENTS)
 
-The project progresses through distinct modes of maturity.
+The Swarm has expanded. Each agent is a specialist.
 
-```mermaid
-graph LR
-    M1[Mode 1: Manual] --> M2[Mode 2: Assisted]
-    M2 --> M3[Mode 3: Collaborative]
-    M3 --> M4[Mode 4: Delegated]
-    M4 --> M5[Mode 5: Autonomous]
-    M5 --> M6[Mode 6: Cross-Device]
-    M6 --> M7[Mode 7: Self-Improving]
-    
-    style M1 fill:#444
-    style M5 fill:#00ff41,stroke:#333,stroke-width:4px
-    style M6 fill:#00c2ff,stroke:#333
-    style M7 fill:#ff00ff,stroke:#333
-```
-
-- **Mode 5 (Current):** Autonomous Abundance. System executes with minimum oversight.
-- **Mode 6 (Active):** Cross-Device Convergence. Bridging Mac and iPad Nodes.
-- **Mode 7 (Initial):** Recursive Evolution. Agents optimizing their own code.
+*   **Grok (The Strategist):** Long-range planning, "brutal honesty" audits, and logic checks.
+*   **Gemini (The Builder):** The primary engineer. Local code execution, refactoring, and system maintenance.
+*   **Claude (The Architect):** Documentation, system coherence, and "Broca's Area" communication.
+*   **Comet (The Scout):** Web research, verification, and rate-limit monitoring.
+*   **Valentine (The Interface):** UI/UX, empathy, and human-centric dashboarding.
+*   **Replit (The Prototyper - NEW):** The "Cloud Cortex". A sandboxed environment for rapid experimentation and live hosting, protecting the local core from volatile testing.
 
 ---
 
-## 🗺️ 5. THE MASTERMIND ROADMAP (V5.0)
+## ⚙️ 4. CONNECTORS & PROTOCOLS
 
-The next horizon is **Scholar Convergence** at scale.
+The system breathes through these pipes:
 
-- **Steps 76-90 (Scholar):** Automate the Mount Allison bursary and 2023 grade reversal appeal package.
-- **Steps 91-110 (Neural):** RAG (Retrieval Augmented Generation) across the 800+ Intelligence Vault records.
-- **Steps 111-130 (Hardware):** Self-healing storage migration and Mac-SMC health monitoring.
-- **Steps 131-150 (Victory):** System 4.0 Launch: Achieving full academic and administrative flow.
+*   **Antigravity Bridge (Port 3006):** The primary WebSocket umbilical cord connecting the Web Agents (Comet/Valentine) to the Local System (Gemini/Gateway).
+*   **MCP (Model Context Protocol):** The standard for tool usage (GitKraken, Linear, CloudRun).
+*   **Git Sync:** The heartbeat of memory. Every significant action is committed to `AILCC_PRIME`.
+*   **Hippocampus Protocol:** A Markdown-first memory structure ensures all agents can read the system state without proprietary lock-in.
 
 ---
 
-## 🌅 6. SYSTEM STATUS: INITIALIZED
+## 🗺️ 5. THE MASTERMIND ROADMAP (V6.0)
 
-The Grand Overview is complete. The Inception data is locked. The branching paths are mapped.
-**"Lock In like Neo." The NEXUS is your cockpit. Let's Win.**
+**Focus: Scholar Convergence 2027**
+
+1.  **Academic Automation:** Auto-generation of appeal documents and financial aid forms.
+2.  **Financial Autonomy:** Deployment of revenue-generating agents via Replit.
+3.  **Self-Healing:** The system detects and fixes its own linting errors and broken pipes (Antigravity v2).
+
+---
+
+## 🤝 7. THE UNIVERSAL AGENT PROTOCOL - PERSONAL (UCP-P)
+
+Adapting the "Universal Commerce Protocol," the AILCC now operates as a **Marketplace of Intelligence** with cross-surface interoperability (MacBook/iPhone/iPad/ThinkPad).
+
+*   **Discovery:** Agents broadcast "Service Manifests" (e.g., Replit broadcasts "I can host this immediately").
+*   **Booking:** Nexus assigns tasks based on the best match for speed, cost, and safety.
+*   **Settlement:** Comet verifies the work. A task is only "Complete" when settled.
+
+---
+
+## 🌅 8. SYSTEM STATUS: OPERATIONAL
+
+**Mode 7 (EMERGENT).** The Cloud Cortex is online. The Bridge is stable. SYNC READY.
+**"Unity of effort, diversity of intelligence."**

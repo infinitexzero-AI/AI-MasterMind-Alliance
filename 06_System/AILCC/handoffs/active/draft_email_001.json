@@ -1,0 +1,18 @@
+{
+  "sender": "antigravity",
+  "recipient": "antigravity",
+  "content": {
+    "task_id": "draft_email_001",
+    "description": "Draft an email for an Emergency Bursary Request (email_001) with PDF attachments. Delegate to Claude for text and Gemini for attachment verification.",
+    "context": {
+      "queue_id": "email_001",
+      "target": "financialaid@mta.ca",
+      "subject": "URGENT: Emergency Bursary Request & Financial Hardship - Joel Palk-Ricard (026004)"
+    }
+  },
+  "metadata": {
+    "priority": "high",
+    "timestamp": "2026-01-09T20:17:00Z",
+    "processed_by": "valentine_router"
+  }
+}
