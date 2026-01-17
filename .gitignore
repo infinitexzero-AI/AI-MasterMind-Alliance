@@ -5,3 +5,5 @@ node_modules/
 
 dist/
 dashboard/.next/
+04_Intelligence_Vault/Archive/*.zip
+03_Archives/SystemLogs/*.log
