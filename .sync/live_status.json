@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-01-21T16:08:40Z",
+  "system": {
+    "hostname": "Macbook-1.local",
+    "uptime_seconds": ,
+    "load_avg": "27.48",
+    "disk_free_percent": 65
+  },
+  "services": {
+    "valentine_core": "online",
+    "dashboard": "online"
+  },
+  "last_optimization": "2026-01-21T16:08:40Z"
+}
