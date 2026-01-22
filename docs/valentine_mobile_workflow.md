@@ -58,4 +58,6 @@ Always:
 
 ---
 
-*Last Updated: 2026-01-20*
+---
+
+> Last Updated: 2026-01-20
