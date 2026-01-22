@@ -99,7 +99,7 @@ done
 
 # List top memory consumers
 log "Top 5 Memory Consumers:"
-ps aux --sort=-%mem | head -6 | tail -5 | while read line; do
+ps aux | sort -rn -k 4 | head -5 | while read -r line; do
     log "  $line" | awk '{print $4"% MEM - "$11}'
 done
 
@@ -122,22 +122,47 @@ if command -v npm &> /dev/null; then
 fi
 
 # ==============================================================================
-# 6. OBSERVABILITY CONFIGURATION
+# 6. CRASH SCOUT (Chromium Detection)
+# ==============================================================================
+log "--- CRASH SCOUT ---"
+
+CRASH_REPORTS_DIR="$HOME/Library/Logs/DiagnosticReports"
+RECENT_CRASHES=$(find "$CRASH_REPORTS_DIR" -name "*.ips" -mtime -1 \( -name "Google Chrome*" -o -name "Comet*" \) 2>/dev/null)
+
+if [ -n "$RECENT_CRASHES" ]; then
+    warn "Detected recent Chromium crash(es):"
+    while read -r crash; do
+        log "  [CRASH] $(basename "$crash")"
+    done <<< "$RECENT_CRASHES"
+    CRASH_FLAG="true"
+else
+    log "No recent Chromium crashes detected."
+    CRASH_FLAG="false"
+fi
+
+# ==============================================================================
+# 7. OBSERVABILITY CONFIGURATION
 # ==============================================================================
 log "--- OBSERVABILITY CONFIGURATION ---"
 
 # Ensure logs directory exists
 mkdir -p "$LOG_DIR"
 
-# Create live_status.json if not exists
+# Create live_status.json
 LIVE_STATUS_FILE="/Users/infinite27/AILCC_PRIME/.sync/live_status.json"
 mkdir -p "$(dirname "$LIVE_STATUS_FILE")"
+
+# macOS compatible uptime calculation
+BOOT_TIME=$(sysctl -n kern.boottime | awk '{print $4}' | tr -d ',')
+CURRENT_TIME=$(date +%s)
+UPTIME_SEC=$((CURRENT_TIME - BOOT_TIME))
+
 cat > "$LIVE_STATUS_FILE" << EOF
 {
   "timestamp": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
   "system": {
     "hostname": "$(hostname)",
-    "uptime_seconds": $(sysctl -n kern.boottime | awk '{print systime() - $4}' | tr -d ','),
+    "uptime_seconds": $UPTIME_SEC,
     "load_avg": "$(sysctl -n vm.loadavg | awk '{print $2}')",
     "disk_free_percent": $(df / | tail -1 | awk '{print 100 - $5}' | tr -d '%')
   },
@@ -145,13 +170,17 @@ cat > "$LIVE_STATUS_FILE" << EOF
     "valentine_core": "$(lsof -i :3002 > /dev/null 2>&1 && echo "online" || echo "offline")",
     "dashboard": "$(lsof -i :3000 > /dev/null 2>&1 && echo "online" || echo "offline")"
   },
-  "last_optimization": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")"
+  "last_optimization": "$(date -u +"%Y-%m-%dT%H:%M:%SZ")",
+  "alerts": {
+    "chromium_crash": $CRASH_FLAG,
+    "n8n_check": "$(lsof -i :3002 > /dev/null 2>&1 && echo "stable" || echo "unstable")"
+  }
 }
 EOF
 success "live_status.json updated"
 
 # ==============================================================================
-# 7. INTEROPERABILITY CHECK
+# 8. INTEROPERABILITY CHECK
 # ==============================================================================
 log "--- INTEROPERABILITY CHECK ---"
 
@@ -176,8 +205,9 @@ else
     log "Hippocampus/Qdrant (port 6333): OFFLINE (optional)"
 fi
 
+
 # ==============================================================================
-# 8. FINAL REPORT
+# 9. FINAL REPORT
 # ==============================================================================
 log "=========================================="
 log "OPTIMIZATION COMPLETE"
