@@ -245,3 +245,634 @@ Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260121_120838.log
 [2026-01-22 08:33:17] ==========================================
 [2026-01-22 08:33:17] --- SYSTEM STATUS SNAPSHOT ---
 [2026-01-22 08:33:17] Hostname: Macbook-1.local
+[2026-01-23 04:00:00] ==========================================
+[2026-01-23 04:00:00] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-01-23 04:00:00] ==========================================
+[2026-01-23 04:00:00] --- SYSTEM STATUS SNAPSHOT ---
+[2026-01-23 04:00:00] Hostname: Macbook-1.local
+[2026-01-23 04:00:00] macOS: 15.7.3
+[2026-01-23 04:00:00] Uptime:  4:00  up 12:35, 1 user, load averages: 11.15 23.49 33.89
+[2026-01-23 04:00:00] Disk Usage: 44% used (14Gi free)
+[2026-01-23 04:00:00] RAM: 8 GB
+[2026-01-23 04:00:00] Load Avg: 11.15 23.49 33.89
+[2026-01-23 04:00:00] --- MEMORY OPTIMIZATION ---
+[2026-01-23 04:00:00] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-01-23 04:00:01] User caches cleaned: 784M -> 784M
+[2026-01-23 04:00:01] --- BROWSER OPTIMIZATION ---
+[2026-01-23 04:00:01] Delegating to optimize_browsers.sh...
+[2026-01-23 04:00:01] Starting Browser Optimization Sequence...
+[2026-01-23 04:00:01] Detected Google Chrome Version: 144.0.7559.97
+[2026-01-23 04:00:01] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v144)
+[2026-01-23 04:00:01] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-23 04:00:01] Detected Comet Version: 143.2.7499.37648
+[2026-01-23 04:00:01] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v143)
+[2026-01-23 04:00:01] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-23 04:00:01] [WARNING] Google Chrome is running. Closing it to safely clear cache...
+[2026-01-23 04:00:04] [WARNING] Comet is running. Closing it to safely clear cache...
+[2026-01-23 04:00:07] Comet forced closed.
+[2026-01-23 04:00:07] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+[2026-01-23 04:00:07] No GPUCache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-01-23 04:00:07] No Cache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-01-23 04:00:07] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-01-23 04:00:07] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-01-23 04:00:07] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-01-23 04:00:07] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-01-23 04:00:07] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-01-23 04:00:07] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-01-23 04:00:07] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+[2026-01-23 04:00:12] ✅ Cleared Comet (Library/Caches 2) Cache: /Users/infinite27/Library/Caches/Comet
+[2026-01-23 04:00:12] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-01-23 04:00:12] Optimization Complete.
+[2026-01-23 04:00:12] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260123_040001.log
+[2026-01-23 04:00:12] [SUCCESS] Browser optimization complete
+[2026-01-23 04:00:12] --- PROCESS OPTIMIZATION ---
+[2026-01-23 04:00:12] [WARNING] Found idle process: Teams - consider closing
+[2026-01-23 04:00:12] Top 5 Memory Consumers:
+5480% MEM - 4:01PM
+653% MEM - 3:26PM
+42694% MEM - 2:55AM
+315% MEM - 3:25PM
+450% MEM - 3:25PM
+[2026-01-23 04:00:13] --- DISK SPACE OPTIMIZATION ---
+[2026-01-23 04:00:16] Cleared npm cache
+[2026-01-23 04:00:16] --- CRASH SCOUT ---
+[2026-01-23 04:00:16] No recent Chromium crashes detected.
+[2026-01-23 04:00:16] --- OBSERVABILITY CONFIGURATION ---
+[2026-01-23 04:00:17] [SUCCESS] live_status.json updated
+[2026-01-23 04:00:17] --- INTEROPERABILITY CHECK ---
+[2026-01-23 04:00:17] [WARNING] Valentine Core (port 3002): OFFLINE
+[2026-01-23 04:00:17] [SUCCESS] Dashboard (port 3000): ONLINE
+[2026-01-23 04:00:18] Hippocampus/Qdrant (port 6333): OFFLINE (optional)
+[2026-01-23 04:00:18] ==========================================
+[2026-01-23 04:00:18] OPTIMIZATION COMPLETE
+[2026-01-23 04:00:18] ==========================================
+[2026-01-23 04:00:18] Disk Usage After: 42% (15Gi free)
+[2026-01-23 04:00:18] Load Avg After: 14.13 23.36 33.60
+[2026-01-23 04:00:18] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260123_040000.log
+
+✅ System optimization complete. See /Users/infinite27/AILCC_PRIME/logs/system_opt_20260123_040000.log for details.
+[2026-01-23 12:00:00] ==========================================
+[2026-01-23 12:00:00] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-01-23 12:00:00] ==========================================
+[2026-01-23 12:00:00] --- SYSTEM STATUS SNAPSHOT ---
+[2026-01-23 12:00:00] Hostname: Macbook-1.local
+[2026-01-23 12:00:00] macOS: 15.7.3
+[2026-01-23 12:00:00] Uptime: 12:00  up 20:35, 1 user, load averages: 3.91 5.39 5.82
+[2026-01-23 12:00:00] Disk Usage: 46% used (13Gi free)
+[2026-01-23 12:00:00] RAM: 8 GB
+[2026-01-23 12:00:00] Load Avg: 3.91 5.39 5.82
+[2026-01-23 12:00:00] --- MEMORY OPTIMIZATION ---
+[2026-01-23 12:00:00] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-01-23 12:00:01] User caches cleaned: 679M -> 679M
+[2026-01-23 12:00:01] --- BROWSER OPTIMIZATION ---
+[2026-01-23 12:00:01] Delegating to optimize_browsers.sh...
+[2026-01-23 12:00:01] Starting Browser Optimization Sequence...
+[2026-01-23 12:00:01] Detected Google Chrome Version: 144.0.7559.97
+[2026-01-23 12:00:01] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v144)
+[2026-01-23 12:00:01] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-23 12:00:01] Detected Comet Version: 143.2.7499.37648
+[2026-01-23 12:00:01] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v143)
+[2026-01-23 12:00:01] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-23 12:00:02] [WARNING] Google Chrome is running. Closing it to safely clear cache...
+No matching processes belonging to you were found
+[2026-01-23 12:00:04] Google Chrome forced closed.
+[2026-01-23 12:00:05] Comet is not running.
+[2026-01-23 12:00:05] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+rm: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache: Operation not permitted
+[2026-01-23 12:00:05] ✅ Cleared Google Chrome (AppSupport) GPUCache: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-01-23 12:00:06] ✅ Cleared Google Chrome (Library/Caches) Cache: /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-01-23 12:00:06] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-01-23 12:00:06] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-01-23 12:00:06] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-01-23 12:00:06] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-01-23 12:00:06] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-01-23 12:00:06] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-01-23 12:00:06] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+[2026-01-23 12:00:06] No Cache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet
+[2026-01-23 12:00:06] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-01-23 12:00:06] Optimization Complete.
+[2026-01-23 12:00:06] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260123_120001.log
+[2026-01-23 12:00:06] [SUCCESS] Browser optimization complete
+[2026-01-23 12:00:06] --- PROCESS OPTIMIZATION ---
+[2026-01-23 12:00:06] [WARNING] Found idle process: Teams - consider closing
+[2026-01-23 12:00:06] Top 5 Memory Consumers:
+5480% MEM - 4:01PM
+653% MEM - 3:26PM
+42694% MEM - 2:55AM
+450% MEM - 3:25PM
+315% MEM - 3:25PM
+[2026-01-23 12:00:06] --- DISK SPACE OPTIMIZATION ---
+[2026-01-23 12:00:10] Cleared npm cache
+[2026-01-23 12:00:10] --- CRASH SCOUT ---
+[2026-01-23 12:00:10] [WARNING] Detected recent Chromium crash(es):
+[2026-01-23 12:00:10]   [CRASH] Google Chrome-2026-01-23-040059.ips
+[2026-01-23 12:00:10] --- OBSERVABILITY CONFIGURATION ---
+[2026-01-23 12:00:10] [SUCCESS] live_status.json updated
+[2026-01-23 12:00:10] --- INTEROPERABILITY CHECK ---
+[2026-01-23 12:00:10] [WARNING] Valentine Core (port 3002): OFFLINE
+[2026-01-23 12:00:10] [SUCCESS] Dashboard (port 3000): ONLINE
+[2026-01-23 12:00:10] Hippocampus/Qdrant (port 6333): OFFLINE (optional)
+[2026-01-23 12:00:10] ==========================================
+[2026-01-23 12:00:10] OPTIMIZATION COMPLETE
+[2026-01-23 12:00:10] ==========================================
+[2026-01-23 12:00:10] Disk Usage After: 44% (14Gi free)
+[2026-01-23 12:00:10] Load Avg After: 4.30 5.42 5.83
+[2026-01-23 12:00:10] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260123_120000.log
+
+✅ System optimization complete. See /Users/infinite27/AILCC_PRIME/logs/system_opt_20260123_120000.log for details.
+[2026-01-24 04:00:00] ==========================================
+[2026-01-24 04:00:00] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-01-24 04:00:00] ==========================================
+[2026-01-24 04:00:00] --- SYSTEM STATUS SNAPSHOT ---
+[2026-01-24 04:00:00] Hostname: Macbook-1.local
+[2026-01-24 04:00:00] macOS: 15.7.3
+[2026-01-24 04:00:00] Uptime:  4:00  up 10:11, 1 user, load averages: 1.09 1.25 1.23
+[2026-01-24 04:00:00] Disk Usage: 41% used (15Gi free)
+[2026-01-24 04:00:00] RAM: 8 GB
+[2026-01-24 04:00:00] Load Avg: 1.09 1.25 1.23
+[2026-01-24 04:00:00] --- MEMORY OPTIMIZATION ---
+[2026-01-24 04:00:00] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-01-24 04:00:00] User caches cleaned: 1.3G -> 1.3G
+[2026-01-24 04:00:00] --- BROWSER OPTIMIZATION ---
+[2026-01-24 04:00:00] Delegating to optimize_browsers.sh...
+[2026-01-24 04:00:00] Starting Browser Optimization Sequence...
+[2026-01-24 04:00:00] Detected Google Chrome Version: 144.0.7559.97
+[2026-01-24 04:00:00] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v144)
+[2026-01-24 04:00:00] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-24 04:00:00] Detected Comet Version: 143.2.7499.37648
+[2026-01-24 04:00:00] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v143)
+[2026-01-24 04:00:00] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-24 04:00:00] Google Chrome is not running.
+[2026-01-24 04:00:00] Comet is not running.
+[2026-01-24 04:00:00] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+rm: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache: Operation not permitted
+[2026-01-24 04:00:00] ✅ Cleared Google Chrome (AppSupport) GPUCache: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-01-24 04:00:01] ✅ Cleared Google Chrome (Library/Caches) Cache: /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-01-24 04:00:01] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-01-24 04:00:01] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-01-24 04:00:01] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-01-24 04:00:01] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-01-24 04:00:01] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-01-24 04:00:01] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-01-24 04:00:01] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+[2026-01-24 04:00:01] No Cache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet
+[2026-01-24 04:00:01] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-01-24 04:00:01] Optimization Complete.
+[2026-01-24 04:00:01] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260124_040000.log
+[2026-01-24 04:00:01] [SUCCESS] Browser optimization complete
+[2026-01-24 04:00:01] --- PROCESS OPTIMIZATION ---
+[2026-01-24 04:00:01] [WARNING] Found idle process: Teams - consider closing
+[2026-01-24 04:00:01] Top 5 Memory Consumers:
+1821% MEM - 5:50PM
+695% MEM - 5:49PM
+769% MEM - 5:49PM
+1177% MEM - 5:49PM
+701% MEM - 5:49PM
+[2026-01-24 04:00:01] --- DISK SPACE OPTIMIZATION ---
+[2026-01-24 04:00:02] Cleared npm cache
+[2026-01-24 04:00:02] --- CRASH SCOUT ---
+[2026-01-24 04:00:03] [WARNING] Detected recent Chromium crash(es):
+[2026-01-24 04:00:03]   [CRASH] Google Chrome-2026-01-23-040059.ips
+[2026-01-24 04:00:03] --- OBSERVABILITY CONFIGURATION ---
+[2026-01-24 04:00:03] [SUCCESS] live_status.json updated
+[2026-01-24 04:00:03] --- INTEROPERABILITY CHECK ---
+[2026-01-24 04:00:03] [WARNING] Valentine Core (port 3002): OFFLINE
+[2026-01-24 04:00:03] [WARNING] Dashboard (port 3000): OFFLINE
+[2026-01-24 04:00:03] Hippocampus/Qdrant (port 6333): OFFLINE (optional)
+[2026-01-24 04:00:03] ==========================================
+[2026-01-24 04:00:03] OPTIMIZATION COMPLETE
+[2026-01-24 04:00:03] ==========================================
+[2026-01-24 04:00:03] Disk Usage After: 41% (15Gi free)
+[2026-01-24 04:00:03] Load Avg After: 1.09 1.25 1.23
+[2026-01-24 04:00:03] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260124_040000.log
+
+✅ System optimization complete. See /Users/infinite27/AILCC_PRIME/logs/system_opt_20260124_040000.log for details.
+[2026-01-24 12:00:00] ==========================================
+[2026-01-24 12:00:00] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-01-24 12:00:00] ==========================================
+[2026-01-24 12:00:00] --- SYSTEM STATUS SNAPSHOT ---
+[2026-01-24 12:00:00] Hostname: Macbook-1.local
+[2026-01-24 12:00:00] macOS: 15.7.3
+[2026-01-24 12:00:00] Uptime: 12:00  up 18:11, 1 user, load averages: 1.11 1.15 1.16
+[2026-01-24 12:00:00] Disk Usage: 42% used (15Gi free)
+[2026-01-24 12:00:00] RAM: 8 GB
+[2026-01-24 12:00:00] Load Avg: 1.11 1.15 1.16
+[2026-01-24 12:00:00] --- MEMORY OPTIMIZATION ---
+[2026-01-24 12:00:00] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-01-24 12:00:00] User caches cleaned: 1.3G -> 1.3G
+[2026-01-24 12:00:00] --- BROWSER OPTIMIZATION ---
+[2026-01-24 12:00:00] Delegating to optimize_browsers.sh...
+[2026-01-24 12:00:00] Starting Browser Optimization Sequence...
+[2026-01-24 12:00:00] Detected Google Chrome Version: 144.0.7559.97
+[2026-01-24 12:00:00] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v144)
+[2026-01-24 12:00:00] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-24 12:00:00] Detected Comet Version: 143.2.7499.37648
+[2026-01-24 12:00:00] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v143)
+[2026-01-24 12:00:00] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-24 12:00:00] Google Chrome is not running.
+[2026-01-24 12:00:00] Comet is not running.
+[2026-01-24 12:00:00] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+rm: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache: Operation not permitted
+[2026-01-24 12:00:00] ✅ Cleared Google Chrome (AppSupport) GPUCache: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-01-24 12:00:00] No Cache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-01-24 12:00:00] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-01-24 12:00:00] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-01-24 12:00:00] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-01-24 12:00:00] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-01-24 12:00:00] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-01-24 12:00:00] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-01-24 12:00:00] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+[2026-01-24 12:00:00] No Cache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet
+[2026-01-24 12:00:00] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-01-24 12:00:00] Optimization Complete.
+[2026-01-24 12:00:00] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260124_120000.log
+[2026-01-24 12:00:00] [SUCCESS] Browser optimization complete
+[2026-01-24 12:00:00] --- PROCESS OPTIMIZATION ---
+[2026-01-24 12:00:01] [WARNING] Found idle process: Teams - consider closing
+[2026-01-24 12:00:01] Top 5 Memory Consumers:
+1821% MEM - 5:50PM
+769% MEM - 5:49PM
+1177% MEM - 5:49PM
+701% MEM - 5:49PM
+678% MEM - 5:49PM
+[2026-01-24 12:00:01] --- DISK SPACE OPTIMIZATION ---
+[2026-01-24 12:00:02] Cleared npm cache
+[2026-01-24 12:00:02] --- CRASH SCOUT ---
+[2026-01-24 12:00:02] No recent Chromium crashes detected.
+[2026-01-24 12:00:02] --- OBSERVABILITY CONFIGURATION ---
+[2026-01-24 12:00:02] [SUCCESS] live_status.json updated
+[2026-01-24 12:00:02] --- INTEROPERABILITY CHECK ---
+[2026-01-24 12:00:02] [WARNING] Valentine Core (port 3002): OFFLINE
+[2026-01-24 12:00:02] [WARNING] Dashboard (port 3000): OFFLINE
+[2026-01-24 12:00:02] Hippocampus/Qdrant (port 6333): OFFLINE (optional)
+[2026-01-24 12:00:02] ==========================================
+[2026-01-24 12:00:02] OPTIMIZATION COMPLETE
+[2026-01-24 12:00:02] ==========================================
+[2026-01-24 12:00:02] Disk Usage After: 42% (15Gi free)
+[2026-01-24 12:00:02] Load Avg After: 1.11 1.15 1.16
+[2026-01-24 12:00:02] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260124_120000.log
+
+✅ System optimization complete. See /Users/infinite27/AILCC_PRIME/logs/system_opt_20260124_120000.log for details.
+[2026-01-25 04:00:00] ==========================================
+[2026-01-25 04:00:00] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-01-25 04:00:00] ==========================================
+[2026-01-25 04:00:00] --- SYSTEM STATUS SNAPSHOT ---
+[2026-01-25 04:00:00] Hostname: Macbook-1.local
+[2026-01-25 04:00:00] macOS: 15.7.3
+[2026-01-25 04:00:00] Uptime:  4:00  up 10:41, 1 user, load averages: 8.18 13.45 122.97
+[2026-01-25 04:00:00] Disk Usage: 56% used (8.5Gi free)
+[2026-01-25 04:00:00] RAM: 8 GB
+[2026-01-25 04:00:00] Load Avg: 8.18 13.45 122.97
+[2026-01-25 04:00:00] --- MEMORY OPTIMIZATION ---
+[2026-01-25 04:00:00] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-01-25 04:00:01] User caches cleaned: 1.4G -> 1.4G
+[2026-01-25 04:00:01] --- BROWSER OPTIMIZATION ---
+[2026-01-25 04:00:01] Delegating to optimize_browsers.sh...
+[2026-01-25 04:00:01] Starting Browser Optimization Sequence...
+[2026-01-25 04:00:01] Detected Google Chrome Version: 144.0.7559.97
+[2026-01-25 04:00:01] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v144)
+[2026-01-25 04:00:01] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-25 04:00:01] Detected Comet Version: 143.2.7499.37648
+[2026-01-25 04:00:01] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v143)
+[2026-01-25 04:00:01] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-25 04:00:02] [WARNING] Google Chrome is running. Closing it to safely clear cache...
+[2026-01-25 04:00:04] Google Chrome forced closed.
+[2026-01-25 04:00:05] [WARNING] Comet is running. Closing it to safely clear cache...
+[2026-01-25 04:00:07] Comet forced closed.
+[2026-01-25 04:00:08] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+rm: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache: Operation not permitted
+[2026-01-25 04:00:08] ✅ Cleared Google Chrome (AppSupport) GPUCache: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-01-25 04:00:08] ✅ Cleared Google Chrome (Library/Caches) Cache: /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-01-25 04:00:08] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-01-25 04:00:08] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-01-25 04:00:09] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-01-25 04:00:09] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-01-25 04:00:09] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-01-25 04:00:09] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-01-25 04:00:09] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+rm: /Users/infinite27/Library/Caches/Comet/Default/Cache/Cache_Data: Directory not empty
+rm: /Users/infinite27/Library/Caches/Comet/Default/Cache: Directory not empty
+rm: /Users/infinite27/Library/Caches/Comet/Default: Directory not empty
+rm: /Users/infinite27/Library/Caches/Comet: Directory not empty
+[2026-01-25 04:00:12] ✅ Cleared Comet (Library/Caches 2) Cache: /Users/infinite27/Library/Caches/Comet
+[2026-01-25 04:00:12] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-01-25 04:00:12] Optimization Complete.
+[2026-01-25 04:00:12] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260125_040001.log
+[2026-01-25 04:00:12] [SUCCESS] Browser optimization complete
+[2026-01-25 04:00:12] --- PROCESS OPTIMIZATION ---
+[2026-01-25 04:00:12] [WARNING] Found idle process: Teams - consider closing
+[2026-01-25 04:00:12] Top 5 Memory Consumers:
+924% MEM - 5:22PM
+9396% MEM - 6:50PM
+7557% MEM - 6:23PM
+43923% MEM - 3:54AM
+43928% MEM - 3:54AM
+[2026-01-25 04:00:12] --- DISK SPACE OPTIMIZATION ---
+[2026-01-25 04:00:15] Cleared npm cache
+[2026-01-25 04:00:15] --- CRASH SCOUT ---
+[2026-01-25 04:00:15] No recent Chromium crashes detected.
+[2026-01-25 04:00:15] --- OBSERVABILITY CONFIGURATION ---
+[2026-01-25 04:00:15] [SUCCESS] live_status.json updated
+[2026-01-25 04:00:15] --- INTEROPERABILITY CHECK ---
+[2026-01-25 04:00:15] [WARNING] Valentine Core (port 3002): OFFLINE
+[2026-01-25 04:00:15] [SUCCESS] Dashboard (port 3000): ONLINE
+[2026-01-25 04:00:15] Hippocampus/Qdrant (port 6333): OFFLINE (optional)
+[2026-01-25 04:00:15] ==========================================
+[2026-01-25 04:00:15] OPTIMIZATION COMPLETE
+[2026-01-25 04:00:15] ==========================================
+[2026-01-25 04:00:15] Disk Usage After: 54% (9.0Gi free)
+[2026-01-25 04:00:15] Load Avg After: 7.48 13.04 120.91
+[2026-01-25 04:00:15] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260125_040000.log
+
+✅ System optimization complete. See /Users/infinite27/AILCC_PRIME/logs/system_opt_20260125_040000.log for details.
+[2026-01-25 12:00:04] ==========================================
+[2026-01-25 12:00:04] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-01-25 12:00:04] ==========================================
+[2026-01-25 12:00:04] --- SYSTEM STATUS SNAPSHOT ---
+[2026-01-25 12:00:04] Hostname: Macbook-1.local
+[2026-01-25 12:00:04] macOS: 15.7.3
+[2026-01-25 12:00:04] Uptime: 12:00  up 18:41, 1 user, load averages: 2.48 2.65 2.13
+[2026-01-25 12:00:04] Disk Usage: 49% used (11Gi free)
+[2026-01-25 12:00:04] RAM: 8 GB
+[2026-01-25 12:00:04] Load Avg: 2.48 2.65 2.13
+[2026-01-25 12:00:04] --- MEMORY OPTIMIZATION ---
+[2026-01-25 12:00:04] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-01-25 12:00:05] User caches cleaned: 1.3G -> 1.3G
+[2026-01-25 12:00:05] --- BROWSER OPTIMIZATION ---
+[2026-01-25 12:00:05] Delegating to optimize_browsers.sh...
+[2026-01-25 12:00:05] Starting Browser Optimization Sequence...
+[2026-01-25 12:00:05] Detected Google Chrome Version: 144.0.7559.97
+[2026-01-25 12:00:05] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v144)
+[2026-01-25 12:00:05] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-25 12:00:05] Detected Comet Version: 143.2.7499.37648
+[2026-01-25 12:00:05] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v143)
+[2026-01-25 12:00:05] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-25 12:00:05] Google Chrome is not running.
+[2026-01-25 12:00:05] Comet is not running.
+[2026-01-25 12:00:05] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+rm: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache: Operation not permitted
+[2026-01-25 12:00:05] ✅ Cleared Google Chrome (AppSupport) GPUCache: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-01-25 12:00:05] No Cache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-01-25 12:00:05] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-01-25 12:00:05] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-01-25 12:00:05] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-01-25 12:00:05] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-01-25 12:00:05] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-01-25 12:00:05] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-01-25 12:00:05] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+[2026-01-25 12:00:05] ✅ Cleared Comet (Library/Caches 2) Cache: /Users/infinite27/Library/Caches/Comet
+[2026-01-25 12:00:05] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-01-25 12:00:05] Optimization Complete.
+[2026-01-25 12:00:05] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260125_120005.log
+[2026-01-25 12:00:05] [SUCCESS] Browser optimization complete
+[2026-01-25 12:00:05] --- PROCESS OPTIMIZATION ---
+[2026-01-25 12:00:05] [WARNING] Found idle process: Teams - consider closing
+[2026-01-25 12:00:05] Top 5 Memory Consumers:
+1683% MEM - 5:22PM
+924% MEM - 5:22PM
+688% MEM - 5:19PM
+1269% MEM - 5:22PM
+316% MEM - 5:19PM
+[2026-01-25 12:00:06] --- DISK SPACE OPTIMIZATION ---
+[2026-01-25 12:00:07] Cleared npm cache
+[2026-01-25 12:00:07] --- CRASH SCOUT ---
+[2026-01-25 12:00:07] No recent Chromium crashes detected.
+[2026-01-25 12:00:07] --- OBSERVABILITY CONFIGURATION ---
+[2026-01-25 12:00:07] [SUCCESS] live_status.json updated
+[2026-01-25 12:00:07] --- INTEROPERABILITY CHECK ---
+[2026-01-25 12:00:07] [WARNING] Valentine Core (port 3002): OFFLINE
+[2026-01-25 12:00:07] [SUCCESS] Dashboard (port 3000): ONLINE
+[2026-01-25 12:00:07] Hippocampus/Qdrant (port 6333): OFFLINE (optional)
+[2026-01-25 12:00:07] ==========================================
+[2026-01-25 12:00:07] OPTIMIZATION COMPLETE
+[2026-01-25 12:00:07] ==========================================
+[2026-01-25 12:00:07] Disk Usage After: 49% (11Gi free)
+[2026-01-25 12:00:07] Load Avg After: 2.36 2.62 2.13
+[2026-01-25 12:00:07] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260125_120004.log
+
+✅ System optimization complete. See /Users/infinite27/AILCC_PRIME/logs/system_opt_20260125_120004.log for details.
+[2026-01-26 11:29:59] ==========================================
+[2026-01-26 11:30:00] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-01-26 11:30:05] ==========================================
+[2026-01-26 11:30:06] --- SYSTEM STATUS SNAPSHOT ---
+[2026-01-26 11:30:08] Hostname: Macbook-1.local
+[2026-01-26 11:30:23] macOS: 15.7.3
+[2026-01-26 11:30:44] Uptime: 11:30  up 15:35, 1 user, load averages: 276.38 503.80 369.18
+[2026-01-26 11:31:04] Disk Usage: 52% used (10Gi free)
+[2026-01-26 11:31:36] RAM: 8 GB
+[2026-01-26 11:31:37] Load Avg: 203.60 439.56 354.20
+[2026-01-26 11:31:37] --- MEMORY OPTIMIZATION ---
+[2026-01-26 11:32:30] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-01-26 11:34:16] User caches cleaned: 1.4G -> 1.3G
+[2026-01-26 11:34:16] --- BROWSER OPTIMIZATION ---
+[2026-01-26 11:34:16] Delegating to optimize_browsers.sh...
+[2026-01-26 11:34:17] Starting Browser Optimization Sequence...
+[2026-01-26 11:34:17] Detected Google Chrome Version: 144.0.7559.97
+[2026-01-26 11:34:17] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v144)
+[2026-01-26 11:34:17] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-26 11:34:17] Detected Comet Version: 143.2.7499.37648
+[2026-01-26 11:34:17] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v143)
+[2026-01-26 11:34:17] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-26 11:34:17] [WARNING] Google Chrome is running. Closing it to safely clear cache...
+[2026-01-26 11:34:23] Google Chrome forced closed.
+[2026-01-26 11:34:23] [WARNING] Comet is running. Closing it to safely clear cache...
+[2026-01-26 11:34:26] Comet forced closed.
+[2026-01-26 11:34:26] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+rm: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache: Operation not permitted
+[2026-01-26 11:34:28] ✅ Cleared Google Chrome (AppSupport) GPUCache: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-01-26 11:34:28] No Cache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-01-26 11:34:28] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-01-26 11:34:28] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-01-26 11:34:28] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-01-26 11:34:28] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-01-26 11:34:28] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-01-26 11:34:28] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-01-26 11:34:28] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+rm: /Users/infinite27/Library/Caches/Comet/Default/Cache/Cache_Data: Directory not empty
+rm: /Users/infinite27/Library/Caches/Comet/Default/Cache: Directory not empty
+rm: /Users/infinite27/Library/Caches/Comet/Default: Directory not empty
+rm: /Users/infinite27/Library/Caches/Comet: Directory not empty
+[2026-01-26 11:34:42] ✅ Cleared Comet (Library/Caches 2) Cache: /Users/infinite27/Library/Caches/Comet
+[2026-01-26 11:34:42] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-01-26 11:34:42] Optimization Complete.
+[2026-01-26 11:34:42] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260126_113416.log
+[2026-01-26 11:34:42] [SUCCESS] Browser optimization complete
+[2026-01-26 11:34:42] --- PROCESS OPTIMIZATION ---
+[2026-01-26 11:34:43] [WARNING] Found idle process: Teams - consider closing
+[2026-01-26 11:34:43] Top 5 Memory Consumers:
+1336% MEM - 7:57PM
+25296% MEM - 11:33AM
+1421% MEM - 7:57PM
+688% MEM - 7:56PM
+25320% MEM - 11:33AM
+[2026-01-26 11:34:44] --- DISK SPACE OPTIMIZATION ---
+[2026-01-26 11:34:50] Cleared npm cache
+[2026-01-26 11:34:50] --- CRASH SCOUT ---
+[2026-01-26 11:34:50] [WARNING] Detected recent Chromium crash(es):
+[2026-01-26 11:34:50]   [CRASH] Comet-2026-01-25-200239.ips
+[2026-01-26 11:34:50]   [CRASH] Comet-2026-01-25-200413.ips
+[2026-01-26 11:34:50]   [CRASH] Comet-2026-01-25-200239.000.ips
+[2026-01-26 11:34:50]   [CRASH] Comet-2026-01-25-215516.ips
+[2026-01-26 11:34:50]   [CRASH] Comet-2026-01-25-195725.ips
+[2026-01-26 11:34:50] --- OBSERVABILITY CONFIGURATION ---
+[2026-01-26 11:34:51] [SUCCESS] live_status.json updated
+[2026-01-26 11:34:51] --- INTEROPERABILITY CHECK ---
+[2026-01-26 11:34:51] [WARNING] Valentine Core (port 3002): OFFLINE
+[2026-01-26 11:34:52] [SUCCESS] Dashboard (port 3000): ONLINE
+[2026-01-26 11:34:52] Hippocampus/Qdrant (port 6333): OFFLINE (optional)
+[2026-01-26 11:34:52] ==========================================
+[2026-01-26 11:34:52] OPTIMIZATION COMPLETE
+[2026-01-26 11:34:52] ==========================================
+[2026-01-26 11:34:52] Disk Usage After: 51% (10Gi free)
+[2026-01-26 11:34:52] Load Avg After: 49.67 257.56 294.57
+[2026-01-26 11:34:52] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260126_112945.log
+
+✅ System optimization complete. See /Users/infinite27/AILCC_PRIME/logs/system_opt_20260126_112945.log for details.
+[2026-01-26 12:00:05] ==========================================
+[2026-01-26 12:00:05] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-01-26 12:00:05] ==========================================
+[2026-01-26 12:00:05] --- SYSTEM STATUS SNAPSHOT ---
+[2026-01-26 12:00:05] Hostname: Macbook-1.local
+[2026-01-26 12:00:05] macOS: 15.7.3
+[2026-01-26 12:00:05] Uptime: 12:00  up 16:05, 1 user, load averages: 1.13 3.28 51.57
+[2026-01-26 12:00:05] Disk Usage: 49% used (11Gi free)
+[2026-01-26 12:00:05] RAM: 8 GB
+[2026-01-26 12:00:05] Load Avg: 1.13 3.28 51.57
+[2026-01-26 12:00:05] --- MEMORY OPTIMIZATION ---
+[2026-01-26 12:00:05] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-01-26 12:00:06] User caches cleaned: 1.1G -> 1.1G
+[2026-01-26 12:00:06] --- BROWSER OPTIMIZATION ---
+[2026-01-26 12:00:06] Delegating to optimize_browsers.sh...
+[2026-01-26 12:00:06] Starting Browser Optimization Sequence...
+[2026-01-26 12:00:06] Detected Google Chrome Version: 144.0.7559.97
+[2026-01-26 12:00:06] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v144)
+[2026-01-26 12:00:06] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-26 12:00:06] Detected Comet Version: 143.2.7499.37648
+[2026-01-26 12:00:06] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v143)
+[2026-01-26 12:00:06] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-26 12:00:06] Google Chrome is not running.
+[2026-01-26 12:00:06] Comet is not running.
+[2026-01-26 12:00:06] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+rm: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache: Operation not permitted
+[2026-01-26 12:00:06] ✅ Cleared Google Chrome (AppSupport) GPUCache: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-01-26 12:00:06] No Cache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-01-26 12:00:06] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-01-26 12:00:06] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-01-26 12:00:06] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-01-26 12:00:06] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-01-26 12:00:06] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-01-26 12:00:06] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-01-26 12:00:06] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+[2026-01-26 12:00:06] ✅ Cleared Comet (Library/Caches 2) Cache: /Users/infinite27/Library/Caches/Comet
+[2026-01-26 12:00:06] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-01-26 12:00:06] Optimization Complete.
+[2026-01-26 12:00:06] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260126_120006.log
+[2026-01-26 12:00:06] [SUCCESS] Browser optimization complete
+[2026-01-26 12:00:06] --- PROCESS OPTIMIZATION ---
+[2026-01-26 12:00:06] [WARNING] Found idle process: Teams - consider closing
+[2026-01-26 12:00:06] Top 5 Memory Consumers:
+1336% MEM - 7:57PM
+1421% MEM - 7:57PM
+902% MEM - 7:57PM
+880% MEM - 7:57PM
+306% MEM - 7:55PM
+[2026-01-26 12:00:06] --- DISK SPACE OPTIMIZATION ---
+[2026-01-26 12:00:07] Cleared npm cache
+[2026-01-26 12:00:07] --- CRASH SCOUT ---
+[2026-01-26 12:00:07] [WARNING] Detected recent Chromium crash(es):
+[2026-01-26 12:00:07]   [CRASH] Comet-2026-01-25-200239.ips
+[2026-01-26 12:00:07]   [CRASH] Comet-2026-01-25-200413.ips
+[2026-01-26 12:00:07]   [CRASH] Comet-2026-01-25-200239.000.ips
+[2026-01-26 12:00:07]   [CRASH] Comet-2026-01-25-215516.ips
+[2026-01-26 12:00:07]   [CRASH] Comet-2026-01-25-195725.ips
+[2026-01-26 12:00:07] --- OBSERVABILITY CONFIGURATION ---
+[2026-01-26 12:00:08] [SUCCESS] live_status.json updated
+[2026-01-26 12:00:08] --- INTEROPERABILITY CHECK ---
+[2026-01-26 12:00:08] [WARNING] Valentine Core (port 3002): OFFLINE
+[2026-01-26 12:00:08] [SUCCESS] Dashboard (port 3000): ONLINE
+[2026-01-26 12:00:08] Hippocampus/Qdrant (port 6333): OFFLINE (optional)
+[2026-01-26 12:00:08] ==========================================
+[2026-01-26 12:00:08] OPTIMIZATION COMPLETE
+[2026-01-26 12:00:08] ==========================================
+[2026-01-26 12:00:08] Disk Usage After: 49% (11Gi free)
+[2026-01-26 12:00:08] Load Avg After: 1.13 3.28 51.57
+[2026-01-26 12:00:08] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260126_120005.log
+
+✅ System optimization complete. See /Users/infinite27/AILCC_PRIME/logs/system_opt_20260126_120005.log for details.
+[2026-01-27 12:00:05] ==========================================
+[2026-01-27 12:00:05] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-01-27 12:00:05] ==========================================
+[2026-01-27 12:00:05] --- SYSTEM STATUS SNAPSHOT ---
+[2026-01-27 12:00:05] Hostname: Macbook-1.local
+[2026-01-27 12:00:05] macOS: 15.7.3
+[2026-01-27 12:00:05] Uptime: 12:00  up 16 mins, 1 user, load averages: 3.85 15.63 28.56
+[2026-01-27 12:00:05] Disk Usage: 48% used (12Gi free)
+[2026-01-27 12:00:05] RAM: 8 GB
+[2026-01-27 12:00:05] Load Avg: 3.85 15.63 28.56
+[2026-01-27 12:00:05] --- MEMORY OPTIMIZATION ---
+[2026-01-27 12:00:05] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-01-27 12:00:06] User caches cleaned: 1.4G -> 1.4G
+[2026-01-27 12:00:06] --- BROWSER OPTIMIZATION ---
+[2026-01-27 12:00:06] Delegating to optimize_browsers.sh...
+[2026-01-27 12:00:06] Starting Browser Optimization Sequence...
+[2026-01-27 12:00:06] Detected Google Chrome Version: 144.0.7559.97
+[2026-01-27 12:00:06] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v144)
+[2026-01-27 12:00:06] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-27 12:00:06] Detected Comet Version: 143.2.7499.37648
+[2026-01-27 12:00:06] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v143)
+[2026-01-27 12:00:06] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-01-27 12:00:06] Google Chrome is not running.
+[2026-01-27 12:00:06] Comet is not running.
+[2026-01-27 12:00:06] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+rm: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache: Operation not permitted
+[2026-01-27 12:00:06] ✅ Cleared Google Chrome (AppSupport) GPUCache: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-01-27 12:00:07] ✅ Cleared Google Chrome (Library/Caches) Cache: /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-01-27 12:00:07] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-01-27 12:00:07] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-01-27 12:00:07] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-01-27 12:00:07] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-01-27 12:00:07] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-01-27 12:00:07] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-01-27 12:00:07] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+[2026-01-27 12:00:08] ✅ Cleared Comet (Library/Caches 2) Cache: /Users/infinite27/Library/Caches/Comet
+[2026-01-27 12:00:08] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-01-27 12:00:08] Optimization Complete.
+[2026-01-27 12:00:08] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260127_120006.log
+[2026-01-27 12:00:08] [SUCCESS] Browser optimization complete
+[2026-01-27 12:00:08] --- PROCESS OPTIMIZATION ---
+[2026-01-27 12:00:08] [WARNING] Found idle process: Teams - consider closing
+[2026-01-27 12:00:08] Top 5 Memory Consumers:
+1395% MEM - 11:45AM
+665% MEM - 11:45AM
+333% MEM - 11:44AM
+452% MEM - 11:44AM
+2270% MEM - 11:53AM
+[2026-01-27 12:00:08] --- DISK SPACE OPTIMIZATION ---
+[2026-01-27 12:00:10] Cleared npm cache
+[2026-01-27 12:00:10] --- CRASH SCOUT ---
+[2026-01-27 12:00:10] [WARNING] Detected recent Chromium crash(es):
+[2026-01-27 12:00:10]   [CRASH] Comet-2026-01-27-114700.ips
+[2026-01-27 12:00:10]   [CRASH] Google Chrome-2026-01-27-114701.ips
+[2026-01-27 12:00:10] --- OBSERVABILITY CONFIGURATION ---
+[2026-01-27 12:00:10] [SUCCESS] live_status.json updated
+[2026-01-27 12:00:10] --- INTEROPERABILITY CHECK ---
+[2026-01-27 12:00:10] [WARNING] Valentine Core (port 3002): OFFLINE
+[2026-01-27 12:00:10] [WARNING] Dashboard (port 3000): OFFLINE
+[2026-01-27 12:00:10] Hippocampus/Qdrant (port 6333): OFFLINE (optional)
+[2026-01-27 12:00:10] ==========================================
+[2026-01-27 12:00:10] OPTIMIZATION COMPLETE
+[2026-01-27 12:00:10] ==========================================
+[2026-01-27 12:00:10] Disk Usage After: 48% (12Gi free)
+[2026-01-27 12:00:10] Load Avg After: 3.86 15.43 28.41
+[2026-01-27 12:00:10] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260127_120005.log
+
+✅ System optimization complete. See /Users/infinite27/AILCC_PRIME/logs/system_opt_20260127_120005.log for details.

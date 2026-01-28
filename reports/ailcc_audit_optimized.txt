@@ -1,0 +1,136 @@
+=== AI MASTERMIND ALLIANCE - LIVE SYSTEM AUDIT (OPTIMIZED) ===
+Timestamp: Sun Jan 25 18:34:33 AST 2026
+System: Darwin Macbook-1.local 24.6.0 Darwin Kernel Version 24.6.0: Wed Nov  5 21:30:23 PST 2025; root:xnu-11417.140.69.705.2~1/RELEASE_X86_64 x86_64
+
+📁 SECTION 1: Project Directory Structure
+==========================================
+
+AILCC_PRIME Location:
+/Users/infinite27/AILCC_PRIME
+
+Valentine Core Location:
+/Users/infinite27/AILCC_PRIME/valentine-core
+
+NEXUS Dashboard Location:
+/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard
+
+All Node.js Projects (package.json locations):
+/Users/infinite27/AILCC_PRIME/valentine-core/package.json
+/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/eastcoast-fresh-coats/package.json
+/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard_legacy_v1/package.json
+/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/package.json
+/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/package.json
+/Users/infinite27/AILCC_PRIME/package.json
+/Users/infinite27/AILCC_PRIME/n8n_foundation/n8n_data/nodes/package.json
+
+🔄 SECTION 2: Active Processes & Services
+==========================================
+
+Node.js Processes:
+infinite27        3760  25.2  0.7 1490819564  59444   ??  S     1:50PM  11:59.01 /Applications/Antigravity.app/Contents/Frameworks/Antigravity Helper (Plugin).app/Contents/MacOS/Antigravity Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --user-data-dir=/Users/infinite27/Library/Application Support/Antigravity --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,7387496491209983417,865330838663560943,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+infinite27        3874   0.5  0.0 1489059216   2352   ??  S     1:50PM   0:49.68 /Applications/Antigravity.app/Contents/Frameworks/Antigravity Helper (Plugin).app/Contents/MacOS/Antigravity Helper (Plugin) /Users/infinite27/.antigravity/extensions/ms-edgedevtools.vscode-edge-devtools-2.1.10-universal/node_modules/vscode-webhint/dist/src/server.js /Users/infinite27/Library/Application Support/Antigravity/User/globalStorage/ms-edgedevtools.vscode-edge-devtools Microsoft Edge Tools --node-ipc --clientProcessId=3760
+infinite27        3791   0.4  0.0 1489061276   4072   ??  S     1:50PM  11:25.96 /Applications/Antigravity.app/Contents/Frameworks/Antigravity Helper (Plugin).app/Contents/MacOS/Antigravity Helper (Plugin) --max-old-space-size=3072 /Applications/Antigravity.app/Contents/Resources/app/extensions/node_modules/typescript/lib/tsserver.js --useInferredProjectPerProjectRoot --enableTelemetry --cancellationPipeName /var/folders/hz/52mr8nws137fxvfv8bbt6sq80000gn/T/vscode-typescript501/436b25e5debebe574b9a/tscancellation-8e5f32e2bb96fb238710.tmp* --locale en --noGetErrOnBackgroundUpdate --validateDefaultNpmLocation --useNodeIpc
+infinite27        3761   0.1  0.1 1490790976   4320   ??  S     1:50PM   0:44.48 /Applications/Antigravity.app/Contents/Frameworks/Antigravity Helper.app/Contents/MacOS/Antigravity Helper --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --user-data-dir=/Users/infinite27/Library/Application Support/Antigravity --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,7387496491209983417,865330838663560943,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,FontationsLinuxSystemFonts,MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+infinite27       48321   0.0  0.0 43321808   3844   ??  S     6:23PM   0:08.95 node src/server.js
+infinite27       46361   0.0  0.0 35283136    912   ??  S     6:02PM   0:00.97 node /Users/infinite27/.npm/_npx/3dfbf5a9eea4a1b3/node_modules/.bin/mcp-server-github
+infinite27       46354   0.0  0.0 35309924   1376   ??  S     6:02PM   0:01.32 node /Users/infinite27/.npm/_npx/935194573f4e6558/node_modules/.bin/linear-mcp
+infinite27       46196   0.0  0.0 1489097864   2308   ??  S     6:01PM   0:01.72 /Applications/Claude.app/Contents/Frameworks/Claude Helper (Plugin).app/Contents/MacOS/Claude Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --user-data-dir=/Users/infinite27/Library/Application Support/Claude --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --shared-files --field-trial-handle=1718379636,r,17217201036988033058,2968678672459770804,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+infinite27       46195   0.0  0.0 1489097928   2316   ??  S     6:01PM   0:01.69 /Applications/Claude.app/Contents/Frameworks/Claude Helper (Plugin).app/Contents/MacOS/Claude Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --user-data-dir=/Users/infinite27/Library/Application Support/Claude --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --shared-files --field-trial-handle=1718379636,r,17217201036988033058,2968678672459770804,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+infinite27       46194   0.0  0.0 1489130680   2316   ??  S     6:01PM   0:02.07 /Applications/Claude.app/Contents/Frameworks/Claude Helper (Plugin).app/Contents/MacOS/Claude Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --user-data-dir=/Users/infinite27/Library/Application Support/Claude --secure-schemes=sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=sentry-ipc --fetch-schemes=sentry-ipc --shared-files --field-trial-handle=1718379636,r,17217201036988033058,2968678672459770804,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version
+
+Python Processes:
+
+Docker Processes:
+✅ Docker Running
+
+Redis Status:
+PONG
+✅ Redis ACTIVE
+
+🌐 SECTION 3: Active Network Ports
+==========================================
+
+Port 3000 (NEXUS Dashboard):
+COMMAND     PID       USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node       6240 infinite27   13u  IPv6 0xee43268d7b3d1460      0t0  TCP *:hbci (LISTEN)
+node       6240 infinite27   23u  IPv6 0xff68050c228b0dd9      0t0  TCP localhost:hbci->localhost:55411 (ESTABLISHED)
+Comet\x20 34480 infinite27   32u  IPv6 0xbf33819323c6c965      0t0  TCP localhost:55411->localhost:hbci (ESTABLISHED)
+
+Port 5001 (Valentine Core):
+COMMAND   PID       USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+node    48321 infinite27   22u  IPv6 0x3c747a5301f63aa8      0t0  TCP *:commplex-link (LISTEN)
+
+Port 5678 (n8n):
+COMMAND     PID       USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+com.docke 46916 infinite27  124u  IPv6 0xef1a012acbaf3a6d      0t0  TCP *:rrac (LISTEN)
+
+Port 8123 (Hippocampus/Chroma):
+COMMAND     PID       USER   FD   TYPE             DEVICE SIZE/OFF NODE NAME
+com.docke 46916 infinite27   93u  IPv6 0xdd8d483487ed477a      0t0  TCP *:8123 (LISTEN)
+
+⚙️  SECTION 4: Configuration Files
+==========================================
+
+.env Files:
+/Users/infinite27/AILCC_PRIME/valentine-core/.env
+/Users/infinite27/AILCC_PRIME/valentine-core/.env.example
+/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/eastcoast-fresh-coats/.env.example
+/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/.env.local
+/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/.env
+/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/.env.example
+/Users/infinite27/AILCC_PRIME/.env.example
+
+docker-compose.yml Files:
+/Users/infinite27/AILCC_PRIME/n8n_foundation/docker-compose.yml
+
+package.json names:
+---
+File: /Users/infinite27/AILCC_PRIME/valentine-core/package.json
+  "name": "valentine-core",
+  "version": "1.0.0",
+  "description": "> Central orchestration layer for the AI Mastermind Alliance (AIMmA)",
+---
+File: /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/eastcoast-fresh-coats/package.json
+  "name": "eastcoast-fresh-coats",
+  "version": "1.0.0",
+  "description": "",
+---
+File: /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/package.json
+  "name": "ailcc-dashboard",
+  "private": true,
+  "scripts": {
+---
+File: /Users/infinite27/AILCC_PRIME/package.json
+  "name": "ailcc-mode6",
+  "version": "1.0.0",
+  "description": "Mode 6 Intent Routing & Multi-Agent Orchestration System for AILCC Framework",
+---
+File: /Users/infinite27/AILCC_PRIME/n8n_foundation/n8n_data/nodes/package.json
+  "name": "installed-nodes",
+  "private": true,
+  "dependencies": {}
+
+📦 SECTION 5: Git Status
+==========================================
+
+/Users/infinite27/AILCC_PRIME/valentine-core -> main
+/Users/infinite27/AILCC_PRIME/AI-MasterMind-Alliance -> main
+/Users/infinite27/AILCC_PRIME -> automation-mode
+/Users/infinite27/AILCC_PRIME/AI_Mastermind_Exports -> main
+
+🐳 SECTION 6: Docker Details
+==========================================
+
+NAMES                    STATUS                      PORTS
+ailcc-hippocampus-db     Up 26 minutes               0.0.0.0:8123->8000/tcp, [::]:8123->8000/tcp
+ailcc-n8n-orchestrator   Up 26 minutes               0.0.0.0:5678->5678/tcp, [::]:5678->5678/tcp
+nexus-hippocampus        Exited (143) 25 hours ago   
+
+💻 SECTION 10: System Resources
+==========================================
+
+Disk Usage:
+4.0G	/Users/infinite27/AILCC_PRIME
+
+=== END OF SYSTEM AUDIT ===
+Generated: Sun Jan 25 18:35:14 AST 2026

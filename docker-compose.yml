@@ -1,0 +1,176 @@
+version: '3.8'
+
+services:
+  # ============================================
+  # DATA LAYER - Persistent Memory
+  # ============================================
+  
+  redis:
+    image: redis:7-alpine
+    container_name: ailcc-redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 3
+    networks:
+      - ailcc-network
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: ailcc-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ailcc_db
+      POSTGRES_USER: ${POSTGRES_USER:-ailcc}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./init-db.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ailcc"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - ailcc-network
+
+  # ============================================
+  # CORE ORCHESTRATION - Valentine Core
+  # ============================================
+  
+  valentine-core:
+    build:
+      context: ./valentine-core
+      dockerfile: Dockerfile
+    container_name: ailcc-valentine-core
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    environment:
+      NODE_ENV: production
+      PORT: 4000
+      REDIS_URL: redis://redis:6379
+      DATABASE_URL: postgresql://${POSTGRES_USER:-ailcc}:${POSTGRES_PASSWORD}@postgres:5432/ailcc_db
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      PERPLEXITY_API_KEY: ${PERPLEXITY_API_KEY}
+    volumes:
+      - ./valentine-core/logs:/app/logs
+      - shared-context:/app/context
+    depends_on:
+      redis:
+        condition: service_healthy
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:4000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - ailcc-network
+
+  # ============================================
+  # AGENT PROXIES - AI Service Wrappers
+  # ============================================
+  
+  chatgpt-proxy:
+    build:
+      context: ./agents/chatgpt-proxy
+      dockerfile: Dockerfile
+    container_name: ailcc-chatgpt-proxy
+    restart: unless-stopped
+    environment:
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      VALENTINE_CORE_URL: http://valentine-core:4000
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - valentine-core
+      - redis
+    networks:
+      - ailcc-network
+
+  claude-proxy:
+    build:
+      context: ./agents/claude-proxy
+      dockerfile: Dockerfile
+    container_name: ailcc-claude-proxy
+    restart: unless-stopped
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      VALENTINE_CORE_URL: http://valentine-core:4000
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - valentine-core
+      - redis
+    networks:
+      - ailcc-network
+
+  perplexity-proxy:
+    build:
+      context: ./agents/perplexity-proxy
+      dockerfile: Dockerfile
+    container_name: ailcc-perplexity-proxy
+    restart: unless-stopped
+    environment:
+      PERPLEXITY_API_KEY: ${PERPLEXITY_API_KEY}
+      VALENTINE_CORE_URL: http://valentine-core:4000
+      REDIS_URL: redis://redis:6379
+    depends_on:
+      - valentine-core
+      - redis
+    networks:
+      - ailcc-network
+
+  # ============================================
+  # MONITORING - NEXUS Dashboard
+  # ============================================
+  
+  nexus-dashboard:
+    build:
+      context: ./nexus-dashboard
+      dockerfile: Dockerfile
+    container_name: ailcc-nexus-dashboard
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    networks:
+      - ailcc-network
+
+  # ============================================
+  # AUTOMATION - n8n Integration
+  # ============================================
+  
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: ailcc-n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    environment:
+      N8N_BASIC_AUTH_ACTIVE: "true"
+      N8N_BASIC_AUTH_USER: ${N8N_USER:-admin}
+      N8N_BASIC_AUTH_PASSWORD: ${N8N_PASSWORD}
+    volumes:
+      - n8n-data:/home/node/.n8n
+    networks:
+      - ailcc-network
+
+volumes:
+  redis-data:
+  postgres-data:
+  n8n-data:
+  shared-context:
+
+networks:
+  ailcc-network:
+    driver: bridge

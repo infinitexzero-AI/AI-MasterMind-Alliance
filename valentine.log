@@ -1,0 +1,45 @@
+
+> valentine-core@1.0.0 start
+> node src/server.js
+
+[dotenv@17.2.3] injecting env (2) from .env -- tip: ⚙️  override existing env vars with { override: true }
+✅ Queue initialized: code_generation
+✅ Queue initialized: research
+✅ Queue initialized: analysis
+✅ Queue initialized: automation
+✅ Queue initialized: high_priority
+✅ Queue initialized: manager
+The 'path' argument is deprecated. Please use 'ssl', 'host', and 'port' instead
+[dotenv@17.2.3] injecting env (0) from .env -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+✅ Logger connected to Socket.IO
+Redis Client Error ConnectionTimeoutError: Connection timeout
+    at Socket.onTimeout (/Users/infinite27/AILCC_PRIME/valentine-core/node_modules/@redis/client/dist/lib/client/socket.js:207:46)
+    at Object.onceWrapper (node:events:622:28)
+    at Socket.emit (node:events:508:28)
+    at Socket._onTimeout (node:net:604:8)
+    at listOnTimeout (node:internal/timers:605:17)
+    at process.processTimers (node:internal/timers:541:7)
+✅ Redis Connected
+✅ Memory Vault initialized (ChromaDB)
+✅ Postgres Pool Initialized
+✅ Processor registered for: code_generation
+✅ Processor registered for: research
+✅ Processor registered for: analysis
+✅ Processor registered for: automation
+✅ Processor registered for: high_priority
+✅ Processor registered for: manager
+❤️  Valentine Core online on port 5001
+[0mGET /health [32m200[0m 1700.999 ms - 108[0m
+[Registry] Failed to list agents: Error: SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string
+    at /Users/infinite27/AILCC_PRIME/valentine-core/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async listAgents (file:///Users/infinite27/AILCC_PRIME/valentine-core/src/services/agent-registry.js:6:24)
+file:///Users/infinite27/AILCC_PRIME/valentine-core/src/services/agent-registry.js:10
+        res.status(500).json({ error: 'Database error' });
+            ^
+
+TypeError: Cannot read properties of undefined (reading 'status')
+    at listAgents (file:///Users/infinite27/AILCC_PRIME/valentine-core/src/services/agent-registry.js:10:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+
+Node.js v24.11.1
