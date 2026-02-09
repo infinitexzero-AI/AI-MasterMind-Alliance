@@ -15,7 +15,7 @@ export class IntentRouter {
     routesByAgent: {} as Record<string, number>,
   };
 
-  constructor() {}
+  constructor() { }
 
   /**
    * Main routing entry point
@@ -47,7 +47,7 @@ export class IntentRouter {
    * @internal Not currently used; kept for future analysis expansion
    */
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  private analyzeIntent(intent: TaskIntent): Record<string, any> {
+  private analyzeIntent(intent: TaskIntent): Record<string, unknown> {
     return {
       id: intent.id,
       description: intent.description,
@@ -205,7 +205,7 @@ export class IntentRouter {
   /**
    * Log routing decision for monitoring
    */
-  private logRoutingDecision(decision: any) {
+  private logRoutingDecision(decision: { primaryAgent: string } & Record<string, unknown>) {
     this.routingStats.totalRoutingDecisions++;
     const agent = decision.primaryAgent;
     if (!this.routingStats.routesByAgent[agent]) {
@@ -217,7 +217,7 @@ export class IntentRouter {
   /**
    * Get routing statistics
    */
-  getRoutingStats(): Record<string, any> {
+  getRoutingStats(): Record<string, unknown> {
     return this.routingStats;
   }
 }

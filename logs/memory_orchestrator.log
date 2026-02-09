@@ -1,0 +1,1172 @@
+🧠 Memory Orchestrator - Sat Feb  7 21:17:18 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 152MB
+  Swap: 3826.00MB / 5120.00MB (74%)
+
+🚨 CRITICAL: Only 152MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (3.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sat Feb  7 21:17:19 AST 2026
+
+🧠 Memory Orchestrator - Sat Feb  7 21:47:19 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 14MB
+  Swap: 4262.50MB / 5120.00MB (83%)
+
+🚨 CRITICAL: Only 14MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (10.4%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 83%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sat Feb  7 21:47:20 AST 2026
+
+🧠 Memory Orchestrator - Sat Feb  7 22:17:21 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 34MB
+  Swap: 9140.75MB / 10240.00MB (89%)
+
+🚨 CRITICAL: Only 34MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (1.4%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 89%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sat Feb  7 22:18:30 AST 2026
+
+🧠 Memory Orchestrator - Sat Feb  7 22:48:35 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 30MB
+  Swap: 7857.00MB / 10240.00MB (76%)
+
+🚨 CRITICAL: Only 30MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (1.6%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sat Feb  7 22:51:06 AST 2026
+
+🧠 Memory Orchestrator - Sat Feb  7 23:21:06 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 14MB
+  Swap: 8070.25MB / 9216.00MB (87%)
+
+🚨 CRITICAL: Only 14MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (11.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 87%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sat Feb  7 23:21:07 AST 2026
+
+🧠 Memory Orchestrator - Sat Feb  7 23:51:07 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 396MB
+  Swap: 9141.00MB / 10240.00MB (89%)
+
+⚠️  WARNING: Only 396MB free RAM - Running gentle optimization
+  [1/2] Running safe cleanup...
+    ✓ Cleanup complete
+  [2/2] Sending notification...
+
+✅ Optimization complete
+
+⚠️  Swap usage critical: 89%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sat Feb  7 23:51:08 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 00:21:08 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 16MB
+  Swap: 8727.00MB / 10240.00MB (85%)
+
+🚨 CRITICAL: Only 16MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (11.3%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 85%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 00:21:09 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 00:51:10 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 15MB
+  Swap: 8624.50MB / 10240.00MB (84%)
+
+🚨 CRITICAL: Only 15MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (11.6%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 84%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 00:51:11 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 01:21:11 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 753MB
+  Swap: 10319.75MB / 11264.00MB (91%)
+
+✅ HEALTHY: 753MB free RAM
+
+⚠️  Swap usage critical: 91%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 01:21:12 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 01:51:12 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 186MB
+  Swap: 9597.25MB / 10240.00MB (93%)
+
+🚨 CRITICAL: Only 186MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (3.2%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 93%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 01:51:35 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 02:21:35 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 161MB
+  Swap: 9555.75MB / 10240.00MB (93%)
+
+🚨 CRITICAL: Only 161MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (12.1%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 93%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 02:21:36 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 02:51:36 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 75MB
+  Swap: 10492.75MB / 11264.00MB (93%)
+
+🚨 CRITICAL: Only 75MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (5.5%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 93%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 02:51:48 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 03:21:48 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 613MB
+  Swap: 9312.25MB / 10240.00MB (90%)
+
+✅ HEALTHY: 613MB free RAM
+
+⚠️  Swap usage critical: 90%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 03:21:48 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 03:51:48 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 29MB
+  Swap: 8280.25MB / 9216.00MB (89%)
+
+🚨 CRITICAL: Only 29MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (4.2%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 89%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 03:51:55 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 04:21:55 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 361MB
+  Swap: 7901.00MB / 9216.00MB (85%)
+
+⚠️  WARNING: Only 361MB free RAM - Running gentle optimization
+  [1/2] Running safe cleanup...
+    ✓ Cleanup complete
+  [2/2] Sending notification...
+
+✅ Optimization complete
+
+⚠️  Swap usage critical: 85%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 04:21:57 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 04:51:57 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 64MB
+  Swap: 7417.00MB / 8192.00MB (90%)
+
+🚨 CRITICAL: Only 64MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (13.9%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 90%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 04:51:58 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 05:21:58 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 96MB
+  Swap: 7205.25MB / 8192.00MB (87%)
+
+🚨 CRITICAL: Only 96MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (13.8%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 87%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 05:21:59 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 05:51:59 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 55MB
+  Swap: 7889.50MB / 9216.00MB (85%)
+
+🚨 CRITICAL: Only 55MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 85%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 05:52:00 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 06:22:00 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 59MB
+  Swap: 7625.25MB / 8192.00MB (93%)
+
+🚨 CRITICAL: Only 59MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (13.7%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 93%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 06:22:01 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 06:52:01 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 699MB
+  Swap: 9728.25MB / 10240.00MB (95%)
+
+✅ HEALTHY: 699MB free RAM
+
+⚠️  Swap usage critical: 95%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 06:52:01 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 07:37:22 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 27MB
+  Swap: 7093.00MB / 8192.00MB (86%)
+
+🚨 CRITICAL: Only 27MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.8%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 86%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 07:37:23 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 08:22:57 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 31MB
+  Swap: 7759.00MB / 9216.00MB (84%)
+
+🚨 CRITICAL: Only 31MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 84%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 08:22:58 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 08:52:58 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 16MB
+  Swap: 8045.25MB / 9216.00MB (87%)
+
+🚨 CRITICAL: Only 16MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 87%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 08:52:59 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 09:22:59 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 21MB
+  Swap: 8319.50MB / 9216.00MB (90%)
+
+🚨 CRITICAL: Only 21MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 90%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 09:22:59 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 09:53:00 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 21MB
+  Swap: 8397.75MB / 9216.00MB (91%)
+
+🚨 CRITICAL: Only 21MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 91%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 09:53:00 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 10:23:00 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 18MB
+  Swap: 7699.25MB / 9216.00MB (83%)
+
+🚨 CRITICAL: Only 18MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 83%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 10:23:01 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 10:53:01 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 22MB
+  Swap: 7794.25MB / 9216.00MB (84%)
+
+🚨 CRITICAL: Only 22MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 84%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 10:53:02 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 11:23:02 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 363MB
+  Swap: 8068.50MB / 9216.00MB (87%)
+
+⚠️  WARNING: Only 363MB free RAM - Running gentle optimization
+  [1/2] Running safe cleanup...
+    ✓ Cleanup complete
+  [2/2] Sending notification...
+
+✅ Optimization complete
+
+⚠️  Swap usage critical: 87%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 11:23:03 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 11:53:03 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 15MB
+  Swap: 7984.75MB / 9216.00MB (86%)
+
+🚨 CRITICAL: Only 15MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 86%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 11:53:03 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 12:23:03 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 14MB
+  Swap: 8282.75MB / 9216.00MB (89%)
+
+🚨 CRITICAL: Only 14MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.2%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 89%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 12:23:04 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 12:53:04 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 95MB
+  Swap: 8547.50MB / 9216.00MB (92%)
+
+🚨 CRITICAL: Only 95MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 92%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 12:53:05 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 13:23:05 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 26MB
+  Swap: 8224.25MB / 9216.00MB (89%)
+
+🚨 CRITICAL: Only 26MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.2%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 89%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 13:23:06 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 13:53:06 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 508MB
+  Swap: 8632.25MB / 9216.00MB (93%)
+
+✅ HEALTHY: 508MB free RAM
+
+⚠️  Swap usage critical: 93%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 13:53:07 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 14:23:07 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 65MB
+  Swap: 8125.50MB / 9216.00MB (88%)
+
+🚨 CRITICAL: Only 65MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (13.9%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 88%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 14:23:08 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 14:53:08 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 15MB
+  Swap: 8310.25MB / 9216.00MB (90%)
+
+🚨 CRITICAL: Only 15MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 90%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 14:53:09 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 15:23:09 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 23MB
+  Swap: 8307.00MB / 9216.00MB (90%)
+
+🚨 CRITICAL: Only 23MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (14.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 90%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 15:23:09 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 15:53:09 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 19MB
+  Swap: 8177.50MB / 9216.00MB (88%)
+
+🚨 CRITICAL: Only 19MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (13.3%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 88%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 15:53:10 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 16:23:11 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 14MB
+  Swap: 8837.75MB / 9216.00MB (95%)
+
+🚨 CRITICAL: Only 14MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (3.6%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 95%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 16:24:24 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 16:54:24 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 36MB
+  Swap: 7761.50MB / 9216.00MB (84%)
+
+🚨 CRITICAL: Only 36MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (13.4%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 84%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 16:54:25 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 17:24:25 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 308MB
+  Swap: 8186.25MB / 9216.00MB (88%)
+
+⚠️  WARNING: Only 308MB free RAM - Running gentle optimization
+  [1/2] Running safe cleanup...
+    ✓ Cleanup complete
+  [2/2] Sending notification...
+
+✅ Optimization complete
+
+⚠️  Swap usage critical: 88%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 17:24:29 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 17:54:29 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 55MB
+  Swap: 8129.75MB / 9216.00MB (88%)
+
+🚨 CRITICAL: Only 55MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (11.2%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 88%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 17:54:30 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 18:24:30 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 18MB
+  Swap: 8968.25MB / 10240.00MB (87%)
+
+🚨 CRITICAL: Only 18MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (11.1%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 87%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 18:24:33 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 18:54:37 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 13MB
+  Swap: 10081.25MB / 11264.00MB (89%)
+
+🚨 CRITICAL: Only 13MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (1.0%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 89%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 18:57:44 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 19:27:45 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 19MB
+  Swap: 9798.00MB / 13312.00MB (73%)
+
+🚨 CRITICAL: Only 19MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (0.2%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 19:28:13 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 19:58:14 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 17MB
+  Swap: 9795.50MB / 11264.00MB (86%)
+
+🚨 CRITICAL: Only 17MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (4.4%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 86%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 19:58:20 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 20:28:20 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 374MB
+  Swap: 12745.50MB / 13312.00MB (95%)
+
+⚠️  WARNING: Only 374MB free RAM - Running gentle optimization
+  [1/2] Running safe cleanup...
+    ✓ Cleanup complete
+  [2/2] Sending notification...
+
+✅ Optimization complete
+
+⚠️  Swap usage critical: 95%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 20:28:35 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 20:58:36 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 499MB
+  Swap: 10784.75MB / 11264.00MB (95%)
+
+⚠️  WARNING: Only 499MB free RAM - Running gentle optimization
+  [1/2] Running safe cleanup...
+    ✓ Cleanup complete
+  [2/2] Sending notification...
+
+✅ Optimization complete
+
+⚠️  Swap usage critical: 95%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 20:58:39 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 21:28:39 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 43MB
+  Swap: 10622.50MB / 11264.00MB (94%)
+
+🚨 CRITICAL: Only 43MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (12.3%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 94%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 21:28:40 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 21:58:41 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 17MB
+  Swap: 10500.50MB / 12288.00MB (85%)
+
+🚨 CRITICAL: Only 17MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (0.6%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 85%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 22:02:22 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 22:32:24 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 14MB
+  Swap: 10528.50MB / 12288.00MB (85%)
+
+🚨 CRITICAL: Only 14MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (3.7%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 85%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 22:34:04 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 23:04:07 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 37MB
+  Swap: 11058.00MB / 12288.00MB (89%)
+
+🚨 CRITICAL: Only 37MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (5.7%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 89%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 23:05:11 AST 2026
+
+🧠 Memory Orchestrator - Sun Feb  8 23:35:11 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 832MB
+  Swap: 9687.50MB / 11264.00MB (86%)
+
+✅ HEALTHY: 832MB free RAM
+
+⚠️  Swap usage critical: 86%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sun Feb  8 23:35:14 AST 2026
+
+🧠 Memory Orchestrator - Mon Feb  9 00:05:14 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Current Status:
+  Free RAM: 49MB
+  Swap: 7741.00MB / 9216.00MB (83%)
+
+🚨 CRITICAL: Only 49MB free RAM - Initiating emergency procedures
+  [1/5] Pausing cloud sync services...
+    ✓ Google Drive paused
+  [2/5] Checking language server...
+    ✓ Language server healthy (8.2%)
+  [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 83%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Mon Feb  9 00:05:21 AST 2026
+

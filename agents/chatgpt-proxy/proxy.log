@@ -1,0 +1,12 @@
+file:///Users/infinite27/AILCC_PRIME/agents/chatgpt-proxy/node_modules/openai/index.mjs:48
+            throw new Errors.OpenAIError("The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).");
+                  ^
+
+OpenAIError: The OPENAI_API_KEY environment variable is missing or empty; either provide it, or instantiate the OpenAI client with an apiKey option, like new OpenAI({ apiKey: 'My API Key' }).
+    at new OpenAI (file:///Users/infinite27/AILCC_PRIME/agents/chatgpt-proxy/node_modules/openai/index.mjs:48:19)
+    at file:///Users/infinite27/AILCC_PRIME/agents/chatgpt-proxy/server.js:10:16
+    at ModuleJob.run (node:internal/modules/esm/module_job:377:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:671:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.11.1

@@ -17,7 +17,7 @@ export interface TaskIntent {
   subtasks?: string[];
   priority: TaskPriority;
   mode: ModeType;
-  requiredContext?: Record<string, any>;
+  requiredContext?: Record<string, unknown>;
   createdAt: string;
   createdBy?: string;
 }
@@ -43,14 +43,14 @@ export interface HandoffContext {
   targetAgent?: string;
   secondaryAgents?: string[];
   timestamp: Date;
-  metadata?: Record<string, any>;
-  taskData?: any;
+  metadata?: Record<string, unknown>;
+  taskData?: unknown;
   escalationPath?: string;
   format?: string; // [SOURCE_AGENT] → [TARGET_AGENT]
   context?: {
     fullTaskDescription?: string;
     subtasks?: string[];
-    relatedContext?: Record<string, any>;
+    relatedContext?: Record<string, unknown>;
     linearTicket?: string;
   };
   expectedOutput?: {
@@ -68,7 +68,7 @@ export interface DispatchResult {
   agentUsed: string;
   output?: string;
   error?: string;
-  metadata?: Record<string, any>;
+  metadata?: Record<string, unknown>;
 }
 
 /**
@@ -90,7 +90,7 @@ export interface ExecutionResult {
   taskId: string;
   agent: AgentType;
   status: 'completed' | 'failed' | 'partial' | 'escalated';
-  output: any;
+  output: unknown;
   metadata: {
     executionTime: number;
     tokensUsed?: number;
@@ -109,7 +109,7 @@ export interface MemoryEntry {
   content: string;
   timestamp: Date;
   ttl: number; // Time to live in seconds
-  context?: Record<string, any>;
+  context?: Record<string, unknown>;
   relationshipType?: 'prerequisite' | 'related' | 'follow-up' | 'escalation';
   expiresAt?: string;
   createdAt?: string;

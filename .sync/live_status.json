@@ -1,18 +1,18 @@
 {
-  "timestamp": "2026-01-27T16:00:10Z",
+  "timestamp": "2026-02-08T16:00:02Z",
   "system": {
     "hostname": "Macbook-1.local",
-    "uptime_seconds": 938,
-    "load_avg": "3.86",
-    "disk_free_percent": 52
+    "uptime_seconds": 66338,
+    "load_avg": "1.90",
+    "disk_free_percent": 48
   },
   "services": {
-    "valentine_core": "offline",
-    "dashboard": "offline"
+    "valentine_core": "online",
+    "dashboard": "online"
   },
-  "last_optimization": "2026-01-27T16:00:10Z",
+  "last_optimization": "2026-02-08T16:00:02Z",
   "alerts": {
-    "chromium_crash": true,
-    "n8n_check": "unstable"
+    "chromium_crash": false,
+    "n8n_check": "stable"
   }
 }

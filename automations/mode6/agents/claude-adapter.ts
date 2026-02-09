@@ -39,12 +39,17 @@ export class ClaudeAdapter {
   private temperature: number;
   private systemPrompt: string;
   private apiBaseUrl: string = 'https://api.anthropic.com/v1';
-  private requestStats = {
-    successfulRequests: 0,
-    failedRequests: 0,
-    totalTokensUsed: 0,
-    averageResponseTime: 0,
-  };
+  private requestStats: {
+    successfulRequests: number;
+    failedRequests: number;
+    totalTokensUsed: number;
+    averageResponseTime: number;
+  } = {
+      successfulRequests: 0,
+      failedRequests: 0,
+      totalTokensUsed: 0,
+      averageResponseTime: 0,
+    };
 
   constructor(config: ClaudeAdapterConfig = {}) {
     const configSettings = configLoader.getConfig();
@@ -72,7 +77,13 @@ export class ClaudeAdapter {
       }
 
       // Format the user message from handoff context
-      const userMessage = this.formatUserMessage(handoff);
+      let userMessage = this.formatUserMessage(handoff);
+
+      // Inject Hippocampus Context
+      const projectContext = await this.fetchContext('project:tasks');
+      if (projectContext) {
+        userMessage += `\n\n[SYSTEM MEMORY: ACTIVE PROJECT CONTEXT]\n${projectContext}\n\n[INSTRUCTION]\nGiven the above context, execute the following request:\n`;
+      }
 
       // If no API key, run in mock mode
       if (!this.apiKey) {
@@ -114,11 +125,32 @@ export class ClaudeAdapter {
   }
 
   /**
+   * Fetch context from Hippocampus Memory
+   */
+  private async fetchContext(key: string): Promise<string | null> {
+    try {
+      const response = await fetch(`http://localhost:8090/memory/get/${key}`);
+      if (!response.ok) return null;
+      const data = await response.json();
+      return JSON.stringify(data, null, 2);
+    } catch (error) {
+      console.warn(`[ClaudeAdapter] Failed to fetch memory key '${key}':`, error);
+      return null;
+    }
+  }
+
+  /**
    * Stream responses from Claude (for real-time feedback)
    */
   async streamTask(handoff: HandoffContext, onChunk: (chunk: string) => void): Promise<DispatchResult> {
     try {
-      const userMessage = this.formatUserMessage(handoff);
+      let userMessage = this.formatUserMessage(handoff);
+
+      // Inject Hippocampus Context
+      const projectContext = await this.fetchContext('project:tasks');
+      if (projectContext) {
+        userMessage += `\n\n[SYSTEM MEMORY: ACTIVE PROJECT CONTEXT]\n${projectContext}\n\n[INSTRUCTION]\nGiven the above context, execute the following request:\n`;
+      }
 
       if (!this.apiKey) {
         // Mock stream mode
@@ -237,7 +269,7 @@ export class ClaudeAdapter {
     });
 
     if (!response.ok) {
-      const errorData = (await response.json()) as Record<string, any>;
+      const errorData = (await response.json()) as { error?: { message?: string } };
       throw new Error(`Claude API error (${response.status}): ${errorData?.error?.message || 'Unknown error'}`);
     }
 

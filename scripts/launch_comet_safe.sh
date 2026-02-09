@@ -7,7 +7,7 @@
 
 APP="Comet"
 BINARY="/Applications/Comet.app/Contents/MacOS/Comet"
-FLAGS="--disable-gpu --disable-software-rasterizer"
+FLAGS="--disable-gpu --disable-software-rasterizer --disable-features=V8Sandbox"
 
 # Check if already running
 if pgrep -x "$APP" > /dev/null; then

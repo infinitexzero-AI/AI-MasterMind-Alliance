@@ -9,7 +9,7 @@ export interface ExecutionResult {
   taskId: string;
   agentUsed: string;
   success: boolean;
-  output?: any;
+  output?: unknown;
   duration: number;
   timestamp: Date;
 }
@@ -27,7 +27,7 @@ export class MemoryManager {
   private routingDecisions: RoutingDecisionRecord[] = [];
   private executionResults: ExecutionResult[] = [];
 
-  constructor() {}
+  constructor() { }
 
   /**
    * Store a memory entry
@@ -120,7 +120,7 @@ export class MemoryManager {
   /**
    * Apply retention policy: remove expired entries
    */
-  applyRetentionPolicy(): Record<string, any> {
+  applyRetentionPolicy(): Record<string, unknown> {
     const now = Date.now();
     let removedCount = 0;
 
@@ -143,7 +143,7 @@ export class MemoryManager {
   /**
    * Get memory statistics
    */
-  getMemoryStats(): Record<string, any> {
+  getMemoryStats(): Record<string, unknown> {
     return {
       totalEntries: this.memoryEntries.size,
       totalRoutingDecisions: this.routingDecisions.length,
@@ -156,7 +156,7 @@ export class MemoryManager {
   /**
    * Get full memory dump for debugging
    */
-  getMemoryDump(): Record<string, any> {
+  getMemoryDump(): Record<string, unknown> {
     return {
       memoryEntries: Array.from(this.memoryEntries.values()),
       routingDecisions: this.routingDecisions,

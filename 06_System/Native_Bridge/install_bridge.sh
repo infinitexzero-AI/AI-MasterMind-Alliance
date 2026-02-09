@@ -22,7 +22,7 @@ echo "✅ Made bridge_host.py executable."
 # Ask for Extension ID
 echo ""
 # The ID of the Chrome Extension (from chrome://extensions)
-EXTENSION_ID="kkedoppemlmaimecgpcieigdemdkjeca"
+EXTENSION_ID="kngiafgkdnlkgmefdafaibkibegkcaef"
 echo "Using pre-defined Extension ID: $EXTENSION_ID"
 EXT_ID="$EXTENSION_ID"
 

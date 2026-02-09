@@ -1,12 +1,12 @@
-from fastapi import FastAPI, WebSocket, WebSocketDisconnect
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import asyncio
-import json
-from datetime import datetime
-from backend.services.system_manager import SystemManager
+import redis
+import os
+import shutil
 
-app = FastAPI(title="AILCC Prime API")
+app = FastAPI()
 
+# Enable CORS for the dashboard
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -15,51 +15,93 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Connection manager for WebSockets
-class ConnectionManager:
-    def __init__(self):
-        self.active_connections: list[WebSocket] = []
-
-    async def connect(self, websocket: WebSocket):
-        await websocket.accept()
-        self.active_connections.append(websocket)
-
-    def disconnect(self, websocket: WebSocket):
-        self.active_connections.remove(websocket)
-
-    async def broadcast(self, message: str):
-        for connection in self.active_connections:
-            try:
-                await connection.send_text(message)
-            except Exception:
-                # Handle stale connections
-                pass
-
-manager = ConnectionManager()
-system_manager = SystemManager(manager.broadcast)
-
-@app.on_event("startup")
-async def startup_event():
-    system_manager.start()
-    asyncio.create_task(system_manager.broadcast_status())
+# Redis Connection
+redis_host = os.getenv("REDIS_HOST", "localhost")
+r = redis.Redis(host=redis_host, port=6379, db=0)
 
 @app.get("/health")
-async def health_check():
-    return {
-        "status": "online",
-        "timestamp": datetime.now().isoformat(),
-        "version": "1.0.0"
-    }
+def health_check():
+    return {"status": "operational", "service": "Hippocampus API"}
 
-@app.websocket("/ws/telemetry")
-async def telemetry_websocket(websocket: WebSocket):
-    await manager.connect(websocket)
+@app.get("/memory/stats")
+def memory_stats():
     try:
-        while True:
-            await websocket.receive_text()
-    except WebSocketDisconnect:
-        manager.disconnect(websocket)
+        info = r.info(section="memory")
+        keys = r.dbsize()
+        return {
+            "keys_count": keys,
+            "used_memory_human": info.get("used_memory_human", "0B"),
+            "peak_memory_human": info.get("used_memory_peak_human", "0B"),
+            "connection_status": "connected"
+        }
+    except Exception as e:
+        return {
+            "connection_status": "error",
+            "error": str(e)
+        }
 
-if __name__ == "__main__":
-    import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+@app.get("/vault/status")
+def vault_status():
+    vaults = [
+        {"id": "system_drive", "path": "/Users/infinite27/AILCC_PRIME"},
+        {"id": "xdrive_alpha", "path": "/Volumes/XDriveAlpha"}
+    ]
+    
+    results = []
+    for v in vaults:
+        exists = os.path.exists(v["path"])
+        usage = "N/A"
+        if exists:
+            try:
+                total, used, free = shutil.disk_usage(v["path"])
+                usage = f"{free // (2**30)} GiB free"
+            except:
+                pass
+        
+        results.append({
+            "id": v["id"],
+            "path": v["path"],
+            "online": exists,
+            "storage_status": usage
+        })
+        
+    return results
+
+# --- Ingestion Endpoints ---
+
+from pydantic import BaseModel
+from typing import Dict, Any
+
+class MemoryItem(BaseModel):
+    category: str  # e.g., "plans", "status", "knowledge"
+    key: str       # e.g., "task_checklist"
+    value: Dict[str, Any] # Structured JSON data
+
+@app.post("/memory/ingest")
+def ingest_memory(item: MemoryItem):
+    """
+    Ingest structured data into Redis.
+    Structure: "category:key" -> JSON string
+    """
+    import json
+    try:
+        redis_key = f"{item.category}:{item.key}"
+        # Redis stores strings, so we dump the JSON
+        r.set(redis_key, json.dumps(item.value))
+        return {"status": "success", "key": redis_key}
+    except Exception as e:
+        return {"status": "error", "error": str(e)}
+
+@app.get("/memory/get/{key}")
+def get_memory(key: str):
+    """
+    Retrieve structured data from Redis by key.
+    """
+    import json
+    try:
+        data = r.get(key)
+        if not data:
+            return {"status": "not_found", "key": key}
+        return json.loads(data)
+    except Exception as e:
+        return {"status": "error", "error": str(e)}

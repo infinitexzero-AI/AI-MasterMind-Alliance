@@ -140,7 +140,7 @@ export class OpenAIAdapter {
     });
 
     if (!response.ok) {
-      const errorData = (await response.json()) as Record<string, any>;
+      const errorData = (await response.json()) as { error?: { message?: string } };
       throw new Error(`OpenAI error: ${errorData?.error?.message || 'Unknown error'}`);
     }
 

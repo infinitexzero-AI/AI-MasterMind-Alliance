@@ -1,0 +1,43 @@
+[mcp-superassistant-proxy] Starting...
+[mcp-superassistant-proxy] Starting mcp-superassistant-proxy ...
+[mcp-superassistant-proxy]   - outputTransport: sse
+[mcp-superassistant-proxy]   - config: /Users/infinite27/AILCC_PRIME/superassistant_config.json
+[mcp-superassistant-proxy]   - Headers: (none)
+[mcp-superassistant-proxy]   - host: localhost
+[mcp-superassistant-proxy]   - port: 3006
+[mcp-superassistant-proxy]   - ssePath: /sse
+[mcp-superassistant-proxy]   - messagePath: /message
+[mcp-superassistant-proxy]   - CORS: enabled ("*")
+[mcp-superassistant-proxy]   - Health endpoints: (none)
+[mcp-superassistant-proxy] Loaded config with 2 servers
+[mcp-superassistant-proxy] Starting server GitHub: npx -y @modelcontextprotocol/server-github
+GitHub MCP Server running on stdio
+[mcp-superassistant-proxy] Connected to server: GitHub
+[mcp-superassistant-proxy] Server GitHub has 26 tools
+[mcp-superassistant-proxy] Successfully initialized server: GitHub
+[mcp-superassistant-proxy] Starting server Linear: npx -y @mseep/linear-mcp
+Linear MCP server running on stdio
+[mcp-superassistant-proxy] Connected to server: Linear
+[mcp-superassistant-proxy] Server Linear has 7 tools
+[mcp-superassistant-proxy] Successfully initialized server: Linear
+[mcp-superassistant-proxy] Config-to-SSE gateway ready
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use ::1:3006
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at GetAddrInfoReqWrap.callback (node:net:2206:7)
+    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'EADDRINUSE',
+  errno: -48,
+  syscall: 'listen',
+  address: '::1',
+  port: 3006
+}
+
+Node.js v24.11.1

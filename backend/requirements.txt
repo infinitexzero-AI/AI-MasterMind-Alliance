@@ -1,9 +1,3 @@
 fastapi
-uvicorn[standard]
-pydantic
-pydantic-settings
-sqlmodel
-apscheduler
-watchdog
-requests
-python-multipart
+uvicorn
+redis
