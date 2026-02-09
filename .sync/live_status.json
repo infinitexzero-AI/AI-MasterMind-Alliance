@@ -1,16 +1,16 @@
 {
-  "timestamp": "2026-02-08T16:00:02Z",
+  "timestamp": "2026-02-09T08:00:11Z",
   "system": {
     "hostname": "Macbook-1.local",
-    "uptime_seconds": 66338,
-    "load_avg": "1.90",
-    "disk_free_percent": 48
+    "uptime_seconds": 123947,
+    "load_avg": "2.29",
+    "disk_free_percent": 57
   },
   "services": {
     "valentine_core": "online",
     "dashboard": "online"
   },
-  "last_optimization": "2026-02-08T16:00:02Z",
+  "last_optimization": "2026-02-09T08:00:12Z",
   "alerts": {
     "chromium_crash": false,
     "n8n_check": "stable"
