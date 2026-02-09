@@ -1,0 +1,30 @@
+{
+  "accounts": [
+    {
+      "id": "academic_01",
+      "type": "Academic",
+      "provider": "IMAP",
+      "areas_of_interest": ["HLTH-1011", "GENS-2101", "Moodle Notifications"],
+      "priority": 1.0
+    },
+    {
+      "id": "personal_01",
+      "type": "Personal",
+      "provider": "IMAP",
+      "areas_of_interest": ["Tech", "Finance", "Social"],
+      "priority": 0.5
+    },
+    {
+      "id": "work_01",
+      "type": "Work",
+      "provider": "IMAP",
+      "areas_of_interest": ["XCN", "AILCC Development", "Client Comms"],
+      "priority": 0.8
+    }
+  ],
+  "tier_mapping": {
+    "Hot": ["Urgent", "Meeting Invites", "Security Alerts"],
+    "Warm": ["Project Updates", "Newsletters", "Reference Docs"],
+    "Cold": ["Archived Receipts", "Old Conversations"]
+  }
+}
