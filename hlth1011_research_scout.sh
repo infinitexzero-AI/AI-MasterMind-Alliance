@@ -14,12 +14,12 @@ open "https://mental.jmir.org/2023/1/e47047/" # Ward (2023)
 
 # Pillar 3: Health Services
 open "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0301008" # Yang (2024) - PLOS One
-open "https://journals.sagepub.com/doi/10.1177/07067437241301008" # Settler/Henderson (2024)
+open "https://bmcprimcare.biomedcentral.com/articles/10.1186/s12875-024-02384-y" # Henderson (2024) - BMC Primary Care
 
 # Pillar 4: SDoH
-open "https://unbscholar.researchrepository.ca/islandora/object/unbscholar%3A11341" # UNB Jurisdictional Scan
-open "https://sjhdc.ca/living-wage-2025/" # Atcheson (2025)
-open "https://mentalhealthcommission.ca/the-state-of-mental-health-in-canada-2024/" # CMHA (2024)
+open "https://legnb.ca/content/dam/legnb/pdf/RecommendationsReport-DisabilityActionPlan.pdf" # NB Mental Health Jurisdictional Scan (2024)
+open "https://sjhdc.ca/wp-content/uploads/2024/10/Living-Wage-2024-Report.pdf" # Atcheson (2025/2024) - Living Wage NB
+open "https://cmha.ca/wp-content/uploads/2024/04/CMHA_State-of-Mental-Health-Report_2024_EN.pdf" # CMHA (2024) - State of Mental Health Full Report
 open "https://aidecanada.ca/resources/learn/social-determinants-of-health/social-determinants-of-health-and-mental-health-outcomes-in-rural-canada" # AIDE Canada (2024)
 
 echo "✅ All sources queued with direct paths. Use Ctrl+F with the Evidence Guide keywords."

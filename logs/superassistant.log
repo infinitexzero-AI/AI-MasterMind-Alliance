@@ -9034,3 +9034,14 @@ Linear MCP server running on stdio
 [mcp-superassistant-proxy] New SSE connection from ::1
 [mcp-superassistant-proxy] SSE connection closed (session 63073250-bce5-4035-a309-1efa5f61bcb3)
 [mcp-superassistant-proxy] Client disconnected (session 63073250-bce5-4035-a309-1efa5f61bcb3)
+[mcp-superassistant-proxy] New SSE connection from ::1
+[mcp-superassistant-proxy] POST to SSE transport (session d0c03f3c-b445-4ff7-8be1-dbc5f02c0d6f)
+[mcp-superassistant-proxy] SSE → Servers (session d0c03f3c-b445-4ff7-8be1-dbc5f02c0d6f): {"jsonrpc":"2.0","id":0,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"mcp-client-sse","version":"1.0.0"}}}
+[mcp-superassistant-proxy] Servers → SSE (session d0c03f3c-b445-4ff7-8be1-dbc5f02c0d6f):
+[mcp-superassistant-proxy] POST to SSE transport (session d0c03f3c-b445-4ff7-8be1-dbc5f02c0d6f)
+[mcp-superassistant-proxy] SSE → Servers (session d0c03f3c-b445-4ff7-8be1-dbc5f02c0d6f): {"jsonrpc":"2.0","method":"notifications/initialized"}
+[mcp-superassistant-proxy] SSE connection closed (session d0c03f3c-b445-4ff7-8be1-dbc5f02c0d6f)
+[mcp-superassistant-proxy] Client disconnected (session d0c03f3c-b445-4ff7-8be1-dbc5f02c0d6f)
+[mcp-superassistant-proxy] New SSE connection from ::1
+[mcp-superassistant-proxy] SSE connection closed (session edb5a412-2480-4eaf-a8e1-ec955bd662b5)
+[mcp-superassistant-proxy] Client disconnected (session edb5a412-2480-4eaf-a8e1-ec955bd662b5)
