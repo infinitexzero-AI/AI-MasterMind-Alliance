@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="en-US" class="no-js">
+  <head>
+    <meta charset="UTF-8">
+<script type="text/javascript">
+/* <![CDATA[ */
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),document.addEventListener("gform/theme/scripts_loaded",function(){gform.themeScriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,themeScriptsLoaded:!1,isFormEditor:()=>"function"==typeof InitializeEditor,callIfLoaded:function(o){return!(!gform.domLoaded||!gform.scriptsLoaded||!gform.themeScriptsLoaded&&!gform.isFormEditor()||(gform.isFormEditor()&&console.warn("The use of gform.initializeOnLoaded() is deprecated in the form editor context and will be removed in Gravity Forms 3.1."),o(),0))},initializeOnLoaded:function(o){gform.callIfLoaded(o)||(document.addEventListener("gform_main_scripts_loaded",()=>{gform.scriptsLoaded=!0,gform.callIfLoaded(o)}),document.addEventListener("gform/theme/scripts_loaded",()=>{gform.themeScriptsLoaded=!0,gform.callIfLoaded(o)}),window.addEventListener("DOMContentLoaded",()=>{gform.domLoaded=!0,gform.callIfLoaded(o)}))},hooks:{action:{},filter:{}},addAction:function(o,r,e,t){gform.addHook("action",o,r,e,t)},addFilter:function(o,r,e,t){gform.addHook("filter",o,r,e,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,r){gform.removeHook("action",o,r)},removeFilter:function(o,r,e){gform.removeHook("filter",o,r,e)},addHook:function(o,r,e,t,n){null==gform.hooks[o][r]&&(gform.hooks[o][r]=[]);var d=gform.hooks[o][r];null==n&&(n=r+"_"+d.length),gform.hooks[o][r].push({tag:n,callable:e,priority:t=null==t?10:t})},doHook:function(r,o,e){var t;if(e=Array.prototype.slice.call(e,1),null!=gform.hooks[r][o]&&((o=gform.hooks[r][o]).sort(function(o,r){return o.priority-r.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==r?t.apply(null,e):e[0]=t.apply(null,e)})),"filter"==r)return e[0]},removeHook:function(o,r,t,n){var e;null!=gform.hooks[o][r]&&(e=(e=gform.hooks[o][r]).filter(function(o,r,e){return!!(null!=n&&n!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][r]=e)}});
+/* ]]> */
+</script>
+
+    <title>Page not found - CMHA National</title>
+    <meta name="viewport" content="width=device-width">
+    
+ <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-57WJDM9');</script>
+<!-- End Google Tag Manager -->
+
+<meta name="facebook-domain-verification" content="5i46zon108iskuilvt6qchi8m2qmbh" />
+
+<meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO Premium plugin v26.8 (Yoast SEO v26.9) - https://yoast.com/product/yoast-seo-premium-wordpress/ -->
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Page not found - CMHA National" />
+	<meta property="og:site_name" content="CMHA National" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://cmha.ca/fr/#website","url":"https://cmha.ca/fr/","name":"CMHA National","description":"Canadian Mental Health Association - Mental Health for All","publisher":{"@id":"https://cmha.ca/fr/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://cmha.ca/fr/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://cmha.ca/fr/#organization","name":"CMHA National","url":"https://cmha.ca/fr/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://cmha.ca/fr/#/schema/logo/image/","url":"https://cmha.ca/wp-content/uploads/2021/07/4x3-fanciful-v1.png","contentUrl":"https://cmha.ca/wp-content/uploads/2021/07/4x3-fanciful-v1.png","width":600,"height":450,"caption":"CMHA National"},"image":{"@id":"https://cmha.ca/fr/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/CMHA.ACSM.National/","https://x.com/CMHA_NTL","https://www.instagram.com/cmhanational/","https://www.linkedin.com/company/canadian-mental-health-association/","https://www.youtube.com/user/cmhanational","https://www.tiktok.com/@cmhanational"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='dns-prefetch' href='//static.addtoany.com' />
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//www.google.com' />
+<link rel='dns-prefetch' href='//maps.googleapis.com' />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='vendor_foundation-css' href='https://cmha.ca/wp-content/themes/cmha-national/style-foundation.css' type='text/css' media='all' />
+<link rel='stylesheet' id='vendor_slick-css' href='https://cmha.ca/wp-content/themes/cmha-national/js/vendor/slick/slick.css' type='text/css' media='all' />
+<link rel='stylesheet' id='vendor_fontawesome-css' href='https://cmha.ca/wp-content/themes/cmha-national/fonts/fontawesome/css/all.css' type='text/css' media='all' />
+<link rel='stylesheet' id='vendor_calendar-css' href='https://cmha.ca/wp-content/themes/cmha-national/js/vendor/fullcalendar/fullcalendar.css' type='text/css' media='all' />
+<link rel='stylesheet' id='machine_style-css' href='https://cmha.ca/wp-content/themes/cmha-national/style.css?ver=6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css' href='https://cmha.ca/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<link rel='stylesheet' id='wp-components-css' href='https://cmha.ca/wp-includes/css/dist/components/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-preferences-css' href='https://cmha.ca/wp-includes/css/dist/preferences/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-editor-css' href='https://cmha.ca/wp-includes/css/dist/block-editor/style.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='popup-maker-block-library-style-css' href='https://cmha.ca/wp-content/plugins/popup-maker/dist/packages/block-library-style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='fontawesome-css' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='cppo-frontend-css-css' href='https://cmha.ca/wp-content/plugins/custom-profile-photo-overlays-plugin-v3.11/includes/../assets/css/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='cropper-css-css' href='https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpsl-styles-css' href='https://cmha.ca/wp-content/plugins/wp-store-locator-33/css/styles.min.css' type='text/css' media='all' />
+<style id='wp-block-paragraph-inline-css' type='text/css'>
+.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
+/*# sourceURL=https://cmha.ca/wp-includes/blocks/paragraph/style.min.css */
+</style>
+<link rel='stylesheet' id='gform_signature_foundation-css' href='https://cmha.ca/wp-content/plugins/gravityformssignature/assets/css/dist/theme.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='popup-maker-site-css' href='//cmha.ca/wp-content/uploads/pum/pum-site-styles.css?generated=1765393299&#038;ver=1.21.5' type='text/css' media='all' />
+<link rel='stylesheet' id='gform_basic-css' href='https://cmha.ca/wp-content/plugins/gravityforms/assets/css/dist/basic.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gform_theme_components-css' href='https://cmha.ca/wp-content/plugins/gravityforms/assets/css/dist/theme-components.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='gform_theme-css' href='https://cmha.ca/wp-content/plugins/gravityforms/assets/css/dist/theme.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='addtoany-css' href='https://cmha.ca/wp-content/plugins/add-to-any/addtoany.min.css' type='text/css' media='all' />
+<script type="text/javascript" data-cfasync="false" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/jquery.js" id="jquery-js"></script>
+<script type="text/javascript" id="addtoany-core-js-before">
+/* <![CDATA[ */
+window.a2a_config=window.a2a_config||{};a2a_config.callbacks=[];a2a_config.overlays=[];a2a_config.templates={};
+a2a_config.icon_color="transparent,#0a0a0a";
+
+//# sourceURL=addtoany-core-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" defer src="https://static.addtoany.com/menu/page.js" id="addtoany-core-js"></script>
+<script type="text/javascript" defer src="https://cmha.ca/wp-content/plugins/add-to-any/addtoany.min.js" id="addtoany-jquery-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/plugins/handl-utm-grabber/js/js.cookie.js" id="js.cookie-js"></script>
+<script type="text/javascript" id="handl-utm-grabber-js-extra">
+/* <![CDATA[ */
+var handl_utm = [];
+//# sourceURL=handl-utm-grabber-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/plugins/handl-utm-grabber/js/handl-utm-grabber.js" id="handl-utm-grabber-js"></script>
+<script type="text/javascript" defer='defer' data-cfasync="false" src="https://cmha.ca/wp-content/plugins/gravityforms/js/jquery.json.min.js" id="gform_json-js"></script>
+<script type="text/javascript" id="gform_gravityforms-js-extra">
+/* <![CDATA[ */
+var gf_global = {"gf_currency_config":{"name":"Canadian Dollar","symbol_left":"$","symbol_right":"CAD","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"CAD"},"base_url":"https://cmha.ca/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://cmha.ca/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"ad5c071d85719e2980a6876ee28b3495","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gf_global = {"gf_currency_config":{"name":"Canadian Dollar","symbol_left":"$","symbol_right":"CAD","symbol_padding":" ","thousand_separator":",","decimal_separator":".","decimals":2,"code":"CAD"},"base_url":"https://cmha.ca/wp-content/plugins/gravityforms","number_formats":[],"spinnerUrl":"https://cmha.ca/wp-content/plugins/gravityforms/images/spinner.svg","version_hash":"ad5c071d85719e2980a6876ee28b3495","strings":{"newRowAdded":"New row added.","rowRemoved":"Row removed","formSaved":"The form has been saved.  The content contains the link to return and complete the form."}};
+var gform_i18n = {"datepicker":{"days":{"monday":"Mo","tuesday":"Tu","wednesday":"We","thursday":"Th","friday":"Fr","saturday":"Sa","sunday":"Su"},"months":{"january":"January","february":"February","march":"March","april":"April","may":"May","june":"June","july":"July","august":"August","september":"September","october":"October","november":"November","december":"December"},"firstDay":1,"iconText":"Select date"}};
+var gf_legacy_multi = {"100":""};
+var gform_gravityforms = {"strings":{"invalid_file_extension":"This type of file is not allowed. Must be one of the following:","delete_file":"Delete this file","in_progress":"in progress","file_exceeds_limit":"File exceeds size limit","illegal_extension":"This type of file is not allowed.","max_reached":"Maximum number of files reached","unknown_error":"There was a problem while saving the file on the server","currently_uploading":"Please wait for the uploading to complete","cancel":"Cancel","cancel_upload":"Cancel this upload","cancelled":"Cancelled","error":"Error","message":"Message"},"vars":{"images_url":"https://cmha.ca/wp-content/plugins/gravityforms/images"}};
+//# sourceURL=gform_gravityforms-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' data-cfasync="false" src="https://cmha.ca/wp-content/plugins/gravityforms/js/gravityforms.min.js" id="gform_gravityforms-js"></script>
+<script type="text/javascript" id="gform_conditional_logic-js-extra">
+/* <![CDATA[ */
+var gf_legacy = {"is_legacy":""};
+var gf_legacy = {"is_legacy":""};
+//# sourceURL=gform_conditional_logic-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' data-cfasync="false" src="https://cmha.ca/wp-content/plugins/gravityforms/js/conditional_logic.min.js" id="gform_conditional_logic-js"></script>
+<script type="text/javascript" defer='defer' data-cfasync="false" src="https://cmha.ca/wp-content/plugins/gravityforms/assets/js/dist/utils.min.js" id="gform_gravityforms_utils-js"></script>
+<link rel="https://api.w.org/" href="https://cmha.ca/wp-json/" /><link rel="icon" href="https://cmha.ca/wp-content/uploads/2021/02/cropped-cmhaweb2-logo-80x80-1.png" sizes="32x32" />
+<link rel="icon" href="https://cmha.ca/wp-content/uploads/2021/02/cropped-cmhaweb2-logo-80x80-1.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://cmha.ca/wp-content/uploads/2021/02/cropped-cmhaweb2-logo-80x80-1.png" />
+<meta name="msapplication-TileImage" content="https://cmha.ca/wp-content/uploads/2021/02/cropped-cmhaweb2-logo-80x80-1.png" />
+		<style type="text/css" id="wp-custom-css">
+			   .FLS-container form{
+      background-color: #f7f7f7;
+    padding: 2rem;
+		 margin: 0 auto;
+    }
+
+.FLS-container .FLS-req{
+	    color: #790000;
+}
+
+    .FLS-container .form-group {
+        margin-bottom: 20px;
+    }
+
+    .FLS-container .form-group .flex-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .FLS-container .flex-item {
+        flex: 1;
+        margin-right: 10px;
+    }
+
+    .FLS-container .flex-item:last-child {
+        margin-right: 0;
+    }
+
+    .FLS-container .FLS-form label {
+        margin-bottom: 8px;
+        font-weight: bold;
+			font-size: 16px;
+    }
+
+    .FLS-container .FLS-form input[type="text"],
+    .FLS-container .FLS-form textarea {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+.FLS-button{
+	    text-align: center;
+}
+.mobile-menu-toggle--wrapper {
+    display: none;
+}
+ @media (max-width: 600px) {
+	 .mobile-menu-toggle--wrapper {
+    display: flex;
+}
+.FLS-container .flex-container {
+
+    display: block;
+	 }
+    }
+		</style>
+		  </head>
+  <body class="error404 wp-theme-cmha-national">
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57WJDM9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Fundraise Up: the new standard for online giving -->
+    <script>(function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track,openCheckout'
+                .split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+                :function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
+            j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a+'';
+            t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=5;o.h=w.location.href;o.l=[];
+            for(i=0;i<8;i++)o[l[i]]=o(l[i]);w[n]=o}
+        })(window,document,'script','FundraiseUp','AFHZWRFF');</script>
+    <!-- End Fundraise Up -->
+	  
+<!-- MailChimp -->
+<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/521cf137e20e78ddd3eacca8c/62df2861f7952206476b69bd2.js");</script>
+<!-- End MailChimp -->	 
+	  
+          <div class="site-alert" style="background-color: #98002f; ">
+        <style>
+          .site-alert *,
+          .site-alert-open i{
+            color: #ffffff!important;
+          }
+        </style>
+        <div class="grid-container">
+          <p style="text-align: center;">Thinking of suicide or worried about someone you know? Call or text 9-8-8, toll-free, anytime, for support.</p>
+  
+        </div>
+        <i class="fas fa-times alert-toggle-close"></i>
+      </div>
+      <div class="site-alert-open " style="background-color: #98002f;">
+        <i class="fas fa-chevron-down"></i>
+      </div>
+        <header class="site-header  header-banner-active">
+      <div class="grid-container">
+        <div class="grid-x grid-padding-x mobile-top-header">
+          <div class="cell small-6">
+            <p class="multi-site-select-drilldown mobile">National Site <i class="fas fa-chevron-down multisite-menu-toggle"></i></p>
+          </div>
+          <div class="cell small-6">
+            <div class="header-expanding-search mobile">
+                              <form class="search-form" role="search" method="get" class="searchform" action="https://cmha.ca/">
+                	<div class="input-group">
+                	  <label for="search-form-header-mobile" class="visuallyhidden">search</label>
+                	  <input class="input-group-field" type="text" name="s" id="search-form-header-mobile" value="" placeholder="Type to search...">
+                	  <button type="submit" class="button"><i class="fas fa-search"></i><span class="visuallyhidden">search</span></button>
+                	</div>
+                </form>
+              <a href="#" class="expanding-search-button"><span>Search</span><span class="close">Close</span><i class="fas fa-search"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="grid-x grid-padding-x align-middle bottom-header">
+          <div class="cell small-6 large-7">
+            <div class="logo-with-site-select">
+                              <a href="https://cmha.ca/" class="site-logo"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/CMHA-bilingual-digital-logo.png" alt="CMHA National"></a>
+                            <p class="multi-site-select-drilldown">National Site <i class="fas fa-bars multisite-menu-toggle"></i></p>
+            </div>
+          </div>
+          <div class="cell small-6 large-5 end">
+            <div class="header-flex-items">
+                              <a class="find-cmha" href="https://cmha.ca/find-help/find-cmha-in-your-area/" target="_self"><i class="fas fa-map-marker-alt"></i>Find CMHA in your area</a>
+                            <div>
+                                <a class="button donate-button button-green" href="https://cmha.donorsupport.co/page/donate?lan=english" target="_blank">Donate</a>
+                            <a href="https://cmha.ca/fr/" class="header-lang-button">FR</a>              </div>
+            </div>
+          </div>
+          <div class="cell">
+      			<div class="menu-wrapper-header header-banner-active">
+      			  <div class="menu-overflow">
+        			    <ul class="dropdown menu" data-responsive-menu="drilldown medium-dropdown" data-autoclose="true" data-parent-link="false" data-close-on-click="true" data-click-open="false" data-disable-hover="false"><li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/find-help/">Find Help</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-help/if-you-are-in-crisis/">If you are in crisis</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-help/how-to-get-help/">How to get mental health help</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-help/helping-others/">Mental Health Help For Others</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-info/mental-health/online-mental-health-courses/">Online Mental Health Courses</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-help/find-cmha-in-your-area/">Find CMHA in your area</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/find-info/">Find Info</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/find-info/mental-health/">Mental Health Support</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-info/mental-health/general-info/">Mental Health Resources</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/find-info/mental-health/check-in-on-your-mental-health/">Check in on your Mental Health</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-info/mental-health/check-in-on-your-mental-health/mental-health-meter/">Mental Health Meter</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-info/mental-health/check-in-on-your-mental-health/whats-your-stress-index/">What’s Your Stress Index?</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-info/mental-health/check-in-on-your-mental-health/work-life-balance-quiz/">Work-Life Balance Quiz</a></li></ul></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/find-info/mental-illness/">Mental Illnesses</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-info/mental-illness/general-info/">General info on mental illnesses</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/find-info/mental-illness/diagnoses/">Mental Illness Diagnoses</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-info/mental-health/online-mental-health-courses/">Online Mental Health Courses</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-info/mental-illness/prevention/">Prevention, Treatment and Recovery</a></li></ul></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/what-we-do/">What we do</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/what-we-do/national-programs/">National programs</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  target="_blank"  href="https://bounceback.cmha.ca/">BounceBack</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/what-we-do/national-programs/peer-support/">Peer Support</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/national-programs/peer-support/peer-support-101/">Peer Support 101</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  target="_blank"  href="https://peersupportcanada.ca/">Peer Support Canada</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/national-programs/peer-support/campus-peer-support/">Campus Peer Support</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/national-programs/recovery-colleges/">Recovery Colleges</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  target="_blank"  href="https://cmha.ca/resilient-minds/">Resilient Minds</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/what-we-do/national-events/">National events</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/national-events/">Calendar</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  href="http://mentalhealthweek.ca">Mental Health Week</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  href="https://www.camimh.ca/miaw">Mental Illness Awareness Week (MIAW)</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  href="https://cmha.donordrive.com/?language=en">Ride Don't Hide</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  href="https://www.thepushupchallenge.ca/">The Push-Up Challenge</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/what-we-do/policy-research/">Policy &amp; Research</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/policy-research/">Policy & Research: all</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/policy-research/rural-and-remote-mental-health/">Rural and Remote Mental Health</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/policy-research/election2025/">Federal Election 2025</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/state-of-mental-health-in-canada/">The State of Mental Health in Canada 2024 Report</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/what-we-do/national-programs/workplace-mental-health/">Workplace Mental Health</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/national-programs/workplace-mental-health/not-myself-today/">Not Myself Today</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/national-programs/workplace-mental-health/workplace-training/">Workplace Training</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/national-programs/workplace-mental-health/psychological-health-safety-training/">Psychological Health &amp; Safety Training</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/what-we-do/national-programs/workplace-mental-health/takeaways/">Takeaways Toolkit</a></li></ul></li></ul></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  href="https://cmha.ca/news/">News</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/who-we-are/">Who we are</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/who-we-are/the-cmha-federation/">The CMHA Federation</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/the-cmha-federation/">The Federation</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/the-cmha-federation/mission-vision-and-values/">Mission, vision, and values</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/nationwide-strategic-plan/">Nationwide strategic plan</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/cmha-national/our-history/">Our History</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/who-we-are/cmha-national/">CMHA National</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/cmha-national/our-staff/">Our Staff</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/cmha-national/our-board-of-directors/">Our Board of Directors</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/cmha-national/national-council-of-persons-with-lived-experience/">National Council of Persons with Lived Experience</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/cmha-national/theory-of-change/">Theory of Change</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/cmha-national/annual-reports/">Annual reports</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/careers/">Careers</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/our-supporters/">Our Supporters</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/contact-us/">Contact Us</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-help/find-cmha-in-your-area/">Find CMHA in your area</a></li></ul></li><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/how-you-can-help/">How you can help</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/how-you-can-help/donate/">Ways to give</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/how-you-can-help/become-a-partner/">Become a corporate partner</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/how-you-can-help/hold-a-fundraising-event/">Fundraise for CMHA</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  href="https://cmha.donordrive.com/?fuseaction=donate.event&eventID=561&language=en">Become a Monthly Donor</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children is-dropdown-submenu-parent"><a  href="#">Leave a Gift in your Will</a><ul class='menu is-dropdown-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/how-you-can-help/how-to-leave-a-legacy/">How to leave a legacy</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/how-you-can-help/how-to-leave-a-legacy/faq/">Frequently Asked Questions</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/how-you-can-help/how-to-leave-a-legacy/for-professionals/">For professionals</a></li></ul></li></ul></li></ul>        			  <div class="mobile-header-buttons">
+                                      <a class="find-cmha" href="https://cmha.ca/find-help/find-cmha-in-your-area/" target="_self"><i class="fas fa-map-marker-alt"></i>Find CMHA in your area</a>
+                                                          <a class="button donate-button button-green" href="https://cmha.donorsupport.co/page/donate?lan=english" target="_blank">Donate</a>
+                                  </div>
+                <div class="mobile-header-footer">
+                  <ul class="social-nav"><li><a data-type="twitter" href="https://twitter.com/CMHA_NTL" target="_blank"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/social-media-icon-twitter.png" alt=""></a></li><li><a data-type="instagram" href="https://www.instagram.com/cmhanational/" target="_blank"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/social-media-icon-instagram.png" alt=""></a></li><li><a data-type="facebook" href="https://www.facebook.com/CMHA.ACSM.National/" target="_blank"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/social-media-icon-facebook.png" alt=""></a></li><li><a data-type="youtube" href="https://www.youtube.com/user/cmhanational" target="_blank"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/social-media-icon-youtube.png" alt=""></a></li><li><a data-type="linkedin" href="https://www.linkedin.com/company/canadian-mental-health-association/" target="_blank"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/social-media-icon-linkedin.png" alt=""></a></li></ul>                  <div class="social-after"></div>
+                  <div class="mobile-header-lang">
+                    <a href="https://cmha.ca/fr/" class="header-lang-button">FR</a>                  </div>
+                </div>
+              </div>
+      			</div>
+      			
+      			<div class="mobile-menu-toggle--wrapper">
+      			  <span class="mobile-text">Menu</span>
+      			  <span class="mobile-close-text">Close</span>
+      			  <i class="fas fa-bars mobile-menu-toggle"></i>
+      			</div>
+          </div>
+        </div>
+        <div class="header-expanding-search">
+                    <form class="search-form" role="search" method="get" class="searchform" action="https://cmha.ca/">
+          	<div class="input-group">
+          	  <label for="search-form-header-desktop" class="visuallyhidden">search</label>
+          	  <input class="input-group-field" type="text" name="s" id="search-form-header-desktop" value="" placeholder="Type to search...">
+          	  <button type="submit" class="button"><i class="fas fa-search"></i><span class="visuallyhidden">search</span></button>
+          	</div>
+          </form>
+          <a href="#" class="expanding-search-button"><span>Search</span><i class="fas fa-search"></i></a>
+        </div>
+      </div>
+    </header>
+    
+    <div class="slide-in-search">
+      <div>
+        <p>What are you looking for?</p>
+                <form class="search-form slide-in en" role="search" method="get" class="searchform" action="https://cmha.ca/">
+        	<div class="input-group">
+        	  <label for="search-form--slidein" class="visuallyhidden">search</label>	
+        	  <input class="input-group-field" id="search-form--slidein" type="text" name="s" value="" placeholder="Type to search...">
+        	  <div class="search-form-buttons">
+        	    <button type="reset" class="button">Clear</button>
+        	    <button type="submit" class="button">Search now</button>
+        	  </div>
+        	</div>
+        </form>
+      </div>
+    </div>
+    <main class="main">
+      <section class="section section--404 hand-text-center">
+        <div class="grid-container text-center">
+          <h1>404 - File not found</h1>
+        </div>
+	    </section>
+    </main>
+
+<style>
+
+  .wp-block-embed iframe{
+    max-width: 100%;
+    width: 40rem;
+    aspect-ratio: 16 / 9;
+    height: auto;
+  }
+
+  .wp-block-embed.alignwide iframe{
+    max-width: 100%;
+    width: 60rem;
+  }
+  
+  .wp-block-embed.alignfull iframe{
+    max-width: 100%;
+    width: 80rem;
+  }
+  
+</style>
+
+<footer class="site-footer">
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="cell">
+        <div class="footer-menu-inner">
+          <ul class="menu footer-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children is-dropdown-submenu-parent"><a  href="https://cmha.ca/who-we-are/cmha-national/our-history/">About Us</a><ul class='menu footer-submenu'><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/contact-us/">Contact Us</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/cmha-national/our-staff/">Our Team</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/nationwide-strategic-plan/">Nationwide strategic plan</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/who-we-are/cmha-national/annual-reports/">Annual reports</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/financial-statements-2020-21/">Financial Statements</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/careers/">Careers</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/complaints-and-concerns/">Complaints and concerns</a></li></ul></li><li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children is-dropdown-submenu-parent"><a  href="#">For Media</a><ul class='menu footer-submenu'><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  href="https://cmha.ca/news/category/news-releases/">News releases</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/find-info/mental-health/general-info/fast-facts/">Fast Facts for media</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/media-contact/">Media contact</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  target="_blank"  href="https://static1.squarespace.com/static/60c0df36ba596c14b0e34bb8/t/60c9fbcb41d5a153e7f7d33c/1623849933974/Mindset+third+edition_2020.pdf">Reporting recommendations</a></li></ul></li><li class=" menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children is-dropdown-submenu-parent"><a  href="#">Our Websites</a><ul class='menu footer-submenu'><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  target="_blank"  href="https://bounceback.cmha.ca/">BounceBack</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/intranet/">Intranet</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  target="_blank"  href="https://mentalhealthweek.ca/">Mental Health Week</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  href="https://www.notmyselftoday.ca/">Not Myself Today</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  target="_blank"  href="https://cmha.ca/resilient-minds/">Resilient Minds</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  target="_blank"  href="https://cmha.donordrive.com/">Ride Don't Hide</a></li><li class=" menu-item menu-item-type-custom menu-item-object-custom"><a  target="_blank"  href="https://peersupportcanada.ca/">Peer Support Canada</a></li></ul></li></ul>          <div class="footer-select">
+                            <a class="button donate-button button-green" href="https://cmha.donorsupport.co/page/donate?lan=english" target="_blank">Donate</a>
+                        
+                                        <a href="https://cmha.ca/fr/" class="button button-dark">Français</a>
+                                      </div>
+        </div>
+        <div class="footer-contact-info">
+ <div class="footer-address">
+   <div class="grid-x grid-padding-x">
+     <div class="cell medium-6">
+                <p><a href="https://www.google.com/maps/place/Canadian+Mental+Health+Association/@43.6548013,-79.3896957,15z/data=!4m5!3m4!1s0x0:0xc4a85c353df6186e!8m2!3d43.6548013!4d-79.3896957" target="_blank"><strong>Canadian Mental Health Association, National</strong><br />
+250 Dundas St. West, Suite 401<br />
+Toronto, Ontario M5T 2Z5</a></p>
+                       <p><i class="fa fa-phone fa- fw "></i><b>Phone:</b> <a href="tel:(416) 646-5557"><b>(416) 646-5557</b></a></p>
+                       <p><i class="fa fa-envelope fa- "></i>E-mail: <a href="mailto:info@cmha.ca">info@cmha.ca</a></p> 
+            </div>
+
+
+     <div class="cell medium-6"> 
+                <p>
+           <b>Charitable Registration Number:</b><br>
+           10686 3657 RR0001         </p>
+
+
+         
+
+         <div class="imagine-canada-logos">
+           <img src="https://cmha.ca/wp-content/uploads/2025/11/Accreditation-Trustmark-White-EN.png"
+                alt="Imagine Canada Accreditation Trustmark EN"
+                style="height: 80px; margin-right: 10px;">
+         </div>
+            </div>
+   </div>
+ </div>
+
+          <div class="footer-social">
+            <h4>Stay Connected</h4>
+            <ul class="social-nav"><li><a data-type="twitter" href="https://twitter.com/CMHA_NTL" target="_blank"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/social-media-icon-twitter.png" alt=""></a></li><li><a data-type="instagram" href="https://www.instagram.com/cmhanational/" target="_blank"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/social-media-icon-instagram.png" alt=""></a></li><li><a data-type="facebook" href="https://www.facebook.com/CMHA.ACSM.National/" target="_blank"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/social-media-icon-facebook.png" alt=""></a></li><li><a data-type="youtube" href="https://www.youtube.com/user/cmhanational" target="_blank"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/social-media-icon-youtube.png" alt=""></a></li><li><a data-type="linkedin" href="https://www.linkedin.com/company/canadian-mental-health-association/" target="_blank"><img src="https://cmha.ca/wp-content/themes/cmha-national/img/social-media-icon-linkedin.png" alt=""></a></li></ul>          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sub-footer">
+    <div class="grid-container">
+      <div class="grid-x grid-padding-x align-middle">
+        <div class="cell medium-3">
+          <p class="copyright-text">&copy; 2026 CMHA National</p>
+        </div>
+        <div class="cell medium-9">
+          <ul class="menu sub-footer-menu"><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/accessibility/">Accessibility</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/copyright-and-permissions/">Copyright and Permissions</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/social-media-house-rules/">Social media house rules</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/privacy/">Privacy Policy</a></li><li class=" menu-item menu-item-type-post_type menu-item-object-page"><a  href="https://cmha.ca/disclaimer/">Disclaimer</a></li></ul>        </div>
+      </div>
+    </div>
+  </div>
+<script async src=https://cmha.donordrive.com/resources/js/embed-donate.js? data-program-id="1493-100"></script>
+</footer>
+	<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/cmha-national/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div 
+	id="pum-29932" 
+	role="dialog" 
+	aria-modal="false"
+	class="pum pum-overlay pum-theme-14914 pum-theme-lightbox popmake-overlay click_open" 
+	data-popmake="{&quot;id&quot;:29932,&quot;slug&quot;:&quot;securities-donation&quot;,&quot;theme_id&quot;:14914,&quot;cookies&quot;:[],&quot;triggers&quot;:[{&quot;type&quot;:&quot;click_open&quot;,&quot;settings&quot;:{&quot;extra_selectors&quot;:&quot;.open-form-button&quot;}}],&quot;mobile_disabled&quot;:null,&quot;tablet_disabled&quot;:null,&quot;meta&quot;:{&quot;display&quot;:{&quot;stackable&quot;:false,&quot;overlay_disabled&quot;:false,&quot;scrollable_content&quot;:false,&quot;disable_reposition&quot;:false,&quot;size&quot;:&quot;medium&quot;,&quot;responsive_min_width&quot;:&quot;0%&quot;,&quot;responsive_min_width_unit&quot;:false,&quot;responsive_max_width&quot;:&quot;100%&quot;,&quot;responsive_max_width_unit&quot;:false,&quot;custom_width&quot;:&quot;640px&quot;,&quot;custom_width_unit&quot;:false,&quot;custom_height&quot;:&quot;380px&quot;,&quot;custom_height_unit&quot;:false,&quot;custom_height_auto&quot;:false,&quot;location&quot;:&quot;center top&quot;,&quot;position_from_trigger&quot;:false,&quot;position_top&quot;:&quot;100&quot;,&quot;position_left&quot;:&quot;0&quot;,&quot;position_bottom&quot;:&quot;0&quot;,&quot;position_right&quot;:&quot;0&quot;,&quot;position_fixed&quot;:false,&quot;animation_type&quot;:&quot;fade&quot;,&quot;animation_speed&quot;:&quot;350&quot;,&quot;animation_origin&quot;:&quot;center top&quot;,&quot;overlay_zindex&quot;:false,&quot;zindex&quot;:&quot;1999999999&quot;},&quot;close&quot;:{&quot;text&quot;:&quot;&quot;,&quot;button_delay&quot;:&quot;0&quot;,&quot;overlay_click&quot;:false,&quot;esc_press&quot;:false,&quot;f4_press&quot;:false},&quot;click_open&quot;:[]}}">
+
+	<div id="popmake-29932" class="pum-container popmake theme-14914 pum-responsive pum-responsive-medium responsive size-medium">
+
+				
+				
+		
+				<div class="pum-content popmake-content" tabindex="0">
+			
+
+                <div class='gf_browser_unknown gform_wrapper gravity-theme gform-theme--no-framework' data-form-theme='gravity-theme' data-form-index='0' id='gform_wrapper_100' style='display:none'><div id='gf_100' class='gform_anchor' tabindex='-1'></div><form method='post' enctype='multipart/form-data' target='gform_ajax_frame_100' id='gform_100'  action='/wp-content/uploads/2024/04/CMHA_State-of-Mental-Health-Report_2024_EN.pdf#gf_100' data-formid='100' novalidate><input name="geolocation_submitter_location" id="geolocation_submitter_location" type="hidden" data-js="geolocation_submitter_location" value="" /><div class='gf_invisible ginput_recaptchav3' data-sitekey='6LdqsDIgAAAAAJt4P0AlnyiY7zjC4aKo9NIO9cOB' data-tabindex='0'><input id="input_d36d759f3f54cf0960bbf155c5dd06b7" class="gfield_recaptcha_response" type="hidden" name="input_d36d759f3f54cf0960bbf155c5dd06b7" value=""/></div> 
+ <input type='hidden' class='gforms-pum' value='{"closepopup":false,"closedelay":0,"openpopup":false,"openpopup_id":0}' />
+                        <div class='gform-body gform_body'><div id='gform_fields_100' class='gform_fields top_label form_sublabel_below description_below validation_below'><div id="field_100_1" class="gfield gfield--type-date gfield--input-type-datepicker gfield--datepicker-no-icon gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_100_1'>Date<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_date'>
+                            <input name='input_1' id='input_100_1' type='text' value='10/02/2026' class='datepicker gform-datepicker mdy datepicker_no_icon gdatepicker-no-icon'   placeholder='mm/dd/yyyy' aria-describedby="input_100_1_date_format" aria-invalid="false" aria-required="true"/>
+                            <span id='input_100_1_date_format' class='screen-reader-text'>MM slash DD slash YYYY</span>
+                        </div>
+                        <input type='hidden' id='gforms_calendar_icon_input_100_1' class='gform_hidden' value='https://cmha.ca/wp-content/plugins/gravityforms/images/datepicker/datepicker.svg'/></div><fieldset id="field_100_3" class="gfield gfield--type-name gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label gfield_label_before_complex' >Donor&#039;s Name<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></legend><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row' id='input_100_3'>
+                            
+                            <span id='input_100_3_3_container' class='name_first gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_3.3' id='input_100_3_3' value=''   aria-required='true'     />
+                                                    <label for='input_100_3_3' class='gform-field-label gform-field-label--type-sub '>First</label>
+                                                </span>
+                            
+                            <span id='input_100_3_6_container' class='name_last gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_3.6' id='input_100_3_6' value=''   aria-required='true'     />
+                                                    <label for='input_100_3_6' class='gform-field-label gform-field-label--type-sub '>Last</label>
+                                                </span>
+                            
+                        </div></fieldset><fieldset id="field_100_4" class="gfield gfield--type-address gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label gfield_label_before_complex' >Donor&#039;s Address<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></legend>    
+                    <div class='ginput_complex ginput_container has_street has_street2 has_city has_state has_zip has_country ginput_container_address gform-grid-row' id='input_100_4' >
+                         <span class='ginput_full address_line_1 ginput_address_line_1 gform-grid-col' id='input_100_4_1_container' >
+                                        <input type='text' name='input_4.1' id='input_100_4_1' value=''    aria-required='true'    />
+                                        <label for='input_100_4_1' id='input_100_4_1_label' class='gform-field-label gform-field-label--type-sub '>Street Address</label>
+                                    </span><span class='ginput_full address_line_2 ginput_address_line_2 gform-grid-col' id='input_100_4_2_container' >
+                                        <input type='text' name='input_4.2' id='input_100_4_2' value=''     aria-required='false'   />
+                                        <label for='input_100_4_2' id='input_100_4_2_label' class='gform-field-label gform-field-label--type-sub '>Address Line 2</label>
+                                    </span><span class='ginput_left address_city ginput_address_city gform-grid-col' id='input_100_4_3_container' >
+                                    <input type='text' name='input_4.3' id='input_100_4_3' value=''    aria-required='true'    />
+                                    <label for='input_100_4_3' id='input_100_4_3_label' class='gform-field-label gform-field-label--type-sub '>City</label>
+                                 </span><span class='ginput_right address_state ginput_address_state gform-grid-col' id='input_100_4_4_container' >
+                                        <input type='text' name='input_4.4' id='input_100_4_4' value=''      aria-required='true'    />
+                                        <label for='input_100_4_4' id='input_100_4_4_label' class='gform-field-label gform-field-label--type-sub '>State / Province / Region</label>
+                                      </span><span class='ginput_left address_zip ginput_address_zip gform-grid-col' id='input_100_4_5_container' >
+                                    <input type='text' name='input_4.5' id='input_100_4_5' value=''    aria-required='true'    />
+                                    <label for='input_100_4_5' id='input_100_4_5_label' class='gform-field-label gform-field-label--type-sub '>ZIP / Postal Code</label>
+                                </span><span class='ginput_right address_country ginput_address_country gform-grid-col' id='input_100_4_6_container' >
+                                        <select name='input_4.6' id='input_100_4_6'   aria-required='true'    ><option value='' ></option><option value='Afghanistan' >Afghanistan</option><option value='Albania' >Albania</option><option value='Algeria' >Algeria</option><option value='American Samoa' >American Samoa</option><option value='Andorra' >Andorra</option><option value='Angola' >Angola</option><option value='Anguilla' >Anguilla</option><option value='Antarctica' >Antarctica</option><option value='Antigua and Barbuda' >Antigua and Barbuda</option><option value='Argentina' >Argentina</option><option value='Armenia' >Armenia</option><option value='Aruba' >Aruba</option><option value='Australia' >Australia</option><option value='Austria' >Austria</option><option value='Azerbaijan' >Azerbaijan</option><option value='Bahamas' >Bahamas</option><option value='Bahrain' >Bahrain</option><option value='Bangladesh' >Bangladesh</option><option value='Barbados' >Barbados</option><option value='Belarus' >Belarus</option><option value='Belgium' >Belgium</option><option value='Belize' >Belize</option><option value='Benin' >Benin</option><option value='Bermuda' >Bermuda</option><option value='Bhutan' >Bhutan</option><option value='Bolivia' >Bolivia</option><option value='Bonaire, Sint Eustatius and Saba' >Bonaire, Sint Eustatius and Saba</option><option value='Bosnia and Herzegovina' >Bosnia and Herzegovina</option><option value='Botswana' >Botswana</option><option value='Bouvet Island' >Bouvet Island</option><option value='Brazil' >Brazil</option><option value='British Indian Ocean Territory' >British Indian Ocean Territory</option><option value='Brunei Darussalam' >Brunei Darussalam</option><option value='Bulgaria' >Bulgaria</option><option value='Burkina Faso' >Burkina Faso</option><option value='Burundi' >Burundi</option><option value='Cabo Verde' >Cabo Verde</option><option value='Cambodia' >Cambodia</option><option value='Cameroon' >Cameroon</option><option value='Canada' selected='selected'>Canada</option><option value='Cayman Islands' >Cayman Islands</option><option value='Central African Republic' >Central African Republic</option><option value='Chad' >Chad</option><option value='Chile' >Chile</option><option value='China' >China</option><option value='Christmas Island' >Christmas Island</option><option value='Cocos Islands' >Cocos Islands</option><option value='Colombia' >Colombia</option><option value='Comoros' >Comoros</option><option value='Congo' >Congo</option><option value='Congo, Democratic Republic of the' >Congo, Democratic Republic of the</option><option value='Cook Islands' >Cook Islands</option><option value='Costa Rica' >Costa Rica</option><option value='Croatia' >Croatia</option><option value='Cuba' >Cuba</option><option value='Curaçao' >Curaçao</option><option value='Cyprus' >Cyprus</option><option value='Czechia' >Czechia</option><option value='Côte d&#039;Ivoire' >Côte d&#039;Ivoire</option><option value='Denmark' >Denmark</option><option value='Djibouti' >Djibouti</option><option value='Dominica' >Dominica</option><option value='Dominican Republic' >Dominican Republic</option><option value='Ecuador' >Ecuador</option><option value='Egypt' >Egypt</option><option value='El Salvador' >El Salvador</option><option value='Equatorial Guinea' >Equatorial Guinea</option><option value='Eritrea' >Eritrea</option><option value='Estonia' >Estonia</option><option value='Eswatini' >Eswatini</option><option value='Ethiopia' >Ethiopia</option><option value='Falkland Islands' >Falkland Islands</option><option value='Faroe Islands' >Faroe Islands</option><option value='Fiji' >Fiji</option><option value='Finland' >Finland</option><option value='France' >France</option><option value='French Guiana' >French Guiana</option><option value='French Polynesia' >French Polynesia</option><option value='French Southern Territories' >French Southern Territories</option><option value='Gabon' >Gabon</option><option value='Gambia' >Gambia</option><option value='Georgia' >Georgia</option><option value='Germany' >Germany</option><option value='Ghana' >Ghana</option><option value='Gibraltar' >Gibraltar</option><option value='Greece' >Greece</option><option value='Greenland' >Greenland</option><option value='Grenada' >Grenada</option><option value='Guadeloupe' >Guadeloupe</option><option value='Guam' >Guam</option><option value='Guatemala' >Guatemala</option><option value='Guernsey' >Guernsey</option><option value='Guinea' >Guinea</option><option value='Guinea-Bissau' >Guinea-Bissau</option><option value='Guyana' >Guyana</option><option value='Haiti' >Haiti</option><option value='Heard Island and McDonald Islands' >Heard Island and McDonald Islands</option><option value='Holy See' >Holy See</option><option value='Honduras' >Honduras</option><option value='Hong Kong' >Hong Kong</option><option value='Hungary' >Hungary</option><option value='Iceland' >Iceland</option><option value='India' >India</option><option value='Indonesia' >Indonesia</option><option value='Iran' >Iran</option><option value='Iraq' >Iraq</option><option value='Ireland' >Ireland</option><option value='Isle of Man' >Isle of Man</option><option value='Israel' >Israel</option><option value='Italy' >Italy</option><option value='Jamaica' >Jamaica</option><option value='Japan' >Japan</option><option value='Jersey' >Jersey</option><option value='Jordan' >Jordan</option><option value='Kazakhstan' >Kazakhstan</option><option value='Kenya' >Kenya</option><option value='Kiribati' >Kiribati</option><option value='Korea, Democratic People&#039;s Republic of' >Korea, Democratic People&#039;s Republic of</option><option value='Korea, Republic of' >Korea, Republic of</option><option value='Kuwait' >Kuwait</option><option value='Kyrgyzstan' >Kyrgyzstan</option><option value='Lao People&#039;s Democratic Republic' >Lao People&#039;s Democratic Republic</option><option value='Latvia' >Latvia</option><option value='Lebanon' >Lebanon</option><option value='Lesotho' >Lesotho</option><option value='Liberia' >Liberia</option><option value='Libya' >Libya</option><option value='Liechtenstein' >Liechtenstein</option><option value='Lithuania' >Lithuania</option><option value='Luxembourg' >Luxembourg</option><option value='Macao' >Macao</option><option value='Madagascar' >Madagascar</option><option value='Malawi' >Malawi</option><option value='Malaysia' >Malaysia</option><option value='Maldives' >Maldives</option><option value='Mali' >Mali</option><option value='Malta' >Malta</option><option value='Marshall Islands' >Marshall Islands</option><option value='Martinique' >Martinique</option><option value='Mauritania' >Mauritania</option><option value='Mauritius' >Mauritius</option><option value='Mayotte' >Mayotte</option><option value='Mexico' >Mexico</option><option value='Micronesia' >Micronesia</option><option value='Moldova' >Moldova</option><option value='Monaco' >Monaco</option><option value='Mongolia' >Mongolia</option><option value='Montenegro' >Montenegro</option><option value='Montserrat' >Montserrat</option><option value='Morocco' >Morocco</option><option value='Mozambique' >Mozambique</option><option value='Myanmar' >Myanmar</option><option value='Namibia' >Namibia</option><option value='Nauru' >Nauru</option><option value='Nepal' >Nepal</option><option value='Netherlands' >Netherlands</option><option value='New Caledonia' >New Caledonia</option><option value='New Zealand' >New Zealand</option><option value='Nicaragua' >Nicaragua</option><option value='Niger' >Niger</option><option value='Nigeria' >Nigeria</option><option value='Niue' >Niue</option><option value='Norfolk Island' >Norfolk Island</option><option value='North Macedonia' >North Macedonia</option><option value='Northern Mariana Islands' >Northern Mariana Islands</option><option value='Norway' >Norway</option><option value='Oman' >Oman</option><option value='Pakistan' >Pakistan</option><option value='Palau' >Palau</option><option value='Palestine, State of' >Palestine, State of</option><option value='Panama' >Panama</option><option value='Papua New Guinea' >Papua New Guinea</option><option value='Paraguay' >Paraguay</option><option value='Peru' >Peru</option><option value='Philippines' >Philippines</option><option value='Pitcairn' >Pitcairn</option><option value='Poland' >Poland</option><option value='Portugal' >Portugal</option><option value='Puerto Rico' >Puerto Rico</option><option value='Qatar' >Qatar</option><option value='Romania' >Romania</option><option value='Russian Federation' >Russian Federation</option><option value='Rwanda' >Rwanda</option><option value='Réunion' >Réunion</option><option value='Saint Barthélemy' >Saint Barthélemy</option><option value='Saint Helena, Ascension and Tristan da Cunha' >Saint Helena, Ascension and Tristan da Cunha</option><option value='Saint Kitts and Nevis' >Saint Kitts and Nevis</option><option value='Saint Lucia' >Saint Lucia</option><option value='Saint Martin' >Saint Martin</option><option value='Saint Pierre and Miquelon' >Saint Pierre and Miquelon</option><option value='Saint Vincent and the Grenadines' >Saint Vincent and the Grenadines</option><option value='Samoa' >Samoa</option><option value='San Marino' >San Marino</option><option value='Sao Tome and Principe' >Sao Tome and Principe</option><option value='Saudi Arabia' >Saudi Arabia</option><option value='Senegal' >Senegal</option><option value='Serbia' >Serbia</option><option value='Seychelles' >Seychelles</option><option value='Sierra Leone' >Sierra Leone</option><option value='Singapore' >Singapore</option><option value='Sint Maarten' >Sint Maarten</option><option value='Slovakia' >Slovakia</option><option value='Slovenia' >Slovenia</option><option value='Solomon Islands' >Solomon Islands</option><option value='Somalia' >Somalia</option><option value='South Africa' >South Africa</option><option value='South Georgia and the South Sandwich Islands' >South Georgia and the South Sandwich Islands</option><option value='South Sudan' >South Sudan</option><option value='Spain' >Spain</option><option value='Sri Lanka' >Sri Lanka</option><option value='Sudan' >Sudan</option><option value='Suriname' >Suriname</option><option value='Svalbard and Jan Mayen' >Svalbard and Jan Mayen</option><option value='Sweden' >Sweden</option><option value='Switzerland' >Switzerland</option><option value='Syria Arab Republic' >Syria Arab Republic</option><option value='Taiwan' >Taiwan</option><option value='Tajikistan' >Tajikistan</option><option value='Tanzania, the United Republic of' >Tanzania, the United Republic of</option><option value='Thailand' >Thailand</option><option value='Timor-Leste' >Timor-Leste</option><option value='Togo' >Togo</option><option value='Tokelau' >Tokelau</option><option value='Tonga' >Tonga</option><option value='Trinidad and Tobago' >Trinidad and Tobago</option><option value='Tunisia' >Tunisia</option><option value='Turkmenistan' >Turkmenistan</option><option value='Turks and Caicos Islands' >Turks and Caicos Islands</option><option value='Tuvalu' >Tuvalu</option><option value='Türkiye' >Türkiye</option><option value='US Minor Outlying Islands' >US Minor Outlying Islands</option><option value='Uganda' >Uganda</option><option value='Ukraine' >Ukraine</option><option value='United Arab Emirates' >United Arab Emirates</option><option value='United Kingdom' >United Kingdom</option><option value='United States' >United States</option><option value='Uruguay' >Uruguay</option><option value='Uzbekistan' >Uzbekistan</option><option value='Vanuatu' >Vanuatu</option><option value='Venezuela' >Venezuela</option><option value='Viet Nam' >Viet Nam</option><option value='Virgin Islands, British' >Virgin Islands, British</option><option value='Virgin Islands, U.S.' >Virgin Islands, U.S.</option><option value='Wallis and Futuna' >Wallis and Futuna</option><option value='Western Sahara' >Western Sahara</option><option value='Yemen' >Yemen</option><option value='Zambia' >Zambia</option><option value='Zimbabwe' >Zimbabwe</option><option value='Åland Islands' >Åland Islands</option></select>
+                                        <label for='input_100_4_6' id='input_100_4_6_label' class='gform-field-label gform-field-label--type-sub '>Country</label>
+                                    </span>
+                    <div class='gf_clear gf_clear_complex'></div>
+                </div></fieldset><div id="field_100_5" class="gfield gfield--type-email gfield--width-half field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_100_5'>Donor&#039;s Email</label><div class='ginput_container ginput_container_email'>
+                            <input name='input_5' id='input_100_5' type='email' value='' class='large'     aria-invalid="false"  />
+                        </div></div><div id="field_100_17" class="gfield gfield--type-phone gfield--width-half field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_100_17'>Donor&#039;s Phone Number</label><div class='ginput_container ginput_container_phone'><input name='input_17' id='input_100_17' type='tel' value='' class='large'    aria-invalid="false"   /></div></div><fieldset id="field_100_7" class="gfield gfield--type-name gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label gfield_label_before_complex' >Name of Donor&#039;s Broker<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></legend><div class='ginput_complex ginput_container ginput_container--name no_prefix has_first_name no_middle_name has_last_name no_suffix gf_name_has_2 ginput_container_name gform-grid-row' id='input_100_7'>
+                            
+                            <span id='input_100_7_3_container' class='name_first gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_7.3' id='input_100_7_3' value=''   aria-required='true'     />
+                                                    <label for='input_100_7_3' class='gform-field-label gform-field-label--type-sub '>First</label>
+                                                </span>
+                            
+                            <span id='input_100_7_6_container' class='name_last gform-grid-col gform-grid-col--size-auto' >
+                                                    <input type='text' name='input_7.6' id='input_100_7_6' value=''   aria-required='true'     />
+                                                    <label for='input_100_7_6' class='gform-field-label gform-field-label--type-sub '>Last</label>
+                                                </span>
+                            
+                        </div></fieldset><fieldset id="field_100_6" class="gfield gfield--type-address gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label gfield_label_before_complex' >Broker&#039;s Address<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></legend>    
+                    <div class='ginput_complex ginput_container has_street has_street2 has_city has_state has_zip has_country ginput_container_address gform-grid-row' id='input_100_6' >
+                         <span class='ginput_full address_line_1 ginput_address_line_1 gform-grid-col' id='input_100_6_1_container' >
+                                        <input type='text' name='input_6.1' id='input_100_6_1' value=''    aria-required='true'    />
+                                        <label for='input_100_6_1' id='input_100_6_1_label' class='gform-field-label gform-field-label--type-sub '>Street Address</label>
+                                    </span><span class='ginput_full address_line_2 ginput_address_line_2 gform-grid-col' id='input_100_6_2_container' >
+                                        <input type='text' name='input_6.2' id='input_100_6_2' value=''     aria-required='false'   />
+                                        <label for='input_100_6_2' id='input_100_6_2_label' class='gform-field-label gform-field-label--type-sub '>Address Line 2</label>
+                                    </span><span class='ginput_left address_city ginput_address_city gform-grid-col' id='input_100_6_3_container' >
+                                    <input type='text' name='input_6.3' id='input_100_6_3' value=''    aria-required='true'    />
+                                    <label for='input_100_6_3' id='input_100_6_3_label' class='gform-field-label gform-field-label--type-sub '>City</label>
+                                 </span><span class='ginput_right address_state ginput_address_state gform-grid-col' id='input_100_6_4_container' >
+                                        <input type='text' name='input_6.4' id='input_100_6_4' value=''      aria-required='true'    />
+                                        <label for='input_100_6_4' id='input_100_6_4_label' class='gform-field-label gform-field-label--type-sub '>State / Province / Region</label>
+                                      </span><span class='ginput_left address_zip ginput_address_zip gform-grid-col' id='input_100_6_5_container' >
+                                    <input type='text' name='input_6.5' id='input_100_6_5' value=''    aria-required='true'    />
+                                    <label for='input_100_6_5' id='input_100_6_5_label' class='gform-field-label gform-field-label--type-sub '>ZIP / Postal Code</label>
+                                </span><span class='ginput_right address_country ginput_address_country gform-grid-col' id='input_100_6_6_container' >
+                                        <select name='input_6.6' id='input_100_6_6'   aria-required='true'    ><option value='' ></option><option value='Afghanistan' >Afghanistan</option><option value='Albania' >Albania</option><option value='Algeria' >Algeria</option><option value='American Samoa' >American Samoa</option><option value='Andorra' >Andorra</option><option value='Angola' >Angola</option><option value='Anguilla' >Anguilla</option><option value='Antarctica' >Antarctica</option><option value='Antigua and Barbuda' >Antigua and Barbuda</option><option value='Argentina' >Argentina</option><option value='Armenia' >Armenia</option><option value='Aruba' >Aruba</option><option value='Australia' >Australia</option><option value='Austria' >Austria</option><option value='Azerbaijan' >Azerbaijan</option><option value='Bahamas' >Bahamas</option><option value='Bahrain' >Bahrain</option><option value='Bangladesh' >Bangladesh</option><option value='Barbados' >Barbados</option><option value='Belarus' >Belarus</option><option value='Belgium' >Belgium</option><option value='Belize' >Belize</option><option value='Benin' >Benin</option><option value='Bermuda' >Bermuda</option><option value='Bhutan' >Bhutan</option><option value='Bolivia' >Bolivia</option><option value='Bonaire, Sint Eustatius and Saba' >Bonaire, Sint Eustatius and Saba</option><option value='Bosnia and Herzegovina' >Bosnia and Herzegovina</option><option value='Botswana' >Botswana</option><option value='Bouvet Island' >Bouvet Island</option><option value='Brazil' >Brazil</option><option value='British Indian Ocean Territory' >British Indian Ocean Territory</option><option value='Brunei Darussalam' >Brunei Darussalam</option><option value='Bulgaria' >Bulgaria</option><option value='Burkina Faso' >Burkina Faso</option><option value='Burundi' >Burundi</option><option value='Cabo Verde' >Cabo Verde</option><option value='Cambodia' >Cambodia</option><option value='Cameroon' >Cameroon</option><option value='Canada' selected='selected'>Canada</option><option value='Cayman Islands' >Cayman Islands</option><option value='Central African Republic' >Central African Republic</option><option value='Chad' >Chad</option><option value='Chile' >Chile</option><option value='China' >China</option><option value='Christmas Island' >Christmas Island</option><option value='Cocos Islands' >Cocos Islands</option><option value='Colombia' >Colombia</option><option value='Comoros' >Comoros</option><option value='Congo' >Congo</option><option value='Congo, Democratic Republic of the' >Congo, Democratic Republic of the</option><option value='Cook Islands' >Cook Islands</option><option value='Costa Rica' >Costa Rica</option><option value='Croatia' >Croatia</option><option value='Cuba' >Cuba</option><option value='Curaçao' >Curaçao</option><option value='Cyprus' >Cyprus</option><option value='Czechia' >Czechia</option><option value='Côte d&#039;Ivoire' >Côte d&#039;Ivoire</option><option value='Denmark' >Denmark</option><option value='Djibouti' >Djibouti</option><option value='Dominica' >Dominica</option><option value='Dominican Republic' >Dominican Republic</option><option value='Ecuador' >Ecuador</option><option value='Egypt' >Egypt</option><option value='El Salvador' >El Salvador</option><option value='Equatorial Guinea' >Equatorial Guinea</option><option value='Eritrea' >Eritrea</option><option value='Estonia' >Estonia</option><option value='Eswatini' >Eswatini</option><option value='Ethiopia' >Ethiopia</option><option value='Falkland Islands' >Falkland Islands</option><option value='Faroe Islands' >Faroe Islands</option><option value='Fiji' >Fiji</option><option value='Finland' >Finland</option><option value='France' >France</option><option value='French Guiana' >French Guiana</option><option value='French Polynesia' >French Polynesia</option><option value='French Southern Territories' >French Southern Territories</option><option value='Gabon' >Gabon</option><option value='Gambia' >Gambia</option><option value='Georgia' >Georgia</option><option value='Germany' >Germany</option><option value='Ghana' >Ghana</option><option value='Gibraltar' >Gibraltar</option><option value='Greece' >Greece</option><option value='Greenland' >Greenland</option><option value='Grenada' >Grenada</option><option value='Guadeloupe' >Guadeloupe</option><option value='Guam' >Guam</option><option value='Guatemala' >Guatemala</option><option value='Guernsey' >Guernsey</option><option value='Guinea' >Guinea</option><option value='Guinea-Bissau' >Guinea-Bissau</option><option value='Guyana' >Guyana</option><option value='Haiti' >Haiti</option><option value='Heard Island and McDonald Islands' >Heard Island and McDonald Islands</option><option value='Holy See' >Holy See</option><option value='Honduras' >Honduras</option><option value='Hong Kong' >Hong Kong</option><option value='Hungary' >Hungary</option><option value='Iceland' >Iceland</option><option value='India' >India</option><option value='Indonesia' >Indonesia</option><option value='Iran' >Iran</option><option value='Iraq' >Iraq</option><option value='Ireland' >Ireland</option><option value='Isle of Man' >Isle of Man</option><option value='Israel' >Israel</option><option value='Italy' >Italy</option><option value='Jamaica' >Jamaica</option><option value='Japan' >Japan</option><option value='Jersey' >Jersey</option><option value='Jordan' >Jordan</option><option value='Kazakhstan' >Kazakhstan</option><option value='Kenya' >Kenya</option><option value='Kiribati' >Kiribati</option><option value='Korea, Democratic People&#039;s Republic of' >Korea, Democratic People&#039;s Republic of</option><option value='Korea, Republic of' >Korea, Republic of</option><option value='Kuwait' >Kuwait</option><option value='Kyrgyzstan' >Kyrgyzstan</option><option value='Lao People&#039;s Democratic Republic' >Lao People&#039;s Democratic Republic</option><option value='Latvia' >Latvia</option><option value='Lebanon' >Lebanon</option><option value='Lesotho' >Lesotho</option><option value='Liberia' >Liberia</option><option value='Libya' >Libya</option><option value='Liechtenstein' >Liechtenstein</option><option value='Lithuania' >Lithuania</option><option value='Luxembourg' >Luxembourg</option><option value='Macao' >Macao</option><option value='Madagascar' >Madagascar</option><option value='Malawi' >Malawi</option><option value='Malaysia' >Malaysia</option><option value='Maldives' >Maldives</option><option value='Mali' >Mali</option><option value='Malta' >Malta</option><option value='Marshall Islands' >Marshall Islands</option><option value='Martinique' >Martinique</option><option value='Mauritania' >Mauritania</option><option value='Mauritius' >Mauritius</option><option value='Mayotte' >Mayotte</option><option value='Mexico' >Mexico</option><option value='Micronesia' >Micronesia</option><option value='Moldova' >Moldova</option><option value='Monaco' >Monaco</option><option value='Mongolia' >Mongolia</option><option value='Montenegro' >Montenegro</option><option value='Montserrat' >Montserrat</option><option value='Morocco' >Morocco</option><option value='Mozambique' >Mozambique</option><option value='Myanmar' >Myanmar</option><option value='Namibia' >Namibia</option><option value='Nauru' >Nauru</option><option value='Nepal' >Nepal</option><option value='Netherlands' >Netherlands</option><option value='New Caledonia' >New Caledonia</option><option value='New Zealand' >New Zealand</option><option value='Nicaragua' >Nicaragua</option><option value='Niger' >Niger</option><option value='Nigeria' >Nigeria</option><option value='Niue' >Niue</option><option value='Norfolk Island' >Norfolk Island</option><option value='North Macedonia' >North Macedonia</option><option value='Northern Mariana Islands' >Northern Mariana Islands</option><option value='Norway' >Norway</option><option value='Oman' >Oman</option><option value='Pakistan' >Pakistan</option><option value='Palau' >Palau</option><option value='Palestine, State of' >Palestine, State of</option><option value='Panama' >Panama</option><option value='Papua New Guinea' >Papua New Guinea</option><option value='Paraguay' >Paraguay</option><option value='Peru' >Peru</option><option value='Philippines' >Philippines</option><option value='Pitcairn' >Pitcairn</option><option value='Poland' >Poland</option><option value='Portugal' >Portugal</option><option value='Puerto Rico' >Puerto Rico</option><option value='Qatar' >Qatar</option><option value='Romania' >Romania</option><option value='Russian Federation' >Russian Federation</option><option value='Rwanda' >Rwanda</option><option value='Réunion' >Réunion</option><option value='Saint Barthélemy' >Saint Barthélemy</option><option value='Saint Helena, Ascension and Tristan da Cunha' >Saint Helena, Ascension and Tristan da Cunha</option><option value='Saint Kitts and Nevis' >Saint Kitts and Nevis</option><option value='Saint Lucia' >Saint Lucia</option><option value='Saint Martin' >Saint Martin</option><option value='Saint Pierre and Miquelon' >Saint Pierre and Miquelon</option><option value='Saint Vincent and the Grenadines' >Saint Vincent and the Grenadines</option><option value='Samoa' >Samoa</option><option value='San Marino' >San Marino</option><option value='Sao Tome and Principe' >Sao Tome and Principe</option><option value='Saudi Arabia' >Saudi Arabia</option><option value='Senegal' >Senegal</option><option value='Serbia' >Serbia</option><option value='Seychelles' >Seychelles</option><option value='Sierra Leone' >Sierra Leone</option><option value='Singapore' >Singapore</option><option value='Sint Maarten' >Sint Maarten</option><option value='Slovakia' >Slovakia</option><option value='Slovenia' >Slovenia</option><option value='Solomon Islands' >Solomon Islands</option><option value='Somalia' >Somalia</option><option value='South Africa' >South Africa</option><option value='South Georgia and the South Sandwich Islands' >South Georgia and the South Sandwich Islands</option><option value='South Sudan' >South Sudan</option><option value='Spain' >Spain</option><option value='Sri Lanka' >Sri Lanka</option><option value='Sudan' >Sudan</option><option value='Suriname' >Suriname</option><option value='Svalbard and Jan Mayen' >Svalbard and Jan Mayen</option><option value='Sweden' >Sweden</option><option value='Switzerland' >Switzerland</option><option value='Syria Arab Republic' >Syria Arab Republic</option><option value='Taiwan' >Taiwan</option><option value='Tajikistan' >Tajikistan</option><option value='Tanzania, the United Republic of' >Tanzania, the United Republic of</option><option value='Thailand' >Thailand</option><option value='Timor-Leste' >Timor-Leste</option><option value='Togo' >Togo</option><option value='Tokelau' >Tokelau</option><option value='Tonga' >Tonga</option><option value='Trinidad and Tobago' >Trinidad and Tobago</option><option value='Tunisia' >Tunisia</option><option value='Turkmenistan' >Turkmenistan</option><option value='Turks and Caicos Islands' >Turks and Caicos Islands</option><option value='Tuvalu' >Tuvalu</option><option value='Türkiye' >Türkiye</option><option value='US Minor Outlying Islands' >US Minor Outlying Islands</option><option value='Uganda' >Uganda</option><option value='Ukraine' >Ukraine</option><option value='United Arab Emirates' >United Arab Emirates</option><option value='United Kingdom' >United Kingdom</option><option value='United States' >United States</option><option value='Uruguay' >Uruguay</option><option value='Uzbekistan' >Uzbekistan</option><option value='Vanuatu' >Vanuatu</option><option value='Venezuela' >Venezuela</option><option value='Viet Nam' >Viet Nam</option><option value='Virgin Islands, British' >Virgin Islands, British</option><option value='Virgin Islands, U.S.' >Virgin Islands, U.S.</option><option value='Wallis and Futuna' >Wallis and Futuna</option><option value='Western Sahara' >Western Sahara</option><option value='Yemen' >Yemen</option><option value='Zambia' >Zambia</option><option value='Zimbabwe' >Zimbabwe</option><option value='Åland Islands' >Åland Islands</option></select>
+                                        <label for='input_100_6_6' id='input_100_6_6_label' class='gform-field-label gform-field-label--type-sub '>Country</label>
+                                    </span>
+                    <div class='gf_clear gf_clear_complex'></div>
+                </div></fieldset><div id="field_100_8" class="gfield gfield--type-html gfield--width-full gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><p><strong>Instructions to Donor's Broker:</strong></p>
+<p>This is your authorization to transfer shares from my account to the account of Canadian Mental Health Association (National) held at Scotiatrust.</p>
+<p>Please deliver these securities to Scotiabank at the address noted below, for deposit to the account of Canadian Mental Health Association.</p></div><div id="field_100_10" class="gfield gfield--type-text gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_100_10'>Name of the Security to be Transferred<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_10' id='input_100_10' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_100_9" class="gfield gfield--type-text gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_100_9'>Donor&#039;s Account Number<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_text'><input name='input_9' id='input_100_9' type='text' value='' class='large'     aria-required="true" aria-invalid="false"   /></div></div><div id="field_100_11" class="gfield gfield--type-number gfield--width-half gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_100_11'>Number of Shares to be Transferred<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><div class='ginput_container ginput_container_number'><input name='input_11' id='input_100_11' type='number' step='any'   value='' class='large'     aria-required="true" aria-invalid="false"  /></div></div><div id="field_100_12" class="gfield gfield--type-html gfield--width-seven-twelfths gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div style="margin-top:24px;">
+  <p><strong>Transfer to:</strong> Canadian Mental Health Association</p>
+  <p><strong>Account Number:</strong> 7803321814</p>
+  <p><strong>FINS#</strong> T525 &nbsp;&nbsp;&nbsp; <strong>DTC#</strong> 4816</p>
+  <p><strong>CUID#</strong> BNSC &nbsp;&nbsp;&nbsp; <strong>Intermediary Code</strong> BSNG</p>
+</div></div><div id="field_100_13" class="gfield gfield--type-html gfield--width-five-twelfths gfield_html gfield_html_formatted gfield_no_follows_desc field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><div style="font-family: Arial, sans-serif; line-height: 1.5;margin-top:24px;">
+  <p><strong>Contact:</strong> Scotia Asset Management LLC</p>
+  <p>Attn: Ryan Mullins MBA, CFA</p>
+  <p>Portfolio Manager</p>
+  <p>40 King St. W, 38th Floor</p>
+  <p>Toronto ON M5H 3Y2</p>
+  <p><a href="mailto:Ryan.Mullins@scotiawealth.com">Ryan.Mullins@scotiawealth.com</a></p>
+</div></div><fieldset id="field_100_18" class="gfield gfield--type-checkbox gfield--type-choice gfield--width-full field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label gfield_label_before_complex' >Communications Consent</legend><div class='ginput_container ginput_container_checkbox'><div class='gfield_checkbox ' id='input_100_18'><div class='gchoice gchoice_100_18_1'>
+								<input class='gfield-choice-input' name='input_18.1' type='checkbox'  value='I agree to receive communications from CMHA'  id='choice_100_18_1'   />
+								<label for='choice_100_18_1' id='label_100_18_1' class='gform-field-label gform-field-label--type-inline'>I agree to receive communications from CMHA</label>
+							</div></div></div></fieldset><fieldset id="field_100_15" class="gfield gfield--type-checkbox gfield--type-choice gfield--width-full gfield_contains_required field_sublabel_below gfield--has-description field_description_below field_validation_below gfield_visibility_visible"  ><legend class='gfield_label gform-field-label gfield_label_before_complex' >Terms and Conditions<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></legend><div class='ginput_container ginput_container_checkbox'><div class='gfield_checkbox ' id='input_100_15'><div class='gchoice gchoice_100_15_1'>
+								<input class='gfield-choice-input' name='input_15.1' type='checkbox'  value='I agree to my information being stored and used for donation purposes'  id='choice_100_15_1'   aria-describedby="gfield_description_100_15"/>
+								<label for='choice_100_15_1' id='label_100_15_1' class='gform-field-label gform-field-label--type-inline'>I agree to my information being stored and used for donation purposes</label>
+							</div></div></div><div class='gfield_description' id='gfield_description_100_15'>Learn more about how we collect and process personal information: 
+<a href="https://cmha.ca/privacy/" target="_blank" style="color: #0000EE; text-decoration: underline;">Privacy Policy</a></div></fieldset><div id="field_100_14" class="gfield gfield--type-signature gfield--width-full gfield_contains_required field_sublabel_below gfield--no-description field_description_below field_validation_below gfield_visibility_visible"  ><label class='gfield_label gform-field-label' for='input_100_14'>Signature<span class="gfield_required"><span class="gfield_required gfield_required_text">(Required)</span></span></label><input type='hidden' value='' name='input_14' id='input_100_14_signature_filename'/><div class='gfield_signature_ui_container gform-theme__no-reset--children' ><div id='input_100_14_Container' class='gfield_signature_container ginput_container' style='height:180px; width:300px; ' ><canvas id='input_100_14' width='300' height='180' style='border-style: Dashed; border-width: 2px; border-color: #DDDDDD; background-color:#FFFFFF; cursor: url(https://cmha.ca/wp-content/plugins/gravityformssignature/assets/img/pen.cur), pointer;'></canvas></div><div id='input_100_14_toolbar' style='margin:5px 0;position:relative;height:20px;width:300px;max-width:100%;'><img id = 'input_100_14_resetbutton' src='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAtRJREFUeNrsld9rklEYx32nc7i2GulGtZg6XJbJyBeJzbGZJJVuAyFD7D8QumiG7nLXQuw6dtHN7oYwFtIgDG+2CGQtGf1grBpWIkPHaDpJZvZ95F2cqfPHRTfRgY/H85znfb7nPc85z8sVi0XR32zcf4GmBTiOk8GWY8YSdEpwHpwG7eAA/ABJsA3/w5MEJOUGi8VyCUFFeCiGvlcsFvOFQqGtzK1d4Bzmr8DvDfy/NyTgcDj6I5GIGA91YdiN4CW7RqNp83g8fZ2dna17e3v5ubm5r1tbWz8F8WH4v4PIh7oCTOumH4VCIQkGg6axsTElgkRhyoJTXq/33srKStzpdL5KpVK0RVcxvw+Rb40KlNr09LTSbDZH8HcJ/DqyY2sksE9Go1GHVqsN5fP5Yk9Pz3WIJNmctNQT8Pl8n/DQZza40CjIokqlerywsMCTYWdnpwVjTb0kF1dXVy2sLR6Pn4HIJnu6mLZht9s3KUeUE7VarYPt459ZOqZlKMFEFRRVfI+QzMzMeBHOOTAw4GbnKt4AK6Vte0/nHA6pBu/T4ejoqAgnS4dTlT82U74aJOourYTn+ds1VlyNm+AReMjaK5LsdrvpxoqSyWSX8DbVSwDHtYJ+hi9gETxl/SoCWK1WGfWJRKLQ0dGhO0kAq5MGAoFB/OVZXC6XtqYAzvamwWCgMiDK5XKXsSL5CRpZv98vnp+fH2SNJpPpYk0BlIIXSJaB/lOZkEqlNyCi4ahAHd8iajGUj41a2a+2xzmj0fgsFAoN0QA3lAJfAxMISDeVpx7jSbJnMplSOZ6amuptVIBaZHx8/G0sFruj1+tlgo2KWh/oF3opGWl+bW3t1uzsrHJ5eXm42Q+OGW/wADc7gYe3w+Fwen19/YByhMMgt9lsqpGRkQvYxifwfQnup9PprFwuX2rmi0ZvYAdDwurPgl1A9ek1eE7byqYR7P873+TfAgwATQiKdubVli0AAAAASUVORK5CYII=' style='cursor:pointer;float:right;height:24px;width:24px;border:0px solid transparent' alt='Clear Signature' / ></div><input type='hidden' id='input_100_14_data' name='input_100_14_data' value=''></div></div></div></div>
+        <div class='gform-footer gform_footer top_label'> <button class='button button--blue gform_button btn--gform-submit' id='gform_submit_button_100'>Submit</button> <input type='hidden' name='gform_ajax' value='form_id=100&amp;title=&amp;description=&amp;tabindex=0&amp;theme=gravity-theme&amp;styles=[]&amp;hash=5ee7723124bb0d0e3469bb85f11b68ff' />
+            <input type='hidden' class='gform_hidden' name='gform_submission_method' data-js='gform_submission_method_100' value='iframe' />
+            <input type='hidden' class='gform_hidden' name='gform_theme' data-js='gform_theme_100' id='gform_theme_100' value='gravity-theme' />
+            <input type='hidden' class='gform_hidden' name='gform_style_settings' data-js='gform_style_settings_100' id='gform_style_settings_100' value='[]' />
+            <input type='hidden' class='gform_hidden' name='is_submit_100' value='1' />
+            <input type='hidden' class='gform_hidden' name='gform_submit' value='100' />
+            
+            <input type='hidden' class='gform_hidden' name='gform_currency' data-currency='CAD' value='2c8O6wrZqyTFcJ7gQYNQqYks9pD0h2N3WCTptCjQd+BRb31n0bqQYcKqog0+mLeL3uY7aK2PiRc+BkCpPjO5Mj0B1u9Qp/DwDaSyIukZBaC7VEM=' />
+            <input type='hidden' class='gform_hidden' name='gform_unique_id' value='' />
+            <input type='hidden' class='gform_hidden' name='state_100' value='WyJ7XCIxOC4xXCI6XCIyNDhjOGQ5M2QzMTRhZTY3MmQ5MDNhMjVlMTdlNTE3ZFwiLFwiMTUuMVwiOlwiZTU1ZTlmY2FiN2JhYmQ0Mjg5ZjJhMDVjYWJkZmZlN2NcIn0iLCJkMTQ1NzRlMWRjYjY2MGRlYzdjODhkMjM0ZTM3OWE4NiJd' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_target_page_number_100' id='gform_target_page_number_100' value='0' />
+            <input type='hidden' autocomplete='off' class='gform_hidden' name='gform_source_page_number_100' id='gform_source_page_number_100' value='1' />
+            <input type='hidden' name='gform_field_values' value='' />
+            
+        </div>
+                        </form>
+                        </div>
+		                <iframe style='display:none;width:0px;height:0px;' src='about:blank' name='gform_ajax_frame_100' id='gform_ajax_frame_100' title='This iframe contains the logic required to handle Ajax powered Gravity Forms.'></iframe>
+		                <script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {gformInitSpinner( 100, 'https://cmha.ca/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery('#gform_ajax_frame_100').on('load',function(){var contents = jQuery(this).contents().find('*').html();var is_postback = contents.indexOf('GF_AJAX_POSTBACK') >= 0;if(!is_postback){return;}var form_content = jQuery(this).contents().find('#gform_wrapper_100');var is_confirmation = jQuery(this).contents().find('#gform_confirmation_wrapper_100').length > 0;var is_redirect = contents.indexOf('gformRedirect(){') >= 0;var is_form = form_content.length > 0 && ! is_redirect && ! is_confirmation;var mt = parseInt(jQuery('html').css('margin-top'), 10) + parseInt(jQuery('body').css('margin-top'), 10) + 100;if(is_form){form_content.find('form').css('opacity', 0);jQuery('#gform_wrapper_100').html(form_content.html());if(form_content.hasClass('gform_validation_error')){jQuery('#gform_wrapper_100').addClass('gform_validation_error');} else {jQuery('#gform_wrapper_100').removeClass('gform_validation_error');}setTimeout( function() { /* delay the scroll by 50 milliseconds to fix a bug in chrome */ jQuery(document).scrollTop(jQuery('#gform_wrapper_100').offset().top - mt); }, 50 );if(window['gformInitDatepicker']) {gformInitDatepicker();}if(window['gformInitPriceFields']) {gformInitPriceFields();}var current_page = jQuery('#gform_source_page_number_100').val();gformInitSpinner( 100, 'https://cmha.ca/wp-content/plugins/gravityforms/images/spinner.svg', true );jQuery(document).trigger('gform_page_loaded', [100, current_page]);window['gf_submitting_100'] = false;}else if(!is_redirect){var confirmation_content = jQuery(this).contents().find('.GF_AJAX_POSTBACK').html();if(!confirmation_content){confirmation_content = contents;}jQuery('#gform_wrapper_100').replaceWith(confirmation_content);jQuery(document).scrollTop(jQuery('#gf_100').offset().top - mt);jQuery(document).trigger('gform_confirmation_loaded', [100]);window['gf_submitting_100'] = false;wp.a11y.speak(jQuery('#gform_confirmation_message_100').text());}else{jQuery('#gform_100').append(contents);if(window['gformRedirect']) {gformRedirect();}}jQuery(document).trigger("gform_pre_post_render", [{ formId: "100", currentPage: "current_page", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_100" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_100";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_100" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 100, current_page );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } );} ); 
+/* ]]> */
+</script>
+
+		</div>
+
+				
+							<button type="button" class="pum-close popmake-close" aria-label="Close">
+			×			</button>
+		
+	</div>
+
+</div>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/what-input.js" id="vendor_what_input-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/foundation.js" id="vendor_foundation-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/modernizr-3.1.1.min.js" id="vendor_modernizr-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/gsap/umd/gsap.js" id="vendor_gsap-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/gsap/umd/MorphSVGPlugin.js" id="vendor_morphsvg-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/gsap/umd/ScrollTrigger.js" id="vendor_scrolltrigger-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/gsap/umd/CSSRulePlugin.js" id="vendor_cssrules-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/slick/slick.min.js" id="vendor_slick-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/js.cookie.min.js" id="vendor_cookie-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/moment.min.js" id="vendor_moment-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/fullcalendar/fullcalendar.js" id="vendor_calendar-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/locale-all.js" id="vendor_locale-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/vendor/fonts.js" id="machine_fonts-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/js/app.js?ver=6.9" id="machine_app-js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js" id="foundation-js-js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js" id="cropper-js-js"></script>
+<script type="text/javascript" id="cppo-frontend-js-js-extra">
+/* <![CDATA[ */
+var cppo_data = {"overlays":[{"id":27952,"title":"French Overlay","url":"https://cmha.ca/wp-content/uploads/2025/05/CMHA_Mental-Health-Week_LinkedIn-profile-template-FR-6.png"},{"id":27945,"title":"English Overlay","url":"https://cmha.ca/wp-content/uploads/2025/04/CMHA_Mental-Health-Week_LinkedIn-profile-template-6.png"}],"default_overlay":"","sizes":[1200,600,400,300],"download_text":"Download"};
+var cppo_ajax = {"ajax_url":"https://cmha.ca/wp-admin/admin-ajax.php"};
+//# sourceURL=cppo-frontend-js-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/plugins/custom-profile-photo-overlays-plugin-v3.11/includes/../assets/js/front.js" id="cppo-frontend-js-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/assets/js/terms-flow.js" id="terms-flow-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/themes/cmha-national/assets/js/utm-donate.js" id="utm-donate-js"></script>
+<script type="text/javascript" id="gforms_recaptcha_recaptcha-js-extra">
+/* <![CDATA[ */
+var gforms_recaptcha_recaptcha_strings = {"nonce":"32e8017eb9","disconnect":"Disconnecting","change_connection_type":"Resetting","spinner":"https://cmha.ca/wp-content/plugins/gravityforms/images/spinner.svg","connection_type":"classic","disable_badge":"1","change_connection_type_title":"Change Connection Type","change_connection_type_message":"Changing the connection type will delete your current settings.  Do you want to proceed?","disconnect_title":"Disconnect","disconnect_message":"Disconnecting from reCAPTCHA will delete your current settings.  Do you want to proceed?","site_key":"6LdqsDIgAAAAAJt4P0AlnyiY7zjC4aKo9NIO9cOB"};
+//# sourceURL=gforms_recaptcha_recaptcha-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=6LdqsDIgAAAAAJt4P0AlnyiY7zjC4aKo9NIO9cOB&amp;ver=2.0.0" id="gforms_recaptcha_recaptcha-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-content/plugins/gravityformsrecaptcha/js/frontend.min.js" id="gforms_recaptcha_frontend-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" data-cfasync="false" src="https://cmha.ca/wp-includes/js/dist/dom-ready.min.js" id="wp-dom-ready-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-includes/js/dist/hooks.min.js" id="wp-hooks-js"></script>
+<script type="text/javascript" data-cfasync="false" src="https://cmha.ca/wp-includes/js/dist/i18n.min.js" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" data-cfasync="false" src="https://cmha.ca/wp-includes/js/dist/a11y.min.js" id="wp-a11y-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-includes/js/jquery/ui/core.min.js" id="jquery-ui-core-js"></script>
+<script type="text/javascript" src="https://cmha.ca/wp-includes/js/jquery/ui/datepicker.min.js" id="jquery-ui-datepicker-js"></script>
+<script type="text/javascript" id="jquery-ui-datepicker-js-after">
+/* <![CDATA[ */
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Close","currentText":"Today","monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Previous","dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"dateFormat":"MM d, yy","firstDay":1,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' data-cfasync="false" src="https://cmha.ca/wp-content/plugins/gravityforms/js/datepicker-legacy.min.js" id="gform_datepicker_legacy-js"></script>
+<script type="text/javascript" defer='defer' data-cfasync="false" src="https://cmha.ca/wp-content/plugins/gravityforms/js/datepicker.min.js" id="gform_datepicker_init-js"></script>
+<script type="text/javascript" defer='defer' data-cfasync="false" src="https://cmha.ca/wp-content/plugins/gravityforms/js/jquery.maskedinput.min.js" id="gform_masked_input-js"></script>
+<script type="text/javascript" defer='defer' data-cfasync="false" src="https://cmha.ca/wp-content/plugins/gravityforms/assets/js/dist/vendor-theme.min.js" id="gform_gravityforms_theme_vendors-js"></script>
+<script type="text/javascript" id="gform_gravityforms_theme-js-extra">
+/* <![CDATA[ */
+var gform_theme_config = {"common":{"form":{"honeypot":{"version_hash":"ad5c071d85719e2980a6876ee28b3495"},"ajax":{"ajaxurl":"https://cmha.ca/wp-admin/admin-ajax.php","ajax_submission_nonce":"1a3198d471","i18n":{"step_announcement":"Step %1$s of %2$s, %3$s","unknown_error":"There was an unknown error processing your request. Please try again."}}}},"hmr_dev":"","public_path":"https://cmha.ca/wp-content/plugins/gravityforms/assets/js/dist/","config_nonce":"4c11687744"};
+//# sourceURL=gform_gravityforms_theme-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' data-cfasync="false" src="https://cmha.ca/wp-content/plugins/gravityforms/assets/js/dist/scripts-theme.min.js" id="gform_gravityforms_theme-js"></script>
+<script type="text/javascript" id="gform_geolocation_maps_api_js-js-extra">
+/* <![CDATA[ */
+var gform_geolocation_maps_api_js_strings = {"key":"AIzaSyDkg44BXvPH1n_m-Qh3XdTIwMJASM-K76o","usePlaceAutocompleteElement":""};
+var gform_geolocation_maps_api_js_strings = {"key":"AIzaSyDkg44BXvPH1n_m-Qh3XdTIwMJASM-K76o","usePlaceAutocompleteElement":""};
+var gform_geolocation_maps_api_js_strings = {"key":"AIzaSyDkg44BXvPH1n_m-Qh3XdTIwMJASM-K76o","usePlaceAutocompleteElement":""};
+//# sourceURL=gform_geolocation_maps_api_js-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDkg44BXvPH1n_m-Qh3XdTIwMJASM-K76o&amp;libraries=places&amp;ver=1.5.0" id="gform_geolocation_maps_api_js-js"></script>
+<script type="text/javascript" defer='defer' src="https://cmha.ca/wp-content/plugins/gravityformsgeolocation/assets/js/dist/vendor-theme.min.js" id="gform_geolocation_vendor_theme_js-js"></script>
+<script type="text/javascript" defer='defer' src="https://cmha.ca/wp-content/plugins/gravityformsgeolocation/assets/js/dist/scripts-theme.min.js" id="gform_geolocation_theme_js-js"></script>
+<script type="text/javascript" defer='defer' src="https://cmha.ca/wp-content/plugins/gravityformssignature/assets/js/dist/vendor-theme.min.js" id="gform_signature_frontend_vendor-js"></script>
+<script type="text/javascript" id="gform_signature_frontend-js-extra">
+/* <![CDATA[ */
+var gform_signature_frontend_strings = {"confirm_delete":"Would you like to delete this file? 'Cancel' to stop. 'OK' to delete","delete_nonce":"d743fd8677"};
+var gform_signature_frontend_strings = {"confirm_delete":"Would you like to delete this file? 'Cancel' to stop. 'OK' to delete","delete_nonce":"d743fd8677"};
+var gform_signature_frontend_strings = {"confirm_delete":"Would you like to delete this file? 'Cancel' to stop. 'OK' to delete","delete_nonce":"d743fd8677"};
+//# sourceURL=gform_signature_frontend-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" defer='defer' data-cfasync="false" src="https://cmha.ca/wp-content/plugins/gravityformssignature/assets/js/dist/scripts-theme.min.js" id="gform_signature_frontend-js"></script>
+<script type="text/javascript" id="popup-maker-site-js-extra">
+/* <![CDATA[ */
+var pum_vars = {"version":"1.21.5","pm_dir_url":"https://cmha.ca/wp-content/plugins/popup-maker/","ajaxurl":"https://cmha.ca/wp-admin/admin-ajax.php","restapi":"https://cmha.ca/wp-json/pum/v1","rest_nonce":null,"default_theme":"14913","debug_mode":"","disable_tracking":"","home_url":"/","message_position":"top","core_sub_forms_enabled":"1","popups":[],"cookie_domain":"","analytics_enabled":"1","analytics_route":"analytics","analytics_api":"https://cmha.ca/wp-json/pum/v1"};
+var pum_sub_vars = {"ajaxurl":"https://cmha.ca/wp-admin/admin-ajax.php","message_position":"top"};
+var pum_popups = {"pum-29932":{"triggers":[{"type":"click_open","settings":{"extra_selectors":".open-form-button"}}],"cookies":[],"disable_on_mobile":false,"disable_on_tablet":false,"atc_promotion":null,"explain":null,"type_section":null,"theme_id":"14914","size":"medium","responsive_min_width":"0%","responsive_max_width":"100%","custom_width":"640px","custom_height_auto":false,"custom_height":"380px","scrollable_content":false,"animation_type":"fade","animation_speed":"350","animation_origin":"center top","open_sound":"none","custom_sound":"","location":"center top","position_top":"100","position_bottom":"0","position_left":"0","position_right":"0","position_from_trigger":false,"position_fixed":false,"overlay_disabled":false,"stackable":false,"disable_reposition":false,"zindex":"1999999999","close_button_delay":"0","fi_promotion":null,"close_on_form_submission":false,"close_on_form_submission_delay":"0","close_on_overlay_click":false,"close_on_esc_press":false,"close_on_f4_press":false,"disable_form_reopen":false,"disable_accessibility":false,"theme_slug":"lightbox","id":29932,"slug":"securities-donation"}};
+//# sourceURL=popup-maker-site-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="//cmha.ca/wp-content/uploads/pum/pum-site-scripts.js?defer&amp;generated=1765393297&amp;ver=1.21.5" id="popup-maker-site-js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() { jQuery(document).on('gform_post_render', function(event, formId, currentPage){if(formId == 100) {gf_global["number_formats"][100] = {"1":{"price":false,"value":false},"3":{"price":false,"value":false},"4":{"price":false,"value":false},"5":{"price":false,"value":false},"17":{"price":false,"value":false},"7":{"price":false,"value":false},"6":{"price":false,"value":false},"8":{"price":false,"value":false},"10":{"price":false,"value":false},"9":{"price":false,"value":false},"11":{"price":false,"value":"decimal_dot"},"12":{"price":false,"value":false},"13":{"price":false,"value":false},"18":{"price":false,"value":false},"15":{"price":false,"value":false},"14":{"price":false,"value":false}};if(window['jQuery']){if(!window['gf_form_conditional_logic'])window['gf_form_conditional_logic'] = new Array();window['gf_form_conditional_logic'][100] = { logic: { 14: {"field":{"enabled":true,"actionType":"show","logicType":"all","rules":[{"fieldId":"15","operator":"is","value":"I agree to my information being stored and used for donation purposes"}]},"nextButton":null,"section":null} }, dependents: { 14: [14] }, animation: 0, defaults: {"1":"10\/02\/2026","3":{"3.2":"","3.3":"","3.4":"","3.6":"","3.8":""},"4":{"4.1":"","4.2":"","4.3":"","4.4":"","4.5":"","4.6":"Canada"},"7":{"7.2":"","7.3":"","7.4":"","7.6":"","7.8":""},"6":{"6.1":"","6.2":"","6.3":"","6.4":"","6.5":"","6.6":"Canada"}}, fields: {"1":[],"3":[],"4":[],"5":[],"17":[],"7":[],"6":[],"8":[],"10":[],"9":[],"11":[],"12":[],"13":[],"18":[],"15":[14],"14":[]} }; if(!window['gf_number_format'])window['gf_number_format'] = 'decimal_dot';jQuery(document).ready(function(){gform.utils.trigger({ event: 'gform/conditionalLogic/init/start', native: false, data: { formId: 100, fields: null, isInit: true } });window['gformInitPriceFields']();gf_apply_rules(100, [14], true);jQuery('#gform_wrapper_100').show();jQuery('#gform_wrapper_100 form').css('opacity', '');jQuery(document).trigger('gform_post_conditional_logic', [100, null, true]);gform.utils.trigger({ event: 'gform/conditionalLogic/init/end', native: false, data: { formId: 100, fields: null, isInit: true } });} );} jQuery('#input_100_17').mask('(999) 999-9999').bind('keypress', function(e){if(e.which == 13){jQuery(this).blur();} } );} } );jQuery(document).on('gform_post_conditional_logic', function(event, formId, fields, isInit){} ) } ); 
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+ gform.initializeOnLoaded( function() {jQuery(document).trigger("gform_pre_post_render", [{ formId: "100", currentPage: "1", abort: function() { this.preventDefault(); } }]);        if (event && event.defaultPrevented) {                return;        }        const gformWrapperDiv = document.getElementById( "gform_wrapper_100" );        if ( gformWrapperDiv ) {            const visibilitySpan = document.createElement( "span" );            visibilitySpan.id = "gform_visibility_test_100";            gformWrapperDiv.insertAdjacentElement( "afterend", visibilitySpan );        }        const visibilityTestDiv = document.getElementById( "gform_visibility_test_100" );        let postRenderFired = false;        function triggerPostRender() {            if ( postRenderFired ) {                return;            }            postRenderFired = true;            gform.core.triggerPostRenderEvents( 100, 1 );            if ( visibilityTestDiv ) {                visibilityTestDiv.parentNode.removeChild( visibilityTestDiv );            }        }        function debounce( func, wait, immediate ) {            var timeout;            return function() {                var context = this, args = arguments;                var later = function() {                    timeout = null;                    if ( !immediate ) func.apply( context, args );                };                var callNow = immediate && !timeout;                clearTimeout( timeout );                timeout = setTimeout( later, wait );                if ( callNow ) func.apply( context, args );            };        }        const debouncedTriggerPostRender = debounce( function() {            triggerPostRender();        }, 200 );        if ( visibilityTestDiv && visibilityTestDiv.offsetParent === null ) {            const observer = new MutationObserver( ( mutations ) => {                mutations.forEach( ( mutation ) => {                    if ( mutation.type === 'attributes' && visibilityTestDiv.offsetParent !== null ) {                        debouncedTriggerPostRender();                        observer.disconnect();                    }                });            });            observer.observe( document.body, {                attributes: true,                childList: false,                subtree: true,                attributeFilter: [ 'style', 'class' ],            });        } else {            triggerPostRender();        }    } ); 
+/* ]]> */
+</script>
+  </body>
+</html>
