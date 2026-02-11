@@ -1,792 +1,356 @@
-<!DOCTYPE HTML>
-
-
-<html class="no-js" dir="ltr" lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head prefix="og: http://ogp.me/ns#">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta charset="UTF-8"/>
-
-    <!-- Page title (news vs non-news handled inside GnbSeoModel) -->
-    <title>Page Not Found - gnb.ca</title>
-
-    <!-- Canonical URL -->
-    <script defer="defer" type="text/javascript" src="https://rum.hlx.page/.rum/@adobe/helix-rum-js@%5E2/dist/rum-standalone.js" data-routing="env=prod,tier=publish,ams=Service New Brunswick" data-status="404"></script>
-<link rel="canonical" href="http://192.168.233.89:4503/libs/granite/dispatcher/content/vanityUrls.html"/>
-
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-
-    <!-- Basic meta: description / keywords / author -->
-    <meta name="description" content="Page Not Found"/>
-    <meta name="keywords" content="Page Not Found, Government of New Brunswick, gnb.ca"/>
-    <meta name="author" content="Government of New Brunswick, Canada"/>
-
-    <!-- dcterms meta -->
-    <meta name="dcterms.title" content="Page Not Found"/>
-    <meta name="dcterms.description" content="Page Not Found"/>
-    <meta name="dcterms.creator" content="Government of New Brunswick, Canada"/>
-    <meta name="dcterms.language" title="ISO639-2/T" content="eng"/>
-    
-    
-    
-    <meta name="dcterms.audience" content="general public"/>
-    <meta name="dcterms.spatial" content="New Brunswick"/>
-    <meta name="dcterms.type" content="page"/>
-    <meta name="dcterms.identifier" content="Page_Not_Found"/>
-    <meta name="generator" content="gnb3"/>
-
-    <!-- Open Graph meta -->
-    <meta property="og:site_name" content="Government of New Brunswick"/>
-    <meta property="og:title" content="Page Not Found"/>
-    <meta property="og:description" content="Page Not Found"/>
-    <meta property="og:url" content="http://192.168.233.89:4503/libs/granite/dispatcher/content/vanityUrls.html"/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:image" content="http://192.168.233.89:4503/etc.clientlibs/GNB3/clientlibs/clientlib-site/resources/img/gnb-logo.png"/>
-
-    <!-- Twitter meta -->
-    <meta name="twitter:site" content="@GNBca"/>
-    <meta name="twitter:card" content="summary_large_image"/>
-    <meta name="twitter:title" content="Page Not Found"/>
-    <meta name="twitter:description" content="Page Not Found"/>
-    <meta name="twitter:image" content="http://192.168.233.89:4503/etc.clientlibs/GNB3/clientlibs/clientlib-site/resources/img/gnb-logo.png"/>
-
+<!DOCTYPE html>
+<html translate="no" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--
-      Optional: legacy Facebook page IDs from your example.
-      Keep only if you actually use them; otherwise you can remove this block.
+    <meta http-equiv="Content-Security-Policy" content="default-src blob: 'self'; media-src 'self' blob: *;connect-src 'self' https://*.isilive.ca/; frame-src 'self' https://*.google.com/ https://*.googleapis.com/; script-src 'self' 'unsafe-inline' blob: https://*.isiglobal.ca/ https://*.isilive.ca/ https://*.aspnetcdn.com/ https://*.googletagmanager.com https://*.google.com/ https://*.google-analytics.com/ http://*.google-analytics.com/ https://*.googleapis.com/ https://*.gstatic.com; style-src 'self' 'unsafe-inline' * ; font-src 'self' * ; img-src 'self' 'unsafe-inline' * " />
     -->
-    <meta prefix="fb: https://www.facebook.com/2008/fbml" property="fb:pages" content="222322717930469"/>
+    <meta name="theme-color" content="#660033">
 
-    <!-- Keep existing SEO component if you want manual overrides per page.
-         This will render the resource at ./meta with resourceType GNB3/components/structure/seo. -->
-     
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="google" content="notranslate">
 
-    <!-- Template name meta (unchanged) -->
-    <meta name="template" content="gnbv3-empty"/>
+    <meta name="referrer" content="no-referrer">
+    <meta name="format-detection" content="telephone=yes">
 
-    <!-- Existing includes (unchanged) -->
-    
+    <meta name="ICBM" content="45.959384, -66.636318">
+    <meta name="geo.position" content="45.959384, -66.636318">
+    <meta name="geo.region" content="CA-NB">
+    <meta name="geo.placename" content="Fredericton">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#4285f4">
 
+    <link rel="me" href="mailto:legwebadmin@legnb.ca">
 
-    
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rufina" rel="stylesheet">
 
-<!-- Google Web Fonts  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
-
-
-
-
-
-    
-    <link rel="stylesheet" href="/etc.clientlibs/GNB3/clientlibs/clientlib-dependencies.min.css" type="text/css">
-<link rel="stylesheet" href="/etc.clientlibs/GNB3/clientlibs/clientlib-site.min.css" type="text/css">
-
-
-
-
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="/etc.clientlibs/GNB3/clientlibs/clientlib-site/resources/img/favicons/gnb-180x180.png" sizes="180x180"/>
-    <link rel="icon" href="/etc.clientlibs/GNB3/clientlibs/clientlib-site/resources/img/favicons/gnb-32x32.png" sizes="32x32" type="image/png"/>
-    <link rel="icon" href="/etc.clientlibs/GNB3/clientlibs/clientlib-site/resources/img/favicons/gnb-16x16.png" sizes="16x16" type="image/png"/>
-    <link rel="icon" href="/etc.clientlibs/GNB3/clientlibs/clientlib-site/resources/img/favicons/gnb-32x32.ico"/>
-    <meta name="theme-color" content="#006055"/>
-
-    
-    
-    
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
 
     
 
-    
-    
-    
+    <title>Page Not Found - Legislative Assembly of New Brunswick</title>
+    <meta name="description" content="The resource you requested could not be found." />
+    <meta name="robots" content="noindex, nofollow" />
 
-    
+
     
 
 
     
-
-    <!-- Translation memory / language-specific head (unchanged) -->
-    
-    
-        <!-- Google Tag Manager-EN -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MGVPDD');</script>
-<!-- End Google Tag Manager -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMSE8Q7GQ3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-CMSE8Q7GQ3');
+        </script>
     
 
-    <!-- Verification meta tags (unchanged) -->
     
+        <link rel="stylesheet" type="text/css" href="/styles/styles.min.css?v=zhRjhYx1bkH828HO66g7V_4GbaeWbeGPqxxm4d0Wvn4" />
+    
+    
+    <link rel="stylesheet" href="/NBLegWeb.Public.Web.styles.css" />
 </head>
-
-
-
-    <!-- Start Not Splash page -->
-    <body class="page basicpage" typeof="WebPage" vocab="http://schema.org/" data-prismjs-copy="Copy" data-prismjs-copy-error="Use Ctrl+C" data-prismjs-copy-success="Copied!">
-    <!-- JSON-LD for news pages -->
-    
-
-    
-    
-
-
-    
-    
-        <!-- Google Tag Manager (noscript)-EN -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGVPDD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-    
-
-    <nav class="skip-link">
-        <a href="#main" class="gnb-btn">Skip to main content</a>
-    </nav>
-    
-    
-        
+<body>
 
 
 
 
-        
-<div class="root container responsivegrid">
-
-    
-    
-    
-    <div id="container-4c0c1471ba" class="cmp-container">
-        
-        <main class="container responsivegrid">
-
-    
-    
-    
-    <div id="container-cc78cd8067" class="cmp-container">
-        
-        <div class="embed">
-<div data-cmp-data-layer="{&#34;embed-41700cb8b8&#34;:{&#34;@type&#34;:&#34;GNB3/components/content/embed&#34;,&#34;repo:modifyDate&#34;:&#34;2025-09-26T13:09:41Z&#34;}}" id="embed-41700cb8b8" class="cmp-embed">
-    
-    <header class="gnb-header">
-   <div id="experiencefragment-bb82768e76" class="cmp-experiencefragment cmp-experiencefragment--header">
-      <div id="container-a2f381e2a0" class="cmp-container">
-         <div class="image logo">
-            <div data-cmp-is="image" data-cmp-lazythreshold="0" data-cmp-src="/content/experience-fragments/GNB3/fr/site/header/master/_jcr_content/root/image.coreimg{.width}.svg/1715473690969/nb.svg" data-asset="/content/dam/GNB3/share/logo/fr/NB.svg" data-title="Government of New Brunswick" id="image-1b84c5733d" data-cmp-data-layer="{&quot;image-1b84c5733d&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/image&quot;,&quot;repo:modifyDate&quot;:&quot;2024-05-12T00:28:10Z&quot;,&quot;xdm:linkURL&quot;:&quot;/content/GNB3/fr.html&quot;,&quot;image&quot;:{&quot;repo:id&quot;:&quot;f666a67f-4665-4a54-94e8-20e6d54bf44a&quot;,&quot;repo:modifyDate&quot;:&quot;2024-04-30T14:55:54Z&quot;,&quot;@type&quot;:&quot;image/svg+xml&quot;,&quot;repo:path&quot;:&quot;/content/dam/GNB3/fr/NB.svg&quot;}}}" class="cmp-image image-1b84c5733d" itemscope="" itemtype="http://schema.org/ImageObject">
-               <a class="cmp-image__link" href="/en.html" data-cmp-clickable="" data-cmp-hook-image="link">
-               <img src="/content/experience-fragments/GNB3/fr/site/header/master/_jcr_content/root/image.coreimg.svg/1715473690969/nb.svg" class="cmp-image__image" itemprop="contentUrl" data-cmp-hook-image="image" alt="Gouvernement of New Brunswick">
-               </a>
-            </div>
-         </div>
-         <div class="languagenavigation gnb-main-nav">
-            <nav class="cmp-languagenavigation">
-               <ul>
-                  <li>
-                     <a href="https://www.gnb.ca/fr/admin/erreurs.html" hreflang="fr" lang="fr" rel="alternate">Français</a>
-                  </li>
-                  <li>
-                     <button aria-expanded="false" id="btn-search" class="btn-search"><span>Search</span></button>
-                  </li>
-                  <li> 
-                     <button aria-expanded="false" id="btn-mega-menu"><span>Menu</span></button>
-                  </li>
-               </ul>
+<header class="site-header">
+    <div class="container-lg container-fluid">
+        <div class="header-content">
+            <a class="header-branding" href="/en">
+                <div class="header-branding-logo d-none d-lg-block">
+                    <img src="/images/coatofarms_sm.png" alt="A drawing of the New Brunswick coat of arms. There is a crest featuring a boat and a lion, with a deer standing on its hind legs on each side of the crest and a fish above." />
+                </div>
+                <img class="header-branding-logo-sm d-lg-none" src="/images/logo.png" alt="A white silhouette drawing of the dome on top of the legislative assembly." />
+                <div class="header-branding-meta">
+                    <span class="header-branding-title">Legislative Assembly <br>of New Brunswick</span>
+                    <span class="header-branding-location">Fredericton, New Brunswick, Canada</span>
+                </div>
+            </a>
+            <nav class="header-nav-quicklinks" role="navigation">
+                <ul>
+                    <li class="header-nav-quicklinks-link" lang="fr">
+                            <a class="nav-link" href="/fr">Fran&#xE7;ais</a>
+                    </li>
+                    <li class="header-nav-quicklinks-link">
+                        <a class="nav-link" href="http://www2.gnb.ca">GNB.ca</a>
+                    </li>
+                    <li class="header-nav-quicklinks-link">
+                        <a class="nav-link" href="/en/legislature/contact">Contact</a>
+                    </li>
+                </ul>
+                <a class="calendar-quick-link" href="/en/calendar">
+                    <i class="fas fa-calendar-alt"></i> Legislative Calendar
+                </a>
             </nav>
-         </div>
-      </div>
-   </div>
+        </div>
+    </div>
 </header>
-    
-</div>
-
-    
-
-</div>
-<section class="section container responsivegrid padding-top-none">
-
-    
-    
-    
-    <div id="section-23e45f5222" class="cmp-container">
-        
-        <div class="block container responsivegrid">
-
-    
-    <div id="block-665bbbc505" class="cmp-container">
-        
-
-
-<div class="aem-Grid aem-Grid--12 aem-Grid--default--12 ">
-    
-    <div class="embed aem-GridColumn aem-GridColumn--default--12">
-<div data-cmp-data-layer="{&#34;embed-db3b9f91d6&#34;:{&#34;@type&#34;:&#34;GNB3/components/content/embed&#34;,&#34;repo:modifyDate&#34;:&#34;2024-07-05T00:44:49Z&#34;}}" id="embed-db3b9f91d6" class="cmp-embed">
-    
-    <section class="padding-none">
-   <div id="gnb-search" class="cmp-experiencefragment gnb-search">
-      <div id="container-6385e7a030" class="cmp-container">
-         <div class="row">
-            <div class="block container responsivegrid aem-GridColumn aem-GridColumn--default--12">
-               <div id="block-58dff14032" class="cmp-container">
-                  <div class="row">
-                     <div class="title aem-GridColumn aem-GridColumn--default--12">
-                        <div data-cmp-data-layer="{&quot;title-30b04ca8a4&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/title&quot;,&quot;repo:modifyDate&quot;:&quot;2024-03-26T15:18:59Z&quot;,&quot;dc:title&quot;:&quot;Search&quot;}}" id="title-30b04ca8a4" class="cmp-title">
-                           <h2 class="cmp-title__text">Search</h2>
+<input type="checkbox" id="nav-toggle">
+<nav class="main-navigation">
+    <div class="container-lg container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row d-lg-none nav-actions">
+                        <div class="col-6">
+                            <label for="nav-toggle" class="nav-menu-toggler">
+                                <span><i class="fas fa-bars"></i> Menu</span>
+                            </label>
                         </div>
-                     </div>
-                     <div class="embed aem-GridColumn aem-GridColumn--default--12">
-                        <div data-cmp-data-layer="{&quot;embed-761b622cef&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/embed&quot;,&quot;repo:modifyDate&quot;:&quot;2024-06-06T12:49:58Z&quot;}}" id="embed-761b622cef" class="cmp-embed">
-                           <form class="gnb-input-pair" action="https://www2.gnb.ca/content/gnb/en/search.html" title="Search GNB.ca" method="get" id="keyword_search_form" onsubmit="if(this.q.value=='')return false;return true">
-                              <label class="visually-hidden" for="q">Search</label>
-                              <input type="text" onclick="this.value='';" name="q" placeholder="Search" class="searchText ui-autocomplete-input" id="q" autocomplete="off">
-                              <input type="hidden" name="cx" value="004686105439310941724:3leejyo91sk">
-                              <input type="hidden" name="as_sitesearch" value="">
-                              <input type="hidden" name="cof" value="FORID:11"> 
-                              <input type="hidden" name="ie" value="UTF-8">
-                              <button class="gnb-btn-search"><span>Search</span></button>
-                           </form>
+                        <div class="col-6">
+                            <a class="language-toggle" href="/fr">
+                                <i class="fas fa-globe"></i> Fran&#xE7;ais
+                            </a>
                         </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                    
+<ul class="nav-items">
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/legislature">Legislative Assembly</a>
+        <ul>
+            <li class="nav-link">
+                <a href="/en/legislature/history">Purpose &amp; History</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislature/legislative-references">Legislative References</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislature/notices">Notices</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislature/publications">Publications</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislative-officers">Legislative Officers</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/opportunities">Student Opportunities</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislature/contact">Contact Us</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislature/visit">Visit Us</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/members">Members</a>
+        <ul>
+            <li class="nav-link">
+                <a href="/en/members/current">Current Members Directory</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/members/disclosures">Public Disclosures</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/members/expenses">Members Expense Reports</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/members/speakers">Speakers</a>
+            </li>
+            <li class="nav-link">
+                <a href="https://www1.gnb.ca/Elections/en/provstreetkey/provskinformation-e.asp">Find My MLA</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link">Legislation</a>
+        <ul>
+            <li class="nav-link">
+                <a data-lang="en" href="/en/legislation/bills/61/2">Status of Legislation</a>
+            </li>
+            <li class="nav-link">
+                <a data-lang="en" href="/en/legislation/bills">Bills Archive</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/house-business">House Business</a>
+        <ul>
+            <li class="nav-link">
+                <a href="/en/house-business">Legislative Sessions</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/house-business/order-papers">Order Papers</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/house-business/journals">Journals</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/house-business/hansard">Hansard</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/house-business/tabled-documents">Tabled Documents</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/house-business/question-period-transcripts">Question Period</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/committees">Committees</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/webcasts">Webcasts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="http://www1.gnb.ca/leglibbib">Legislative Library</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="http://www2.gnb.ca">GNB.ca</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/legislature/contact">Contact</a>
+    </li>
+</ul>
+                </div>
             </div>
-         </div>
-      </div>
-   </div>
-</section>
-    
-</div>
-
-    
-
-</div>
-<div class="embed aem-GridColumn aem-GridColumn--default--12">
-<div data-cmp-data-layer="{&#34;embed-e94162eeb9&#34;:{&#34;@type&#34;:&#34;GNB3/components/content/embed&#34;,&#34;repo:modifyDate&#34;:&#34;2024-07-05T00:45:27Z&#34;}}" id="embed-e94162eeb9" class="cmp-embed">
-    
-    <section class="padding-none">
-   <div id="gnb-mega-menu" class="cmp-experiencefragment gnb-mega-menu">
-      <div id="container-b15aa49496" class="cmp-container">
-         <div class="row">
-            <div class="block container responsivegrid aem-GridColumn aem-GridColumn--default--12">
-               <div id="block-f1f23e3e11" class="cmp-container">
-                  <div class="row">
-                     <div class="title aem-GridColumn aem-GridColumn--default--12">
-                        <div data-cmp-data-layer="{&quot;title-caf0ba98f0&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/title&quot;,&quot;repo:modifyDate&quot;:&quot;2024-03-25T17:28:47Z&quot;,&quot;dc:title&quot;:&quot;Explore the system&quot;}}" id="title-caf0ba98f0" class="cmp-title">
-                           <h2 class="cmp-title__text">Information and services</h2>
-                        </div>
-                     </div>
-                     <div class="gnbList list aem-GridColumn aem-GridColumn--default--12">
-                        <ul id="gnbList-d362079bee" data-cmp-data-layer="{&quot;list-d362079bee&quot;:{&quot;@type&quot;:&quot;core/wcm/components/list/v4/list&quot;,&quot;repo:modifyDate&quot;:&quot;2024-08-19T22:23:24Z&quot;}}" class="gnb-list-nav row row-cols-1 row-cols-md-2 row-cols-lg-3 cmp-list list-d362079bee">
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/business-economy.html">Business and economy
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/culture-heritage.html">Culture and heritage
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/driving-transportation.html">Driving and transportation
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/education-training.html">Education and training
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/environment-resources.html">Environment and natural resources
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/family-home-community.html">Family, home and community
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/health-wellness.html">Health and wellness
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/jobs-workplaces.html">Jobs and workplaces
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/laws-safety.html">Laws and safety
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/tourism-recreation.html">Tourism, recreation and outdoors
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                     <div class="title aem-GridColumn aem-GridColumn--default--12">
-                        <div data-cmp-data-layer="{&quot;title-caf0ba98f0&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/title&quot;,&quot;repo:modifyDate&quot;:&quot;2024-03-25T17:28:47Z&quot;,&quot;dc:title&quot;:&quot;Explore the system&quot;}}" id="title-caf0ba98f0" class="cmp-title">
-                           <h2 class="cmp-title__text">Your government</h2>
-                        </div>
-                     </div>
-                     <div class="gnbList list">
-                        <ul id="gnbList-613149b043" data-cmp-data-layer="{&quot;list-613149b043&quot;:{&quot;@type&quot;:&quot;core/wcm/components/list/v4/list&quot;,&quot;repo:modifyDate&quot;:&quot;2024-12-06T07:04:28Z&quot;}}" class="gnb-list-nav row row-cols-1 row-cols-md-2 cmp-list list-613149b043">
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="/content/gnb/en/news.html">News
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/gov/contacts.html">Contacts
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/gov/about-government.html">About government
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/gov/acts-regulations.html">Acts and regulations
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/gov/abcs.html">Agencies, boards and commissions
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/your-gov/work/gov-careers.html">Careers in government
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/gov/ceremony-protocol.html">Ceremony and protocol
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/gov/engagement-consultation.html">Citizen engagement and public consultation
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/business-economy/business-with-government.html">Doing business with government
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="https://www.gnb.ca/en/org.html">Departments and organizations
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link" href="/content/gnb/en/corporate/promo/information-access-and-privacy.html">Information access and privacy
-                              </a>
-                           </li>
-                           <li class="cmp-list__item">
-                              <a class="cmp-list__item-link external-link" href="https://www2.snb.ca/content/snb/en.html">Service New Brunswick
-                              </a>
-                           </li>
-                        </ul>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-    
-</div>
-
-    
-
-</div>
-
-    
-</div>
-
+        </div>
     </div>
+</nav>
 
-    
-</div>
-<div class="embed">
-<div data-cmp-data-layer="{&#34;embed-6489484139&#34;:{&#34;@type&#34;:&#34;GNB3/components/content/embed&#34;,&#34;repo:modifyDate&#34;:&#34;2024-12-08T17:01:20Z&#34;}}" id="embed-6489484139" class="cmp-embed">
-    
-    <section class="section-hero-banner gnb-hero-banner-black">
-   <div id="section-hero-banner-e131d1e12f" class="cmp-container">
-      <div class="block container responsivegrid">
-         <div id="block-f4d9ca6ec6" class="cmp-container">
-            <div class="row">
-               <div class="col-lg-12 col-sm-0">
-                  <div id="container-48597950ee" class="cmp-container">
-                     <div class="row">
-                        <div class="title aem-GridColumn aem-GridColumn--default--12">
-                           <div data-cmp-data-layer="{&quot;title-22cc458c0f&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/title&quot;,&quot;repo:modifyDate&quot;:&quot;2024-12-06T15:04:00Z&quot;,&quot;dc:title&quot;:&quot;Page not found&quot;}}" id="title-22cc458c0f" class="cmp-title">
-                              <h2 class="cmp-title__text">Page not found</h2>
-                           </div>
-                        </div>
-                        <div class="text aem-GridColumn aem-GridColumn--default--12">
-                           <div data-cmp-data-layer="{&quot;text-86a9b6b1f2&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/text&quot;,&quot;repo:modifyDate&quot;:&quot;2024-12-06T15:06:31Z&quot;,&quot;xdm:text&quot;:&quot;<p>Error 404</p>
-&quot;}}" id="text-86a9b6b1f2" class="cmp-text">
-                              <p>Error 404</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-    
-</div>
 
-    
-
-</div>
-<div class="embed">
-<div data-cmp-data-layer="{&#34;embed-44245d9a23&#34;:{&#34;@type&#34;:&#34;GNB3/components/content/embed&#34;,&#34;repo:modifyDate&#34;:&#34;2024-12-08T17:24:13Z&#34;}}" id="embed-44245d9a23" class="cmp-embed">
-    
-    <section class="section margin-bottom-lg">
-   <div id="section-358d0f3202" class="cmp-container">
-      <div class="block container responsivegrid">
-         <div id="block-c5786735bd" class="cmp-container">
-            <div class="row">
-               <div class="embed aem-GridColumn aem-GridColumn--default--12">
-                  <div data-cmp-data-layer="{&quot;embed-e988d7280e&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/embed&quot;,&quot;repo:modifyDate&quot;:&quot;2024-07-05T00:44:49Z&quot;}}" id="embed-e988d7280e" class="cmp-embed">
-                     <section class="padding-none">
-                        <div id="gnb-search" class="cmp-experiencefragment gnb-search">
-                           <div id="container-6385e7a030" class="cmp-container">
-                              <div class="row">
-                                 <div class="block container responsivegrid aem-GridColumn aem-GridColumn--default--12">
-                                    <div id="block-58dff14032" class="cmp-container">
-                                       <div class="row">
-                                          <div class="title aem-GridColumn aem-GridColumn--default--12">
-                                             <div data-cmp-data-layer="{&quot;title-30b04ca8a4&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/title&quot;,&quot;repo:modifyDate&quot;:&quot;2024-03-26T15:18:59Z&quot;,&quot;dc:title&quot;:&quot;Search&quot;}}" id="title-30b04ca8a4" class="cmp-title">
-                                                <h2 class="cmp-title__text">Search</h2>
-                                             </div>
-                                          </div>
-                                          <div class="embed aem-GridColumn aem-GridColumn--default--12">
-                                             <div data-cmp-data-layer="{&quot;embed-761b622cef&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/embed&quot;,&quot;repo:modifyDate&quot;:&quot;2024-06-06T12:49:58Z&quot;}}" id="embed-761b622cef" class="cmp-embed">
-                                                <form class="gnb-input-pair" action="https://www2.gnb.ca/content/gnb/en/search.html" title="Search GNB.ca" method="get" id="keyword_search_form" onsubmit="if(this.q.value=='')return false;return true">
-                                                   <label class="visually-hidden" for="q">Search</label>
-                                                   <input type="text" onclick="this.value='';" name="q" placeholder="Search" class="searchText ui-autocomplete-input" id="q" autocomplete="off">
-                                                   <input type="hidden" name="cx" value="004686105439310941724:3leejyo91sk">
-                                                   <input type="hidden" name="as_sitesearch" value="">
-                                                   <input type="hidden" name="cof" value="FORID:11"> 
-                                                   <input type="hidden" name="ie" value="UTF-8">
-                                                   <button class="gnb-btn-search"><span>Search</span></button>
-                                                </form>
-                                             </div>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </section>
-                  </div>
-               </div>
-               <div class="embed aem-GridColumn aem-GridColumn--default--12">
-                  <div data-cmp-data-layer="{&quot;embed-f9aef7d7ea&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/embed&quot;,&quot;repo:modifyDate&quot;:&quot;2024-07-05T00:45:27Z&quot;}}" id="embed-f9aef7d7ea" class="cmp-embed">
-                     <section class="padding-none">
-                        <div id="gnb-mega-menu" class="cmp-experiencefragment gnb-mega-menu">
-                           <div id="container-b15aa49496" class="cmp-container">
-                              <div class="row">
-                                 <div class="block container responsivegrid aem-GridColumn aem-GridColumn--default--12">
-                                    <div id="block-f1f23e3e11" class="cmp-container">
-                                       <div class="row">
-                                          <div class="title aem-GridColumn aem-GridColumn--default--12">
-                                             <div data-cmp-data-layer="{&quot;title-caf0ba98f0&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/title&quot;,&quot;repo:modifyDate&quot;:&quot;2024-03-25T17:28:47Z&quot;,&quot;dc:title&quot;:&quot;Explore the system&quot;}}" id="title-caf0ba98f0" class="cmp-title">
-                                                <h2 class="cmp-title__text">Information and services-TEST</h2>
-                                             </div>
-                                          </div>
-                                        <div class="gnbList list aem-GridColumn aem-GridColumn--default--12">
-   <ul id="gnbList-d362079bee" data-cmp-data-layer="{&quot;list-d362079bee&quot;:{&quot;@type&quot;:&quot;core/wcm/components/list/v4/list&quot;,&quot;repo:modifyDate&quot;:&quot;2024-08-19T22:23:24Z&quot;}}" class="gnb-list-nav row row-cols-1 row-cols-md-2 row-cols-lg-3 cmp-list list-d362079bee">
-      <li class="cmp-list__item">
-         <a class="cmp-list__item-link" href="/en/topic/business-economy.html">Business and economy
-         </a>
-      </li>
-      <li class="cmp-list__item">
-         <a class="cmp-list__item-link" href="/en/topic/culture-heritage.html">Culture and heritage
-         </a>
-      </li>
-      <li class="cmp-list__item">
-         <a class="cmp-list__item-link" href="/en/topic/driving-transportation.html">Driving and transportation
-         </a>
-      </li>
-      <li class="cmp-list__item">
-         <a class="cmp-list__item-link" href="/en/topic/education-training.html">Education and training
-         </a>
-      </li>
-      <li class="cmp-list__item">
-         <a class="cmp-list__item-link" href="/en/topic/environment-resources.html">Environment and natural resources
-         </a>
-      </li>
-      <li class="cmp-list__item">
-         <a class="cmp-list__item-link" href="/en/topic/family-home-community.html">Family, home and community
-         </a>
-      </li>
-      <li class="cmp-list__item">
-         <a class="cmp-list__item-link" href="/en/topic/health-wellness.html">Health and wellness
-         </a>
-      </li>
-      <li class="cmp-list__item">
-         <a class="cmp-list__item-link" href="/en/topic/jobs-workplaces.html">Jobs and workplaces
-         </a>
-      </li>
-      <li class="cmp-list__item">
-         <a class="cmp-list__item-link" href="/en/topic/laws-safety.html">Laws and safety
-         </a>
-      </li>
-      <li class="cmp-list__item">
-         <a class="cmp-list__item-link" href="/en/topic/tourism-recreation.html">Tourism, recreation and outdoors
-         </a>
-      </li>
-   </ul>
-</div>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </section>
-                  </div>
-               </div>
-               <div class="col-lg-12 col-sm-0">
-                  <div id="container-e2c80e7b1f" class="cmp-container">
-                     <div class="row">
-                        <div class="text gnb-alert-warning-inline aem-GridColumn aem-GridColumn--default--12">
-                           <div data-cmp-data-layer="{&quot;text-a0b2e550f1&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/text&quot;,&quot;repo:modifyDate&quot;:&quot;2024-12-06T15:01:42Z&quot;,&quot;xdm:text&quot;:&quot;<p>The page you are looking for might have been removed, moved, or is temporarily unavailable.</p>
-&quot;}}" id="text-a0b2e550f1" class="cmp-text">
-                              <p>The page you are looking for might have been removed, moved, or is temporarily unavailable.</p>
-                           </div>
-                        </div>
-                        <div class="text aem-GridColumn aem-GridColumn--default--12">
-                           <div data-cmp-data-layer="{&quot;text-f71fe00f89&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/text&quot;,&quot;repo:modifyDate&quot;:&quot;2024-12-06T14:47:33Z&quot;,&quot;xdm:text&quot;:&quot;<p><b>Please try the following</b>:</p>
-<p><i class=&quot;fa-solid fa-check&quot;></i>&amp;nbsp;If you typed the page address in the address bar, make sure that it is spelled correctly</p>
-<p><i class=&quot;fa-solid fa-house&quot;></i>&amp;nbsp;Try the&amp;nbsp;<a href=&quot;/content/GNB3/en.html&quot;><b>Home Page</b></a></p>
-<p><i class=&quot;fa-solid fa-magnifying-glass&quot;>&amp;nbsp;</i>Use the&amp;nbsp;<a href=&quot;/content/GNB3/en/search.html&quot;><b>Search Page</b></a></p>
-<p><i class=&quot;fa-solid fa-left&quot;></i>&amp;nbsp;Click the back button to try another link.</p>
-&quot;}}" id="text-f71fe00f89" class="cmp-text">
-                              <p><b>Please try the following</b>:</p>
-                              <p><i class="fa-solid fa-check"></i>&nbsp;If you typed the page address in the address bar, make sure that it is spelled correctly</p>
-                              <p><i class="fa-solid fa-house"></i>&nbsp;Try the&nbsp;<a href="https://www.gnb.ca/en.html"><b>Home Page</b></a></p>
-                              <p><i class="fa-solid fa-magnifying-glass">&nbsp;</i>Use the&nbsp;<a href="/content/gnb/en/search.html"><b>Search Page</b></a></p>
-                              <p><i class="fa-solid fa-left"></i>&nbsp;Click the back button to try another link.</p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-    
-</div>
-
-    
-
-</div>
-<div class="embed">
-<div data-cmp-data-layer="{&#34;embed-c3354dae93&#34;:{&#34;@type&#34;:&#34;GNB3/components/content/embed&#34;,&#34;repo:modifyDate&#34;:&#34;2024-12-08T23:02:09Z&#34;}}" id="embed-c3354dae93" class="cmp-embed">
-    
-    <section class="section gnb-section-gray">
-   <div id="section-36951ee52c" class="cmp-container">
-      <div class="block container responsivegrid">
-         <div id="block-7f9a22d26b" class="cmp-container">
-            <div class="row">
-               <div class="title aem-GridColumn aem-GridColumn--default--12">
-                  <div data-cmp-data-layer="{&quot;title-655f357b16&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/title&quot;,&quot;repo:modifyDate&quot;:&quot;2024-12-06T14:37:28Z&quot;,&quot;dc:title&quot;:&quot;Information et services&quot;}}" id="title-655f357b16" class="cmp-title">
-                     <h3 class="cmp-title__text">Information and services</h3>
-                  </div>
-               </div>
-               <div class="col-lg-12 col-sm-0">
-                  <div id="experiencefragment-6a998ae1d5" class="cmp-experiencefragment cmp-experiencefragment--gov-list1">
-                     <div id="container-47703dd4f9" class="cmp-container">
-                        <div class="row">
-                           <div class="gnbList list aem-GridColumn aem-GridColumn--default--12">
-                              <ul id="gnbList-341ba958ba" data-cmp-data-layer="{&quot;list-341ba958ba&quot;:{&quot;@type&quot;:&quot;core/wcm/components/list/v4/list&quot;,&quot;repo:modifyDate&quot;:&quot;2024-08-19T22:23:24Z&quot;}}" class="gnb-list-nav row row-cols-1 row-cols-md-2 row-cols-lg-3 cmp-list list-341ba958ba">
-                                 <li class="cmp-list__item">
-                                    <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/business-economy.html">Business and economy
-                                    </a>
-                                 </li>
-                                 <li class="cmp-list__item">
-                                    <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/culture-heritage.html">Culture and heritage
-                                    </a>
-                                 </li>
-                                 <li class="cmp-list__item">
-                                    <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/driving-transportation.html">Driving and transportation
-                                    </a>
-                                 </li>
-                                 <li class="cmp-list__item">
-                                    <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/education-training.html">Education and training
-                                    </a>
-                                 </li>
-                                 <li class="cmp-list__item">
-                                    <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/environment-resources.html">Environment and natural resources
-                                    </a>
-                                 </li>
-                                 <li class="cmp-list__item">
-                                    <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/family-home-community.html">Family, home and community
-                                    </a>
-                                 </li>
-                                 <li class="cmp-list__item">
-                                    <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/health-wellness.html">Health and wellness
-                                    </a>
-                                 </li>
-                                 <li class="cmp-list__item">
-                                    <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/jobs-workplaces.html">Jobs and workplaces
-                                    </a>
-                                 </li>
-                                 <li class="cmp-list__item">
-                                    <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/laws-safety.html">Laws and safety
-                                    </a>
-                                 </li>
-                                 <li class="cmp-list__item">
-                                    <a class="cmp-list__item-link" href="https://www.gnb.ca/en/topic/tourism-recreation.html">Tourism, recreation and outdoors
-                                    </a>
-                                 </li>
-                              </ul>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</section>
-    
-</div>
-
-    
-
-</div>
-
-        
+<div class="site-notices">
+    <div class="container">
     </div>
-
-</section>
-<div class="gototop">
-    <!-- Get the current page's sling:language property -->
-    
-
-        <!-- Read page dialog value (default handled with ternary operator) -->
-        
-
-        <!-- Author (Edit) mode -->
-        
-
-        <!-- Publish/Preview mode -->
-        
-            <!-- Quick Exit: Render only if it is enabled on the page (placed earlier in the DOM) -->
-            
-
-            <!-- Back to top -->
-            <button id="gnb-sticky-top" class="fade-in" style="display: block;">
-                <span>Back to top</span>
-            </button>
-        
-
-    
-
-</div>
-<div class="embed">
-<div data-cmp-data-layer="{&#34;embed-1bc0fbcc48&#34;:{&#34;@type&#34;:&#34;GNB3/components/content/embed&#34;,&#34;repo:modifyDate&#34;:&#34;2025-09-26T13:02:40Z&#34;}}" id="embed-1bc0fbcc48" class="cmp-embed">
-    
-    <footer class="gnb-footer-dark">
-   <div id="experiencefragment-0a3332d0f6" class="cmp-experiencefragment cmp-experiencefragment--footer">
-      <div id="container-69c8ae996e" class="cmp-container">
-         <div class="container-fluid">
-            <div id="container-cff2aab4e9" class="cmp-container">
-               <div class="row">
-                  <div class="text copyright col-lg-6 col-sm-0 col-lg-offset-0">
-                     <div data-cmp-data-layer="{&quot;text-f14bf30928&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/text&quot;,&quot;repo:modifyDate&quot;:&quot;2024-07-22T11:19:19Z&quot;,&quot;xdm:text&quot;:&quot;<p><b>© Government of New Brunswick</b></p>\r\n&quot;}}" id="text-f14bf30928" class="cmp-text">
-                        <p><b>© Government of New Brunswick</b></p>
-                     </div>
-                  </div>
-                  <div class="list nav-legal col-lg-6 col-sm-0 col-lg-offset-0">
-                     <ul id="list-ccd6ce997a" data-cmp-data-layer="{&quot;list-ccd6ce997a&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/list&quot;,&quot;repo:modifyDate&quot;:&quot;2024-08-08T17:31:45Z&quot;}}" class="cmp-list">
-                        <li class="cmp-list__item" data-cmp-data-layer="{&quot;list-ccd6ce997a-item-7ff4d0cd9c&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/list/item&quot;,&quot;repo:modifyDate&quot;:&quot;2024-12-04T13:58:53Z&quot;,&quot;dc:title&quot;:&quot;About New Brunswick&quot;,&quot;xdm:linkURL&quot;:&quot;/en/admin/about-nb.html&quot;}}">
-                           <a class="cmp-list__item-link" data-cmp-clickable="" href="/en/admin/about-nb.html">
-                           <span class="cmp-list__item-title">About New Brunswick</span>
-                           </a>
-                        </li>
-                        <li class="cmp-list__item" data-cmp-data-layer="{&quot;list-ccd6ce997a-item-b747f0e722&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/list/item&quot;,&quot;repo:modifyDate&quot;:&quot;2024-12-04T13:58:54Z&quot;,&quot;dc:title&quot;:&quot;Disclaimer&quot;,&quot;xdm:linkURL&quot;:&quot;/en/admin/disclaimer.html&quot;}}">
-                           <a class="cmp-list__item-link" data-cmp-clickable="" href="/en/admin/disclaimer.html">
-                           <span class="cmp-list__item-title">Disclaimer</span>
-                           </a>
-                        </li>
-                       
-                        <li class="cmp-list__item" data-cmp-data-layer="{&quot;list-ccd6ce997a-item-f427e43d7b&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/list/item&quot;,&quot;repo:modifyDate&quot;:&quot;2024-12-04T13:58:53Z&quot;,&quot;dc:title&quot;:&quot;Privacy&quot;,&quot;xdm:linkURL&quot;:&quot;/en/admin/privacy.html&quot;}}">
-                           <a class="cmp-list__item-link" data-cmp-clickable="" href="/en/admin/privacy.html">
-                           <span class="cmp-list__item-title">Privacy</span>
-                           </a>
-                        </li>
-                        <li class="cmp-list__item" data-cmp-data-layer="{&quot;list-ccd6ce997a-item-71f840d43c&quot;:{&quot;@type&quot;:&quot;GNB3/components/content/list/item&quot;,&quot;repo:modifyDate&quot;:&quot;2024-12-06T18:55:48Z&quot;,&quot;dc:title&quot;:&quot;Social media&quot;,&quot;xdm:linkURL&quot;:&quot;/en/admin/social-media.html&quot;}}">
-                           <a class="cmp-list__item-link" data-cmp-clickable="" href="/en/admin/social-media.html">
-                           <span class="cmp-list__item-title">Social media</span>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-   </div>
-</footer>
-    
 </div>
 
-    
 
-</div>
 
-        
+<main>
+    <div class="page-header">
+        <div class="container">
+            <h2>Page Not Found</h2>
+        </div>
     </div>
-
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12">
+                The requested resource or page could not be found. If you believe this is an error please <a href="/cdn-cgi/l/email-protection#79151c1e0e1c1b181d141017391e171b571a18">Contact Us</a>
+<br/>
+(Error 404)
+            </div>
+        </div>
+    </div>
 </main>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="footer-list-group">
+                    <span class="footer-list-header">
+                        Legislative Officers
+                    </span>
+                    <ul>
+                        <li>
+                            <a class="item" href="https://www.agnb-vgnb.ca/">Auditor General</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://www.electionsnb.ca/content/enb/en.html">Chief Electoral Officer</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://www.defenseur-nb-advocate.ca/">Child, Youth and Senior Advocate</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://www.insurance-assurance.ca/index">Consumer Advocate for Insurance</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://oic-bci.ca/">Office of the Integrity Commissioner</a>
+                        </li>
+                        <li>
+                            <a class="item" href="http://officiallanguages.nb.ca/">Commissioner of Official Languages</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://www.ombudnb.ca/">Ombud</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="footer-list-group">
+                    <span class="footer-list-header">
+                        Information
+                    </span>
+                    <ul>
 
-        
+                        <li>
+                            <a class="item" href="https://www2.gnb.ca/content/gnb/en/lgnb.html">Lieutenant Governor of New Brunswick</a>
+                        </li>
+                        <li>
+                            <a class="item" href="http://laws.gnb.ca/en/BrowseTitle">New Brunswick Acts &amp; Regulations</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://www2.gnb.ca/content/gnb/en/contacts/dept_renderer.201936.html#structure">Employee Directory</a>
+                        </li>
+                        <li>
+                            <a class="item" href="/en/disclaimer">Disclaimer</a>
+                        </li>
+                        <li>
+                            <a class="item" href="/en/sitemap">Sitemap</a>
+                        </li>
+                        <li>
+                            <a class="item" href="/en/other-legislatures">Other Legislatures</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://epp.legnb.ca?lang=en">Member and Employee Portal</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <address class="footer-legislature-address">
+                    Legislative Assembly of New Brunswick<br/>
+706 Queen Street<br/>
+Fredericton, N.B.<br/>
+E3B 1C5<br/>
+Canada<br/>
+(506) 453-2506<br>
+Mon. to Fri.: 8:15 a.m. – 4:30 p.m.
+                </address>
+                <a href="https://www.facebook.com/LegNB.EN" tooltip="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" class="bi bi-facebook"
+                         viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
     </div>
+    <div class="site-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <span style="color: rgba(255, 255, 255, 0.6);">
+                        2026 The Legislative Assembly of New Brunswick
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
-</div>
 
 
-
-        
-    
-    
-<script src="/etc.clientlibs/clientlibs/granite/jquery.min.js"></script>
-<script src="/etc.clientlibs/clientlibs/granite/utils.min.js"></script>
-<script src="/etc.clientlibs/clientlibs/granite/jquery/granite.min.js"></script>
-<script src="/etc.clientlibs/GNB3/clientlibs/clientlib-empty-template.min.js"></script>
-
-
-
-    
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/site.js?v=YvbCUlaKUemuZMC3jbhGW5tU_fDbTdesBqt3Q13cBUs"></script>
 
 
 
 
-
-
-    
-    <script async src="/etc.clientlibs/GNB3/clientlibs/clientlib-dependencies.min.js"></script>
-<script async src="/etc.clientlibs/GNB3/clientlibs/clientlib-site.min.js"></script>
-
-
-    
-
-
-
-    
-
-    
-
-
-    
-    </body>
-    <!-- End Not Splash page -->
-
+</body>
 </html>

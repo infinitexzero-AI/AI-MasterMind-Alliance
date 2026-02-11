@@ -25,7 +25,7 @@
 <link href="https://cdn.ncbi.nlm.nih.gov/pmc/pd-medc-pmc-cloudpmc-viewer/production/8a2a0396/var/data/static/assets/secure-cookie-Br6x5jtB.js" type="text/javascript" crossorigin="anonymous" rel="modulepreload" as="script" />
 
   <script type="module">
-    const POW_CHALLENGE = "VwR3AmN3Amp2ZQNhBGV5AGL3AvV:UqqAKqz9-aiei7NSDF5sfF2phsaKrlgnwr6dUAJIKYR"
+    const POW_CHALLENGE = "VwR3AmN3Amp2ZwZhAQRlAmZ3AvV:f6jW-A6jpMwLgYjYTbCRUMTgghEu41Nq4S9jH3Ois5Z"
     const POW_DIFFICULTY = "4"
     const POW_COOKIE_NAME = "cloudpmc-viewer-pow"
     const POW_COOKIE_PATH = "/"

@@ -266,7 +266,7 @@ img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
 <link rel='stylesheet' id='font-awesome-css' href='https://sjhdc.ca/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' media='all' />
 <link rel='stylesheet' id='bootstrap-css-css' href='https://sjhdc.ca/wp-content/themes/hdc/assets/css/bootstrap.min.css?ver=cb5bfb4a16fad212ca6c46c48184317f' media='all' />
 <link rel='stylesheet' id='custom-css-css' href='https://sjhdc.ca/wp-content/themes/hdc/assets/css/style.css?ver=cb5bfb4a16fad212ca6c46c48184317f' media='all' />
-<link rel='stylesheet' id='hdc-style-css' href='https://sjhdc.ca/wp-content/themes/hdc/style.css?ver=358073439' media='all' />
+<link rel='stylesheet' id='hdc-style-css' href='https://sjhdc.ca/wp-content/themes/hdc/style.css?ver=1724153848' media='all' />
 <link rel='stylesheet' id='fancybox-css' href='https://sjhdc.ca/wp-content/plugins/easy-fancybox/fancybox/1.5.4/jquery.fancybox.min.css?ver=cb5bfb4a16fad212ca6c46c48184317f' media='screen' />
 <link rel='stylesheet' id='ecs-styles-css' href='https://sjhdc.ca/wp-content/plugins/ele-custom-skin/assets/css/ecs-style.css?ver=3.1.9' media='all' />
 <link rel='stylesheet' id='elementor-post-3545-css' href='https://sjhdc.ca/wp-content/uploads/elementor/css/post-3545.css?ver=1722600802' media='all' />
