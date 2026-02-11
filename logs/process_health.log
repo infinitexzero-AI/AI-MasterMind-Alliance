@@ -1334,3 +1334,26 @@ Process Health Monitor complete - Tue Feb 10 20:49:55 AST 2026
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Process Health Monitor complete - Tue Feb 10 21:49:58 AST 2026
 
+🔍 Process Health Monitor - Tue Feb 10 22:49:58 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[1/4] Language Server Health:
+  PID: 3856
+  Memory: 253MB (3.1%)
+  ✅ Healthy
+
+[2/4] Docker Health:
+  Docker.raw: 2GB
+  ✅ Healthy
+
+[3/4] Chrome Health:
+  Processes: 24
+  Total Memory: 327MB (4%)
+  ✅ Healthy
+
+[4/4] Antigravity Health:
+  Helper Processes: 32
+  Total Memory: 475MB (5.8%)
+  ⚠️  High helper count - may indicate memory leak
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Process Health Monitor complete - Tue Feb 10 22:50:05 AST 2026
+
