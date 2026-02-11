@@ -21,23 +21,45 @@ Linear MCP server running on stdio
 [mcp-superassistant-proxy] Server Linear has 7 tools
 [mcp-superassistant-proxy] Successfully initialized server: Linear
 [mcp-superassistant-proxy] Config-to-SSE gateway ready
-node:events:486
-      throw er; // Unhandled 'error' event
-      ^
-
-Error: listen EADDRINUSE: address already in use ::1:3006
-    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
-    at listenInCluster (node:net:1997:12)
-    at GetAddrInfoReqWrap.callback (node:net:2206:7)
-    at GetAddrInfoReqWrap.onlookupall [as oncomplete] (node:dns:134:8)
-Emitted 'error' event on Server instance at:
-    at emitErrorNT (node:net:1976:8)
-    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
-  code: 'EADDRINUSE',
-  errno: -48,
-  syscall: 'listen',
-  address: '::1',
-  port: 3006
-}
-
-Node.js v24.11.1
+[mcp-superassistant-proxy] Listening on localhost:3006
+[mcp-superassistant-proxy] SSE endpoint: http://localhost:3006/sse
+[mcp-superassistant-proxy] POST messages: http://localhost:3006/message
+[mcp-superassistant-proxy] New SSE connection from ::1
+[mcp-superassistant-proxy] SSE connection closed (session 2b40eade-11f0-4183-be3c-60037363a66f)
+[mcp-superassistant-proxy] Client disconnected (session 2b40eade-11f0-4183-be3c-60037363a66f)
+[mcp-superassistant-proxy] New SSE connection from ::1
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":0,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"mcp-client-sse","version":"1.0.0"}}}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","method":"notifications/initialized"}
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":1,"method":"resources/list"}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":2,"method":"tools/list"}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":3,"method":"resources/list"}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":4,"method":"tools/list"}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":5,"method":"resources/list"}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":10,"method":"tools/list"}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":6,"method":"tools/list"}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":7,"method":"resources/list"}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":8,"method":"tools/list"}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
+[mcp-superassistant-proxy] POST to SSE transport (session b7a49c36-e04a-4599-8060-8e74e5a86b27)
+[mcp-superassistant-proxy] SSE → Servers (session b7a49c36-e04a-4599-8060-8e74e5a86b27): {"jsonrpc":"2.0","id":9,"method":"resources/list"}
+[mcp-superassistant-proxy] Servers → SSE (session b7a49c36-e04a-4599-8060-8e74e5a86b27):
