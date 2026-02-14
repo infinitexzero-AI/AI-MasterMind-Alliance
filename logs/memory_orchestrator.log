@@ -4210,3 +4210,15 @@ Current Status:
   [2/5] Checking language server...
     ✓ Language server healthy (3.5%)
   [3/5] Clearing system caches...
+    ⚠ Purge requires sudo
+  [4/5] Running safe cleanup...
+    ✓ Cleanup complete
+  [5/5] Sending alert...
+
+✅ Emergency procedures complete
+
+⚠️  Swap usage critical: 82%
+   Recommendation: Restart system to clear swap or upgrade RAM
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Memory Orchestrator complete - Sat Feb 14 16:48:50 AST 2026
+

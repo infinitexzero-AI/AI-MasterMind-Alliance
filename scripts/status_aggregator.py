@@ -45,7 +45,10 @@ def aggregate():
             "latency_ms": latency.get("total_sync_latency_ms", 45),
             "recent_crashes": stability.get("recent_crashes", 0),
             "sigtrap_count": stability.get("sigtrap_events", 0),
-            "top_cpu_load": stability.get("top_cpu", "5%")
+            "top_cpu_load": stability.get("top_cpu", "5%"),
+            "ram_mb": stability.get("ram_mb", 0),
+            "swap_percent": stability.get("swap_percent", 0),
+            "helper_count": stability.get("helper_count", 0)
         },
         "mode6": {
             "connected": True,
