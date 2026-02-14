@@ -475,3 +475,6 @@ Linear MCP server running on stdio
 [mcp-superassistant-proxy] Servers → SSE (session ac1e18e3-615d-4f64-951a-a8f67fb7c5bc):
 [mcp-superassistant-proxy] SSE connection closed (session ac1e18e3-615d-4f64-951a-a8f67fb7c5bc)
 [mcp-superassistant-proxy] Client disconnected (session ac1e18e3-615d-4f64-951a-a8f67fb7c5bc)
+[mcp-superassistant-proxy] Caught SIGHUP. Exiting...
+[mcp-superassistant-proxy] Cleaned up server: GitHub
+[mcp-superassistant-proxy] Cleaned up server: Linear
