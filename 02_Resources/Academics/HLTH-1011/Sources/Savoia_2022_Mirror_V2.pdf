@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <!--<meta name="viewport" content="initial-scale=1, maximum-scale=1"/>-->
+
+    <title>404 File not Found</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link media="screen" rel="stylesheet" href="/style/g.css" />
+    <link rel="stylesheet" type="text/css" href="/style/jquery.ui.custom.en.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/style/jquerydropdown.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="/style/Print_IIasa.en.css" media="print" />
+    <link rel="stylesheet" type="text/css" href="/style/Print_iiasa_startpage.en.css" media="print" />
+    <!--[if IE 7]> 
+<link rel="stylesheet" type="text/css" href="{$config{rel_path}}/style/ie7.en.css" /> <![endif]-->
+    <!--[if IE 8]> 
+<link rel="stylesheet" type="text/css" href="{$config{rel_path}}/style/ie8.en.css" /> <![endif]-->
+    <script type="text/javascript" src="/javascript/g.js">// <!-- No script --></script>
+    <script src="/javascript/jquery.colorbox.js" type="text/javascript">// <!-- No script --></script>
+    <script src="/javascript/app.js" type="text/javascript">// <!-- No script --></script>
+    <script type="text/javascript"> function toggle_div_mis_source(url) { var div = document.getElementById('div_mis_source'); if (div.style.display == '') { div.style.display = 'none'; } else { div.style.display = ''; } if (url != '') { document.getElementById('iframe_mis_source').src = url; } else { document.getElementById('iframe_mis_source').src = 'https://www.iiasa.ac.at/web/scientificUpdate/Progress.html'; } } </script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+
+    <script type="text/javascript">
+// <![CDATA[
+var eprints_http_root = "https://pure.iiasa.ac.at";
+var eprints_http_cgiroot = "https://pure.iiasa.ac.at/cgi";
+var eprints_oai_archive_id = "pure.iiasa.ac.at";
+var eprints_logged_in = false;
+var eprints_logged_in_userid = 0; 
+var eprints_logged_in_username = ""; 
+var eprints_logged_in_usertype = ""; 
+var eprints_lang_id = "en";
+// ]]></script>
+    <style type="text/css">.ep_logged_in { display: none }</style>
+    <link type="text/css" href="/style/auto-3.4.6.css?1769194444" rel="stylesheet" />
+    <script type="text/javascript" src="/javascript/auto-3.4.6.js?1769194444">
+//padder
+</script>
+    <!--[if lte IE 6]>
+        <link rel="stylesheet" type="text/css" href="/style/ie6.css" />
+   <![endif]-->
+    <meta name="Generator" content="EPrints 3.4.6" />
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type" />
+    <meta content="en" http-equiv="Content-Language" />
+    <link href="https://pure.iiasa.ac.at/" rel="Top" />
+    <link href="https://pure.iiasa.ac.at/sword-app/servicedocument" rel="Sword" />
+    <link href="https://pure.iiasa.ac.at/id/contents" rel="SwordDeposit" />
+    <link type="text/html" href="https://pure.iiasa.ac.at/cgi/search" rel="Search" />
+    <link type="application/opensearchdescription+xml" title="IIASA Repository" href="https://pure.iiasa.ac.at/cgi/opensearchdescription" rel="Search" />
+    
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-20950351-8', 'auto');;
+  ga('send', 'pageview');
+
+</script>
+
+
+<!-- NEW -->
+  <meta charset="utf-8" />
+  <link rel="canonical" href="https://iiasa.dev.local/" />
+  <link rel="shortlink" href="https://iiasa.dev.local/" />
+  <meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="viewport" content="width=device-width, initial-scale=0.5, shrink-to-fit=yes" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <link rel="icon" href="https://iiasa.ac.at/themes/custom/iiasa/favicon.ico" type="image/vnd.microsoft.icon" />
+  <title>UPDATE THIS TITLE | IIASA WEBSITE</title>
+<!--  <link rel="stylesheet" media="all" href="css/css_kcpJl2G6pY5K3VUDCOc-bNWZUn5aisTSW0wP2rqcOn8.css" />
+  <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" media="all" href="css/css_nWyyufdn0gLj9pK4ufxFQCZ8VNO3Pzj2vWLRPi0ar_g.css" />
+  <link rel="stylesheet" media="all" href="css/css_rFbEn69hu9wsPNRW5Bk8gk83wN_u1uy-CRkh7pBC0HM.css" /> -->
+<!-- NEW END -->
+
+<script src="https://unpkg.com/feather-icons">// <!-- No script --></script>
+  
+
+  </head>
+<body class="layout-one-sidebar layout-sidebar-first path-iiasa-pure">
+
+<!--<html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">-->
+
+<a href="#main-content" class="visually-hidden focusable skip-link"> Skip to main content </a>
+<div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas="">
+  <div id="page-wrapper">
+    <div id="page">
+      <header id="header" class="header" role="banner" aria-label="Site header">
+        <nav class="navbar navbar-expand-lg" id="navbar-main">
+          <div class="container">
+            <a href="https://iiasa.ac.at/" title="Home" rel="home" class="navbar-brand">
+              <img src="https://upload.wikimedia.org/wikipedia/de/c/cf/IIASA_logo.svg" alt="IIASA WEBSITE - International Institute for Applied Systems Analysis" class="img-fluid d-inline-block align-top" />
+            </a>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="CollapsingNavbar">
+              <nav role="navigation" aria-labelledby="block-iiasa-main-menu-menu" id="block-iiasa-main-menu" class="block block-menu navigation menu--main">
+                <h2 class="visually-hidden" id="block-iiasa-main-menu-menu">Main navigation</h2>
+				
+				
+                <ul class="clearfix nav navbar-nav">
+                  <li class="nav-item iiasa-blue">
+                    <a href="https://iiasa.ac.at/" class="nav-link nav-link--" data-drupal-link-system-path="&lt;front&gt;">Home</a>
+                  </li>
+                                   <li class="iiasa-pink nav-item">
+                    <a href="https://iiasa.ac.at/programs" class="nav-link nav-link--models-and-data" data-drupal-link-system-path="node/74">Research</a>
+                  </li>
+                  <li class="iiasa-pink nav-item">
+                    <a href="https://iiasa.ac.at/models-and-data" class="nav-link nav-link--models-and-data" data-drupal-link-system-path="node/74">Models and data</a>
+                  </li>
+				  <li class="iiasa-pink nav-item">
+                    <a href="https://iiasa.ac.at/news" class="nav-link nav-link--models-and-data" data-drupal-link-system-path="node/74">News and Events</a>
+                  </li>
+					<li class="iiasa-pink nav-item">
+                    <a href="https://iiasa.ac.at/employment/job-openings" class="nav-link nav-link--models-and-data" data-drupal-link-system-path="node/74">Join us</a>
+                  </li>
+				<li class="iiasa-pink nav-item">
+                    <a href="https://iiasa.ac.at/institute" class="nav-link nav-link--models-and-data" data-drupal-link-system-path="node/74">About IIASA</a>
+                  </li> 
+                 
+                </ul>
+              </nav>
+			  
+			  
+			  
+              <div id="block-fontsizeswitcher" class="block block-iiasa-font-switcher block-font-size-switcher">
+                <div class="content">
+                  <div class="font-switcher-block">
+                    <a class="smaller">A</a>
+                    <a class="bigger">A</a>
+                  </div>
+                </div>
+              </div>
+              <button id="navigation-search-button" class="btn btn-dark" aria-label="Toggle search bar">
+                <span style="height: 15px;" class="icon-search" data-feather="search"></span>
+		<svg width="16" height="16" fill="black" class="bi bi-x-lg" viewBox="0 0 16 16" style="display:none;">
+  		  <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"></path>
+  		  <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"></path>
+		</svg>
+              </button>
+              <div class="views-exposed-form block block-views block-views-exposed-filter-blocksearch-main-search-page" data-drupal-selector="views-exposed-form-search-main-search-page" id="block-navigation-search-field">
+                <div class="content">
+                  <form action="https://iiasa.ac.at/search" method="get" id="views-exposed-form-search-main-search-page" accept-charset="UTF-8">
+                    <div class="form-row">
+                      <fieldset class="js-form-item js-form-type-textfield form-type-textfield js-form-item-search-api-fulltext form-item-search-api-fulltext form-no-label mb-3">
+                        <input placeholder="Search" data-drupal-selector="edit-search-api-fulltext" type="text" id="edit-search-api-fulltext" name="search_api_fulltext" value="" size="30" maxlength="128" class="form-control" />
+                      </fieldset>
+                      <div data-drupal-selector="edit-actions" class="form-actions js-form-wrapper form-group" id="edit-actions">
+                        <button class="button js-form-submit form-submit btn btn-dark" data-drupal-selector="edit-submit-search" type="submit" id="edit-submit-search" value="">
+				<svg width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  					<path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"></path>
+					</svg>
+			</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div id="main-wrapper" class="layout-main-wrapper clearfix">
+        <div id="main" class="container">
+          <div class="row row-offcanvas row-offcanvas-left clearfix">
+
+            <!-- EJO -->
+<!--            <div id="banner_print">
+              <img src="/style/images/headerprint.png" class="banner" alt="print banner"/>
+            </div> -->
+            <style> #div_mis_source { width : 750px; height : 450px; background-color : #FBFCFD; z-index : 10000; border : 3px solid #DADFE8; border-radius : 17px; padding : 2px 2px 5px 5px; position : fixed; -moz-box-shadow : 3px 3px 5px 0px #A9B5CB; -webkit-box-shadow : 3px 3px 5px 0px #A9B5CB; box-shadow : 3px 3px 5px 0px #A9B5CB; } #iframe_mis_source { width : 100%; height : 90%; } </style>
+            <!--<div id="bg"/>-->
+            <div id="left_side">
+              <ul id="leftmenu">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/cgi/search/advanced">Search</a>
+	        </li>
+                <li>
+                    <a href="/browse.html">Browse</a>
+                </li>
+                <li>
+                    <a href="/information.html">Information</a>
+                </li>
+                <li>
+                    <a href="/policies.html">Policies</a>
+                </li>
+                <ul id="ep_tm_menu_tools" class="ep_tm_key_tools"><li class="ep_tm_key_tools_item"><a class="ep_tm_key_tools_item_link" href="/cgi/users/home">Login</a></li></ul>
+              </ul>
+               
+            </div>
+            <div id="middle_and_right">
+              <div id="content_standard">
+                <h1 id="headline">404 File not Found</h1>
+                <div class="ep_page">
+                  <p>Could not find the file: <code>/id/eprint/17997/1/vaccines-10-00671-v2.pdf</code></p><p>The file you are trying to access may be related to this item:</p><p>
+
+
+    <span class="person">Seidl, A.</span> &amp; <span class="person"><a href="https://pure.iiasa.ac.at/view/iiasa/3362.html">Wrzaczek, S.</a></span>
+  
+
+<span class="date">(2023).</span>
+
+
+    <span class="title"><a href="https://pure.iiasa.ac.at/id/eprint/17997/"><em>Opening the source code: The threat of forking.</em></a></span>
+  
+
+
+    <span class="publication"><span style="font-style: italic">Journal of Dynamics and Games</span> 10 (2) 121-150. <a target="_blank" href="https://doi.org/10.3934/jdg.2022010">10.3934/jdg.2022010</a>.</span>
+
+    <!-- <if test="!is_set(publication) and iiasa_bibref"><print expr="iiasa_bibref"/></if> -->
+    
+  
+
+
+  
+
+
+</p><p>If you reached this page by following a link within the repository, please contact the <a href="mailto:repository@iiasa.ac.at">IIASA Repository administration</a>.  Otherwise, please check that you have typed the URL in correctly, or contact the person or site that supplied you with this URL.</p>
+                </div>
+              </div>
+              <!-- End content Standard -->
+            </div>
+            <!-- End middle_and_right -->
+            <div class="clear"></div>
+            <!-- EJO -->
+          </div>
+        </div>
+      </div>
+      <footer class="site-footer">
+        <div class="site-footer__top clearfix">
+          <div id="block-webform" class="bg-dark text-white block block-webform block-webform-block">
+            <div class="container">
+              <div class="content">
+                <form class="webform-submission-form webform-submission-add-form webform-submission-newsletter-form webform-submission-newsletter-add-form js-webform-details-toggle webform-details-toggle" data-drupal-selector="webform-submission-newsletter-add-form" action="/iiasa_pure/template/iu4hd987ysdfhdk6tgjsdjfjdhgf" method="post" id="webform-submission-newsletter-add-form" accept-charset="UTF-8">
+                  <div class="col-lg-8 m-auto js-form-wrapper form-group" data-drupal-selector="edit-container" id="edit-container">
+                    <fieldset id="edit-processed-text" class="js-form-item js-form-type-processed-text form-type-processed-text js-form-item- form-item- form-no-label mb-3">
+                      <h2>Subscribe</h2>
+                      <p>Keep up to date with our latest news, events, and other IIASA activities. <a href="https://iiasa.ac.at/signup">Sign up</a>. </p>
+                    </fieldset>
+                  </div>
+                  <div class="d-none form-actions webform-actions js-form-wrapper form-group" data-drupal-selector="edit-actions" id="edit-actions--2">
+                    <button class="webform-button--submit button button--primary js-form-submit form-submit btn btn-dark" data-drupal-selector="edit-actions-submit" type="submit" id="edit-actions-submit" name="op" value="Submit">Submit</button>
+                  </div>
+                  <input autocomplete="off" data-drupal-selector="form-yddbdpxlc0oispajvnyaomt7x-nypsfbuwndzu7wrxo" type="hidden" name="form_build_id" value="form-ydDbDPxlc0OISpAJvnyaOmt7X-nyPSFBUWNdZu7WRxo" class="form-control" />
+                  <input data-drupal-selector="edit-webform-submission-newsletter-add-form" type="hidden" name="form_id" value="webform_submission_newsletter_add_form" class="form-control" />
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="container site-footer__bottom">
+          <div class="row">
+            <div class="col-lg-3  text-center text-lg-left mb-5 mb-lg-0">
+              <nav role="navigation" aria-labelledby="block-iiasa-footer-menu" id="block-iiasa-footer" class="block block-menu navigation menu--footer">
+                <h2 class="visually-hidden" id="block-iiasa-footer-menu">Footer menu</h2>
+                <ul class="clearfix nav navbar-nav">
+                  <li class="nav-item">
+                    <a href="https://iiasa.ac.at/employment/job-openings" class="nav-link nav-link--join-us-work-for-us" data-drupal-link-system-path="iiasa_sections/3">Careers</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://iiasa.ac.at/how-to-find-us" class="nav-link nav-link--how-to-find-us" data-drupal-link-system-path="node/1514">How to find us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="https://iiasa.ac.at/terms-of-use" class="nav-link nav-link--terms-of-use" data-drupal-link-system-path="node/1513">Terms of use</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="col-lg-3 offset-lg-6 text-center text-lg-left">
+     
+              <p>International Institute for Applied Systems Analysis (IIASA) | Schlossplatz 1 | A-2361 Laxenburg, Austria</p>
+              <p>T: (+43 2236) 807 0</p>
+              <p>
+                <a href="mailto:info@iiasa.ac.at">info@iiasa.ac.at</a>
+              </p>
+            </div>
+          </div>
+          <div class="row copyright">
+            <div class="col-lg-6"></div>
+            <div class="col-lg-6 text-lg-right">© 2025 International Institute for Applied Systems Analysis (IIASA)</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<!--<script src="js/js_JE8PZJhOBN9Te0gce_jGSX1XkhRhwQn1RrUWtVDWALM.js"></script>-->
+
+
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">// <!-- No script --></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">// <!-- No script --></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">// <!-- No script --></script>
+
+    <script>
+      feather.replace()
+    </script>
+    <script>jQuery.noConflict();</script>
+  </body>
+</html>

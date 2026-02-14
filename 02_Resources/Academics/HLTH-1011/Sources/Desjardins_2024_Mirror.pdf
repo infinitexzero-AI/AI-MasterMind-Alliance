@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html translate="no" lang="en" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--
+    <meta http-equiv="Content-Security-Policy" content="default-src blob: 'self'; media-src 'self' blob: *;connect-src 'self' https://*.isilive.ca/; frame-src 'self' https://*.google.com/ https://*.googleapis.com/; script-src 'self' 'unsafe-inline' blob: https://*.isiglobal.ca/ https://*.isilive.ca/ https://*.aspnetcdn.com/ https://*.googletagmanager.com https://*.google.com/ https://*.google-analytics.com/ http://*.google-analytics.com/ https://*.googleapis.com/ https://*.gstatic.com; style-src 'self' 'unsafe-inline' * ; font-src 'self' * ; img-src 'self' 'unsafe-inline' * " />
+    -->
+    <meta name="theme-color" content="#660033">
+
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="google" content="nositelinkssearchbox">
+    <meta name="google" content="notranslate">
+
+    <meta name="referrer" content="no-referrer">
+    <meta name="format-detection" content="telephone=yes">
+
+    <meta name="ICBM" content="45.959384, -66.636318">
+    <meta name="geo.position" content="45.959384, -66.636318">
+    <meta name="geo.region" content="CA-NB">
+    <meta name="geo.placename" content="Fredericton">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#4285f4">
+
+    <link rel="me" href="mailto:legwebadmin@legnb.ca">
+
+    <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rufina" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    
+
+    <title>Page Not Found - Legislative Assembly of New Brunswick</title>
+    <meta name="description" content="The resource you requested could not be found." />
+    <meta name="robots" content="noindex, nofollow" />
+
+
+    
+
+
+    
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-CMSE8Q7GQ3"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+        
+          gtag('config', 'G-CMSE8Q7GQ3');
+        </script>
+    
+
+    
+        <link rel="stylesheet" type="text/css" href="/styles/styles.min.css?v=zhRjhYx1bkH828HO66g7V_4GbaeWbeGPqxxm4d0Wvn4" />
+    
+    
+    <link rel="stylesheet" href="/NBLegWeb.Public.Web.styles.css" />
+</head>
+<body>
+
+
+
+
+<header class="site-header">
+    <div class="container-lg container-fluid">
+        <div class="header-content">
+            <a class="header-branding" href="/en">
+                <div class="header-branding-logo d-none d-lg-block">
+                    <img src="/images/coatofarms_sm.png" alt="A drawing of the New Brunswick coat of arms. There is a crest featuring a boat and a lion, with a deer standing on its hind legs on each side of the crest and a fish above." />
+                </div>
+                <img class="header-branding-logo-sm d-lg-none" src="/images/logo.png" alt="A white silhouette drawing of the dome on top of the legislative assembly." />
+                <div class="header-branding-meta">
+                    <span class="header-branding-title">Legislative Assembly <br>of New Brunswick</span>
+                    <span class="header-branding-location">Fredericton, New Brunswick, Canada</span>
+                </div>
+            </a>
+            <nav class="header-nav-quicklinks" role="navigation">
+                <ul>
+                    <li class="header-nav-quicklinks-link" lang="fr">
+                            <a class="nav-link" href="/fr">Fran&#xE7;ais</a>
+                    </li>
+                    <li class="header-nav-quicklinks-link">
+                        <a class="nav-link" href="http://www2.gnb.ca">GNB.ca</a>
+                    </li>
+                    <li class="header-nav-quicklinks-link">
+                        <a class="nav-link" href="/en/legislature/contact">Contact</a>
+                    </li>
+                </ul>
+                <a class="calendar-quick-link" href="/en/calendar">
+                    <i class="fas fa-calendar-alt"></i> Legislative Calendar
+                </a>
+            </nav>
+        </div>
+    </div>
+</header>
+<input type="checkbox" id="nav-toggle">
+<nav class="main-navigation">
+    <div class="container-lg container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="container">
+                    <div class="row d-lg-none nav-actions">
+                        <div class="col-6">
+                            <label for="nav-toggle" class="nav-menu-toggler">
+                                <span><i class="fas fa-bars"></i> Menu</span>
+                            </label>
+                        </div>
+                        <div class="col-6">
+                            <a class="language-toggle" href="/fr">
+                                <i class="fas fa-globe"></i> Fran&#xE7;ais
+                            </a>
+                        </div>
+                    </div>
+                    
+<ul class="nav-items">
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/legislature">Legislative Assembly</a>
+        <ul>
+            <li class="nav-link">
+                <a href="/en/legislature/history">Purpose &amp; History</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislature/legislative-references">Legislative References</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislature/notices">Notices</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislature/publications">Publications</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislative-officers">Legislative Officers</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/opportunities">Student Opportunities</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislature/contact">Contact Us</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/legislature/visit">Visit Us</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/members">Members</a>
+        <ul>
+            <li class="nav-link">
+                <a href="/en/members/current">Current Members Directory</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/members/disclosures">Public Disclosures</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/members/expenses">Members Expense Reports</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/members/speakers">Speakers</a>
+            </li>
+            <li class="nav-link">
+                <a href="https://www1.gnb.ca/Elections/en/provstreetkey/provskinformation-e.asp">Find My MLA</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link">Legislation</a>
+        <ul>
+            <li class="nav-link">
+                <a data-lang="en" href="/en/legislation/bills/61/2">Status of Legislation</a>
+            </li>
+            <li class="nav-link">
+                <a data-lang="en" href="/en/legislation/bills">Bills Archive</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/house-business">House Business</a>
+        <ul>
+            <li class="nav-link">
+                <a href="/en/house-business">Legislative Sessions</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/house-business/order-papers">Order Papers</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/house-business/journals">Journals</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/house-business/hansard">Hansard</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/house-business/tabled-documents">Tabled Documents</a>
+            </li>
+            <li class="nav-link">
+                <a href="/en/house-business/question-period-transcripts">Question Period</a>
+            </li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/committees">Committees</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/webcasts">Webcasts</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="http://www1.gnb.ca/leglibbib">Legislative Library</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="http://www2.gnb.ca">GNB.ca</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-lang="en" href="/en/legislature/contact">Contact</a>
+    </li>
+</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<div class="site-notices">
+    <div class="container">
+    </div>
+</div>
+
+
+
+<main>
+    <div class="page-header">
+        <div class="container">
+            <h2>Page Not Found</h2>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row mb-3">
+            <div class="col-12">
+                The requested resource or page could not be found. If you believe this is an error please <a href="/cdn-cgi/l/email-protection#dcb0b9bbabb9bebdb8b1b5b29cbbb2bef2bfbd">Contact Us</a>
+<br/>
+(Error 404)
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="footer-list-group">
+                    <span class="footer-list-header">
+                        Legislative Officers
+                    </span>
+                    <ul>
+                        <li>
+                            <a class="item" href="https://www.agnb-vgnb.ca/">Auditor General</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://www.electionsnb.ca/content/enb/en.html">Chief Electoral Officer</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://www.defenseur-nb-advocate.ca/">Child, Youth and Senior Advocate</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://www.insurance-assurance.ca/index">Consumer Advocate for Insurance</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://oic-bci.ca/">Office of the Integrity Commissioner</a>
+                        </li>
+                        <li>
+                            <a class="item" href="http://officiallanguages.nb.ca/">Commissioner of Official Languages</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://www.ombudnb.ca/">Ombud</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="footer-list-group">
+                    <span class="footer-list-header">
+                        Information
+                    </span>
+                    <ul>
+
+                        <li>
+                            <a class="item" href="https://www2.gnb.ca/content/gnb/en/lgnb.html">Lieutenant Governor of New Brunswick</a>
+                        </li>
+                        <li>
+                            <a class="item" href="http://laws.gnb.ca/en/BrowseTitle">New Brunswick Acts &amp; Regulations</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://www2.gnb.ca/content/gnb/en/contacts/dept_renderer.201936.html#structure">Employee Directory</a>
+                        </li>
+                        <li>
+                            <a class="item" href="/en/disclaimer">Disclaimer</a>
+                        </li>
+                        <li>
+                            <a class="item" href="/en/sitemap">Sitemap</a>
+                        </li>
+                        <li>
+                            <a class="item" href="/en/other-legislatures">Other Legislatures</a>
+                        </li>
+                        <li>
+                            <a class="item" href="https://epp.legnb.ca?lang=en">Member and Employee Portal</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <address class="footer-legislature-address">
+                    Legislative Assembly of New Brunswick<br/>
+706 Queen Street<br/>
+Fredericton, N.B.<br/>
+E3B 1C5<br/>
+Canada<br/>
+(506) 453-2506<br>
+Mon. to Fri.: 8:15 a.m. – 4:30 p.m.
+                </address>
+                <a href="https://www.facebook.com/LegNB.EN" tooltip="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffffff" class="bi bi-facebook"
+                         viewBox="0 0 16 16">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="site-copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <span style="color: rgba(255, 255, 255, 0.6);">
+                        2026 The Legislative Assembly of New Brunswick
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/site.js?v=YvbCUlaKUemuZMC3jbhGW5tU_fDbTdesBqt3Q13cBUs"></script>
+
+
+
+
+</body>
+</html>
