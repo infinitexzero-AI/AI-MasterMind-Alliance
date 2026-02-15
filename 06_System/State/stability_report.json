@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-02-14T22:53:12.606035",
+  "timestamp": "2026-02-14T22:54:23.086813",
   "health_category": "NOMINAL",
-  "top_cpu": "23.6%",
-  "ram_mb": 2921,
-  "swap_percent": 91.4,
+  "top_cpu": "41.3%",
+  "ram_mb": 2121,
+  "swap_percent": 85.9,
   "helper_count": 31
 }
