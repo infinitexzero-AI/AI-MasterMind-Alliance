@@ -1,8 +1,8 @@
 {
-  "timestamp": "2026-01-12T01:22:07Z",
-  "health_category": "CRITICAL",
-  "recent_crashes":        6,
-  "sigtrap_events":        0,
-  "top_cpu": "%CPU%",
-  "uptime": ""
+  "timestamp": "2026-02-14T22:53:12.606035",
+  "health_category": "NOMINAL",
+  "top_cpu": "23.6%",
+  "ram_mb": 2921,
+  "swap_percent": 91.4,
+  "helper_count": 31
 }
