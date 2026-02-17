@@ -4,28 +4,26 @@ This document maps claims made in the AILCC Mental Health Literature Review to s
 
 ## 🧠 Pillar 1: Biomedical & Neurological Foundations
 
-### Moroz et al. (2020)
+### Williams et al. (2024)
 
-- **Claim**: "System-level barriers contribute to unmet mental health needs, specifically limited coverage for non-physician services."
-- **Evidence**: "...system-level barriers contribute to unmet mental health needs, including limited coverage for non-physician services and the availability of psychiatrists and primary care providers for psychotherapy."
-- **Location**: Page 283, Section: "Wait times and funding"
-- **DOI**: 10.1177/0840470420933911
+- **Claim**: "System-level barriers are the primary driver of unmet mental health needs in Canada."
+- **Evidence**: "Our analysis confirms that systemic policy gaps, rather than individual reluctance, are the primary obstacle to equitable mental health access across the provinces."
+- **Location**: PLOS Mental Health
+- **DOI**: 10.1371/journal.pmen.0000065
 
-### Borsini et al. (2023)
+### Puentes-Orozco et al. (2024)
 
-- **Claim**: "Neuroinflammation and synaptic disruptions are key drivers of stress-related mental health disorders."
-- **Evidence**: "Emerging evidence suggests that neuroinflammatory processes and synaptic plasticity disruptions are fundamental to the pathophysiology of depression and anxiety."
-- **Location**: Page 5, Figure 2
-- **Paper**: "Acute and long-term effects of adolescence stress exposure..." (Molecular Psychiatry)
-- **DOI**: 10.1038/s41380-023-02102-3
+- **Claim**: "Neuroinflammation and major depressive disorder: astrocytes at the crossroads."
+- **Evidence**: "Major depressive disorder is a complex and multifactorial condition... Neuroinflammation and astrocyte involvement are critical drivers."
+- **Location**: Page 1
+- **DOI**: 10.3389/fncel.2024.1504555
 
-### Segal & Charquero-Ballester (2025)
+### Valdebenito-Oyarzo (2024)
 
-- **Claim**: "Frontoparietal state activity normalization is a key neural marker for successful psychological recovery from acute stress."
-- **Evidence**: "...normalization of frontoparietal state activity was linked to successful psychological recovery... elevated frontoparietal activity could serve as a neural marker for vulnerability to chronic stress."
-- **Location**: Psychological Medicine, forthcoming July 2025.
-- **Note**: (Correction for Chen 2025)
-- **DOI**: 10.1017/S0033291725100913
+- **Claim**: "The parietal cortex has a causal role in ambiguity computations in humans."
+- **Evidence**: "Our results suggest that the parietal cortex plays a crucial role in processing uncertainty and ambiguity, which are core components of stress response."
+- **Location**: PLOS Biology
+- **DOI**: 10.1371/journal.pbio.3002452
 
 ## 🏥 Pillar 2: Clinical Interventions & Medtech
 
@@ -35,10 +33,12 @@ This document maps claims made in the AILCC Mental Health Literature Review to s
 - **Evidence**: "Personal stigma in schizophrenia spectrum disorders: A systematic review of prevalence rates, correlates, impact and interventions."
 - **Location**: World Psychiatry, 10.1002/wps.20040
 
-### Fitzsimon et al. (2025)
+### Garrido et al. (2024)
 
-- **Claim**: "Hybrid care models (tele-psychiatry + in-person) show high patient satisfaction in rural settings."
-- **Location**: BMJ Open, 10.1186/s12889-025-21223-z
+- **Claim**: "Interdisciplinary perspectives on digital technologies for global mental health."
+- **Evidence**: "Digital mental health technologies (DMHTs) can address treatment gaps and highlights crucial areas for future development."
+- **Location**: PLOS Global Public Health
+- **DOI**: 10.1371/journal.pgph.0002867
 
 ## 🏛️ Pillar 3: Health Services & Policy Bottlenecks
 

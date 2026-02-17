@@ -38,12 +38,12 @@ def highlight_pdf(pdf_path, search_text, output_path):
 targets = [
     {
         "file": "Auger_2019.pdf",
-        "text": "Auger Auger et al.",
+        "text": "The essential role of cultural safety",
         "output": "Auger_2019_Highlighted.pdf"
     },
     {
         "file": "Murray_Knudson_2023.pdf",
-        "text": "Is It All in Your Head?",
+        "text": "Mental health treatment and access for emerging adults in Canada",
         "output": "Murray_Knudson_2023_Highlighted.pdf"
     },
     {
@@ -60,6 +60,21 @@ targets = [
         "file": "Ward_2023.pdf",
         "text": "Telehealth and In-Person Behavioral Health Services in Rural Communities",
         "output": "Ward_2023_Highlighted.pdf"
+    },
+    {
+        "file": "Puentes_2024_OA.pdf",
+        "text": "Neuroinflammation and major depressive disorder: astrocytes at the crossroads",
+        "output": "Puentes_2024_Highlighted.pdf"
+    },
+    {
+        "file": "Garrido_2024_OA.pdf",
+        "text": "Interdisciplinary perspectives on digital technologies for global mental health",
+        "output": "Garrido_2024_Highlighted.pdf"
+    },
+    {
+        "file": "Valdebenito_2024_OA.pdf",
+        "text": "The parietal cortex has a causal role in ambiguity computations in humans",
+        "output": "Valdebenito_2024_Highlighted.pdf"
     }
 ]
 
