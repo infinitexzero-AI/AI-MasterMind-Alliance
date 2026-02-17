@@ -1,0 +1,341 @@
+{
+  "timestamp": "2026-02-17T08:32:36.156411",
+  "registry": {
+    "version": "3.0.0",
+    "last_updated": "2026-01-11T21:18:00-04:00",
+    "system_orchestrator": "cortex",
+    "agents": [
+      {
+        "id": "cortex",
+        "name": "Cortex",
+        "platform": "xai",
+        "role": "Swarm Leader",
+        "description": "Strategic orchestration, delegation, and system-wide synchronization.",
+        "domains": [
+          "Strategic",
+          "Professional",
+          "Automation"
+        ],
+        "capabilities": [
+          "Orchestration",
+          "Decomposition",
+          "Delegation",
+          "Sync"
+        ],
+        "triggers": [
+          "delegate",
+          "sync",
+          "orchestrate",
+          "plan",
+          "system"
+        ],
+        "model_config": {
+          "provider": "xai",
+          "model": "grok-beta"
+        }
+      },
+      {
+        "id": "scribe",
+        "name": "Scribe",
+        "platform": "anthropic",
+        "role": "Intelligence Vault Keeper",
+        "description": "Documentation, memory, and evidence synchronization.",
+        "domains": [
+          "Archival",
+          "Technical",
+          "Academic"
+        ],
+        "capabilities": [
+          "Indexing",
+          "Summarization",
+          "Trace",
+          "Artifacts"
+        ],
+        "triggers": [
+          "index",
+          "archive",
+          "summarize",
+          "trace",
+          "log",
+          "document"
+        ],
+        "model_config": {
+          "provider": "anthropic",
+          "model": "claude-3-5-sonnet-20241022"
+        }
+      },
+      {
+        "id": "architect",
+        "name": "Architect",
+        "platform": "google",
+        "role": "UI/UX Materializer",
+        "description": "Dashboard materialization and visual perfection.",
+        "domains": [
+          "Visual",
+          "Frontend",
+          "Design"
+        ],
+        "capabilities": [
+          "React",
+          "CSS",
+          "Materialization",
+          "Animations"
+        ],
+        "triggers": [
+          "ui",
+          "css",
+          "board",
+          "design",
+          "animate",
+          "polish",
+          "materialize"
+        ],
+        "model_config": {
+          "provider": "google",
+          "model": "gemini-1.5-pro"
+        }
+      },
+      {
+        "id": "mechanic",
+        "name": "Mechanic",
+        "platform": "local",
+        "role": "Stability Specialist",
+        "description": "Performance, kernels, and auto-healing.",
+        "domains": [
+          "Systems",
+          "Kernel",
+          "Hardware"
+        ],
+        "capabilities": [
+          "Debugging",
+          "Self-Healing",
+          "Monitoring",
+          "Kernel Audit"
+        ],
+        "triggers": [
+          "fix",
+          "crash",
+          "stability",
+          "kernel",
+          "sigtrap",
+          "heal"
+        ],
+        "model_config": {
+          "provider": "local",
+          "model": "script-based"
+        }
+      },
+      {
+        "id": "scholar",
+        "name": "Scholar",
+        "platform": "perplexity",
+        "role": "Academic Nexus",
+        "description": "Appeals, credit mapping, and research.",
+        "domains": [
+          "Academic",
+          "Student",
+          "Research"
+        ],
+        "capabilities": [
+          "Credit Mapping",
+          "Appeal Drafts",
+          "Evidence Sync",
+          "Research"
+        ],
+        "triggers": [
+          "credit",
+          "appeal",
+          "exam",
+          "syllabus",
+          "study",
+          "research"
+        ],
+        "model_config": {
+          "provider": "perplexity",
+          "model": "llama-3-sonar-large-32k-online"
+        }
+      },
+      {
+        "id": "validator",
+        "name": "Validator",
+        "platform": "openai",
+        "role": "Quality Sentinel",
+        "description": "Linting, logic verification, and unit tests.",
+        "domains": [
+          "QA",
+          "Logic",
+          "Technical"
+        ],
+        "capabilities": [
+          "Linting",
+          "Testing",
+          "Parity Check",
+          "Verification"
+        ],
+        "triggers": [
+          "test",
+          "lint",
+          "verify",
+          "audit",
+          "parity"
+        ],
+        "model_config": {
+          "provider": "openai",
+          "model": "gpt-4o"
+        }
+      },
+      {
+        "id": "nomad",
+        "name": "Nomad",
+        "platform": "local",
+        "role": "Network Specialist",
+        "description": "MCP, SSE Bridge, and drive migrations.",
+        "domains": [
+          "Network",
+          "Migration",
+          "Storage"
+        ],
+        "capabilities": [
+          "MCP",
+          "SSE",
+          "Migration",
+          "Cloud Sync"
+        ],
+        "triggers": [
+          "bridge",
+          "migrate",
+          "proxy",
+          "drive",
+          "cloud",
+          "nomad"
+        ],
+        "model_config": {
+          "provider": "local",
+          "model": "mcp-proxy"
+        }
+      },
+      {
+        "id": "sentinel",
+        "name": "Sentinel",
+        "platform": "local",
+        "role": "Security Guardian",
+        "description": "Encryption, credential safety, and privacy.",
+        "domains": [
+          "Security",
+          "Privacy",
+          "Encryption"
+        ],
+        "capabilities": [
+          "Encryption",
+          "Security Audit",
+          "Secret Management"
+        ],
+        "triggers": [
+          "encrypt",
+          "secure",
+          "secret",
+          "privacy",
+          "lock",
+          "guard"
+        ],
+        "model_config": {
+          "provider": "local",
+          "model": "vault-secure"
+        }
+      },
+      {
+        "id": "optimizer",
+        "name": "Optimizer",
+        "platform": "local",
+        "role": "Efficiency Expert",
+        "description": "CPU/RAM efficiency and latency reduction.",
+        "domains": [
+          "Performance",
+          "Resource",
+          "Efficiency"
+        ],
+        "capabilities": [
+          "Tuning",
+          "Profiling",
+          "Compression",
+          "Latency reduction"
+        ],
+        "triggers": [
+          "tune",
+          "efficient",
+          "performance",
+          "latency",
+          "fast",
+          "speed"
+        ],
+        "model_config": {
+          "provider": "local",
+          "model": "sys-tuner"
+        }
+      },
+      {
+        "id": "catalyst",
+        "name": "Catalyst",
+        "platform": "creative",
+        "role": "Futurist Visionary",
+        "description": "New feature ideation and futurist protocols.",
+        "domains": [
+          "Visionary",
+          "Expansion",
+          "Growth"
+        ],
+        "capabilities": [
+          "Ideation",
+          "Expansion",
+          "Evolution",
+          "Vision"
+        ],
+        "triggers": [
+          "ideate",
+          "expand",
+          "evolve",
+          "future",
+          "vision"
+        ],
+        "model_config": {
+          "provider": "google",
+          "model": "gemini-1.5-flash"
+        }
+      }
+    ],
+    "relationships": {
+      "cortex": [
+        "scribe",
+        "architect",
+        "mechanic",
+        "scholar",
+        "validator",
+        "nomad",
+        "sentinel",
+        "optimizer",
+        "catalyst"
+      ],
+      "scholar": [
+        "scribe",
+        "validator"
+      ],
+      "architect": [
+        "optimizer"
+      ],
+      "nomad": [
+        "sentinel"
+      ]
+    }
+  },
+  "recent_events": [
+    {
+      "type": "SYSTEM_READY",
+      "source": "Antigravity",
+      "message": "Mode 7: Emergent Scholar Protocol is fully online.",
+      "payload": null,
+      "timestamp": "2026-02-17T08:25:51.710211"
+    }
+  ],
+  "active_task": null,
+  "implementation_plan": null
+}
