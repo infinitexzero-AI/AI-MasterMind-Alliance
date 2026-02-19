@@ -6,8 +6,8 @@ from datetime import datetime
 WORKSPACE_ROOT = "/Users/infinite27/AILCC_PRIME"
 REGISTRY_FILE = os.path.join(WORKSPACE_ROOT, "01_Areas/Codebases/ailcc/registries/agents_registry.json")
 EVENT_BUS_LOG = os.path.join(WORKSPACE_ROOT, "06_System/Logs/event_bus.jsonl")
-TASK_MD = os.path.join(WORKSPACE_ROOT, ".gemini/antigravity/brain/badde880-dca5-41a0-a55a-2aa7c66fdc19/task.md")
-PLAN_MD = os.path.join(WORKSPACE_ROOT, ".gemini/antigravity/brain/badde880-dca5-41a0-a55a-2aa7c66fdc19/implementation_plan.md")
+TASK_MD = "/Users/infinite27/.gemini/antigravity/brain/8c93ab2c-64d6-419b-9eaa-bf2aa404b007/task.md"
+PLAN_MD = "/Users/infinite27/.gemini/antigravity/brain/8c93ab2c-64d6-419b-9eaa-bf2aa404b007/implementation_plan.md"
 OUTPUT_PATH = os.path.join(WORKSPACE_ROOT, "06_System/Synapses/current_system_packet.json")
 
 def read_file(path, lines=None):
