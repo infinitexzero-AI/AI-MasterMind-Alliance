@@ -1,6 +1,6 @@
 # 🎓 Formal Appeal: Academic Standing & Systemic Barriers Review
 
-**Date**: December 22, 2025
+**Date**: February 17, 2026
 **To**: Academic Appeals Committee, Mount Allison University
 **From**: Joel Alfred Palk-Ricard (Student ID: 026004)
 

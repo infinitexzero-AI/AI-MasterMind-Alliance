@@ -1,38 +1,39 @@
 {
-  "timestamp": "2026-01-11T21:10:20.791548",
+  "timestamp": "2026-02-17T13:47:15.955276",
   "topic": "AILCC_Phase4_Deployment",
   "summary": "Research on [AILCC_Phase4_Deployment] detected. Strategic value: HIGH.",
-  "analysis": "The scout (Comet) successfully retrieved vectors regarding AILCC_Phase4_Deployment. We have engaged {'id': 'perplexity-comet', 'name': 'Comet (Perplexity)', 'platform': 'perplexity', 'role': 'Chief Intelligence Officer', 'description': 'Rapid research, fact-checking, source citation, and market intelligence.', 'domains': ['Life/Adult', 'Academic', 'Professional'], 'capabilities': ['Web Search', 'Fact Checking', 'Source Citation', 'Trend Analysis'], 'triggers': ['search', 'research', 'find', 'check facts', 'news'], 'model_config': {'provider': 'perplexity', 'model': 'llama-3-sonar-large-32k-online'}}.",
+  "analysis": "The scout (Comet) successfully retrieved vectors regarding AILCC_Phase4_Deployment. We have engaged {'id': 'scholar', 'name': 'Scholar', 'platform': 'perplexity', 'role': 'Academic Nexus', 'description': 'Appeals, credit mapping, and research.', 'domains': ['Academic', 'Student', 'Research'], 'capabilities': ['Credit Mapping', 'Appeal Drafts', 'Evidence Sync', 'Research'], 'triggers': ['credit', 'appeal', 'exam', 'syllabus', 'study', 'research'], 'model_config': {'provider': 'perplexity', 'model': 'llama-3-sonar-large-32k-online'}}.",
   "directives": [
     "1. Consolidate results for AILCC_Phase4_Deployment",
-    "2. Role active: {'id': 'perplexity-comet', 'name': 'Comet (Perplexity)', 'platform': 'perplexity', 'role': 'Chief Intelligence Officer', 'description': 'Rapid research, fact-checking, source citation, and market intelligence.', 'domains': ['Life/Adult', 'Academic', 'Professional'], 'capabilities': ['Web Search', 'Fact Checking', 'Source Citation', 'Trend Analysis'], 'triggers': ['search', 'research', 'find', 'check facts', 'news'], 'model_config': {'provider': 'perplexity', 'model': 'llama-3-sonar-large-32k-online'}}",
+    "2. Role active: {'id': 'scholar', 'name': 'Scholar', 'platform': 'perplexity', 'role': 'Academic Nexus', 'description': 'Appeals, credit mapping, and research.', 'domains': ['Academic', 'Student', 'Research'], 'capabilities': ['Credit Mapping', 'Appeal Drafts', 'Evidence Sync', 'Research'], 'triggers': ['credit', 'appeal', 'exam', 'syllabus', 'study', 'research'], 'model_config': {'provider': 'perplexity', 'model': 'llama-3-sonar-large-32k-online'}}",
     "3. Optimize local cache"
   ],
   "autonomy_meta": {
     "level": 5,
     "role_selected": {
-      "id": "perplexity-comet",
-      "name": "Comet (Perplexity)",
+      "id": "scholar",
+      "name": "Scholar",
       "platform": "perplexity",
-      "role": "Chief Intelligence Officer",
-      "description": "Rapid research, fact-checking, source citation, and market intelligence.",
+      "role": "Academic Nexus",
+      "description": "Appeals, credit mapping, and research.",
       "domains": [
-        "Life/Adult",
         "Academic",
-        "Professional"
+        "Student",
+        "Research"
       ],
       "capabilities": [
-        "Web Search",
-        "Fact Checking",
-        "Source Citation",
-        "Trend Analysis"
+        "Credit Mapping",
+        "Appeal Drafts",
+        "Evidence Sync",
+        "Research"
       ],
       "triggers": [
-        "search",
-        "research",
-        "find",
-        "check facts",
-        "news"
+        "credit",
+        "appeal",
+        "exam",
+        "syllabus",
+        "study",
+        "research"
       ],
       "model_config": {
         "provider": "perplexity",

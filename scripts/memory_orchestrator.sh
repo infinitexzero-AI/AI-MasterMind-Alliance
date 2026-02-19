@@ -16,8 +16,11 @@ SWAP_INFO=$(sysctl vm.swapusage 2>/dev/null | awk '{print $4, $7}')
 SWAP_TOTAL=$(echo $SWAP_INFO | awk '{print $1}' | sed 's/M//')
 SWAP_USED=$(echo $SWAP_INFO | awk '{print $2}' | sed 's/M//')
 
-if [ -n "$SWAP_TOTAL" ] && [ "$SWAP_TOTAL" != "0" ]; then
-    SWAP_PERCENT=$(echo "scale=0; ($SWAP_USED * 100) / $SWAP_TOTAL" | bc)
+if [ -n "$SWAP_TOTAL" ] && [ "$SWAP_TOTAL" != "0" ] && [ "$SWAP_TOTAL" != "0B" ]; then
+    # Remove 'M' or 'B' or 'G' suffix for calculation
+    SWAP_USED_NUM=$(echo $SWAP_USED | tr -d '[:alpha:]')
+    SWAP_TOTAL_NUM=$(echo $SWAP_TOTAL | tr -d '[:alpha:]')
+    SWAP_PERCENT=$(echo "scale=0; ($SWAP_USED_NUM * 100) / $SWAP_TOTAL_NUM" | bc 2>/dev/null || echo 0)
 else
     SWAP_PERCENT=0
 fi
@@ -93,7 +96,7 @@ else
 fi
 
 # Check swap usage separately
-if [ $SWAP_PERCENT -gt $SWAP_CRITICAL ]; then
+if [ "${SWAP_PERCENT:-0}" -gt "${SWAP_CRITICAL:-80}" ]; then
     echo ""
     echo "⚠️  Swap usage critical: ${SWAP_PERCENT}%"
     echo "   Recommendation: Restart system to clear swap or upgrade RAM"

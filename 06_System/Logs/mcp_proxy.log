@@ -1413,3 +1413,51 @@ Clients should connect to http://localhost:3006/mcp for automatic backwards comp
 }
 [26938] 
 Shutting down...
+--- MCP Proxy Session Start: Tue Feb 17 13:47:14 AST 2026 ---
+🚀 Launching MCP Proxy (Attempt 1)...
+[MCPSuperAssistantProxy] Starting session cleanup intervals
+Initializing MCP SuperAssistant proxy...
+Connecting to git (stdio - inferred)...
+✅ Proxy stable (PID: 4047).
+Connected to git: 23 tools, 0 resources, 1 prompts
+Connecting to github (stdio - inferred)...
+GitHub MCP Server running on stdio
+Connected to github: 26 tools, 0 resources, 0 prompts
+Connecting to cloudrun (stdio - inferred)...
+Checking for Google Cloud Application Default Credentials...
+ERROR: Google Cloud Application Default Credentials are not set up.
+An unexpected error occurred during credential verification.
+
+For more details or alternative setup methods, consider:
+1. If running locally, run: gcloud auth application-default login.
+2. Ensuring the `GOOGLE_APPLICATION_CREDENTIALS` environment variable points to a valid service account key file.
+3. If on a Google Cloud environment (e.g., GCE, Cloud Run), verify the associated service account has necessary permissions.
+
+Original error message from Google Auth Library: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+Error stack: Error: Could not load the default credentials. Browse to https://cloud.google.com/docs/authentication/getting-started for more information.
+    at GoogleAuth.getApplicationDefaultAsync (/Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/google-auth-library/build/src/auth/googleauth.js:287:15)
+    at process.processTicksAndRejections (node:internal/process/task_queues:103:5)
+    at async GoogleAuth._GoogleAuth_determineClient (/Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/google-auth-library/build/src/auth/googleauth.js:834:32)
+    at async GoogleAuth.getClient (/Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/google-auth-library/build/src/auth/googleauth.js:698:20)
+    at async ensureGCPCredentials (file:///Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/@google-cloud/cloud-run-mcp/lib/cloud-api/auth.js:31:20)
+    at async file:///Users/infinite27/.npm/_npx/e32f911d22db94fe/node_modules/@google-cloud/cloud-run-mcp/mcp-server.js:123:29
+Using tools optimized for local or stdio mode.
+Cloud Run MCP server stdio transport connected
+Connected to cloudrun: 8 tools, 0 resources, 2 prompts
+Successfully initialized mcpsuperassistantproxy with 3 servers
+MCP SuperAssistant Proxy running with backwards compatibility at:
+  - Modern Streamable HTTP: http://localhost:3006/mcp
+  - Legacy SSE: http://localhost:3006/sse
+  - Legacy messages: http://localhost:3006/messages
+
+Clients should connect to http://localhost:3006/mcp for automatic backwards compatibility.
+
+Received SIGTERM, shutting down MCP SuperAssistant proxy gracefully...
+Starting graceful shutdown...
+Clearing all intervals and timeouts...
+Disconnected from git
+Disconnected from cloudrun
+Disconnected from github
+HTTP server closed successfully
+MCP SuperAssistant Proxy stopped
+Graceful shutdown completed

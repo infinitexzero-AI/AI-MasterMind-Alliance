@@ -11,7 +11,7 @@ SOURCE_TARGETS = [
     "/Users/infinite27/Library/Application Support/Antigravity",
     "/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs"
 ]
-DESTINATION_HUB = "/Volumes/XDriveAlpha/Vault/Migration_Archive"
+DESTINATION_HUB = "/Volumes/XDriveBeta/Vault/Migration_Archive"
 LOG_FILE = "/Users/infinite27/AILCC_PRIME/06_System/Logs/migration_pulse.log"
 
 def log_event(message):
@@ -39,6 +39,11 @@ def get_size(path):
 def migrate_data():
     log_event("🚀 Starting Dual-Drive Nexus Migration...")
     
+    # Check if XDriveBeta is mounted
+    if not os.path.ismount("/Volumes/XDriveBeta"):
+        log_event("❌ XDriveBeta is not mounted! Aborting migration.")
+        return
+
     if not os.path.exists(DESTINATION_HUB):
         try:
             os.makedirs(DESTINATION_HUB)

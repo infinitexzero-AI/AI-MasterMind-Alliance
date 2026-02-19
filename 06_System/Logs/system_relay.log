@@ -1032,3 +1032,129 @@ websockets.exceptions.InvalidMessage: did not receive a valid HTTP request
 2026-01-12 03:00:24,197 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-12T03:00:24.189264'}
 2026-01-12 03:05:24,354 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-12T03:05:24.209291'}
 2026-01-12 03:05:24,354 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-01-12T03:05:24.209291'}
+2026-02-17 13:47:15,320 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2026-02-17 13:47:15,320 [INFO] 🚀 Starting Neural Relay on 0.0.0.0:3001
+2026-02-17 13:47:15,525 [INFO] server listening on 0.0.0.0:3001
+2026-02-17 13:47:15,525 [INFO] server listening on 0.0.0.0:3001
+2026-02-17 13:47:15,946 [INFO] connection open
+2026-02-17 13:47:15,946 [INFO] connection open
+2026-02-17 13:47:15,946 [INFO] 🔗 Client Connected: ('127.0.0.1', 50361)
+2026-02-17 13:47:15,946 [INFO] 🔗 Client Connected: ('127.0.0.1', 50361)
+2026-02-17 13:47:15,957 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T13:47:15.957380'}
+2026-02-17 13:47:15,957 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T13:47:15.957380'}
+2026-02-17 13:52:15,955 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T13:52:15.951726'}
+2026-02-17 13:52:15,955 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T13:52:15.951726'}
+2026-02-17 13:57:15,965 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T13:57:15.950618'}
+2026-02-17 13:57:15,965 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T13:57:15.950618'}
+2026-02-17 14:02:15,986 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:02:15.954376'}
+2026-02-17 14:02:15,986 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:02:15.954376'}
+2026-02-17 14:07:16,221 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:07:16.004360'}
+2026-02-17 14:07:16,221 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:07:16.004360'}
+2026-02-17 14:12:16,243 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:12:16.160943'}
+2026-02-17 14:12:16,243 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:12:16.160943'}
+2026-02-17 14:17:16,283 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:17:16.182395'}
+2026-02-17 14:17:16,283 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:17:16.182395'}
+2026-02-17 14:22:16,322 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:22:16.230764'}
+2026-02-17 14:22:16,322 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:22:16.230764'}
+2026-02-17 14:27:16,306 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:27:16.279433'}
+2026-02-17 14:27:16,306 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:27:16.279433'}
+2026-02-17 14:31:39,512 [INFO] connection open
+2026-02-17 14:31:39,512 [INFO] connection open
+2026-02-17 14:31:39,643 [INFO] 🔗 Client Connected: ('127.0.0.1', 50969)
+2026-02-17 14:31:39,643 [INFO] 🔗 Client Connected: ('127.0.0.1', 50969)
+2026-02-17 14:31:39,670 [INFO] connection open
+2026-02-17 14:31:39,670 [INFO] connection open
+2026-02-17 14:31:39,672 [INFO] 🔗 Client Connected: ('127.0.0.1', 50975)
+2026-02-17 14:31:39,672 [INFO] 🔗 Client Connected: ('127.0.0.1', 50975)
+2026-02-17 14:31:39,832 [INFO] connection open
+2026-02-17 14:31:39,832 [INFO] connection open
+2026-02-17 14:31:39,833 [INFO] 🔗 Client Connected: ('127.0.0.1', 50977)
+2026-02-17 14:31:39,833 [INFO] 🔗 Client Connected: ('127.0.0.1', 50977)
+2026-02-17 14:32:16,374 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:32:16.300752'}
+2026-02-17 14:32:16,374 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:32:16.300752'}
+2026-02-17 14:37:16,668 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:37:16.348113'}
+2026-02-17 14:37:16,668 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:37:16.348113'}
+2026-02-17 14:42:17,042 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:42:16.567633'}
+2026-02-17 14:42:17,042 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:42:16.567633'}
+2026-02-17 14:47:17,289 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:47:16.857833'}
+2026-02-17 14:47:17,289 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:47:16.857833'}
+2026-02-17 14:50:33,389 [INFO] connection open
+2026-02-17 14:50:33,389 [INFO] connection open
+2026-02-17 14:50:33,792 [INFO] 🔗 Client Connected: ('127.0.0.1', 51668)
+2026-02-17 14:50:33,792 [INFO] 🔗 Client Connected: ('127.0.0.1', 51668)
+2026-02-17 14:52:17,279 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:52:17.110813'}
+2026-02-17 14:52:17,279 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:52:17.110813'}
+2026-02-17 14:57:18,954 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:57:17.291827'}
+2026-02-17 14:57:18,954 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T14:57:17.291827'}
+2026-02-17 15:02:18,460 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:02:18.406639'}
+2026-02-17 15:02:18,460 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:02:18.406639'}
+2026-02-17 15:07:18,474 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:07:18.425768'}
+2026-02-17 15:07:18,474 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:07:18.425768'}
+2026-02-17 15:12:18,454 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:12:18.431102'}
+2026-02-17 15:12:18,454 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:12:18.431102'}
+2026-02-17 15:17:18,568 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:17:18.474697'}
+2026-02-17 15:17:18,568 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:17:18.474697'}
+2026-02-17 15:22:18,594 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:22:18.504776'}
+2026-02-17 15:22:18,594 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:22:18.504776'}
+2026-02-17 15:27:18,549 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:27:18.514657'}
+2026-02-17 15:27:18,549 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:27:18.514657'}
+2026-02-17 15:32:18,543 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:32:18.514555'}
+2026-02-17 15:32:18,543 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:32:18.514555'}
+2026-02-17 15:37:18,706 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:37:18.538114'}
+2026-02-17 15:37:18,706 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:37:18.538114'}
+2026-02-17 15:42:18,648 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:42:18.614766'}
+2026-02-17 15:42:18,648 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:42:18.614766'}
+2026-02-17 15:47:18,648 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:47:18.622532'}
+2026-02-17 15:47:18,648 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:47:18.622532'}
+2026-02-17 15:52:18,655 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:52:18.621315'}
+2026-02-17 15:52:18,655 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:52:18.621315'}
+2026-02-17 15:57:18,634 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:57:18.619316'}
+2026-02-17 15:57:18,634 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T15:57:18.619316'}
+2026-02-17 16:02:18,632 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:02:18.616744'}
+2026-02-17 16:02:18,632 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:02:18.616744'}
+2026-02-17 16:04:41,430 [INFO] connection open
+2026-02-17 16:04:41,430 [INFO] connection open
+2026-02-17 16:04:42,235 [INFO] 🔗 Client Connected: ('127.0.0.1', 52742)
+2026-02-17 16:04:42,235 [INFO] 🔗 Client Connected: ('127.0.0.1', 52742)
+2026-02-17 16:04:43,218 [INFO] connection open
+2026-02-17 16:04:43,218 [INFO] connection open
+2026-02-17 16:04:43,273 [INFO] 🔗 Client Connected: ('127.0.0.1', 52749)
+2026-02-17 16:04:43,273 [INFO] 🔗 Client Connected: ('127.0.0.1', 52749)
+2026-02-17 16:07:18,989 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:07:18.674729'}
+2026-02-17 16:07:18,989 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:07:18.674729'}
+2026-02-17 16:12:18,986 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:12:18.925488'}
+2026-02-17 16:12:18,986 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:12:18.925488'}
+2026-02-17 16:17:18,986 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:17:18.962189'}
+2026-02-17 16:17:18,986 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:17:18.962189'}
+2026-02-17 16:22:19,011 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:22:18.962068'}
+2026-02-17 16:22:19,011 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:22:18.962068'}
+2026-02-17 16:27:19,003 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:27:18.980890'}
+2026-02-17 16:27:19,003 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:27:18.980890'}
+2026-02-17 16:32:19,011 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:32:18.985368'}
+2026-02-17 16:32:19,011 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:32:18.985368'}
+2026-02-17 16:37:19,012 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:37:18.989989'}
+2026-02-17 16:37:19,012 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:37:18.989989'}
+2026-02-17 16:42:19,169 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:42:18.992939'}
+2026-02-17 16:42:19,169 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:42:18.992939'}
+2026-02-17 16:47:20,588 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:47:19.239538'}
+2026-02-17 16:47:20,588 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:47:19.239538'}
+2026-02-17 16:52:20,256 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:52:19.415163'}
+2026-02-17 16:52:20,256 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:52:19.415163'}
+2026-02-17 16:57:20,560 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:57:19.753455'}
+2026-02-17 16:57:20,560 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T16:57:19.753455'}
+2026-02-17 17:02:20,223 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:02:19.972962'}
+2026-02-17 17:02:20,223 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:02:19.972962'}
+2026-02-17 17:07:20,342 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:07:20.130259'}
+2026-02-17 17:07:20,342 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:07:20.130259'}
+2026-02-17 17:12:20,634 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:12:20.274596'}
+2026-02-17 17:12:20,634 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:12:20.274596'}
+2026-02-17 17:17:20,821 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:17:20.444553'}
+2026-02-17 17:17:20,821 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:17:20.444553'}
+2026-02-17 17:22:21,479 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:22:20.525380'}
+2026-02-17 17:22:21,479 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:22:20.525380'}
+2026-02-17 17:27:21,569 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:27:20.973944'}
+2026-02-17 17:27:21,569 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:27:20.973944'}
+2026-02-17 17:32:23,528 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:32:22.082178'}
+2026-02-17 17:32:23,528 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:32:22.082178'}
+2026-02-17 17:37:23,301 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:37:23.287320'}
+2026-02-17 17:37:23,301 [INFO] 📨 Received: {'type': 'HEARTBEAT', 'source': 'valentine', 'status': 'online', 'timestamp': '2026-02-17T17:37:23.287320'}

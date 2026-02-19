@@ -1,13 +1,15 @@
 {
-  "active_mode": "REST",
+  "active_mode": "CODE",
   "mode_info": {
-    "name": "System Standby",
-    "description": "Passive monitoring, background sync only.",
+    "name": "Gemini Craftsman",
+    "description": "Development, PR generation, linting.",
     "apps": [
-      "None"
+      "VS Code",
+      "Terminal",
+      "GitHub"
     ],
-    "color": "slate"
+    "color": "purple"
   },
-  "timestamp": "2026-01-11T22:02:07.027401",
-  "last_update": "2026-01-11 22:02:07"
+  "timestamp": "2026-02-17T13:47:04.394234",
+  "last_update": "2026-02-17 13:47:04"
 }

@@ -17,7 +17,7 @@ The **AI Mastermind Alliance (AIMmA)** is a unified, agentic ecosystem designed 
 
 | Agent | Neuro-Metaphor | Primary Role | Domain |
 | :--- | :--- | :--- | :--- |
-| **Grok** | Prefrontal Cortex | The Judge / Strategist | Strategy, Log Analysis, Brutal Honesty |
+| **Grok** | Prefrontal Cortex | **The Judge / Strategic Sentience** | Real-time Forecasting, Tactical Intelligence, Grokipedia Synthesis, Brutal Honesty |
 | **Gemini** | Motor Cortex | The Craftsman / Builder | Code Implementation, File Control, Vertex AI |
 | **Comet** | Sensory Cortex | The Scout / Researcher | Browser Automation, Web Research (Perplexity) |
 | **Claude** | Broca's Area | The Architect / Auditor | Logic, Documentation, Synthesis, System Consistency |
