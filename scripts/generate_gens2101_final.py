@@ -3,6 +3,19 @@ from docx.shared import Pt, RGBColor, Inches
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 import os
 
+def add_formatted_text(paragraph, text, bold_all=False):
+    """Adds formatted text to a paragraph, handling bold (**) and italics (*)."""
+    bold_parts = text.split('**')
+    for j, b_part in enumerate(bold_parts):
+        italic_parts = b_part.split('*')
+        for k, i_part in enumerate(italic_parts):
+            if not i_part: continue
+            run = paragraph.add_run(i_part)
+            if bold_all or (j % 2 == 1):
+                run.bold = True
+            if k % 2 == 1:
+                run.italic = True
+
 def generate_assignment_docx(md_path, docx_path):
     doc = docx.Document()
     
@@ -24,7 +37,7 @@ def generate_assignment_docx(md_path, docx_path):
     # Metadata
     core_props = doc.core_properties
     core_props.author = "Joel Palk-Ricard"
-    core_props.title = "GENS2101 Assignment 1 Final"
+    core_props.title = "GENS2101 Assignment Final Refined"
 
     with open(md_path, 'r', encoding='utf-8') as f:
         lines = f.readlines()
@@ -42,41 +55,36 @@ def generate_assignment_docx(md_path, docx_path):
 
         # Handle Title Page
         if is_title_page:
+            # Clean formatting markers from title page lines for logic check
+            clean_line = line.replace('**', '').replace('*', '')
+            
             if line.startswith('## '):
-                # We hit a body header, so title page is over
                 doc.add_page_break()
                 is_title_page = False
-                # Do NOT continue, let the body logic below process this line
+                # Continue to body logic below
             elif line.startswith('# '):
-                # Level 1 Title
                 for _ in range(3): doc.add_paragraph()
                 p = doc.add_paragraph()
                 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                run = p.add_run(line[2:])
-                run.bold = True
+                add_formatted_text(p, line[2:], bold_all=True)
                 continue
-            elif line.startswith('**'):
-                # Title page metadata
+            elif line.startswith('**') or "Professor" in clean_line or "Name:" in clean_line:
                 p = doc.add_paragraph()
                 p.alignment = WD_ALIGN_PARAGRAPH.CENTER
-                p.add_run(line.replace('**', ''))
+                add_formatted_text(p, line.replace('**', ''))
                 
-                # Check for "Professor" as the last line of title page
-                if "Professor" in line:
+                if "Professor" in clean_line:
                     doc.add_page_break()
                     is_title_page = False
                 continue
-            elif len(line) > 50:
-                # Catch-all: if it looks like body text, exit title page mode
+            elif len(line) > 60:
                 doc.add_page_break()
                 is_title_page = False
             else:
-                # Probably other metadata or blank lines, skip if in title page mode
                 continue
 
-        # Handle Body Content (once is_title_page is False)
+        # Handle Body Content
         if not is_title_page:
-            # Handle Body Sections
             if line.startswith('## '):
                 if "References" in line:
                     doc.add_page_break()
@@ -88,31 +96,18 @@ def generate_assignment_docx(md_path, docx_path):
                     continue
                 
                 p = doc.add_paragraph()
-                run = p.add_run(line[3:])
-                run.bold = True
+                add_formatted_text(p, line[3:], bold_all=True)
                 continue
 
-            # Strip bullet points if in references
             if in_references and line.startswith('* '):
                 line = line[2:]
 
-            # Normal Paragraphs
             p = doc.add_paragraph()
             if in_references:
                 p.paragraph_format.left_indent = Inches(0.5)
                 p.paragraph_format.first_line_indent = Inches(-0.5)
             
-            # Advanced Formatting: Bold (**) and Italics (*)
-            # Process bold first, then italics in the resulting chunks
-            bold_parts = line.split('**')
-            for j, b_part in enumerate(bold_parts):
-                # Now check for italics in this part
-                italic_parts = b_part.split('*')
-                for k, i_part in enumerate(italic_parts):
-                    if not i_part: continue
-                    run = p.add_run(i_part)
-                    if j % 2 == 1: run.bold = True
-                    if k % 2 == 1: run.italic = True
+            add_formatted_text(p, line)
         
     doc.save(docx_path)
     print(f"File saved to: {docx_path}")
