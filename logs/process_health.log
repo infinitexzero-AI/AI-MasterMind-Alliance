@@ -3850,3 +3850,45 @@ Process Health Monitor complete - Thu Feb 19 11:57:36 AST 2026
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Process Health Monitor complete - Thu Feb 19 12:57:37 AST 2026
 
+🔍 Process Health Monitor - Thu Feb 19 21:01:35 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[1/4] Language Server Health:
+  ⚠️  Not running
+
+[2/4] Docker Health:
+  Docker.raw: 0GB
+  ✅ Healthy
+  VM Memory: 106MB (1.3%)
+
+[3/4] Chrome Health:
+  ⚠️  Not running
+
+[4/4] Antigravity Health:
+  ⚠️  Not running
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Process Health Monitor complete - Thu Feb 19 21:02:15 AST 2026
+
+🔍 Process Health Monitor - Thu Feb 19 22:02:15 AST 2026
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[1/4] Language Server Health:
+  PID: 5662
+  Memory: 860MB (10.5%)
+  ✅ Healthy
+
+[2/4] Docker Health:
+  Docker.raw: 0GB
+  ✅ Healthy
+  VM Memory: 303MB (3.7%)
+
+[3/4] Chrome Health:
+  Processes: 2
+  Total Memory: 0MB (0%)
+  ✅ Healthy
+
+[4/4] Antigravity Health:
+  Helper Processes: 14
+  Total Memory: 704MB (8.6%)
+  ⚠️  High helper count - may indicate memory leak
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Process Health Monitor complete - Thu Feb 19 22:02:16 AST 2026
+
