@@ -4,7 +4,7 @@
 **Course**: GENS/GENV 2101  
 **Project Title**: Restoring the "Muddy River": Governance and Recovery of Atlantic Salmon in the Petitcodiac  
 
-## 1. Selection of Resource: Atlantic Salmon (*Salmo salar*)
+## 1. Selection of Resource: Atlantic Salmon (Species: *Salmo salar*)
 
 The focus of this project is the management and recovery of Atlantic Salmon in the Petitcodiac River watershed. Locally known as the "Chocolate River" because of its heavy silt and the famous tidal bore, the Petitcodiac was historically one of the most important spawning grounds for salmon in the Bay of Fundy. Today, these salmon are a key indicator of the health of the entire river system. Their decline tells a story of over a century of industrial growth, dams, and a changing environment that has pushed the species to the brink.
 
