@@ -12,7 +12,7 @@ The focus of this project is the management and recovery of Atlantic Salmon in t
 
 The biggest challenge for Petitcodiac salmon is the legacy of the 1968 causeway. At the time, it was seen as a way to control the river and create a freshwater lake for recreation and farming. But for the salmon, it was a disaster. The causeway effectively cut off the river’s natural flow, leading to massive silt buildup and destroying the fish's ability to reach their spawning grounds.
 
-Ecologically, the river became stagnant, warmer, and disconnected. Socially, the causeway created a divide: while urban development and some farmers benefited from the controlled water, the Mi'kmaq people and local fishing communities lost their connection to a healthy river. The core problem now is how to move past this old "control" mindset and build a management system that can handle the complex task of restoring the river's natural state while accounting for all the people who rely on it (Amiro et al., 2023).
+Ecologically, it turned the river into a warm, stagnant pool. Socially, it created a huge divide—urbanites got a lake, but the Mi'kmaq and local fishing families lost a piece of their heritage. The real struggle now isn't just about moving water; it's about shifting our entire management mindset to actually handle the complexity of restoration without leaving any group behind (DFO, 2023). Our local "Chocolate River" shouldn't be a site of stagnation, but a flowing connection between our communities and the Bay.
 
 ## 3. Stakeholder Analysis: A Crowded Environment
 
@@ -25,13 +25,14 @@ Managing the Petitcodiac involves navigating a "crowded environment" of competin
 
 ## 4. Governance Framework: Moving Toward Shared Management
 
-Currently, the way we manage the Petitcodiac is shifting away from a central, top-down government model. The recovery effort is now led by a coalition that brings together federal scientists and Indigenous-led programs.
+Managed recovery today is finally moving away from that old top-down federal model. It’s now a partnership between federal scientists and Indigenous-led programs. This change is also bringing back traditional harvesting philosophies. For instance, the concept of Netukulimk suggests that non-selective methods, like using "mixed mesh" sizes, are actually better for the long-term health of the fish. It prevents the kind of genetic damage that happens when you only catch the biggest, strongest salmon with selective gear (Denny & Fanning, 2016).
 
-The challenge is making sure this new system actually works on the ground. It requires "Two-Eyed Seeing"—where we respect both modern scientific data and Indigenous oral knowledge. We need to move beyond just asking how to manage the fish efficiently and start asking how we can redefine our relationship with a river that is finally starting to flow naturally again (Landsman et al., 2022).
+This new way of doing things isn't easy to pull off. It takes "Two-Eyed Seeing"—really respecting Mi'kmaq oral history as much as our water data. The goal is to move past just "fixing" the fish and actually figure out how we relate to a river that is finally flowing like a river again (Lennox et al., 2021). It's about recognizing that the Petitcodiac's health is directly tied to our own social and cultural resilience.
 
 ## References
 
-* Amiro, P. G., et al. (2023). Climate-driven declines in Atlantic salmon: Socio-ecological impacts in Atlantic Canada. *Science of The Total Environment*, 258, 106512.
-* Armitage, D. (2007). Governance and the commons in a multi-level world. *International Journal of the Commons*, 1(1), 47-76.
-* Landsman, S. J., et al. (2022). Indigenous-led salmon restoration in the Petitcodiac watershed: Integrating Mi'kmaq knowledge with science. *Restoration Ecology*, 32(4), e2567.
-* Marshall, J., et al. (2021). Equity in watershed governance: Lessons from New Brunswick's river restoration. *Canadian Geographer*, 65(3), 345–358.
+Armitage, D. (2007). Governance and the commons in a multi-level world. *International Journal of the Commons*, 1(1), 47-76.
+Denny, S. K., & Fanning, L. M. (2016). A Mi'kmaw Perspective on Knowledge-Based Management of Atlantic Salmon. *International Journal of Indigenous Health*, 11(1), 213-228. DOI: 10.18357/ijih111201616012
+DFO. (2023). *Stock Status Update of Atlantic Salmon in SFAs 19-21 and 23*. DFO Can. Sci. Advis. Sec. Sci. Resp. 2023/043.
+Lennox, R. J., et al. (2021). The quest for successful Atlantic salmon restoration: perspectives, priorities, and maxims. *ICES Journal of Marine Science*, 78(10), 3479–3497. DOI: 10.1093/icesjms/fsab201
+Marshall, J., et al. (2021). Equity in watershed governance: Lessons from New Brunswick's river restoration. *Canadian Geographer*, 65(3), 345–358.
