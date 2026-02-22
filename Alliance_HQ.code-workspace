@@ -5,26 +5,6 @@
 			"path": "."
 		},
 		{
-			"name": "⚙️ CORE ENGINE (SWARM)",
-			"path": "AI-MasterMind-Alliance"
-		},
-		{
-			"name": "🧠 AILCC LOGIC",
-			"path": "01_Areas/Codebases/ailcc"
-		},
-		{
-			"name": "📜 INTELLIGENCE VAULT",
-			"path": "04_Intelligence_Vault"
-		},
-		{
-			"name": "🎓 ACADEMIC RECORDS",
-			"path": "04_Intelligence_Vault/Hardship_Chronicles/Academic_Records"
-		},
-		{
-			"name": "📊 SYSTEM DASHBOARD",
-			"path": "01_Areas/Codebases/ailcc/dashboard"
-		},
-		{
 			"name": "📡 SYSTEM LOGS",
 			"path": "logs"
 		}

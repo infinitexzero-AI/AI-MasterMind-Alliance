@@ -134,6 +134,14 @@ if check_automation; then
     log_message "✅ Automation is running normally"
 fi
 
+# PROACTIVE UPGRADES (OpenClaw Engagement)
+if [[ $(bc <<< "$free_mb > 300") -eq 1 ]]; then
+    log_message "🚀 System Health OPTIMAL. Dispatching OpenClaw Upgrade Engine for autonomous refinements."
+    bash /Users/infinite27/AILCC_PRIME/scripts/openclaw_upgrade_engine.sh &
+else
+    log_message "ℹ️  System resources constrained (${free_mb}MB). Skipping proactive upgrades."
+fi
+
 # Summary
 log_message "📊 Monitor check complete"
 if [ $api_status -eq 0 ]; then
