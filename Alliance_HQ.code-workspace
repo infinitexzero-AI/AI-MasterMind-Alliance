@@ -1,8 +1,24 @@
 {
 	"folders": [
 		{
-			"name": "🚀 MOTHERSHIP (ROOT)",
+			"name": "🚀 AILCC PRIME (ROOT)",
 			"path": "."
+		},
+		{
+			"name": "🖥️ NEXUS DASHBOARD",
+			"path": "nexus-dashboard"
+		},
+		{
+			"name": "⚙️ N8N AUTOMATION",
+			"path": "n8n_foundation"
+		},
+		{
+			"name": "🧠 MASTERMIND BACKEND",
+			"path": "backend"
+		},
+		{
+			"name": "❤️ VALENTINE CORE",
+			"path": "valentine-core"
 		},
 		{
 			"name": "📡 SYSTEM LOGS",

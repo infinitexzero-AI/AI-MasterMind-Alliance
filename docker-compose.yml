@@ -37,21 +37,21 @@ services:
     depends_on:
       - hippocampus-redis
 
-  # 3. Nexus Dashboard (Frontend) - DISABLED (Running native via start_dashboard.sh)
-  # nexus-dashboard:
-  #   image: node:20-alpine
-  #   container_name: nexus-dashboard
-  #   working_dir: /app
-  #   ports:
-  #     - "3000:3000"
-  #   volumes:
-  #     - ./01_Areas/Codebases/ailcc/dashboard:/app
-  #     - ./automations:/app/automations
-  #   environment:
-  #     - NEXT_PUBLIC_API_URL=http://localhost:8090
-  #   command: npm run dev
-  #   depends_on:
-  #     - hippocampus-api
+  # 3. Nexus Dashboard (Frontend)
+  nexus-dashboard:
+    image: node:20-alpine
+    container_name: nexus-dashboard
+    working_dir: /app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./01_Areas/Codebases/ailcc/dashboard:/app
+      - ./automations:/app/automations
+    environment:
+      - NEXT_PUBLIC_API_URL=http://localhost:8090
+    command: npm run dev
+    depends_on:
+      - hippocampus-api
 
   # 4. Valentine Core (Agent Orchestrator)
   valentine-core:
@@ -68,6 +68,36 @@ services:
     command: node server.js
     depends_on:
       - hippocampus-redis
+
+  # 5. n8n Orchestrator (Workflow Automation)
+  n8n:
+    image: n8nio/n8n:latest
+    container_name: ailcc-n8n-orchestrator
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_HOST=localhost
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - NODE_ENV=production
+      - WEBHOOK_URL=http://localhost:5678/
+      - GENERIC_TIMEZONE=America/Halifax
+    volumes:
+      - ./n8n_foundation/n8n_data:/home/node/.n8n
+    restart: unless-stopped
+
+  # 6. ChromaDB (Local Vector Memory)
+  chroma:
+    image: chromadb/chroma:latest
+    container_name: ailcc-hippocampus-db
+    ports:
+      - "8123:8000"
+    volumes:
+      - ./n8n_foundation/chroma_data:/chroma/chroma
+    restart: unless-stopped
+    environment:
+      - IS_PERSISTENT=TRUE
+      - ANONYMIZED_TELEMETRY=FALSE
 
 volumes:
   redis_data:

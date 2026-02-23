@@ -19,11 +19,12 @@ except Exception as e:
     sys.exit(1)
 
 queries = [
-    "Valentine integration",
-    "AILCC dashboard Next.js transition",
-    "OpenClaw cognitive framework",
-    "Exa AI and Metaculus integration",
-    "ChromaDB local vector engine"
+    "Genesis",
+    "Valentine",
+    "AILCC Dashboard",
+    "OpenClaw",
+    "Exa AI",
+    "ChromaDB"
 ]
 
 print("\n🔍 Executing Historical Queries...")

@@ -1,0 +1,66 @@
+{
+    "name": "Linear Brain Controller -> Antigravity",
+    "nodes": [
+        {
+            "parameters": {
+                "httpMethod": "POST",
+                "path": "linear-webhook",
+                "options": {}
+            },
+            "name": "Webhook",
+            "type": "n8n-nodes-base.webhook",
+            "typeVersion": 1,
+            "position": [
+                250,
+                300
+            ],
+            "webhookId": "9f140026"
+        },
+        {
+            "parameters": {
+                "method": "POST",
+                "url": "http://hippocampus-api:8000/task/linear",
+                "sendBody": true,
+                "bodyParameters": {
+                    "parameters": [
+                        {
+                            "name": "ticket_id",
+                            "value": "={{$json[\"body\"][\"data\"][\"id\"]}}"
+                        },
+                        {
+                            "name": "description",
+                            "value": "={{$json[\"body\"][\"data\"][\"description\"]}}"
+                        },
+                        {
+                            "name": "title",
+                            "value": "={{$json[\"body\"][\"data\"][\"title\"]}}"
+                        }
+                    ]
+                },
+                "options": {}
+            },
+            "name": "Trigger Antigravity (Mastermind Backend)",
+            "type": "n8n-nodes-base.httpRequest",
+            "typeVersion": 3,
+            "position": [
+                500,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "Webhook": {
+            "main": [
+                [
+                    {
+                        "node": "Trigger Antigravity (Mastermind Backend)",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    },
+    "active": true,
+    "settings": {}
+}
