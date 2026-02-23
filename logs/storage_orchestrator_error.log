@@ -1,8 +1,0 @@
-mkdir: /Volumes/XDriveAlpha/02_Cold_Storage/Large_Files: Operation not permitted
-mv: rename /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/node_modules/next/next-swc-fallback/@next/swc-linux-x64-gnu/next-swc.linux-x64-gnu.node to /Volumes/XDriveAlpha/02_Cold_Storage/Large_Files/01_Areas/Codebases/ailcc/dashboard/node_modules/next/next-swc-fallback/@next/swc-linux-x64-gnu/: No such file or directory
-mkdir: /Volumes/XDriveAlpha/02_Cold_Storage/Large_Files: Operation not permitted
-mv: rename /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/node_modules/next/next-swc-fallback/@next/swc-linux-x64-musl/next-swc.linux-x64-musl.node to /Volumes/XDriveAlpha/02_Cold_Storage/Large_Files/01_Areas/Codebases/ailcc/dashboard/node_modules/next/next-swc-fallback/@next/swc-linux-x64-musl/: No such file or directory
-mkdir: /Volumes/XDriveAlpha/02_Cold_Storage/Large_Files: Operation not permitted
-mv: rename /Users/infinite27/AILCC_PRIME/node_modules/@next/swc-darwin-x64/next-swc.darwin-x64.node to /Volumes/XDriveAlpha/02_Cold_Storage/Large_Files/node_modules/@next/swc-darwin-x64/: No such file or directory
-mkdir: /Volumes/XDriveAlpha/02_Cold_Storage/Large_Files: Operation not permitted
-mv: rename /Users/infinite27/AILCC_PRIME/.venv/lib/python3.13/site-packages/playwright/driver/node to /Volumes/XDriveAlpha/02_Cold_Storage/Large_Files/.venv/lib/python3.13/site-packages/playwright/driver/: No such file or directory

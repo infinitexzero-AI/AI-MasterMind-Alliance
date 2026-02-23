@@ -7,3 +7,10 @@ dist/
 dashboard/.next/
 04_Intelligence_Vault/Archive/*.zip
 03_Archives/SystemLogs/*.log
+__pycache__/
+*.py[cod]
+*.sqlite-shm
+*.sqlite-wal
+logs/*.log
+logs/*.csv
+logs/*.log.gz
