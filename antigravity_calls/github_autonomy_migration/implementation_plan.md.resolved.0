@@ -1,0 +1,42 @@
+# Fix Git Errors from Past 2 Commits
+
+After carefully analyzing the past 2 commits (`f62dab2` and `7bc9e85`) and the repository's current status, I have identified the issues that are causing the "source control errors":
+
+1. **Accidental Tracking of Cache/Binary Files:** In commit `7bc9e85`, Python cache files (`__pycache__/*.pyc`) and active SQLite database files (`database.sqlite-wal`, `database.sqlite-shm`) were committed. Tracking these constantly changing, lock-heavy files causes source control errors and bloats the repository.
+2. **Missing Deletion in Last Commit:** Commit `f62dab2` was named `"chore: remove file"`, but no file was actually deleted. The staging was missed before committing.
+3. **Constantly Modified Logs:** Your `logs/` directory contains active files (`process_health.log`, `memory_orchestrator.log`, etc.) that are changing locally, making your working tree constantly "dirty" and creating git sync friction.
+
+## Proposed Changes
+
+I propose the following fixes to clean up the repository and prevent these errors:
+
+### 1. Update [.gitignore](file:///Users/infinite27/AILCC_PRIME/.gitignore)
+We need to add the following rules to [.gitignore](file:///Users/infinite27/AILCC_PRIME/.gitignore) so git stops tracking these files:
+```diff
++ __pycache__/
++ *.py[cod]
++ *.sqlite-shm
++ *.sqlite-wal
++ logs/*.log
++ logs/*.csv
+```
+
+### 2. Untrack the Problematic Files
+I will run the following commands to remove the files from Git's tracking without deleting them from your local disk:
+```bash
+git rm -r --cached backend/__pycache__ scripts/__pycache__ n8n_foundation/n8n_data/database.sqlite-shm n8n_foundation/n8n_data/database.sqlite-wal
+```
+
+### 3. Commit the Fix
+I will create a new commit (e.g., `fix: remove cached binaries and update gitignore`) to formalize the removal of these files.
+
+## User Review Required
+> [!IMPORTANT]
+> - Do you want me to also ignore all the `.log` and `.csv` files in the `logs/` directory? They are currently showing as modified in your git status.
+> - Would you prefer me to make a **new commit** to fix this, or would you rather I **rewrite history** (e.g., `git reset --soft HEAD~2`) to merge the fixes directly into your previous commits?
+
+## Verification Plan
+
+### Automated Tests
+- Run `git status` to ensure the working tree is clean and `__pycache__` / sqlite files are no longer tracked.
+- Run `git ls-files` to verify they have been successfully removed from source control.
