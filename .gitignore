@@ -14,3 +14,6 @@ __pycache__/
 logs/*.log
 logs/*.csv
 logs/*.log.gz
+
+# Secrets and Credentials
+06_System/Credentials/*.json
