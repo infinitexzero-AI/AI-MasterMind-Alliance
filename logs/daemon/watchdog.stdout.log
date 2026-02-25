@@ -6836,3 +6836,20 @@
 [2026-02-25T18:38:40.538Z] Connecting to Cortex Pulse at ws://localhost:3001...
 [2026-02-25T18:38:40.597Z] WebSocket Error: 
 [2026-02-25T18:38:40.598Z] WebSocket connection closed. Will retry on next heartbeat cycle.
+[2026-02-25T18:39:40.519Z] Connecting to Cortex Pulse at ws://localhost:3001...
+[2026-02-25T18:39:40.696Z] WebSocket Error: 
+[2026-02-25T18:39:40.700Z] WebSocket connection closed. Will retry on next heartbeat cycle.
+[2026-02-25T18:39:54.966Z] --- Starting Watchdog Cycle ---
+[2026-02-25T18:39:54.967Z] Running Auto-Purge check...
+[2026-02-25T18:39:55.275Z] Error calculating size for /Users/infinite27/.gemini/antigravity-browser-profile/SingletonSocket: ENOTDIR: not a directory, scandir '/Users/infinite27/.gemini/antigravity-browser-profile/SingletonSocket'
+[2026-02-25T18:39:55.284Z] Directory /Users/infinite27/.gemini size: 0.77 GB
+[2026-02-25T18:39:55.286Z] Directory /Users/infinite27/AILCC_PRIME/logs size: 0.00 GB
+[2026-02-25T18:39:55.286Z] Running Zombie Hunter...
+[2026-02-25T18:39:55.416Z] Zombie Hunter finished. Killed 0 processes.
+[2026-02-25T18:39:55.416Z] Connecting to Cortex Pulse at ws://localhost:3001...
+[2026-02-25T18:39:55.416Z] --- Watchdog Cycle Complete ---
+[2026-02-25T18:39:55.419Z] WebSocket Error: 
+[2026-02-25T18:39:55.419Z] WebSocket connection closed. Will retry on next heartbeat cycle.
+[2026-02-25T18:40:40.604Z] Connecting to Cortex Pulse at ws://localhost:3001...
+[2026-02-25T18:40:40.953Z] WebSocket Error: 
+[2026-02-25T18:40:40.954Z] WebSocket connection closed. Will retry on next heartbeat cycle.
