@@ -1,7 +1,0 @@
-{
-    "type": "OPTIMIZE_WORKFLOW",
-    "payload": {
-        "trace_id": "trace_simulated_v1",
-        "agent": "grok"
-    }
-}

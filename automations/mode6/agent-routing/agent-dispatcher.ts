@@ -36,6 +36,7 @@ export class AgentDispatcher {
    * Initialize agent capability matrix
    * Maps agent strengths to task types
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   public initializeCapabilities(config?: Record<string, any>): Map<AgentType, AgentCapabilities> {
     if (config) {
       const map = new Map<AgentType, AgentCapabilities>();
@@ -103,6 +104,7 @@ export class AgentDispatcher {
   /**
    * Initialize adapter capabilities with config
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   configureAdapters(config?: Record<string, any>) {
     if (config) {
       for (const [agentName, agentConfig] of Object.entries(config)) {
@@ -333,6 +335,7 @@ export class AgentDispatcher {
   /**
    * Verify output matches expected format
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   verifyOutput(result: any, expectedOutput?: any): boolean {
     if (!result) return false;
     if (expectedOutput?.format === 'structured-result' && typeof result.output !== 'object') {
@@ -370,6 +373,7 @@ export class AgentDispatcher {
   /**
    * Get dispatcher statistics for dashboard
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getDispatcherStats(): Record<string, any> {
     return {
       totalDispatches: this.dispatchStats.totalDispatches,

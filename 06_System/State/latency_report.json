@@ -1,8 +1,0 @@
-{
-  "timestamp": "2026-01-11T22:13:56.462255",
-  "status": "OPTIMAL",
-  "fs_latency_ms": 11.58,
-  "ws_latency_ms": 39.82,
-  "total_sync_latency_ms": 25.7,
-  "target_ms": 30.0
-}

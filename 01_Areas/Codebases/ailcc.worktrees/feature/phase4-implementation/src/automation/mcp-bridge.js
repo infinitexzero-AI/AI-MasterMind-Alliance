@@ -6,8 +6,8 @@ const execAsync = util.promisify(exec);
 
 // Configuration
 const CONFIG = {
-    linearKey: process.env.LINEAR_API_KEY || 'lin_api_kixkKq19svaOCAVZdX9WqjltygY2voKqHwYT6f4c', // Fallback for demo
-    githubToken: process.env.GITHUB_PERSONAL_ACCESS_TOKEN || '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', // Fallback for demo
+    linearKey: process.env.LINEAR_API_KEY,
+    githubToken: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
     // Updated path to point to the Next.js public directory
     outputFile: path.join(__dirname, '../command-center/public/data/live_status.json'),
     projectRoot: path.join(__dirname, '../..') // Pointing to 'ailcc' root which contains .git
@@ -16,7 +16,7 @@ const CONFIG = {
 async function fetchLinearIssues() {
     try {
         if (!CONFIG.linearKey) throw new Error("Missing Linear Key");
-        
+
         const query = `
             query {
                 issues(first: 10, filter: { state: { name: { eq: "In Progress" } } }) {
@@ -70,10 +70,10 @@ async function fetchGithubPRs() {
         });
 
         if (!response.ok) {
-           if (response.status === 401 || response.status === 403) {
-             console.warn('GitHub API permission/rate-limit issue.');
-           }
-           throw new Error(`GitHub API error: ${response.statusText}`);
+            if (response.status === 401 || response.status === 403) {
+                console.warn('GitHub API permission/rate-limit issue.');
+            }
+            throw new Error(`GitHub API error: ${response.statusText}`);
         }
 
         const data = await response.json();
@@ -123,7 +123,7 @@ async function checkN8N() {
     // or just return a placeholder status.
     return {
         connected: false, // Default to false until actual integration
-        status: "Checking not implemented" 
+        status: "Checking not implemented"
     };
 }
 
@@ -137,10 +137,10 @@ async function checkSystemHealth() {
         timestamp: new Date().toISOString()
     };
 }
-    
+
 async function generateLiveStatus() {
     console.log('[MCP_BRIDGE] Syncing...');
-    
+
     // We can run these in parallel
     const [linear, github, git, filesystem, n8n, health] = await Promise.all([
         fetchLinearIssues(),
@@ -175,7 +175,7 @@ async function generateLiveStatus() {
 
     // Ensure directory exists
     const dir = path.dirname(CONFIG.outputFile);
-    if (!fs.existsSync(dir)){
+    if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir, { recursive: true });
     }
 
@@ -186,7 +186,7 @@ async function generateLiveStatus() {
 async function main() {
     const args = process.argv.slice(2);
     const watchMode = args.includes('--watch');
-    
+
     await generateLiveStatus();
 
     if (watchMode) {

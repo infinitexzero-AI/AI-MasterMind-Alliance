@@ -149,6 +149,7 @@ export class GrokAdapter {
     });
 
     if (!response.ok) {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const errorData = (await response.json()) as Record<string, any>;
       throw new Error(`Grok error: ${errorData?.error?.message || 'Unknown error'}`);
     }

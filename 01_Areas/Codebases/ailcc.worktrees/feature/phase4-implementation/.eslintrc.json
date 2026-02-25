@@ -14,9 +14,28 @@
     "jest": true
   },
   "rules": {
-    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ],
     "@typescript-eslint/no-explicit-any": "warn",
     "no-console": "off"
   },
-  "ignorePatterns": ["node_modules", "dist", "dashboard"]
+  "ignorePatterns": [
+    "node_modules",
+    "dist",
+    "dashboard"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "src/automation/**/*.js"
+      ],
+      "parserOptions": {
+        "sourceType": "script"
+      }
+    }
+  ]
 }

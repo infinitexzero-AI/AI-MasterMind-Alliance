@@ -53,6 +53,7 @@ export class Mode6Orchestrator {
   /**
    * Main entry point for task orchestration
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async processTask(intent: any): Promise<any> {
     // 1. Route intent to appropriate agent(s)
     const handoff = await this.router.routeIntent(intent);
@@ -76,6 +77,7 @@ export class Mode6Orchestrator {
   /**
    * Get system statistics for monitoring
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getSystemStats(): Record<string, any> {
     return {
       routing: this.router.getRoutingStats(),
@@ -87,6 +89,7 @@ export class Mode6Orchestrator {
   /**
    * Get execution result by task ID
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   getResult(taskId: string): any {
     return this.dispatcher.getExecutionResult(taskId);
   }
@@ -94,6 +97,7 @@ export class Mode6Orchestrator {
   /**
    * Trigger memory cleanup
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   async cleanup(): Promise<Record<string, any>> {
     return this.memory.applyRetentionPolicy();
   }

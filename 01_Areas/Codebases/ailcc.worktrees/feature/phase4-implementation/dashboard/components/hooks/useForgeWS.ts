@@ -13,8 +13,9 @@ export function useForgeWS(url = '/api/forge/ws') {
 
   useEffect(() => {
     // Upgrade to ws:// from current origin
-    const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
-    const base = window.location.host;
+    const isBrowser = typeof window !== 'undefined';
+    const protocol = isBrowser && window.location.protocol === 'https:' ? 'wss' : 'ws';
+    const base = isBrowser ? window.location.host : 'localhost:3000';
     const wsUrl = `${protocol}://${base}${url}`;
 
     const ws = new WebSocket(wsUrl);
@@ -32,7 +33,7 @@ export function useForgeWS(url = '/api/forge/ws') {
         console.warn('ws parse error', e);
       }
     };
-    ws.onerror = (e) => {
+    ws.onerror = (_e) => {
       setError('WebSocket error');
     };
     ws.onclose = () => {

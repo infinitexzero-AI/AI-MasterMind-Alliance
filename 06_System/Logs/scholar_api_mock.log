@@ -1,3 +1,0 @@
-[2026-01-11T21:19:38.277050] [API_MOCK] /mta/v1/transcript -> 200 OK
-[2026-01-11T21:19:38.277627] [API_MOCK] /nslsc/v1/funding_status -> 200 OK
-[2026-01-11T21:19:38.277801] [API_MOCK] /mta/v1/enrollment/verify?code=MATH 1311 -> 200 OK

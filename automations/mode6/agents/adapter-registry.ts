@@ -7,7 +7,6 @@
 import ClaudeAdapter, { ClaudeAdapterConfig } from './claude-adapter';
 import OpenAIAdapter, { OpenAIAdapterConfig } from './openai-adapter';
 import GrokAdapter, { GrokAdapterConfig } from './grok-adapter';
-import { configLoader } from '../config/env';
 import { DispatchResult, HandoffContext } from '../intent-router/types';
 
 export interface AgentAdapter {

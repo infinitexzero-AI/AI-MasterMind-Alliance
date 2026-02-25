@@ -15,7 +15,7 @@
         "/Users/infinite27/.npm/_npx/3dfbf5a9eea4a1b3/node_modules/@modelcontextprotocol/server-github/dist/index.js"
       ],
       "env": {
-        "GITHUB_PERSONAL_ACCESS_TOKEN": "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"
+        "GITHUB_PERSONAL_ACCESS_TOKEN": ""
       }
     },
     "cloudrun": {

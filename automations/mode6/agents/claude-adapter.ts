@@ -154,7 +154,9 @@ export class ClaudeAdapter {
 
       if (!this.apiKey) {
         // Mock stream mode
-        const mockResponse = `[Claude Mock] Processed: ${handoff.taskData.command || 'unknown'}`;
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        const taskDataObj = handoff.taskData as any;
+        const mockResponse = `[Claude Mock] Processed: ${taskDataObj?.command || 'unknown'}`;
         onChunk(mockResponse);
         return {
           success: true,
