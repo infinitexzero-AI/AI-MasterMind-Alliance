@@ -1,0 +1,65 @@
+[2026-02-09 04:00:00] ==========================================
+[2026-02-09 04:00:00] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-02-09 04:00:00] ==========================================
+[2026-02-09 04:00:00] --- SYSTEM STATUS SNAPSHOT ---
+[2026-02-09 04:00:00] Hostname: Macbook-1.local
+[2026-02-09 04:00:00] macOS: 15.7.3
+[2026-02-09 04:00:00] Uptime:  4:00  up 1 day, 10:26, 1 user, load averages: 2.10 8.62 8.67
+[2026-02-09 04:00:00] Disk Usage: 44% used (13Gi free)
+[2026-02-09 04:00:00] RAM: 8 GB
+[2026-02-09 04:00:00] Load Avg: 2.10 8.62 8.67
+[2026-02-09 04:00:00] --- MEMORY OPTIMIZATION ---
+[2026-02-09 04:00:00] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-02-09 04:00:00] User caches cleaned:  43M ->  43M
+[2026-02-09 04:00:00] --- BROWSER OPTIMIZATION ---
+[2026-02-09 04:00:00] Delegating to optimize_browsers.sh...
+[2026-02-09 04:00:00] Starting Browser Optimization Sequence...
+[2026-02-09 04:00:00] Detected Google Chrome Version: 144.0.7559.133
+[2026-02-09 04:00:00] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v144)
+[2026-02-09 04:00:00] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-02-09 04:00:00] Detected Comet Version: 144.0.7559.41910
+[2026-02-09 04:00:00] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v144)
+[2026-02-09 04:00:00] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-02-09 04:00:00] Google Chrome is not running.
+[2026-02-09 04:00:00] [WARNING] Comet is running. Closing it to safely clear cache...
+[2026-02-09 04:00:02] Comet forced closed.
+[2026-02-09 04:00:02] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+[2026-02-09 04:00:03] ✅ Cleared Google Chrome (AppSupport) GPUCache: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-02-09 04:00:03] No Cache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-02-09 04:00:03] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-02-09 04:00:03] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-02-09 04:00:03] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-02-09 04:00:03] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-02-09 04:00:03] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-02-09 04:00:03] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-02-09 04:00:03] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+[2026-02-09 04:00:03] No Cache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet
+[2026-02-09 04:00:03] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-02-09 04:00:03] Optimization Complete.
+[2026-02-09 04:00:03] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260209_040000.log
+[2026-02-09 04:00:03] [SUCCESS] Browser optimization complete
+[2026-02-09 04:00:03] --- PROCESS OPTIMIZATION ---
+[2026-02-09 04:00:03] [WARNING] Found idle process: Teams - consider closing
+[2026-02-09 04:00:03] Top 5 Memory Consumers:
+[2026-02-09 04:00:04]   infinite27       91121   6.9 11.5 43368904 966288   ??  S     7:37PM 115:33.02 /Applications/Antigravity.app/Contents/Resources/app/extensions/antigravity/bin/language_server_macos_x64 --enable_lsp --extension_server_port 58219 --csrf_token cb667449-981c-4c2b-ad48-934200116eed --random_port --workspace_id file_Users_infinite27_AILCC_PRIME_AI_MasterMind_Alliance --cloud_code_endpoint https://daily-cloudcode-pa.googleapis.com --app_data_dir antigravity --parent_pipe_path /var/folders/hz/52mr8nws137fxvfv8bbt6sq80000gn/T/server_a5244b4fcae4b1c5
+[2026-02-09 04:00:04]   infinite27        5367   3.4  3.4 37970536 281096   ??  Ss   Sat06PM 161:38.15 /System/Library/Frameworks/Virtualization.framework/Versions/A/XPCServices/com.apple.Virtualization.VirtualMachine.xpc/Contents/MacOS/com.apple.Virtualization.VirtualMachine
+[2026-02-09 04:00:04]   infinite27       83941  47.6  2.4 1494506812 197780   ??  S     4:41PM 104:43.05 /Applications/Antigravity.app/Contents/Frameworks/Antigravity Helper (Renderer).app/Contents/MacOS/Antigravity Helper (Renderer) --type=renderer --user-data-dir=/Users/infinite27/Library/Application Support/Antigravity --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/Applications/Antigravity.app/Contents/Resources/app --enable-sandbox --enable-blink-features=HighlightAPI --disable-blink-features=FontMatchingCTMigration,StandardizedBrowserZoom, --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=13 --time-ticks-at-unix-epoch=-1770500062719295 --launch-time-ticks=81380959623 --shared-files --field-trial-handle=1718379636,r,456999555994470319,17848616701439041601,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708998493415531 --vscode-window-config=vscode:c8f9c875-117f-4034-a7a4-aad2be97c26e --seatbelt-client=79
+[2026-02-09 04:00:04]   infinite27       18956   8.1  2.4 1490992044 199140   ??  S     1:00AM   4:30.86 /Applications/Antigravity.app/Contents/Frameworks/Antigravity Helper (Renderer).app/Contents/MacOS/Antigravity Helper (Renderer) --type=renderer --user-data-dir=/Users/infinite27/Library/Application Support/Antigravity --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/Applications/Antigravity.app/Contents/Resources/app --enable-sandbox --enable-blink-features=HighlightAPI --disable-blink-features=FontMatchingCTMigration,StandardizedBrowserZoom, --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=19 --time-ticks-at-unix-epoch=-1770500062719295 --launch-time-ticks=111327977487 --shared-files --field-trial-handle=1718379636,r,456999555994470319,17848616701439041601,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190709004115666625 --vscode-window-config=vscode:0c445948-742d-438c-a711-43938314ec72 --seatbelt-client=127
+[2026-02-09 04:00:04]   infinite27       91049   3.0  2.2 1490854680 188608   ??  S     7:36PM  19:18.13 /Applications/Antigravity.app/Contents/Frameworks/Antigravity Helper (Plugin).app/Contents/MacOS/Antigravity Helper (Plugin) --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --experimental-network-inspection --inspect-port=0 --user-data-dir=/Users/infinite27/Library/Application Support/Antigravity --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,456999555994470319,17848616701439041601,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190709002241582927
+[2026-02-09 04:00:04] --- DISK SPACE OPTIMIZATION ---
+[2026-02-09 04:00:11] Cleared npm cache
+[2026-02-09 04:00:11] --- CRASH SCOUT ---
+[2026-02-09 04:00:11] No recent Chromium crashes detected.
+[2026-02-09 04:00:11] --- OBSERVABILITY CONFIGURATION ---
+[2026-02-09 04:00:12] [SUCCESS] live_status.json updated
+[2026-02-09 04:00:12] --- INTEROPERABILITY CHECK ---
+[2026-02-09 04:00:12] [SUCCESS] Valentine Core (port 3002): ONLINE
+[2026-02-09 04:00:12] [SUCCESS] Dashboard (port 3000): ONLINE
+[2026-02-09 04:00:12] [SUCCESS] Hippocampus/Qdrant (port 6333): ONLINE
+[2026-02-09 04:00:12] ==========================================
+[2026-02-09 04:00:12] OPTIMIZATION COMPLETE
+[2026-02-09 04:00:12] ==========================================
+[2026-02-09 04:00:12] Disk Usage After: 43% (14Gi free)
+[2026-02-09 04:00:12] Load Avg After: 2.29 8.34 8.57
+[2026-02-09 04:00:12] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260209_040000.log

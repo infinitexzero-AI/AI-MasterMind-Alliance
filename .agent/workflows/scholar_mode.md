@@ -2,33 +2,51 @@
 description: Activate Scholar Mode (Study Environment)
 ---
 
-# Scholar Mode Protocol
+# Scholar Mode Workflows
 
-1. Set System Mode to Scholar
+// turbo-all
 
-   ```bash
-   python3 antigravity.py mode scholar
-   ```
+## Available Scholar Tools
 
-2. Scan for Course Data
+### 1. PDF to Markdown
 
-   ```bash
-   python3 antigravity.py scan
-   ```
+Extract text from any PDF and convert to clean Markdown with heading detection.
 
-3. Launch Course Materials (Example: COMM 3611)
+```bash
+python3 /Users/infinite27/AILCC_PRIME/scripts/pdf_to_md.py <path_to_pdf>
+```
 
-   // turbo
+Output: Creates a `.md` file in the same directory as the PDF.
 
-   ```bash
-   # In a real scenario, this would open PDFs or search notes
-   echo "Opening COMM 3611 Context..."
-   cat modes/mode-1-student/current_courses.json
-   ```
+### 2. APA Citation Formatter
 
-4. Notify Dashboard (via Webhook/API - Mock)
+Paste a DOI and get a properly formatted APA 7th edition citation.
 
-   ```bash
-   # This would hit the Next.js API to update the UI
-   echo "Scholar Mode Active. Dashboard updated."
-   ```
+```bash
+python3 /Users/infinite27/AILCC_PRIME/scripts/cite_apa.py <DOI>
+```
+
+Example: `python3 /Users/infinite27/AILCC_PRIME/scripts/cite_apa.py 10.1371/journal.pmen.0000065`
+
+### 3. Study Timer (Pomodoro)
+
+Interactive Pomodoro timer with macOS notifications and automatic session logging to the Intelligence Vault.
+
+```bash
+python3 /Users/infinite27/AILCC_PRIME/scripts/study_timer.py
+```
+
+Sessions are logged to `/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault/study_sessions.jsonl`
+
+### 4. Markdown to Word Document
+
+Convert any Markdown file to a professionally formatted `.docx`. Use the `/md-to-docx` workflow.
+
+## Quick Reference
+
+| Tool | Command | Output |
+| --- | --- | --- |
+| PDF → MD | `pdf_to_md.py <file.pdf>` | `file.md` in same dir |
+| DOI → APA | `cite_apa.py <DOI>` | Formatted citation |
+| Study Timer | `study_timer.py` | Vault log + notifications |
+| MD → DOCX | `/md-to-docx` | Formatted Word doc |

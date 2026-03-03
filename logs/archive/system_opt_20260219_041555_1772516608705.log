@@ -1,0 +1,64 @@
+[2026-02-19 04:15:55] ==========================================
+[2026-02-19 04:15:55] AILCC MASTER SYSTEM OPTIMIZATION
+[2026-02-19 04:15:55] ==========================================
+[2026-02-19 04:15:55] --- SYSTEM STATUS SNAPSHOT ---
+[2026-02-19 04:15:55] Hostname: Macbook-1.local
+[2026-02-19 04:15:55] macOS: 15.7.4
+[2026-02-19 04:15:55] Uptime:  4:15  up 10:50, 1 user, load averages: 52.46 40.76 31.53
+[2026-02-19 04:15:55] Disk Usage: 52% used (10Gi free)
+[2026-02-19 04:15:55] RAM: 8 GB
+[2026-02-19 04:15:55] Load Avg: 52.46 40.76 31.53
+[2026-02-19 04:15:55] --- MEMORY OPTIMIZATION ---
+[2026-02-19 04:15:56] [WARNING] purge requires sudo - skipped (run with sudo for full effect)
+[2026-02-19 04:15:56] User caches cleaned:  37M ->  37M
+[2026-02-19 04:15:56] --- BROWSER OPTIMIZATION ---
+[2026-02-19 04:15:56] Delegating to optimize_browsers.sh...
+[2026-02-19 04:15:56] Starting Browser Optimization Sequence...
+[2026-02-19 04:15:56] Detected Google Chrome Version: 145.0.7632.77
+[2026-02-19 04:15:56] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Google Chrome (v145)
+[2026-02-19 04:15:56] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-02-19 04:15:56] Detected Comet Version: 144.0.7559.43118
+[2026-02-19 04:15:56] [WARNING] ⚠️  UNSTABLE VERSION DETECTED for Comet (v144)
+[2026-02-19 04:15:56] [WARNING]    Recommendation: Downgrade to Stable (v132+) to prevent SIGTRAP crashes.
+[2026-02-19 04:15:56] Google Chrome is not running.
+[2026-02-19 04:15:56] [WARNING] Comet is running. Closing it to safely clear cache...
+[2026-02-19 04:15:59] No Cache found for Google Chrome (AppSupport) at /Users/infinite27/Library/Application Support/Google/Chrome/Default/Cache
+[2026-02-19 04:15:59] ✅ Cleared Google Chrome (AppSupport) GPUCache: /Users/infinite27/Library/Application Support/Google/Chrome/Default/GPUCache
+[2026-02-19 04:15:59] No Cache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/Cache
+[2026-02-19 04:15:59] No GPUCache found for Google Chrome (Library/Caches) at /Users/infinite27/Library/Caches/Google/Chrome/Default/GPUCache
+[2026-02-19 04:15:59] No Cache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/Cache
+[2026-02-19 04:15:59] No GPUCache found for Comet (AppSupport 1) at /Users/infinite27/Library/Application Support/Comet/GPUCache
+[2026-02-19 04:15:59] No Cache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/Cache
+[2026-02-19 04:15:59] No GPUCache found for Comet (AppSupport 2) at /Users/infinite27/Library/Application Support/ai.perplexity.comet/GPUCache
+[2026-02-19 04:15:59] No Cache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet
+[2026-02-19 04:15:59] No GPUCache found for Comet (Library/Caches 1) at /Users/infinite27/Library/Caches/ai.perplexity.comet/fsCachedData
+[2026-02-19 04:15:59] ✅ Cleared Comet (Library/Caches 2) Cache: /Users/infinite27/Library/Caches/Comet
+[2026-02-19 04:15:59] No GPUCache found for Comet (Library/Caches 2) at /Users/infinite27/Library/Caches/Comet/fsCachedData
+[2026-02-19 04:15:59] Optimization Complete.
+[2026-02-19 04:15:59] Please restart your browsers. If crashes persist, consult troubleshooting_chromium.md
+Log saved to: /Users/infinite27/AILCC_PRIME/logs/browser_opt_20260219_041556.log
+[2026-02-19 04:15:59] [SUCCESS] Browser optimization complete
+[2026-02-19 04:15:59] --- PROCESS OPTIMIZATION ---
+[2026-02-19 04:15:59] [WARNING] Found idle process: Teams - consider closing
+[2026-02-19 04:15:59] Top 5 Memory Consumers:
+[2026-02-19 04:15:59]   infinite27        2180   2.4  7.8 37973000 651404   ??  Ss    5:38PM  29:46.49 /System/Library/Frameworks/Virtualization.framework/Versions/A/XPCServices/com.apple.Virtualization.VirtualMachine.xpc/Contents/MacOS/com.apple.Virtualization.VirtualMachine
+[2026-02-19 04:15:59]   infinite27        2251   0.0  1.3 1489054728 109364   ??  S     5:38PM   8:15.26 /Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/Frameworks/Docker Desktop Helper (Renderer).app/Contents/MacOS/Docker Desktop Helper (Renderer) --type=renderer --user-data-dir=/Users/infinite27/Library/Application Support/Docker Desktop --standard-schemes=app --enable-sandbox --secure-schemes=app --fetch-schemes=dd --code-cache-schemes=app --app-path=/Applications/Docker.app/Contents/MacOS/Docker Desktop.app/Contents/Resources/app.asar --enable-sandbox --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1771449943486322 --launch-time-ticks=746388979 --shared-files --field-trial-handle=1718379636,r,506443864174137706,11330891482302766932,262144 --enable-features=PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=MacWebContentsOcclusion,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts --variations-seed-version --desktop-ui-preload-params={"needsBackendErrorsIpcClient":true,"needsPrimaryIpcClient":true} --seatbelt-client=85
+[2026-02-19 04:15:59]   infinite27        2026   0.7  1.3 36555416 109864   ??  S     5:38PM  10:51.71 /Applications/Docker.app/Contents/MacOS/com.docker.backend services
+[2026-02-19 04:15:59]   infinite27        2291 141.1  1.1 33850388  91608   ??  R     5:38PM  95:42.85 /System/Library/Frameworks/Contacts.framework/Support/contactsd
+[2026-02-19 04:15:59]   infinite27        1900  52.4  1.1 34100764  94528   ??  R     5:37PM  17:36.53 com.apple.Passwords.MenuBarExtra
+[2026-02-19 04:15:59] --- DISK SPACE OPTIMIZATION ---
+[2026-02-19 04:16:03] Cleared npm cache
+[2026-02-19 04:16:03] --- CRASH SCOUT ---
+[2026-02-19 04:16:03] No recent Chromium crashes detected.
+[2026-02-19 04:16:03] --- OBSERVABILITY CONFIGURATION ---
+[2026-02-19 04:16:04] [SUCCESS] live_status.json updated
+[2026-02-19 04:16:04] --- INTEROPERABILITY CHECK ---
+[2026-02-19 04:16:04] [WARNING] Valentine Core (port 3002): OFFLINE
+[2026-02-19 04:16:04] [WARNING] Dashboard (port 3000): OFFLINE
+[2026-02-19 04:16:04] Hippocampus/Qdrant (port 6333): OFFLINE (optional)
+[2026-02-19 04:16:04] ==========================================
+[2026-02-19 04:16:04] OPTIMIZATION COMPLETE
+[2026-02-19 04:16:04] ==========================================
+[2026-02-19 04:16:04] Disk Usage After: 52% (10Gi free)
+[2026-02-19 04:16:04] Load Avg After: 50.29 40.71 31.62
+[2026-02-19 04:16:04] Log saved to: /Users/infinite27/AILCC_PRIME/logs/system_opt_20260219_041555.log

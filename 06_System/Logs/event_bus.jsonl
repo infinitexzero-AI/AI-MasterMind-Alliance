@@ -1,1 +1,4 @@
 {"type": "SYSTEM_READY", "source": "Antigravity", "message": "Mode 7: Emergent Scholar Protocol is fully online.", "payload": null, "timestamp": "2026-02-17T08:25:51.710211"}
+{"timestamp":"2026-02-28T06:37:59.093Z","type":"ANTIGRAVITY_COMMAND","command":"HELLO","payload":{"message":"Testing real-time overlink"}}
+{"timestamp":"2026-02-28T06:44:21.010Z","type":"ANTIGRAVITY_COMMAND","command":"ping","payload":{"test":true}}
+{"timestamp":"2026-02-28T06:44:25.094Z","type":"ANTIGRAVITY_COMMAND","command":"test","payload":{"source":"dashboard"}}
