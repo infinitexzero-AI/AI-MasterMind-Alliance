@@ -20,6 +20,14 @@ pkill -f "next dev" || true
 pkill -f "webdav-server" || true
 pkill -f "ide-bridge" || true
 pkill -f "clipboard-watcher" || true
+pkill -f "ghost-agent" || true
+pkill -f "vulnerability-shield" || true
+pkill -f "regression-watcher" || true
+pkill -f "scout-docs" || true
+pkill -f "bug-predictor" || true
+pkill -f "type-guardian" || true
+pkill -f "css-optimizer" || true
+pkill -f "bundle-watcher" || true
 
 # 3. Clear stale locks
 LOCK_FILE="/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.next/dev/lock"
@@ -53,3 +61,30 @@ npx tsx /Users/infinite27/AILCC_PRIME/scripts/api/ide-bridge.ts > /tmp/ide-bridg
 
 echo "📱 Starting Universal Clipboard Watcher..."
 npx tsx /Users/infinite27/AILCC_PRIME/scripts/api/clipboard-watcher.ts > /tmp/clipboard-watcher.log 2>&1 &
+
+echo "👻 Waking Ghost Agent Predictor..."
+node /Users/infinite27/AILCC_PRIME/scripts/api/ghost-agent.js > /tmp/ghost-agent.log 2>&1 &
+
+echo "🛡️ Engaging Dependency Vulnerability Shield..."
+npx tsx /Users/infinite27/AILCC_PRIME/scripts/api/vulnerability-shield.ts > /tmp/vulnerability-shield.log 2>&1 &
+
+echo "📉 Booting Performance Regression Watcher..."
+npx tsx /Users/infinite27/AILCC_PRIME/scripts/api/regression-watcher.ts > /tmp/regression-watcher.log 2>&1 &
+
+echo "🕵️‍♂️ Booting SCOUT Documentation Daemon..."
+(cd /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard && npx tsx /Users/infinite27/AILCC_PRIME/scripts/api/scout-docs.ts) > /tmp/scout-docs.log 2>&1 &
+
+echo "🔮 Booting Heuristic Bug Predictor..."
+(cd /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard && npx tsx /Users/infinite27/AILCC_PRIME/scripts/api/bug-predictor.ts) > /tmp/bug-predictor.log 2>&1 &
+
+echo "🛡️ Booting Type-Safety Guardian..."
+npx tsx /Users/infinite27/AILCC_PRIME/scripts/api/type-guardian.ts > /tmp/type-guardian.log 2>&1 &
+
+echo "🎨 Booting CSS Variable Optimizer..."
+npx tsx /Users/infinite27/AILCC_PRIME/scripts/api/css-optimizer.ts > /tmp/css-optimizer.log 2>&1 &
+
+echo "📦 Booting Bundle Size Watcher..."
+npx tsx /Users/infinite27/AILCC_PRIME/scripts/api/bundle-watcher.ts > /tmp/bundle-watcher.log 2>&1 &
+
+echo "🌌 Launching AILCC Cortex Menu Bar Widget..."
+bash /Users/infinite27/AILCC_PRIME/menu-bar/launch.sh > /tmp/ailcc-menubar.log 2>&1 &
