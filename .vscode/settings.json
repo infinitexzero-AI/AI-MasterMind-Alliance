@@ -73,5 +73,9 @@
     "scss.lint.unknownAtRules": "ignore",
     "[dockercompose]": {
         "editor.defaultFormatter": "ms-azuretools.vscode-containers"
-    }
+    },
+    "extensions.experimental.affinity": {
+        "antigravity.antigravity": 1
+    },
+    "task.allowAutomaticTasks": "on"
 }

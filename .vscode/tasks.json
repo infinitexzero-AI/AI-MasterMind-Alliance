@@ -2,6 +2,23 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "label": "🌌 AILCC Dev Server",
+            "type": "shell",
+            "command": "./launch_protocol.sh",
+            "options": {
+                "cwd": "${workspaceFolder}/01_Areas/Codebases/ailcc"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated",
+                "group": "cortex",
+                "close": false
+            },
+            "runOptions": {
+                "runOn": "folderOpen"
+            }
+        },
+        {
             "label": "🚀 Launch Antigravity",
             "type": "shell",
             "command": "./01_Areas/Codebases/ailcc/launch_protocol.sh",

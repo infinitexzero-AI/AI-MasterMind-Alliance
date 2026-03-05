@@ -1,0 +1,294 @@
+⚖️ THE JUDGE v2.0: Monitoring System Entropy...
+📡 Verdict: Slow Redis Response: 1003.60ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 130.7%
+📡 Verdict: Slow Redis Response: 23.99ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 101.6%
+📡 Verdict: Slow Redis Response: 29.55ms
+📡 Verdict: Slow Redis Response: 113.19ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 101.5%
+📡 Verdict: Slow Redis Response: 39.91ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 106.7%
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 90.4%
+📡 Verdict: Slow Redis Response: 10.69ms
+📡 Verdict: Slow Redis Response: 156.19ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 97.6%
+📡 Verdict: Slow Redis Response: 557.05ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 119.9%
+📡 Verdict: Slow Redis Response: 146.23ms
+📡 Verdict: Slow Redis Response: 117.12ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 93.2%
+📡 Verdict: Slow Redis Response: 11.66ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 93.3%
+📡 Verdict: Slow Redis Response: 393.72ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 107.2%
+📡 Verdict: Slow Redis Response: 12.89ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 109.9%
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 108.8%
+📡 Verdict: Slow Redis Response: 15.73ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 109.3%
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 92.0%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 115.2%
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 93.2%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 119.1%
+📡 Verdict: Slow Redis Response: 311.53ms
+📡 Verdict: Slow Redis Response: 541.66ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 96.4%
+📡 Verdict: Slow Redis Response: 867.41ms
+📡 Verdict: Slow Redis Response: 3250.93ms
+📡 Verdict: Slow Redis Response: 1149.86ms
+📡 Verdict: Slow Redis Response: 96.10ms
+📡 Verdict: Slow Redis Response: 76.30ms
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 111.9%
+📡 Verdict: Slow Redis Response: 168.03ms
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 102.8%
+📡 Verdict: Slow Redis Response: 44.42ms
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 109.7%
+📡 Verdict: Slow Redis Response: 156.65ms
+📡 Verdict: Slow Redis Response: 18.32ms
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 103.8%
+📡 Verdict: Slow Redis Response: 454.61ms
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 92.8%
+📡 Verdict: Slow Redis Response: 22.95ms
+📡 Verdict: Slow Redis Response: 48.34ms
+📡 Verdict: Slow Redis Response: 71.97ms
+📡 Verdict: Slow Redis Response: 122.10ms
+📡 Verdict: Slow Redis Response: 54.49ms
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Slow Redis Response: 20.36ms
+📡 Verdict: Slow Redis Response: 39.10ms
+📡 Verdict: Slow Redis Response: 662.51ms
+📡 Verdict: Slow Redis Response: 64.54ms
+📡 Verdict: Slow Redis Response: 30.74ms
+📡 Verdict: Slow Redis Response: 4004.06ms
+📡 Verdict: Slow Redis Response: 176.12ms
+📡 Verdict: Slow Redis Response: 145.51ms
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 92.1%
+📡 Verdict: Slow Redis Response: 49.91ms
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 96.2%
+📡 Verdict: Slow Redis Response: 60.48ms
+📡 Verdict: Slow Redis Response: 105.94ms
+📡 Verdict: Slow Redis Response: 233.26ms
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 97.0%
+📡 Verdict: Slow Redis Response: 326.65ms
+📡 Verdict: Slow Redis Response: 170.93ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 103.2%
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 93.9%
+📡 Verdict: Slow Redis Response: 61.82ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 98.8%
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 94.8%
+📡 Verdict: Slow Redis Response: 1163.32ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 112.2%
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 96.1%
+📡 Verdict: Slow Redis Response: 154.10ms
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 98.9%
+📡 Verdict: Slow Redis Response: 78.14ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 103.9%
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 36168) @ 112.0%
+📡 Verdict: Slow Redis Response: 35.97ms
+📡 Verdict: Slow Redis Response: 1369.53ms
+📡 Verdict: Slow Redis Response: 138.86ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 119.2%
+📡 Verdict: Slow Redis Response: 95.78ms
+📡 Verdict: Slow Redis Response: 69.59ms
+📡 Verdict: High CPU Entropy: language_server_macos_x64 (PID: 5388) @ 101.3%
+📡 Verdict: Slow Redis Response: 10.61ms
+📡 Verdict: Slow Redis Response: 11.48ms
+📡 Verdict: Slow Redis Response: 377.55ms
+📡 Verdict: Slow Redis Response: 32.68ms
+📡 Verdict: Slow Redis Response: 13.23ms
+📡 Verdict: Slow Redis Response: 243.97ms
+📡 Verdict: Slow Redis Response: 17.24ms
+📡 Verdict: Slow Redis Response: 47.44ms
+📡 Verdict: Slow Redis Response: 182.63ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 105.9%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 117.6%
+📡 Verdict: Slow Redis Response: 24.75ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 121.0%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 115.0%
+📡 Verdict: Slow Redis Response: 878.10ms
+📡 Verdict: Slow Redis Response: 31.86ms
+📡 Verdict: Slow Redis Response: 21.48ms
+📡 Verdict: Slow Redis Response: 47.37ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 113.7%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 116.6%
+📡 Verdict: Slow Redis Response: 12.46ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 113.2%
+📡 Verdict: Slow Redis Response: 13.12ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 118.9%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 90.6%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 116.8%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 116.3%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 117.3%
+📡 Verdict: Slow Redis Response: 33.50ms
+📡 Verdict: Slow Redis Response: 28.80ms
+📡 Verdict: Slow Redis Response: 9059.33ms
+📡 Verdict: Slow Redis Response: 458.48ms
+📡 Verdict: Slow Redis Response: 114.72ms
+📡 Verdict: Slow Redis Response: 133.53ms
+📡 Verdict: Slow Redis Response: 37.37ms
+📡 Verdict: Slow Redis Response: 15.51ms
+📡 Verdict: Slow Redis Response: 12.68ms
+📡 Verdict: Slow Redis Response: 16.70ms
+📡 Verdict: Slow Redis Response: 45.76ms
+📡 Verdict: Slow Redis Response: 13.66ms
+📡 Verdict: Slow Redis Response: 24.36ms
+📡 Verdict: Slow Redis Response: 13.81ms
+📡 Verdict: Slow Redis Response: 21.71ms
+📡 Verdict: Slow Redis Response: 11.56ms
+📡 Verdict: Slow Redis Response: 87.44ms
+📡 Verdict: Slow Redis Response: 164.38ms
+📡 Verdict: Slow Redis Response: 74.81ms
+📡 Verdict: Slow Redis Response: 40.04ms
+📡 Verdict: Slow Redis Response: 21.07ms
+📡 Verdict: Slow Redis Response: 910.19ms
+📡 Verdict: Slow Redis Response: 23.16ms
+📡 Verdict: Slow Redis Response: 220.18ms
+📡 Verdict: Slow Redis Response: 53.82ms
+📡 Verdict: Slow Redis Response: 116.53ms
+📡 Verdict: Slow Redis Response: 12.44ms
+📡 Verdict: Slow Redis Response: 11.67ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 97.5%
+📡 Verdict: Slow Redis Response: 107.53ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 112.4%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 115.3%
+📡 Verdict: Slow Redis Response: 10.66ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 115.6%
+📡 Verdict: Slow Redis Response: 10.56ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 122.4%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 117.0%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 125.1%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 115.8%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 114.0%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 105.9%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 113.9%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 109.8%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 3671) @ 113.8%
+📡 Verdict: Slow Redis Response: 61.04ms
+📡 Verdict: Slow Redis Response: 136.55ms
+📡 Verdict: Slow Redis Response: 20.79ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 39755) @ 95.7%
+📡 Verdict: Slow Redis Response: 11.55ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 39755) @ 121.7%
+📡 Verdict: Slow Redis Response: 19.12ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 39755) @ 104.2%
+📡 Verdict: Slow Redis Response: 100.71ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Plugin) (PID: 40784) @ 99.6%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 39755) @ 129.2%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 39755) @ 91.2%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 39755) @ 99.6%
+📡 Verdict: Slow Redis Response: 11.52ms
+📡 Verdict: Slow Redis Response: 15.33ms
+📡 Verdict: High CPU Entropy: node (PID: 42235) @ 107.9%
+📡 Verdict: Slow Redis Response: 736.43ms
+📡 Verdict: Slow Redis Response: 16084.81ms
+📡 Verdict: Slow Redis Response: 475.47ms
+📡 Verdict: Slow Redis Response: 166.54ms
+📡 Verdict: Slow Redis Response: 21.83ms
+📡 Verdict: Slow Redis Response: 2763.94ms
+📡 Verdict: Slow Redis Response: 479.26ms
+📡 Verdict: High CPU Entropy: Google Chrome Helper (PID: 42350) @ 97.4%
+📡 Verdict: Slow Redis Response: 103.86ms
+📡 Verdict: Slow Redis Response: 191.22ms
+📡 Verdict: Slow Redis Response: 159.43ms
+📡 Verdict: Slow Redis Response: 218.90ms
+📡 Verdict: Slow Redis Response: 188.71ms
+📡 Verdict: Slow Redis Response: 1891.59ms
+📡 Verdict: Slow Redis Response: 287.89ms
+📡 Verdict: Slow Redis Response: 831.23ms
+📡 Verdict: Slow Redis Response: 17081.61ms
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Slow Redis Response: 7759.92ms
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Slow Redis Response: 3591.97ms
+📡 Verdict: Slow Redis Response: 1741.99ms
+📡 Verdict: Slow Redis Response: 30.94ms
+📡 Verdict: Slow Redis Response: 451.23ms
+📡 Verdict: Slow Redis Response: 54.36ms
+📡 Verdict: Slow Redis Response: 11867.32ms
+📡 Verdict: Slow Redis Response: 38.22ms
+📡 Verdict: Slow Redis Response: 31.99ms
+📡 Verdict: Slow Redis Response: 1130.57ms
+📡 Verdict: Slow Redis Response: 1008.88ms
+📡 Verdict: Slow Redis Response: 183.99ms
+📡 Verdict: Slow Redis Response: 114.20ms
+📡 Verdict: Slow Redis Response: 121.96ms
+📡 Verdict: Slow Redis Response: 172.49ms
+📡 Verdict: Slow Redis Response: 224.00ms
+📡 Verdict: Slow Redis Response: 529.31ms
+📡 Verdict: Slow Redis Response: 409.37ms
+📡 Verdict: Slow Redis Response: 7716.06ms
+📡 Verdict: Slow Redis Response: 294.82ms
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Slow Redis Response: 617.20ms
+📡 Verdict: Slow Redis Response: 185.69ms
+📡 Verdict: Slow Redis Response: 243.68ms
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Slow Redis Response: 684.74ms
+📡 Verdict: Slow Redis Response: 1231.72ms
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Slow Redis Response: 968.33ms
+📡 Verdict: Slow Redis Response: 683.93ms
+📡 Verdict: Slow Redis Response: 1733.93ms
+📡 Verdict: Slow Redis Response: 192.08ms
+📡 Verdict: Slow Redis Response: 75.55ms
+📡 Verdict: Slow Redis Response: 27.40ms
+📡 Verdict: Slow Redis Response: 13.96ms
+📡 Verdict: Slow Redis Response: 10.47ms
+📡 Verdict: Slow Redis Response: 111.83ms
+📡 Verdict: Slow Redis Response: 30.97ms
+📡 Verdict: High CPU Entropy: chronod (PID: 90551) @ 101.5%
+📡 Verdict: Slow Redis Response: 42.24ms
+📡 Verdict: Slow Redis Response: 16.69ms
+📡 Verdict: High CPU Entropy: chronod (PID: 90551) @ 95.4%
+📡 Verdict: Slow Redis Response: 145.99ms
+📡 Verdict: Slow Redis Response: 13.45ms
+📡 Verdict: Slow Redis Response: 18.80ms
+📡 Verdict: Slow Redis Response: 498.42ms
+📡 Verdict: Slow Redis Response: 834.80ms
+📡 Verdict: Slow Redis Response: 140.67ms
+📡 Verdict: Slow Redis Response: 1470.85ms
+📡 Verdict: Redis Persistent Core Offline: Timeout reading from socket
+📡 Verdict: Slow Redis Response: 427.65ms
+📡 Verdict: Slow Redis Response: 1577.40ms
+📡 Verdict: Slow Redis Response: 56.02ms
+📡 Verdict: Slow Redis Response: 545.84ms
+📡 Verdict: Slow Redis Response: 54.22ms
+📡 Verdict: Slow Redis Response: 147.90ms
+📡 Verdict: Slow Redis Response: 64.35ms
+📡 Verdict: Slow Redis Response: 108.13ms
+📡 Verdict: Slow Redis Response: 25.78ms
+📡 Verdict: Slow Redis Response: 47.26ms
+📡 Verdict: Slow Redis Response: 18.21ms
+📡 Verdict: Slow Redis Response: 523.83ms
+📡 Verdict: Slow Redis Response: 13.57ms
+📡 Verdict: Slow Redis Response: 35.97ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 17612) @ 90.2%
+📡 Verdict: Slow Redis Response: 70.63ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 17612) @ 90.7%
+📡 Verdict: Slow Redis Response: 10.13ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 17612) @ 106.2%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 17612) @ 100.8%
+📡 Verdict: Slow Redis Response: 37.52ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 17612) @ 109.0%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 17612) @ 98.6%
+📡 Verdict: Slow Redis Response: 11.20ms
+📡 Verdict: Slow Redis Response: 230.58ms
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 17612) @ 107.3%
+📡 Verdict: High CPU Entropy: chronod (PID: 31817) @ 115.6%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 17612) @ 127.5%
+📡 Verdict: High CPU Entropy: Antigravity Helper (Renderer) (PID: 17612) @ 101.8%
+📡 Verdict: Slow Redis Response: 107.31ms
+📡 Verdict: Slow Redis Response: 113.72ms
