@@ -699,3 +699,189 @@
 {"timestamp": "2026-03-05T23:31:56.557597", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 120.5%", "severity": "HIGH"}
 {"timestamp": "2026-03-05T23:32:26.599338", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 115.9%", "severity": "HIGH"}
 {"timestamp": "2026-03-05T23:32:56.658197", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 100.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:35:57.090191", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 122.1%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:36:27.250255", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 109.3%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:36:27.250469", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 23.84ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:38:27.433833", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-75822", "msg": "High CPU Entropy: Comet Helper (Renderer) (PID: 75822) @ 102.1%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:40:27.611795", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 118.7%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:40:57.673396", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 115.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:42:28.018048", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 198.51ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:42:59.413633", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-92595", "msg": "High CPU Entropy: pyrefly (PID: 92595) @ 162.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:42:59.414948", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 1039.91ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:43:59.627543", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 38.87ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:44:29.742822", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 34.40ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:45:29.837442", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 121.1%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:46:00.086191", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 24.96ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:46:32.233136", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 1725.16ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:47:02.511857", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 27.12ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:47:32.641939", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 15.06ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:48:02.769114", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 92.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:48:02.769405", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 22.16ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:48:32.857142", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 115.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:48:32.857178", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 41.29ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:49:02.997412", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 118.5%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:49:02.997600", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 18.90ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:49:33.048918", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 116.0%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:50:03.176975", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 119.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:50:03.177033", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 17.66ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:50:33.449663", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 104.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:50:33.450267", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 74.51ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:51:03.506624", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 100.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:51:33.567001", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 122.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:51:33.567152", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 12.41ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:52:03.659566", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 116.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:52:03.659623", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 48.86ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:52:33.742011", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 11.62ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:53:33.942320", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 20.60ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:54:09.256671", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 4746.04ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:54:40.547086", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 980.87ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:55:13.212431", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 1872.56ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:55:48.334712", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 4294.49ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:56:18.910108", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 196.80ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:57:19.189758", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 23.84ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:57:49.486151", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 112.95ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:58:19.658921", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 60.60ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-05T23:58:49.786361", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 93.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:59:19.985082", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 120.4%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:59:50.034005", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 108.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:02:50.307932", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-30806", "msg": "High CPU Entropy: contactsd (PID: 30806) @ 94.4%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:03:20.421624", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 54.73ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:05:50.743196", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 10.16ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:08:51.123931", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 16.41ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:09:51.313371", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 21.37ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:12:51.654176", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-30806", "msg": "High CPU Entropy: contactsd (PID: 30806) @ 95.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:14:21.892074", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 27.34ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:14:51.963823", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 10.07ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:30:53.610167", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 94.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:31:23.650452", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 123.5%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:31:53.732869", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 93.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:32:24.295267", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 137.78ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:33:16.036203", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 19424.71ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:33:48.658643", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 1697.98ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:34:19.620991", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 509.73ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:34:50.320281", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 241.62ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:35:50.597716", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 21.28ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:36:20.698618", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 114.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:36:20.698830", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 13.50ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:36:50.747617", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 122.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:39:51.041055", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 11.84ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:47:22.213904", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 267.66ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:47:52.352850", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 20.76ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:48:22.494172", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 53.96ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:48:52.619963", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 32.00ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:50:22.837880", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 20.28ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:52:23.192449", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 14.64ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:52:53.252208", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 109.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:53:23.320116", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 90.5%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:53:23.320319", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 111.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:53:53.419868", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 96.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:53:53.420120", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 101.4%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:54:23.550749", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 96.4%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:54:23.550958", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 15.28ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:54:53.817737", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 119.72ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:55:25.312833", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 790.25ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:55:56.559793", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 997.56ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:56:44.430881", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 94.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:56:44.553978", "agent": "THE_JUDGE", "type": "critical_error", "msg": "Redis Persistent Core Offline: Timeout reading from socket", "severity": "CRITICAL"}
+{"timestamp": "2026-03-06T00:57:15.554912", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 393.22ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:57:45.775047", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 101.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:57:45.775447", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 18.73ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:58:16.088884", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 102.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:58:16.089239", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 12.25ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:58:46.346287", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 104.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:58:46.346611", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 97.03ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:59:16.750372", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 107.7%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T00:59:16.750968", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 135.10ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T00:59:46.834616", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 113.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:00:16.925009", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 111.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:00:16.925064", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 101.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:00:16.925087", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 20.28ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:00:47.056950", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 108.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:00:47.057025", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 92.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:00:47.057048", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 20.72ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:01:17.308672", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 113.1%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:01:17.309022", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 63.96ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:01:47.446767", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 95.1%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:01:47.446806", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 53.68ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:02:17.610191", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 90.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:02:17.610238", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 84.41ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:03:17.772847", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 10.26ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:05:18.018283", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 20.25ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:07:48.483567", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 63.90ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:08:19.400256", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 106.42ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:08:49.528895", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 91.1%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:08:49.529065", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 34.59ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:12:20.092832", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 93.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:12:50.143511", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 92.0%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:13:50.380974", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 51.52ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:14:20.476591", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 28.71ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:15:20.593884", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 92.7%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:15:50.650194", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 90.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:16:50.773020", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 92.1%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:17:20.827746", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 91.3%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:17:50.875489", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 91.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:18:20.931392", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 92.4%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:18:20.931426", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 16.59ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:18:50.984137", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 93.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:19:51.136863", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-40096", "msg": "High CPU Entropy: contactsd (PID: 40096) @ 150.4%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:19:51.136910", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 102.4%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:22:51.481644", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 91.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:23:21.543572", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 90.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:24:51.702915", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 91.1%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:26:21.894954", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 90.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:26:51.941012", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 92.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:27:21.980265", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 93.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:27:52.044708", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 91.4%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:28:22.103364", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 90.3%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:28:52.145603", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 90.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:30:22.350520", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 15.39ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:31:22.531016", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 19.88ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:33:52.897864", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 90.7%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:43:23.948575", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 90.4%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:44:24.135159", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 28.18ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:44:54.280664", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 36.47ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:45:54.391646", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 11.78ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:46:54.732021", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 15.44ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:48:25.107041", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 95.1%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:48:25.107259", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 108.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:48:25.107277", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 17.54ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:48:55.198693", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 99.1%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:48:55.198735", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 119.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:49:25.262799", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 98.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:49:25.262849", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 105.5%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:49:55.345516", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 99.7%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:49:55.345590", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 107.7%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:50:25.555388", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 107.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:50:25.555582", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 30.63ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:50:55.685111", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 96.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:50:55.685631", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 29.57ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:51:25.926859", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 13.33ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:51:56.003058", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 100.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:52:26.708309", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 91.3%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:52:26.710826", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 343.98ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:52:57.525111", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 291.25ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:53:27.702532", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 98.3%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:53:57.867065", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 61.50ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:54:28.169421", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 100.3%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:54:28.169759", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 39.90ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:54:58.346606", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 90.39ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:55:28.437270", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 97.3%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:55:28.437350", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 104.8%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:55:28.437370", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 17.79ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:55:58.496096", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 115.7%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:55:58.496140", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 10.51ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:56:28.651780", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 113.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:56:28.652031", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 27.79ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T01:56:58.694416", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 93.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:57:28.744806", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 92.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:57:58.780116", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 95.7%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T01:58:28.821689", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 93.2%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T02:00:29.105329", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 94.7%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T02:00:29.105504", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 10.24ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T02:00:59.171972", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 96.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T02:00:59.172029", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 10.68ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T02:01:29.363464", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 107.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T02:01:29.363685", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 46.44ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-06T02:01:59.644830", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-40096", "msg": "High CPU Entropy: contactsd (PID: 40096) @ 92.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T02:01:59.645227", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-54806", "msg": "High CPU Entropy: Comet Helper (PID: 54806) @ 110.6%", "severity": "HIGH"}
+{"timestamp": "2026-03-06T02:01:59.645265", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 62.09ms", "severity": "MEDIUM"}
