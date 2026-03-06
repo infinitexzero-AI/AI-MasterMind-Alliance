@@ -2,6 +2,8 @@
 description: Ensure new AI initiatives are built on secure data foundations and operating models, not just shiny LLM wrappers.
 ---
 
+# Transformation Audit
+
 **Objective:** Evaluate any proposed automation or AI system against the "AI Transformation Iceberg." Push back on superficial "automation demos" and demand rigorous Operational and Data models.
 
 **Instructions for the Vanguard Agent:**

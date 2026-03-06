@@ -2,6 +2,8 @@
 description: Improve the clarity and logical flow of your writing.
 ---
 
+# Refine
+
 **Objective:** Tighten slide copy, clarify arguments, improve logical flow, and simplify complex language.
 
 **Instructions for the Vanguard Agent:**

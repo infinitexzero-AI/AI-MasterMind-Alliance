@@ -2,6 +2,8 @@
 description: Scout the specialized AI ecosystem for the best tool rather than using a general LLM.
 ---
 
+# Tool Scout
+
 **Objective:** Map user needs to the correct specialized AI tool ecosystem (Productivity, Design/Video, Marketing, Copy, Customer Success, Sales) instead of forcing a general LLM to do poorly what a specialized tool does perfectly.
 
 **Instructions for the Vanguard Agent:**

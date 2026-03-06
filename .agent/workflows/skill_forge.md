@@ -2,6 +2,8 @@
 description: Automatically forge new specialized agent workflows (skills) based on repeated task patterns.
 ---
 
+# Skill Forge
+
 **Objective:** Transform repetitive commands or complex multi-step instructions into permanent, reusable `.agent/workflows` (Skills) that the Vanguard Swarm can auto-load when relevant.
 
 **Instructions for the Vanguard Agent:**

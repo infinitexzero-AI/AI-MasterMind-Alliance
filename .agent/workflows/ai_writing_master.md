@@ -2,6 +2,8 @@
 description: Master prompt architecture and human-AI writing collaboration to avoid robotic outputs.
 ---
 
+# AI Writing Master
+
 **Objective:** Upgrade the user's AI writing pipeline to produce content that sounds distinctly human, mirroring elite writers and avoiding obvious LLM "tells" (like "delve", "tapestry", or overly symmetrical paragraph structures).
 
 **Instructions for the Vanguard Agent:**

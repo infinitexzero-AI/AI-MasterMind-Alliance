@@ -2,6 +2,8 @@
 description: Create alternative approaches before applying your judgment.
 ---
 
+# Ideate
+
 **Objective:** Brainstorm solutions, generate hypotheses, and invent strategic options.
 
 **Instructions for the Vanguard Agent:**

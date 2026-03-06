@@ -2,6 +2,8 @@
 description: Turn notes and ideas into clear, structured outputs.
 ---
 
+# Structure
+
 **Objective:** Turn messy notes into highly structured slide outlines, meeting agendas, and frameworks.
 
 **Instructions for the Vanguard Agent:**

@@ -2,6 +2,8 @@
 description: Shorten the distance between idea and output.
 ---
 
+# Leverage
+
 **Objective:** Reduce time spent on repetitive drafting, accelerate preparation, and free up time for strategic work.
 
 **Instructions for the Vanguard Agent:**

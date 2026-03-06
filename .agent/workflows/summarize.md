@@ -2,6 +2,8 @@
 description: Condense large amounts of data into key insights.
 ---
 
+# Summarize
+
 **Objective:** Condense meeting notes, research documents, and workshop outputs into digestible insights.
 
 **Instructions for the Vanguard Agent:**

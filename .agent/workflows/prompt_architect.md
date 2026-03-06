@@ -2,6 +2,8 @@
 description: Deploy elite prompt structures (R-T-F, S-O-L-V-E, D-R-E-A-M, etc.) for high-fidelity Vanguard Swarm tasks.
 ---
 
+# Prompt Architect
+
 **Objective:** Prevent vague or chaotic outputs by forcing the user (and the agent) into one of 8 proven, high-structure prompt architectures.
 
 **Instructions for the Vanguard Agent:**

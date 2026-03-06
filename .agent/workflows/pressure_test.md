@@ -2,6 +2,8 @@
 description: Stress-test your thinking before it reaches a client.
 ---
 
+# Pressure Test
+
 **Objective:** Identify weak assumptions, highlight blind spots, find logical gaps, and evaluate risks.
 
 **Instructions for the Vanguard Agent:**

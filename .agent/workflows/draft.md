@@ -2,6 +2,8 @@
 description: Draft a first version of a document to get past blank page syndrome.
 ---
 
+# Draft
+
 **Objective:** Get past "blank page syndrome" without replacing your thinking.
 
 **Instructions for the Vanguard Agent:**
