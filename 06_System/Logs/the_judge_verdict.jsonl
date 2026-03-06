@@ -698,3 +698,4 @@
 {"timestamp": "2026-03-05T23:30:26.384784", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 155.20ms", "severity": "MEDIUM"}
 {"timestamp": "2026-03-05T23:31:56.557597", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 120.5%", "severity": "HIGH"}
 {"timestamp": "2026-03-05T23:32:26.599338", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 115.9%", "severity": "HIGH"}
+{"timestamp": "2026-03-05T23:32:56.658197", "agent": "THE_JUDGE", "type": "entropy_warning", "id": "cpu-94791", "msg": "High CPU Entropy: Antigravity Helper (Renderer) (PID: 94791) @ 100.6%", "severity": "HIGH"}
