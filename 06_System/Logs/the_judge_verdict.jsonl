@@ -2390,3 +2390,11 @@
 {"timestamp": "2026-03-07T17:29:45.691392", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 572.08ms", "severity": "MEDIUM"}
 {"timestamp": "2026-03-07T17:30:16.060317", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 147.21ms", "severity": "MEDIUM"}
 {"timestamp": "2026-03-07T17:30:46.989885", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 513.24ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:31:17.207742", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 48.91ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:31:47.601744", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 236.62ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:32:17.735878", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 34.35ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:33:17.954846", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 35.03ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:34:48.248019", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 44.32ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:44:49.154597", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 22.72ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:45:49.333399", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 25.14ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:46:19.406824", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 22.26ms", "severity": "MEDIUM"}
