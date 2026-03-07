@@ -18,12 +18,12 @@ class UnifiedEventBus:
     """The central nervous system for AIMmA cross-platform interoperability."""
     
     @staticmethod
-    def emit(event_type, source, message, payload=None, priority=3, platforms=["NEXUS", "LINEAR", "VALENTINE", "COMET"]):
+    def emit(event_type, source, message, payload=None, priority=3, platforms=["NEXUS", "LINEAR", "VALENTINE", "COMET"], thread_id=None):
         """
         Emits an event across multiple platforms.
         platforms: List of ['NEXUS', 'LINEAR', 'VALENTINE', 'COMET']
         """
-        logging.info(f"✨ Event Emitted: [{event_type}] from {source} - {message}")
+        logging.info(f"✨ Event Emitted: [{event_type}] from {source} - {message} (Thread: {thread_id})")
         
         # Log to JSONL for Dashboard Relay
         event_entry = {
@@ -31,6 +31,7 @@ class UnifiedEventBus:
             "source": source,
             "message": message,
             "payload": payload,
+            "thread_id": thread_id,
             "timestamp": datetime.now().isoformat()
         }
         with open(JSON_LOG_PATH, "a") as f:
