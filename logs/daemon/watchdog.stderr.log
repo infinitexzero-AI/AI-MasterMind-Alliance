@@ -398,3 +398,28 @@
 /bin/sh: line 0: kill: (71037) - No such process
 /bin/sh: line 0: kill: (71049) - No such process
 /bin/sh: line 0: kill: (71062) - No such process
+/bin/sh: line 0: kill: (12621) - No such process
+/bin/sh: line 0: kill: (12624) - No such process
+/bin/sh: line 0: kill: (12631) - No such process
+/bin/sh: line 0: kill: (12632) - No such process
+/bin/sh: line 0: kill: (12641) - No such process
+/bin/sh: line 0: kill: (12645) - No such process
+/bin/sh: line 0: kill: (12648) - No such process
+rm: /Users/infinite27/.gemini/antigravity/browser_recordings/3e98b031-b917-45d4-864d-53a6f76c9ee7: Directory not empty
+rm: /Users/infinite27/.gemini/antigravity/browser_recordings: Directory not empty
+rm: /Users/infinite27/.gemini/antigravity: Directory not empty
+rm: /Users/infinite27/.gemini/antigravity-browser-profile/Default/Cache/Cache_Data: Directory not empty
+rm: /Users/infinite27/.gemini/antigravity-browser-profile/Default/Cache: Directory not empty
+rm: /Users/infinite27/.gemini/antigravity-browser-profile/Default: Directory not empty
+rm: /Users/infinite27/.gemini/antigravity-browser-profile: Directory not empty
+/bin/sh: line 0: kill: (79666) - No such process
+/bin/sh: line 0: kill: (79686) - No such process
+/bin/sh: line 0: kill: (79707) - No such process
+/bin/sh: line 0: kill: (79715) - No such process
+/bin/sh: line 0: kill: (79721) - No such process
+/bin/sh: line 0: kill: (79725) - No such process
+/bin/sh: line 0: kill: (3287) - No such process
+/bin/sh: line 0: kill: (7829) - No such process
+/bin/sh: line 0: kill: (7833) - No such process
+/bin/sh: line 0: kill: (7857) - No such process
+/bin/sh: line 0: kill: (8123) - No such process

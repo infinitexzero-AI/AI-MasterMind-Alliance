@@ -1,0 +1,70 @@
+{
+    "version": "1.0.0",
+    "last_updated": "2026-03-08T16:15:00Z",
+    "total_tasks": 50,
+    "registry": [
+        {
+            "id": "A-001",
+            "directive": "Restore Dashboard Visibility",
+            "description": "Disable Turbopack and restore stable dashboard rendering on port 3000.",
+            "priority": "CRITICAL",
+            "status": "IN_PROGRESS",
+            "sector": "S1: Environmental Awareness",
+            "assignee": "Antigravity"
+        },
+        {
+            "id": "A-002",
+            "directive": "Playwright Auto-Healing",
+            "description": "Implement watchdog in playwright-server.js to recover from 'target closed' errors.",
+            "priority": "HIGH",
+            "status": "PENDING",
+            "sector": "S2: Browser Autonomy",
+            "assignee": "Mechanic"
+        },
+        {
+            "id": "A-003",
+            "directive": "RAG Daily Briefing Engine",
+            "description": "Use vault_rag_server.py (port 8091) to generate daily strategic intel briefs.",
+            "priority": "HIGH",
+            "status": "PENDING",
+            "sector": "S5: Life-OS Synthesis",
+            "assignee": "Cortex"
+        },
+        {
+            "id": "T-001",
+            "directive": "Module Splitting: discovery_report.md",
+            "description": "Modularize the 7000+ line discovery report for better agent parsing.",
+            "priority": "MEDIUM",
+            "status": "PENDING",
+            "sector": "Technical Debt",
+            "assignee": "Scribe"
+        },
+        {
+            "id": "T-002",
+            "directive": "Modularize MastermindHub.tsx",
+            "description": "Refactor the main hub component into smaller, functional sectors.",
+            "priority": "MEDIUM",
+            "status": "PENDING",
+            "sector": "Technical Debt",
+            "assignee": "Architect"
+        },
+        {
+            "id": "S-004",
+            "directive": "Heartbeat Monitor Implementation",
+            "description": "Periodic check of agent responsiveness via Neural Relay.",
+            "priority": "HIGH",
+            "status": "IN_PROGRESS",
+            "sector": "Pillar 1: Registry",
+            "assignee": "Comet"
+        },
+        {
+            "id": "A-061",
+            "directive": "iPhone/Watch Sync Bridge",
+            "description": "Establish telemetry path from mobile devices to central vault.",
+            "priority": "MEDIUM",
+            "status": "PENDING",
+            "sector": "S4: Device Orchestration",
+            "assignee": "Nomad"
+        }
+    ]
+}

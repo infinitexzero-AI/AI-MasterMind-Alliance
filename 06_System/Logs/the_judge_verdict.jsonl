@@ -2398,3 +2398,8 @@
 {"timestamp": "2026-03-07T17:44:49.154597", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 22.72ms", "severity": "MEDIUM"}
 {"timestamp": "2026-03-07T17:45:49.333399", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 25.14ms", "severity": "MEDIUM"}
 {"timestamp": "2026-03-07T17:46:19.406824", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 22.26ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:58:50.840269", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 22.58ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:59:20.950827", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 13.82ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T17:59:51.106474", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 17.89ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T18:04:51.708018", "agent": "THE_JUDGE", "type": "performance_warning", "msg": "Slow Redis Response: 13.51ms", "severity": "MEDIUM"}
+{"timestamp": "2026-03-07T18:05:57.480936", "agent": "THE_JUDGE", "type": "critical_error", "msg": "Redis Persistent Core Offline: Error 61 connecting to localhost:6379. Connection refused.", "severity": "CRITICAL"}
