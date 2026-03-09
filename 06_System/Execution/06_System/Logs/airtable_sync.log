@@ -1,3 +1,0 @@
-2026-01-10 03:16:14,262 - INFO - 📡 Initiating Airtable Synchronization...
-2026-01-10 03:16:14,267 - WARNING - ⚠️ AIRTABLE credentials missing. Running in DRY-RUN mode.
-2026-01-10 03:16:14,267 - ERROR - Roadmap file missing at 01_Areas/Codebases/ailcc/dashboard/server/data/mission_roadmap.json

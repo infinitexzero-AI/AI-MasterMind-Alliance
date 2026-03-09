@@ -11,10 +11,15 @@ __pycache__/
 *.py[cod]
 *.sqlite-shm
 *.sqlite-wal
-logs/*.log
-logs/*.csv
-logs/*.log.gz
+# System Specific Logs and Streams
+06_System/Logs/
+06_System/AILCC/handoffs/inbox/
+logs/
+*.jsonl
+*.log
+*.log.gz
 
 # Secrets and Credentials
 06_System/Credentials/*.json
 credentials.ini
+.DS_Store

@@ -1,5 +1,0 @@
-{"run_id":"20251215_2300_workflow_v1","timestamp":"2025-12-15T23:00:00Z","event":"workflow_start","workflow":"example_pipeline","version":"v1","operator":"comet"}
-{"run_id":"20251215_2300_workflow_v1","timestamp":"2025-12-15T23:00:01Z","event":"action","tool":"browser","action":"navigate","target":"https://example.com","status":"success"}
-{"run_id":"20251215_2300_workflow_v1","timestamp":"2025-12-15T23:00:03Z","event":"action","tool":"browser","action":"extract","selector":"h1.title","result":"Example Title","status":"success"}
-{"run_id":"20251215_2300_workflow_v1","timestamp":"2025-12-15T23:00:05Z","event":"action","tool":"file_write","path":"output.json","size_bytes":1024,"status":"success"}
-{"run_id":"20251215_2300_workflow_v1","timestamp":"2025-12-15T23:00:06Z","event":"workflow_end","status":"success","duration_sec":6,"actions_total":3}
