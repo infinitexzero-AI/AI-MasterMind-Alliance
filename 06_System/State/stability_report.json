@@ -1,9 +1,9 @@
 {
-  "timestamp": "2026-03-09T12:13:14.630972",
+  "timestamp": "2026-03-09T13:02:48.725947",
   "health_category": "NOMINAL",
-  "top_cpu": "47.1%",
-  "ram_mb": 2039,
-  "swap_percent": 76.1,
+  "top_cpu": "39.4%",
+  "ram_mb": 2206,
+  "swap_percent": 90.1,
   "helper_count": 20,
-  "thermal_proxy": "47\u00b0C"
+  "thermal_proxy": "46\u00b0C"
 }
