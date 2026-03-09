@@ -55,11 +55,28 @@ def update_stability_report():
     report["swap_percent"] = vitals["swap_percent"]
     report["helper_count"] = vitals["helper_count"]
     
+    # Simulated Thermal Proxy (since psutil.sensors_temperatures() is often restricted on Mac)
+    thermal_proxy = int(35 + (vitals["ram_total_mb"] - vitals["ram_free_mb"]) / 500)
+    report["thermal_proxy"] = f"{thermal_proxy}°C"
+
     # Save back
     with open(STABILITY_FILE, 'w') as f:
         json.dump(report, f, indent=2)
     
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] Pulse: RAM:{vitals['ram_free_mb']}MB Swap:{vitals['swap_percent']}% Helpers:{vitals['helper_count']}")
+    # Emit to UnifiedEventBus for Dashboard visualization
+    try:
+        from unified_event_bus import UnifiedEventBus
+        UnifiedEventBus.emit(
+            event_type="SECTOR_1_HEARTBEAT",
+            source="EnvMonitor",
+            message=f"Vitals: RAM:{vitals['ram_free_mb']}MB, CPU:{vitals['top_cpu']}, Heat:{thermal_proxy}°C",
+            payload=report,
+            priority=3
+        )
+    except Exception as e:
+        print(f"Failed to emit to Event Bus: {e}")
+
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] Pulse: RAM:{vitals['ram_free_mb']}MB Swap:{vitals['swap_percent']}% Helpers:{vitals['helper_count']} Heat:{thermal_proxy}°C")
 
 if __name__ == "__main__":
     print("🚀 AILCC Resource Vital Emitter Online")

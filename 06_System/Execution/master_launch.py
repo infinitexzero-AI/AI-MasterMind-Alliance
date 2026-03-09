@@ -11,7 +11,12 @@ SCRIPTS = [
     "vault_rag.py",
     "budget_governor.py",
     "finance_tracker.py",
-    "convergence_audit.py"
+    "convergence_audit.py",
+    "resource_vital_emitter.py"
+]
+
+DAEMONS = [
+    ["node", "/Users/infinite27/AILCC_PRIME/06_System/Execution/playwright_watchdog.js"]
 ]
 
 def launch_all():
@@ -27,7 +32,12 @@ def launch_all():
         except subprocess.CalledProcessError as e:
             print(f"❌ Error launching {script}: {e.stderr}")
 
-    # 2. Start Persistent Background Loop (The Judge)
+    # 2. Start JS Daemons (Watchdogs)
+    for daemon in DAEMONS:
+        print(f"🛡️ Launching Watchdog: {daemon[1]}...")
+        subprocess.Popen(daemon, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+
+    # 3. Start Persistent Background Loop (The Judge)
     print("⚖️ Engaging THE JUDGE (Strategic Growth Advisory)...")
     judge_path = f"{ROOT}/01_Areas/Codebases/ailcc/thejudge.py"
     subprocess.Popen([PYTHON, judge_path], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)

@@ -1,0 +1,11 @@
+INFO:     Started server process [79367]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8091 (Press CTRL+C to quit)
+✅ Vault RAG Server Connected to ChromaDB at localhost:8000
+🚀 Starting Vault RAG Server on port 8091...
+INFO:     127.0.0.1:52069 - "POST /query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52073 - "POST /query HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52269 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52271 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53040 - "POST /query HTTP/1.1" 200 OK

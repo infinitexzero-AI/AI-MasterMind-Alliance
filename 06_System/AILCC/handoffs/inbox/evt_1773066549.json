@@ -1,0 +1,23 @@
+{
+  "id": "evt_1773066549",
+  "recipient": "valentine",
+  "sender": "EnvMonitor",
+  "type": "event_notification",
+  "content": {
+    "title": "SECTOR_1_HEARTBEAT",
+    "description": "Vitals: RAM:2008MB, CPU:23.3%, Heat:47\u00b0C",
+    "payload": {
+      "timestamp": "2026-03-09T11:29:09.148356",
+      "health_category": "NOMINAL",
+      "top_cpu": "23.3%",
+      "ram_mb": 2008,
+      "swap_percent": 81.0,
+      "helper_count": 20,
+      "thermal_proxy": "47\u00b0C"
+    }
+  },
+  "metadata": {
+    "timestamp": "2026-03-09T11:29:09.148944",
+    "priority": 3
+  }
+}
