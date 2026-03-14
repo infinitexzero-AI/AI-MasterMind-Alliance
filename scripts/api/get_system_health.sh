@@ -66,9 +66,9 @@ anti_data=$(gather_proc_fast "Antigravity Helper")
 # 3. Wait for background checks
 wait
 
-playwright_status=$(cat /tmp/h_playwright | cut -d= -f2)
-duck_status=$(cat /tmp/h_duck | cut -d= -f2)
-val_status=$(cat /tmp/h_valentine | cut -d= -f2)
+playwright_status=$(cat /tmp/h_playwright | cut -d= -f2 | tr -d '\r')
+duck_status=$(cat /tmp/h_duck | cut -d= -f2 | tr -d '\r')
+val_status=$(cat /tmp/h_valentine | cut -d= -f2 | tr -d '\r')
 
 # Performance Mode Calculation
 BATT=$(pmset -g batt)

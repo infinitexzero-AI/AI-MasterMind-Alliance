@@ -9,6 +9,40 @@ def load_config():
     with open(CONFIG_PATH, 'r') as f:
         return json.load(f)
 
+def harvest_rag_dna(dataset):
+    print("🧠 Harvesting intelligence from RAG pipeline...")
+    try:
+        import requests
+        CHROMA_URL = "http://localhost:8123/api/v1/collections"
+        res = requests.get(CHROMA_URL)
+        if res.status_code != 200: return
+        
+        collection_id = next((c['id'] for c in res.json() if c['name'] == 'ailcc_intelligence_vault'), None)
+        if not collection_id: return
+        
+        # Get all high-signal items (Strategic, Academic)
+        get_url = f"{CHROMA_URL}/{collection_id}/get"
+        payload = {"where": {"context_type": {"$in": ["Strategic", "Academic"]}}}
+        res = requests.post(get_url, json=payload)
+        if res.status_code != 200: return
+        
+        results = res.json()
+        if results.get('documents'):
+            for i in range(len(results['documents'])):
+                content = results['documents'][i]
+                metadata = results['metadatas'][i]
+                topic = metadata.get('topic', 'Strategic Directive')
+                
+                dataset.append({
+                    "instruction": f"Synthesize the strategic or academic significance of {topic}.",
+                    "input": "",
+                    "output": content.strip(),
+                    "metadata": metadata
+                })
+            print(f"   ✓ Harvested {len(results['documents'])} items from RAG.")
+    except Exception as e:
+        print(f"⚠️ RAG harvesting failed: {e}")
+
 def extract_high_signal_text():
     config = load_config()
     vault_path = config['vault_path']
@@ -19,8 +53,8 @@ def extract_high_signal_text():
     dataset = []
     print(f"🧬 Harvesting digital DNA from {vault_path}...")
 
+    # 1. File-based harvesting
     for root, dirs, files in os.walk(vault_path):
-        # Apply exclusions
         if any(ex in root for ex in exclusions):
             continue
             
@@ -31,24 +65,19 @@ def extract_high_signal_text():
                     with open(file_path, 'r', encoding='utf-8') as f:
                         content = f.read()
                     
-                    # Heuristic: Find specific headers or large blocks of original thought
-                    # For now, let's just take the whole file if it's substantial
                     word_count = len(content.split())
                     if word_count >= min_words:
-                        # Clean markdown formatting slightly for training fidelity
-                        clean_content = re.sub(r'#+\s', '', content)
-                        
-                        # Format as an instruction-output pair (Simplified for LoRA)
-                        # Instruction focuses on the topic of the file
                         topic = file.replace('.md', '').replace('_', ' ')
-                        
                         dataset.append({
                             "instruction": f"Explain the philosophy or technical details of {topic}.",
                             "input": "",
-                            "output": clean_content.strip()
+                            "output": re.sub(r'#+\s', '', content).strip()
                         })
                 except Exception as e:
                     print(f"⚠️ Error reading {file}: {e}")
+
+    # 2. RAG-based harvesting
+    harvest_rag_dna(dataset)
 
     # Write to JSONL
     os.makedirs(os.path.dirname(output_path), exist_ok=True)

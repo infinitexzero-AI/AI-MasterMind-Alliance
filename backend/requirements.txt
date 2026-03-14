@@ -3,3 +3,7 @@ uvicorn
 redis
 tiktoken
 python-multipart
+psutil
+chromadb==0.4.24
+numpy==1.26.4
+pydantic==1.10.15

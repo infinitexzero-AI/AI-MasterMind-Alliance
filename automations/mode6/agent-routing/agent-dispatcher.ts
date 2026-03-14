@@ -66,12 +66,12 @@ export class AgentDispatcher {
         },
       ],
       [
-        'claude',
+        'grok-architect',
         {
-          agent: 'claude',
+          agent: 'grok-architect' as AgentType,
           primarySkills: ['code-generation', 'analysis', 'documentation', 'reasoning'],
           secondarySkills: ['research', 'orchestration-support'],
-          contextLimit: 200000,
+          contextLimit: 131072,
           latencyProfile: 'standard',
           availableNow: true,
         },
@@ -122,7 +122,7 @@ export class AgentDispatcher {
     this.dispatchStats.totalDispatches++;
 
     try {
-      const agentName = handoff.targetAgent || 'claude';
+      const agentName = handoff.targetAgent || 'grok';
       const adapter = this.adapterRegistry.getAdapter(agentName);
 
       // If adapter missing, treat as unavailable and attempt fallbacks
@@ -246,7 +246,7 @@ export class AgentDispatcher {
    */
   private async executeTask(_decision: RoutingDecision, _handoff: HandoffContext): Promise<ExecutionResult> {
     const startTime = Date.now();
-    const processingTime = this.estimateProcessingTime('claude', _handoff);
+    const processingTime = this.estimateProcessingTime('grok' as AgentType, _handoff);
     await new Promise((resolve) => setTimeout(resolve, processingTime));
 
     const executionTime = Date.now() - startTime;
@@ -322,14 +322,15 @@ export class AgentDispatcher {
    */
   private getBackupAgent(primaryAgent: AgentType): AgentType {
     const modeRoutingTable: Record<AgentType, AgentType> = {
-      claude: 'supergrok',
-      supergrok: 'comet',
-      comet: 'claude',
-      chatgpt: 'claude',
-      grok: 'claude',
-      openai: 'claude',
+      'grok-architect': 'grok',
+      supergrok: 'grok',
+      comet: 'grok',
+      chatgpt: 'grok',
+      grok: 'openai',
+      openai: 'grok',
+      claude: 'grok',
     };
-    return modeRoutingTable[primaryAgent] || 'claude';
+    return modeRoutingTable[primaryAgent] || 'grok';
   }
 
   /**

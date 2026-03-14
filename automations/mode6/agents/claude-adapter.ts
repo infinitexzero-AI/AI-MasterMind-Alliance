@@ -1,30 +1,36 @@
 /**
- * Claude API Adapter
- * Integrates Anthropic's Claude API with Mode 6 Agent Dispatcher
+ * Grok Architect Adapter (formerly Claude Adapter)
+ * Integrates xAI's Grok API with Mode 6 Agent Dispatcher
  * Handles authentication, message formatting, streaming, and token management.
+ * 
+ * This adapter occupies the "architect" role in the swarm, specializing in
+ * code-generation, analysis, documentation, and multi-step reasoning.
  */
 
 import { configLoader } from '../config/env';
 import { HandoffContext, DispatchResult } from '../intent-router/types';
 
-interface ClaudeResponse {
+interface GrokChatResponse {
   id: string;
-  type: 'message';
-  role: 'assistant';
-  content: Array<{
-    type: 'text';
-    text: string;
-  }>;
+  object: string;
+  created: number;
   model: string;
-  stop_reason: string;
-  stop_sequence: string | null;
+  choices: Array<{
+    index: number;
+    message: {
+      role: string;
+      content: string;
+    };
+    finish_reason: string;
+  }>;
   usage: {
-    input_tokens: number;
-    output_tokens: number;
+    prompt_tokens: number;
+    completion_tokens: number;
+    total_tokens: number;
   };
 }
 
-export interface ClaudeAdapterConfig {
+export interface GrokArchitectConfig {
   apiKey?: string;
   modelId?: string;
   maxTokens?: number;
@@ -32,13 +38,13 @@ export interface ClaudeAdapterConfig {
   systemPrompt?: string;
 }
 
-export class ClaudeAdapter {
+export class GrokArchitectAdapter {
   private apiKey: string;
   private modelId: string;
   private maxTokens: number;
   private temperature: number;
   private systemPrompt: string;
-  private apiBaseUrl: string = 'https://api.anthropic.com/v1';
+  private apiBaseUrl: string = 'https://api.x.ai/v1';
   private requestStats: {
     successfulRequests: number;
     failedRequests: number;
@@ -51,21 +57,21 @@ export class ClaudeAdapter {
       averageResponseTime: 0,
     };
 
-  constructor(config: ClaudeAdapterConfig = {}) {
+  constructor(config: GrokArchitectConfig = {}) {
     const configSettings = configLoader.getConfig();
-    this.apiKey = config.apiKey || configSettings.anthropic.apiKey;
-    this.modelId = config.modelId || configSettings.anthropic.model;
-    this.maxTokens = config.maxTokens || configSettings.anthropic.maxTokens;
-    this.temperature = config.temperature || configSettings.anthropic.temperature;
+    this.apiKey = config.apiKey || configSettings.xai.apiKey;
+    this.modelId = config.modelId || configSettings.xai.model || 'grok-2-1212';
+    this.maxTokens = config.maxTokens || configSettings.xai.maxTokens || 4096;
+    this.temperature = config.temperature || 0.7;
     this.systemPrompt = config.systemPrompt || this.getDefaultSystemPrompt();
 
     if (!this.apiKey) {
-      console.warn('[Claude Adapter] ANTHROPIC_API_KEY not set; adapter will operate in mock mode.');
+      console.warn('[Grok Architect] XAI_API_KEY not set; adapter will operate in mock mode.');
     }
   }
 
   /**
-   * Execute a task via Claude API
+   * Execute a task via Grok API
    */
   async executeTask(handoff: HandoffContext): Promise<DispatchResult> {
     const startTime = Date.now();
@@ -90,8 +96,8 @@ export class ClaudeAdapter {
         return this.mockExecute(handoff, userMessage);
       }
 
-      // Call Claude API
-      const response = await this.callClaudeAPI(userMessage);
+      // Call Grok API
+      const response = await this.callGrokAPI(userMessage);
 
       const duration = Date.now() - startTime;
       this.updateStats(response, duration, true);
@@ -99,13 +105,13 @@ export class ClaudeAdapter {
       return {
         success: true,
         taskId: handoff.taskId,
-        agentUsed: 'claude',
-        output: response.content[0].text,
+        agentUsed: 'grok-architect',
+        output: response.choices[0]?.message?.content || '',
         metadata: {
           model: response.model,
-          inputTokens: response.usage.input_tokens,
-          outputTokens: response.usage.output_tokens,
-          stopReason: response.stop_reason,
+          inputTokens: response.usage.prompt_tokens,
+          outputTokens: response.usage.completion_tokens,
+          totalTokens: response.usage.total_tokens,
           duration,
         },
       };
@@ -117,8 +123,8 @@ export class ClaudeAdapter {
       return {
         success: false,
         taskId: handoff.taskId,
-        agentUsed: 'claude',
-        error: `Claude API error: ${errorMessage}`,
+        agentUsed: 'grok-architect',
+        error: `Grok Architect error: ${errorMessage}`,
         metadata: { duration },
       };
     }
@@ -134,13 +140,13 @@ export class ClaudeAdapter {
       const data = await response.json();
       return JSON.stringify(data, null, 2);
     } catch (error) {
-      console.warn(`[ClaudeAdapter] Failed to fetch memory key '${key}':`, error);
+      console.warn(`[GrokArchitect] Failed to fetch memory key '${key}':`, error);
       return null;
     }
   }
 
   /**
-   * Stream responses from Claude (for real-time feedback)
+   * Stream responses from Grok (for real-time feedback)
    */
   async streamTask(handoff: HandoffContext, onChunk: (chunk: string) => void): Promise<DispatchResult> {
     try {
@@ -156,43 +162,44 @@ export class ClaudeAdapter {
         // Mock stream mode
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const taskDataObj = handoff.taskData as any;
-        const mockResponse = `[Claude Mock] Processed: ${taskDataObj?.command || 'unknown'}`;
+        const mockResponse = `[Grok Architect Mock] Processed: ${taskDataObj?.command || 'unknown'}`;
         onChunk(mockResponse);
         return {
           success: true,
           taskId: handoff.taskId,
-          agentUsed: 'claude',
+          agentUsed: 'grok-architect',
           output: mockResponse,
           metadata: { streamed: true },
         };
       }
 
-      // Note: Actual streaming requires SSE support; placeholder for now
-      const response = await this.callClaudeAPI(userMessage);
-      onChunk(response.content[0].text);
+      // Standard call (streaming requires SSE — placeholder)
+      const response = await this.callGrokAPI(userMessage);
+      const output = response.choices[0]?.message?.content || '';
+      onChunk(output);
 
       return {
         success: true,
         taskId: handoff.taskId,
-        agentUsed: 'claude',
-        output: response.content[0].text,
+        agentUsed: 'grok-architect',
+        output,
         metadata: { streamed: true },
       };
     } catch (error) {
       return {
         success: false,
         taskId: handoff.taskId,
-        agentUsed: 'claude',
+        agentUsed: 'grok-architect',
         error: `Stream error: ${error instanceof Error ? error.message : String(error)}`,
       };
     }
   }
 
   /**
-   * Validate if Claude can handle a task
+   * Validate if Grok Architect can handle a task
    */
   async validateCapability(capability: string): Promise<boolean> {
-    const claudeCapabilities = [
+    const architectCapabilities = [
       'analysis',
       'code-generation',
       'code-review',
@@ -201,8 +208,9 @@ export class ClaudeAdapter {
       'multi-step-planning',
       'security-review',
       'refactoring',
+      'research',
     ];
-    return claudeCapabilities.includes(capability.toLowerCase());
+    return architectCapabilities.includes(capability.toLowerCase());
   }
 
   /**
@@ -246,13 +254,16 @@ export class ClaudeAdapter {
     return message;
   }
 
-  private async callClaudeAPI(userMessage: string): Promise<ClaudeResponse> {
+  private async callGrokAPI(userMessage: string): Promise<GrokChatResponse> {
     const payload = {
       model: this.modelId,
       max_tokens: this.maxTokens,
       temperature: this.temperature,
-      system: this.systemPrompt,
       messages: [
+        {
+          role: 'system',
+          content: this.systemPrompt,
+        },
         {
           role: 'user',
           content: userMessage,
@@ -260,41 +271,40 @@ export class ClaudeAdapter {
       ],
     };
 
-    const response = await fetch(`${this.apiBaseUrl}/messages`, {
+    const response = await fetch(`${this.apiBaseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'x-api-key': this.apiKey,
-        'anthropic-version': '2023-06-01',
+        'Authorization': `Bearer ${this.apiKey}`,
       },
       body: JSON.stringify(payload),
     });
 
     if (!response.ok) {
       const errorData = (await response.json()) as { error?: { message?: string } };
-      throw new Error(`Claude API error (${response.status}): ${errorData?.error?.message || 'Unknown error'}`);
+      throw new Error(`Grok API error (${response.status}): ${errorData?.error?.message || 'Unknown error'}`);
     }
 
-    return (await response.json()) as ClaudeResponse;
+    return (await response.json()) as GrokChatResponse;
   }
 
   private mockExecute(handoff: HandoffContext, userMessage: string): DispatchResult {
     return {
       success: true,
       taskId: handoff.taskId,
-      agentUsed: 'claude',
-      output: `[Claude Mock Mode] Processed task: ${handoff.metadata?.description || 'No description'}\n\nInput:\n${userMessage}`,
+      agentUsed: 'grok-architect',
+      output: `[Grok Architect Mock Mode] Processed task: ${handoff.metadata?.description || 'No description'}\n\nInput:\n${userMessage}`,
       metadata: {
         mode: 'mock',
-        reason: 'ANTHROPIC_API_KEY not configured',
+        reason: 'XAI_API_KEY not configured',
       },
     };
   }
 
-  private updateStats(response: ClaudeResponse, duration: number, success: boolean) {
+  private updateStats(response: GrokChatResponse, duration: number, success: boolean) {
     if (success) {
       this.requestStats.successfulRequests++;
-      const tokens = response.usage.input_tokens + response.usage.output_tokens;
+      const tokens = response.usage.total_tokens || (response.usage.prompt_tokens + response.usage.completion_tokens);
       this.requestStats.totalTokensUsed += tokens;
 
       const currentAvg = this.requestStats.averageResponseTime || 0;
@@ -307,12 +317,13 @@ export class ClaudeAdapter {
   }
 
   private getDefaultSystemPrompt(): string {
-    return `You are Claude, an AI assistant integrated into the AILCC Mode 6 multi-agent orchestration system.
+    return `You are the Grok Architect, an AI agent integrated into the AILCC Mode 6 multi-agent orchestration system (AI Mastermind Alliance).
 
 Your role:
 - Execute tasks assigned by the Intent Router
 - Provide clear, structured responses
 - Handle code analysis, generation, and review with high accuracy
+- Specialize in architecture design, documentation, and multi-step planning
 - Escalate complex tasks to secondary agents when needed
 - Format responses for downstream processing
 
@@ -325,4 +336,6 @@ Guidelines:
   }
 }
 
-export default ClaudeAdapter;
+// Legacy export alias for backward compatibility
+export const ClaudeAdapter = GrokArchitectAdapter;
+export default GrokArchitectAdapter;

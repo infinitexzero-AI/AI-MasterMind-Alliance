@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   # 1. Working Memory (Short-Term Context)
   hippocampus-redis:
@@ -11,47 +9,62 @@ services:
       - redis_data:/data
     command: redis-server --appendonly yes
     restart: always
+    networks:
+      - aimma-net
 
-  # 1.5. Visualizer (Redis Commander)
-  redis-ui:
-    image: rediscommander/redis-commander:latest
-    container_name: redis-ui
+  # 1.5. Visualizer (RedisInsight)
+  redis-insight:
+    image: redis/redisinsight:latest
+    container_name: redis-insight
     ports:
-      - "8081:8081"
-    environment:
-      - REDIS_HOSTS=local:hippocampus-redis:6379
+      - "8001:8001"
+    networks:
+      - aimma-net
     depends_on:
       - hippocampus-redis
 
   # 2. Memory API & Dashboard Connector
   hippocampus-api:
+    image: ailcc_prime-hippocampus-api:latest
     build: ./backend
     container_name: hippocampus-api
     working_dir: /app
     ports:
       - "8090:8000"
     volumes:
-      - ./backend:/app  # Live mapping for development
+      - ./scripts:/app/scripts:ro
+      - ./automations:/app/automations:ro
+      - /Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb:/app/brain:ro
     environment:
       - REDIS_HOST=hippocampus-redis
+      - CHROMA_HOST=chroma
     depends_on:
       - hippocampus-redis
+      - chroma
+    networks:
+      - aimma-net
 
   # 3. Nexus Dashboard (Frontend)
   nexus-dashboard:
-    image: node:20-alpine
+    build:
+      context: .
+      dockerfile: ./01_Areas/Codebases/ailcc/dashboard/Dockerfile
     container_name: nexus-dashboard
-    working_dir: /app
     ports:
-      - "3000:3000"
+      - "3001:3000"
     volumes:
-      - ./01_Areas/Codebases/ailcc/dashboard:/app
+      # - ./01_Areas/Codebases/ailcc/dashboard:/app:ro (Disabled for production)
       - ./automations:/app/automations
+      - ./04_Intelligence_Vault:/app/vault:ro # Roadmap Step 4
+      - ./scripts:/app/scripts:ro # Required for get_system_health.sh
     environment:
-      - NEXT_PUBLIC_API_URL=http://localhost:8090
-    command: npm run dev
+      - NEXT_PUBLIC_API_URL=http://localhost:8090 # Client-side
+      - BACKEND_API_URL=http://hippocampus-api:8000 # Server-side
+      - NODE_ENV=production
     depends_on:
       - hippocampus-api
+    networks:
+      - aimma-net
 
   # 4. Valentine Core (Agent Orchestrator)
   valentine-core:
@@ -63,11 +76,14 @@ services:
       - PORT=5001
       - REDIS_URL=redis://hippocampus-redis:6379
       - OPENAI_API_KEY=${OPENAI_API_KEY}
-    volumes:
-      - ./agents/chatgpt-proxy:/app
+      - XAI_API_KEY=${XAI_API_KEY}
+    # volumes:
+    #   - ./agents/chatgpt-proxy:/app (Disabled for production)
     command: node server.js
     depends_on:
       - hippocampus-redis
+    networks:
+      - aimma-net
 
   # 5. n8n Orchestrator (Workflow Automation)
   n8n:
@@ -85,10 +101,12 @@ services:
     volumes:
       - ./n8n_foundation/n8n_data:/home/node/.n8n
     restart: unless-stopped
+    networks:
+      - aimma-net
 
   # 6. ChromaDB (Local Vector Memory)
   chroma:
-    image: chromadb/chroma:latest
+    image: chromadb/chroma:0.4.24
     container_name: ailcc-hippocampus-db
     ports:
       - "8123:8000"
@@ -98,6 +116,29 @@ services:
     environment:
       - IS_PERSISTENT=TRUE
       - ANONYMIZED_TELEMETRY=FALSE
+    networks:
+      - aimma-net
+
+  # 7. Infrastructure Sentinel (Self-Healing)
+  sentinel:
+    build: ./agents/sentinel
+    container_name: sentinel-core
+    user: root
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    depends_on:
+      - hippocampus-api
+      - nexus-dashboard
+      - valentine-core
+    networks:
+      - aimma-net
+    restart: unless-stopped
+
+networks:
+  aimma-net:
+    driver: bridge
 
 volumes:
   redis_data:

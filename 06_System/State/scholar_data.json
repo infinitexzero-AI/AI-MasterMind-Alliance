@@ -1,0 +1,23 @@
+{
+  "courses": [
+    {
+      "code": "MATH 1311",
+      "name": "Discrete Mathematics",
+      "enrolled": true,
+      "status": "VERIFIED_ACTIVE"
+    },
+    {
+      "code": "HLTH 1011",
+      "name": "Foundations of Health",
+      "enrolled": true,
+      "status": "VERIFIED_ACTIVE"
+    },
+    {
+      "code": "GENS 2101",
+      "name": "General Studies",
+      "enrolled": true,
+      "status": "active"
+    }
+  ],
+  "last_updated": "2026-03-13T14:31:42.114678Z"
+}

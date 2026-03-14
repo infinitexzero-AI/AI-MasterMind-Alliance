@@ -4,7 +4,7 @@
  * Provides factory methods for adapter instantiation and capability lookup
  */
 
-import ClaudeAdapter, { ClaudeAdapterConfig } from './claude-adapter';
+import GrokArchitectAdapter, { GrokArchitectConfig } from './claude-adapter';
 import OpenAIAdapter, { OpenAIAdapterConfig } from './openai-adapter';
 import GrokAdapter, { GrokAdapterConfig } from './grok-adapter';
 import { DispatchResult, HandoffContext } from '../intent-router/types';
@@ -24,9 +24,12 @@ export class AdapterRegistry {
 
   private initializeDefaultAdapters() {
     // Initialize with default configs; actual API keys come from environment
-    this.register('claude', new ClaudeAdapter());
+    // 'claude' key is now served by GrokArchitectAdapter (xAI-powered)
+    this.register('claude', new GrokArchitectAdapter());
     this.register('openai', new OpenAIAdapter());
     this.register('grok', new GrokAdapter());
+    // Also register under the explicit name for direct access
+    this.register('grok-architect', new GrokArchitectAdapter());
   }
 
   /**
@@ -87,10 +90,10 @@ export class AdapterRegistry {
   }
 
   /**
-   * Create new Claude adapter with custom config
+   * Create new Grok Architect adapter with custom config
    */
-  createClaudeAdapter(config?: ClaudeAdapterConfig): ClaudeAdapter {
-    return new ClaudeAdapter(config);
+  createGrokArchitectAdapter(config?: GrokArchitectConfig): GrokArchitectAdapter {
+    return new GrokArchitectAdapter(config);
   }
 
   /**
