@@ -4,10 +4,11 @@ description: Automate source control commit with intelligent message generation
 
 # Commit Changes
 
-1. Run the git automation script
+1. Run the AILCC Nexus Intelligence Git wrapper
 
 // turbo
 
 ```bash
-cd 01_Areas/Codebases/ailcc/dashboard && ./scripts/git-auto.sh "feat" "stabilization"
+cd /Users/infinite27/AILCC_PRIME && python3 scripts/automation/git_intelligence.py
 ```
+
