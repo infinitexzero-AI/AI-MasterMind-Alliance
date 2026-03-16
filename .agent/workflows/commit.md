@@ -11,4 +11,3 @@ description: Automate source control commit with intelligent message generation
 ```bash
 cd /Users/infinite27/AILCC_PRIME && python3 scripts/automation/git_intelligence.py
 ```
-

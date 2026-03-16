@@ -1,0 +1,29 @@
+# AILCC Autonomous Engine: Hardcoded Ignore Index
+# This file permanently prevents AI filesystem tools (fd/ripgrep/grep) from crashing
+# or timing out by actively shielding them from massive, irrelevant data blobs.
+
+node_modules/
+.next/
+dist/
+venv/
+__pycache__/
+
+# Infrastructure Data Blobs (Never scan these raw binaries)
+n8n_foundation/chroma_data/
+n8n_foundation/n8n_data/
+docker-compose-state/
+redis_data/
+
+# Git internals
+.git/
+
+# macOS bloat
+.DS_Store
+
+# Hidden agent logs / states that are continuously updated
+logs/
+*.log
+*.log.gz
+*.sqlite-shm
+*.sqlite-wal
+status_*.json

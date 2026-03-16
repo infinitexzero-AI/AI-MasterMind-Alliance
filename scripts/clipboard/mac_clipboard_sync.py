@@ -2,7 +2,7 @@ import time
 import requests
 import AppKit
 
-RELAY_URL = "http://localhost:5005/api/system/clipboard"
+RELAY_URL = "http://127.0.0.1:5005/api/system/clipboard"
 NODE_NAME = "MacBook-Origin"
 
 def get_clipboard_change_count():
@@ -24,7 +24,7 @@ last_local_clip = get_mac_clipboard()
 last_remote_clip = ""
 
 print(f"🌀 AILCC Local Drop (Clipboard Sync) Initialized on {NODE_NAME}")
-print("📡 Listening via native NSPasteboard hooks (Universal Clipboard Safe Mode)...")
+print("📡 Seamless Universal Mode Active (NSPasteboard).")
 
 while True:
     try:
@@ -47,12 +47,12 @@ while True:
             data = resp.json()
             remote_text = data.get("text", "")
             if remote_text and remote_text != last_local_clip and remote_text != last_remote_clip:
-                # New remote clip detected! Apply to local Mac clipboard natively
+                # Apply to local Mac clipboard natively
                 set_mac_clipboard(remote_text)
                 last_remote_clip = remote_text
                 last_local_clip = remote_text
                 
-                # Update our baseline count so we ignore our own paste event
+                # Update baseline count so we ignore our own paste event
                 last_change_count = get_clipboard_change_count()
                 print(f"[{time.strftime('%H:%M:%S')}] ⬇️ Pulled Network Clipboard -> Mac")
 
