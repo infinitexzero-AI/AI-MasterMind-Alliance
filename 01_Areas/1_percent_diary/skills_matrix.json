@@ -1,0 +1,40 @@
+{
+  "matrix_version": "1.0.0",
+  "philosophy_root": "Think and Grow Rich (Specialized Knowledge) / Atomic Habits (Identity Based Change)",
+  "nodes": [
+    {
+      "id": "skill_med_ethics_01",
+      "category": "Medical Pathway",
+      "human_dimension": {
+        "skill_name": "Medical Ethics Argumentation (CASPer)",
+        "current_score": 15.0,
+        "daily_1_percent_action": "Complete one MMI scenario and verbally debate the Swarm for 5 minutes.",
+        "status": "ACTIVE"
+      },
+      "ai_dimension": {
+        "skill_name": "Ethical Literature Parsing & Rubric Scoring",
+        "current_score": 15.0,
+        "daily_1_percent_action": "Scrape and ingest one new Canadian Medical Association Journal (CMAJ) article daily into the Hippocampus RAG.",
+        "status": "ACTIVE"
+      },
+      "days_compounded": 4
+    },
+    {
+      "id": "skill_code_arch_02",
+      "category": "Systems Engineering",
+      "human_dimension": {
+        "skill_name": "Autonomous Agent Architecture",
+        "current_score": 42.0,
+        "daily_1_percent_action": "Directly code or architect one new Daemon concept for 20 minutes.",
+        "status": "ACTIVE"
+      },
+      "ai_dimension": {
+        "skill_name": "Python Daemon Fault Tolerance",
+        "current_score": 42.0,
+        "daily_1_percent_action": "Run automated static analysis on one core logic file daily and resolve a dormant bug.",
+        "status": "ACTIVE"
+      },
+      "days_compounded": 21
+    }
+  ]
+}

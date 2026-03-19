@@ -35,6 +35,7 @@ services:
       - ./scripts:/app/scripts:ro
       - ./automations:/app/automations:ro
       - /Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb:/app/brain:ro
+      - /var/run/docker.sock:/var/run/docker.sock # Host telemetry access
     environment:
       - REDIS_HOST=hippocampus-redis
       - CHROMA_HOST=chroma
@@ -53,10 +54,11 @@ services:
     ports:
       - "3001:3000"
     volumes:
-      # - ./01_Areas/Codebases/ailcc/dashboard:/app:ro (Disabled for production)
+      - ./01_Areas/Codebases/ailcc/dashboard/src/lib/mode6:/app/mode6:cached # Live sync for loop.ts patches
       - ./automations:/app/automations
       - ./04_Intelligence_Vault:/app/vault:ro # Roadmap Step 4
       - ./scripts:/app/scripts:ro # Required for get_system_health.sh
+      - /var/run/docker.sock:/var/run/docker.sock # Host telemetry access
     environment:
       - NEXT_PUBLIC_API_URL=http://localhost:8090 # Client-side
       - BACKEND_API_URL=http://hippocampus-api:8000 # Server-side
@@ -77,13 +79,14 @@ services:
       - REDIS_URL=redis://hippocampus-redis:6379
       - OPENAI_API_KEY=${OPENAI_API_KEY}
       - XAI_API_KEY=${XAI_API_KEY}
-    # volumes:
-    #   - ./agents/chatgpt-proxy:/app (Disabled for production)
+    volumes:
+      - ./agents/chatgpt-proxy:/app:cached # Live sync for agent patches
     command: node server.js
     depends_on:
       - hippocampus-redis
     networks:
       - aimma-net
+    restart: unless-stopped
 
   # 5. n8n Orchestrator (Workflow Automation)
   n8n:
