@@ -6,11 +6,14 @@
         "**/CVS": true,
         "**/.DS_Store": true,
         "**/Thumbs.db": true,
-        "**/node_modules": false,
-        "**/dist": false,
+        "**/node_modules": true,
+        "**/dist": true,
         "**/.next": true,
-        "**/build": false,
-        "**/.venv": false,
+        "**/build": true,
+        "**/.venv": true,
+        "**/__pycache__": true,
+        "**/*.pyc": true,
+        "**/*.png": true,
         "04_Archive": true
     },
     "search.exclude": {
@@ -36,6 +39,18 @@
         "**/coverage/**": true,
         "04_Archive/**": true
     },
+    
+    "typescript.tsserver.maxTsServerMemory": 512,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "files.insertFinalNewline": true, 
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    
+    "workbench.editorAssociations": {
+        "*.md": "default"
+    },
+
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "vscode.typescript-language-features",
     "[python]": {
