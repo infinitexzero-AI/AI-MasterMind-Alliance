@@ -11,6 +11,7 @@ from pathlib import Path
 VAULT_PATH = Path("/Users/infinite27/Library/CloudStorage/OneDrive-Personal/AILCC_VAULT")
 DIRECTIVES_PATH = VAULT_PATH / "directives"
 INTELLIGENCE_VAULT = VAULT_PATH / "04_Intelligence_Vault"
+MODE6_DATA_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/data")
 
 # Dynamic Model Selection (Fallback to gpt-4o if strict routing is offline)
 OPTIMAL_MODEL = os.environ.get("AILCC_OPTIMAL_MODEL", "gpt-4o")
@@ -37,50 +38,36 @@ class GrokipediaAgent:
             # Simple metadata extraction
             topic = file_path.stem.replace("research_", "").replace("_", " ").title()
             
-            # Simulated Research Synthesis (To be linked to Search APIs in v1.1)
-            report = self.synthesize_mock_report(topic, content)
+            # Ensure Data Directory exists
+            MODE6_DATA_DIR.mkdir(parents=True, exist_ok=True)
             
-            # Save to Intelligence Vault
-            output_folder = INTELLIGENCE_VAULT / topic.replace(" ", "_")
-            output_folder.mkdir(parents=True, exist_ok=True)
+            # Compile Swarm JSON Task Payload
+            task_id = f"research-{int(time.time())}"
+            payload = {
+                "taskId": task_id,
+                "primaryAgent": "claude",  # Default to high-fidelity agent
+                "secondaryAgents": [],
+                "timestamp": datetime.now().isoformat(),
+                "metadata": {
+                    "topic": topic,
+                    "source": file_path.name
+                },
+                "taskData": f"Autonomously research the following topic and provide a comprehensive intelligence report formatted in Markdown. Focus on key systems, architectures, and actionable strategy.\n\nTopic: {topic}\nContext/Directive: {content}"
+            }
             
-            output_file = output_folder / f"intelligence_report_{datetime.now().strftime('%Y%m%d')}.md"
+            output_file = MODE6_DATA_DIR / f"decision-{task_id}.json"
             with open(output_file, 'w') as f:
-                f.write(report)
+                json.dump(payload, f, indent=2)
             
-            print(f"✅ Intelligence Synthesized: {output_file}")
+            print(f"✅ Handoff to Neural Loop: {output_file.name}")
             
-            # Cleanup directive
+            # Cleanup processed directive
             file_path.unlink()
             
         except Exception as e:
-            print(f"❌ Synthesis Failure: {str(e)}")
+            print(f"❌ Task Dispatch Failure: {str(e)}")
 
-    def synthesize_mock_report(self, topic, prompt):
-        return f"""# SOVEREIGN INTELLIGENCE REPORT: {topic}
-        
-## Metadata
-- **Agent**: GROKIPEDIA_V1
-- **Model Core**: {OPTIMAL_MODEL}
-- **Timestamp**: {datetime.now().isoformat()}
-- **Source Directive**: {prompt}
-- **Security Tier**: L5_SOVEREIGN
-
-## Executive Summary
-This autonomous report explores the semantic intersections of **{topic}** within the current Mastermind Alliance scope.
-
-## Key Research Findings
-- **Integration Vector**: High alignment with existing Redis Persistent Core patterns.
-- **Latency Analysis**: Synthesis completed in under 400ms via local compute offload.
-- **Academic Context**: Matches standard peer-reviewed frameworks for distributed AI orchestration.
-
-## Actionable Directives
-1. Deploy new vector sub-nodes for {topic}.
-2. Update Hippocampus heat-map with these new coordinates.
-
----
-*Autonomous Synthesis completed successfully. Verifying integrity via The Judge v2.0.*
-"""
+    # Deprecated: No longer needed. Mock report generation explicitly removed in favor of real Swarm execution.
 
     def run(self):
         while self.active:
