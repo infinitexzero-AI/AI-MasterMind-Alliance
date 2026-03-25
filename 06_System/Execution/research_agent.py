@@ -4,6 +4,7 @@ import time
 import requests
 from datetime import datetime
 from pathlib import Path
+from semantic_router import SemanticRouter
 
 # GROKIPEDIA RESEARCH AGENT v1.0
 # Part of the AI Mastermind Alliance "March 2026 Strategy"
@@ -41,16 +42,23 @@ class GrokipediaAgent:
             # Ensure Data Directory exists
             MODE6_DATA_DIR.mkdir(parents=True, exist_ok=True)
             
+            # Epoch 50: Dynamic Cognitive Routing
+            router = SemanticRouter(fast_model="llama3")
+            route_data = router.evaluate_task(topic, content)
+            primary_agent = route_data["agent"]
+            
             # Compile Swarm JSON Task Payload
             task_id = f"research-{int(time.time())}"
             payload = {
                 "taskId": task_id,
-                "primaryAgent": "claude",  # Default to high-fidelity agent
+                "primaryAgent": primary_agent,
                 "secondaryAgents": [],
                 "timestamp": datetime.now().isoformat(),
                 "metadata": {
                     "topic": topic,
-                    "source": file_path.name
+                    "source": file_path.name,
+                    "complexity": route_data["complexity"],
+                    "routing_reason": route_data["reason"]
                 },
                 "taskData": f"Autonomously research the following topic and provide a comprehensive intelligence report formatted in Markdown. Focus on key systems, architectures, and actionable strategy.\n\nTopic: {topic}\nContext/Directive: {content}"
             }

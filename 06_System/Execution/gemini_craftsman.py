@@ -3,6 +3,7 @@ import time
 import os
 import json
 from datetime import datetime
+from memory_compressor import MemoryCompressor
 
 # Path Resolution
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -64,8 +65,13 @@ def execute_coding_directive(directive):
             history = []
         
         history.append(report)
+        
+        # Epoch 50: Autonomous Context Pruning
+        compressor = MemoryCompressor(max_tokens=8000, model="llama3")
+        condensed_history = compressor.compress(history)
+        
         with open(history_file, 'w') as f:
-            json.dump(history, f, indent=2)
+            json.dump(condensed_history, f, indent=2)
     except Exception as e:
         log_event(f"Failed to update history: {e}")
 

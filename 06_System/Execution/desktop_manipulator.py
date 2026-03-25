@@ -7,6 +7,7 @@ from PIL import ImageGrab
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from typing import List, Optional
+from interlock import require_human_authorization
 
 app = FastAPI(title="AILCC Desktop Manipulator")
 logging.basicConfig(level=logging.INFO)
@@ -38,6 +39,14 @@ async def execute_actions(actions: List[Action]):
                 results.append(f"Clicked {act.button} {act.clicks} times")
             elif act.action == "type":
                 if act.text:
+                    # Epoch 50: Zero-Trust Biometric Interlock
+                    critical_keywords = ["password", "wire ", "transfer", "sudo ", "pay", "checkout", "confirm"]
+                    if any(kw in act.text.lower() for kw in critical_keywords):
+                        logging.warning(f"[ZERO-TRUST] Interlock tripped by Type action: '{act.text}'")
+                        authorized = require_human_authorization(f"Type restricted keystrokes '{act.text}'", "CRITICAL")
+                        if not authorized:
+                            raise HTTPException(status_code=403, detail="BIOMETRIC_INTERLOCK_DENIED_BY_USER")
+                            
                     pyautogui.typewrite(act.text, interval=0.05)
                     results.append(f"Typed '{act.text}'")
             elif act.action == "press":
