@@ -92,5 +92,22 @@
     "extensions.experimental.affinity": {
         "antigravity.antigravity": 1
     },
-    "task.allowAutomaticTasks": "on"
+    "task.allowAutomaticTasks": "on",
+    "gitlens.currentLine.format": "${author} • ${agoOrDate} • ${message|75?}",
+    "gitlens.codeLens.enabled": true,
+    "gitlens.codeLens.recentChange.enabled": true,
+    "gitlens.autolinks": [
+        {
+            "prefix": "Epoch ",
+            "url": "file:///Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb/walkthrough.md"
+        },
+        {
+            "prefix": "Phase ",
+            "url": "file:///Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb/walkthrough.md"
+        },
+        {
+            "prefix": "Task ",
+            "url": "file:///Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb/task.md"
+        }
+    ]
 }
