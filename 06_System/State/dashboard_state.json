@@ -1,0 +1,14 @@
+{
+  "status": "online",
+  "active_modules": [
+    "metrics",
+    "telemetry",
+    "swarm_status"
+  ],
+  "last_updated": "2026-03-25T00:00:00Z",
+  "metrics": {
+    "cpu_usage": 0,
+    "memory_usage": 0,
+    "active_agents": 25
+  }
+}

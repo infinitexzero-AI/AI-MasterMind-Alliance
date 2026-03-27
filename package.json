@@ -2,6 +2,7 @@
   "name": "ailcc-mode6",
   "version": "1.0.0",
   "description": "Mode 6 Intent Routing & Multi-Agent Orchestration System for AILCC Framework",
+  "type": "module",
   "main": "automations/mode6/index.ts",
   "scripts": {
     "build": "npm run dashboard:build",

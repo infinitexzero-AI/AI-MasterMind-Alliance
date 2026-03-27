@@ -90,7 +90,8 @@ def update_master_status(status, task):
 def ingest_to_kb(items):
     """Normalized ingestion into the local SQLite knowledge base."""
     try:
-        conn = sqlite3.connect(KB_DB)
+        conn = sqlite3.connect(KB_DB, timeout=30.0)
+        conn.execute('PRAGMA journal_mode=WAL;')
         c = conn.cursor()
         for item in items:
             # id, source, type, content, tags, synced_at, version
@@ -132,7 +133,8 @@ def sync_antigravity():
     
     log("Starting Antigravity sync...")
     try:
-        conn = sqlite3.connect(ANTIGRAVITY_DB)
+        conn = sqlite3.connect(ANTIGRAVITY_DB, timeout=30.0)
+        conn.execute('PRAGMA journal_mode=WAL;')
         cursor = conn.cursor()
         
         # Simplified query based on expected schema
