@@ -1,0 +1,40 @@
+{
+  "missions": [
+    {
+      "id": "hlth1011_survey_critical_review",
+      "title": "HLTH1011: Survey Critical Review Siege",
+      "status": "active",
+      "priority": "high",
+      "build_order": [
+        "1. Open Survey Document (01_Areas/Academics/HLTH1011)",
+        "2. Locate 3 Primary Deficiencies (Use Academic Scout Agent)",
+        "3. Forge First 500-Word Response (ADHD Focus Mode: 25-min Sprint)",
+        "4. Peer-Review vs Rubric (Compliance Agent)",
+        "5. Final Transmission (Submission Ready)"
+      ]
+    },
+    {
+      "id": "gens2101_rescue_step_2",
+      "title": "GENS2101: Step 2 Rescue Operation",
+      "status": "active",
+      "priority": "urgent",
+      "build_order": [
+        "1. Extract January Feedback Archive",
+        "2. Identify 'Work-Block' Redundant Logic",
+        "3. Deploy 1st Micro-Edit (Page 1-2 Focus)",
+        "4. Synchronize with Sovereign Vault",
+        "5. Final Submission Gate"
+      ]
+    }
+  ],
+  "agent_directives": {
+    "scout": {
+      "focus": "Deficiency identification",
+      "intensity": 0.85
+    },
+    "compliance": {
+      "focus": "Rubric alignment",
+      "intensity": 0.95
+    }
+  }
+}
