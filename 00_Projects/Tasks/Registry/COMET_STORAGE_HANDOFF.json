@@ -1,0 +1,28 @@
+{
+  "audit_version": "1.0",
+  "timestamp": "2025-12-31T12:16:00Z",
+  "status": "DISK_CRITICAL",
+  "metrics": {
+    "total_audited_gb": 5.14,
+    "large_files_count": 40,
+    "archival_count": 6306
+  },
+  "top_migration_targets": [
+    {
+      "path": "/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/00-Inbox/iCloud Photos.zip",
+      "size_mb": 382.02,
+      "reason": "Archival candidate (>2 years old)"
+    },
+    {
+      "path": "/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs/3D Scan 2024/",
+      "size_mb": 1200.0,
+      "reason": "High-volume legacy exports"
+    },
+    {
+      "path": "/Users/infinite27/AILCC_PRIME/node_modules",
+      "size_mb": 500.0,
+      "reason": "Redundant dependency trees"
+    }
+  ],
+  "visualization": "file:///Users/infinite27/AILCC_PRIME/05_Templates/storage_topology.md"
+}

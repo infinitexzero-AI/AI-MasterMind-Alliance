@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-12-29T00:20:00Z",
+  "agents": [
+    {"agent_id": "comet", "name": "Comet Assistant", "role": "web_research_orchestration", "capabilities": ["web_scraping", "search", "task_delegation"], "skills": ["deep_research", "browser_automation", "citation_synthesis"], "status": "active", "endpoint": "perplexity_browser"},
+    {"agent_id": "valentine", "name": "Valentine", "role": "task_routing", "capabilities": ["decision_logic", "agent_selection", "priority_queuing"], "skills": ["task_triaging", "system_health_monitoring", "process_routing"], "status": "active", "endpoint": "local_logic"},
+    {"agent_id": "grok", "name": "Grok", "role": "planning_strategy", "capabilities": ["strategic_planning", "optimization", "scenario_analysis"], "skills": ["strategic_roadmapping", "risk_assessment", "scenario_planning"], "status": "active", "endpoint": "x_ai"},
+    {"agent_id": "claude", "name": "Claude Desktop", "role": "logic_logs_mcp", "capabilities": ["file_operations", "log_analysis", "mcp_access"], "skills": ["full_stack_coding", "system_architecture", "mcp_integration"], "status": "offline_until_2am", "endpoint": "mcp_filesystem"},
+    {"agent_id": "antigravity", "name": "Antigravity", "role": "code_schemas", "capabilities": ["code_generation", "schema_design", "database_ops"], "skills": ["agentic_coding", "schema_validation", "database_migration"], "status": "active", "endpoint": "gemini_api"},
+    {"agent_id": "chatgpt", "name": "ChatGPT", "role": "general_assistant", "capabilities": ["general_queries", "brainstorming", "documentation"], "skills": ["creative_writing", "general_knowledge_retrieval", "ideation"], "status": "active", "endpoint": "openai_api"},
+    {"agent_id": "gemini", "name": "Gemini", "role": "synthesis", "capabilities": ["summarization", "synthesis", "analysis"], "skills": ["data_synthesis", "content_summarization", "pattern_recognition"], "status": "active", "endpoint": "google_ai"}
+  ]
+}

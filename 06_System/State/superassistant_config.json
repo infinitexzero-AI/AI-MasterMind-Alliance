@@ -1,0 +1,24 @@
+{
+  "mcpServers": {
+    "GitHub": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": ""
+      }
+    },
+    "Linear": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@mseep/linear-mcp"
+      ],
+      "env": {
+        "LINEAR_API_KEY": ""
+      }
+    }
+  }
+}

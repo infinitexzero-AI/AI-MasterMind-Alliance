@@ -1,0 +1,29 @@
+{
+  "system": {
+    "version": "1.0.4",
+    "protocols": ["UCP-P"],
+    "workspace_root": "/Users/infinite27/AILCC_PRIME",
+    "autonomy_level": 5,
+    "feedback_loop_enabled": true,
+    "self_improvement": true
+  },
+  "launcher": {
+    "browser": "Google Chrome",
+    "urls": [
+      "https://www.google.com",
+      "https://www.perplexity.ai",
+      "http://localhost:3000"
+    ]
+  },
+  "modules": {
+    "gemini_images": {
+      "enabled": true,
+      "provider": "vertex_ai"
+    },
+    "memory_bridge": {
+      "enabled": true,
+      "hook_script": "scripts/auto_context_sorter.py",
+      "auto_archive": true
+    }
+  }
+}

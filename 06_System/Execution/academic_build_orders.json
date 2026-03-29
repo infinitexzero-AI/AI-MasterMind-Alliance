@@ -1,0 +1,30 @@
+{
+  "build_orders": [
+    {
+      "mission_id": "HLTH1011_BOSS_BATTLE",
+      "title": "Survey Critical Review (15m)",
+      "focus": ["HLTH1011"],
+      "priority": "HIGH",
+      "deadline": "2026-03-29",
+      "steps": [
+        { "id": "1", "time": "0:00", "action": "INSERT INTO MOODLE", "desc": "Login to japalkricard@mta.ca and navigate to HLTH1011 'Survey Critical Review' module.", "status": "PENDING" },
+        { "id": "2", "time": "2:00", "action": "EXTRACT SURVEY DOC", "desc": "Download the Survey Instrument for review. Open alongside the rubric.", "status": "PENDING" },
+        { "id": "3", "time": "5:00", "action": "ETCH ETHICAL GAPS", "desc": "Identify 3 core ethical gaps or design flaws in the survey draft.", "status": "PENDING" },
+        { "id": "4", "time": "12:00", "action": "FORGE REVIEW DRAFT", "desc": "Draft the first 250 words of the critical review directly into MD.", "status": "PENDING" },
+        { "id": "5", "time": "15:00", "action": "SYNC TO VAULT", "desc": "Save draft to MTA Sovereign Vault and prep for final polish.", "status": "DONE" }
+      ]
+    },
+    {
+      "mission_id": "GENS2101_RESCUE",
+      "title": "Step 2 Rescue Operation (10m)",
+      "focus": ["GENS2101"],
+      "priority": "CRITICAL",
+      "deadline": "OVERDUE (March 20)",
+      "steps": [
+        { "id": "1", "time": "0:00", "action": "DAMAGE ASSESSMENT", "desc": "Open GENS2101 Moodle and download 'Step 2' requirements.", "status": "PENDING" },
+        { "id": "2", "time": "2:00", "action": "RECOVERY PROTOCOL", "desc": "Email professor regarding late submission with validated Meighen Centre context.", "status": "PENDING" },
+        { "id": "3", "time": "8:00", "action": "CORE WORK COMMENCEMENT", "desc": "Outline the first 3 sections of the Step 2 assignment.", "status": "PENDING" }
+      ]
+    }
+  ]
+}

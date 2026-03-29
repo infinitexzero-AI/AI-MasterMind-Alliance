@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AILCC Cortex Monitor</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: rgba(8, 8, 20, 0.92);
+            --border: rgba(139, 92, 246, 0.3);
+            --violet: #8b5cf6;
+            --fuchsia: #d946ef;
+            --emerald: #10b981;
+            --amber: #f59e0b;
+            --red: #ef4444;
+            --sky: #0ea5e9;
+            --slate-3: #cbd5e1;
+            --slate-4: #94a3b8;
+            --slate-6: #475569;
+            --slate-8: #1e293b;
+            --slate-9: #0f172a;
+        }
+
+        html, body {
+            width: 380px;
+            height: 520px;
+            overflow: hidden;
+            background: transparent;
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        .container {
+            width: 380px;
+            height: 520px;
+            background: var(--bg);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            backdrop-filter: blur(40px) saturate(180%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.8), 0 0 40px rgba(139,92,246,0.15), inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+
+        /* ── Header ── */
+        .header {
+            padding: 16px 20px 14px;
+            border-bottom: 1px solid rgba(139,92,246,0.2);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(217,70,239,0.05));
+            flex-shrink: 0;
+        }
+
+        .header-left { display: flex; align-items: center; gap: 10px; }
+
+        .logo-pulse {
+            width: 10px; height: 10px; border-radius: 50%;
+            background: var(--emerald);
+            box-shadow: 0 0 8px var(--emerald);
+            animation: pulse 2s infinite;
+            flex-shrink: 0;
+        }
+        .logo-pulse.offline { background: var(--slate-6); box-shadow: none; animation: none; }
+        .logo-pulse.warning { background: var(--amber); box-shadow: 0 0 8px var(--amber); }
+        .logo-pulse.error   { background: var(--red);   box-shadow: 0 0 8px var(--red); animation: fastpulse 0.8s infinite; }
+
+        @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.6;transform:scale(0.9)} }
+        @keyframes fastpulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+        .logo-text { font-size: 13px; font-weight: 700; color: #fff; letter-spacing: 0.15em; text-transform: uppercase; }
+        .logo-sub  { font-size: 9px; color: var(--slate-4); letter-spacing: 0.1em; text-transform: uppercase; }
+
+        .header-actions { display: flex; gap: 6px; }
+        .btn-icon {
+            width: 28px; height: 28px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.08);
+            background: rgba(255,255,255,0.04); color: var(--slate-4); cursor: pointer;
+            display: flex; align-items: center; justify-content: center; font-size: 13px;
+            transition: all 0.15s;
+        }
+        .btn-icon:hover { background: rgba(139,92,246,0.2); border-color: var(--border); color: #fff; }
+
+        /* ── Status bar ── */
+        .status-bar {
+            padding: 10px 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-shrink: 0;
+        }
+        .status-badge {
+            font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em;
+            padding: 3px 8px; border-radius: 4px;
+        }
+        .status-badge.healthy { background: rgba(16,185,129,0.15); color: var(--emerald); border: 1px solid rgba(16,185,129,0.3); }
+        .status-badge.warning { background: rgba(245,158,11,0.15); color: var(--amber);   border: 1px solid rgba(245,158,11,0.3); }
+        .status-badge.error   { background: rgba(239,68,68,0.15);  color: var(--red);     border: 1px solid rgba(239,68,68,0.3); }
+        .status-badge.offline { background: rgba(71,85,105,0.15);  color: var(--slate-4); border: 1px solid rgba(71,85,105,0.3); }
+        .status-badge.unknown { background: rgba(71,85,105,0.1);   color: var(--slate-6); border: 1px solid rgba(71,85,105,0.2); }
+
+        .last-updated { font-size: 9px; color: var(--slate-6); margin-left: auto; }
+
+        /* ── Metrics grid ── */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 8px;
+            padding: 14px 20px;
+            flex-shrink: 0;
+        }
+        .metric {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 10px;
+            padding: 10px 12px;
+        }
+        .metric-label { font-size: 8px; color: var(--slate-6); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 4px; }
+        .metric-value { font-size: 20px; font-weight: 700; line-height: 1; }
+        .metric-value.cpu     { color: var(--violet); }
+        .metric-value.memory  { color: var(--sky); }
+        .metric-value.procs   { color: var(--fuchsia); }
+        .metric-sub { font-size: 8px; color: var(--slate-6); margin-top: 3px; }
+
+        /* ── Mini bar chart ── */
+        .sparkline {
+            padding: 0 20px 14px;
+            flex-shrink: 0;
+        }
+        .sparkline-label { font-size: 9px; color: var(--slate-6); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+        .sparkline-bars {
+            display: flex; align-items: flex-end; gap: 2px; height: 32px;
+            background: rgba(255,255,255,0.02); border-radius: 6px; padding: 4px 6px;
+            border: 1px solid rgba(255,255,255,0.04);
+        }
+        .sparkline-bar {
+            flex: 1; border-radius: 2px;
+            background: linear-gradient(180deg, var(--violet), var(--fuchsia));
+            opacity: 0.7;
+            min-height: 2px;
+            transition: height 0.4s ease;
+        }
+
+        /* ── Agents list ── */
+        .agents-section {
+            flex: 1;
+            overflow-y: auto;
+            padding: 0 20px 10px;
+        }
+        .section-label {
+            font-size: 9px; color: var(--slate-6); text-transform: uppercase; letter-spacing: 0.12em;
+            margin-bottom: 8px; display: flex; align-items: center; justify-content: space-between;
+        }
+
+        .agent-item {
+            display: flex; align-items: center; gap: 8px;
+            padding: 7px 10px; border-radius: 8px;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid rgba(255,255,255,0.04);
+            margin-bottom: 4px;
+            transition: border-color 0.2s;
+        }
+        .agent-item:hover { border-color: rgba(139,92,246,0.3); }
+        .agent-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+        .agent-dot.active   { background: var(--emerald); box-shadow: 0 0 4px var(--emerald); }
+        .agent-dot.warning  { background: var(--amber); }
+        .agent-dot.inactive { background: var(--slate-6); }
+        .agent-name { font-size: 11px; color: var(--slate-3); flex: 1; }
+        .agent-status { font-size: 9px; color: var(--slate-6); }
+
+        .offline-banner {
+            flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+            gap: 8px; color: var(--slate-6);
+        }
+        .offline-icon { font-size: 32px; opacity: 0.4; }
+        .offline-text { font-size: 11px; text-align: center; line-height: 1.5; }
+
+        /* ── Footer ── */
+        .footer {
+            padding: 10px 20px;
+            border-top: 1px solid rgba(255,255,255,0.04);
+            display: flex; gap: 6px;
+            flex-shrink: 0;
+        }
+        .footer-btn {
+            flex: 1; padding: 8px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.06);
+            background: rgba(255,255,255,0.03); color: var(--slate-4); cursor: pointer;
+            font-family: 'JetBrains Mono', monospace; font-size: 9px;
+            text-transform: uppercase; letter-spacing: 0.1em;
+            transition: all 0.15s; display: flex; align-items: center; justify-content: center; gap: 5px;
+        }
+        .footer-btn:hover { background: rgba(139,92,246,0.15); border-color: var(--border); color: #fff; }
+        .footer-btn.primary { background: rgba(139,92,246,0.15); border-color: rgba(139,92,246,0.4); color: #c4b5fd; }
+        .footer-btn.primary:hover { background: rgba(139,92,246,0.3); }
+
+        .offline-url { color: var(--slate-6); }
+        ::-webkit-scrollbar { width: 3px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(139,92,246,0.3); border-radius: 99px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <div class="header-left">
+            <div class="logo-pulse" id="pulse"></div>
+            <div>
+                <div class="logo-text">AILCC Cortex</div>
+                <div class="logo-sub">Neural Command Monitor</div>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="btn-icon" onclick="window.ailcc.openObservability()" title="Open Observability">📊</button>
+            <button class="btn-icon" onclick="window.ailcc.closePopup()" title="Close">✕</button>
+        </div>
+    </div>
+
+    <!-- Status bar -->
+    <div class="status-bar">
+        <div class="status-badge unknown" id="status-badge">CONNECTING</div>
+        <span class="last-updated" id="last-updated">—</span>
+    </div>
+
+    <!-- Metrics -->
+    <div class="metrics-grid">
+        <div class="metric">
+            <div class="metric-label">CPU</div>
+            <div class="metric-value cpu" id="cpu-val">—</div>
+            <div class="metric-sub">percent</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Memory</div>
+            <div class="metric-value memory" id="mem-val">—</div>
+            <div class="metric-sub">percent</div>
+        </div>
+        <div class="metric">
+            <div class="metric-label">Processes</div>
+            <div class="metric-value procs" id="proc-val">—</div>
+            <div class="metric-sub">running</div>
+        </div>
+    </div>
+
+    <!-- CPU Sparkline -->
+    <div class="sparkline">
+        <div class="sparkline-label">CPU Activity (30s)</div>
+        <div class="sparkline-bars" id="sparkline-bars">
+            <!-- bars injected by JS -->
+        </div>
+    </div>
+
+    <!-- Agents or offline state -->
+    <div class="agents-section" id="agents-section">
+        <div class="section-label">
+            <span>Swarm Agents</span>
+            <span id="agent-count">—</span>
+        </div>
+        <div id="agents-list">
+            <div class="offline-banner">
+                <div class="offline-icon">⚡</div>
+                <div class="offline-text">Connecting to AILCC dashboard…<br><span class="offline-url">localhost:3000</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <button class="footer-btn primary" onclick="window.ailcc.openDashboard()">🌌 Open Dashboard</button>
+        <button class="footer-btn" onclick="window.ailcc.openObservability()">📡 Observability</button>
+    </div>
+</div>
+
+<script>
+    const cpuHistory = [];
+    const MAX_BARS = 24;
+
+    function updateSparkline(cpu) {
+        if (cpu == null) return;
+        cpuHistory.push(cpu);
+        if (cpuHistory.length > MAX_BARS) cpuHistory.shift();
+
+        const bars = document.getElementById('sparkline-bars');
+        bars.innerHTML = '';
+        const max = Math.max(...cpuHistory, 1);
+        cpuHistory.forEach(val => {
+            const bar = document.createElement('div');
+            bar.className = 'sparkline-bar';
+            bar.style.height = `${Math.max(2, (val / max) * 24)}px`;
+            if (val > 80) bar.style.background = 'linear-gradient(180deg, #ef4444, #dc2626)';
+            else if (val > 50) bar.style.background = 'linear-gradient(180deg, #f59e0b, #d97706)';
+            bars.appendChild(bar);
+        });
+    }
+
+    function setStatus(status) {
+        const badge = document.getElementById('status-badge');
+        const pulse = document.getElementById('pulse');
+        const labels = { healthy: 'Online', warning: 'Warning', error: 'Error', offline: 'Offline', unknown: 'Connecting' };
+        badge.textContent = labels[status] ?? status.toUpperCase();
+        badge.className = `status-badge ${status}`;
+        pulse.className = `logo-pulse ${status === 'healthy' ? '' : status}`;
+    }
+
+    const DEFAULT_AGENTS = ['FORGE', 'SCOUT', 'CORTEX', 'GUARDIAN', 'NEXUS', 'ORACLE', 'PHANTOM', 'ATLAS', 'HERMES', 'TITAN'];
+
+    function renderAgents(agents) {
+        const list = document.getElementById('agents-list');
+        const agentsToShow = (agents && agents.length > 0) ? agents : DEFAULT_AGENTS.map(n => ({ name: n, status: 'active' }));
+        document.getElementById('agent-count').textContent = `${agentsToShow.length} agents`;
+        list.innerHTML = agentsToShow.map(agent => {
+            const name = agent.name ?? agent;
+            const status = agent.status ?? 'active';
+            const dotClass = status === 'active' ? 'active' : status === 'warning' ? 'warning' : 'inactive';
+            const statusLabel = status === 'active' ? 'Running' : status === 'warning' ? 'Warning' : 'Idle';
+            return `<div class="agent-item">
+                <div class="agent-dot ${dotClass}"></div>
+                <div class="agent-name">${name}</div>
+                <div class="agent-status">${statusLabel}</div>
+            </div>`;
+        }).join('');
+    }
+
+    function applyUpdate(data) {
+        setStatus(data.status ?? 'offline');
+        document.getElementById('cpu-val').textContent = data.cpu != null ? `${Math.round(data.cpu)}%` : '—';
+        document.getElementById('mem-val').textContent = data.memory != null ? `${Math.round(data.memory)}%` : '—';
+        document.getElementById('proc-val').textContent = data.processCount ?? '—';
+        document.getElementById('last-updated').textContent = `Updated ${new Date().toLocaleTimeString()}`;
+        updateSparkline(data.cpu);
+        if (data.status !== 'offline') {
+            renderAgents(data.agents ?? []);
+        } else {
+            document.getElementById('agents-list').innerHTML = `
+                <div class="offline-banner">
+                    <div class="offline-icon">🔌</div>
+                    <div class="offline-text">Dashboard offline<br><span style="color:var(--slate-6)">Start with: npm run dev</span></div>
+                </div>`;
+        }
+    }
+
+    // Subscribe to live updates from main process
+    window.ailcc.onStatusUpdate(applyUpdate);
+
+    // Request initial status immediately
+    window.ailcc.getStatus().then(data => { if (data) applyUpdate(data); });
+</script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-03-27T18:46:39.766029",
+  "boot_disk": {
+    "total_gb": 112.7,
+    "used_gb": 92.8,
+    "free_gb": 19.9,
+    "used_pct": 82.3,
+    "status": "OK"
+  },
+  "external_drives": {
+    "XDriveAlpha": {
+      "mounted": true,
+      "total_gb": 1863.0,
+      "used_gb": 481.7,
+      "free_gb": 1381.2,
+      "used_pct": 25.9
+    },
+    "XDriveBeta": {
+      "mounted": true,
+      "total_gb": 1862.8,
+      "used_gb": 37.7,
+      "free_gb": 1825.1,
+      "used_pct": 2.0
+    }
+  },
+  "icloud": {
+    "local_cache_mb": 182,
+    "stuck_uploads": 265,
+    "desktop_docs_sync": true,
+    "status": "WARNING"
+  },
+  "pm2_logs": {
+    "total_mb": 0,
+    "status": "OK"
+  },
+  "antigravity": {
+    "brain_mb": 4,
+    "recordings_mb": 0,
+    "total_mb": 1179,
+    "status": "OK"
+  },
+  "git": {
+    "git_mb": 1199,
+    "status": "WARNING"
+  },
+  "para_coherence": {
+    "score": 90,
+    "orphans": [
+      "README.md"
+    ],
+    "broken_symlinks": [],
+    "status": "OK"
+  },
+  "overall": "WARNING"
+}

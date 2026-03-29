@@ -1,0 +1,32 @@
+{
+  "timestamp": "2026-03-29T00:17:19.143493Z",
+  "status": "STABLE",
+  "stress_level": 10,
+  "vitals": {
+    "cpu": {
+      "usage": 43.1,
+      "temp": 42,
+      "status": "COOL"
+    },
+    "memory": {
+      "usage": 45.0,
+      "swap": 2,
+      "status": "OPTIMAL"
+    },
+    "disk": {
+      "used_pct": 36,
+      "free_gb": "19Gi",
+      "status": "OK"
+    }
+  },
+  "swarm": {
+    "active_agents": 5,
+    "confidence_score": 98,
+    "last_sync": "2m ago"
+  },
+  "hygiene": {
+    "xp": 1250,
+    "level": 12,
+    "next_level": 1500
+  }
+}

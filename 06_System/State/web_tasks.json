@@ -1,0 +1,92 @@
+[
+  {
+    "id": "task_001",
+    "title": "Verify MCP connection and read system status.",
+    "description": "Verify MCP connection and read system status.",
+    "assignee": "unassigned",
+    "status": "pending",
+    "priority": "high",
+    "updated_at": "Sun 28 Dec 2025 23:34:12 AST"
+  },
+  {
+    "id": "AILCC-2025-WAVE1",
+    "title": "Wave 1 Infrastructure Setup",
+    "description": "Complete bootstrap and enhancement of AILCC_PRIME core.",
+    "assignee": "antigravity",
+    "status": "completed",
+    "priority": 1,
+    "updated_at": "2025-12-29 04:53:38"
+  },
+  {
+    "id": "MISSION-COMET-EMAIL-001",
+    "title": "Execute Academic Appeal Emails",
+    "description": "Email 1 (Academic) SENT MANUALLY. Now Drafting/Sending Email 2 (Financial Aid) and Email 3 (NSLSC) from comet_email_queue.json.",
+    "assignee": "comet",
+    "status": "in-progress",
+    "priority": "high",
+    "updated_at": "2025-12-30 16:05:00"
+  },
+  {
+    "id": "MISSION-COMET-PHASE-6",
+    "title": "Post-Appeal Deep-Scan & Procurement",
+    "description": "1. Search for Nov 2, 2023 withdrawal confirmation. 2. Download SSS Review Form.",
+    "assignee": "comet",
+    "status": "pending",
+    "priority": "critical",
+    "updated_at": "2025-12-30 15:58:00"
+  },
+  {
+    "id": "AI001-22",
+    "title": "Administrative Appeal: 2023 Withdrawal Restoration",
+    "description": "Execute the 2023 Withdrawal Appeal for Joel Palk-Ricard. Submit the evidence bundle to the Registrar/Meighen Centre.",
+    "assignee": "comet",
+    "status": "pending",
+    "priority": "high",
+    "updated_at": "2026-01-06 03:24:48"
+  },
+  {
+    "id": "AI001-21",
+    "title": "[VALENTINE] NEXUS UI Refinement & Interaction Polish",
+    "description": "Refine NEXUS UI components and polish interaction patterns for the AIMmA dashboard.",
+    "assignee": "valentine",
+    "status": "pending",
+    "priority": "medium",
+    "updated_at": "2026-01-06 03:24:48"
+  },
+  {
+    "id": "AI001-20",
+    "title": "[SCHOLAR] BSc Core Biology Audit & Roadmap Synthesis",
+    "description": "Perform deep audit of BSc core biology credits and synthesize the final 2027 roadmap.",
+    "assignee": "scholar",
+    "status": "pending",
+    "priority": "medium",
+    "updated_at": "2026-01-06 03:24:48"
+  },
+  {
+    "id": "AI001-19",
+    "title": "[ANTIGRAVITY] Storage Migration Protocol Implementation",
+    "description": "Implement the core storage migration protocol (Phase 1) for the unified vault.",
+    "assignee": "antigravity",
+    "status": "pending",
+    "priority": "high",
+    "updated_at": "2026-01-06 03:24:48"
+  },
+  {
+    "id": "TASK-CONSOLIDATION-2026-001",
+    "title": "Workspace Consolidation & Inbox Resolution",
+    "description": "Consolidated AILCC, AI_Mastermind_Alliance, and ailcc-mastermind into AILCC_PRIME. Verified Physics Engine code.",
+    "assignee": "antigravity",
+    "status": "completed",
+    "priority": "high",
+    "updated_at": "2026-01-08 19:00:00"
+  },
+  {
+    "id": "TASK-N8N-IMPLEMENTATION",
+    "title": "Implement n8n Automation",
+    "description": "Integrate n8n for orchestration and automation as per the 'Consolidate Project, Implement n8n' prompt. Created docker-compose and start scripts.",
+    "assignee": "antigravity",
+    "status": "completed",
+    "priority": "high",
+    "updated_at": "2026-01-08 19:10:00"
+  }
+]

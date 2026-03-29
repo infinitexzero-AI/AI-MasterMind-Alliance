@@ -1,0 +1,34 @@
+{
+    "name": "ailcc-menu-bar",
+    "version": "1.0.0",
+    "description": "AILCC macOS Menu Bar Widget — always-visible Cortex heartbeat, CPU, and agent status",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder --mac",
+        "dev": "electron . --dev"
+    },
+    "keywords": [
+        "ailcc",
+        "menubar",
+        "electron",
+        "macos"
+    ],
+    "author": "AI Mastermind Alliance",
+    "license": "MIT",
+    "dependencies": {
+        "electron-store": "^8.1.0"
+    },
+    "devDependencies": {
+        "electron": "^28.0.0",
+        "electron-builder": "^24.9.1"
+    },
+    "build": {
+        "appId": "com.ailcc.menubar",
+        "productName": "AILCC Cortex",
+        "mac": {
+            "category": "public.app-category.productivity",
+            "target": "dmg"
+        }
+    }
+}

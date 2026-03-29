@@ -1,0 +1,8 @@
+# Migrating GitHub to SSH Authentication
+- [ ] Generate modern `ed25519` SSH Key for GitHub (`~/.ssh/ailcc_github`)
+- [ ] Configure `~/.ssh/config` to use the macOS keychain for this key
+- [ ] Start `ssh-agent` and add the key to the keychain
+- [ ] Provide the public key to the user to add to GitHub settings
+- [ ] Change `AILCC_PRIME` remote URL from HTTPS to SSH (`git@github.com:infinitexzero-AI/AILCC_PRIME.git`)
+- [ ] Change `01_Areas/Codebases/ailcc` remote URL from HTTPS to SSH (`git@github.com:infinitexzero-AI/ailcc-framework.git`)
+- [ ] Provide instructions to the user to generate a new fine-grained token and update `.env`

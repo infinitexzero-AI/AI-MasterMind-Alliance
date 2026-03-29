@@ -1,0 +1,71 @@
+graph TB
+    subgraph "🧠 NEOCORTEX: Conscious Intelligence"
+        CLAUDE[Claude<br/>Prefrontal Cortex<br/>Strategic Planning]
+        CHATGPT[ChatGPT<br/>Motor Cortex<br/>Code Execution]
+        GEMINI[Gemini<br/>Visual Cortex<br/>Multimodal Processing]
+        PERPLEXITY[Perplexity<br/>Temporal Lobe<br/>Knowledge Retrieval]
+        GROK[Grok<br/>Association Areas<br/>Meta-Coordination]
+    end
+    
+    subgraph "🎭 LIMBIC SYSTEM: Active Processing"
+        REDIS[Hippocampus<br/>Shared Memory]
+        QUEUE[Thalamus<br/>Message Queue]
+        ALERTS[Amygdala<br/>Error Detection]
+        PRIORITY[Hypothalamus<br/>Task Prioritization]
+    end
+    
+    subgraph "🫀 BRAINSTEM: Autonomic Functions"
+        VALENTINE[Medulla<br/>Valentine Core<br/>API Gateway]
+        N8N[Pons<br/>n8n Workflows<br/>Automation Bridge]
+        STORAGE[Cerebellum<br/>File Storage<br/>Motor Memory]
+    end
+    
+    subgraph "🧬 PERIPHERAL NERVOUS SYSTEM: Interfaces"
+        GITHUB[GitHub<br/>Code Repository]
+        LINEAR[Linear<br/>Task Management]
+        NOTION[Notion<br/>Documentation]
+        GOOGLE[Google Workspace<br/>Collaboration]
+    end
+    
+    %% Conscious to Active
+    CLAUDE --> REDIS
+    CHATGPT --> REDIS
+    GEMINI --> REDIS
+    PERPLEXITY --> REDIS
+    GROK --> PRIORITY
+    
+    %% Active to Autonomic
+    REDIS --> QUEUE
+    QUEUE --> VALENTINE
+    ALERTS --> N8N
+    PRIORITY --> N8N
+    
+    %% Autonomic to Peripheral
+    VALENTINE --> GITHUB
+    VALENTINE --> LINEAR
+    N8N --> NOTION
+    N8N --> GOOGLE
+    STORAGE --> GITHUB
+    STORAGE --> GOOGLE
+    
+    %% Feedback Loops
+    GITHUB -.->|Webhooks| N8N
+    LINEAR -.->|Status Updates| ALERTS
+    NOTION -.->|Content Sync| STORAGE
+    GOOGLE -.->|Real-time Data| GEMINI
+    
+    %% Styling
+    style CLAUDE fill:#f97316,stroke:#ea580c,color:#fff
+    style CHATGPT fill:#22c55e,stroke:#16a34a,color:#fff
+    style GEMINI fill:#3b82f6,stroke:#1d4ed8,color:#fff
+    style PERPLEXITY fill:#06b6d4,stroke:#0891b2,color:#fff
+    style GROK fill:#a855f7,stroke:#7c3aed,color:#fff
+    
+    style REDIS fill:#ec4899,stroke:#db2777,color:#fff
+    style QUEUE fill:#8b5cf6,stroke:#6d28d9,color:#fff
+    style ALERTS fill:#dc2626,stroke:#991b1b,color:#fff
+    style PRIORITY fill:#eab308,stroke:#ca8a04,color:#000
+    
+    style VALENTINE fill:#8b5cf6,stroke:#6d28d9,color:#fff
+    style N8N fill:#06b6d4,stroke:#0891b2,color:#fff
+    style STORAGE fill:#10b981,stroke:#059669,color:#fff

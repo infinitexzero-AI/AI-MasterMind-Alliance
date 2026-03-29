@@ -1,0 +1,6 @@
+{
+  "artifactType":  "ARTIFACT_TYPE_IMPLEMENTATION_PLAN",
+  "summary":  "Plan to help the user resolve their expiring GitHub tokens, switch from HTTPS to SSH for more autonomy, and update their local environment variables.",
+  "updatedAt":  "2026-02-23T22:37:09.558310Z",
+  "version":  "1"
+}

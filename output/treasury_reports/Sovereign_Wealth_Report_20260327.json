@@ -1,0 +1,16 @@
+{
+  "timestamp": "2026-03-27T19:26:34.613174",
+  "global_market_status": "BULLISH",
+  "active_wealth_signals": 1,
+  "proposals": [
+    {
+      "timestamp": "2026-03-27T19:26:34.612557",
+      "protocol": "Vanguard-LP-v2",
+      "apy_projected": 0.12,
+      "risk_assessment": "SAFE",
+      "synthesized_path": "MINT -> STAKE on Vanguard-LP-v2 -> REINVEST YIELD",
+      "decision": "FAVORABLE"
+    }
+  ],
+  "alliance_equity_projection": "UPWARD"
+}

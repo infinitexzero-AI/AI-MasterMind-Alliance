@@ -1,0 +1,42 @@
+{
+  "sync_version": "1.0.0",
+  "last_sync": "2026-01-12T03:20:02.873797Z",
+  "sync_frequency": "hourly",
+  "sources": {
+    "comet": {
+      "type": "browser_agent",
+      "session_store": "~/.comet/sessions",
+      "export_format": "json",
+      "sync_enabled": true
+    },
+    "antigravity": {
+      "type": "ide_agent",
+      "workspace_db": "~/.antigravity/workspace.db",
+      "export_format": "sqlite",
+      "sync_enabled": true
+    }
+  },
+  "targets": {
+    "github": {
+      "repo": "AILCC_PRIME",
+      "branch": "main",
+      "path": "07_Comet_Sync/data"
+    },
+    "local": {
+      "path": "$HOME/AILCC_PRIME/07_Comet_Sync/unified_history"
+    }
+  },
+  "conflict_resolution": {
+    "strategy": "timestamp_merge",
+    "manual_review_threshold": 5
+  },
+  "mas_protocol": {
+    "enabled": true,
+    "sync_with": [
+      "n8n",
+      "claude_desktop",
+      "grok_api"
+    ],
+    "broadcast_port": 8765
+  }
+}

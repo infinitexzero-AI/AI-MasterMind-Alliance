@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# ailcc-framework
-AI Lifecycle Command Center - Central repo for prompts, SOPs, mode templates, and automations
-=======
 # AI Lifecycle Command Center (AILCC) - Prime Workspace
 
 **Status**: 🟢 Online & Verified
@@ -72,4 +68,3 @@ Central repository for agent logs.
 - **Do not create files at root**. Use `ailcc/modes/...`
 
 - **Updates**: This workspace is Git-tracked. Commit changes.
->>>>>>> ce9003b (feat(chamber): activate neural forge orchestration V1)

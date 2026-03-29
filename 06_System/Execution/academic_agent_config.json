@@ -1,0 +1,34 @@
+{
+  "agent_id": "vanguard_academic_scout_01",
+  "identity": {
+    "name": "Sovereign Academic Agent",
+    "focus": "Mount Allison Undergraduate Progression",
+    "specialization": "ADHD/Disability Navigation (NB, Canada)"
+  },
+  "portals": {
+    "moodle": {
+      "url": "https://moodle.mta.ca",
+      "account": "japalkricard@mta.ca",
+      "data_points": ["grades", "assignments", "course_materials", "announcements"]
+    },
+    "accommodate": {
+      "url": "https://accommodate.mta.ca",
+      "status": "active",
+      "data_points": ["accommodations", "notetaking_services", "exam_booking"]
+    },
+    "self_service": {
+      "url": "https://selfservice.mta.ca",
+      "data_points": ["gpa", "credits", "financial_aid", "bursaries"]
+    }
+  },
+  "resource_mapping": {
+    "disability_support": "Meighen Centre",
+    "funding_sources": ["Canada Student Grant for Students with Disabilities", "NB Provincial Bursary"],
+    "vault_path": "/Users/infinite27/AILCC_PRIME/03_Resources/Academics/MTA_Sovereign_Vault"
+  },
+  "sync_policy": {
+    "frequency": "nightly",
+    "conflict_resolution": "sovereign_authoritative",
+    "auto_conversion": "markdown"
+  }
+}
