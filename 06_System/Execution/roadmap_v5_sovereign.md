@@ -6,9 +6,9 @@ This roadmap defines the precise 100-step path to evolve the Mastermind Alliance
 
 ## 🔬 WAVE 1: ACADEMIC VAULT SYNTHESIS (Steps 1-25)
 
-*Goal: Transforming the GENS 2101 Neuroscience collection into a Neural Knowledge Graph.*
+*Goal: Transforming the GENS 2101 Natural Resources Management collection into a Neural Knowledge Graph.*
 
-1. **Step 1:** Establish the `05_Academic/GENS_2101_Neuroscience/Vault` partition.
+1. **Step 1:** Establish the `05_Academic/GENS_2101_Natural_Resources/Vault` partition.
 2. **Step 2:** Deploy the **PDF-Extractor Agent** to ThinkPad27 for high-compute text/image OCR.
 3. **Step 3:** Implement **Semantic Chunking**: Split the 2025 Sovereign Evolution Textbook by hierarchical themes.
 4. **Step 4:** Deploy local **Qdrant** node on the M1 Mac for vector storage and query isolation.

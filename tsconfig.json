@@ -20,8 +20,34 @@
     "noUnusedParameters": false,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "allowJs": true
   },
   "include": ["automations/**/*.ts", "dashboard/**/*.ts", "tests/**/*.ts", "forge-monitor/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "node_modules",
+    "dist",
+    "CloudDocs",
+    "Google Drive",
+    "Applications",
+    "Downloads",
+    "00_Projects",
+    "01_Areas",
+    "02_Resources",
+    "03_Archives",
+    "04_Archives",
+    "05_Academic",
+    "05_Medical",
+    "05_Tasks",
+    "05_Templates",
+    "06_System",
+    "07_Comet_Sync",
+    "08_Mobile_Edge",
+    "hippocampus_storage",
+    "logs",
+    "output",
+    "tmp",
+    "**/*.pyc",
+    "**/__pycache__"
+  ]
 }

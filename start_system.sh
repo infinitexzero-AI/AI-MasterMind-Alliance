@@ -28,7 +28,7 @@ if docker info >/dev/null 2>&1; then
         log "N8N" "✅ Container Running (Orchestration Layer)"
     else
         log "N8N" "⚠️ Container stopped. Attempting revive..."
-        cd "$BASE_DIR/n8n_foundation" && docker-compose up -d
+        cd "$BASE_DIR" && docker-compose up -d
     fi
 else
     log "DOCKER" "❌ Daemon STOPPED. Launching Docker Desktop..."
