@@ -1,0 +1,8 @@
+{
+  "id": "mem-ctx-001",
+  "taskId": "analysis-task-1",
+  "content": "Security analysis of module X",
+  "sourceAgent": "claude",
+  "timestamp": "2026-02-24T02:37:54.931Z",
+  "ttl": 86400
+}

@@ -1,0 +1,150 @@
+{
+  "name": "GitHub PR Staleness Monitor",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "github-ailcc",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "name": "GitHub Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.action}}",
+              "operation": "equals",
+              "value2": "opened"
+            }
+          ]
+        }
+      },
+      "name": "Is New PR?",
+      "type": "n8n-nodes-base.if",
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "const prCreated = new Date($json.pull_request.created_at);\nconst now = new Date();\nconst ageInDays = (now - prCreated) / (1000 * 60 * 60 * 24);\n\nreturn {\n  pr_number: $json.pull_request.number,\n  pr_title: $json.pull_request.title,\n  pr_url: $json.pull_request.html_url,\n  age_days: Math.floor(ageInDays),\n  is_stale: ageInDays > 14,\n  author: $json.pull_request.user.login,\n  repo: $json.repository.full_name\n};"
+      },
+      "name": "Calculate PR Age",
+      "type": "n8n-nodes-base.function",
+      "position": [650, 200]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{$json.is_stale}}",
+              "value2": true
+            }
+          ]
+        }
+      },
+      "name": "Is Stale (>14 days)?",
+      "type": "n8n-nodes-base.if",
+      "position": [850, 200]
+    },
+    {
+      "parameters": {
+        "authentication": "headerAuth",
+        "url": "={{$json.pr_url}}/comments",
+        "options": {},
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.githubToken}}"
+            }
+          ]
+        },
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "body",
+              "value": "⚠️ **Stale PR Alert**\\n\\nThis PR has been open for {{$json.age_days}} days with no recent activity.\\n\\n**Action Required:**\\n- Please review and merge if ready\\n- Or add `blocked` label if waiting on dependencies\\n- Or close if no longer needed\\n\\n*Automated by AILCC Alliance Bot*"
+            }
+          ]
+        }
+      },
+      "name": "Comment on Stale PR",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1050, 100]
+    },
+    {
+      "parameters": {
+        "resource": "page",
+        "operation": "append",
+        "pageId": "{{$credentials.notionAILCCDatabaseId}}",
+        "simple": false,
+        "properties": {
+          "property": [
+            {
+              "key": "PR Number",
+              "textContent": "={{$json.pr_number}}"
+            },
+            {
+              "key": "Title",
+              "textContent": "={{$json.pr_title}}"
+            },
+            {
+              "key": "Status",
+              "selectOption": "Stale"
+            },
+            {
+              "key": "Age (days)",
+              "numberValue": "={{$json.age_days}}"
+            },
+            {
+              "key": "Repo",
+              "textContent": "={{$json.repo}}"
+            }
+          ]
+        }
+      },
+      "name": "Log to Notion",
+      "type": "n8n-nodes-base.notion",
+      "position": [1050, 300]
+    },
+    {
+      "parameters": {
+        "resource": "issue",
+        "operation": "create",
+        "projectId": "{{$credentials.linearAILCCProjectId}}",
+        "title": "[PR Review] {{$json.pr_title}}",
+        "description": "Stale PR needs attention: {{$json.pr_url}}\\n\\nAge: {{$json.age_days}} days",
+        "priority": 2,
+        "labelIds": ["stale-pr"]
+      },
+      "name": "Create Linear Task",
+      "type": "n8n-nodes-base.linear",
+      "position": [1050, 500]
+    }
+  ],
+  "connections": {
+    "GitHub Webhook": {
+      "main": [[{"node": "Is New PR?", "type": "main", "index": 0}]]
+    },
+    "Is New PR?": {
+      "main": [[{"node": "Calculate PR Age", "type": "main", "index": 0}]]
+    },
+    "Calculate PR Age": {
+      "main": [[{"node": "Is Stale (>14 days)?", "type": "main", "index": 0}]]
+    },
+    "Is Stale (>14 days)?": {
+      "main": [
+        [
+          {"node": "Comment on Stale PR", "type": "main", "index": 0},
+          {"node": "Log to Notion", "type": "main", "index": 0},
+          {"node": "Create Linear Task", "type": "main", "index": 0}
+        ]
+      ]
+    }
+  }
+}

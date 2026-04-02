@@ -1,0 +1,26 @@
+{
+  "name": "SKILL_HIPPOCAMPUS_SYNC",
+  "domain": "Personal / Life OS",
+  "trigger": "INITIATE_HIPPOCAMPUS_SYNC",
+  "description": "Holistic context consolidation, condensing distinct life vectors and running them through the Valentine empathetic filter.",
+  "workflow_steps": [
+    {
+      "step_id": "consolidation",
+      "node": "hippocampus_bridge",
+      "action": "query_all_domains",
+      "input_mapping": "prompt"
+    },
+    {
+      "step_id": "condensation",
+      "node": "llm_gateway",
+      "action": "gemma_token_compression",
+      "input_mapping": "consolidation.output"
+    },
+    {
+      "step_id": "empathy_layer",
+      "node": "valentine_persona",
+      "action": "evaluate_human_impact",
+      "input_mapping": "condensation.output"
+    }
+  ]
+}

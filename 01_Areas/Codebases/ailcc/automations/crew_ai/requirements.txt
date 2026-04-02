@@ -1,0 +1,4 @@
+crewai
+langchain
+websocket-client
+python-dotenv

@@ -1,0 +1,42 @@
+{
+  "version": "1.0.0",
+  "taxonomy_source": "config/life_library_taxonomy.json",
+  "domains": {
+    "academic": {
+      "name": "Academic Wing",
+      "keywords": ["university", "course", "paper", "study", "research", "exam", "grade"],
+      "primary_agent": "claude-desktop",
+      "color": "#3498db"
+    },
+    "professional": {
+      "name": "Professional Wing",
+      "keywords": ["business", "client", "career", "job", "networking", "revenue", "project"],
+      "primary_agent": "supergrok",
+      "color": "#2ecc71"
+    },
+    "personal": {
+      "name": "Personal Wing",
+      "keywords": ["health", "fitness", "finance", "home", "travel", "hobby", "family"],
+      "primary_agent": "valentine-mobile",
+      "color": "#e74c3c"
+    },
+    "technical": {
+      "name": "AI & Technical Wing",
+      "keywords": ["code", "python", "javascript", "bug", "deploy", "server", "api", "git"],
+      "primary_agent": "claude-desktop",
+      "color": "#9b59b6"
+    },
+    "creative": {
+      "name": "Creative Wing",
+      "keywords": ["write", "blog", "design", "art", "music", "video", "story"],
+      "primary_agent": "claude-desktop",
+      "color": "#f39c12"
+    },
+    "automation": {
+      "name": "Automation Core",
+      "keywords": ["script", "cron", "pipeline", "workflow", "trigger", "n8n"],
+      "primary_agent": "antigravity-exec",
+      "color": "#34495e"
+    }
+  }
+}

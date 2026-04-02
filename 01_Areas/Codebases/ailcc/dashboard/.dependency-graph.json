@@ -1,0 +1,3512 @@
+{
+  "nodes": [
+    {
+      "id": "../automations/mode6/agent-routing/agent-dispatcher.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/agent-routing/agent-dispatcher.ts",
+      "group": 3,
+      "complexity": 534
+    },
+    {
+      "id": "../automations/mode6/agent-routing/routing-optimizer.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/agent-routing/routing-optimizer.ts",
+      "group": 3,
+      "complexity": 180
+    },
+    {
+      "id": "../automations/mode6/agents/adapter-registry.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/agents/adapter-registry.ts",
+      "group": 3,
+      "complexity": 147
+    },
+    {
+      "id": "../automations/mode6/agents/claude-adapter.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/agents/claude-adapter.ts",
+      "group": 3,
+      "complexity": 370
+    },
+    {
+      "id": "../automations/mode6/agents/gemini-adapter.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/agents/gemini-adapter.ts",
+      "group": 3,
+      "complexity": 122
+    },
+    {
+      "id": "../automations/mode6/agents/grok-adapter.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/agents/grok-adapter.ts",
+      "group": 3,
+      "complexity": 237
+    },
+    {
+      "id": "../automations/mode6/agents/openai-adapter.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/agents/openai-adapter.ts",
+      "group": 3,
+      "complexity": 211
+    },
+    {
+      "id": "../automations/mode6/agents/perplexity-adapter.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/agents/perplexity-adapter.ts",
+      "group": 3,
+      "complexity": 109
+    },
+    {
+      "id": "../automations/mode6/config/env.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/config/env.ts",
+      "group": 3,
+      "complexity": 192
+    },
+    {
+      "id": "../automations/mode6/index.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/index.ts",
+      "group": 3,
+      "complexity": 130
+    },
+    {
+      "id": "../automations/mode6/intent-router/intent-router.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/intent-router/intent-router.ts",
+      "group": 3,
+      "complexity": 414
+    },
+    {
+      "id": "../automations/mode6/intent-router/types.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/intent-router/types.ts",
+      "group": 3,
+      "complexity": 299
+    },
+    {
+      "id": "../automations/mode6/memory/memory-manager.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/memory/memory-manager.ts",
+      "group": 3,
+      "complexity": 199
+    },
+    {
+      "id": "../automations/mode6/memory/providers/json-provider.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/memory/providers/json-provider.ts",
+      "group": 3,
+      "complexity": 97
+    },
+    {
+      "id": "../automations/mode6/memory/storage-types.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/memory/storage-types.ts",
+      "group": 3,
+      "complexity": 18
+    },
+    {
+      "id": "../automations/mode6/swarm/orchestrator.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/swarm/orchestrator.ts",
+      "group": 3,
+      "complexity": 251
+    },
+    {
+      "id": "../automations/mode6/swarm/types.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/swarm/types.ts",
+      "group": 3,
+      "complexity": 126
+    },
+    {
+      "id": "__tests__/components/ErrorBoundary.test.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/__tests__/components/ErrorBoundary.test.tsx",
+      "group": 2,
+      "complexity": 85
+    },
+    {
+      "id": "__tests__/components/StatusIndicator.test.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/__tests__/components/StatusIndicator.test.tsx",
+      "group": 2,
+      "complexity": 32
+    },
+    {
+      "id": "__tests__/hooks/useAgentStatus.test.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/__tests__/hooks/useAgentStatus.test.tsx",
+      "group": 3,
+      "complexity": 35
+    },
+    {
+      "id": "automation/browser-utils.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/automation/browser-utils.ts",
+      "group": 3,
+      "complexity": 43
+    },
+    {
+      "id": "automation/night_shift_audit.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/automation/night_shift_audit.js",
+      "group": 3,
+      "complexity": 47
+    },
+    {
+      "id": "automation/playwright-server.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/automation/playwright-server.js",
+      "group": 3,
+      "complexity": 509
+    },
+    {
+      "id": "components/ActionLog.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ActionLog.tsx",
+      "group": 2,
+      "complexity": 180
+    },
+    {
+      "id": "components/AgentCard.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/AgentCard.tsx",
+      "group": 2,
+      "complexity": 162
+    },
+    {
+      "id": "components/AgentControlPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/AgentControlPanel.tsx",
+      "group": 2,
+      "complexity": 46
+    },
+    {
+      "id": "components/AgentDetailModal.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/AgentDetailModal.tsx",
+      "group": 2,
+      "complexity": 258
+    },
+    {
+      "id": "components/AgentGovernance.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/AgentGovernance.tsx",
+      "group": 2,
+      "complexity": 159
+    },
+    {
+      "id": "components/AgentMonitor.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/AgentMonitor.tsx",
+      "group": 2,
+      "complexity": 345
+    },
+    {
+      "id": "components/AgentPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/AgentPanel.tsx",
+      "group": 2,
+      "complexity": 81
+    },
+    {
+      "id": "components/AirtableHub.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/AirtableHub.tsx",
+      "group": 2,
+      "complexity": 112
+    },
+    {
+      "id": "components/BiometricConsentModal.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/BiometricConsentModal.tsx",
+      "group": 2,
+      "complexity": 159
+    },
+    {
+      "id": "components/BrowserViewport.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/BrowserViewport.tsx",
+      "group": 2,
+      "complexity": 192
+    },
+    {
+      "id": "components/CapabilityGraph.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/CapabilityGraph.tsx",
+      "group": 2,
+      "complexity": 130
+    },
+    {
+      "id": "components/ChatMarkdown.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ChatMarkdown.tsx",
+      "group": 2,
+      "complexity": 137
+    },
+    {
+      "id": "components/ClipboardHistory.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ClipboardHistory.tsx",
+      "group": 2,
+      "complexity": 128
+    },
+    {
+      "id": "components/CometInput.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/CometInput.tsx",
+      "group": 2,
+      "complexity": 118
+    },
+    {
+      "id": "components/CommandPalette.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/CommandPalette.tsx",
+      "group": 2,
+      "complexity": 233
+    },
+    {
+      "id": "components/ControlPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ControlPanel.tsx",
+      "group": 2,
+      "complexity": 50
+    },
+    {
+      "id": "components/CortexMap.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/CortexMap.tsx",
+      "group": 2,
+      "complexity": 341
+    },
+    {
+      "id": "components/DataFlowVisualizer.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/DataFlowVisualizer.tsx",
+      "group": 2,
+      "complexity": 155
+    },
+    {
+      "id": "components/DataMaterialization.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/DataMaterialization.tsx",
+      "group": 2,
+      "complexity": 449
+    },
+    {
+      "id": "components/DependencyChain.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/DependencyChain.tsx",
+      "group": 2,
+      "complexity": 463
+    },
+    {
+      "id": "components/DependencyMap.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/DependencyMap.tsx",
+      "group": 2,
+      "complexity": 281
+    },
+    {
+      "id": "components/DeploymentStatus.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/DeploymentStatus.tsx",
+      "group": 2,
+      "complexity": 137
+    },
+    {
+      "id": "components/DocumentPreviewModal.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/DocumentPreviewModal.tsx",
+      "group": 2,
+      "complexity": 165
+    },
+    {
+      "id": "components/ElementTable.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ElementTable.tsx",
+      "group": 2,
+      "complexity": 81
+    },
+    {
+      "id": "components/EmailIntelligencePanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/EmailIntelligencePanel.tsx",
+      "group": 2,
+      "complexity": 142
+    },
+    {
+      "id": "components/ErrorBoundary.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ErrorBoundary.tsx",
+      "group": 2,
+      "complexity": 114
+    },
+    {
+      "id": "components/EventBusVisualizer.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/EventBusVisualizer.tsx",
+      "group": 2,
+      "complexity": 266
+    },
+    {
+      "id": "components/FleetHangar.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/FleetHangar.tsx",
+      "group": 2,
+      "complexity": 392
+    },
+    {
+      "id": "components/GlassCard.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/GlassCard.tsx",
+      "group": 2,
+      "complexity": 64
+    },
+    {
+      "id": "components/GoalTracker.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/GoalTracker.tsx",
+      "group": 2,
+      "complexity": 140
+    },
+    {
+      "id": "components/HabitGrid.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/HabitGrid.tsx",
+      "group": 2,
+      "complexity": 67
+    },
+    {
+      "id": "components/HardwareInteropAudit.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/HardwareInteropAudit.tsx",
+      "group": 2,
+      "complexity": 198
+    },
+    {
+      "id": "components/HealthPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/HealthPanel.tsx",
+      "group": 2,
+      "complexity": 93
+    },
+    {
+      "id": "components/HippocampusPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/HippocampusPanel.tsx",
+      "group": 2,
+      "complexity": 168
+    },
+    {
+      "id": "components/HolographicTexture.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/HolographicTexture.tsx",
+      "group": 2,
+      "complexity": 28
+    },
+    {
+      "id": "components/HumanApprovalGate.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/HumanApprovalGate.tsx",
+      "group": 2,
+      "complexity": 40
+    },
+    {
+      "id": "components/IdeaStack.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/IdeaStack.tsx",
+      "group": 2,
+      "complexity": 193
+    },
+    {
+      "id": "components/IntelligentFileFinder.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/IntelligentFileFinder.tsx",
+      "group": 2,
+      "complexity": 251
+    },
+    {
+      "id": "components/KnowledgeGraph.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/KnowledgeGraph.tsx",
+      "group": 2,
+      "complexity": 105
+    },
+    {
+      "id": "components/LifeModeStrip.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/LifeModeStrip.tsx",
+      "group": 2,
+      "complexity": 26
+    },
+    {
+      "id": "components/LiveTerminal.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/LiveTerminal.tsx",
+      "group": 2,
+      "complexity": 179
+    },
+    {
+      "id": "components/MacrosWidget.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/MacrosWidget.tsx",
+      "group": 2,
+      "complexity": 200
+    },
+    {
+      "id": "components/MasterCycleView.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/MasterCycleView.tsx",
+      "group": 2,
+      "complexity": 159
+    },
+    {
+      "id": "components/MastermindHub.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/MastermindHub.tsx",
+      "group": 2,
+      "complexity": 577
+    },
+    {
+      "id": "components/MemoryInterface.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/MemoryInterface.tsx",
+      "group": 2,
+      "complexity": 147
+    },
+    {
+      "id": "components/MemoryMap.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/MemoryMap.tsx",
+      "group": 2,
+      "complexity": 194
+    },
+    {
+      "id": "components/MissionControl.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/MissionControl.tsx",
+      "group": 2,
+      "complexity": 244
+    },
+    {
+      "id": "components/MissionControlGrid.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/MissionControlGrid.tsx",
+      "group": 2,
+      "complexity": 170
+    },
+    {
+      "id": "components/MissionManifest.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/MissionManifest.tsx",
+      "group": 2,
+      "complexity": 126
+    },
+    {
+      "id": "components/NetworkMap.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/NetworkMap.tsx",
+      "group": 2,
+      "complexity": 125
+    },
+    {
+      "id": "components/NeuralSyncProvider.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/NeuralSyncProvider.tsx",
+      "group": 2,
+      "complexity": 648
+    },
+    {
+      "id": "components/NexusLayout.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/NexusLayout.tsx",
+      "group": 2,
+      "complexity": 409
+    },
+    {
+      "id": "components/NexusUAP.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/NexusUAP.tsx",
+      "group": 2,
+      "complexity": 258
+    },
+    {
+      "id": "components/OmniBar.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/OmniBar.tsx",
+      "group": 2,
+      "complexity": 420
+    },
+    {
+      "id": "components/OmniSearch.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/OmniSearch.tsx",
+      "group": 2,
+      "complexity": 196
+    },
+    {
+      "id": "components/OpenClawGuide.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/OpenClawGuide.tsx",
+      "group": 2,
+      "complexity": 423
+    },
+    {
+      "id": "components/OrchestrationPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/OrchestrationPanel.tsx",
+      "group": 2,
+      "complexity": 363
+    },
+    {
+      "id": "components/OrchestrationView.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/OrchestrationView.tsx",
+      "group": 2,
+      "complexity": 158
+    },
+    {
+      "id": "components/ParallaxCartography.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ParallaxCartography.tsx",
+      "group": 2,
+      "complexity": 281
+    },
+    {
+      "id": "components/ParticleBackground.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ParticleBackground.tsx",
+      "group": 2,
+      "complexity": 121
+    },
+    {
+      "id": "components/PeriodicTable.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/PeriodicTable.tsx",
+      "group": 2,
+      "complexity": 140
+    },
+    {
+      "id": "components/PersonaSwitcher.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/PersonaSwitcher.tsx",
+      "group": 2,
+      "complexity": 58
+    },
+    {
+      "id": "components/PipelineView.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/PipelineView.tsx",
+      "group": 2,
+      "complexity": 25
+    },
+    {
+      "id": "components/PredictiveTelemetry.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/PredictiveTelemetry.tsx",
+      "group": 2,
+      "complexity": 184
+    },
+    {
+      "id": "components/ProcessTreeWidget.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ProcessTreeWidget.tsx",
+      "group": 2,
+      "complexity": 96
+    },
+    {
+      "id": "components/RefactorScanPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/RefactorScanPanel.tsx",
+      "group": 2,
+      "complexity": 153
+    },
+    {
+      "id": "components/ReflexTrigger.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ReflexTrigger.tsx",
+      "group": 2,
+      "complexity": 155
+    },
+    {
+      "id": "components/RiskTierBadge.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/RiskTierBadge.tsx",
+      "group": 2,
+      "complexity": 43
+    },
+    {
+      "id": "components/RuntimePanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/RuntimePanel.tsx",
+      "group": 2,
+      "complexity": 61
+    },
+    {
+      "id": "components/SciFiGrid.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SciFiGrid.tsx",
+      "group": 2,
+      "complexity": 131
+    },
+    {
+      "id": "components/SecurityLock.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SecurityLock.tsx",
+      "group": 2,
+      "complexity": 134
+    },
+    {
+      "id": "components/SelfHealingCards.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SelfHealingCards.tsx",
+      "group": 2,
+      "complexity": 386
+    },
+    {
+      "id": "components/SkeletonLoaders.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SkeletonLoaders.tsx",
+      "group": 2,
+      "complexity": 97
+    },
+    {
+      "id": "components/StateViewer.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/StateViewer.tsx",
+      "group": 2,
+      "complexity": 87
+    },
+    {
+      "id": "components/StatusFooter.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/StatusFooter.tsx",
+      "group": 2,
+      "complexity": 89
+    },
+    {
+      "id": "components/StatusIndicator.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/StatusIndicator.tsx",
+      "group": 2,
+      "complexity": 88
+    },
+    {
+      "id": "components/StorageTierVisualizer.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/StorageTierVisualizer.tsx",
+      "group": 2,
+      "complexity": 259
+    },
+    {
+      "id": "components/StrategicAdvisory.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/StrategicAdvisory.tsx",
+      "group": 2,
+      "complexity": 133
+    },
+    {
+      "id": "components/StrategicFramework.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/StrategicFramework.tsx",
+      "group": 2,
+      "complexity": 197
+    },
+    {
+      "id": "components/StudioModeSelector.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/StudioModeSelector.tsx",
+      "group": 2,
+      "complexity": 140
+    },
+    {
+      "id": "components/StudioOutputCanvas.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/StudioOutputCanvas.tsx",
+      "group": 2,
+      "complexity": 253
+    },
+    {
+      "id": "components/SwarmHeartbeat.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SwarmHeartbeat.tsx",
+      "group": 2,
+      "complexity": 85
+    },
+    {
+      "id": "components/SynapseNetwork.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SynapseNetwork.tsx",
+      "group": 2,
+      "complexity": 679
+    },
+    {
+      "id": "components/SystemComparison.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SystemComparison.tsx",
+      "group": 2,
+      "complexity": 224
+    },
+    {
+      "id": "components/SystemGraph.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SystemGraph.tsx",
+      "group": 2,
+      "complexity": 173
+    },
+    {
+      "id": "components/SystemHUD.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SystemHUD.tsx",
+      "group": 2,
+      "complexity": 220
+    },
+    {
+      "id": "components/SystemHealthDashboard.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SystemHealthDashboard.tsx",
+      "group": 2,
+      "complexity": 259
+    },
+    {
+      "id": "components/SystemStatusDashboard.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/SystemStatusDashboard.tsx",
+      "group": 2,
+      "complexity": 560
+    },
+    {
+      "id": "components/TacticalHUD/DataStream.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TacticalHUD/DataStream.tsx",
+      "group": 2,
+      "complexity": 57
+    },
+    {
+      "id": "components/TacticalHUD/ReactorCore.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TacticalHUD/ReactorCore.tsx",
+      "group": 2,
+      "complexity": 67
+    },
+    {
+      "id": "components/TacticalHUD/TacticalLayout.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TacticalHUD/TacticalLayout.tsx",
+      "group": 2,
+      "complexity": 56
+    },
+    {
+      "id": "components/TacticsHUD.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TacticsHUD.tsx",
+      "group": 2,
+      "complexity": 372
+    },
+    {
+      "id": "components/TaskCard.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TaskCard.tsx",
+      "group": 2,
+      "complexity": 118
+    },
+    {
+      "id": "components/TaskLog.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TaskLog.tsx",
+      "group": 2,
+      "complexity": 162
+    },
+    {
+      "id": "components/TaskLogViewer.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TaskLogViewer.tsx",
+      "group": 2,
+      "complexity": 329
+    },
+    {
+      "id": "components/TaskQueue.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TaskQueue.tsx",
+      "group": 2,
+      "complexity": 91
+    },
+    {
+      "id": "components/TelemetryCharts.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TelemetryCharts.tsx",
+      "group": 2,
+      "complexity": 192
+    },
+    {
+      "id": "components/TerminalStream.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TerminalStream.tsx",
+      "group": 2,
+      "complexity": 97
+    },
+    {
+      "id": "components/TerminalWidget.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/TerminalWidget.tsx",
+      "group": 2,
+      "complexity": 183
+    },
+    {
+      "id": "components/Tooltip.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/Tooltip.tsx",
+      "group": 2,
+      "complexity": 71
+    },
+    {
+      "id": "components/WarRoom.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/WarRoom.tsx",
+      "group": 2,
+      "complexity": 746
+    },
+    {
+      "id": "components/antigravity/AgentOrbitDock.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/antigravity/AgentOrbitDock.tsx",
+      "group": 2,
+      "complexity": 144
+    },
+    {
+      "id": "components/antigravity/AntigravityPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/antigravity/AntigravityPanel.tsx",
+      "group": 2,
+      "complexity": 486
+    },
+    {
+      "id": "components/antigravity/GoalBubble.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/antigravity/GoalBubble.tsx",
+      "group": 2,
+      "complexity": 119
+    },
+    {
+      "id": "components/antigravity/ToolRegistryTray.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/antigravity/ToolRegistryTray.tsx",
+      "group": 2,
+      "complexity": 64
+    },
+    {
+      "id": "components/antigravity/VirtualTouchBar.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/antigravity/VirtualTouchBar.tsx",
+      "group": 2,
+      "complexity": 49
+    },
+    {
+      "id": "components/control/AgentControlPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/control/AgentControlPanel.tsx",
+      "group": 2,
+      "complexity": 32
+    },
+    {
+      "id": "components/hooks/useAgentStatus.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/hooks/useAgentStatus.ts",
+      "group": 2,
+      "complexity": 17
+    },
+    {
+      "id": "components/hooks/useAntigravitySync.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/hooks/useAntigravitySync.ts",
+      "group": 2,
+      "complexity": 302
+    },
+    {
+      "id": "components/hooks/useCommandDispatcher.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/hooks/useCommandDispatcher.ts",
+      "group": 2,
+      "complexity": 83
+    },
+    {
+      "id": "components/hooks/useForgeHealth.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/hooks/useForgeHealth.ts",
+      "group": 2,
+      "complexity": 46
+    },
+    {
+      "id": "components/hooks/useForgeStream.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/hooks/useForgeStream.ts",
+      "group": 2,
+      "complexity": 41
+    },
+    {
+      "id": "components/hooks/useForgeWS.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/hooks/useForgeWS.ts",
+      "group": 2,
+      "complexity": 67
+    },
+    {
+      "id": "components/hooks/useSystemHealth.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/hooks/useSystemHealth.ts",
+      "group": 2,
+      "complexity": 216
+    },
+    {
+      "id": "components/hooks/useTaskQueue.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/hooks/useTaskQueue.ts",
+      "group": 2,
+      "complexity": 80
+    },
+    {
+      "id": "components/hooks/useTelemetry.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/hooks/useTelemetry.ts",
+      "group": 2,
+      "complexity": 53
+    },
+    {
+      "id": "components/ui/DashboardCard.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/ui/DashboardCard.tsx",
+      "group": 2,
+      "complexity": 76
+    },
+    {
+      "id": "components/unified/panels/CodeGenerationPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/unified/panels/CodeGenerationPanel.tsx",
+      "group": 2,
+      "complexity": 177
+    },
+    {
+      "id": "components/widgets/AntigravityWindow.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/widgets/AntigravityWindow.tsx",
+      "group": 2,
+      "complexity": 69
+    },
+    {
+      "id": "components/widgets/FileSystemGraph.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/widgets/FileSystemGraph.tsx",
+      "group": 2,
+      "complexity": 52
+    },
+    {
+      "id": "components/widgets/FinanceHUD.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/widgets/FinanceHUD.tsx",
+      "group": 2,
+      "complexity": 105
+    },
+    {
+      "id": "components/widgets/FocusTimer.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/widgets/FocusTimer.tsx",
+      "group": 2,
+      "complexity": 311
+    },
+    {
+      "id": "components/widgets/GeminiConsole.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/widgets/GeminiConsole.tsx",
+      "group": 2,
+      "complexity": 115
+    },
+    {
+      "id": "components/widgets/ScholarTracker.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/widgets/ScholarTracker.tsx",
+      "group": 2,
+      "complexity": 212
+    },
+    {
+      "id": "components/widgets/SystemModeCard.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/widgets/SystemModeCard.tsx",
+      "group": 2,
+      "complexity": 144
+    },
+    {
+      "id": "components/widgets/VaultSearch.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/components/widgets/VaultSearch.tsx",
+      "group": 2,
+      "complexity": 110
+    },
+    {
+      "id": "config/alliance_config.json",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/config/alliance_config.json",
+      "group": 3,
+      "complexity": 61
+    },
+    {
+      "id": "hooks/useAllianceData.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/hooks/useAllianceData.ts",
+      "group": 3,
+      "complexity": 79
+    },
+    {
+      "id": "hooks/useAntigravitySync.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/hooks/useAntigravitySync.ts",
+      "group": 3,
+      "complexity": 127
+    },
+    {
+      "id": "jest.config.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/jest.config.js",
+      "group": 3,
+      "complexity": 16
+    },
+    {
+      "id": "jest.setup.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/jest.setup.ts",
+      "group": 3,
+      "complexity": 2
+    },
+    {
+      "id": "lib/agentManager.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/agentManager.ts",
+      "group": 3,
+      "complexity": 144
+    },
+    {
+      "id": "lib/ai/narrativeSynthesis.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/ai/narrativeSynthesis.ts",
+      "group": 3,
+      "complexity": 54
+    },
+    {
+      "id": "lib/api-middleware.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/api-middleware.ts",
+      "group": 3,
+      "complexity": 77
+    },
+    {
+      "id": "lib/apiAuth.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/apiAuth.ts",
+      "group": 3,
+      "complexity": 27
+    },
+    {
+      "id": "lib/audio.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/audio.ts",
+      "group": 3,
+      "complexity": 112
+    },
+    {
+      "id": "lib/autoDelegate.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/autoDelegate.ts",
+      "group": 3,
+      "complexity": 119
+    },
+    {
+      "id": "lib/chatManager.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/chatManager.ts",
+      "group": 3,
+      "complexity": 77
+    },
+    {
+      "id": "lib/clipboard.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/clipboard.ts",
+      "group": 3,
+      "complexity": 88
+    },
+    {
+      "id": "lib/comet/agentProxy.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/comet/agentProxy.ts",
+      "group": 3,
+      "complexity": 96
+    },
+    {
+      "id": "lib/cors.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/cors.ts",
+      "group": 3,
+      "complexity": 39
+    },
+    {
+      "id": "lib/embeddings.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/embeddings.ts",
+      "group": 3,
+      "complexity": 39
+    },
+    {
+      "id": "lib/event-bus.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/event-bus.ts",
+      "group": 3,
+      "complexity": 48
+    },
+    {
+      "id": "lib/git_utils.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/git_utils.ts",
+      "group": 3,
+      "complexity": 47
+    },
+    {
+      "id": "lib/hippocampus-client.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/hippocampus-client.ts",
+      "group": 3,
+      "complexity": 31
+    },
+    {
+      "id": "lib/linearClient.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/linearClient.ts",
+      "group": 3,
+      "complexity": 22
+    },
+    {
+      "id": "lib/local_vector_store.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/local_vector_store.ts",
+      "group": 3,
+      "complexity": 80
+    },
+    {
+      "id": "lib/logger.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/logger.ts",
+      "group": 3,
+      "complexity": 18
+    },
+    {
+      "id": "lib/memory.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/memory.ts",
+      "group": 3,
+      "complexity": 77
+    },
+    {
+      "id": "lib/nexus-security.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/nexus-security.ts",
+      "group": 3,
+      "complexity": 184
+    },
+    {
+      "id": "lib/qdrant.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/qdrant.ts",
+      "group": 3,
+      "complexity": 33
+    },
+    {
+      "id": "lib/rateLimiter.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/rateLimiter.ts",
+      "group": 3,
+      "complexity": 71
+    },
+    {
+      "id": "lib/security.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/security.ts",
+      "group": 3,
+      "complexity": 55
+    },
+    {
+      "id": "lib/shared_memory.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/shared_memory.ts",
+      "group": 3,
+      "complexity": 82
+    },
+    {
+      "id": "lib/taskQueue.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/taskQueue.ts",
+      "group": 3,
+      "complexity": 86
+    },
+    {
+      "id": "lib/templates.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/templates.ts",
+      "group": 3,
+      "complexity": 48
+    },
+    {
+      "id": "lib/tools/fileSystem.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/tools/fileSystem.ts",
+      "group": 3,
+      "complexity": 103
+    },
+    {
+      "id": "lib/tools/index.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/tools/index.ts",
+      "group": 3,
+      "complexity": 69
+    },
+    {
+      "id": "lib/tools/search.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/tools/search.ts",
+      "group": 3,
+      "complexity": 29
+    },
+    {
+      "id": "lib/websocket/MessageBuffer.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/websocket/MessageBuffer.ts",
+      "group": 3,
+      "complexity": 193
+    },
+    {
+      "id": "lib/websocket/ReconnectionManager.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/websocket/ReconnectionManager.ts",
+      "group": 3,
+      "complexity": 109
+    },
+    {
+      "id": "lib/websocket/types.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/lib/websocket/types.ts",
+      "group": 3,
+      "complexity": 40
+    },
+    {
+      "id": "next-env.d.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/next-env.d.ts",
+      "group": 3,
+      "complexity": 7
+    },
+    {
+      "id": "next.config.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/next.config.js",
+      "group": 3,
+      "complexity": 33
+    },
+    {
+      "id": "pages/_app.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/_app.tsx",
+      "group": 1,
+      "complexity": 27
+    },
+    {
+      "id": "pages/_document.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/_document.tsx",
+      "group": 1,
+      "complexity": 61
+    },
+    {
+      "id": "pages/agents.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/agents.tsx",
+      "group": 1,
+      "complexity": 93
+    },
+    {
+      "id": "pages/antigravity.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/antigravity.tsx",
+      "group": 1,
+      "complexity": 214
+    },
+    {
+      "id": "pages/api/alliance/dispatch.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/alliance/dispatch.ts",
+      "group": 1,
+      "complexity": 469
+    },
+    {
+      "id": "pages/api/alliance/execute-goal.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/alliance/execute-goal.ts",
+      "group": 1,
+      "complexity": 86
+    },
+    {
+      "id": "pages/api/alliance/refactor-scan.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/alliance/refactor-scan.ts",
+      "group": 1,
+      "complexity": 98
+    },
+    {
+      "id": "pages/api/antigravity/command.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/antigravity/command.ts",
+      "group": 1,
+      "complexity": 81
+    },
+    {
+      "id": "pages/api/browser-agent/execute.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/browser-agent/execute.ts",
+      "group": 1,
+      "complexity": 111
+    },
+    {
+      "id": "pages/api/browser-agent/screenshot.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/browser-agent/screenshot.ts",
+      "group": 1,
+      "complexity": 35
+    },
+    {
+      "id": "pages/api/browser-agent/status.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/browser-agent/status.ts",
+      "group": 1,
+      "complexity": 23
+    },
+    {
+      "id": "pages/api/browser-agent/stop.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/browser-agent/stop.ts",
+      "group": 1,
+      "complexity": 29
+    },
+    {
+      "id": "pages/api/browser-agent/stream.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/browser-agent/stream.ts",
+      "group": 1,
+      "complexity": 113
+    },
+    {
+      "id": "pages/api/budget.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/budget.ts",
+      "group": 1,
+      "complexity": 25
+    },
+    {
+      "id": "pages/api/clipboard/history.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/clipboard/history.ts",
+      "group": 1,
+      "complexity": 90
+    },
+    {
+      "id": "pages/api/context.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/context.ts",
+      "group": 1,
+      "complexity": 26
+    },
+    {
+      "id": "pages/api/cortex/execute.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/cortex/execute.ts",
+      "group": 1,
+      "complexity": 45
+    },
+    {
+      "id": "pages/api/cortex/plan.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/cortex/plan.ts",
+      "group": 1,
+      "complexity": 45
+    },
+    {
+      "id": "pages/api/daily.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/daily.ts",
+      "group": 1,
+      "complexity": 143
+    },
+    {
+      "id": "pages/api/dashboard/health.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/dashboard/health.ts",
+      "group": 1,
+      "complexity": 73
+    },
+    {
+      "id": "pages/api/deploy.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/deploy.ts",
+      "group": 1,
+      "complexity": 62
+    },
+    {
+      "id": "pages/api/dispatch.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/dispatch.ts",
+      "group": 1,
+      "complexity": 277
+    },
+    {
+      "id": "pages/api/dispatch/siri.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/dispatch/siri.ts",
+      "group": 1,
+      "complexity": 93
+    },
+    {
+      "id": "pages/api/errors.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/errors.ts",
+      "group": 1,
+      "complexity": 97
+    },
+    {
+      "id": "pages/api/finance.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/finance.ts",
+      "group": 1,
+      "complexity": 25
+    },
+    {
+      "id": "pages/api/forge/agents/health.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/forge/agents/health.ts",
+      "group": 1,
+      "complexity": 11
+    },
+    {
+      "id": "pages/api/health.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/health.ts",
+      "group": 1,
+      "complexity": 135
+    },
+    {
+      "id": "pages/api/heartbeat.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/heartbeat.ts",
+      "group": 1,
+      "complexity": 43
+    },
+    {
+      "id": "pages/api/hippocampus/metrics.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/hippocampus/metrics.ts",
+      "group": 1,
+      "complexity": 61
+    },
+    {
+      "id": "pages/api/integrations/linear/sync.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/integrations/linear/sync.ts",
+      "group": 1,
+      "complexity": 122
+    },
+    {
+      "id": "pages/api/intelligence/report.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/intelligence/report.ts",
+      "group": 1,
+      "complexity": 29
+    },
+    {
+      "id": "pages/api/intelligence/scrape.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/intelligence/scrape.ts",
+      "group": 1,
+      "complexity": 108
+    },
+    {
+      "id": "pages/api/intelligence/search.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/intelligence/search.ts",
+      "group": 1,
+      "complexity": 73
+    },
+    {
+      "id": "pages/api/intelligence/vectorize-repo.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/intelligence/vectorize-repo.ts",
+      "group": 1,
+      "complexity": 81
+    },
+    {
+      "id": "pages/api/judge_verdict.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/judge_verdict.ts",
+      "group": 1,
+      "complexity": 32
+    },
+    {
+      "id": "pages/api/linear/issues.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/linear/issues.ts",
+      "group": 1,
+      "complexity": 83
+    },
+    {
+      "id": "pages/api/macros.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/macros.ts",
+      "group": 1,
+      "complexity": 71
+    },
+    {
+      "id": "pages/api/monitor/health.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/monitor/health.ts",
+      "group": 1,
+      "complexity": 152
+    },
+    {
+      "id": "pages/api/n8n/trigger.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/n8n/trigger.ts",
+      "group": 1,
+      "complexity": 77
+    },
+    {
+      "id": "pages/api/neural_feed.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/neural_feed.ts",
+      "group": 1,
+      "complexity": 54
+    },
+    {
+      "id": "pages/api/openclaw_sync.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/openclaw_sync.ts",
+      "group": 1,
+      "complexity": 132
+    },
+    {
+      "id": "pages/api/ping.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/ping.ts",
+      "group": 1,
+      "complexity": 11
+    },
+    {
+      "id": "pages/api/rag.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/rag.ts",
+      "group": 1,
+      "complexity": 67
+    },
+    {
+      "id": "pages/api/scholar.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/scholar.ts",
+      "group": 1,
+      "complexity": 34
+    },
+    {
+      "id": "pages/api/storage/activity.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/storage/activity.ts",
+      "group": 1,
+      "complexity": 43
+    },
+    {
+      "id": "pages/api/storage/search.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/storage/search.ts",
+      "group": 1,
+      "complexity": 60
+    },
+    {
+      "id": "pages/api/storage/tiers.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/storage/tiers.ts",
+      "group": 1,
+      "complexity": 62
+    },
+    {
+      "id": "pages/api/studio/claude.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/studio/claude.ts",
+      "group": 1,
+      "complexity": 94
+    },
+    {
+      "id": "pages/api/swarm.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/swarm.ts",
+      "group": 1,
+      "complexity": 109
+    },
+    {
+      "id": "pages/api/swarm/review.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/swarm/review.ts",
+      "group": 1,
+      "complexity": 52
+    },
+    {
+      "id": "pages/api/swarm/session.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/swarm/session.ts",
+      "group": 1,
+      "complexity": 229
+    },
+    {
+      "id": "pages/api/sync.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/sync.ts",
+      "group": 1,
+      "complexity": 302
+    },
+    {
+      "id": "pages/api/system/cortex-map.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/cortex-map.ts",
+      "group": 1,
+      "complexity": 36
+    },
+    {
+      "id": "pages/api/system/dependency-graph.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/dependency-graph.ts",
+      "group": 1,
+      "complexity": 33
+    },
+    {
+      "id": "pages/api/system/event-stream.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/event-stream.ts",
+      "group": 1,
+      "complexity": 45
+    },
+    {
+      "id": "pages/api/system/graph.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/graph.ts",
+      "group": 1,
+      "complexity": 109
+    },
+    {
+      "id": "pages/api/system/health.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/health.ts",
+      "group": 1,
+      "complexity": 86
+    },
+    {
+      "id": "pages/api/system/logs.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/logs.ts",
+      "group": 1,
+      "complexity": 124
+    },
+    {
+      "id": "pages/api/system/memory.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/memory.ts",
+      "group": 1,
+      "complexity": 44
+    },
+    {
+      "id": "pages/api/system/openclaw-status.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/openclaw-status.ts",
+      "group": 1,
+      "complexity": 175
+    },
+    {
+      "id": "pages/api/system/process-tree.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/process-tree.ts",
+      "group": 1,
+      "complexity": 35
+    },
+    {
+      "id": "pages/api/system/queues.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/queues.ts",
+      "group": 1,
+      "complexity": 68
+    },
+    {
+      "id": "pages/api/system/relay-error.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/relay-error.ts",
+      "group": 1,
+      "complexity": 75
+    },
+    {
+      "id": "pages/api/system/storage.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/storage.ts",
+      "group": 1,
+      "complexity": 55
+    },
+    {
+      "id": "pages/api/system/tail-logs.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/tail-logs.ts",
+      "group": 1,
+      "complexity": 115
+    },
+    {
+      "id": "pages/api/system/updates.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/updates.ts",
+      "group": 1,
+      "complexity": 48
+    },
+    {
+      "id": "pages/api/system/upgrade.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/upgrade.ts",
+      "group": 1,
+      "complexity": 98
+    },
+    {
+      "id": "pages/api/system/view-file.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/view-file.ts",
+      "group": 1,
+      "complexity": 44
+    },
+    {
+      "id": "pages/api/system/vision.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/system/vision.ts",
+      "group": 1,
+      "complexity": 71
+    },
+    {
+      "id": "pages/api/webhooks/external.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/webhooks/external.ts",
+      "group": 1,
+      "complexity": 129
+    },
+    {
+      "id": "pages/api/webhooks/linear.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/webhooks/linear.ts",
+      "group": 1,
+      "complexity": 105
+    },
+    {
+      "id": "pages/api/ws.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/api/ws.ts",
+      "group": 1,
+      "complexity": 95
+    },
+    {
+      "id": "pages/board.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/board.tsx",
+      "group": 1,
+      "complexity": 125
+    },
+    {
+      "id": "pages/browser-agent.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/browser-agent.tsx",
+      "group": 1,
+      "complexity": 525
+    },
+    {
+      "id": "pages/central-command.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/central-command.tsx",
+      "group": 1,
+      "complexity": 440
+    },
+    {
+      "id": "pages/comet.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/comet.tsx",
+      "group": 1,
+      "complexity": 354
+    },
+    {
+      "id": "pages/daily.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/daily.tsx",
+      "group": 1,
+      "complexity": 408
+    },
+    {
+      "id": "pages/frameworks.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/frameworks.tsx",
+      "group": 1,
+      "complexity": 57
+    },
+    {
+      "id": "pages/index.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/index.tsx",
+      "group": 1,
+      "complexity": 217
+    },
+    {
+      "id": "pages/interoperability.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/interoperability.tsx",
+      "group": 1,
+      "complexity": 332
+    },
+    {
+      "id": "pages/memory.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/memory.tsx",
+      "group": 1,
+      "complexity": 210
+    },
+    {
+      "id": "pages/nexus.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/nexus.tsx",
+      "group": 1,
+      "complexity": 116
+    },
+    {
+      "id": "pages/observability.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/observability.tsx",
+      "group": 1,
+      "complexity": 656
+    },
+    {
+      "id": "pages/periodic-table.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/periodic-table.tsx",
+      "group": 1,
+      "complexity": 377
+    },
+    {
+      "id": "pages/playground.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/playground.tsx",
+      "group": 1,
+      "complexity": 552
+    },
+    {
+      "id": "pages/queues.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/queues.tsx",
+      "group": 1,
+      "complexity": 184
+    },
+    {
+      "id": "pages/scholar.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/scholar.tsx",
+      "group": 1,
+      "complexity": 26
+    },
+    {
+      "id": "pages/settings.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/settings.tsx",
+      "group": 1,
+      "complexity": 123
+    },
+    {
+      "id": "pages/studio.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/studio.tsx",
+      "group": 1,
+      "complexity": 276
+    },
+    {
+      "id": "pages/system.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/system.tsx",
+      "group": 1,
+      "complexity": 155
+    },
+    {
+      "id": "pages/war-room.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/war-room.tsx",
+      "group": 1,
+      "complexity": 305
+    },
+    {
+      "id": "pages/whitepaper.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/pages/whitepaper.tsx",
+      "group": 1,
+      "complexity": 136
+    },
+    {
+      "id": "postcss.config.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/postcss.config.js",
+      "group": 3,
+      "complexity": 7
+    },
+    {
+      "id": "scripts/analyze-dependencies.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/analyze-dependencies.ts",
+      "group": 3,
+      "complexity": 63
+    },
+    {
+      "id": "scripts/auto_doc_gen.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/auto_doc_gen.js",
+      "group": 3,
+      "complexity": 99
+    },
+    {
+      "id": "scripts/clipboard-watcher.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/clipboard-watcher.ts",
+      "group": 3,
+      "complexity": 62
+    },
+    {
+      "id": "scripts/docker-ai-bridge.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/docker-ai-bridge.ts",
+      "group": 3,
+      "complexity": 28
+    },
+    {
+      "id": "scripts/index_vault.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/index_vault.ts",
+      "group": 3,
+      "complexity": 103
+    },
+    {
+      "id": "scripts/prune-memory.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/prune-memory.ts",
+      "group": 3,
+      "complexity": 95
+    },
+    {
+      "id": "scripts/rotate-logs.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/rotate-logs.js",
+      "group": 3,
+      "complexity": 55
+    },
+    {
+      "id": "scripts/simulate_neural_stream.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/simulate_neural_stream.js",
+      "group": 3,
+      "complexity": 51
+    },
+    {
+      "id": "scripts/smart-log-rotation.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/smart-log-rotation.ts",
+      "group": 3,
+      "complexity": 61
+    },
+    {
+      "id": "scripts/start_agent_system.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/start_agent_system.ts",
+      "group": 3,
+      "complexity": 437
+    },
+    {
+      "id": "scripts/summarize_tasks.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/summarize_tasks.js",
+      "group": 3,
+      "complexity": 81
+    },
+    {
+      "id": "scripts/system-stress-test.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/system-stress-test.ts",
+      "group": 3,
+      "complexity": 58
+    },
+    {
+      "id": "scripts/test_comet_bridge.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/test_comet_bridge.js",
+      "group": 3,
+      "complexity": 59
+    },
+    {
+      "id": "scripts/test_grok_webhook.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/test_grok_webhook.js",
+      "group": 3,
+      "complexity": 45
+    },
+    {
+      "id": "scripts/test_linear_webhook.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/test_linear_webhook.js",
+      "group": 3,
+      "complexity": 34
+    },
+    {
+      "id": "scripts/test_swarm.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/test_swarm.ts",
+      "group": 3,
+      "complexity": 34
+    },
+    {
+      "id": "scripts/update-monitor.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/update-monitor.ts",
+      "group": 3,
+      "complexity": 81
+    },
+    {
+      "id": "scripts/vault-maintenance.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/vault-maintenance.ts",
+      "group": 3,
+      "complexity": 58
+    },
+    {
+      "id": "scripts/vault-watcher.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/vault-watcher.ts",
+      "group": 3,
+      "complexity": 92
+    },
+    {
+      "id": "server/duck-search-proxy.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/server/duck-search-proxy.js",
+      "group": 3,
+      "complexity": 133
+    },
+    {
+      "id": "server/relay.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/server/relay.js",
+      "group": 3,
+      "complexity": 568
+    },
+    {
+      "id": "services/ai-providers/claude.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/services/ai-providers/claude.ts",
+      "group": 3,
+      "complexity": 52
+    },
+    {
+      "id": "services/ai-providers/copilot.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/services/ai-providers/copilot.ts",
+      "group": 3,
+      "complexity": 47
+    },
+    {
+      "id": "services/ai-providers/gemini.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/services/ai-providers/gemini.ts",
+      "group": 3,
+      "complexity": 38
+    },
+    {
+      "id": "services/code-orchestration/merger.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/services/code-orchestration/merger.ts",
+      "group": 3,
+      "complexity": 36
+    },
+    {
+      "id": "services/code-orchestration/orchestrator.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/services/code-orchestration/orchestrator.ts",
+      "group": 3,
+      "complexity": 187
+    },
+    {
+      "id": "services/code-orchestration/parser.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/services/code-orchestration/parser.ts",
+      "group": 3,
+      "complexity": 55
+    },
+    {
+      "id": "services/code-orchestration/types.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/services/code-orchestration/types.ts",
+      "group": 3,
+      "complexity": 37
+    },
+    {
+      "id": "src/components/AILCC_V2/ActiveTaskContext.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/ActiveTaskContext.tsx",
+      "group": 2,
+      "complexity": 79
+    },
+    {
+      "id": "src/components/AILCC_V2/AgentHeatmap.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/AgentHeatmap.tsx",
+      "group": 2,
+      "complexity": 88
+    },
+    {
+      "id": "src/components/AILCC_V2/CostTrackingPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/CostTrackingPanel.tsx",
+      "group": 2,
+      "complexity": 175
+    },
+    {
+      "id": "src/components/AILCC_V2/ErrorAggregationPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/ErrorAggregationPanel.tsx",
+      "group": 2,
+      "complexity": 200
+    },
+    {
+      "id": "src/components/AILCC_V2/GlassRefreshWidget.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/GlassRefreshWidget.tsx",
+      "group": 2,
+      "complexity": 107
+    },
+    {
+      "id": "src/components/AILCC_V2/GrokSentiencePanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/GrokSentiencePanel.tsx",
+      "group": 2,
+      "complexity": 136
+    },
+    {
+      "id": "src/components/AILCC_V2/MasterCycleView.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/MasterCycleView.tsx",
+      "group": 2,
+      "complexity": 116
+    },
+    {
+      "id": "src/components/AILCC_V2/MissionControlV2.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/MissionControlV2.tsx",
+      "group": 2,
+      "complexity": 135
+    },
+    {
+      "id": "src/components/AILCC_V2/ScholarPortal.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/ScholarPortal.tsx",
+      "group": 2,
+      "complexity": 418
+    },
+    {
+      "id": "src/components/AILCC_V2/SwarmChat.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/SwarmChat.tsx",
+      "group": 2,
+      "complexity": 389
+    },
+    {
+      "id": "src/components/AILCC_V2/SwarmStatusPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/SwarmStatusPanel.tsx",
+      "group": 2,
+      "complexity": 443
+    },
+    {
+      "id": "src/components/AILCC_V2/WorkloadDistributionChart.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/AILCC_V2/WorkloadDistributionChart.tsx",
+      "group": 2,
+      "complexity": 176
+    },
+    {
+      "id": "src/components/dashboard/MarginalGainsPanel.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/dashboard/MarginalGainsPanel.tsx",
+      "group": 2,
+      "complexity": 76
+    },
+    {
+      "id": "src/components/dashboard/activity-feed.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/dashboard/activity-feed.tsx",
+      "group": 2,
+      "complexity": 149
+    },
+    {
+      "id": "src/components/dashboard/health-metrics.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/dashboard/health-metrics.tsx",
+      "group": 2,
+      "complexity": 109
+    },
+    {
+      "id": "src/components/dashboard/periodic-table.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/dashboard/periodic-table.tsx",
+      "group": 2,
+      "complexity": 186
+    },
+    {
+      "id": "src/components/dashboard/shared-memory-marquee.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/dashboard/shared-memory-marquee.tsx",
+      "group": 2,
+      "complexity": 91
+    },
+    {
+      "id": "src/components/dashboard/task-queue.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/dashboard/task-queue.tsx",
+      "group": 2,
+      "complexity": 248
+    },
+    {
+      "id": "src/components/physics/AgentBody.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/physics/AgentBody.ts",
+      "group": 2,
+      "complexity": 125
+    },
+    {
+      "id": "src/components/physics/GravitySystem.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/physics/GravitySystem.ts",
+      "group": 2,
+      "complexity": 106
+    },
+    {
+      "id": "src/components/physics/PhysicsCanvas.tsx",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/physics/PhysicsCanvas.tsx",
+      "group": 2,
+      "complexity": 186
+    },
+    {
+      "id": "src/components/physics/index.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/components/physics/index.ts",
+      "group": 2,
+      "complexity": 4
+    },
+    {
+      "id": "src/lib/mode6/agent-registry.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/agent-registry.ts",
+      "group": 3,
+      "complexity": 140
+    },
+    {
+      "id": "src/lib/mode6/ai-client.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/ai-client.ts",
+      "group": 3,
+      "complexity": 134
+    },
+    {
+      "id": "src/lib/mode6/dispatcher.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/dispatcher.ts",
+      "group": 3,
+      "complexity": 103
+    },
+    {
+      "id": "src/lib/mode6/intent-router.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/intent-router.ts",
+      "group": 3,
+      "complexity": 123
+    },
+    {
+      "id": "src/lib/mode6/loop.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/loop.ts",
+      "group": 3,
+      "complexity": 144
+    },
+    {
+      "id": "src/lib/mode6/memory.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/memory.ts",
+      "group": 3,
+      "complexity": 233
+    },
+    {
+      "id": "src/lib/mode6/resource-manager.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/resource-manager.ts",
+      "group": 3,
+      "complexity": 65
+    },
+    {
+      "id": "src/lib/mode6/shared-memory.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/shared-memory.ts",
+      "group": 3,
+      "complexity": 40
+    },
+    {
+      "id": "src/lib/mode6/tool-registry.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/tool-registry.ts",
+      "group": 3,
+      "complexity": 26
+    },
+    {
+      "id": "src/lib/mode6/tools.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/tools.ts",
+      "group": 3,
+      "complexity": 96
+    },
+    {
+      "id": "src/lib/mode6/types.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/types.ts",
+      "group": 3,
+      "complexity": 108
+    },
+    {
+      "id": "src/lib/utils.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/utils.ts",
+      "group": 3,
+      "complexity": 7
+    },
+    {
+      "id": "styles/HolographicTexture.module.css",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/styles/HolographicTexture.module.css",
+      "group": 3,
+      "complexity": 30
+    },
+    {
+      "id": "styles/SystemStatusDashboard.module.css",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/styles/SystemStatusDashboard.module.css",
+      "group": 3,
+      "complexity": 102
+    },
+    {
+      "id": "styles/WarRoom.module.css",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/styles/WarRoom.module.css",
+      "group": 3,
+      "complexity": 86
+    },
+    {
+      "id": "styles/components.module.css",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/styles/components.module.css",
+      "group": 2,
+      "complexity": 79
+    },
+    {
+      "id": "styles/globals.css",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/styles/globals.css",
+      "group": 3,
+      "complexity": 318
+    },
+    {
+      "id": "tailwind.config.js",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/tailwind.config.js",
+      "group": 3,
+      "complexity": 29
+    },
+    {
+      "id": "tests/agent_loop_test.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/tests/agent_loop_test.ts",
+      "group": 3,
+      "complexity": 100
+    },
+    {
+      "id": "types/DashboardInterfaces.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/types/DashboardInterfaces.ts",
+      "group": 3,
+      "complexity": 146
+    },
+    {
+      "id": "types/alliance.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/types/alliance.ts",
+      "group": 3,
+      "complexity": 134
+    },
+    {
+      "id": "types/api.types.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/types/api.types.ts",
+      "group": 3,
+      "complexity": 97
+    },
+    {
+      "id": "types/comet_protocol.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/types/comet_protocol.ts",
+      "group": 3,
+      "complexity": 66
+    },
+    {
+      "id": "types/elements.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/types/elements.ts",
+      "group": 3,
+      "complexity": 26
+    },
+    {
+      "id": "types/node-fetch.d.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/types/node-fetch.d.ts",
+      "group": 3,
+      "complexity": 2
+    },
+    {
+      "id": "utils/ActionRegistry.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/utils/ActionRegistry.ts",
+      "group": 3,
+      "complexity": 111
+    },
+    {
+      "id": "utils/formatters.ts",
+      "path": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/utils/formatters.ts",
+      "group": 3,
+      "complexity": 21
+    }
+  ],
+  "links": [
+    {
+      "source": "../automations/mode6/agent-routing/agent-dispatcher.ts",
+      "target": "../automations/mode6/agents/adapter-registry.ts"
+    },
+    {
+      "source": "../automations/mode6/agent-routing/agent-dispatcher.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/agent-routing/routing-optimizer.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/adapter-registry.ts",
+      "target": "../automations/mode6/agents/claude-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/adapter-registry.ts",
+      "target": "../automations/mode6/agents/gemini-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/adapter-registry.ts",
+      "target": "../automations/mode6/agents/grok-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/adapter-registry.ts",
+      "target": "../automations/mode6/agents/openai-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/adapter-registry.ts",
+      "target": "../automations/mode6/agents/perplexity-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/adapter-registry.ts",
+      "target": "../automations/mode6/config/env.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/adapter-registry.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/claude-adapter.ts",
+      "target": "../automations/mode6/config/env.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/claude-adapter.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/gemini-adapter.ts",
+      "target": "../automations/mode6/config/env.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/gemini-adapter.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/grok-adapter.ts",
+      "target": "../automations/mode6/config/env.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/grok-adapter.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/openai-adapter.ts",
+      "target": "../automations/mode6/config/env.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/openai-adapter.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/perplexity-adapter.ts",
+      "target": "../automations/mode6/config/env.ts"
+    },
+    {
+      "source": "../automations/mode6/agents/perplexity-adapter.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/agent-routing/agent-dispatcher.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/agents/adapter-registry.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/agents/claude-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/agents/gemini-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/agents/grok-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/agents/openai-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/agents/perplexity-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/config/env.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/intent-router/intent-router.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/memory/memory-manager.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/swarm/orchestrator.ts"
+    },
+    {
+      "source": "../automations/mode6/index.ts",
+      "target": "../automations/mode6/swarm/types.ts"
+    },
+    {
+      "source": "../automations/mode6/intent-router/intent-router.ts",
+      "target": "../automations/mode6/agent-routing/routing-optimizer.ts"
+    },
+    {
+      "source": "../automations/mode6/intent-router/intent-router.ts",
+      "target": "../automations/mode6/agents/openai-adapter.ts"
+    },
+    {
+      "source": "../automations/mode6/intent-router/intent-router.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/memory/memory-manager.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/memory/memory-manager.ts",
+      "target": "../automations/mode6/memory/providers/json-provider.ts"
+    },
+    {
+      "source": "../automations/mode6/memory/memory-manager.ts",
+      "target": "../automations/mode6/memory/storage-types.ts"
+    },
+    {
+      "source": "../automations/mode6/memory/providers/json-provider.ts",
+      "target": "../automations/mode6/memory/storage-types.ts"
+    },
+    {
+      "source": "../automations/mode6/swarm/orchestrator.ts",
+      "target": "../automations/mode6/index.ts"
+    },
+    {
+      "source": "../automations/mode6/swarm/orchestrator.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "../automations/mode6/swarm/orchestrator.ts",
+      "target": "../automations/mode6/swarm/types.ts"
+    },
+    {
+      "source": "../automations/mode6/swarm/types.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "__tests__/components/ErrorBoundary.test.tsx",
+      "target": "components/ErrorBoundary.tsx"
+    },
+    {
+      "source": "__tests__/components/StatusIndicator.test.tsx",
+      "target": "components/StatusIndicator.tsx"
+    },
+    {
+      "source": "__tests__/hooks/useAgentStatus.test.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "__tests__/hooks/useAgentStatus.test.tsx",
+      "target": "components/hooks/useAgentStatus.ts"
+    },
+    {
+      "source": "components/AgentCard.tsx",
+      "target": "types/DashboardInterfaces.ts"
+    },
+    {
+      "source": "components/AgentControlPanel.tsx",
+      "target": "components/hooks/useForgeWS.ts"
+    },
+    {
+      "source": "components/AgentDetailModal.tsx",
+      "target": "types/DashboardInterfaces.ts"
+    },
+    {
+      "source": "components/AgentMonitor.tsx",
+      "target": "types/DashboardInterfaces.ts"
+    },
+    {
+      "source": "components/AgentPanel.tsx",
+      "target": "components/AgentCard.tsx"
+    },
+    {
+      "source": "components/AgentPanel.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "components/AgentPanel.tsx",
+      "target": "components/Tooltip.tsx"
+    },
+    {
+      "source": "components/AgentPanel.tsx",
+      "target": "components/hooks/useAgentStatus.ts"
+    },
+    {
+      "source": "components/CapabilityGraph.tsx",
+      "target": "styles/components.module.css"
+    },
+    {
+      "source": "components/ClipboardHistory.tsx",
+      "target": "lib/clipboard.ts"
+    },
+    {
+      "source": "components/CommandPalette.tsx",
+      "target": "lib/audio.ts"
+    },
+    {
+      "source": "components/CommandPalette.tsx",
+      "target": "utils/ActionRegistry.ts"
+    },
+    {
+      "source": "components/DataFlowVisualizer.tsx",
+      "target": "pages/api/storage/activity.ts"
+    },
+    {
+      "source": "components/DocumentPreviewModal.tsx",
+      "target": "lib/audio.ts"
+    },
+    {
+      "source": "components/ElementTable.tsx",
+      "target": "types/elements.ts"
+    },
+    {
+      "source": "components/GoalTracker.tsx",
+      "target": "src/components/dashboard/MarginalGainsPanel.tsx"
+    },
+    {
+      "source": "components/HolographicTexture.tsx",
+      "target": "styles/HolographicTexture.module.css"
+    },
+    {
+      "source": "components/IntelligentFileFinder.tsx",
+      "target": "pages/api/storage/search.ts"
+    },
+    {
+      "source": "components/MacrosWidget.tsx",
+      "target": "components/Tooltip.tsx"
+    },
+    {
+      "source": "components/MacrosWidget.tsx",
+      "target": "utils/formatters.ts"
+    },
+    {
+      "source": "components/MasterCycleView.tsx",
+      "target": "types/comet_protocol.ts"
+    },
+    {
+      "source": "components/MastermindHub.tsx",
+      "target": "hooks/useAllianceData.ts"
+    },
+    {
+      "source": "components/MissionControlGrid.tsx",
+      "target": "components/StatusIndicator.tsx"
+    },
+    {
+      "source": "components/MissionControlGrid.tsx",
+      "target": "components/hooks/useSystemHealth.ts"
+    },
+    {
+      "source": "components/NeuralSyncProvider.tsx",
+      "target": "lib/websocket/MessageBuffer.ts"
+    },
+    {
+      "source": "components/NeuralSyncProvider.tsx",
+      "target": "lib/websocket/ReconnectionManager.ts"
+    },
+    {
+      "source": "components/NeuralSyncProvider.tsx",
+      "target": "lib/websocket/types.ts"
+    },
+    {
+      "source": "components/NeuralSyncProvider.tsx",
+      "target": "types/DashboardInterfaces.ts"
+    },
+    {
+      "source": "components/NexusLayout.tsx",
+      "target": "components/CommandPalette.tsx"
+    },
+    {
+      "source": "components/NexusLayout.tsx",
+      "target": "components/LifeModeStrip.tsx"
+    },
+    {
+      "source": "components/NexusLayout.tsx",
+      "target": "components/OmniSearch.tsx"
+    },
+    {
+      "source": "components/NexusLayout.tsx",
+      "target": "components/OpenClawGuide.tsx"
+    },
+    {
+      "source": "components/NexusLayout.tsx",
+      "target": "components/ParticleBackground.tsx"
+    },
+    {
+      "source": "components/NexusLayout.tsx",
+      "target": "components/StatusFooter.tsx"
+    },
+    {
+      "source": "components/NexusLayout.tsx",
+      "target": "components/StatusIndicator.tsx"
+    },
+    {
+      "source": "components/NexusLayout.tsx",
+      "target": "components/Tooltip.tsx"
+    },
+    {
+      "source": "components/NexusLayout.tsx",
+      "target": "components/hooks/useSystemHealth.ts"
+    },
+    {
+      "source": "components/NexusUAP.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "components/OmniBar.tsx",
+      "target": "components/BiometricConsentModal.tsx"
+    },
+    {
+      "source": "components/OmniBar.tsx",
+      "target": "components/PersonaSwitcher.tsx"
+    },
+    {
+      "source": "components/OmniBar.tsx",
+      "target": "components/hooks/useCommandDispatcher.ts"
+    },
+    {
+      "source": "components/OmniSearch.tsx",
+      "target": "components/hooks/useCommandDispatcher.ts"
+    },
+    {
+      "source": "components/OmniSearch.tsx",
+      "target": "lib/audio.ts"
+    },
+    {
+      "source": "components/OrchestrationPanel.tsx",
+      "target": "types/DashboardInterfaces.ts"
+    },
+    {
+      "source": "components/StateViewer.tsx",
+      "target": "types/DashboardInterfaces.ts"
+    },
+    {
+      "source": "components/StatusIndicator.tsx",
+      "target": "components/Tooltip.tsx"
+    },
+    {
+      "source": "components/StorageTierVisualizer.tsx",
+      "target": "pages/api/storage/tiers.ts"
+    },
+    {
+      "source": "components/StudioOutputCanvas.tsx",
+      "target": "components/StudioModeSelector.tsx"
+    },
+    {
+      "source": "components/SystemComparison.tsx",
+      "target": "lib/hippocampus-client.ts"
+    },
+    {
+      "source": "components/SystemGraph.tsx",
+      "target": "components/hooks/useAgentStatus.ts"
+    },
+    {
+      "source": "components/SystemHUD.tsx",
+      "target": "components/AgentMonitor.tsx"
+    },
+    {
+      "source": "components/SystemHUD.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "components/SystemHUD.tsx",
+      "target": "components/OrchestrationPanel.tsx"
+    },
+    {
+      "source": "components/SystemHUD.tsx",
+      "target": "components/TelemetryCharts.tsx"
+    },
+    {
+      "source": "components/SystemHUD.tsx",
+      "target": "components/widgets/ScholarTracker.tsx"
+    },
+    {
+      "source": "components/SystemHUD.tsx",
+      "target": "types/DashboardInterfaces.ts"
+    },
+    {
+      "source": "components/SystemHealthDashboard.tsx",
+      "target": "pages/api/storage/tiers.ts"
+    },
+    {
+      "source": "components/SystemHealthDashboard.tsx",
+      "target": "pages/api/system/health.ts"
+    },
+    {
+      "source": "components/SystemStatusDashboard.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "components/SystemStatusDashboard.tsx",
+      "target": "styles/SystemStatusDashboard.module.css"
+    },
+    {
+      "source": "components/TacticalHUD/ReactorCore.tsx",
+      "target": "styles/components.module.css"
+    },
+    {
+      "source": "components/TacticalHUD/TacticalLayout.tsx",
+      "target": "components/TacticalHUD/DataStream.tsx"
+    },
+    {
+      "source": "components/TacticsHUD.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "components/TaskLogViewer.tsx",
+      "target": "components/HumanApprovalGate.tsx"
+    },
+    {
+      "source": "components/TaskLogViewer.tsx",
+      "target": "components/RiskTierBadge.tsx"
+    },
+    {
+      "source": "components/TaskQueue.tsx",
+      "target": "components/hooks/useTaskQueue.ts"
+    },
+    {
+      "source": "components/TelemetryCharts.tsx",
+      "target": "types/DashboardInterfaces.ts"
+    },
+    {
+      "source": "components/WarRoom.tsx",
+      "target": "styles/WarRoom.module.css"
+    },
+    {
+      "source": "components/antigravity/AntigravityPanel.tsx",
+      "target": "components/antigravity/AgentOrbitDock.tsx"
+    },
+    {
+      "source": "components/antigravity/AntigravityPanel.tsx",
+      "target": "components/antigravity/GoalBubble.tsx"
+    },
+    {
+      "source": "components/antigravity/AntigravityPanel.tsx",
+      "target": "components/antigravity/ToolRegistryTray.tsx"
+    },
+    {
+      "source": "components/antigravity/AntigravityPanel.tsx",
+      "target": "components/antigravity/VirtualTouchBar.tsx"
+    },
+    {
+      "source": "components/control/AgentControlPanel.tsx",
+      "target": "components/hooks/useForgeStream.ts"
+    },
+    {
+      "source": "components/hooks/useAgentStatus.ts",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "components/unified/panels/CodeGenerationPanel.tsx",
+      "target": "services/code-orchestration/types.ts"
+    },
+    {
+      "source": "components/widgets/AntigravityWindow.tsx",
+      "target": "components/HolographicTexture.tsx"
+    },
+    {
+      "source": "components/widgets/FinanceHUD.tsx",
+      "target": "components/ui/DashboardCard.tsx"
+    },
+    {
+      "source": "components/widgets/ScholarTracker.tsx",
+      "target": "components/ui/DashboardCard.tsx"
+    },
+    {
+      "source": "components/widgets/SystemModeCard.tsx",
+      "target": "components/ui/DashboardCard.tsx"
+    },
+    {
+      "source": "hooks/useAllianceData.ts",
+      "target": "types/alliance.ts"
+    },
+    {
+      "source": "lib/agentManager.ts",
+      "target": "types/api.types.ts"
+    },
+    {
+      "source": "lib/autoDelegate.ts",
+      "target": "config/alliance_config.json"
+    },
+    {
+      "source": "lib/autoDelegate.ts",
+      "target": "types/alliance.ts"
+    },
+    {
+      "source": "lib/shared_memory.ts",
+      "target": "lib/security.ts"
+    },
+    {
+      "source": "lib/taskQueue.ts",
+      "target": "types/api.types.ts"
+    },
+    {
+      "source": "lib/tools/fileSystem.ts",
+      "target": "lib/tools/index.ts"
+    },
+    {
+      "source": "lib/tools/search.ts",
+      "target": "lib/tools/index.ts"
+    },
+    {
+      "source": "pages/_app.tsx",
+      "target": "components/ErrorBoundary.tsx"
+    },
+    {
+      "source": "pages/_app.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "pages/_app.tsx",
+      "target": "components/SecurityLock.tsx"
+    },
+    {
+      "source": "pages/_app.tsx",
+      "target": "components/SkeletonLoaders.tsx"
+    },
+    {
+      "source": "pages/_app.tsx",
+      "target": "styles/globals.css"
+    },
+    {
+      "source": "pages/agents.tsx",
+      "target": "components/AgentDetailModal.tsx"
+    },
+    {
+      "source": "pages/agents.tsx",
+      "target": "components/AgentGovernance.tsx"
+    },
+    {
+      "source": "pages/agents.tsx",
+      "target": "components/AgentMonitor.tsx"
+    },
+    {
+      "source": "pages/agents.tsx",
+      "target": "components/AirtableHub.tsx"
+    },
+    {
+      "source": "pages/agents.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/agents.tsx",
+      "target": "components/SkeletonLoaders.tsx"
+    },
+    {
+      "source": "pages/agents.tsx",
+      "target": "components/hooks/useAgentStatus.ts"
+    },
+    {
+      "source": "pages/agents.tsx",
+      "target": "types/DashboardInterfaces.ts"
+    },
+    {
+      "source": "pages/antigravity.tsx",
+      "target": "components/HealthPanel.tsx"
+    },
+    {
+      "source": "pages/antigravity.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/antigravity.tsx",
+      "target": "components/OrchestrationPanel.tsx"
+    },
+    {
+      "source": "pages/antigravity.tsx",
+      "target": "components/StrategicAdvisory.tsx"
+    },
+    {
+      "source": "pages/antigravity.tsx",
+      "target": "components/SwarmHeartbeat.tsx"
+    },
+    {
+      "source": "pages/antigravity.tsx",
+      "target": "components/SystemGraph.tsx"
+    },
+    {
+      "source": "pages/antigravity.tsx",
+      "target": "components/TerminalStream.tsx"
+    },
+    {
+      "source": "pages/antigravity.tsx",
+      "target": "types/DashboardInterfaces.ts"
+    },
+    {
+      "source": "pages/api/alliance/dispatch.ts",
+      "target": "lib/shared_memory.ts"
+    },
+    {
+      "source": "pages/api/cortex/execute.ts",
+      "target": "services/code-orchestration/orchestrator.ts"
+    },
+    {
+      "source": "pages/api/cortex/plan.ts",
+      "target": "services/code-orchestration/orchestrator.ts"
+    },
+    {
+      "source": "pages/api/dashboard/health.ts",
+      "target": "lib/agentManager.ts"
+    },
+    {
+      "source": "pages/api/dashboard/health.ts",
+      "target": "lib/apiAuth.ts"
+    },
+    {
+      "source": "pages/api/dashboard/health.ts",
+      "target": "lib/cors.ts"
+    },
+    {
+      "source": "pages/api/dashboard/health.ts",
+      "target": "lib/logger.ts"
+    },
+    {
+      "source": "pages/api/dashboard/health.ts",
+      "target": "lib/rateLimiter.ts"
+    },
+    {
+      "source": "pages/api/dashboard/health.ts",
+      "target": "lib/taskQueue.ts"
+    },
+    {
+      "source": "pages/api/dashboard/health.ts",
+      "target": "types/api.types.ts"
+    },
+    {
+      "source": "pages/api/dispatch.ts",
+      "target": "../automations/mode6/intent-router/intent-router.ts"
+    },
+    {
+      "source": "pages/api/dispatch.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "pages/api/dispatch.ts",
+      "target": "../automations/mode6/memory/memory-manager.ts"
+    },
+    {
+      "source": "pages/api/dispatch.ts",
+      "target": "lib/event-bus.ts"
+    },
+    {
+      "source": "pages/api/integrations/linear/sync.ts",
+      "target": "lib/apiAuth.ts"
+    },
+    {
+      "source": "pages/api/integrations/linear/sync.ts",
+      "target": "lib/cors.ts"
+    },
+    {
+      "source": "pages/api/integrations/linear/sync.ts",
+      "target": "lib/linearClient.ts"
+    },
+    {
+      "source": "pages/api/integrations/linear/sync.ts",
+      "target": "lib/rateLimiter.ts"
+    },
+    {
+      "source": "pages/api/integrations/linear/sync.ts",
+      "target": "lib/taskQueue.ts"
+    },
+    {
+      "source": "pages/api/integrations/linear/sync.ts",
+      "target": "types/api.types.ts"
+    },
+    {
+      "source": "pages/api/intelligence/scrape.ts",
+      "target": "lib/local_vector_store.ts"
+    },
+    {
+      "source": "pages/api/intelligence/search.ts",
+      "target": "lib/embeddings.ts"
+    },
+    {
+      "source": "pages/api/intelligence/search.ts",
+      "target": "lib/local_vector_store.ts"
+    },
+    {
+      "source": "pages/api/intelligence/vectorize-repo.ts",
+      "target": "lib/git_utils.ts"
+    },
+    {
+      "source": "pages/api/linear/issues.ts",
+      "target": "lib/cors.ts"
+    },
+    {
+      "source": "pages/api/linear/issues.ts",
+      "target": "lib/linearClient.ts"
+    },
+    {
+      "source": "pages/api/linear/issues.ts",
+      "target": "lib/rateLimiter.ts"
+    },
+    {
+      "source": "pages/api/n8n/trigger.ts",
+      "target": "lib/cors.ts"
+    },
+    {
+      "source": "pages/api/n8n/trigger.ts",
+      "target": "lib/rateLimiter.ts"
+    },
+    {
+      "source": "pages/api/studio/claude.ts",
+      "target": "../automations/mode6/index.ts"
+    },
+    {
+      "source": "pages/api/studio/claude.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "pages/api/swarm/review.ts",
+      "target": "../automations/mode6/index.ts"
+    },
+    {
+      "source": "pages/api/system/event-stream.ts",
+      "target": "lib/event-bus.ts"
+    },
+    {
+      "source": "pages/api/system/relay-error.ts",
+      "target": "../automations/mode6/index.ts"
+    },
+    {
+      "source": "pages/api/system/relay-error.ts",
+      "target": "../automations/mode6/intent-router/types.ts"
+    },
+    {
+      "source": "pages/api/webhooks/external.ts",
+      "target": "lib/cors.ts"
+    },
+    {
+      "source": "pages/api/webhooks/external.ts",
+      "target": "lib/logger.ts"
+    },
+    {
+      "source": "pages/api/webhooks/external.ts",
+      "target": "lib/rateLimiter.ts"
+    },
+    {
+      "source": "pages/api/webhooks/external.ts",
+      "target": "lib/taskQueue.ts"
+    },
+    {
+      "source": "pages/api/webhooks/external.ts",
+      "target": "types/api.types.ts"
+    },
+    {
+      "source": "pages/api/webhooks/linear.ts",
+      "target": "lib/cors.ts"
+    },
+    {
+      "source": "pages/api/webhooks/linear.ts",
+      "target": "lib/rateLimiter.ts"
+    },
+    {
+      "source": "pages/api/webhooks/linear.ts",
+      "target": "lib/taskQueue.ts"
+    },
+    {
+      "source": "pages/api/webhooks/linear.ts",
+      "target": "types/api.types.ts"
+    },
+    {
+      "source": "pages/board.tsx",
+      "target": "components/DeploymentStatus.tsx"
+    },
+    {
+      "source": "pages/board.tsx",
+      "target": "components/KnowledgeGraph.tsx"
+    },
+    {
+      "source": "pages/board.tsx",
+      "target": "components/MemoryInterface.tsx"
+    },
+    {
+      "source": "pages/board.tsx",
+      "target": "components/OrchestrationView.tsx"
+    },
+    {
+      "source": "pages/board.tsx",
+      "target": "components/ParticleBackground.tsx"
+    },
+    {
+      "source": "pages/board.tsx",
+      "target": "components/ReflexTrigger.tsx"
+    },
+    {
+      "source": "pages/board.tsx",
+      "target": "components/SystemHUD.tsx"
+    },
+    {
+      "source": "pages/board.tsx",
+      "target": "components/antigravity/AntigravityPanel.tsx"
+    },
+    {
+      "source": "pages/board.tsx",
+      "target": "components/widgets/FocusTimer.tsx"
+    },
+    {
+      "source": "pages/browser-agent.tsx",
+      "target": "components/ActionLog.tsx"
+    },
+    {
+      "source": "pages/browser-agent.tsx",
+      "target": "components/BrowserViewport.tsx"
+    },
+    {
+      "source": "pages/browser-agent.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/central-command.tsx",
+      "target": "components/MissionControl.tsx"
+    },
+    {
+      "source": "pages/central-command.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "pages/central-command.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/central-command.tsx",
+      "target": "src/components/AILCC_V2/CostTrackingPanel.tsx"
+    },
+    {
+      "source": "pages/central-command.tsx",
+      "target": "src/components/AILCC_V2/ErrorAggregationPanel.tsx"
+    },
+    {
+      "source": "pages/central-command.tsx",
+      "target": "src/components/AILCC_V2/SwarmStatusPanel.tsx"
+    },
+    {
+      "source": "pages/central-command.tsx",
+      "target": "src/components/AILCC_V2/WorkloadDistributionChart.tsx"
+    },
+    {
+      "source": "pages/comet.tsx",
+      "target": "components/CometInput.tsx"
+    },
+    {
+      "source": "pages/comet.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "pages/comet.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/frameworks.tsx",
+      "target": "components/ElementTable.tsx"
+    },
+    {
+      "source": "pages/frameworks.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/EmailIntelligencePanel.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/ErrorBoundary.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/GoalTracker.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/HabitGrid.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/LiveTerminal.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/MacrosWidget.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/MastermindHub.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/MissionControlGrid.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/MissionManifest.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/OmniBar.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/PeriodicTable.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/TelemetryCharts.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/hooks/useTelemetry.ts"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/widgets/SystemModeCard.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "components/widgets/VaultSearch.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "src/components/AILCC_V2/ActiveTaskContext.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "src/components/AILCC_V2/GrokSentiencePanel.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "src/components/AILCC_V2/MasterCycleView.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "src/components/AILCC_V2/SwarmChat.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "src/components/dashboard/health-metrics.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "src/components/dashboard/shared-memory-marquee.tsx"
+    },
+    {
+      "source": "pages/index.tsx",
+      "target": "src/components/dashboard/task-queue.tsx"
+    },
+    {
+      "source": "pages/interoperability.tsx",
+      "target": "components/ClipboardHistory.tsx"
+    },
+    {
+      "source": "pages/interoperability.tsx",
+      "target": "components/HardwareInteropAudit.tsx"
+    },
+    {
+      "source": "pages/interoperability.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/memory.tsx",
+      "target": "components/DataMaterialization.tsx"
+    },
+    {
+      "source": "pages/memory.tsx",
+      "target": "components/ErrorBoundary.tsx"
+    },
+    {
+      "source": "pages/memory.tsx",
+      "target": "components/MemoryMap.tsx"
+    },
+    {
+      "source": "pages/memory.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/memory.tsx",
+      "target": "components/widgets/VaultSearch.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/CortexMap.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/DataMaterialization.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/DependencyChain.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/DependencyMap.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/FleetHangar.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/NexusUAP.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/SelfHealingCards.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/SynapseNetwork.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/SystemComparison.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/TacticsHUD.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/TaskLogViewer.tsx"
+    },
+    {
+      "source": "pages/nexus.tsx",
+      "target": "components/WarRoom.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/ErrorBoundary.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/EventBusVisualizer.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/PredictiveTelemetry.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/ProcessTreeWidget.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/RefactorScanPanel.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/SelfHealingCards.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/SystemComparison.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/TelemetryCharts.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/TerminalWidget.tsx"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "components/hooks/useTelemetry.ts"
+    },
+    {
+      "source": "pages/observability.tsx",
+      "target": "src/components/AILCC_V2/ErrorAggregationPanel.tsx"
+    },
+    {
+      "source": "pages/periodic-table.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/playground.tsx",
+      "target": "components/ChatMarkdown.tsx"
+    },
+    {
+      "source": "pages/playground.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/queues.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/queues.tsx",
+      "target": "components/TaskCard.tsx"
+    },
+    {
+      "source": "pages/scholar.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/scholar.tsx",
+      "target": "src/components/AILCC_V2/ScholarPortal.tsx"
+    },
+    {
+      "source": "pages/settings.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/settings.tsx",
+      "target": "hooks/useAntigravitySync.ts"
+    },
+    {
+      "source": "pages/studio.tsx",
+      "target": "components/IdeaStack.tsx"
+    },
+    {
+      "source": "pages/studio.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/studio.tsx",
+      "target": "components/StudioModeSelector.tsx"
+    },
+    {
+      "source": "pages/studio.tsx",
+      "target": "components/StudioOutputCanvas.tsx"
+    },
+    {
+      "source": "pages/system.tsx",
+      "target": "components/DataFlowVisualizer.tsx"
+    },
+    {
+      "source": "pages/system.tsx",
+      "target": "components/ErrorBoundary.tsx"
+    },
+    {
+      "source": "pages/system.tsx",
+      "target": "components/IntelligentFileFinder.tsx"
+    },
+    {
+      "source": "pages/system.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/system.tsx",
+      "target": "components/StorageTierVisualizer.tsx"
+    },
+    {
+      "source": "pages/war-room.tsx",
+      "target": "components/ChatMarkdown.tsx"
+    },
+    {
+      "source": "pages/war-room.tsx",
+      "target": "components/DocumentPreviewModal.tsx"
+    },
+    {
+      "source": "pages/war-room.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "pages/war-room.tsx",
+      "target": "src/components/AILCC_V2/SwarmChat.tsx"
+    },
+    {
+      "source": "pages/whitepaper.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "pages/whitepaper.tsx",
+      "target": "components/NexusLayout.tsx"
+    },
+    {
+      "source": "scripts/index_vault.ts",
+      "target": "lib/embeddings.ts"
+    },
+    {
+      "source": "scripts/index_vault.ts",
+      "target": "lib/local_vector_store.ts"
+    },
+    {
+      "source": "scripts/start_agent_system.ts",
+      "target": "lib/tools/fileSystem.ts"
+    },
+    {
+      "source": "scripts/start_agent_system.ts",
+      "target": "lib/tools/index.ts"
+    },
+    {
+      "source": "scripts/start_agent_system.ts",
+      "target": "lib/tools/search.ts"
+    },
+    {
+      "source": "services/code-orchestration/merger.ts",
+      "target": "services/code-orchestration/types.ts"
+    },
+    {
+      "source": "services/code-orchestration/orchestrator.ts",
+      "target": "services/ai-providers/claude.ts"
+    },
+    {
+      "source": "services/code-orchestration/orchestrator.ts",
+      "target": "services/ai-providers/copilot.ts"
+    },
+    {
+      "source": "services/code-orchestration/orchestrator.ts",
+      "target": "services/ai-providers/gemini.ts"
+    },
+    {
+      "source": "services/code-orchestration/orchestrator.ts",
+      "target": "services/code-orchestration/parser.ts"
+    },
+    {
+      "source": "services/code-orchestration/orchestrator.ts",
+      "target": "services/code-orchestration/types.ts"
+    },
+    {
+      "source": "services/code-orchestration/parser.ts",
+      "target": "services/ai-providers/claude.ts"
+    },
+    {
+      "source": "services/code-orchestration/parser.ts",
+      "target": "services/code-orchestration/types.ts"
+    },
+    {
+      "source": "src/components/dashboard/health-metrics.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "src/components/dashboard/periodic-table.tsx",
+      "target": "components/NeuralSyncProvider.tsx"
+    },
+    {
+      "source": "src/components/physics/PhysicsCanvas.tsx",
+      "target": "src/components/physics/AgentBody.ts"
+    },
+    {
+      "source": "src/components/physics/PhysicsCanvas.tsx",
+      "target": "src/components/physics/GravitySystem.ts"
+    },
+    {
+      "source": "src/components/physics/index.ts",
+      "target": "src/components/physics/AgentBody.ts"
+    },
+    {
+      "source": "src/components/physics/index.ts",
+      "target": "src/components/physics/GravitySystem.ts"
+    },
+    {
+      "source": "src/components/physics/index.ts",
+      "target": "src/components/physics/PhysicsCanvas.tsx"
+    },
+    {
+      "source": "src/lib/mode6/agent-registry.ts",
+      "target": "src/lib/mode6/types.ts"
+    },
+    {
+      "source": "src/lib/mode6/dispatcher.ts",
+      "target": "src/lib/mode6/tool-registry.ts"
+    },
+    {
+      "source": "src/lib/mode6/dispatcher.ts",
+      "target": "src/lib/mode6/tools.ts"
+    },
+    {
+      "source": "src/lib/mode6/dispatcher.ts",
+      "target": "src/lib/mode6/types.ts"
+    },
+    {
+      "source": "src/lib/mode6/intent-router.ts",
+      "target": "src/lib/mode6/ai-client.ts"
+    },
+    {
+      "source": "src/lib/mode6/intent-router.ts",
+      "target": "src/lib/mode6/types.ts"
+    },
+    {
+      "source": "src/lib/mode6/loop.ts",
+      "target": "src/lib/mode6/ai-client.ts"
+    },
+    {
+      "source": "src/lib/mode6/loop.ts",
+      "target": "src/lib/mode6/dispatcher.ts"
+    },
+    {
+      "source": "src/lib/mode6/loop.ts",
+      "target": "src/lib/mode6/intent-router.ts"
+    },
+    {
+      "source": "src/lib/mode6/loop.ts",
+      "target": "src/lib/mode6/memory.ts"
+    },
+    {
+      "source": "src/lib/mode6/loop.ts",
+      "target": "src/lib/mode6/resource-manager.ts"
+    },
+    {
+      "source": "src/lib/mode6/memory.ts",
+      "target": "src/lib/mode6/types.ts"
+    },
+    {
+      "source": "src/lib/mode6/resource-manager.ts",
+      "target": "src/lib/mode6/types.ts"
+    },
+    {
+      "source": "src/lib/mode6/tool-registry.ts",
+      "target": "src/lib/mode6/types.ts"
+    },
+    {
+      "source": "tests/agent_loop_test.ts",
+      "target": "src/lib/mode6/dispatcher.ts"
+    },
+    {
+      "source": "tests/agent_loop_test.ts",
+      "target": "src/lib/mode6/memory.ts"
+    },
+    {
+      "source": "tests/agent_loop_test.ts",
+      "target": "src/lib/mode6/resource-manager.ts"
+    }
+  ]
+}

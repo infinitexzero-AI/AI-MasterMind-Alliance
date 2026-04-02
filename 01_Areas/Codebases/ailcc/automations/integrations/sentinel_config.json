@@ -1,0 +1,27 @@
+{
+  "sentinel_config": {
+    "polling_interval_seconds": 300,
+    "assets": {
+      "crypto": [
+        "BTC/USD",
+        "ETH/USD",
+        "SOL/USD"
+      ],
+      "equities": [
+        "SPY",
+        "QQQ",
+        "TSLA"
+      ]
+    },
+    "alert_thresholds": {
+      "price_drop_pct_5m": 2.5,
+      "volume_spike_multiplier": 3.0,
+      "arb_spread_bps_min": 15
+    },
+    "active_strategies": [
+      "momentum_scalp",
+      "mean_reversion",
+      "statistical_arbitrage"
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "coder": ["code", "fix", "function", "refactor", "bug", "style", "css", "html", "js", "ts", "typescript", "lint"],
+  "researcher": ["search", "find", "gather", "investigate", "perplexity", "web", "google", "scan"],
+  "strategist": ["plan", "roadmap", "architecture", "design", "high-level", "overview", "taxonomy"],
+  "automation": ["deploy", "monitor", "ci/CD", "github", "linear", "bridge", "sync", "archive", "scheduler", "launchagent"],
+  "orchestrator": ["coordination", "delegate", "manage", "master", "mode6"]
+}

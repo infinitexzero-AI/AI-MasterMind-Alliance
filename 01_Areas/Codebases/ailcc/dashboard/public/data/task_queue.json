@@ -1,0 +1,23 @@
+[
+  {
+    "id": "TASK-001",
+    "title": "Analyze Competitor Strategy",
+    "type": "RESEARCH",
+    "priority": "HIGH",
+    "status": "PENDING"
+  },
+  {
+    "id": "TASK-002",
+    "title": "Refactor Authentication Module",
+    "type": "CODE",
+    "priority": "MEDIUM",
+    "status": "PENDING"
+  },
+  {
+    "id": "TASK-003",
+    "title": "Generate Marketing Copy",
+    "type": "GENERATION",
+    "priority": "LOW",
+    "status": "PENDING"
+  }
+]

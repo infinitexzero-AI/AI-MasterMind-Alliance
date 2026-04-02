@@ -1,0 +1,9 @@
+# Frontend Agent Scope (React/Next.js)
+*Domain: `ailcc/dashboard/`*
+
+1. **Validation Dependency**: Never construct React forms or JSON request objects locally. You MUST import the global `zod` schemas from `/shared/schemas` to perform all data validation.
+2. **State Philosophy**: Direct `useEffect()` fetching is deprecated (Epoch 37). All component data calls must be enveloped inside `@tanstack/react-query`. Caching and retry logic must explicitly handle network instability from Python RPC endpoints.
+3. **Design Aesthetics**: Do not guess colors. The SaaS aesthetic is locked to a dark-mode slate/blue/emerald/rose metric. Buttons must visually disable until primary `zod` schema constraints pass.
+4. **Layout Architecture**: 
+   - Ensure the Top Command Bar is persistent across pages.
+   - Employ a 2-column core structure: Left (Navigation/Feeds), Right (Active Workspace).

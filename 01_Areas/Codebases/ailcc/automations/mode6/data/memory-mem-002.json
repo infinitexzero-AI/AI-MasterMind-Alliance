@@ -1,0 +1,8 @@
+{
+  "id": "mem-002",
+  "taskId": "task-002",
+  "content": "Retrievable memory",
+  "sourceAgent": "grok",
+  "timestamp": "2026-02-24T02:37:54.541Z",
+  "ttl": 86400
+}

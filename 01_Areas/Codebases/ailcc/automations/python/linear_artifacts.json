@@ -1,0 +1,129 @@
+{
+  "source": "Linear AI Mastermind Alliance",
+  "extracted_at": "2026-01-06T03:24:48.576970",
+  "projects": [
+    {
+      "id": "364ee086-1aa6-4e0c-97fc-b422ee8edb78",
+      "name": "AI Mastermind Alliance",
+      "description": "",
+      "state": "backlog",
+      "progress": 0,
+      "startDate": null,
+      "targetDate": "2025-12-31",
+      "url": "https://linear.app/ai-mastermind-alliance/project/ai-mastermind-alliance-26b8610b2e01",
+      "createdAt": "2025-11-27T02:54:14.012Z",
+      "updatedAt": "2025-12-03T17:37:07.968Z"
+    }
+  ],
+  "issues": [
+    {
+      "id": "0a159fb0-17ee-48ef-8815-aae1b7ec8b03",
+      "identifier": "AI001-22",
+      "title": "Administrative Appeal: 2023 Withdrawal Restoration",
+      "description": "Execute the 2023 Withdrawal Appeal for Joel Palk-Ricard. Submit the evidence bundle to the Registrar/Meighen Centre. Priority: High. Reference: Task 127 in Mission Manifest.",
+      "state": {
+        "name": "Backlog"
+      },
+      "priority": 0,
+      "assignee": null,
+      "labels": {
+        "nodes": []
+      },
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-22/administrative-appeal-2023-withdrawal-restoration",
+      "createdAt": "2026-01-03T04:01:24.160Z",
+      "updatedAt": "2026-01-03T04:01:24.160Z"
+    }
+  ],
+  "recent_activity": [
+    {
+      "identifier": "AI001-22",
+      "title": "Administrative Appeal: 2023 Withdrawal Restoration",
+      "state": {
+        "name": "Backlog"
+      },
+      "updatedAt": "2026-01-03T04:01:24.160Z",
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-22/administrative-appeal-2023-withdrawal-restoration"
+    },
+    {
+      "identifier": "AI001-21",
+      "title": "[VALENTINE] Task 131: NEXUS UI Refinement & Interaction Polish",
+      "state": {
+        "name": "Todo"
+      },
+      "updatedAt": "2025-12-28T05:22:50.387Z",
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-21/valentine-task-131-nexus-ui-refinement-and-interaction-polish"
+    },
+    {
+      "identifier": "AI001-20",
+      "title": "[SCHOLAR] Task 129: BSc Core Biology Audit & Roadmap Synthesis",
+      "state": {
+        "name": "Todo"
+      },
+      "updatedAt": "2025-12-28T05:22:36.992Z",
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-20/scholar-task-129-bsc-core-biology-audit-and-roadmap-synthesis"
+    },
+    {
+      "identifier": "AI001-19",
+      "title": "[ANTIGRAVITY] Task 128: Storage Migration Protocol Implementation",
+      "state": {
+        "name": "Todo"
+      },
+      "updatedAt": "2025-12-28T05:22:27.559Z",
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-19/antigravity-task-128-storage-migration-protocol-implementation"
+    },
+    {
+      "identifier": "AI001-18",
+      "title": "[COMET] Task 127: Administrative Appeals Research & Drafting",
+      "state": {
+        "name": "Todo"
+      },
+      "updatedAt": "2025-12-28T05:22:13.217Z",
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-18/comet-task-127-administrative-appeals-research-and-drafting"
+    },
+    {
+      "identifier": "AI001-17",
+      "title": "[SCHOLAR] Follow-up on Administrative Appeals (72-Hour Pulse)",
+      "state": {
+        "name": "Backlog"
+      },
+      "updatedAt": "2025-12-22T02:53:38.895Z",
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-17/scholar-follow-up-on-administrative-appeals-72-hour-pulse"
+    },
+    {
+      "identifier": "AI001-16",
+      "title": "[STRATEGY] Engage Daily Feedback Loop (The Judge)",
+      "state": {
+        "name": "Backlog"
+      },
+      "updatedAt": "2025-12-22T02:53:38.358Z",
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-16/strategy-engage-daily-feedback-loop-the-judge"
+    },
+    {
+      "identifier": "AI001-15",
+      "title": "[SCHOLAR] Deep Credit Audit & Roadmap Alignment (Post-MTA Access)",
+      "state": {
+        "name": "Backlog"
+      },
+      "updatedAt": "2025-12-22T02:53:37.794Z",
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-15/scholar-deep-credit-audit-and-roadmap-alignment-post-mta-access"
+    },
+    {
+      "identifier": "AI001-14",
+      "title": "[SYSTEM] Execute Storage Migration Nexus (Phase 1)",
+      "state": {
+        "name": "Backlog"
+      },
+      "updatedAt": "2025-12-22T02:53:13.598Z",
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-14/system-execute-storage-migration-nexus-phase-1"
+    },
+    {
+      "identifier": "AI001-13",
+      "title": "[SCHOLAR] Submit Academic appeal (MTA)",
+      "state": {
+        "name": "Backlog"
+      },
+      "updatedAt": "2025-12-22T02:53:13.022Z",
+      "url": "https://linear.app/ai-mastermind-alliance/issue/AI001-13/scholar-submit-academic-appeal-mta"
+    }
+  ]
+}

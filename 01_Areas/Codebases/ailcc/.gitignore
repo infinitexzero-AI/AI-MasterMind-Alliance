@@ -1,0 +1,22 @@
+node_modules/
+.env
+.env.local
+.env.*.local
+
+dist/
+dashboard/.next/
+
+# Logs and Backups
+*.log
+*.bak
+*_log.txt
+success.txt
+
+# Environment and Agent Metadata
+.venv/
+.agent/
+.DS_Store
+__pycache__/
+*.pyc
+.vercel
+.env*.local

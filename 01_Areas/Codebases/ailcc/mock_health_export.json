@@ -1,0 +1,7 @@
+{
+  "timestamp": "2026-03-19T08:00:00Z",
+  "sleep_duration_hours": 4.1,
+  "heart_rate_variability_ms": 22.5,
+  "resting_heart_rate": 81,
+  "notes": "Simulated High Output/Minimal Rest scenario for SRE validation."
+}

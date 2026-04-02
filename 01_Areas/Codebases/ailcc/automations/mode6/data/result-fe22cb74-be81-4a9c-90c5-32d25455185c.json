@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "taskId": "fe22cb74-be81-4a9c-90c5-32d25455185c",
+  "agentUsed": "claude",
+  "output": "[Claude Mock Mode] Processed task: From Memory\n\nInput:\nTask Type: general\nDescription: From Memory\n\nTask execution requested via persistent memory.",
+  "metadata": {
+    "mode": "mock",
+    "reason": "ANTHROPIC_API_KEY not configured"
+  }
+}

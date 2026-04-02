@@ -1,0 +1,8 @@
+{
+  "id": "mem-recent-001",
+  "taskId": "task-recent",
+  "content": "This should stay",
+  "sourceAgent": "claude",
+  "timestamp": "2026-02-24T02:37:54.951Z",
+  "ttl": 86400
+}

@@ -1,0 +1,39 @@
+name: Comet Orchestration Cycle
+
+on:
+  schedule:
+    - cron: '*/5 * * * *' # Run every 5 minutes
+  workflow_dispatch: # Enable manual run
+
+jobs:
+  orchestrate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install Dependencies
+        run: |
+          cd ailcc/comet_framework
+          pip install -r requirements.txt
+
+      - name: Run Orchestration Engine
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          COINBASE_API_KEY: ${{ secrets.COINBASE_API_KEY }}
+        run: |
+          cd ailcc/comet_framework
+          python orchestration_engine.py
+
+      - name: Commit Logs (Auto-Update Dashboard)
+        run: |
+          git config --global user.name 'Comet Bot'
+          git config --global user.email 'comet@antigravity.ai'
+          git add ailcc/comet_framework/run_logs.json
+          git commit -m "Comet Update: $(date)" || echo "No changes to commit"
+          git push

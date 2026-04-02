@@ -1,0 +1,5 @@
+{
+  "success": true,
+  "message": "Handled by Python daemon natively.",
+  "daemon": "forge_verifier"
+}

@@ -1,0 +1,8 @@
+# Global Swarm Execution Rules
+*Author: Motor Cortex (Antigravity)*
+*Scope: Global Workspace AILCC_PRIME*
+
+1. **Naming Conventions**: All Node.js/React components must execute absolute PascalCase (`WidgetName.tsx`). All Python backend modules must remain rigidly snake_case (`daemon_script.py`).
+2. **Linting Context**: Acknowledge IDE Markdown and TypeScript compiler errors as absolute fail states. Do not bypass `MD032` or ES-Lint bounds.
+3. **Product Vision**: The NEXUS is an operational command center combining Sovereign/Bio, Scholar/Academic, and Tycoon/Market telemetry. Never generate code for general "users" (e.g., login pages). Everything is tailored specifically for the singular human Commander.
+4. **PARA Omniversal Routing Protocol**: ALL intelligence artifacts, tasks, notes, and vectors generated or analyzed by ANY Vanguard Swarm node (Comet, Antigravity, Grok, Claude) MUST be structurally bound to one of the four Master PARA Buckets: `PROJECT` (Active timebound goal), `AREA` (Ongoing sphere of activity without end date), `RESOURCE` (Topic of ongoing interest/reference), or `ARCHIVE` (Inactive/Completed items). You are mathematically forbidden from inventing custom intelligence categories outside this 4-tier schema.

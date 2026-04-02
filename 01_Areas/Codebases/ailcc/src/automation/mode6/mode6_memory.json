@@ -1,0 +1,174 @@
+[
+  {
+    "id": "task_1765396305882_345",
+    "description": "Research latest agentic design patterns",
+    "source": "system",
+    "priority": "medium",
+    "status": "completed",
+    "createdAt": "2025-12-10T19:51:45.882Z",
+    "updatedAt": "2025-12-10T19:51:46.887Z",
+    "result": "Found results for: Research latest agentic design patterns"
+  },
+  {
+    "id": "task_1765403198905_548",
+    "description": "help antigravity make this page even better ",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-10T21:46:38.907Z",
+    "updatedAt": "2025-12-10T21:46:38.907Z"
+  },
+  {
+    "id": "task_1765410881638_674",
+    "description": "test",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-10T23:54:41.640Z",
+    "updatedAt": "2025-12-10T23:54:41.641Z"
+  },
+  {
+    "id": "task_1765427976600_946",
+    "description": "add a cmd+k icon in my touch bar on macbook?",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-11T04:39:36.607Z",
+    "updatedAt": "2025-12-11T04:39:36.610Z"
+  },
+  {
+    "id": "task_1765438736174_884",
+    "description": "Check Valentine data for apple scripts / webooks through zapier ",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-11T07:38:56.174Z",
+    "updatedAt": "2025-12-11T07:38:56.174Z"
+  },
+  {
+    "id": "task_1765554074573_412",
+    "description": "list commands ",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-12T15:41:14.573Z",
+    "updatedAt": "2025-12-12T15:41:14.574Z"
+  },
+  {
+    "id": "task_1765554174312_777",
+    "description": "Full view of all integrations currently and map to further integrations",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-12T15:42:54.312Z",
+    "updatedAt": "2025-12-12T15:42:54.312Z"
+  },
+  {
+    "id": "task_1765554215377_52",
+    "description": "Launch all agents",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-12T15:43:35.377Z",
+    "updatedAt": "2025-12-12T15:43:35.377Z"
+  },
+  {
+    "id": "task_1765554232473_841",
+    "description": "Launch neural stream ",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-12T15:43:52.473Z",
+    "updatedAt": "2025-12-12T15:43:52.473Z"
+  },
+  {
+    "id": "task_1765571593178_52",
+    "description": "AI Agents",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-12T20:33:13.178Z",
+    "updatedAt": "2025-12-12T20:33:13.179Z"
+  },
+  {
+    "id": "task_1765573604683_871",
+    "description": "Analyze ingested file: COMM3611_Commercial_Law_-_Complete_Master_Study_Guide_copy.pdf. Context stored at: /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/src/automation/mode6/context/COMM3611_Commercial_Law_-_Complete_Master_Study_Guide_copy.pdf",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-12T21:06:44.684Z",
+    "updatedAt": "2025-12-12T21:06:44.685Z"
+  },
+  {
+    "id": "task_1765573648460_300",
+    "description": "Analyze ingested file: COMM3611_Commercial_Law_-_Complete_Master_Study_Guide_copy.pdf. Context stored at: /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/src/automation/mode6/context/COMM3611_Commercial_Law_-_Complete_Master_Study_Guide_copy.pdf",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-12T21:07:28.460Z",
+    "updatedAt": "2025-12-12T21:07:28.460Z"
+  },
+  {
+    "id": "task_1765835642100_102",
+    "description": "Configure HARPA' into the input. Click the 'DISPATCH' button. Wait for 5 seconds to observe if a new log entry appears in the logs or trace. Then stop",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-15T21:54:02.100Z",
+    "updatedAt": "2025-12-15T21:54:02.100Z"
+  },
+  {
+    "id": "task_1765835815240_205",
+    "description": "Configure HARPA",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-15T21:56:55.241Z",
+    "updatedAt": "2025-12-15T21:56:55.241Z"
+  },
+  {
+    "id": "task_1765836015012_996",
+    "description": "Generate a full system status report.",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-15T22:00:15.012Z",
+    "updatedAt": "2025-12-15T22:00:15.012Z"
+  },
+  {
+    "id": "task_1765836020974_97",
+    "description": "Archive all completed tasks and clear the active memory.",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-15T22:00:20.974Z",
+    "updatedAt": "2025-12-15T22:00:20.974Z"
+  },
+  {
+    "id": "task_1765836025734_372",
+    "description": "Analyze the codebase and fix any linting errors found.",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-15T22:00:25.734Z",
+    "updatedAt": "2025-12-15T22:00:25.734Z"
+  },
+  {
+    "id": "task_1765959926689_70",
+    "description": "Generate a full system status report.",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-17T08:25:26.689Z",
+    "updatedAt": "2025-12-17T08:25:26.689Z"
+  },
+  {
+    "id": "task_1765961244643_685",
+    "description": "Analyze the codebase and fix any linting errors found.",
+    "source": "user",
+    "priority": "medium",
+    "status": "pending",
+    "createdAt": "2025-12-17T08:47:24.643Z",
+    "updatedAt": "2025-12-17T08:47:24.643Z"
+  }
+]

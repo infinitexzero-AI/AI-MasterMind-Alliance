@@ -1,0 +1,93 @@
+{
+  "timestamp": "2025-12-10T19:52:26.417Z",
+  "mode6": {
+    "status": "NOMINAL",
+    "uptime": 0.1231739,
+    "memory": {
+      "rss": 47874048,
+      "heapTotal": 12283904,
+      "heapUsed": 8962904,
+      "external": 3371024,
+      "arrayBuffers": 19547
+    },
+    "timestamp": "2025-12-10T19:52:25.960Z"
+  },
+  "linear": {
+    "connected": true,
+    "issues": []
+  },
+  "github": {
+    "connected": true,
+    "prs": []
+  },
+  "git": {
+    "connected": true,
+    "branch": "main",
+    "status": "M .DS_Store\nA  automation/n8n_ci_status_monitor.json\nA  automation/n8n_pr_staleness_monitor.json\nA  docs/legacy_orchestration_insights.md\n M src/automation/mcp-bridge.js\n M src/command-center/public/data/live_status.json\n?? src/automation/mode6/"
+  },
+  "filesystem": {
+    "connected": true,
+    "projectPath": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc",
+    "exists": true
+  },
+  "n8n": {
+    "connected": true,
+    "status": "ONLINE",
+    "url": "https://infinitexzeroai.app.n8n.cloud/healthz"
+  },
+  "health": {
+    "connected": true,
+    "status": "ONLINE",
+    "url": "https://infinitexzeroai.app.n8n.cloud/healthz"
+  },
+  "agents": [
+    {
+      "name": "Valentine",
+      "role": "Orchestrator",
+      "status": "ONLINE",
+      "conversations": 0
+    },
+    {
+      "name": "Antigravity",
+      "role": "Inner Loop (Code)",
+      "status": "ACTIVE",
+      "conversations": 0
+    },
+    {
+      "name": "Comet",
+      "role": "Outer Loop (Web)",
+      "status": "IDLE",
+      "conversations": 0
+    },
+    {
+      "name": "SuperGrok",
+      "role": "Strategy",
+      "status": "STANDBY",
+      "conversations": 0
+    },
+    {
+      "name": "Claude",
+      "role": "Deep Coding",
+      "status": "LINKED",
+      "conversations": 0
+    },
+    {
+      "name": "ChatGPT",
+      "role": "Backup/GitHub",
+      "status": "OFFLINE",
+      "conversations": 0
+    },
+    {
+      "name": "Gemini",
+      "role": "Multi-Modal",
+      "status": "LINKED",
+      "conversations": 0
+    },
+    {
+      "name": "N8N",
+      "role": "Automation",
+      "status": "ACTIVE",
+      "conversations": 0
+    }
+  ]
+}

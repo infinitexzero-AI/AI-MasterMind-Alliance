@@ -1,0 +1,32 @@
+{
+  "name": "SKILL_SOVEREIGN_AGENCY",
+  "domain": "Professional / Software Engineering",
+  "trigger": "INITIALIZE_AGENCY_PROJECT",
+  "description": "One-shot full-stack deployment combining MCP Research, Blackboard Design, Forge Execution, and Ghostwriter Documentation.",
+  "workflow_steps": [
+    {
+      "step_id": "research",
+      "node": "mcp_gateway",
+      "action": "pull_documentation",
+      "input_mapping": "prompt"
+    },
+    {
+      "step_id": "design",
+      "node": "blackboard_daemon",
+      "action": "peer_review_architecture",
+      "input_mapping": "research.output"
+    },
+    {
+      "step_id": "generate",
+      "node": "neural_skill_forge",
+      "action": "execute_codebase",
+      "input_mapping": "design.output"
+    },
+    {
+      "step_id": "document",
+      "node": "ghostwriter_daemon",
+      "action": "generate_readme",
+      "input_mapping": "generate.output"
+    }
+  ]
+}

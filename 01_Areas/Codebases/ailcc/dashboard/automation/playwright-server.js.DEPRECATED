@@ -1,0 +1,370 @@
+/**
+ * Playwright Browser Server — Persistent Chromium instance
+ * Runs on port 3333 alongside Next.js dev server.
+ * Exposes: POST /execute, GET /screenshot, GET /status, GET /stream, POST /stop
+ */
+const http = require('http');
+const path = require('path');
+const fs = require('fs');
+const { chromium } = require('playwright');
+
+let browser = null;
+let context = null;
+let page = null;
+let currentProfile = 'Default';
+const BROWSER_PROFILES = {
+  'COMET': '../data/browser_profile_comet',
+  'CHROME': '../data/browser_profile_chrome',
+  'DEFAULT': '../data/browser_profile'
+};
+let status = 'IDLE';
+let actionLog = [];
+let currentUrl = 'about:blank';
+let lastCheck = Date.now();
+let serverStartTime = Date.now();
+const MAX_RETRIES = 5;
+
+/** SSE clients listening to /stream */
+const streamClients = new Set();
+
+function pushToStreamClients(event, data) {
+  const payload = `event: ${event}\ndata: ${JSON.stringify(data)}\n\n`;
+  for (const res of streamClients) {
+    try { res.write(payload); } catch (_) { streamClients.delete(res); }
+  }
+}
+
+
+async function initBrowser(retryCount = 0) {
+  if (browser) {
+    console.log('[BrowserServer] Cleaning up existing instance...');
+    try { await browser.close(); } catch (err) { console.warn('[BrowserServer] Cleanup warning:', err.message); }
+    browser = null; context = null; page = null;
+  }
+
+  try {
+    const profileDir = BROWSER_PROFILES[currentProfile] || BROWSER_PROFILES.DEFAULT;
+    const userDataDir = path.resolve(__dirname, profileDir);
+    if (!fs.existsSync(userDataDir)) {
+      fs.mkdirSync(userDataDir, { recursive: true });
+    }
+
+    console.log(`[BrowserServer] Launching Persistent Chromium (${currentProfile}) (attempt ${retryCount + 1}/${MAX_RETRIES})...`);
+
+    // Using launchPersistentContext for built-in session persistence
+    context = await chromium.launchPersistentContext(userDataDir, {
+      headless: true,
+      viewport: { width: 1280, height: 800 },
+      userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36',
+      args: [
+        '--no-sandbox',
+        '--disable-setuid-sandbox',
+        '--disable-dev-shm-usage',
+        '--disable-gpu',
+        '--window-size=1280,800'
+      ],
+    });
+
+    browser = context.browser(); // In persistent context, browser() might be null or the underlying process
+    page = context.pages().length > 0 ? context.pages()[0] : await context.newPage();
+
+    const setupPageEvents = (p) => {
+      p.on('close', () => {
+        console.log('[BrowserServer] Page closed, marking for revival.');
+        if (p === page) page = null;
+      });
+      p.on('crash', () => {
+        console.log('[BrowserServer] Page crashed, marking for re-init.');
+        if (p === page) page = null;
+      });
+    };
+
+    setupPageEvents(page);
+
+    context.on('close', () => {
+      console.log('[BrowserServer] Context closed — triggering full recovery...');
+      context = null; page = null;
+    });
+
+    await page.goto('about:blank');
+    console.log(`[BrowserServer] Ready on http://localhost:3333 [Profile: ${currentProfile}]`);
+    lastCheck = Date.now();
+    serverStartTime = Date.now();
+  } catch (err) {
+    console.error(`[BrowserServer] Launch failed: ${err.message}`);
+    if (retryCount < MAX_RETRIES - 1) {
+      const delay = Math.min(1000 * Math.pow(2, retryCount), 10000);
+      console.log(`[BrowserServer] Retrying in ${delay}ms...`);
+      await new Promise(r => setTimeout(r, delay));
+      return initBrowser(retryCount + 1);
+    }
+    throw err;
+  }
+}
+
+async function ensurePage() {
+  // If context is lost (e.g. browser crashed), re-init everything
+  if (!context) {
+    console.log('[BrowserServer] Context lost, re-initializing...');
+    await initBrowser();
+  }
+
+  // If page is null or closed, get or create a new one
+  if (!page || page.isClosed()) {
+    console.log('[BrowserServer] Page active check failed, recovering...');
+    const pages = context.pages();
+    if (pages.length > 0 && !pages[0].isClosed()) {
+      page = pages[0];
+    } else {
+      page = await context.newPage();
+    }
+
+    // Re-verify and navigate if necessary
+    try {
+      await page.goto(currentUrl || 'about:blank', { timeout: 5000 }).catch(() => { });
+    } catch (e) {
+      console.warn('[BrowserServer] Page recovery navigation failed:', e.message);
+    }
+  }
+
+  lastCheck = Date.now();
+  return page;
+}
+
+async function executeAction(action) {
+  const log = { action: action.action, status: 'running', timestamp: new Date().toISOString() };
+  actionLog.push(log);
+  pushToStreamClients('action', log);
+
+  try {
+    const p = await ensurePage();
+    switch (action.action) {
+      case 'navigate':
+        await p.goto(action.url, { waitUntil: 'domcontentloaded', timeout: 15000 });
+        currentUrl = action.url;
+        log.result = `Navigated to ${action.url}`;
+        break;
+
+      case 'click':
+        await p.waitForSelector(action.selector, { timeout: 8000 });
+        await p.click(action.selector);
+        log.result = `Clicked ${action.selector}`;
+        break;
+
+      case 'type':
+        await p.waitForSelector(action.selector, { timeout: 8000 });
+        await p.fill(action.selector, action.text);
+        log.result = `Typed into ${action.selector}`;
+        break;
+
+      case 'press':
+        await p.keyboard.press(action.key);
+        log.result = `Pressed ${action.key}`;
+        break;
+
+      case 'wait':
+        await p.waitForTimeout(action.ms || 1000);
+        log.result = `Waited ${action.ms || 1000}ms`;
+        break;
+
+      case 'screenshot':
+        log.result = 'Screenshot captured';
+        break;
+
+      case 'extract': {
+        const text = await p.$eval(action.selector, el => el.textContent?.trim() || '').catch(() => '(not found)');
+        log.result = `Extracted: ${text.slice(0, 200)}`;
+        log.extracted = text;
+        break;
+      }
+
+      case 'scroll':
+        await p.evaluate(({ x, y }) => window.scrollBy(x, y), { x: action.x || 0, y: action.y || 500 });
+        log.result = 'Scrolled';
+        break;
+
+      case 'hover':
+        await p.hover(action.selector);
+        log.result = `Hovered ${action.selector}`;
+        break;
+
+      case 'select':
+        await p.selectOption(action.selector, action.value);
+        log.result = `Selected ${action.value}`;
+        break;
+
+      default:
+        log.result = `Unknown action: ${action.action}`;
+        log.status = 'skipped';
+        pushToStreamClients('action', log);
+        return;
+    }
+    log.status = 'done';
+  } catch (err) {
+    log.status = 'error';
+    log.result = err.message;
+    console.error(`[BrowserServer] Action failed: ${action.action}`, err.message);
+  }
+
+  // Push updated entry (with status + result)
+  pushToStreamClients('action', log);
+}
+
+const server = http.createServer(async (req, res) => {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') { res.writeHead(204); res.end(); return; }
+
+  // GET /status
+  if (req.method === 'GET' && req.url === '/status') {
+    const url = page ? page.url() : currentUrl;
+    currentUrl = url;
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ status, url, lastCheck, actionLog: actionLog.slice(-20) }));
+    return;
+  }
+
+  // GET /health — Stream E: reliability endpoint
+  if (req.method === 'GET' && req.url === '/health') {
+    const uptime = Math.floor((Date.now() - serverStartTime) / 1000);
+    const browserConnected = browser && browser.isConnected();
+    const pageActive = page && !page.isClosed();
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({
+      status: browserConnected ? 'HEALTHY' : 'DEGRADED',
+      uptime,
+      browserConnected,
+      pageActive,
+      lastCheck,
+      idleSeconds: Math.floor((Date.now() - lastCheck) / 1000)
+    }));
+    return;
+  }
+
+  // GET /screenshot
+  if (req.method === 'GET' && req.url === '/screenshot') {
+    try {
+      const p = await ensurePage();
+      const screenshot = await p.screenshot({ type: 'png' });
+      res.writeHead(200, { 'Content-Type': 'image/png' });
+      res.end(screenshot);
+    } catch (e) {
+      res.writeHead(500); res.end(e.message);
+    }
+    return;
+  }
+
+  // GET /dom
+  if (req.method === 'GET' && req.url === '/dom') {
+    try {
+      const p = await ensurePage();
+      const dom = await p.content();
+      res.writeHead(200, { 'Content-Type': 'text/html' });
+      res.end(dom);
+    } catch (e) {
+      res.writeHead(500); res.end(e.message);
+    }
+    return;
+  }
+
+  // GET /stream — SSE endpoint for real-time action log updates
+  if (req.method === 'GET' && req.url === '/stream') {
+    res.writeHead(200, {
+      'Content-Type': 'text/event-stream',
+      'Cache-Control': 'no-cache',
+      'Connection': 'keep-alive',
+    });
+    res.write('event: connected\ndata: {"connected":true}\n\n');
+    streamClients.add(res);
+
+    req.on('close', () => {
+      streamClients.delete(res);
+    });
+    return;
+  }
+
+  // POST /execute
+  if (req.method === 'POST' && req.url === '/execute') {
+    let body = '';
+    req.on('data', chunk => { body += chunk; });
+    req.on('end', async () => {
+      try {
+        const { actions } = JSON.parse(body);
+        status = 'EXECUTING';
+        actionLog = [];
+        pushToStreamClients('status', { status: 'EXECUTING' });
+
+        for (const action of actions) {
+          await executeAction(action);
+          await new Promise(r => setTimeout(r, 300));
+        }
+
+        status = 'COMPLETE';
+        pushToStreamClients('status', { status: 'COMPLETE' });
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: true, actionLog }));
+      } catch (err) {
+        status = 'ERROR';
+        pushToStreamClients('status', { status: 'ERROR', error: err.message });
+        res.writeHead(500, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ success: false, error: err.message }));
+      }
+    });
+    return;
+  }
+
+  // POST /stop
+  if (req.method === 'POST' && req.url === '/stop') {
+    status = 'IDLE';
+    if (page) await page.goto('about:blank').catch(() => { });
+    currentUrl = 'about:blank';
+    actionLog = [];
+    pushToStreamClients('status', { status: 'IDLE' });
+    res.writeHead(200, { 'Content-Type': 'application/json' });
+    res.end(JSON.stringify({ success: true }));
+    return;
+  }
+
+  res.writeHead(404); res.end('Not found');
+});
+
+server.listen(3333, async () => {
+  try {
+    await initBrowser();
+    // 10s Heartbeat for SSE clients
+    setInterval(() => {
+      lastCheck = Date.now();
+      pushToStreamClients('heartbeat', { timestamp: new Date(lastCheck).toISOString(), status });
+    }, 10000);
+
+    // 5-second proactive page watchdog — immediately revives dead pages
+    setInterval(async () => {
+      if (!page || page.isClosed()) {
+        console.log('[BrowserServer] Watchdog: page is dead, reviving...');
+        try { await ensurePage(); } catch (e) {
+          console.error('[BrowserServer] Watchdog revive failed, re-initing:', e.message);
+          await initBrowser().catch(() => { });
+        }
+      }
+    }, 5000);
+
+    // Legacy 5-min idle watchdog kept for compatibility
+    setInterval(async () => {
+      const idleMs = Date.now() - lastCheck;
+      if (idleMs > 300000) {
+        console.log('[BrowserServer] Idle watchdog: re-validating browser state...');
+        try { await ensurePage(); } catch (err) {
+          console.error('[BrowserServer] Idle watchdog recovery failed:', err.message);
+        }
+      }
+    }, 60000);
+  } catch (err) {
+    console.error('[BrowserServer] Failed to launch browser:', err.message);
+    process.exit(1);
+  }
+});
+
+process.on('SIGTERM', async () => { if (browser) await browser.close(); process.exit(0); });
+process.on('SIGINT', async () => { if (browser) await browser.close(); process.exit(0); });

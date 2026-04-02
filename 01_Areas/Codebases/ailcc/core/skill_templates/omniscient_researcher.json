@@ -1,0 +1,32 @@
+{
+  "name": "SKILL_OMNISCIENT_RESEARCHER",
+  "domain": "Professional / Market Intel",
+  "trigger": "LAUNCH_DEEP_RESEARCH",
+  "description": "Mass data assimilation merging Vision Matrix crawling, GraphRAG mapping, and Ghostwriter reporting.",
+  "workflow_steps": [
+    {
+      "step_id": "crawl",
+      "node": "vision_matrix",
+      "action": "scrape_web_and_pdfs",
+      "input_mapping": "prompt"
+    },
+    {
+      "step_id": "map",
+      "node": "graph_rag_daemon",
+      "action": "extract_relational_nodes",
+      "input_mapping": "crawl.output"
+    },
+    {
+      "step_id": "synthesize",
+      "node": "llm_gateway",
+      "action": "query_grok_thesis",
+      "input_mapping": "map.output"
+    },
+    {
+      "step_id": "publish",
+      "node": "ghostwriter_daemon",
+      "action": "format_whitepaper",
+      "input_mapping": "synthesize.output"
+    }
+  ]
+}

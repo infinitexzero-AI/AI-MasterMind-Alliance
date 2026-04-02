@@ -1,0 +1,111 @@
+{
+  "name": "GitHub Actions Status Monitor",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "github-workflow-status",
+        "responseMode": "onReceived"
+      },
+      "name": "Workflow Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "string": [
+            {
+              "value1": "={{$json.workflow_run.conclusion}}",
+              "operation": "equals",
+              "value2": "failure"
+            }
+          ]
+        }
+      },
+      "name": "Workflow Failed?",
+      "type": "n8n-nodes-base.if",
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "return {\n  workflow_name: $json.workflow_run.name,\n  status: $json.workflow_run.conclusion,\n  repo: $json.repository.full_name,\n  branch: $json.workflow_run.head_branch,\n  run_url: $json.workflow_run.html_url,\n  commit_message: $json.workflow_run.head_commit.message,\n  author: $json.workflow_run.head_commit.author.name\n};"
+      },
+      "name": "Extract Workflow Data",
+      "type": "n8n-nodes-base.function",
+      "position": [650, 200]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.comet.com/api/rest/v2/write/project/traces",
+        "authentication": "headerAuth",
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer {{$credentials.cometOpikApiKey}}"
+            }
+          ]
+        },
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "workspace_name",
+              "value": "AILCC_PRIME"
+            },
+            {
+              "name": "project_name",
+              "value": "GitHub_CI_Monitoring"
+            },
+            {
+              "name": "name",
+              "value": "={{$json.workflow_name}}"
+            },
+            {
+              "name": "status",
+              "value": "={{$json.status}}"
+            },
+            {
+              "name": "tags",
+              "value": ["repo:{{$json.repo}}", "branch:{{$json.branch}}"]
+            }
+          ]
+        }
+      },
+      "name": "Log to Comet Opik",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [850, 200]
+    },
+    {
+      "parameters": {
+        "resource": "issue",
+        "operation": "create",
+        "projectId": "{{$credentials.linearProjectId}}",
+        "title": "🔴 CI Failed: {{$json.workflow_name}}",
+        "description": "**Workflow**: {{$json.workflow_name}}\\n**Repo**: {{$json.repo}}\\n**Branch**: {{$json.branch}}\\n**Commit**: {{$json.commit_message}}\\n**Author**: {{$json.author}}\\n\\n[View Run]({{$json.run_url}})",
+        "priority": 1,
+        "labelIds": ["ci-failure", "urgent"]
+      },
+      "name": "Create Linear Issue",
+      "type": "n8n-nodes-base.linear",
+      "position": [850, 400]
+    }
+  ],
+  "connections": {
+    "Workflow Webhook": {
+      "main": [[{"node": "Workflow Failed?", "type": "main", "index": 0}]]
+    },
+    "Workflow Failed?": {
+      "main": [[{"node": "Extract Workflow Data", "type": "main", "index": 0}]]
+    },
+    "Extract Workflow Data": {
+      "main": [
+        [
+          {"node": "Log to Comet Opik", "type": "main", "index": 0},
+          {"node": "Create Linear Issue", "type": "main", "index": 0}
+        ]
+      ]
+    }
+  }
+}

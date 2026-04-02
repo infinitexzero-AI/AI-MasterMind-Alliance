@@ -1,0 +1,26 @@
+{
+  "name": "SKILL_ALGORITHMIC_TYCOON",
+  "domain": "Financial / Optimization",
+  "trigger": "EXECUTE_TYCOON_PROTOCOL",
+  "description": "Background financial optimization loop utilizing Forge, Blackboard, and system APIs.",
+  "workflow_steps": [
+    {
+      "step_id": "ideation",
+      "node": "llm_gateway",
+      "action": "grok_market_analysis",
+      "input_mapping": "prompt"
+    },
+    {
+      "step_id": "validation",
+      "node": "blackboard_daemon",
+      "action": "claude_financial_review",
+      "input_mapping": "ideation.output"
+    },
+    {
+      "step_id": "deployment",
+      "node": "neural_skill_forge",
+      "action": "deploy_cron_arbitrage",
+      "input_mapping": "validation.output"
+    }
+  ]
+}

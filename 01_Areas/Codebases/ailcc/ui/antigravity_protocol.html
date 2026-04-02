@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Mastermind: Anti-Gravity Protocol</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { margin: 0; overflow: hidden; background-color: #0f172a; color: white; font-family: 'Courier New', Courier, monospace; }
+        canvas { display: block; }
+        .hud { position: absolute; top: 20px; left: 20px; pointer-events: none; }
+        .controls { position: absolute; bottom: 20px; right: 20px; display: flex; gap: 10px; }
+        .log-panel { 
+            position: absolute; top: 20px; right: 20px; width: 300px; height: 200px; 
+            background: rgba(0,0,0,0.5); border: 1px solid #334155; padding: 10px; 
+            overflow-y: auto; font-size: 12px; pointer-events: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HUD -->
+    <div class="hud">
+        <h1 class="text-3xl font-bold text-cyan-400">MASTERMIND <span class="text-xs text-gray-400">v4.0 Frontier</span></h1>
+        <p class="text-sm text-gray-300">System Status: <span class="text-green-400">AUTONOMOUS</span></p>
+        <p class="text-sm text-gray-300">Active Agents: <span id="agent-count">0</span></p>
+    </div>
+
+    <!-- Live Event Log -->
+    <div class="log-panel" id="log-panel">
+        <div class="text-cyan-400 font-bold mb-2">Neural Stream</div>
+        <div id="logs"></div>
+    </div>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button onclick="spawnDebate()" class="px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded text-sm font-bold shadow-lg transition">Spawn Debate</button>
+        <button onclick="spawnDiscovery()" class="px-4 py-2 bg-purple-600 hover:bg-purple-500 rounded text-sm font-bold shadow-lg transition">Start Discovery</button>
+        <button onclick="toggleGravity()" class="px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded text-sm font-bold shadow-lg transition">Toggle Gravity</button>
+    </div>
+
+    <canvas id="world"></canvas>
+
+    <script>
+        const canvas = document.getElementById('world');
+        const ctx = canvas.getContext('2d');
+        let width, height;
+        let agents = [];
+        let connections = [];
+        let gravity = 0; // Anti-gravity by default
+        let draggedAgent = null;
+
+        // Resize handling
+        function resize() {
+            width = canvas.width = window.innerWidth;
+            height = canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        // Agent Class (The Floating Orbs)
+        class Agent {
+            constructor(name, type, x, y) {
+                this.name = name;
+                this.type = type; // Router, Proponent, Critic, Judge
+                this.x = x || Math.random() * width;
+                this.y = y || Math.random() * height;
+                this.vx = (Math.random() - 0.5) * 2; // Random drift velocity
+                this.vy = (Math.random() - 0.5) * 2;
+                this.radius = type === 'Router' ? 40 : 25;
+                this.color = this.getColor(type);
+                this.pulse = 0;
+            }
+
+            getColor(type) {
+                switch(type) {
+                    case 'Router': return '#22d3ee'; // Cyan
+                    case 'Proponent': return '#4ade80'; // Green
+                    case 'Critic': return '#f87171'; // Red
+                    case 'Judge': return '#facc15'; // Yellow
+                    case 'Discovery': return '#c084fc'; // Purple
+                    default: return '#94a3b8';
+                }
+            }
+
+            update() {
+                // Physics: Apply Velocity
+                this.x += this.vx;
+                this.y += this.vy;
+
+                // Physics: Apply "Anti-Gravity" (float to center slightly) or Real Gravity
+                if (gravity > 0) {
+                    this.vy += gravity;
+                } else {
+                    // Slight pull to center to keep them on screen in anti-gravity mode
+                    // this.vx += (width/2 - this.x) * 0.0001;
+                    // this.vy += (height/2 - this.y) * 0.0001;
+                }
+
+                // Bounce off walls
+                if (this.x < this.radius || this.x > width - this.radius) this.vx *= -1;
+                if (this.y < this.radius || this.y > height - this.radius) {
+                    this.vy *= -1;
+                    if (gravity > 0) this.vy *= 0.8; // Friction on floor
+                }
+
+                // Keep strictly in bounds
+                this.x = Math.max(this.radius, Math.min(width - this.radius, this.x));
+                this.y = Math.max(this.radius, Math.min(height - this.radius, this.y));
+
+                // Pulsing effect for "Thinking"
+                this.pulse += 0.05;
+            }
+
+            draw() {
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.radius + Math.sin(this.pulse)*2, 0, Math.PI * 2);
+                ctx.fillStyle = this.color;
+                ctx.shadowBlur = 15;
+                ctx.shadowColor = this.color;
+                ctx.fill();
+                ctx.closePath();
+                ctx.shadowBlur = 0;
+
+                // Text Label
+                ctx.fillStyle = "white";
+                ctx.font = "12px Courier New";
+                ctx.textAlign = "center";
+                ctx.fillText(this.type, this.x, this.y - 5);
+                ctx.font = "10px Courier New";
+                ctx.fillStyle = "#cbd5e1";
+                ctx.fillText(this.name, this.x, this.y + 10);
+            }
+        }
+
+        // Initialize Core Router
+        agents.push(new Agent("Master Router", "Router", width/2, height/2));
+
+        // Animation Loop
+        function animate() {
+            ctx.clearRect(0, 0, width, height);
+
+            // Draw Connections (Thoughts)
+            ctx.strokeStyle = "rgba(255, 255, 255, 0.1)";
+            ctx.lineWidth = 1;
+            connections.forEach((conn, index) => {
+                ctx.beginPath();
+                ctx.moveTo(conn.source.x, conn.source.y);
+                ctx.lineTo(conn.target.x, conn.target.y);
+                ctx.stroke();
+                
+                // Remove old connections randomly to simulate fading memory
+                if (Math.random() < 0.005) connections.splice(index, 1);
+            });
+
+            // Update & Draw Agents
+            agents.forEach(agent => {
+                agent.update();
+                agent.draw();
+            });
+
+            // Update HUD
+            document.getElementById('agent-count').innerText = agents.length;
+
+            requestAnimationFrame(animate);
+        }
+        animate();
+
+        // --- Simulating Backend Logic ---
+
+        function log(msg) {
+            const panel = document.getElementById('logs');
+            const div = document.createElement('div');
+            div.className = "mb-1 border-b border-gray-700 pb-1";
+            div.innerText = `> ${msg}`;
+            panel.prepend(div);
+        }
+
+        function spawnDebate() {
+            log("Initiating Adversarial Debate Protocol...");
+            
+            // Spawn Proponent and Critic
+            const pro = new Agent("Alpha (Pro)", "Proponent", width/2 - 100, height/2);
+            const critic = new Agent("Beta (Con)", "Critic", width/2 + 100, height/2);
+            const judge = new Agent("Omega (Judge)", "Judge", width/2, height/2 - 100);
+
+            agents.push(pro, critic, judge);
+            
+            // Create Neural Links
+            const router = agents[0];
+            connections.push({source: router, target: judge});
+            connections.push({source: judge, target: pro});
+            connections.push({source: judge, target: critic});
+            connections.push({source: pro, target: critic});
+
+            // Physics push
+            pro.vx = -2; critic.vx = 2; judge.vy = -2;
+        }
+
+        function spawnDiscovery() {
+            log("Launching Co-Scientist Squad...");
+            const s1 = new Agent("Hypothesis Gen", "Discovery", Math.random()*width, Math.random()*height);
+            const s2 = new Agent("Experimenter", "Discovery", Math.random()*width, Math.random()*height);
+            
+            agents.push(s1, s2);
+            connections.push({source: agents[0], target: s1});
+            connections.push({source: s1, target: s2});
+        }
+
+        function toggleGravity() {
+            gravity = gravity === 0 ? 0.5 : 0;
+            log(gravity > 0 ? "Gravity ENABLED (Heavy Mode)" : "Anti-Gravity RESTORED (Float Mode)");
+        }
+
+        // --- Interaction (Drag & Drop) ---
+        canvas.addEventListener('mousedown', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+            agents.forEach(agent => {
+                const dist = Math.hypot(agent.x - mouseX, agent.y - mouseY);
+                if (dist < agent.radius) {
+                    draggedAgent = agent;
+                }
+            });
+        });
+
+        canvas.addEventListener('mousemove', (e) => {
+            if (draggedAgent) {
+                draggedAgent.x = e.clientX;
+                draggedAgent.y = e.clientY;
+                draggedAgent.vx = 0;
+                draggedAgent.vy = 0;
+            }
+        });
+
+        canvas.addEventListener('mouseup', () => {
+            if(draggedAgent) {
+                // Give it a little throw
+                draggedAgent.vx = (Math.random() - 0.5) * 5;
+                draggedAgent.vy = (Math.random() - 0.5) * 5;
+                draggedAgent = null;
+            }
+        });
+
+    </script>
+</body>
+</html>

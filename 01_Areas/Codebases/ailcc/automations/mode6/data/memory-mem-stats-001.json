@@ -1,0 +1,8 @@
+{
+  "id": "mem-stats-001",
+  "taskId": "task-stats",
+  "content": "Stats test",
+  "sourceAgent": "claude",
+  "timestamp": "2026-02-24T02:37:54.972Z",
+  "ttl": 86400
+}

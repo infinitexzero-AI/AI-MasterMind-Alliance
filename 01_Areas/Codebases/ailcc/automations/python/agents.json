@@ -1,0 +1,314 @@
+{
+  "version": "1.0",
+  "last_updated": "2025-12-04T12:27:00Z",
+  "agents": [
+    {
+      "id": "antigravity-gemini-001",
+      "name": "Antigravity Gemini Desktop",
+      "platform": "desktop",
+      "device": "macbook",
+      "capabilities": [
+        "code_edit",
+        "terminal",
+        "browser_automation",
+        "artifacts",
+        "multi_model"
+      ],
+      "status": "active",
+      "last_active": "2025-12-04T12:27:00Z",
+      "sync_method": "direct_api",
+      "endpoint": "http://localhost:8000",
+      "session_data": {
+        "conversations": 11,
+        "tasks_completed": 5,
+        "intel_contributed": 0,
+        "artifacts_created": 3
+      }
+    },
+    {
+      "id": "claude-desktop-001",
+      "name": "Claude Desktop",
+      "platform": "desktop",
+      "device": "macbook",
+      "capabilities": [
+        "file_ops",
+        "execution",
+        "deep_analysis",
+        "long_context"
+      ],
+      "status": "idle",
+      "last_active": "2025-12-03T00:00:00Z",
+      "sync_method": "manual",
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 0,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "chatgpt-desktop-001",
+      "name": "ChatGPT Desktop",
+      "platform": "desktop",
+      "device": "macbook",
+      "capabilities": [
+        "conversation",
+        "cross_session_memory",
+        "dall_e"
+      ],
+      "status": "idle",
+      "last_active": "2025-12-03T00:00:00Z",
+      "sync_method": "manual",
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 0,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "gemini-desktop-001",
+      "name": "Gemini Desktop",
+      "platform": "desktop",
+      "device": "macbook",
+      "capabilities": [
+        "google_integration",
+        "research",
+        "multimodal"
+      ],
+      "status": "idle",
+      "last_active": "2025-12-03T00:00:00Z",
+      "sync_method": "cloud_poll",
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 0,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "valentine-mobile-001",
+      "name": "Valentine Mobile",
+      "platform": "mobile",
+      "device": "iphone",
+      "capabilities": [
+        "mobile_orchestration",
+        "task_management",
+        "voice"
+      ],
+      "status": "active",
+      "last_active": "2025-12-04T12:40:51.104411",
+      "sync_method": "webhook",
+      "endpoint": "http://localhost:8000/inject/mobile",
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 1,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "grok-iphone-001",
+      "name": "Grok iPhone",
+      "platform": "mobile",
+      "device": "iphone",
+      "capabilities": [
+        "x_integration",
+        "mobile_research",
+        "realtime_data"
+      ],
+      "status": "idle",
+      "last_active": "2025-12-03T00:00:00Z",
+      "sync_method": "webhook",
+      "endpoint": "http://localhost:8000/inject/mobile",
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 0,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "gemini-mobile-001",
+      "name": "Gemini Mobile",
+      "platform": "mobile",
+      "device": "iphone",
+      "capabilities": [
+        "mobile_ai",
+        "cross_device_sync",
+        "voice",
+        "lens"
+      ],
+      "status": "idle",
+      "last_active": "2025-12-03T00:00:00Z",
+      "sync_method": "cloud_poll",
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 0,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "chatgpt-mobile-001",
+      "name": "ChatGPT Mobile",
+      "platform": "mobile",
+      "device": "iphone",
+      "capabilities": [
+        "mobile_conversation",
+        "voice",
+        "dall_e"
+      ],
+      "status": "idle",
+      "last_active": "2025-12-03T00:00:00Z",
+      "sync_method": "manual",
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 0,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "comet-browser-001",
+      "name": "Perplexity Comet",
+      "platform": "browser",
+      "device": "web",
+      "capabilities": [
+        "research",
+        "intel_gathering",
+        "multi_tab",
+        "spaces"
+      ],
+      "status": "active",
+      "last_active": "2025-12-04T12:20:00Z",
+      "sync_method": "webhook",
+      "endpoint": "http://localhost:8000/inject/comet",
+      "session_data": {
+        "conversations": 1,
+        "tasks_completed": 1,
+        "intel_contributed": 1,
+        "artifacts_created": 1
+      }
+    },
+    {
+      "id": "supergrok-browser-001",
+      "name": "SuperGrok",
+      "platform": "browser",
+      "device": "web",
+      "capabilities": [
+        "reasoning",
+        "realtime_data",
+        "x_platform"
+      ],
+      "status": "idle",
+      "last_active": "2025-12-03T00:00:00Z",
+      "sync_method": "webhook",
+      "endpoint": "http://localhost:8000/inject/comet",
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 0,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "claude-browser-001",
+      "name": "Claude Browser",
+      "platform": "browser",
+      "device": "web",
+      "capabilities": [
+        "long_context",
+        "analysis",
+        "artifacts"
+      ],
+      "status": "idle",
+      "last_active": "2025-12-03T00:00:00Z",
+      "sync_method": "webhook",
+      "endpoint": "http://localhost:8000/inject/comet",
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 0,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "gemini-browser-001",
+      "name": "Gemini Browser",
+      "platform": "browser",
+      "device": "web",
+      "capabilities": [
+        "web_research",
+        "google_services",
+        "multimodal"
+      ],
+      "status": "active",
+      "last_active": "2025-12-04T12:25:00Z",
+      "sync_method": "direct_api",
+      "endpoint": "https://gemini.google.com",
+      "session_data": {
+        "conversations": 1,
+        "tasks_completed": 0,
+        "intel_contributed": 0,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "hn-poller-001",
+      "name": "Hacker News Poller",
+      "platform": "background",
+      "device": "macbook",
+      "capabilities": [
+        "auto_intel",
+        "polling",
+        "filtering"
+      ],
+      "status": "active",
+      "last_active": "2025-12-04T12:25:00Z",
+      "sync_method": "direct_api",
+      "pid": 17835,
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 2,
+        "artifacts_created": 0
+      }
+    },
+    {
+      "id": "cortex-api-001",
+      "name": "Cortex Intelligence API",
+      "platform": "background",
+      "device": "macbook",
+      "capabilities": [
+        "intel_processing",
+        "drive_integration",
+        "linear_escalation",
+        "analytics"
+      ],
+      "status": "active",
+      "last_active": "2025-12-04T12:27:00Z",
+      "sync_method": "direct_api",
+      "endpoint": "http://localhost:8000",
+      "pid": 17995,
+      "session_data": {
+        "conversations": 0,
+        "tasks_completed": 0,
+        "intel_contributed": 0,
+        "artifacts_created": 2
+      }
+    }
+  ],
+  "stats": {
+    "total_agents": 14,
+    "active_agents": 6,
+    "idle_agents": 8,
+    "platforms": {
+      "desktop": 4,
+      "mobile": 4,
+      "browser": 4,
+      "background": 2
+    },
+    "last_updated": "2025-12-04T12:40:51.104479"
+  }
+}

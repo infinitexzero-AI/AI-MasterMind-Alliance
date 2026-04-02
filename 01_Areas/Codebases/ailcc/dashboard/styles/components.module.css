@@ -1,0 +1,78 @@
+/* CapabilityGraph Styles */
+.graphContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.nodeContainer {
+  position: absolute;
+  z-index: 20;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Dynamic values via CSS variables */
+  left: var(--node-x);
+  top: var(--node-y);
+  transform: translate(-50%, -50%) scale(var(--node-scale));
+}
+
+.nodeLabel {
+  margin-top: 0.5rem;
+  font-size: 10px;
+  font-family: monospace;
+  color: rgb(148 163 184); /* slate-400 */
+  background-color: rgba(15, 23, 42, 0.8); /* slate-900/80 */
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(51, 65, 85, 0.5); /* slate-700/50 */
+  white-space: nowrap;
+}
+
+.orbitalRing {
+  position: absolute;
+  border-radius: 9999px; /* full */
+  border: 1px solid rgba(30, 41, 59, 0.5); /* slate-800/50 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+
+/* ReactorCore Styles */
+.reactorContainer {
+  position: relative;
+  width: 24rem; /* w-96 */
+  height: 24rem; /* h-96 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.reactorRing {
+  position: absolute;
+  border: 1px solid rgba(6, 182, 212, 0.3); /* cyan-500/30 */
+  border-radius: 9999px;
+  border-top-color: rgba(6, 182, 212, 0.8);
+  border-bottom-color: transparent;
+}
+
+.satelliteContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin-left: -0.5rem;
+  background-color: rgb(15 23 42); /* slate-900 */
+  border: 1px solid rgb(34 211 238); /* cyan-400 */
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(var(--angle));
+}

@@ -1,0 +1,74 @@
+{
+  "assignments": [
+    {
+      "id": "assign_1",
+      "task_id": "extracted_COMM3611_0",
+      "task_title": "[COMM3611] # COMM 3611: Commercial Law - Exam Strategy (Dec 1 (Extracted)",
+      "task_url": null,
+      "agent_id": "scholar",
+      "priority": 3,
+      "status": "assigned",
+      "assigned_at": "2026-03-18T02:00:46.423166",
+      "updated_at": "2026-03-18T02:00:46.423175",
+      "completed_at": null,
+      "notes": ""
+    },
+    {
+      "id": "assign_2",
+      "task_id": "extracted_COMM3611_2",
+      "task_title": "[COMM3611] **Exam Date**: Dec 17, 2025 | **Time**: 7:00 PM -  (Extracted)",
+      "task_url": null,
+      "agent_id": "scholar",
+      "priority": 3,
+      "status": "assigned",
+      "assigned_at": "2026-03-18T02:00:46.426672",
+      "updated_at": "2026-03-18T02:00:46.426687",
+      "completed_at": null,
+      "notes": ""
+    },
+    {
+      "id": "assign_3",
+      "task_id": "extracted_COMM3611_27",
+      "task_title": "[COMM3611] - **Dec 16**: Employment & Tax + Mock Exam Questio (Extracted)",
+      "task_url": null,
+      "agent_id": "scholar",
+      "priority": 3,
+      "status": "assigned",
+      "assigned_at": "2026-03-18T02:00:46.428654",
+      "updated_at": "2026-03-18T02:00:46.428669",
+      "completed_at": null,
+      "notes": ""
+    },
+    {
+      "id": "assign_4",
+      "task_id": "omsas_prep_2027",
+      "task_title": "[URGENT] Finalize OMSAS Sketch and Essays",
+      "task_url": null,
+      "agent_id": "scholar",
+      "priority": 5,
+      "status": "assigned",
+      "assigned_at": "2026-03-18T02:49:18.585578",
+      "updated_at": "2026-03-18T02:49:18.585600",
+      "completed_at": null,
+      "notes": ""
+    }
+  ],
+  "agent_workload": {
+    "scholar": {
+      "total_assigned": 4,
+      "in_progress": 4,
+      "completed": 0,
+      "tasks": [
+        "extracted_COMM3611_0",
+        "extracted_COMM3611_2",
+        "extracted_COMM3611_27",
+        "omsas_prep_2027"
+      ]
+    }
+  },
+  "stats": {
+    "total_assigned": 4,
+    "total_completed": 0,
+    "total_in_progress": 0
+  }
+}

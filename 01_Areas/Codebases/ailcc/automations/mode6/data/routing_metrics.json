@@ -1,0 +1,42 @@
+{
+  "claude": {
+    "agent": "claude",
+    "successRate": 1,
+    "avgLatency": 0,
+    "activeTasks": 0,
+    "totalTasks": 0,
+    "lastUpdated": "2026-02-24T02:21:51.501Z"
+  },
+  "grok": {
+    "agent": "grok",
+    "successRate": 1,
+    "avgLatency": 0,
+    "activeTasks": 0,
+    "totalTasks": 0,
+    "lastUpdated": "2026-02-24T02:21:51.530Z"
+  },
+  "comet": {
+    "agent": "comet",
+    "successRate": 1,
+    "avgLatency": 0,
+    "activeTasks": 0,
+    "totalTasks": 0,
+    "lastUpdated": "2026-02-24T02:21:51.530Z"
+  },
+  "chatgpt": {
+    "agent": "chatgpt",
+    "successRate": 1,
+    "avgLatency": 0,
+    "activeTasks": 0,
+    "totalTasks": 0,
+    "lastUpdated": "2026-02-24T02:21:51.530Z"
+  },
+  "openai": {
+    "agent": "openai",
+    "successRate": 1,
+    "avgLatency": 0,
+    "activeTasks": 0,
+    "totalTasks": 0,
+    "lastUpdated": "2026-02-24T02:21:51.530Z"
+  }
+}

@@ -1,0 +1,72 @@
+# ============================================================
+# AILCC VANGUARD — DOCKER COMPOSE STACK
+# Compute Engine: ThinkPad27 (10.0.0.192)
+# Services: Qdrant (Vector Brain) | Redis (Cache) | n8n (Automation)
+# ============================================================
+
+services:
+
+  # ── HIPPOCAMPUS VECTOR BRAIN ──────────────────────────────
+  qdrant:
+    image: qdrant/qdrant:latest
+    container_name: ailcc_qdrant
+    restart: unless-stopped
+    ports:
+      - "6333:6333"   # REST API  (Mac → ThinkPad tunnel target)
+      - "6334:6334"   # gRPC API
+    volumes:
+      - qdrant_storage:/qdrant/storage
+    environment:
+      - QDRANT__SERVICE__HTTP_PORT=6333
+      - QDRANT__SERVICE__GRPC_PORT=6334
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6333/healthz"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ── REDIS CACHE LAYER ─────────────────────────────────────
+  redis:
+    image: redis:7-alpine
+    container_name: ailcc_redis
+    restart: unless-stopped
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # ── N8N AUTOMATION CORTEX ─────────────────────────────────
+  n8n:
+    image: docker.n8n.io/n8nio/n8n:latest
+    container_name: ailcc_n8n
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    volumes:
+      - n8n_data:/home/node/.n8n
+    environment:
+      - N8N_HOST=0.0.0.0
+      - N8N_PORT=5678
+      - N8N_PROTOCOL=http
+      - WEBHOOK_URL=http://10.0.0.192:5678/
+      - N8N_EDITOR_BASE_URL=http://10.0.0.192:5678/
+      - GENERIC_TIMEZONE=America/Halifax
+      - N8N_LOG_LEVEL=warn
+    depends_on:
+      redis:
+        condition: service_healthy
+
+# ── PERSISTENT VOLUMES ────────────────────────────────────
+volumes:
+  qdrant_storage:
+    name: ailcc_qdrant_storage
+  redis_data:
+    name: ailcc_redis_data
+  n8n_data:
+    name: ailcc_n8n_data

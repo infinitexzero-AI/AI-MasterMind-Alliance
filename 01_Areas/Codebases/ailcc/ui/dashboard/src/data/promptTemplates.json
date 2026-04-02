@@ -1,0 +1,31 @@
+[
+  {
+    "id": "summarize_paper",
+    "title": "Summarize Academic Paper",
+    "description": "Provide a concise summary of a research paper.",
+    "prompt": "Summarize the following paper in 200 words:\n{{content}}",
+    "parameters": [
+      { "name": "content", "type": "textarea", "label": "Paper Text", "placeholder": "Paste paper content here..." }
+    ]
+  },
+  {
+    "id": "study_plan",
+    "title": "Create Study Plan",
+    "description": "Generate a weekly study plan for a given subject.",
+    "prompt": "Create a 4‑week study plan for {{subject}} covering these topics: {{topics}}.",
+    "parameters": [
+      { "name": "subject", "type": "text", "label": "Subject", "placeholder": "e.g., Machine Learning" },
+      { "name": "topics", "type": "textarea", "label": "Topics", "placeholder": "List topics, one per line" }
+    ]
+  },
+  {
+    "id": "business_pitch",
+    "title": "Business Pitch",
+    "description": "Draft a short pitch for a startup idea.",
+    "prompt": "Write a 2‑minute pitch for a startup that solves {{problem}} using {{solution}}.",
+    "parameters": [
+      { "name": "problem", "type": "text", "label": "Problem", "placeholder": "What problem are you solving?" },
+      { "name": "solution", "type": "text", "label": "Solution", "placeholder": "Brief description of solution" }
+    ]
+  }
+]

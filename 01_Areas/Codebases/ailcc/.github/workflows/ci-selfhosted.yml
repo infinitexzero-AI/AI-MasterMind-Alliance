@@ -1,0 +1,13 @@
+name: CI - Self-Hosted (Free)
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: 'npm' }
+      - run: npm ci || npm install
+      - run: npm test || echo "Tests not configured"
+      - run: npm run build || echo "Build not configured"

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Antigravity Chrome Side-Cart",
+  "version": "1.0.0",
+  "description": "Bridges the AI Chrome Agent profile with the Antigravity NEXUS Dashboard via WebSocket.",
+  "permissions": [
+    "tabs",
+    "bookmarks",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "http://localhost:3001/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Antigravity Bridge Status"
+  }
+}

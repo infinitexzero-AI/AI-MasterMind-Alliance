@@ -1,0 +1,7 @@
+# Backend Agent Scope (Next.js API / Python Daemons)
+*Domain: `ailcc/dashboard/pages/api/` & `ailcc/automations/`*
+
+1. **The Single Source API Contract**: When executing within the Next.js `pages/api` directory, all incoming `req.body` and `req.query` models must be physically parsed with `.parse()` from `shared/schemas.ts`. A 400 rejection must trigger if invalid.
+2. **Global Error Shape**: Never return raw JavaScript or Python stack traces to the frontend UI. All errors must be swallowed natively by a global middleware wrapper returning the absolute JSON signature:
+   ` { success: false, message: string, code: number, details: string } `
+3. **Event Telemetry**: Any major data mutation must physically log to `AILCC_PRIME/06_System/Logs` detailing processing percentiles and Swarm completion statuses.

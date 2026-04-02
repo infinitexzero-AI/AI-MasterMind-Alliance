@@ -1,0 +1,8 @@
+{
+  "id": "mem-ctx-002",
+  "taskId": "analysis-task-2",
+  "content": "Security audit findings",
+  "sourceAgent": "claude",
+  "timestamp": "2026-02-24T02:37:54.931Z",
+  "ttl": 86400
+}

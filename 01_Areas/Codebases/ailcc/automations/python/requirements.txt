@@ -1,0 +1,13 @@
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+google-generativeai
+fastapi
+uvicorn
+python-dotenv
+requests
+pydantic
+browser-use
+playwright
+langchain-google-genai
+python-dotenv

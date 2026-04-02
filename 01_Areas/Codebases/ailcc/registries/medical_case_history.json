@@ -1,0 +1,19 @@
+{
+  "patient_id": "USER_001",
+  "last_updated": "2025-12-06",
+  "profile": {
+    "condition": "Encephalitis Recovery",
+    "onset_date": "2023-01-01",
+    "primary_goals": ["Cognitive Restoration", "Inflammation Reduction", "Sleep Optimization"]
+  },
+  "timeline": [],
+  "symptoms": {
+    "current": ["Brain Fog", "Fatigue", "Photo-sensitivity"],
+    "resolved": []
+  },
+  "treatments": {
+    "active": [],
+    "past": []
+  },
+  "research_notes": []
+}

@@ -1,0 +1,22 @@
+[
+    {
+        "course": "GENS2101",
+        "question": "What is the primary vector for NRM?",
+        "answer": "Matrix alignment."
+    },
+    {
+        "course": "HLTH1011",
+        "question": "Define bio-informatic synthesis.",
+        "answer": "The fusion of medical telemetry & computing."
+    },
+    {
+        "course": "HLTH1011",
+        "question": "What is the primary objective of modern non-invasiive biometric telemetry?",
+        "answer": "To reduce hospital transmission rates while establishing a continuous health monitoring vector."
+    },
+    {
+        "course": "HLTH1011",
+        "question": "What is the basis for measuring blood volume changes using PPG?",
+        "answer": "The sensor emits green, red, and infrared light, which can actively calculate SpO2 and pulse rate without breaking the dermal barrier."
+    }
+]

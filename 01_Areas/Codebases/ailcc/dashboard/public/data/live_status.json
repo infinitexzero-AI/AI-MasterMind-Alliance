@@ -1,0 +1,184 @@
+{
+  "timestamp": "2026-03-23T18:29:56.706Z",
+  "traceId": "trace-1774279495132-4xym3gqxb",
+  "observability": {
+    "circuits": {
+      "github": {
+        "failures": 0,
+        "lastError": null,
+        "open": false
+      },
+      "linear": {
+        "failures": 2,
+        "lastError": 1774290596181,
+        "open": false,
+        "lastErrorMessage": 401
+      }
+    }
+  },
+  "mode6": {
+    "connected": true,
+    "status": "IDLE",
+    "stats": {
+      "active": 0,
+      "completed": 1,
+      "failed": 0,
+      "total": 19
+    },
+    "recent_tasks": [
+      {
+        "id": "task_1765836015012_996",
+        "description": "Generate a full system status report.",
+        "source": "user",
+        "priority": "medium",
+        "status": "pending",
+        "createdAt": "2025-12-15T22:00:15.012Z",
+        "updatedAt": "2025-12-15T22:00:15.012Z"
+      },
+      {
+        "id": "task_1765836020974_97",
+        "description": "Archive all completed tasks and clear the active memory.",
+        "source": "user",
+        "priority": "medium",
+        "status": "pending",
+        "createdAt": "2025-12-15T22:00:20.974Z",
+        "updatedAt": "2025-12-15T22:00:20.974Z"
+      },
+      {
+        "id": "task_1765836025734_372",
+        "description": "Analyze the codebase and fix any linting errors found.",
+        "source": "user",
+        "priority": "medium",
+        "status": "pending",
+        "createdAt": "2025-12-15T22:00:25.734Z",
+        "updatedAt": "2025-12-15T22:00:25.734Z"
+      },
+      {
+        "id": "task_1765959926689_70",
+        "description": "Generate a full system status report.",
+        "source": "user",
+        "priority": "medium",
+        "status": "pending",
+        "createdAt": "2025-12-17T08:25:26.689Z",
+        "updatedAt": "2025-12-17T08:25:26.689Z"
+      },
+      {
+        "id": "task_1765961244643_685",
+        "description": "Analyze the codebase and fix any linting errors found.",
+        "source": "user",
+        "priority": "medium",
+        "status": "pending",
+        "createdAt": "2025-12-17T08:47:24.643Z",
+        "updatedAt": "2025-12-17T08:47:24.643Z"
+      }
+    ]
+  },
+  "whitepaper": {
+    "exists": true,
+    "lastUpdated": "2026-03-20T18:27:40.207Z",
+    "summary": "# 🌌 AI MASTERMIND ALLIANCE (AIMmA)\n\nGlobal System Blueprint & Full Stack UI/UX Manual\n\n![AILCC Core Matrix](/Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb/ailcc_core_matrix_1774020842873.png)\n\n## I. Executive Synthesis\n\nThe **AI Mastermind Alliance (AIMmA)** is the ultimate realization of a globally connected, self-healing, multi-modal intelligence network. It physically bridges edge-native React dashboards, iOS biometrics, local SQLite vector stores, and an om..."
+  },
+  "linear": {
+    "connected": false,
+    "issues": [],
+    "error": "Linear API error: 401",
+    "traceId": "trace-1774279495132-4xym3gqxb"
+  },
+  "github": {
+    "connected": true,
+    "prs": [],
+    "traceId": "trace-1774279495132-4xym3gqxb"
+  },
+  "git": {
+    "connected": true,
+    "branch": "main",
+    "status": "M dashboard/public/data/live_status.json\n M dashboard_state.json"
+  },
+  "filesystem": {
+    "connected": true,
+    "projectPath": "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc",
+    "exists": true
+  },
+  "n8n": {
+    "connected": false,
+    "status": "Error: 404",
+    "url": "https://infinitexzeroai.app.n8n.cloud/"
+  },
+  "health": {
+    "status": "NOMINAL",
+    "uptime": 11103.972277444,
+    "memory": {
+      "rss": 27004928,
+      "heapTotal": 31645696,
+      "heapUsed": 30230000,
+      "external": 5398695,
+      "arrayBuffers": 1557425
+    },
+    "timestamp": "2026-03-23T18:29:55.936Z"
+  },
+  "agents": [
+    {
+      "name": "Valentine",
+      "role": "Orchestrator",
+      "status": "ONLINE",
+      "conversations": 0,
+      "neuromorphic": {
+        "cellType": "Glutamatergic (Excitatory)",
+        "heritage": "PFC - Supra-granular Layer",
+        "archetype": "Neuromorphic Executive (Long-range Planning)"
+      }
+    },
+    {
+      "name": "Antigravity",
+      "role": "Inner Loop (Code)",
+      "status": "ACTIVE",
+      "conversations": 0,
+      "neuromorphic": {
+        "cellType": "Glutamatergic (Excitatory)",
+        "heritage": "PFC - Supra-granular Layer",
+        "archetype": "Neuromorphic Executive (Long-range Planning)"
+      }
+    },
+    {
+      "name": "Comet",
+      "role": "Outer Loop (Web)",
+      "status": "IDLE",
+      "conversations": 19,
+      "neuromorphic": {
+        "cellType": "Glutamatergic (Excitatory)",
+        "heritage": "Occipital Cortex",
+        "archetype": "Sensory Afferent (Visual/Interface Perception)"
+      }
+    },
+    {
+      "name": "SuperGrok",
+      "role": "Strategy",
+      "status": "STANDBY",
+      "conversations": 0
+    },
+    {
+      "name": "Claude",
+      "role": "Deep Coding",
+      "status": "LINKED",
+      "conversations": 0
+    },
+    {
+      "name": "ChatGPT",
+      "role": "Backup/GitHub",
+      "status": "OFFLINE",
+      "conversations": 0
+    },
+    {
+      "name": "Gemini",
+      "role": "Multi-Modal",
+      "status": "LINKED",
+      "conversations": 0
+    },
+    {
+      "name": "N8N",
+      "role": "Automation",
+      "status": "OFFLINE",
+      "conversations": 0
+    }
+  ]
+}

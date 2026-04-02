@@ -1,0 +1,94 @@
+{
+  "name": "Comet-Antigravity Sync Protocol",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "comet-sync",
+        "responseMode": "onReceived",
+        "options": {}
+      },
+      "name": "Comet Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "functionCode": "const data = items[0].json;\nconst timestamp = new Date().toISOString();\nconst workspace_id = data.workspace_id || \"default_workspace\";\n\nreturn [{\n  json: {\n    filename: `conv_${Date.now()}.json`,\n    path: `~/Library/CloudStorage/iCloud Drive/AILCC Framework/comet_conversations/${workspace_id}/`,\n    data: {\n      ...data,\n      sync_metadata: {\n        timestamp,\n        status: \"synced\",\n        source: \"n8n_brain\"\n      }\n    }\n  }\n}];"
+      },
+      "name": "Normalize Schema",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [450, 300]
+    },
+    {
+      "parameters": {
+        "fileContent": "={{JSON.stringify($json.data, null, 2)}}",
+        "fileName": "={{$json.path}}{{$json.filename}}",
+        "options": {
+          "appendNewline": true
+        }
+      },
+      "name": "Write to iCloud",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [650, 300],
+      "parameters": {
+        "command": "mkdir -p \"{{$json.path}}\" && echo '{{JSON.stringify($json.data)}}' > \"{{$json.path}}{{$json.filename}}\""
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "boolean": [
+            {
+              "value1": "={{!!$json.error}}",
+              "value2": false
+            }
+          ]
+        }
+      },
+      "name": "Success?",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [850, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://localhost:3001/api/comet/webhook",
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "event",
+              "value": "SYNC_COMPLETE"
+            },
+            {
+              "name": "id",
+              "value": "={{$json.filename}}"
+            }
+          ]
+        }
+      },
+      "name": "Notify Neural Relay",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [1050, 200]
+    }
+  ],
+  "connections": {
+    "Comet Webhook": {
+      "main": [[{"node": "Normalize Schema", "type": "main", "index": 0}]]
+    },
+    "Normalize Schema": {
+      "main": [[{"node": "Write to iCloud", "type": "main", "index": 0}]]
+    },
+    "Write to iCloud": {
+      "main": [[{"node": "Success?", "type": "main", "index": 0}]]
+    },
+    "Success?": {
+      "main": [[{"node": "Notify Neural Relay", "type": "main", "index": 0}]]
+    }
+  }
+}

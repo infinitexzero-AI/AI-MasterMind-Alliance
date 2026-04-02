@@ -1,0 +1,40 @@
+/* Xbox TV Mode - High Fidelity Design System Extensions */
+
+:root {
+  --tv-font-scale: 1.25;
+}
+
+.tv-optimized {
+  font-size: calc(1rem * var(--tv-font-scale)) !important;
+}
+
+.tv-optimized h1 { font-size: 3rem !important; }
+.tv-optimized h2 { font-size: 2.2rem !important; }
+.tv-optimized p, .tv-optimized span { font-size: 1.4rem !important; }
+
+/* Higher contrast for distant viewing */
+.tv-optimized .bg-slate-900\/50 {
+  background-color: rgba(15, 23, 42, 0.8) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2) !important;
+}
+
+.tv-optimized .text-slate-400 {
+  color: #cbd5e1 !important; /* Lighter slate for visibility */
+}
+
+/* Larger navigation items */
+.tv-optimized nav a {
+  padding: 1.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+/* Xbox Glow Effect */
+.tv-optimized .active-nav {
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
+  border-left-width: 6px !important;
+}
+
+/* Hide scrollbars but keep functionality */
+.tv-optimized ::-webkit-scrollbar {
+  display: none;
+}

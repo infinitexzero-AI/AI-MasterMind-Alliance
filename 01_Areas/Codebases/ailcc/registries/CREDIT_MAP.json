@@ -1,0 +1,71 @@
+{
+    "degree": "BSc Biology",
+    "institution": "Mount Allison University (MTA)",
+    "audit_version": "2026.1",
+    "status": "Final Progression Path",
+    "credits": {
+        "total_required": 120,
+        "completed": 114,
+        "remaining_to_count": 6,
+        "distribution_status": {
+            "Science": "COMPLETE",
+            "Humanities": "PENDING (RELG 1001)",
+            "Social Science": "COMPLETE",
+            "Arts & Letters": "PENDING (DRAM 1701)"
+        }
+    },
+    "remaining_pathway": [
+        {
+            "code": "MATH 1311",
+            "name": "Discrete Mathematics",
+            "credits": 3,
+            "term": "Winter 2026",
+            "status": "Enrolled",
+            "category": "Science"
+        },
+        {
+            "code": "HLTH 1011",
+            "name": "Foundations of Health",
+            "credits": 3,
+            "term": "Winter 2026",
+            "status": "Enrolled",
+            "category": "Distribution/Elective"
+        },
+        {
+            "code": "RELG 1001",
+            "name": "Intro to Religion",
+            "credits": 3,
+            "term": "Summer/Fall 2026",
+            "status": "Planned",
+            "category": "Humanities"
+        },
+        {
+            "code": "DRAM 1701",
+            "name": "Introduction to Drama",
+            "credits": 3,
+            "term": "Summer/Fall 2026",
+            "status": "Planned",
+            "category": "Arts & Letters"
+        },
+        {
+            "code": "MATH 1111",
+            "name": "Calculus I",
+            "credits": 3,
+            "term": "Fall 2026",
+            "status": "Planned",
+            "category": "Major Requirement"
+        },
+        {
+            "code": "BIOL 2701",
+            "name": "Stats for Biologists",
+            "credits": 3,
+            "term": "Fall 2026",
+            "status": "Planned",
+            "category": "Major Requirement"
+        }
+    ],
+    "governing_docs": [
+        "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault/Academic_Vault/Official_Transcript_Dec2025.pdf",
+        "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault/Academic_Vault/Academic_Appeal_V2.pdf"
+    ]
+}

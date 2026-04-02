@@ -1,0 +1,85 @@
+/* WarRoom.module.css */
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.1;
+  background-image: 
+    linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.healthBar {
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.taskNode {
+  position: absolute;
+  cursor: move;
+  height: 3rem; /* h-12 */
+  width: 3rem; /* w-12 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+}
+
+.connectionLine {
+  position: absolute;
+  width: 1px;
+  height: 3rem; /* h-12 */
+  background-color: rgba(239, 68, 68, 0.3); /* red-500/30 */
+  transform-origin: top;
+}
+
+/* Percentage Utilities for avoiding inline styles */
+.w0 { width: 0%; } .w1 { width: 1%; } .w2 { width: 2%; } .w3 { width: 3%; } .w4 { width: 4%; } .w5 { width: 5%; } .w6 { width: 6%; } .w7 { width: 7%; } .w8 { width: 8%; } .w9 { width: 9%; } .w10 { width: 10%; }
+.w11 { width: 11%; } .w12 { width: 12%; } .w13 { width: 13%; } .w14 { width: 14%; } .w15 { width: 15%; } .w16 { width: 16%; } .w17 { width: 17%; } .w18 { width: 18%; } .w19 { width: 19%; } .w20 { width: 20%; }
+.w21 { width: 21%; } .w22 { width: 22%; } .w23 { width: 23%; } .w24 { width: 24%; } .w25 { width: 25%; } .w26 { width: 26%; } .w27 { width: 27%; } .w28 { width: 28%; } .w29 { width: 29%; } .w30 { width: 30%; }
+.w31 { width: 31%; } .w32 { width: 32%; } .w33 { width: 33%; } .w34 { width: 34%; } .w35 { width: 35%; } .w36 { width: 36%; } .w37 { width: 37%; } .w38 { width: 38%; } .w39 { width: 39%; } .w40 { width: 40%; }
+.w41 { width: 41%; } .w42 { width: 42%; } .w43 { width: 43%; } .w44 { width: 44%; } .w45 { width: 45%; } .w46 { width: 46%; } .w47 { width: 47%; } .w48 { width: 48%; } .w49 { width: 49%; } .w50 { width: 50%; }
+.w51 { width: 51%; } .w52 { width: 52%; } .w53 { width: 53%; } .w54 { width: 54%; } .w55 { width: 55%; } .w56 { width: 56%; } .w57 { width: 57%; } .w58 { width: 58%; } .w59 { width: 59%; } .w60 { width: 60%; }
+.w61 { width: 61%; } .w62 { width: 62%; } .w63 { width: 63%; } .w64 { width: 64%; } .w65 { width: 65%; } .w66 { width: 66%; } .w67 { width: 67%; } .w68 { width: 68%; } .w69 { width: 69%; } .w70 { width: 70%; }
+.w71 { width: 71%; } .w72 { width: 72%; } .w73 { width: 73%; } .w74 { width: 74%; } .w75 { width: 75%; } .w76 { width: 76%; } .w77 { width: 77%; } .w78 { width: 78%; } .w79 { width: 79%; } .w80 { width: 80%; }
+.w81 { width: 81%; } .w82 { width: 82%; } .w83 { width: 83%; } .w84 { width: 84%; } .w85 { width: 85%; } .w86 { width: 86%; } .w87 { width: 87%; } .w88 { width: 88%; } .w89 { width: 89%; } .w90 { width: 90%; }
+.w91 { width: 91%; } .w92 { width: 92%; } .w93 { width: 93%; } .w94 { width: 94%; } .w95 { width: 95%; } .w96 { width: 96%; } .w97 { width: 97%; } .w98 { width: 98%; } .w99 { width: 99%; } .w100 { width: 100%; }
+
+.left0 { left: 0%; } .left1 { left: 1%; } .left2 { left: 2%; } .left3 { left: 3%; } .left4 { left: 4%; } .left5 { left: 5%; } .left6 { left: 6%; } .left7 { left: 7%; } .left8 { left: 8%; } .left9 { left: 9%; } .left10 { left: 10%; }
+.left11 { left: 11%; } .left12 { left: 12%; } .left13 { left: 13%; } .left14 { left: 14%; } .left15 { left: 15%; } .left16 { left: 16%; } .left17 { left: 17%; } .left18 { left: 18%; } .left19 { left: 19%; } .left20 { left: 20%; }
+.left21 { left: 21%; } .left22 { left: 22%; } .left23 { left: 23%; } .left24 { left: 24%; } .left25 { left: 25%; } .left26 { left: 26%; } .left27 { left: 27%; } .left28 { left: 28%; } .left29 { left: 29%; } .left30 { left: 30%; }
+.left31 { left: 31%; } .left32 { left: 32%; } .left33 { left: 33%; } .left34 { left: 34%; } .left35 { left: 35%; } .left36 { left: 36%; } .left37 { left: 37%; } .left38 { left: 38%; } .left39 { left: 39%; } .left40 { left: 40%; }
+.left41 { left: 41%; } .left42 { left: 42%; } .left43 { left: 43%; } .left44 { left: 44%; } .left45 { left: 45%; } .left46 { left: 46%; } .left47 { left: 47%; } .left48 { left: 48%; } .left49 { left: 49%; } .left50 { left: 50%; }
+.left51 { left: 51%; } .left52 { left: 52%; } .left53 { left: 53%; } .left54 { left: 54%; } .left55 { left: 55%; } .left56 { left: 56%; } .left57 { left: 57%; } .left58 { left: 58%; } .left59 { left: 59%; } .left60 { left: 60%; }
+.left61 { left: 61%; } .left62 { left: 62%; } .left63 { left: 63%; } .left64 { left: 64%; } .left65 { left: 65%; } .left66 { left: 66%; } .left67 { left: 67%; } .left68 { left: 68%; } .left69 { left: 69%; } .left70 { left: 70%; }
+.left71 { left: 71%; } .left72 { left: 72%; } .left73 { left: 73%; } .left74 { left: 74%; } .left75 { left: 75%; } .left76 { left: 76%; } .left77 { left: 77%; } .left78 { left: 78%; } .left79 { left: 79%; } .left80 { left: 80%; }
+.left81 { left: 81%; } .left82 { left: 82%; } .left83 { left: 83%; } .left84 { left: 84%; } .left85 { left: 85%; } .left86 { left: 86%; } .left87 { left: 87%; } .left88 { left: 88%; } .left89 { left: 89%; } .left90 { left: 90%; }
+.left91 { left: 91%; } .left92 { left: 92%; } .left93 { left: 93%; } .left94 { left: 94%; } .left95 { left: 95%; } .left96 { left: 96%; } .left97 { left: 97%; } .left98 { left: 98%; } .left99 { left: 99%; } .left100 { left: 100%; }
+
+.top0 { top: 0%; } .top1 { top: 1%; } .top2 { top: 2%; } .top3 { top: 3%; } .top4 { top: 4%; } .top5 { top: 5%; } .top6 { top: 6%; } .top7 { top: 7%; } .top8 { top: 8%; } .top9 { top: 9%; } .top10 { top: 10%; }
+.top11 { top: 11%; } .top12 { top: 12%; } .top13 { top: 13%; } .top14 { top: 14%; } .top15 { top: 15%; } .top16 { top: 16%; } .top17 { top: 17%; } .top18 { top: 18%; } .top19 { top: 19%; } .top20 { top: 20%; }
+.top21 { top: 21%; } .top22 { top: 22%; } .top23 { top: 23%; } .top24 { top: 24%; } .top25 { top: 25%; } .top26 { top: 26%; } .top27 { top: 27%; } .top28 { top: 28%; } .top29 { top: 29%; } .top30 { top: 30%; }
+.top31 { top: 31%; } .top32 { top: 32%; } .top33 { top: 33%; } .top34 { top: 34%; } .top35 { top: 35%; } .top36 { top: 36%; } .top37 { top: 37%; } .top38 { top: 38%; } .top39 { top: 39%; } .top40 { top: 40%; }
+.top41 { top: 41%; } .top42 { top: 42%; } .top43 { top: 43%; } .top44 { top: 44%; } .top45 { top: 45%; } .top46 { top: 46%; } .top47 { top: 47%; } .top48 { top: 48%; } .top49 { top: 49%; } .top50 { top: 50%; }
+.top51 { top: 51%; } .top52 { top: 52%; } .top53 { top: 53%; } .top54 { top: 54%; } .top55 { top: 55%; } .top56 { top: 56%; } .top57 { top: 57%; } .top58 { top: 58%; } .top59 { top: 59%; } .top60 { top: 60%; }
+.top61 { top: 61%; } .top62 { top: 62%; } .top63 { top: 63%; } .top64 { top: 64%; } .top65 { top: 65%; } .top66 { top: 66%; } .top67 { top: 67%; } .top68 { top: 68%; } .top69 { top: 69%; } .top70 { top: 70%; }
+.top71 { top: 71%; } .top72 { top: 72%; } .top73 { top: 73%; } .top74 { top: 74%; } .top75 { top: 75%; } .top76 { top: 76%; } .top77 { top: 77%; } .top78 { top: 78%; } .top79 { top: 79%; } .top80 { top: 80%; }
+.top81 { top: 81%; } .top82 { top: 82%; } .top83 { top: 83%; } .top84 { top: 84%; } .top85 { top: 85%; } .top86 { top: 86%; } .top87 { top: 87%; } .top88 { top: 88%; } .top89 { top: 89%; } .top90 { top: 90%; }
+.top91 { top: 91%; } .top92 { top: 92%; } .top93 { top: 93%; } .top94 { top: 94%; } .top95 { top: 95%; } .top96 { top: 96%; } .top97 { top: 97%; } .top98 { top: 98%; } .top99 { top: 99%; } .top100 { top: 100%; }
+
+.rot0 { transform: rotate(0deg); } .rot10 { transform: rotate(10deg); } .rot20 { transform: rotate(20deg); } .rot30 { transform: rotate(30deg); } .rot40 { transform: rotate(40deg); } .rot50 { transform: rotate(50deg); } .rot60 { transform: rotate(60deg); } .rot70 { transform: rotate(70deg); } .rot80 { transform: rotate(80deg); } .rot90 { transform: rotate(90deg); }
+.rot100 { transform: rotate(100deg); } .rot110 { transform: rotate(110deg); } .rot120 { transform: rotate(120deg); } .rot130 { transform: rotate(130deg); } .rot140 { transform: rotate(140deg); } .rot150 { transform: rotate(150deg); } .rot160 { transform: rotate(160deg); } .rot170 { transform: rotate(170deg); } .rot180 { transform: rotate(180deg); } .rot190 { transform: rotate(190deg); }
+.rot200 { transform: rotate(200deg); } .rot210 { transform: rotate(210deg); } .rot220 { transform: rotate(220deg); } .rot230 { transform: rotate(230deg); } .rot240 { transform: rotate(240deg); } .rot250 { transform: rotate(250deg); } .rot260 { transform: rotate(260deg); } .rot270 { transform: rotate(270deg); } .rot280 { transform: rotate(280deg); } .rot290 { transform: rotate(290deg); }
+.rot300 { transform: rotate(300deg); } .rot310 { transform: rotate(310deg); } .rot320 { transform: rotate(320deg); } .rot330 { transform: rotate(330deg); } .rot340 { transform: rotate(340deg); } .rot350 { transform: rotate(350deg); }
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 1; box-shadow: 0 0 20px rgba(239, 68, 68, 0.5); }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+.valentinePulse {
+  animation: pulse 2s infinite ease-in-out;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.2);
+}

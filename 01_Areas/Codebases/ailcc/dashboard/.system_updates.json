@@ -1,0 +1,150 @@
+{
+  "timestamp": "2026-03-03T04:23:20.366Z",
+  "brew": {
+    "formulae": [
+      {
+        "name": "gh",
+        "installed_versions": [
+          "2.83.2"
+        ],
+        "current_version": "2.87.3",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "icu4c@78",
+        "installed_versions": [
+          "78.1"
+        ],
+        "current_version": "78.2",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "libnghttp3",
+        "installed_versions": [
+          "1.14.0"
+        ],
+        "current_version": "1.15.0",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "libngtcp2",
+        "installed_versions": [
+          "1.19.0"
+        ],
+        "current_version": "1.21.0",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "libuv",
+        "installed_versions": [
+          "1.51.0"
+        ],
+        "current_version": "1.52.0",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "node",
+        "installed_versions": [
+          "25.2.1"
+        ],
+        "current_version": "25.7.0",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "ollama",
+        "installed_versions": [
+          "0.13.5"
+        ],
+        "current_version": "0.17.5",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "openssl@3",
+        "installed_versions": [
+          "3.6.0"
+        ],
+        "current_version": "3.6.1",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "redis",
+        "installed_versions": [
+          "8.4.0"
+        ],
+        "current_version": "8.6.1",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "simdjson",
+        "installed_versions": [
+          "4.2.4"
+        ],
+        "current_version": "4.3.0",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "sqlite",
+        "installed_versions": [
+          "3.51.1"
+        ],
+        "current_version": "3.51.2_1",
+        "pinned": false,
+        "pinned_version": null
+      },
+      {
+        "name": "zstd",
+        "installed_versions": [
+          "1.5.7"
+        ],
+        "current_version": "1.5.7_1",
+        "pinned": false,
+        "pinned_version": null
+      }
+    ],
+    "casks": []
+  },
+  "npm": {
+    "corepack": {
+      "current": "0.34.2",
+      "wanted": "0.34.6",
+      "latest": "0.34.6",
+      "dependent": "global",
+      "location": "/Users/infinite27/.nvm/versions/node/v24.11.1/lib/node_modules/corepack"
+    },
+    "npm": {
+      "current": "11.6.2",
+      "wanted": "11.11.0",
+      "latest": "11.11.0",
+      "dependent": "global",
+      "location": "/Users/infinite27/.nvm/versions/node/v24.11.1/lib/node_modules/npm"
+    },
+    "openclaw": {
+      "current": "2026.2.19-2",
+      "wanted": "2026.3.1",
+      "latest": "2026.3.1",
+      "dependent": "global",
+      "location": "/Users/infinite27/.nvm/versions/node/v24.11.1/lib/node_modules/openclaw"
+    },
+    "vercel": {
+      "current": "50.1.4",
+      "wanted": "50.25.6",
+      "latest": "50.25.6",
+      "dependent": "global",
+      "location": "/Users/infinite27/.nvm/versions/node/v24.11.1/lib/node_modules/vercel"
+    }
+  },
+  "docker": {
+    "current": "29.2.1"
+  },
+  "summary": "Brew: 12 formulae, 0 casks outdated. NPM: 4 global packages outdated."
+}

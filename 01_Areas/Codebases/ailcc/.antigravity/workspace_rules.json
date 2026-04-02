@@ -1,0 +1,94 @@
+{
+    "workspace": "AILCC-Framework",
+    "rules": [
+        {
+            "name": "Multi-Agent Orchestration Standards",
+            "description": "Always follow AILCC agent naming protocol and handoff conventions",
+            "triggers": [
+                "agent",
+                "dispatch",
+                "orchestration"
+            ],
+            "enforcements": [
+                "Use Intent Router for task classification",
+                "Route through Comet Assist for verification",
+                "Log all agent interactions to Memory Manager",
+                "Check cost thresholds before dispatch"
+            ]
+        },
+        {
+            "name": "Code Generation Standards",
+            "description": "TypeScript-first with strict mode, Jest tests required",
+            "triggers": [
+                "*.ts",
+                "*.tsx",
+                "*.js"
+            ],
+            "enforcements": [
+                "Use strict TypeScript (no any types)",
+                "All new code must have Jest tests",
+                "ESLint must pass before commit",
+                "Follow existing architecture patterns"
+            ]
+        },
+        {
+            "name": "Agent Adapter Protocol",
+            "description": "All adapters must implement standardized interface",
+            "triggers": [
+                "adapter",
+                "agent integration"
+            ],
+            "enforcements": [
+                "Implement sendMessage() method",
+                "Implement supportsIntent() method",
+                "Include error normalization",
+                "Support both real and mock modes",
+                "Use ConfigLoader for API keys"
+            ]
+        },
+        {
+            "name": "Documentation Sync",
+            "description": "Keep architecture docs updated with code changes",
+            "triggers": [
+                "new feature",
+                "architecture change"
+            ],
+            "enforcements": [
+                "Update ARCHITECTURE.md for structural changes",
+                "Update relevant integration guides",
+                "Add examples to MULTI_AGENT_PROMPT_LIBRARY.md",
+                "Sync with COMET_ASSIST_MANIFEST.md if affecting workflows"
+            ]
+        },
+        {
+            "name": "Cost Management",
+            "description": "Monitor and optimize API costs across all agents",
+            "triggers": [
+                "api call",
+                "agent dispatch"
+            ],
+            "enforcements": [
+                "Check daily cost thresholds: warning=$50, alert=$100, cutoff=$200",
+                "Use token-efficient agents for simple tasks",
+                "Route to mock adapters in development",
+                "Log all costs to CostTracker interface"
+            ]
+        }
+    ],
+    "models": {
+        "primary": "gemini-3-pro",
+        "reasoning": "claude-sonnet-4.5",
+        "quick": "gpt-oss-120b"
+    },
+    "terminal": {
+        "autoExecution": "off",
+        "allowList": [
+            "npm test",
+            "npm run dev",
+            "npm run build",
+            "git status",
+            "git diff",
+            "ls -al"
+        ]
+    }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AICC Blueprint",
+  "type": "object",
+  "properties": {
+    "blueprint_id": {
+      "type": "string",
+      "description": "Unique identifier for the blueprint"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the blueprint"
+    },
+    "originator": {
+      "type": "string",
+      "description": "The creator or originator of the blueprint"
+    },
+    "priority": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Priority level of the blueprint"
+    },
+    "execution_flow": {
+      "type": "array",
+      "description": "The sequence of steps or actions in the blueprint",
+      "items": {
+        "type": "object"
+      }
+    },
+    "target_drive_folder": {
+      "type": "string",
+      "default": "/AICC/Blueprints",
+      "description": "The target folder in the drive where this blueprint applies or is stored"
+    }
+  },
+  "required": [
+    "blueprint_id",
+    "title",
+    "originator",
+    "priority",
+    "execution_flow"
+  ]
+}

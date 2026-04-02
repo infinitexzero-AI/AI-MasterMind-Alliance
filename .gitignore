@@ -205,3 +205,19 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Alliance Machine State (Vanguard Node Exclusions)
+01_Areas/Codebases/qdrant/
+01_Areas/Codebases/ailcc/n8n/
+01_Areas/Codebases/ailcc/moodle_spool/
+storage/
+01_Areas/Codebases/ailcc/node_modules/
+*.log
+
+# macOS cross-OS artifacts
+.DS_Store
+._*
+**/._*
+._.
+
+01_Areas/Codebases/ailcc/hippocampus_storage/

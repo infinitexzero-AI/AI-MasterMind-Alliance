@@ -1,0 +1,8 @@
+{
+  "id": "mem-001",
+  "taskId": "task-001",
+  "content": "Test memory content",
+  "sourceAgent": "claude",
+  "timestamp": "2026-02-24T02:37:54.186Z",
+  "ttl": 86400
+}

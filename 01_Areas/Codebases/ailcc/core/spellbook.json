@@ -1,0 +1,78 @@
+{
+  "spellbook_version": "1.0.0",
+  "last_updated": "2025-12-23T00:45:00Z",
+  "abilities": {
+    "system_launch": {
+      "path": "ailcc-launch.sh",
+      "type": "shell",
+      "purpose": "Orchestrates the full AILCC stack (Relay, Orchestrator, Dashboard).",
+      "safety": "CRITICAL"
+    },
+    "full_diagnostics": {
+      "path": "scripts/full_diagnostics.py",
+      "type": "python",
+      "purpose": "Performs an end-to-end health check of all system components.",
+      "safety": "SAFE"
+    },
+    "persistence_manager": {
+      "path": "persistence_manager.py",
+      "type": "python",
+      "purpose": "Handles low-level data persistence for agent memory.",
+      "safety": "SAFE"
+    },
+    "relay_server": {
+      "path": "dashboard/server/relay.js",
+      "type": "nodejs",
+      "purpose": "WebSocket and HTTP relay for real-time dashboard updates.",
+      "safety": "MODERATE"
+    },
+    "neurologic_sync": {
+      "path": "dashboard/components/NeuralSyncProvider.tsx",
+      "type": "react_hook",
+      "purpose": "React context provider for neural state synchronization.",
+      "safety": "SAFE"
+    },
+    "vault_organizer": {
+      "path": "automations/organize_vault.js",
+      "type": "nodejs",
+      "purpose": "Maintains the 04_Intelligence_Vault directory structure.",
+      "safety": "SAFE"
+    },
+    "the_judge": {
+      "path": "thejudge.py",
+      "type": "python",
+      "purpose": "Autonomous advisor for system health and strategic feedback.",
+      "safety": "HIGH"
+    },
+    "linear_cns_sync": {
+      "path": "scripts/sync_linear_markdown.py",
+      "type": "python",
+      "purpose": "Synchronizes Linear issues with the Local Markdown CNS registry.",
+      "safety": "SAFE"
+    },
+    "report_gen": {
+      "path": "scripts/report_gen.py",
+      "type": "python",
+      "purpose": "Converts Markdown/Text content into professional PDF or Word documents.",
+      "safety": "SAFE"
+    },
+    "grok_proxy": {
+      "path": "scripts/grok_proxy.py",
+      "type": "python",
+      "purpose": "Bridges web-reading context for Grok/Valentine sessions.",
+      "safety": "SAFE"
+    },
+    "academic_defense": {
+      "path": "scripts/academic_defense.py",
+      "type": "python",
+      "purpose": "Executes deconstruction and voice injection for academic integrity defense.",
+      "safety": "SAFE"
+    },
+    "grok_status_check": {
+      "path": "scripts/grok_status_check.py",
+      "type": "python",
+      "purpose": "Monitors Grok web-reading availability and updates system status.",
+      "safety": "SAFE"
+    }
+  }
+}

@@ -1,0 +1,180 @@
+name: AILCC Multi-Agent Orchestration
+
+on:
+  workflow_dispatch:
+    inputs:
+      query:
+        description: 'Research query to process'
+        required: true
+        type: string
+      priority:
+        description: 'Execution priority (high/normal)'
+        required: false
+        default: 'normal'
+        type: choice
+        options:
+          - high
+          - normal
+  repository_dispatch:
+    types: [perplexity_export, n8n_trigger]
+
+jobs:
+  # GATE 1: RESEARCH (Perplexity)
+  research_gate:
+    name: 🔍 Perplexity Research Gate
+    runs-on: ubuntu-latest
+    outputs:
+      research_payload: ${{ steps.research.outputs.payload }}
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Execute Perplexity Research
+        id: research
+        run: |
+          QUERY="${{ github.event.inputs.query || github.event.client_payload.query }}"
+          
+          # Call Perplexity API (adjust endpoint based on actual API)
+          RESPONSE=$(curl -X POST https://api.perplexity.ai/chat/completions \
+            -H "Authorization: Bearer ${{ secrets.PERPLEXITY_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"model\": \"sonar-pro\",
+              \"messages\": [{
+                \"role\": \"user\",
+                \"content\": \"$QUERY. Provide structured JSON with: sources[], summaries[], key_gaps[]\"
+              }]
+            }")
+          
+          # Extract and format payload
+          echo "$RESPONSE" | jq -r '.choices[0].message.content' > research_output.json
+          echo "payload=$(cat research_output.json | jq -c .)" >> $GITHUB_OUTPUT
+      
+      - name: Upload Research Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: research-payload
+          path: research_output.json
+          retention-days: 7
+
+  # GATE 2: ANALYSIS (Claude)
+  analysis_gate:
+    name: 🧠 Claude Analysis Gate
+    needs: research_gate
+    runs-on: ubuntu-latest
+    outputs:
+      analysis_report: ${{ steps.claude.outputs.report }}
+    
+    steps:
+      - name: Download Research Payload
+        uses: actions/download-artifact@v4
+        with:
+          name: research-payload
+      
+      - name: Claude Structured Analysis
+        id: claude
+        run: |
+          RESEARCH_DATA=$(cat research_output.json)
+          
+          RESPONSE=$(curl -X POST https://api.anthropic.com/v1/messages \
+            -H "x-api-key: ${{ secrets.ANTHROPIC_API_KEY }}" \
+            -H "anthropic-version: 2023-06-01" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"model\": \"claude-3-5-sonnet-20241022\",
+              \"max_tokens\": 4096,
+              \"messages\": [{
+                \"role\": \"user\",
+                \"content\": \"Analyze this research data: $RESEARCH_DATA. Generate: 1) Mermaid mindmap of key concepts 2) Markdown report with actionable insights for biopsychology coursework 3) Hypothesis tree\"
+              }]
+            }")
+          
+          echo "$RESPONSE" | jq -r '.content[0].text' > claude_report.md
+          echo "report<<EOF" >> $GITHUB_OUTPUT
+          cat claude_report.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      - name: Upload Analysis Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-analysis
+          path: claude_report.md
+
+  # GATE 3: CODE GENERATION (SuperGrok)
+  codegen_gate:
+    name: ⚡ SuperGrok Code Generation Gate
+    needs: analysis_gate
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Download Claude Report
+        uses: actions/download-artifact@v4
+        with:
+          name: claude-analysis
+      
+      - name: Generate Code Assets
+        run: |
+          REPORT=$(cat claude_report.md)
+          
+          RESPONSE=$(curl -X POST https://api.openai.com/v1/chat/completions \
+            -H "Authorization: Bearer ${{ secrets.OPENAI_API_KEY }}" \
+            -H "Content-Type: application/json" \
+            -d "{
+              \"model\": \"gpt-4\",
+              \"messages\": [{
+                \"role\": \"user\",
+                \"content\": \"Based on this analysis: $REPORT, generate: 1) HTML dashboard for literature tracking 2) Python script for grade projections 3) JSON config for habit tracker\"
+              }]
+            }")
+          
+          # Extract and save generated code
+          echo "$RESPONSE" | jq -r '.choices[0].message.content' > generated_assets.zip
+      
+      - name: Upload Generated Assets
+        uses: actions/upload-artifact@v4
+        with:
+          name: grok-assets
+          path: generated_assets.zip
+
+  # GATE 4: DEPLOYMENT (n8n Sync)
+  deploy_gate:
+    name: 🚀 n8n Deployment Gate
+    needs: [research_gate, analysis_gate, codegen_gate]
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Download All Artifacts
+        uses: actions/download-artifact@v4
+      
+      - name: Trigger n8n Sync
+        run: |
+          # Package all outputs
+          tar -czf chamber_output.tar.gz research-payload/ claude-analysis/ grok-assets/
+          
+          # Send to n8n for ecosystem distribution
+          curl -X POST ${{ secrets.N8N_WEBHOOK_URL }} \
+            -H "Content-Type: multipart/form-data" \
+            -F "artifacts=@chamber_output.tar.gz" \
+            -F "query=${{ github.event.inputs.query }}" \
+            -F "sync_targets=google_drive,apple_calendar,notion"
+      
+      - name: Notify Success
+        run: |
+          curl -X POST ${{ secrets.SLACK_WEBHOOK_URL }} \
+            -H "Content-Type: application/json" \
+            -d "{\"text\":\"✅ AILCC Chamber Run Complete: ${{ github.event.inputs.query }}\"}"
+
+  # FAIL-SAFE: Alert on Errors
+  notify_failure:
+    name: 🚨 Failure Alert
+    if: failure()
+    runs-on: ubuntu-latest
+    needs: [research_gate, analysis_gate, codegen_gate, deploy_gate]
+    
+    steps:
+      - name: Send Alert
+        run: |
+          curl -X POST ${{ secrets.SLACK_WEBHOOK_URL }} \
+            -H "Content-Type: application/json" \
+            -d "{\"text\":\"❌ AILCC Pipeline Failed - Check logs\"}"

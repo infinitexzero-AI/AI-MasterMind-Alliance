@@ -1,0 +1,17 @@
+{
+    "timestamp": "2026-02-07T23:35:00Z",
+    "agent": "EmailIntelligence",
+    "type": "INTELLIGENCE_SIGNAL",
+    "status": "error",
+    "content": "Account: academic | Subject: Urgent: Bioindicator Lab Results | Priority: CRITICAL | AOIs: Bioindicators, HACCP",
+    "payload": {
+        "id": "academic_test_101",
+        "account_id": "academic",
+        "subject": "Urgent: Bioindicator Lab Results",
+        "sender": "Dr. Aris",
+        "received_date": "2026-02-07T23:30:00Z",
+        "aois": ["Bioindicators", "HACCP"],
+        "priority": "CRITICAL",
+        "snippet": "The latest samples from sector 7 show significant deviation. Urgent review required for ISO standards compliance..."
+    }
+}

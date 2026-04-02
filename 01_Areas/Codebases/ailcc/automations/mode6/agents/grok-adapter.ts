@@ -1,0 +1,210 @@
+/**
+ * Grok API Adapter
+ * Integrates xAI's Grok API with Mode 6 Agent Dispatcher
+ * Optimized for multi-step reasoning and experimental reasoning patterns
+ */
+
+import { configLoader } from '../config/env';
+import { HandoffContext, DispatchResult } from '../intent-router/types';
+
+interface GrokResponse {
+  id: string;
+  created: number;
+  model: string;
+  result: {
+    output: string;
+    reasoning_tokens?: number;
+    completion_tokens?: number;
+  };
+  usage: {
+    prompt_tokens: number;
+    completion_tokens: number;
+    reasoning_tokens?: number;
+  };
+}
+
+export interface GrokAdapterConfig {
+  apiKey?: string;
+  modelId?: string;
+  maxTokens?: number;
+  enableReasoning?: boolean;
+}
+
+export class GrokAdapter {
+  private apiKey: string;
+  private modelId: string;
+  private maxTokens: number;
+  private enableReasoning: boolean;
+  private apiBaseUrl: string = 'https://api.x.ai/v1';
+  private requestStats = {
+    successfulRequests: 0,
+    failedRequests: 0,
+    totalTokensUsed: 0,
+  };
+
+  constructor(config: GrokAdapterConfig = {}) {
+    const configSettings = configLoader.getConfig();
+    this.apiKey = config.apiKey || configSettings.xai.apiKey;
+    this.modelId = config.modelId || configSettings.xai.model;
+    this.maxTokens = config.maxTokens || configSettings.xai.maxTokens;
+    this.enableReasoning = config.enableReasoning ?? true;
+
+    if (!this.apiKey) {
+      console.warn('[Grok Adapter] XAI_API_KEY not set; adapter will operate in mock mode.');
+    }
+  }
+
+  async executeTask(handoff: HandoffContext): Promise<DispatchResult> {
+    const startTime = Date.now();
+
+    try {
+      const userMessage = this.formatUserMessage(handoff);
+
+      if (!this.apiKey) {
+        return this.mockExecute(handoff);
+      }
+
+      const response = await this.callGrokAPI(userMessage);
+      const duration = Date.now() - startTime;
+
+      this.requestStats.successfulRequests++;
+      this.requestStats.totalTokensUsed += response.usage.completion_tokens;
+
+      return {
+        success: true,
+        taskId: handoff.taskId,
+        agentUsed: 'grok',
+        output: response.result.output,
+        metadata: {
+          model: response.model,
+          tokens: response.usage.completion_tokens,
+          reasoningTokens: response.usage.reasoning_tokens || 0,
+          duration,
+        },
+      };
+    } catch (error: unknown) {
+      this.requestStats.failedRequests++;
+      const errorMessage = error instanceof Error ? error.message : typeof error === 'string' ? error : 'Unknown error';
+      return {
+        success: false,
+        taskId: handoff.taskId,
+        agentUsed: 'grok',
+        error: `Grok error: ${errorMessage}`,
+      };
+    }
+  }
+
+  async validateCapability(capability: string): Promise<boolean> {
+    const capabilities = [
+      'reasoning',
+      'multi-step-planning',
+      'code-review',
+      'analysis',
+      'research',
+    ];
+    return capabilities.includes(capability.toLowerCase());
+  }
+
+  getStats() {
+    return {
+      ...this.requestStats,
+      model: this.modelId,
+      reasoningEnabled: this.enableReasoning,
+      isConfigured: !!this.apiKey,
+    };
+  }
+
+  private formatUserMessage(handoff: HandoffContext): string {
+    const { taskData, metadata } = handoff;
+    const taskDescription = metadata?.description || 'Execute task';
+
+    let message = taskDescription;
+    if (metadata?.taskType === 'reasoning' || this.enableReasoning) {
+      message = `[Reasoning Task]\n${message}`;
+    }
+
+    message += '\n\n';
+    if (typeof taskData === 'string') {
+      message += taskData;
+    } else {
+      message += JSON.stringify(taskData, null, 2);
+    }
+
+    return message;
+  }
+
+  private async callGrokAPI(userMessage: string): Promise<GrokResponse> {
+    const isMultiAgent = this.modelId.includes('multi-agent');
+    const endpoint = isMultiAgent ? '/responses' : '/chat/completions';
+
+    const payload = isMultiAgent
+      ? {
+        model: this.modelId,
+        // Removed temperature/max_tokens per early access docs for responses API
+        input: [{ role: 'user', content: userMessage }],
+      }
+      : {
+        model: this.modelId,
+        messages: [{ role: 'user', content: userMessage }],
+        max_tokens: this.maxTokens,
+        temperature: 0.7,
+      };
+
+    const response = await fetch(`${this.apiBaseUrl}${endpoint}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${this.apiKey}`,
+      },
+      body: JSON.stringify(payload),
+    });
+
+    if (!response.ok) {
+      const errorData = (await response.json()) as Record<string, any>;
+      throw new Error(`Grok error: ${errorData?.error?.message || 'Unknown error'}`);
+    }
+
+    const data = await response.json();
+
+    // Map Responses API standard to standard Chat Completions format
+    if (isMultiAgent) {
+      return {
+        id: data.id || `g-mx-${Date.now()}`,
+        created: Date.now(),
+        model: this.modelId,
+        result: {
+          output: data.output_text || JSON.stringify(data),
+          reasoning_tokens: 0,
+          completion_tokens: data.usage?.completion_tokens || 0
+        },
+        usage: data.usage || { prompt_tokens: 0, completion_tokens: 0, reasoning_tokens: 0 }
+      } as GrokResponse;
+    }
+
+    // Standard Chat Completion Map
+    return {
+      id: data.id,
+      created: data.created,
+      model: data.model,
+      result: {
+        output: data.choices?.[0]?.message?.content || '',
+        reasoning_tokens: data.usage?.reasoning_tokens || 0,
+        completion_tokens: data.usage?.completion_tokens || 0
+      },
+      usage: data.usage || { prompt_tokens: 0, completion_tokens: 0 }
+    } as GrokResponse;
+  }
+
+  private mockExecute(handoff: HandoffContext): DispatchResult {
+    const taskType = handoff.metadata?.taskType || 'general';
+    return {
+      success: true,
+      taskId: handoff.taskId,
+      agentUsed: 'grok',
+      output: `[Grok Mock Mode - ${taskType}] Reasoning completed for: ${handoff.metadata?.description || 'unknown'}`,
+      metadata: { mode: 'mock', reasoningEnabled: this.enableReasoning },
+    };
+  }
+}
+
+export default GrokAdapter;

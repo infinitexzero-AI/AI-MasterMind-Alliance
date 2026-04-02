@@ -1,0 +1,24 @@
+{
+  "timestamp": "2026-03-03T05:36:17.048Z",
+  "passes": [
+    "System Health",
+    "Cortex Map",
+    "Intelligence Search",
+    "System Updates",
+    "Dependency Graph"
+  ],
+  "failures": [
+    {
+      "name": "Vision OCR",
+      "status": 405
+    }
+  ],
+  "latency": {
+    "System Health": "4435ms",
+    "Cortex Map": "68ms",
+    "Intelligence Search": "906ms",
+    "System Updates": "15ms",
+    "Vision OCR": "22ms",
+    "Dependency Graph": "27ms"
+  }
+}

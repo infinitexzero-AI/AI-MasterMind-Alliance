@@ -1,0 +1,163 @@
+{
+  "version": "4.0.0",
+  "last_updated": "2026-03-13T17:00:00-03:00",
+  "system_orchestrator": "valentine-core",
+  "agents": [
+    {
+      "id": "valentine-core",
+      "name": "Valentine Core",
+      "platform": "xai",
+      "role": "Orchestration & Nexus Brain",
+      "description": "Strategic orchestration, Nexus brain, and mobile bridge commander.",
+      "domains": ["Strategic", "Operational", "Mobile"],
+      "capabilities": ["Orchestration", "Nexus Sync", "Mobile Relay"],
+      "model_config": {
+        "provider": "xai",
+        "model": "grok-4.20-reasoning",
+        "fallback": "grok-2-mini"
+      }
+    },
+    {
+      "id": "grok-architect",
+      "name": "Grok (Lead Architect)",
+      "platform": "xai",
+      "role": "Strategy Synthesis & Consensus",
+      "description": "Lead strategist, Grok 4.20 failover, and multi-agent consensus gate.",
+      "domains": ["Strategy", "Architecture", "Consensus"],
+      "capabilities": ["Synthesis", "Failover Logic", "Consensus Management"],
+      "model_config": {
+        "provider": "xai",
+        "model": "grok-4.20-reasoning"
+      }
+    },
+    {
+      "id": "antigravity-execution",
+      "name": "Antigravity (Execution)",
+      "platform": "local",
+      "role": "Daemon Fleet Commander",
+      "description": "Execution commander for all daemon scripts and watchers.",
+      "domains": ["Execution", "Automation", "Scripts"],
+      "capabilities": ["Daemon Management", "Script Execution", "Automation"],
+      "model_config": {
+        "provider": "local",
+        "model": "script-based"
+      }
+    },
+    {
+      "id": "research-assistant",
+      "name": "Research Assistant (Claude)",
+      "platform": "anthropic",
+      "role": "Long-Context Synthesis",
+      "description": "Academic research, paper synthesis, and long-form archival.",
+      "domains": ["Research", "Academic", "Archival"],
+      "capabilities": ["Synthesis", "Zotero Integration", "Scholar Hub"],
+      "model_config": {
+        "provider": "anthropic",
+        "model": "claude-3-5-sonnet"
+      }
+    },
+    {
+      "id": "code-reviewer",
+      "name": "Code Reviewer (Claude)",
+      "platform": "anthropic",
+      "role": "Dashboard UI Audit",
+      "description": "UI/UX auditor for Nexus Dashboard components.",
+      "domains": ["UI/UX", "Frontend", "Typescript"],
+      "capabilities": ["Code Audit", "React Testing", "Style Polish"],
+      "model_config": {
+        "provider": "anthropic",
+        "model": "claude-3-5-sonnet"
+      }
+    },
+    {
+      "id": "analysis-agent",
+      "name": "Analysis Agent (ChatGPT)",
+      "platform": "openai",
+      "role": "Data & CSV Processing",
+      "description": "Financial burn-rate analysis and raw data processing.",
+      "domains": ["Data", "Finance", "Metrics"],
+      "capabilities": ["CSV Processing", "Burn-Rate Analysis", "Ledger Sync"],
+      "model_config": {
+        "provider": "openai",
+        "model": "gpt-4o"
+      }
+    },
+    {
+      "id": "research-scout",
+      "name": "Research Scout (Comet)",
+      "platform": "perplexity",
+      "role": "Web & Portal Scraping",
+      "description": "Institutional scraping and live web research via Comet.",
+      "domains": ["Scraping", "Web", "Institutional"],
+      "capabilities": ["Playwright", "Portal Access", "Live Search"],
+      "model_config": {
+        "provider": "perplexity",
+        "model": "llama-3-sonar-large-32k-online"
+      }
+    }
+  ],
+  "daemons": [
+    {
+      "id": "conductor",
+      "name": "The Conductor",
+      "role": "Scheduling Engine",
+      "script": "automations/integrations/the_conductor_daemon.py",
+      "description": "Constraint-based scheduling and multi-agent task orchestration.",
+      "status": "ONLINE"
+    },
+    {
+      "id": "zotero_http_client",
+      "name": "Zotero HTTP Client",
+      "role": "App Bridge",
+      "script": "automations/integrations/zotero_http_client.py",
+      "description": "Browser + app bridge on port 23119. Replaces SQLite watcher.",
+      "status": "ONLINE"
+    },
+    {
+      "id": "nslsc_scraper",
+      "name": "NSLSC Scraper",
+      "role": "Financial Tracker",
+      "script": "automations/integrations/nslsc_scraper_daemon.py",
+      "description": "Financial autonomy tracker via GCKey.",
+      "status": "ONLINE"
+    },
+    {
+      "id": "bank_csv_daemon",
+      "name": "Bank CSV Daemon",
+      "role": "Ledger Sync",
+      "script": "automations/integrations/bank_csv_daemon.py",
+      "description": "Burn-rate ledger sync from bank exports.",
+      "status": "ONLINE"
+    },
+    {
+      "id": "academic_reconciliator",
+      "name": "Academic Reconciliator",
+      "role": "Credit Mapping",
+      "script": "automations/integrations/academic_reconciliator_daemon.py",
+      "description": "Transcript reconciliation and credit/GPA gap analysis.",
+      "status": "ONLINE"
+    },
+    {
+      "id": "taguette_parser",
+      "name": "Taguette Parser",
+      "role": "Qualitative Research",
+      "script": "automations/integrations/taguette_parser.py",
+      "description": "Qualitative research data → knowledge graph.",
+      "status": "ONLINE"
+    },
+    {
+      "id": "hn_poller",
+      "name": "Hacker News Poller",
+      "role": "Intelligence Feed",
+      "script": "automations/integrations/hn_poller.py",
+      "description": "Tech intelligence and trend poller.",
+      "status": "ONLINE"
+    }
+  ],
+  "relationships": {
+    "valentine-core": ["grok-architect", "antigravity-execution"],
+    "antigravity-execution": ["conductor", "zotero_http_client", "nslsc_scraper", "bank_csv_daemon", "academic_reconciliator", "taguette_parser", "hn_poller"],
+    "research-assistant": ["zotero_http_client", "taguette_parser"],
+    "research-scout": ["nslsc_scraper", "academic_reconciliator"]
+  }
+}

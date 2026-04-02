@@ -1,0 +1,8 @@
+{
+  "id": "mem-expired-001",
+  "taskId": "task-expired",
+  "content": "This should expire",
+  "sourceAgent": "claude",
+  "timestamp": "2026-02-23T01:37:54.951Z",
+  "ttl": 3600
+}

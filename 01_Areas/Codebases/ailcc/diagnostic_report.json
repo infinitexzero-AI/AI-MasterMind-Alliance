@@ -1,0 +1,35 @@
+{
+  "timestamp": "2026-03-13T18:35:52.080687",
+  "checks": [
+    {
+      "component": "File: 01_Areas/Codebases/ailcc/dashboard/server/relay.js",
+      "status": "PASS",
+      "message": "Found"
+    },
+    {
+      "component": "File: 01_Areas/Codebases/ailcc/ailcc-launch.sh",
+      "status": "PASS",
+      "message": "Found"
+    },
+    {
+      "component": "File: 06_System/State/dashboard_state.json",
+      "status": "FAIL",
+      "message": "Missing at /Users/infinite27/AILCC_PRIME/06_System/State/dashboard_state.json"
+    },
+    {
+      "component": "File: 01_Areas/Codebases/ailcc/core/spellbook.json",
+      "status": "PASS",
+      "message": "Found"
+    },
+    {
+      "component": "Port: 3000 (Dashboard (Nexus))",
+      "status": "WARN",
+      "message": "Service Offline"
+    },
+    {
+      "component": "Port: 3001 (Relay (Neural Uplink))",
+      "status": "PASS",
+      "message": "Service Listening"
+    }
+  ]
+}

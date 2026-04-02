@@ -1,0 +1,32 @@
+{
+  "name": "SKILL_STEALTH_SCHOLAR",
+  "domain": "Academic / Execution",
+  "trigger": "EXECUTE_SCHOLAR_MODE",
+  "description": "Undetectable academic synthesis using memory retrieval, strict prompts, syntax burstiness, and physical keystroke emulation.",
+  "workflow_steps": [
+    {
+      "step_id": "memory_pull",
+      "node": "hippocampus_bridge",
+      "action": "fetch_academic_context",
+      "input_mapping": "prompt"
+    },
+    {
+      "step_id": "drafting",
+      "node": "llm_gateway",
+      "action": "claude_rtf_solve_synthesis",
+      "input_mapping": "memory_pull.output"
+    },
+    {
+      "step_id": "humanization",
+      "node": "llm_gateway",
+      "action": "grok_syntax_mutation",
+      "input_mapping": "drafting.output"
+    },
+    {
+      "step_id": "execution",
+      "node": "pyautogui_ghost_typer",
+      "action": "emit_keystrokes_to_word",
+      "input_mapping": "humanization.output"
+    }
+  ]
+}
