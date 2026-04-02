@@ -221,3 +221,6 @@ storage/
 ._.
 
 01_Areas/Codebases/ailcc/hippocampus_storage/
+
+*.tar.gz
+*.zip

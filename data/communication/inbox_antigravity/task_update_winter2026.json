@@ -1,0 +1,19 @@
+{
+  "schema_version": "1.0",
+  "handoff_id": "update_academic_semester_end_2026_HLTH1011",
+  "source_agent": "Antigravity Vanguard Node",
+  "target_agent": "Antigravity MacBook Node",
+  "priority": "HIGH",
+  "context": {
+    "project": "Academics",
+    "task_id": "END-SEMESTER-WINTER2026"
+  },
+  "payload": {
+    "instruction": "Please parse the new Winter 2026 lecture slides transciption and update the academic semester end records for Mount Allison University.",
+    "resources": [
+      "02_Resources/Academics/HLTH-1011/lecture_screenshots_winter2026.md",
+      "02_Resources/Misc_Gaming/league_of_legends_screenshot.md"
+    ]
+  },
+  "definition_of_done": "MacBook updates the Winter 2026 academic tracking based on the latest lecture materials."
+}
