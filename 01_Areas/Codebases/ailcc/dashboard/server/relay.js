@@ -110,12 +110,17 @@ redisSubscriber.on('message', (channel, message) => {
     }
 });
 
-const AILCC_ROOT = 'c:/Users/infin/AILCC_PRIME';
+const AILCC_ROOT = process.env.AILCC_ROOT || path.join(os.homedir(), 'AILCC_PRIME');
 const EVENT_BUS_LOG = path.join(AILCC_ROOT, '06_System/Logs/event_bus.jsonl');
 const REGISTRY_FILE = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/registries/agents_registry.json');
 const CONSOLIDATED_TASKS_FILE = path.join(AILCC_ROOT, 'tasks/consolidated_task_registry.json');
 const STATE_FILE = path.join(__dirname, '../../dashboard_state.json');
-const VAULT_PATH = path.join(AILCC_ROOT, 'AILCC_VAULT');
+
+// Vault Path: Dynamic alignment with ThinkPad/MacBook patterns
+const VAULT_PATH = os.platform() === 'win32' 
+    ? path.join(AILCC_ROOT, 'AILCC_VAULT')
+    : '/Users/infinite27/Library/CloudStorage/OneDrive-Personal/AILCC_VAULT';
+
 const ACADEMIC_MATRIX_FILE = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/hippocampus_storage/academic_matrix/current_semester.json');
 
 const openai = process.env.OPENAI_API_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null;

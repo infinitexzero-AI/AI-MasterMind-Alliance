@@ -10,7 +10,7 @@ export interface SwarmStep {
     id: string;
     description: string;
     targetAgent: string;
-    status: 'pending' | 'executing' | 'completed' | 'failed' | 'awaiting_approval';
+    status: 'pending' | 'executing' | 'completed' | 'failed' | 'awaiting_approval' | 'upcoming';
     requiresApproval: boolean;
     riskLevel: RiskLevel;
     metrics?: {
@@ -79,6 +79,7 @@ const statusColors: Record<SwarmStatus, string> = {
 
 const stepStatusIcons: Record<string, React.ReactNode> = {
     pending: <Clock className="w-3 h-3 text-gray-400" />,
+    upcoming: <Clock className="w-3 h-3 text-blue-400/50" />,
     executing: <motion.div animate={{ rotate: 360 }} transition={{ repeat: Infinity, duration: 1, ease: 'linear' }}><RotateCcw className="w-3 h-3 text-blue-400" /></motion.div>,
     completed: <CheckCircle2 className="w-3 h-3 text-green-400" />,
     failed: <AlertTriangle className="w-3 h-3 text-red-400" />,
