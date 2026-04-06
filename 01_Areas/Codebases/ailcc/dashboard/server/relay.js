@@ -30,7 +30,7 @@ let mcpTransport;
     // Tool: GENS-2101 Technical Synthesis
     mcpServer.tool("get_academic_context", "Retrieves high-fidelity technical data for GENS-2101 Test 3 (Forests, Water, Metabolism)", async () => {
       try {
-        const guidePath = 'c:/Users/infin/AILCC_PRIME/02_Resources/Academics/GENS-2101/GENS2101_Test3_Focused_Guide.md';
+        const guidePath = path.join('c:/Users/infin/AILCC_PRIME', '02_Resources/Academics/GENS-2101/GENS2101_Test3_Focused_Guide.md');
         const content = fs.readFileSync(guidePath, 'utf8');
         return {
           content: [{ type: "text", text: content }]
@@ -110,12 +110,13 @@ redisSubscriber.on('message', (channel, message) => {
     }
 });
 
-const EVENT_BUS_LOG = '/Users/infinite27/AILCC_PRIME/06_System/Logs/event_bus.jsonl';
-const REGISTRY_FILE = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/registries/agents_registry.json';
-const CONSOLIDATED_TASKS_FILE = '/Users/infinite27/AILCC_PRIME/tasks/consolidated_task_registry.json';
+const AILCC_ROOT = 'c:/Users/infin/AILCC_PRIME';
+const EVENT_BUS_LOG = path.join(AILCC_ROOT, '06_System/Logs/event_bus.jsonl');
+const REGISTRY_FILE = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/registries/agents_registry.json');
+const CONSOLIDATED_TASKS_FILE = path.join(AILCC_ROOT, 'tasks/consolidated_task_registry.json');
 const STATE_FILE = path.join(__dirname, '../../dashboard_state.json');
-const VAULT_PATH = '/Users/infinite27/Library/CloudStorage/OneDrive-Personal/AILCC_VAULT';
-const ACADEMIC_MATRIX_FILE = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage/academic_matrix/current_semester.json';
+const VAULT_PATH = path.join(AILCC_ROOT, 'AILCC_VAULT');
+const ACADEMIC_MATRIX_FILE = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/hippocampus_storage/academic_matrix/current_semester.json');
 
 const openai = process.env.OPENAI_API_KEY ? new OpenAI({ apiKey: process.env.OPENAI_API_KEY }) : null;
 const BROWSER_SERVER = 'http://localhost:3333';
