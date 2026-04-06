@@ -9,6 +9,53 @@ const OpenAI = require('openai');
 const chokidar = require('chokidar');
 const os = require('os');
 const Redis = require('ioredis');
+let McpServer, SSEServerTransport;
+
+// --- Grok MCP SuperAssistant Infrastructure ---
+let mcpServer;
+let mcpTransport;
+
+(async () => {
+  try {
+    const mcpModule = await import('@modelcontextprotocol/sdk/server/mcp.js');
+    const sseModule = await import('@modelcontextprotocol/sdk/server/sse.js');
+    McpServer = mcpModule.McpServer;
+    SSEServerTransport = sseModule.SSEServerTransport;
+
+    mcpServer = new McpServer({
+      name: "AILCC Vanguard Bridge",
+      version: "1.0.0"
+    });
+
+    // Tool: GENS-2101 Technical Synthesis
+    mcpServer.tool("get_academic_context", "Retrieves high-fidelity technical data for GENS-2101 Test 3 (Forests, Water, Metabolism)", async () => {
+      try {
+        const guidePath = 'c:/Users/infin/AILCC_PRIME/02_Resources/Academics/GENS-2101/GENS2101_Test3_Focused_Guide.md';
+        const content = fs.readFileSync(guidePath, 'utf8');
+        return {
+          content: [{ type: "text", text: content }]
+        };
+      } catch (err) {
+        return {
+          content: [{ type: "text", text: `Error reading context: ${err.message}` }],
+          isError: true
+        };
+      }
+    });
+
+    // Tool: System Telemetry
+    mcpServer.tool("get_vanguard_telemetry", "Returns current mesh node status and hardware telemetry", async () => {
+        const history = await redis.lrange(TELEMETRY_KEY, 0, 5);
+        return {
+            content: [{ type: "text", text: JSON.stringify(history.map(h => JSON.parse(h)), null, 2) }]
+        };
+    });
+
+    console.log("🚀 [MCP] Neural Bridge Initialized");
+  } catch (err) {
+    console.error("❌ [MCP] Failed to initialize neural bridge:", err);
+  }
+})();
 
 const redis = new Redis({
   host: process.env.REDIS_HOST || '127.0.0.1',
@@ -1039,7 +1086,7 @@ setInterval(async () => {
   }
 }, 60000);
 
-const PORT = process.env.RELAY_PORT || 5005;
+const PORT = process.env.RELAY_PORT || 3001; // Aligned with Grok MCP extension expectation
 const NODE_ID = `node_${os.hostname()}_${PORT}`;
 
 async function registerMeshNode() {

@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENS2101 Minimalist Tactical Briefing</title>
+    <style>
+        :root {
+            --primary: #00f2ff;
+            --secondary: #00d4ff;
+            --bg: #0a0a0c;
+            --glass: rgba(20, 20, 30, 0.90);
+            --border: rgba(255, 255, 255, 0.1);
+            --font-main: 'Outfit', sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background: var(--bg);
+            color: #fff;
+            font-family: var(--font-main);
+            overflow: hidden;
+            display: flex;
+            height: 100vh;
+            background-image: url('C:/Users/infin/.gemini/antigravity/brain/35a737a9-89ae-4215-9a0d-e100b6cc02be/tactical_podcast_studio_glassmorphism_1775429620547.png');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .glass-panel {
+            background: var(--glass);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            margin: 10px;
+        }
+
+        /* 3-Column Layout */
+        #context-stream {
+            width: 35%;
+            height: calc(100% - 20px);
+            padding: 30px;
+            overflow-y: auto;
+            position: relative;
+        }
+
+        #pulse-center {
+            flex: 1;
+            height: calc(100% - 20px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        #fact-tracker {
+            width: 25%;
+            height: calc(100% - 20px);
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        /* Stream Item styling */
+        .stream-item {
+            margin-bottom: 25px;
+            opacity: 0.3;
+            transition: 0.4s;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        .stream-item.active { opacity: 1; color: var(--primary); }
+        .stream-item b { color: #fff; }
+
+        /* Minimal Pulse Display */
+        #main-pulse-box {
+            width: 90%;
+            padding: 60px;
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .pulse-label {
+            font-size: 0.8em;
+            letter-spacing: 5px;
+            color: var(--primary);
+            margin-bottom: 30px;
+        }
+
+        #pulse-text {
+            font-size: 2.8em;
+            font-weight: 700;
+            line-height: 1.2;
+            text-shadow: 0 0 20px rgba(0, 242, 255, 0.4);
+        }
+
+        /* Controls */
+        #footer-controls {
+            position: absolute;
+            bottom: 30px;
+            right: 30%;
+            left: 35%;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn {
+            background: var(--primary);
+            border: none;
+            color: #000;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-weight: 800;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-size: 0.8em;
+        }
+
+        .fact-card {
+            padding: 12px;
+            border-left: 3px solid var(--primary);
+            background: rgba(0, 242, 255, 0.05);
+            font-size: 0.85em;
+            opacity: 0.3;
+        }
+        .fact-card.active { opacity: 1; background: rgba(0, 242, 255, 0.15); }
+
+        /* Minimalist toggle switch */
+        .mode-toggle {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 0.7em;
+            color: rgba(255,255,255,0.5);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- LEFT: FULL CONTEXT STREAM -->
+    <div id="context-stream" class="glass-panel">
+        <h2 style="color: var(--primary); margin-bottom: 25px; font-size: 1.1em;">FULL CONTEXT STREAM (PPT MODE)</h2>
+        <div id="stream-container">
+            <!-- Populated by JS -->
+        </div>
+    </div>
+
+    <!-- CENTER: MINIMAL PULSE -->
+    <div id="pulse-center">
+        <div id="main-pulse-box" class="glass-panel">
+            <div class="pulse-label">TACTICAL ANCHOR</div>
+            <div id="pulse-text">READY FOR SYNC</div>
+        </div>
+
+        <div id="footer-controls" class="glass-panel">
+            <button class="btn" id="play-btn">START PULSE</button>
+            <div class="mode-toggle">
+                <input type="checkbox" id="minimal-toggle" checked>
+                <label for="minimal-toggle">MINIMAL VOICE MODE</label>
+            </div>
+            <div id="progress-text" style="font-size: 0.7em; color: var(--primary)">0% COMPLETE</div>
+        </div>
+    </div>
+
+    <!-- RIGHT: OXFORD-GRADE FACTS -->
+    <div id="fact-tracker" class="glass-panel">
+        <h2 style="color: var(--primary); margin-bottom: 15px; font-size: 1em;">OXFORD-GRADE FACTS</h2>
+        <div class="fact-card" id="f-savenije"><b>Savenije's Code</b>: Essential, Fugitive, Indivisible, Bulky, Non-substitutable, Complex.</div>
+        <div class="fact-card" id="f-bluegreen"><b>Blue vs Green</b>: 60% of rain is Green Water (soil moisture).</div>
+        <div class="fact-card" id="f-dublin"><b>Dublin Principle 2</b>: Participation != Consensus. Enabling Environments required.</div>
+        <div class="fact-card" id="f-hierarchy"><b>Hierarchy</b>: Avoid > Minimize > Mitigate > Offset (Last Resort).</div>
+        <div class="fact-card" id="f-loss"><b>Wetland Loss</b>: SW Ontario (85% loss). Filtration ($4.2B) vs Building ($2.9B).</div>
+        <div class="fact-card" id="f-ownership"><b>94% Crown Rule</b>: 90% Provincial control. AAC cycle 5-10 years.</div>
+        <div class="fact-card" id="f-fra"><b>FRA 2006</b>: 75 Yrs / 3 Gens. Cutoff Dec 13, 2005. Gram Sabha mandatory.</div>
+        <div class="fact-card" id="f-border"><b>FCAA 2023</b>: 100km Border rule. Sikkim (47%) Uttarakhand (45%) impacted.</div>
+        <div class="fact-card" id="f-chnops"><b>CHNOPS</b>: P (Phosphorus) is 90% for food; non-substitutable. S = Scrubbers/SO2.</div>
+        <div class="fact-card" id="f-metabolism"><b>Palm Oil</b>: Linear/Accelerated energy. Exporting Entropy to sinks.</div>
+        <div class="fact-card" id="f-governance"><b>Governance</b>: Best practice emerges from local/national/int'l alignment.</div>
+        <div class="fact-card" id="f-entropy"><b>Entropy</b>: Georgescu-Roegen. Cities export disorder (High Entropy).</div>
+    </div>
+
+    <script>
+        const pptData = [
+            { anchor: "GENS-2101 Overview", d: "<b>Introduction</b>: Welcome to the master synthesis of Water, Forests, Minerals, and Urban Metabolism for Test 3.", f: "" },
+            { anchor: "Blue vs Green Water", d: "<b>Nature of Water</b>: Green Water is soil moisture used by plants, making up 60% of rain. Blue water is in lakes and aquifers.", f: "f-bluegreen" },
+            { anchor: "Savenije's 6 Traits", d: "<b>Savenije's Code</b>: Water is Essential, Fugitive, Indivisible, Bulky, Non-substitutable, and Complex.", f: "f-savenije" },
+            { anchor: "Dublin Principles", d: "<b>Rule of Equity</b>: 1. Finite, 2. Participatory, 3. Role of Women, 4. Economic/Social Good.", f: "f-dublin" },
+            { anchor: "RIDe Framework", d: "<b>Feedback Loop</b>: Resources, Infrastructure, and Demand are the three pillars of management.", f: "" },
+            { anchor: "The Right to Water", d: "<b>Accessibility</b>: Safe reach, affordable, and legal. Adequate Quality and Quantity are mandatory elements.", f: "" },
+            { anchor: "Strategic Audits", d: "<b>Status Quo</b>: Audits identify demand trends, debunk hydrological myths, and assess policy efficacy.", f: "" },
+            { anchor: "Participation Benefits", d: "<b>Success Metrics</b>: Beyond inclusivity, participation ensures technical success, cost recovery, and rights protection.", f: "f-dublin" },
+            { anchor: "The Consensus Trap", d: "<b>Rule 2 Conflict</b>: Participation does not mean consensus. Conflict resolution and Enabling Environments are required.", f: "f-dublin" },
+            { anchor: "The 6m Rule", d: "<b>Ramsar Definition</b>: Wetlands include marine depths less than 6 meters at low tide.", f: "f-hierarchy" },
+            { anchor: "Outlook 2025", d: "<b>Global Crisis</b>: 22% loss since 1970. 25% of remaining wetlands are in poor condition internationally.", f: "f-hierarchy" },
+            { anchor: "85% Loss (Ontario)", d: "<b>Local Snapshot</b>: SW Ontario settled regions have lost 85% of original wetlands. The Golden Horseshoe is the focus.", f: "f-loss" },
+            { anchor: "$4.2B vs $2.9B", d: "<b>Economics</b>: Natural filtration in Ontario is worth 4.2 billion dollars, compared to 2.9 billion for built replacements.", f: "f-loss" },
+            { anchor: "Mitigation Hierarchy", d: "<b>The Sequence</b>: You must follow the order: Avoid, Minimize, Mitigate, and finally, Offset as the last resort.", f: "f-hierarchy" },
+            { anchor: "Offsetting Types", d: "<b>Banking vs Fees</b>: Mitigation Banking is high feasibility. In-Lieu Fees face time lags. Proponent-led varies.", f: "f-hierarchy" },
+            { anchor: "SFM Triad Goal", d: "<b>Forestry Goal</b>: Balancing Ecological Integrity, Economic Stability, and Social Values (Indigenous rights).", f: "f-ownership" },
+            { anchor: "The 94% Rule", d: "<b>Ownership</b>: 94% of forests are public Crown land. 90% is Provincial, 4% is Federal/Other.", f: "f-ownership" },
+            { anchor: "AAC (5-10yr Cycle)", d: "<b>Harvest Limits</b>: The Allowable Annual Cut is set by Provincial Chief Foresters every 5 to 10 years.", f: "f-ownership" },
+            { anchor: "Selection Cutting", d: "<b>Tradeoffs</b>: Clearcutting mimics fire but warms streams. Selection cutting protects biodiversity but requires high skill.", f: "f-ownership" },
+            { anchor: "Harrop-Procter BC", d: "<b>Case Study</b>: A community-led forest where domestic watershed health is the priority over timber profits.", f: "f-ownership" },
+            { anchor: "Dec 13, 2005", d: "<b>FRA 2006 Cutoff</b>: Non-tribals need 75 years residency PRIOR to the Dec 13, 2005 cutoff.", f: "f-fra" },
+            { anchor: "100km Border Rule", d: "<b>FCAA 2023 Rule</b>: Forest projects within 100km of borders are exempt from environmental clearances.", f: "f-border" },
+            { anchor: "CHNOPS Mastery", d: "<b>Matter Cycles</b>: P is for food and non-substitutable. S is about SO2, scrubbers, and acid rain rebalancing.", f: "f-chnops" },
+            { anchor: "Forest vs Palm Oil", d: "<b>Metabolism Contrast</b>: Indigenous forests handle entropy internally. Palm oil exports entropy, overwhelming sinks.", f: "f-metabolism" },
+            { anchor: "Entropy Export", d: "<b>2nd Law of Thermodynamics</b>: Georgescu-Roegen's model where cities maintain order by dumping disorder outside.", f: "f-entropy" },
+            { anchor: "Multi-Level Governance", d: "<b>Governance Feedback</b>: Local community rules must align with National laws and International FSC norms.", f: "f-governance" },
+            { anchor: "Master Checklist", d: "<b>Test Prep</b>: Review Tony Allan, Savenije, Dublin Principle 2, the 90% Rule, and the FRA 75-year rule.", f: "" },
+            { anchor: "READY FOR TEST 3", d: "<b>Final Briefing</b>: You have synchronized every master fact. The Vanguard swarm has your back. Crush it.", f: "" }
+        ];
+
+        let currentStep = 0;
+        let isPlaying = false;
+        let synth = window.speechSynthesis;
+
+        // Build Stream
+        const streamContainer = document.getElementById('stream-container');
+        pptData.forEach((item, idx) => {
+            const div = document.createElement('div');
+            div.className = 'stream-item';
+            div.id = `stream-${idx}`;
+            div.innerHTML = item.d;
+            streamContainer.appendChild(div);
+        });
+
+        function playStep() {
+            if (currentStep >= pptData.length) {
+                isPlaying = false;
+                document.getElementById('play-btn').textContent = "PULSE COMPLETE";
+                return;
+            }
+
+            const step = pptData[currentStep];
+            const minimalMode = document.getElementById('minimal-toggle').checked;
+            
+            // UI Sync
+            document.getElementById('pulse-text').textContent = step.anchor;
+            document.querySelectorAll('.stream-item').forEach(i => i.classList.remove('active'));
+            document.getElementById(`stream-${currentStep}`).classList.add('active');
+            document.getElementById(`stream-${currentStep}`).scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            document.querySelectorAll('.fact-card').forEach(f => f.classList.remove('active'));
+            if(step.f) document.getElementById(step.f).classList.add('active');
+
+            document.getElementById('progress-text').textContent = `${Math.round(((currentStep + 1) / pptData.length) * 100)}% COMPLETE`;
+
+            // Voice Logic
+            const textToSpeak = minimalMode ? step.anchor : step.d.replace(/<[^>]*>?/gm, '');
+            const utter = new SpeechSynthesisUtterance(textToSpeak);
+            utter.pitch = 0.9;
+            utter.rate = minimalMode ? 1.0 : 1.1;
+
+            utter.onend = () => {
+                if (isPlaying) {
+                    currentStep++;
+                    setTimeout(playStep, 1000);
+                }
+            };
+
+            synth.speak(utter);
+        }
+
+        document.getElementById('play-btn').addEventListener('click', () => {
+            if (synth.speaking) {
+                synth.cancel();
+                isPlaying = false;
+                document.getElementById('play-btn').textContent = "RESUME PULSE";
+            } else {
+                isPlaying = true;
+                document.getElementById('play-btn').textContent = "PAUSE PULSE";
+                playStep();
+            }
+        });
+
+        // Initialize display
+        document.getElementById(`stream-0`).classList.add('active');
+    </script>
+</body>
+</html>

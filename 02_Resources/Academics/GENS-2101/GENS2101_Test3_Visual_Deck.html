@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GENS2101 Test 3 - Visual Study Deck</title>
+    <style>
+        :root {
+            --bg: #0D1B2A;
+            --surface: rgba(27, 38, 59, 0.85);
+            --accent: #2B9348;
+            --text: #F0F0F0;
+            --gold: #FFD700;
+            --transition: cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Slide Container */
+        .slide-container {
+            flex: 1;
+            position: relative;
+            perspective: 2000px;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            padding: 4rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: all 0.6s var(--transition);
+            pointer-events: none;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: var(--surface);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 900px;
+            width: 100%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            animation: slideIn 0.8s var(--transition) forwards;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 2rem;
+            color: var(--gold);
+            text-shadow: 0 2px 10px rgba(255, 215, 0, 0.3);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+        }
+
+        p, li {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li::before {
+            content: '▫';
+            color: var(--accent);
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        /* Visual Overlays */
+        .visual-overlay {
+            width: 100%;
+            height: 400px;
+            border-radius: 16px;
+            margin-top: 2rem;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Controls */
+        .controls {
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.2);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .btn {
+            background: var(--surface);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            padding: 0.8rem 1.5rem;
+            border-radius: 12px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: rgba(255, 255, 255, 0.1);
+            width: 300px;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--accent);
+            width: 0%;
+            transition: width 0.4s var(--transition);
+        }
+
+        /* Flashcard Feature */
+        .flashcard-btn {
+            margin-top: 2rem;
+            color: var(--gold);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background: var(--surface);
+            padding: 4rem;
+            border-radius: 32px;
+            max-width: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slide-container" id="slideContainer">
+        <!-- Slide 1: Welcome -->
+        <div class="slide active">
+            <div class="glass-card">
+                <h1>GENS-2101 Test 3</h1>
+                <h2>Natural Resources Management</h2>
+                <p>Classes 16–30: Water, Forests, Minerals, and Urban Metabolism.</p>
+                <p><i>Use Arrow Keys to navigate or the buttons below.</i></p>
+                <div class="visual-overlay" style="background-image: url('Test3_Materials/blue_vs_green_water_diagram_1775360452656.png');"></div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Water Scarcity -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>💧 Module 1: Blue vs. Green Water</h2>
+                <ul>
+                    <li><strong>Blue Water</strong>: Surface and groundwater (rivers, aquifers).</li>
+                    <li><strong>Green Water</strong>: Soil moisture captured by plants (60% of global rainfall).</li>
+                    <li>The foundation of global food security is <strong>Green Water</strong>.</li>
+                </ul>
+                <div class="visual-overlay" style="background-image: url('Test3_Materials/blue_vs_green_water_diagram_1775360452656.png'); overflow: hidden;"></div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Savenije's Characteristics -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>💧 Water's 6 Fundamental Characteristics</h2>
+                <p>According to Savenije, water is:</p>
+                <ul>
+                    <li>Essential (No substitutes)</li>
+                    <li>Fugitive (Always moving/evaporating)</li>
+                    <li>Indivisible (Holistic system)</li>
+                    <li>Bulky (High transport cost)</li>
+                    <li>Non-substitutable</li>
+                    <li>Complex (Legal & social layers)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 4: The Dublin Principles (1992) -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>⚖️ The Dublin Principles</h2>
+                <ul>
+                    <li><strong>1. Finite & Vulnerable</strong>: Essential to life and development.</li>
+                    <li><strong>2. Participatory</strong>: Involving users, planners, and policy-makers.</li>
+                    <li><strong>3. Role of Women</strong>: Central to provision, management, and safeguarding.</li>
+                    <li><strong>4. Economic & Social Good</strong>: Value in use, but also a social right.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 5: The RIDe Framework -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>⚖️ The RIDe Framework</h2>
+                <p>The feedback loop of water management:</p>
+                <ul>
+                    <li><strong>Resources</strong>: The quantity and quality of the water base.</li>
+                    <li><strong>Infrastructure</strong>: Hardware/software to treat and convey water.</li>
+                    <li><strong>Demand</strong>: Requirements of users and their institutions.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 6: The Right to Water (Box 16) -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>⚖️ The Right to Water</h2>
+                <p>Elements of a proposed right (Scanlon et al. 2003):</p>
+                <ul>
+                    <li><strong>Accessibility</strong>: Safe reach, affordable, and legal.</li>
+                    <li><strong>Adequate Quality</strong>: Safe for personal/domestic use.</li>
+                    <li><strong>Adequate Quantity</strong>: Sufficient and continuous supply.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 7: Why Carry Out a Water Audit? -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>📊 Strategic Water Audits</h2>
+                <ul>
+                    <li>Identify current status and trends in demand/use.</li>
+                    <li>Identify <strong>Externalities</strong> (macro temporal/spatial).</li>
+                    <li>Debunk <strong>Hydrological Myths</strong> or misconceptions.</li>
+                    <li>Assess efficacy of policies and drought strategies.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 8: Benefits of Participation -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>⚖️ Benefits of Participation</h2>
+                <p>Beyond the "feel-good" factor (Principle 2):</p>
+                <ul>
+                    <li>Technical success (scale, design, maintenance).</li>
+                    <li><strong>Cost Recovery</strong>: Essential for revenue and financing.</li>
+                    <li>Rights protection (Human, Environmental, Cultural).</li>
+                    <li>Transparency and Accountability in decision-making.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 9: Challenges to Participation -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>⚖️ The "Consensus Trap"</h2>
+                <ul>
+                    <li><strong>Participation != Consensus</strong>: Conflict resolution is still required.</li>
+                    <li><strong>The Capacity Gap</strong>: marginalized groups need an "Enabling Environment."</li>
+                    <li>Marginalized groups: Poor, Indigenous, Women, Elderly.</li>
+                    <li>Critical factors: <i>Time, Place, and Pace</i> of change.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 10: What is a Wetland? (Ramsar) -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🌊 Module 1.6: Wetlands</h2>
+                <p>Areas of marsh, fen, peatland, or water:</p>
+                <ul>
+                    <li><strong>The 6m Rule</strong>: Marine depth < 6m at low tide.</li>
+                    <li><strong>Ramsar Convention</strong>: The intergovernmental treaty for protection.</li>
+                    <li>Includes: Coral Reefs, Seagrass, Kelp Forests, Rivers, and Mires.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 11: Global Wetland Outlook 2025 -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🌊 Global State of Wetlands</h2>
+                <ul>
+                    <li><strong>22% Loss</strong> (411 million ha) since 1970.</li>
+                    <li><strong>0.52% Annual Decline</strong>.</li>
+                    <li>25% of remaining wetlands are in "Poor condition" internationally.</li>
+                    <li>Restoration is complex due to hydrological disruption.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 12: The Ontario Crisis -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🇨🇦 Ontario Snapshot: Golden Horseshoe</h2>
+                <ul>
+                    <li><strong>85% Loss</strong> in SW Ontario settled regions.</li>
+                    <li><strong>Golden Horseshoe</strong>: Homes 54% of Ontario's population.</li>
+                    <li>Acceleration: 7,300+ ha lost between 2011 and 2015.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 13: Ecosystem Services Valuation -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>💰 Module 1.7: Wetland Economics</h2>
+                <p>Valuation of natural services (OMNRF, 2017):</p>
+                <ul>
+                    <li>Wetlands: <strong>40.6%</strong> of total global ecosystem value.</li>
+                    <li><strong>The Efficiency Gap</strong>: Ontario filtration ($4.2B) vs Building Replacements ($2.9B).</li>
+                    <li>Services: Flood mitigation, carbon sinks, fisheries.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 14: The Mitigation Hierarchy -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🐸 The Hierarchy (Sequence)</h2>
+                <p>Must be applied in this strict order:</p>
+                <ul>
+                    <li><strong>1. AVOID</strong>: No impact to existing wetlands.</li>
+                    <li><strong>2. Minimize</strong>: Reduce unavoidable scale of impact.</li>
+                    <li><strong>3. Mitigate</strong>: Repair/remedy damage.</li>
+                    <li><strong>4. OFFSET</strong>: The residual **last resort**.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 15: Offsetting Approaches -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🏦 Offsetting Comparison</h2>
+                <ul>
+                    <li><strong>Proponent-Led</strong>: Developer is responsible; varying success.</li>
+                    <li><strong>In-Lieu Fee</strong>: Pay an NGO/Gov; concern with **Time Lag**.</li>
+                    <li><strong>Mitigation Banking</strong>: Buy credits; highest feasibility (pre-existing).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 16: Sustainable Forest Management -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🌲 Module 2: Sustainable Forestry</h2>
+                <p>Management balancing the <strong>Triad Goal</strong>:</p>
+                <ul>
+                    <li><strong>Ecological Integrity</strong>: Biodiversity & ecosystems.</li>
+                    <li><strong>Economic Stability</strong>: Timber supply & jobs.</li>
+                    <li><strong>Social Values</strong>: Indigenous rights & recreation.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 17: Canadian Forest Ownership -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🌲 The 94% Ownership Rule</h2>
+                <ul>
+                    <li><strong>90% Provincial Control</strong>: The primary management authority.</li>
+                    <li>2% Federal (Parks/Military).</li>
+                    <li>2% Territorial.</li>
+                    <li>Only 6% is private property.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 18: Allowable Annual Cut (AAC) -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🪓 The Allowable Annual Cut</h2>
+                <p>The regulatory harvest limit set every 5-10 years:</p>
+                <ul>
+                    <li>Based on <strong>Timber Supply Analysis</strong>.</li>
+                    <li>Set by Chief Foresters of the Provinces.</li>
+                    <li>Must subtract land for "non-timber" values (habitats).</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 19: Harvesting Tradeoffs -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>✂️ Clearcutting vs. Selection</h2>
+                <ul>
+                    <li><strong>Clearcutting</strong>: Efficient; mimics natural fire; visual impact; stream warming.</li>
+                    <li><strong>Selection Cutting</strong>: Continuous canopy; protects biodiversity; high cost; high skill required.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 20: Case Study - Harrop-Procter (BC) -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🏔️ Harrop-Procter Community Forest</h2>
+                <ul>
+                    <li><strong>Priority</strong>: Domestic Watershed Health.</li>
+                    <li><strong>Mechanism</strong>: Shifted power to the community.</li>
+                    <li><strong>Technique</strong>: Selective logging & Ecosystem-Based Management.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 21: The FRA 75-Year Rule -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🇮🇳 The FRA 75-Year Rule</h2>
+                <p>Crucial for "Non-Tribal" claimants:</p>
+                <ul>
+                    <li>Must prove residence/dependence for **75 years** (3 generations).</li>
+                    <li>Cutoff Date: **December 13, 2005**.</li>
+                    <li>Requires mandatory consent from the **Gram Sabha** for any land diversion.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 22: FCAA 2023 Border Rule -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🛰️ Border Exemptions (FCAA 2023)</h2>
+                <ul>
+                    <li>Exempts forest land within **100km** of international borders.</li>
+                    <li>Specifically impacts **Sikkim (47%)** and **Uttarakhand (45%)** forest cover.</li>
+                    <li>Allows infrastructure development without standard environmental clearances.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 23: Urban Metabolism (Thermodynamics) -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🏗️ Urban Metabolism & Entropy</h2>
+                <p>The Wolman/Georgescu-Roegen Synthesis:</p>
+                <ul>
+                    <li><strong>Crystalline Inflows</strong>: High-quality, low-entropy Water & Energy.</li>
+                    <li><strong>Chaotic Outflows</strong>: High-entropy Waste, Heat, Sewage.</li>
+                    <li>Cities maintain <i>internal order</i> by dumping disorder into the surrounding environment.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 24: The Mineral Paradox -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>⛏️ The Mineral Paradox</h2>
+                <ul>
+                    <li><strong>Paradox</strong>: Green energy transition requires a massive increase in mineral mining.</li>
+                    <li><strong>Resource Curse</strong>: Countries with high mineral wealth often face poor institutions and slower growth.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 25: Test 3 Checklist -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>📋 Test 3 Master Checklist</h2>
+                <ul>
+                    <li>Tony Allan (Virtual Water) & Savenije (6 Nature traits).</li>
+                    <li>Dublin Principle 2 (Participation != Consensus).</li>
+                    <li>Ramsar 6m Rule & Mitigation Hierarchy (Avoid first!).</li>
+                    <li>90% Provincial Forest Rule & 75-year FRA Rule.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 26: Global Biogeochemical Mastery (CHNOP-S) -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🌍 Biogeochemical Mastery (CHNOP-S)</h2>
+                <table style="width:100%; border-collapse: collapse; margin-top: 10px; font-size: 0.85em;">
+                    <tr style="background: rgba(255,255,255,0.1);">
+                        <th style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">Element</th>
+                        <th style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">Human Impact</th>
+                        <th style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">Rebalance</th>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);"><b>C/N/O</b></td>
+                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">Eutrophication, Hypoxia.</td>
+                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">Nutrient reduction.</td>
+                    </tr>
+                    <tr style="background: rgba(255,255,255,0.05);">
+                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);"><b>P (Phosphorus)</b></td>
+                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">Mining, soil runoff.</td>
+                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">Wastewater recovery.</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);"><b>S (Sulfur)</b></td>
+                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">Coal/Oil (SO2, Acid Rain).</td>
+                        <td style="padding: 8px; border: 1px solid rgba(255,255,255,0.2);">Scrubbers, low-S fuels.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Slide 27: Indigenous Forest vs. Oil Palm Metabolism -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🌴 Forest vs. Oil Palm Metabolism</h2>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 10px; font-size: 0.85em;">
+                    <div style="padding: 10px; border-left: 3px solid var(--accent); background: rgba(255,255,255,0.05);">
+                        <b style="color: var(--accent);">Indigenous Forest</b>
+                        <ul style="margin: 5px 0; padding-left: 15px;">
+                            <li>Diffuse, multi-directional energy.</li>
+                            <li>Entropy handled internally.</li>
+                            <li>High complexity and resilience.</li>
+                        </ul>
+                    </div>
+                    <div style="padding: 10px; border-left: 3px solid #ff4444; background: rgba(255,255,255,0.05);">
+                        <b style="color: #ff4444;">Oil Palm Plantation</b>
+                        <ul style="margin: 5px 0; padding-left: 15px;">
+                            <li>Linear, accelerated energy flows.</li>
+                            <li>Entropy exported (disorderly).</li>
+                            <li>Low resilience; sinks overwhelmed.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 28: Entropy Export (Georgescu-Roegen) -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>⚖️ Entropy Export (Georgescu-Roegen)</h2>
+                <div style="text-align: center; margin-top: 10px;">
+                    <p style="font-size: 0.9em; line-height: 1.5;">
+                        Based on the <b>2nd Law of Thermodynamics</b>: Cities maintain <b>Order (Low Entropy)</b> 
+                        only by <i>exporting</i> <b>Disorder (High Entropy)</b> like Waste, Heat, and Pollution 
+                        to the surrounding environment.
+                    </p>
+                    <div style="margin-top: 10px; font-style: italic; color: var(--accent); font-size: 0.85em;">
+                        "The struggle for life is a struggle for low entropy."
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 29: Multi-Level Governance Feedback -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🔄 Multi-Level Governance Feedback</h2>
+                <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px; font-size: 0.85em;">
+                    <div style="padding: 8px; background: rgba(0,255,255,0.05); border: 1px solid var(--accent); text-align: center;">
+                        🌏 <b>International:</b> FSC Norms & Certification
+                    </div>
+                    <div style="padding: 8px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.3); text-align: center;">
+                        🇨🇦 <b>National:</b> Fisheries Act & Forestry Laws
+                    </div>
+                    <div style="padding: 8px; background: rgba(0,255,255,0.05); border: 1px solid var(--accent); text-align: center;">
+                        🛖 <b>Local:</b> Community Knowledge & Buffer Rules
+                    </div>
+                    <div style="margin-top: 5px; color: var(--accent); font-weight: bold; text-align: center;">
+                        💡 ALIGNMENT = SYSTEM STABILITY
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 30: Summary -->
+        <div class="slide">
+            <div class="glass-card">
+                <h2>🎓 Ready for Test 3</h2>
+                <p><i>The swarm is with you, Vanguard. Good luck on April 6th.</i></p>
+                <p>Move, participate, and export your entropy to the test sheet!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn" id="prevBtn">Previous</button>
+        <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <button class="btn" id="nextBtn">Next</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const progressFill = document.getElementById('progressFill');
+        let currentSlide = 0;
+
+        function updateSlides() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+            progressFill.style.width = `${((currentSlide + 1) / slides.length) * 100}%`;
+        }
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                updateSlides();
+            }
+        });
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                updateSlides();
+            }
+        });
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') nextBtn.click();
+            if (e.key === 'ArrowLeft') prevBtn.click();
+        });
+
+        updateSlides();
+    </script>
+</body>
+</html>
