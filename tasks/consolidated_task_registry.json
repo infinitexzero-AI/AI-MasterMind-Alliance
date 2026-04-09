@@ -1,0 +1,75 @@
+{
+  "last_sync": "2026-04-08T15:00:00Z",
+  "registry": [
+    {
+      "id": "task_0",
+      "title": "FastAPI Backend Scaffold",
+      "status": "completed",
+      "priority": "high",
+      "narrative": "Synced from local task.md"
+    },
+    {
+      "id": "task_1",
+      "title": "Frontend Integration",
+      "status": "pending",
+      "priority": "high",
+      "narrative": "Synced from local task.md"
+    },
+    {
+      "id": "task_2",
+      "title": "GENS-2101 Scouting",
+      "status": "completed",
+      "priority": "high",
+      "narrative": "Synced from local task.md"
+    },
+    {
+      "id": "task_3",
+      "title": "HLTH-1011 Ingestion",
+      "status": "pending",
+      "priority": "high",
+      "narrative": "Synced from local task.md"
+    },
+    {
+      "id": "task_4",
+      "title": "Vision Stream (screenshot-daemon)",
+      "status": "pending",
+      "priority": "high",
+      "narrative": "Synced from local task.md"
+    },
+    {
+      "id": "task_5",
+      "title": "Daily Sync habit",
+      "status": "pending",
+      "priority": "high",
+      "narrative": "Synced from local task.md"
+    },
+    {
+      "id": "task_6",
+      "title": "Infrastructure Globalization",
+      "status": "pending",
+      "priority": "high",
+      "narrative": "Synced from local task.md"
+    },
+    {
+      "id": "task_7",
+      "title": "Vision Intelligence Optimization",
+      "status": "completed",
+      "priority": "high",
+      "narrative": "Synced from local task.md"
+    },
+    {
+      "id": "task_8",
+      "title": "Unified Task Bridge",
+      "status": "pending",
+      "priority": "high",
+      "narrative": "Synced from local task.md"
+    },
+    {
+      "id": "task_9",
+      "title": "Scholar Sight-Ingestion",
+      "status": "pending",
+      "priority": "high",
+      "narrative": "Synced from local task.md"
+    }
+  ]
+}

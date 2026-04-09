@@ -119,7 +119,8 @@ const STATE_FILE = path.join(__dirname, '../../dashboard_state.json');
 // Vault Path: Dynamic alignment with ThinkPad/MacBook patterns
 const VAULT_PATH = os.platform() === 'win32' 
     ? path.join(AILCC_ROOT, 'AILCC_VAULT')
-    : '/Users/infinite27/Library/CloudStorage/OneDrive-Personal/AILCC_VAULT';
+    : path.join(os.homedir(), 'Library/CloudStorage/OneDrive-Personal/AILCC_VAULT');
+
 
 const ACADEMIC_MATRIX_FILE = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/hippocampus_storage/academic_matrix/current_semester.json');
 
@@ -394,9 +395,10 @@ app.post('/api/scholar/log-drill', (req, res) => {
 // API: Trigger Audit
 app.post('/api/scholar/audit', (req, res) => {
   const { exec } = require('child_process');
-  const scriptPath = '/Users/infinite27/AILCC_PRIME/06_System/Execution/scholar_intel_sync.py';
+  const scriptPath = path.join(AILCC_ROOT, '06_System/Execution/scholar_intel_sync.py');
+  const pythonCmd = os.platform() === 'win32' ? 'python' : 'python3';
 
-  exec(`python3 ${scriptPath}`, (error, stdout, _stderr) => {
+  exec(`${pythonCmd} "${scriptPath}"`, (error, stdout, _stderr) => {
     if (error) {
       console.error(`Audit error: ${error}`);
       return res.status(500).json({ status: 'error', message: error.message });
@@ -404,6 +406,7 @@ app.post('/api/scholar/audit', (req, res) => {
     res.json({ status: 'success', output: stdout });
   });
 });
+
 
 // API: System Health Check (for OpenClaw)
 app.get('/api/system/health', (req, res) => {
@@ -470,15 +473,17 @@ app.post('/api/mobile/telemetry', async (req, res) => {
     if (type === 'voice_note' || (data && data.is_voice)) {
       const { exec } = require('child_process');
       const text = data.text || data;
-      const scriptPath = '/Users/infinite27/AILCC_PRIME/scripts/mobile_voice_drop.py';
+      const scriptPath = path.join(AILCC_ROOT, 'scripts/mobile_voice_drop.py');
+      const pythonCmd = os.platform() === 'win32' ? 'python' : 'python3';
       const safeText = text.replace(/"/g, '\\"');
-      exec(`python3 ${scriptPath} "${safeText}" '${JSON.stringify(context || {})}'`, (err) => {
+      exec(`${pythonCmd} "${scriptPath}" "${safeText}" '${JSON.stringify(context || {})}'`, (err) => {
         if (err) console.error('❌ Voice search failed:', err);
       });
     }
 
     res.json({ status: 'success', message: 'Telemetry ingested' });
   } catch (err) {
+
     console.error('❌ Failed to ingest mobile telemetry:', err);
     res.status(500).json({ status: 'error', message: 'Ingestion failure' });
   }
@@ -494,10 +499,13 @@ app.get('/api/mobile/briefing', async (req, res) => {
     const { execSync } = require('child_process');
     let strategicInsight = "Synthesis pending...";
     try {
-      strategicInsight = execSync('python3 /Users/infinite27/AILCC_PRIME/06_System/Execution/strategic_briefing_gen.py', { encoding: 'utf8' }).trim();
+      const scriptPath = path.join(AILCC_ROOT, '06_System/Execution/strategic_briefing_gen.py');
+      const pythonCmd = os.platform() === 'win32' ? 'python' : 'python3';
+      strategicInsight = execSync(`${pythonCmd} "${scriptPath}"`, { encoding: 'utf8' }).trim();
     } catch (e) {
       console.error('❌ Strategic Synthesis Failed:', e);
     }
+
 
     const briefing = {
       timestamp: new Date().toISOString(),
