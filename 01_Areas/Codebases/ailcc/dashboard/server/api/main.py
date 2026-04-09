@@ -17,7 +17,7 @@ r = redis.Redis(host='localhost', port=6379, db=0, decode_responses=True, socket
 vision_config = {
     "diff_threshold": 5.0,
     "quota_cooldown": 60,
-    "active_courses": ["GENS-2101", "HLTH-1011"]
+    "active_courses": ["GENS-2101", "HLTH-1011", "CLAS-2501", "MATH-1151"]
 }
 
 

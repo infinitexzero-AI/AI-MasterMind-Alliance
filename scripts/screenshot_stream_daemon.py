@@ -40,7 +40,7 @@ model = genai.GenerativeModel('gemini-2.5-flash')
 
 LAST_IMAGE = None
 DIFF_THRESHOLD = 5.0 # Initial fallback value
-ACTIVE_COURSES = ["GENS-2101", "HLTH-1011"]
+ACTIVE_COURSES = ["GENS-2101", "HLTH-1011", "CLAS-2501", "MATH-1151"]
 
 def sync_config():
     global DIFF_THRESHOLD, ACTIVE_COURSES, last_sync_time
