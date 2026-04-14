@@ -70,6 +70,22 @@
       "status": "pending",
       "priority": "high",
       "narrative": "Synced from local task.md"
+    },
+    {
+      "id": "task_acad_10",
+      "title": "CLAS-2501 Archaeological Context Mapping",
+      "status": "pending",
+      "priority": "high",
+      "narrative": "Autonomous scouting for introductory archaeology resources. High priority due to previous attempt status.",
+      "assigned_to": "Comet"
+    },
+    {
+      "id": "task_acad_11",
+      "title": "MATH-1151 Calculus Application Aggregate",
+      "status": "pending",
+      "priority": "medium",
+      "narrative": "Aggregate biological applications of calculus (Wolfram integration).",
+      "assigned_to": "Research Assistant"
     }
   ]
 }

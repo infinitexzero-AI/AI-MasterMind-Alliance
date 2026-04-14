@@ -46,7 +46,7 @@ function SystemStatusWidget() {
    const [relayStatus, setRelayStatus] = React.useState<'healthy' | 'degraded' | 'offline'>('offline');
    const [playwrightStatus, setPlaywrightStatus] = React.useState<'healthy' | 'degraded' | 'offline'>('offline');
    const [openClawStatus, setOpenClawStatus] = React.useState<'healthy' | 'degraded' | 'offline'>('offline');
-   const [ollamaStatus, setOllamaStatus] = React.useState<'healthy' | 'degraded' | 'offline'>('offline');
+   const [opikStatus, setOpikStatus] = React.useState<'healthy' | 'degraded' | 'offline'>('offline');
    const agentHeartbeats = useAgentHeartbeat();
 
 
@@ -73,11 +73,11 @@ function SystemStatusWidget() {
             const r = await fetch(`http://${host}:3333/health`, { signal: AbortSignal.timeout(2000) });
             setPlaywrightStatus(r.ok ? 'healthy' : 'degraded');
          } catch { setPlaywrightStatus('offline'); }
-         // Ollama Local-First
+         // OPIK (Comet Opik / Metadata)
          try {
-            const r = await fetch(`http://${host}:11434/api/tags`, { signal: AbortSignal.timeout(2000) });
-            setOllamaStatus(r.ok ? 'healthy' : 'degraded');
-         } catch { setOllamaStatus('offline'); }
+            const r = await fetch(`http://${host}:5006/`, { signal: AbortSignal.timeout(2000) });
+            setOpikStatus(r.ok ? 'healthy' : 'degraded');
+         } catch { setOpikStatus('offline'); }
       };
       checkServices();
       const interval = setInterval(checkServices, 15000);
@@ -110,8 +110,8 @@ function SystemStatusWidget() {
             { label: 'MCP', status: mcpStatus },
             { label: 'RELAY', status: relayStatus },
             { label: 'OPENCLAW', status: openClawStatus },
-            { label: 'BROWSER', status: playwrightStatus },
-            { label: 'OLLAMA', status: ollamaStatus },
+            { label: 'BEACON', status: playwrightStatus },
+            { label: 'OPIK', status: opikStatus },
          ].map(s => (
             <div key={s.label} className="flex items-center justify-between group">
                <span className="text-[10px] font-mono text-slate-400 group-hover:text-slate-300">{s.label}</span>

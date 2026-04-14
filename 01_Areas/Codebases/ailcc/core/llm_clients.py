@@ -1,12 +1,17 @@
 import os
 import json
 import logging
+from pathlib import Path
 from abc import ABC, abstractmethod
-from typing import Dict, Any, List, Optional
+from typing import Optional, List, Dict, Any
 from dotenv import load_dotenv
 
+# Dynamic Root Resolution
+ROOT = Path(__file__).resolve().parents[1] # ailcc root
+PROJECT_ROOT = ROOT.parents[2] # AILCC_PRIME root
+
 # Load environment variables from the centralized .env
-load_dotenv("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/.env")
+load_dotenv(ROOT / ".env")
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -24,24 +29,33 @@ def get_system_context() -> str:
         
     try:
         # 1. Load Active Project
-        state_path = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/registries/task_state.json"
+        state_path = ROOT / "registries" / "task_state.json"
         if os.path.exists(state_path):
             with open(state_path, "r") as f:
                 state = json.load(f)
                 context_str += f"### ACTIVE PROJECT: {state.get('active_project', 'Unknown')}\n"
         
-        # 2. Load Whitepaper
-        wp_path = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/whitepaper.md"
-        if os.path.exists(wp_path):
-            with open(wp_path, "r") as f:
+        # 2. Load Whitepaper (Hierarchical Search for Sovereign Context)
+        wp_path = None
+        search_dirs = [ROOT, PROJECT_ROOT, ROOT.parents[0], ROOT.parents[1]]
+        for d in search_dirs:
+            potential_path = d / "whitepaper.md"
+            if potential_path.exists():
+                wp_path = potential_path
+                break
+        
+        if wp_path:
+            with open(wp_path, "r", encoding="utf-8") as f:
                 whitepaper = f.read()
-                context_str += f"### UNIFIED WHITEPAPER (SOURCE OF TRUTH):\n{whitepaper}\n"
+                context_str += f"\n### UNIFIED AI WHITEPAPER (SOVEREIGN SOURCE OF TRUTH):\n{whitepaper}\n"
+        else:
+            logger.warning("Agent Context Drift Detected: Comprehensive Whitepaper not found in trajectory.")
     except Exception as e:
         logger.warning(f"Failed to load system context: {e}")
         
     try:
         # 3. Load Shared Conversation Memory (Phase XI Perplexity Flow)
-        memory_path = "/Users/infinite27/AILCC_PRIME/06_System/State/conversation_memory.json"
+        memory_path = PROJECT_ROOT / "06_System" / "State" / "conversation_memory.json"
         if os.path.exists(memory_path):
             with open(memory_path, "r") as f:
                 memory = json.load(f)

@@ -40,7 +40,7 @@ async function processPendingTasks(memory: MemoryManager, registry: AdapterRegis
     if (!fs.existsSync(DATA_DIR)) return;
 
     const files = fs.readdirSync(DATA_DIR);
-    const decisions = files.filter(f => f.startsWith('decision-') && f.endsWith('.json'));
+    const decisions = files.filter((f: string) => f.startsWith('decision-') && f.endsWith('.json'));
 
     for (const file of decisions) {
         const taskId = file.replace('decision-', '').replace('.json', '');

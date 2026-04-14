@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useRef } from 'react';
+import { io } from 'socket.io-client';
 import { Agent, AgentStatus } from '../types/DashboardInterfaces';
 import { ReconnectionManager } from '../lib/websocket/ReconnectionManager';
 import { MessageBuffer, BufferedMessage } from '../lib/websocket/MessageBuffer';
@@ -6,7 +7,7 @@ import { ConnectionHealth, ConnectionError } from '../lib/websocket/types';
 
 interface Log {
     timestamp: string;
-    source: 'COMET' | 'ANTIGRAVITY' | 'SYSTEM';
+    source: any;
     message: string;
     agent?: string; // Agent name (e.g., 'ManagerWorker', 'Comet', etc.)
     status?: string; // Status of the log entry
@@ -60,8 +61,10 @@ interface NeuralSyncContextType {
     telemetry: Telemetry;
     storage: any; // Using any for now to avoid circular dependency hell, ideally StorageState
     cometData: CometData | null;
+    pm2Status: any[];
     isConnected: boolean;
     connectionHealth: ConnectionHealth;
+    socket: any;
     sendMessage: (type: string, payload: any) => void;
     retryConnection: () => void;
 }
@@ -83,6 +86,7 @@ export const NeuralSyncProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     });
     const [storage, setStorage] = useState<any>({ icloud: { active: false }, onedrive: { active: false } });
     const [cometData] = useState<CometData | null>(null);
+    const [pm2Status, setPm2Status] = useState<any[]>([]);
     const [isConnected, setIsConnected] = useState(false);
     const [connectionHealth, setConnectionHealth] = useState<ConnectionHealth>({
         state: 'disconnected',
@@ -213,18 +217,17 @@ export const NeuralSyncProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     };
 
     useEffect(() => {
-        // Connect to Neural Uplink on Port 5001/5005
-        import('socket.io-client').then(({ io }) => {
-            const host = typeof window !== 'undefined' ? window.location.hostname : '127.0.0.1';
-            const socket = io(`http://${host}:5005`, {
-                transports: ['websocket'],
-                reconnection: false, // We handle reconnection manually
-                timeout: 10000
-            });
-            socketRef.current = socket;
+        // Connect to Neural Uplink on Port 3001 (Vanguard Hub)
+        const host = typeof window !== 'undefined' ? window.location.hostname : '127.0.0.1';
+        const socket = io(`http://${host}:3001`, {
+            transports: ['websocket'],
+            reconnection: false, // We handle reconnection manually
+            timeout: 10000
+        });
+        socketRef.current = socket;
 
-            socket.on('connect', () => {
-                console.log('[NeuralSync] Connected to Neural Uplink (Port 5005)');
+        socket.on('connect', () => {
+                console.log('[NeuralSync] Connected to Neural Uplink (Port 3001)');
 
                 // Reset reconnection manager on successful connection
                 reconnectionManagerRef.current.reset();
@@ -302,6 +305,10 @@ export const NeuralSyncProvider: React.FC<{ children: React.ReactNode }> = ({ ch
                 }
             });
 
+            socket.on('PM2_STATUS', (data: any[]) => {
+                setPm2Status(data);
+            });
+
             socket.on('state:full', (state: any) => {
                 if (state.agents) {
                     setAgents(state.agents.map((a: any) => ({
@@ -335,7 +342,6 @@ export const NeuralSyncProvider: React.FC<{ children: React.ReactNode }> = ({ ch
             socket.on('log', (log: any) => {
                 addBatchLog(log.type === 'error' ? 'SYSTEM' : 'ANTIGRAVITY', log.message, log);
             });
-        });
 
         return () => {
             if (reconnectTimeoutRef.current) {
@@ -413,8 +419,10 @@ export const NeuralSyncProvider: React.FC<{ children: React.ReactNode }> = ({ ch
             telemetry,
             storage,
             cometData,
+            pm2Status,
             isConnected,
             connectionHealth,
+            socket: socketRef.current,
             sendMessage,
             retryConnection
         }}>

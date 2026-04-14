@@ -1,63 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import NexusLayout from '../components/NexusLayout';
 import { useAuth } from '../src/contexts/AuthContext';
 import { Network, ShieldAlert, Star, Link as LinkIcon, BookOpen, BrainCircuit, Terminal, Play, Loader2, Code2 } from 'lucide-react';
 import { SkillNodeSchema } from '../types/api';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useRouter } from 'next/router';
+import useSWR from 'swr';
 
-const MOCK_SKILLS: SkillNodeSchema[] = [
-    {
-        id: 'S_RESEARCH_1',
-        domain: 'RESEARCH',
-        name: 'Literature Synthesis',
-        description: 'Ability to compile and synthesize peer-reviewed literature into a coherent narrative.',
-        level: 2,
-        evidence_links: ['https://moodle.mta.ca/paper1.pdf'],
-        prerequisite_courses: ['GENS2101']
-    },
-    {
-        id: 'S_BIOPSYCH_1',
-        domain: 'BIOPSYCH',
-        name: 'Neuroendocrine Mapping',
-        description: 'Understanding cortisol pathways and HPA axis reactions to acute stress.',
-        level: 1,
-        evidence_links: [],
-        prerequisite_courses: ['HLTH1011']
-    },
-    {
-        id: 'S_BUSINESS_1',
-        domain: 'BUSINESS',
-        name: 'Client Acquisition',
-        description: 'Generating leads, closing contracts, and managing residential painting projects.',
-        level: 3,
-        evidence_links: ['https://drive.google.com/contracts'],
-        prerequisite_courses: []
-    },
-    {
-        id: 'S_CODING_1',
-        domain: 'CODING',
-        name: 'React Fundamentals',
-        description: 'Building component-driven UIs and managing state.',
-        level: 2,
-        evidence_links: ['https://github.com/infinite27/nexus-web'],
-        prerequisite_courses: []
-    }
-];
+const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 export default function SkillTree() {
     const { hasAccess } = useAuth();
+    const router = useRouter();
+    const { query } = router;
+    const { data: skillsData, mutate } = useSWR('http://localhost:8000/api/v1/skills', fetcher);
     const [selectedDomain, setSelectedDomain] = useState<SkillNodeSchema['domain'] | 'ALL'>('ALL');
     const [forgeObjective, setForgeObjective] = useState('');
     const [isForging, setIsForging] = useState(false);
     const [forgeLogs, setForgeLogs] = useState<{type: string, message?: string, content?: string}[]>([]);
     const logsEndRef = React.useRef<HTMLDivElement>(null);
 
-    React.useEffect(() => {
+    // Populate forge objective from URL query if present
+    useEffect(() => {
+        if (query.objective) {
+            setForgeObjective(query.objective as string);
+        }
+    }, [query.objective]);
+    
+    useEffect(() => {
         if (logsEndRef.current) {
             logsEndRef.current.scrollIntoView({ behavior: 'smooth' });
         }
     }, [forgeLogs]);
+
+    const skills = skillsData?.skills || [];
 
     const handleForge = () => {
         if (!forgeObjective.trim() || isForging) return;
@@ -79,9 +56,12 @@ export default function SkillTree() {
                 
                 if (data.type === 'success' || (data.type === 'error' && data.message?.includes('Failed to forge skill after'))) {
                     setIsForging(false);
+                    mutate(); // Refresh skills list after successful forge
                     setTimeout(() => ws.close(), 1000);
                 }
-            } catch(e) {}
+            } catch(e) {
+                // Silently ignoring JSON parse errors for forge logs
+            }
         };
         
         ws.onerror = () => {
@@ -104,7 +84,7 @@ export default function SkillTree() {
         );
     }
 
-    const filteredSkills = MOCK_SKILLS.filter(s => selectedDomain === 'ALL' || s.domain === selectedDomain);
+    const filteredSkills = skills.filter((s: any) => selectedDomain === 'ALL' || s.domain === selectedDomain);
 
     const getDomainColor = (domain: string) => {
         switch(domain) {
@@ -215,7 +195,7 @@ export default function SkillTree() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    {filteredSkills.map((skill, index) => (
+                    {filteredSkills.map((skill: any, index: number) => (
                         <motion.div 
                             key={skill.id}
                             initial={{ opacity: 0, y: 20 }}
@@ -258,7 +238,7 @@ export default function SkillTree() {
                                             </span>
                                             {skill.evidence_links.length === 0 && <span className="uppercase text-[8px] border border-rose-500/30 px-1 rounded">Missing</span>}
                                        </div>
-                                       {skill.evidence_links.map((link, i) => (
+                                       {skill.evidence_links.map((link: string, i: number) => (
                                            <a key={i} href={link} className="truncate hover:underline text-[9px] mt-1 flex items-center gap-1 opacity-80 pl-4">
                                                <LinkIcon className="w-2 h-2" /> Ext. Object {i+1}
                                            </a>

@@ -8,8 +8,11 @@ from xbox.sg.console import Console
 # Setup logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s] XBOX-DAEMON: %(message)s')
 
-XBOX_IP = os.getenv("XBOX_IP", "")  # Set dynamically or via ENV
-MAC_RELAY_URL = "http://localhost:3001/api/system/telemetry"
+# Performance & Relay Configuration
+XBOX_IP = os.getenv("XBOX_IP", "10.0.0.199")  # Set dynamically or via ENV
+COMMAND_CENTER_IP = os.getenv("COMMAND_CENTER_IP", "localhost")
+MAC_RELAY_URL = f"http://{COMMAND_CENTER_IP}:3001/api/system/telemetry"
+PERFORMANCE_MODE = os.getenv("PERFORMANCE_MODE", "BALANCED") # BALANCED, PEAK, SUPPRESSED
 
 def send_telemetry_to_mac(state_data):
     try:
@@ -62,6 +65,13 @@ async def monitor_xbox():
             if state["title"] == "Call of Duty" and os.getenv("SCHOLAR_MODE") == "1":
                 logging.warning("Scholar Mode Enforced! Pausing/Killing Xbox Game.")
                 state["is_scholar_mode"] = True
+
+            # Performance Synapse: Trigger background suppression if gaming
+            if state["title"] != "Dashboard" and state["online"]:
+                logging.info(f"🎮 Gaming detected: {state['title']}. Triggering Compute Suppression.")
+                os.environ["PERFORMANCE_MODE"] = "SUPPRESSED"
+            else:
+                os.environ["PERFORMANCE_MODE"] = "PEAK"
 
             send_telemetry_to_mac(state)
             await asyncio.sleep(5)

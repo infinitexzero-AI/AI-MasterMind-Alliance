@@ -11,6 +11,7 @@ Usage:
 """
 
 import os
+import sys
 import time
 import shutil
 import logging
@@ -28,8 +29,10 @@ except ImportError:
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [VaultWatcher] %(message)s")
 logger = logging.getLogger(__name__)
 
-AILCC_ROOT = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc")
-WATCH_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Hippocampus/Raw")
+# Dynamic Path Resolution
+AILCC_ROOT = Path(__file__).resolve().parents[1] # c:\Users\infin\AILCC_PRIME\01_Areas\Codebases\ailcc
+PROJECT_ROOT = AILCC_ROOT.parents[2] # c:\Users\infin\AILCC_PRIME
+WATCH_DIR = PROJECT_ROOT / "AILCC_VAULT"
 HIPPOCAMPUS_DIR = AILCC_ROOT / "hippocampus_storage"
 RAG_SCRIPT = AILCC_ROOT / "automations" / "intelligence" / "hippocampus_rag.py"
 
@@ -60,12 +63,16 @@ class OpenClawHandler(FileSystemEventHandler):
                 # Trigger the LlamaIndex Re-build so the Swarm memory updates instantly
                 logger.info("🧠 Syncing Hippocampus Vector Engine...")
                 
-                # The .venv is located at /Users/infinite27/AILCC_PRIME/.venv
-                python_bin = Path("/Users/infinite27/AILCC_PRIME/.venv/bin/python")
+                # Dynamic VENV detection (Mac/Windows)
+                venv_dir = PROJECT_ROOT / ".venv"
+                if os.name == 'nt':
+                    python_bin = venv_dir / "Scripts" / "python.exe"
+                else:
+                    python_bin = venv_dir / "bin" / "python"
                 
                 if not python_bin.exists():
-                    logger.warning(f"Python binary {python_bin} not found. Falling back to system python3.")
-                    python_bin = "python3"
+                    logger.warning(f"Python binary {python_bin} not found. Falling back to system python (sys.executable).")
+                    python_bin = sys.executable
 
                 result = subprocess.run(
                     [str(python_bin), str(RAG_SCRIPT), "--build"],

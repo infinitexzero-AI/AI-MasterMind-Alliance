@@ -16,6 +16,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
         const files = fs.readdirSync(MODE6_DATA_DIR).filter(file => file.endsWith('.json') && file.startsWith('decision-SINGULARITY-'));
 
+        interface Proposal {
+            id: any;
+            timestamp: string;
+            primaryAgent: any;
+            objective: any;
+            reasoning: any;
+            status: any;
+        }
+
         const proposals = files.map(file => {
             const raw = fs.readFileSync(path.join(MODE6_DATA_DIR, file), 'utf-8');
             try {
@@ -27,12 +36,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                     objective: parsed.objective,
                     reasoning: parsed.reasoning,
                     status: parsed.status || 'PENDING'
-                };
+                } as Proposal;
             } catch (e) {
                 console.error(`Mode 6 parse failure on ${file}:`, e);
                 return null;
             }
-        }).filter(Boolean).sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
+        }).filter((p): p is Proposal => p !== null)
+          .sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 
         return res.status(200).json({ proposals });
     } catch (error) {

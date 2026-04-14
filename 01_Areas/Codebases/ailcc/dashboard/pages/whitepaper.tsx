@@ -5,7 +5,7 @@ import NexusLayout from '../components/NexusLayout';
 import { useNeuralSync } from '../components/NeuralSyncProvider';
 
 export default function WhitepaperPage() {
-  useNeuralSync();
+  const { socket } = useNeuralSync();
   const [whitepaper, setWhitepaper] = useState<string>('Loading Master Whitepaper...');
   const [syncing, setSyncing] = useState(false);
 
@@ -16,13 +16,20 @@ export default function WhitepaperPage() {
       .catch(err => setWhitepaper(`Error loading whitepaper: ${err.message}`));
   }, []);
 
+  useEffect(() => {
+    if (!socket) return;
+    socket.on('SYNC_EVENT', (data: any) => {
+      if (data.status === 'COMPLETED') {
+        setSyncing(false);
+      }
+    });
+    return () => { socket.off('SYNC_EVENT'); };
+  }, [socket]);
+
   const handleSyncAll = () => {
+    if (!socket) return;
     setSyncing(true);
-    // In a real implementation, this would trigger the mcp-bridge or a browser subagent call
-    setTimeout(() => {
-      setSyncing(false);
-      alert('All AI Agents (ChatGPT, Gemini, Grok) successfully synchronized with Phase 4 Whitepaper.');
-    }, 2000);
+    socket.emit('AGENT_SYNC');
   };
 
   return (

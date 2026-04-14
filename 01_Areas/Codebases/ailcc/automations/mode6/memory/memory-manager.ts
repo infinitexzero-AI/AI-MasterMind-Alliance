@@ -34,7 +34,9 @@ export class MemoryManager {
     if (provider) {
       this.provider = provider;
     } else {
-      const projectRoot = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc';
+      const projectRoot = process.env.AILCC_ROOT 
+        ? path.join(process.env.AILCC_ROOT, '01_Areas/Codebases/ailcc')
+        : path.join(__dirname, '../../../');
       const dataDir = path.join(projectRoot, 'automations/mode6/data');
       this.provider = new JsonFileProvider(dataDir);
     }

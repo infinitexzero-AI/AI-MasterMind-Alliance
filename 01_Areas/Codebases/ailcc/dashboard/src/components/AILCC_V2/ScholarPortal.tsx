@@ -57,55 +57,58 @@ export default function ScholarPortal() {
                 </button>
             </div>
 
-            {/* Credit Mapping Integration (New) */}
+            {/* Credit Mapping Integration */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-4">
                 <div className="p-5 rounded-2xl bg-slate-950/40 border border-slate-800/50 space-y-4">
                     <div className="flex justify-between items-center">
-                        <p className="text-[10px] font-mono text-green-400 uppercase tracking-wider font-bold">BSc Biology Progress</p>
+                        <p className="text-[10px] font-mono text-cyan-400 uppercase tracking-wider font-bold">BA Psychology / Biology Progress</p>
                         <span className="text-xs font-mono text-slate-300">Target: May 2027</span>
                     </div>
                     <div className="space-y-2">
                         <div className="flex justify-between items-end">
                             <p className="text-2xl font-bold text-white leading-none">114 <span className="text-slate-500 text-sm font-normal uppercase tracking-tighter">/ 120 Units</span></p>
-                            <p className="text-sm text-green-400 font-mono">95%</p>
+                            <p className="text-sm text-cyan-400 font-mono">95%</p>
                         </div>
                         <div className="h-2 w-full bg-slate-800 rounded-full overflow-hidden">
                             <motion.div
                                 initial={{ width: 0 }}
                                 animate={{ width: '95%' }}
                                 transition={{ duration: 1, delay: 0.5 }}
-                                className="h-full bg-gradient-to-r from-green-500 to-emerald-400 shadow-[0_0_12px_rgba(16,185,129,0.3)]"
+                                className="h-full bg-gradient-to-r from-cyan-500 to-indigo-400 shadow-[0_0_12px_rgba(34,211,238,0.3)]"
                             />
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 gap-2 text-[10px] font-mono uppercase">
-                        <div className="p-2 rounded bg-green-500/5 border border-green-500/10 text-green-400 flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-green-500 rounded-full" /> CORE_SCIENCE: OK
-                        </div>
-                        <div className="p-2 rounded bg-yellow-500/5 border border-yellow-500/10 text-yellow-500 flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-yellow-500 rounded-full blink" /> APPEAL_PENDING
+                    <div className="grid grid-cols-1 gap-2 text-[10px] font-mono uppercase">
+                        <div className="p-2 rounded bg-cyan-500/5 border border-cyan-500/10 text-cyan-400 flex items-center justify-between">
+                            <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-cyan-500 rounded-full" /> NEXT_PHASE: CONVERGENCE</span>
+                            <span className="opacity-70">6 UNITS REMAINING</span>
                         </div>
                     </div>
                 </div>
 
                 <div className="p-5 rounded-2xl bg-slate-950/40 border border-slate-800/50 space-y-4">
-                    <p className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Course Distribution</p>
-                    <div className="grid grid-cols-2 gap-3 text-[11px] font-mono">
-                        <div className="p-2 border border-slate-800/50 rounded-lg bg-slate-900/30">
-                            <p className="text-slate-500 text-[9px] mb-1">CHEM 1001</p>
-                            <p className="text-green-400 font-bold uppercase underline underline-offset-4 decoration-green-500/30">COMPLETE</p>
+                    <p className="text-[10px] font-mono text-slate-500 uppercase tracking-wider">Strategic Roadmap (Path to 126)</p>
+                    <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                            <div className="w-1 h-8 bg-cyan-500/50 rounded-full" />
+                            <div>
+                                <p className="text-[11px] font-bold text-white">SUMMER 2026</p>
+                                <p className="text-[9px] text-slate-400">MATH-1151 / CLAS-2501 (GPA Recovery)</p>
+                            </div>
                         </div>
-                        <div className="p-2 border border-slate-800/50 rounded-lg bg-slate-900/30">
-                            <p className="text-slate-500 text-[9px] mb-1">MATH 1111</p>
-                            <p className="text-yellow-500 font-bold uppercase">RECOVERY_REQ</p>
+                        <div className="flex items-center gap-3">
+                            <div className="w-1 h-8 bg-indigo-500/50 rounded-full" />
+                            <div>
+                                <p className="text-[11px] font-bold text-white">FALL 2026</p>
+                                <p className="text-[9px] text-slate-400">PSYC-3211 (Cert Lock) / CHEM-1021</p>
+                            </div>
                         </div>
-                        <div className="p-2 border border-slate-800/50 rounded-lg bg-slate-900/30">
-                            <p className="text-slate-500 text-[9px] mb-1">BIOL 2811</p>
-                            <p className="text-green-400 font-bold uppercase underline underline-offset-4 decoration-green-500/30">COMPLETE</p>
-                        </div>
-                        <div className="p-2 border border-slate-800/50 rounded-lg bg-slate-900/30">
-                            <p className="text-slate-500 text-[9px] mb-1">BIOL 2701</p>
-                            <p className="text-slate-600 font-bold uppercase">PENDING</p>
+                        <div className="flex items-center gap-3">
+                            <div className="w-1 h-8 bg-slate-800 rounded-full" />
+                            <div>
+                                <p className="text-[11px] font-bold text-slate-400">WINTER 2027</p>
+                                <p className="text-[9px] text-slate-500">FINAL SYNTHESIS / GRADUATION</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -284,7 +287,7 @@ export default function ScholarPortal() {
                     <div className="relative z-10">
                         <p className="text-sm text-yellow-200/80 mb-1 font-bold">Audit Pending for 2023-2024 Cycle</p>
                         <p className="text-xs text-slate-400 leading-relaxed max-w-lg">
-                            Degree requirements for <span className="text-cyan-400">Bachelor of Science (Biology)</span> require verification of 12 credits.
+                            Degree requirements for <span className="text-cyan-400">Bachelor of Arts (Psyc Major / Bio Add. Major)</span> require verification of 6 final credits.
                             The 2023 Academic Appeal is currently draft-complete and ready for final submission.
                         </p>
                         <div className="flex gap-4 mt-4">

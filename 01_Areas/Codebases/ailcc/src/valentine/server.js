@@ -6,6 +6,7 @@ import chokidar from 'chokidar';
 import fs from 'fs';
 import path from 'path';
 import { createClient } from 'redis';
+import os from 'os';
 
 // Initialize Express App
 const app = express();
@@ -31,9 +32,10 @@ const io = new Server(server, {
 
 // Paths
 // Paths
-const BASE_DIR = '/Users/infinite27/AILCC_PRIME';
+const AILCC_ROOT = process.env.AILCC_ROOT || (os.platform() === 'win32' ? 'c:/Users/infin/AILCC_PRIME' : path.join(os.homedir(), 'AILCC_PRIME'));
+const BASE_DIR = AILCC_ROOT;
 const SYNC_DIR = path.join(BASE_DIR, '.sync'); // Keep for legacy/internal state
-const VAULT_DIR = path.join(BASE_DIR, '04_Intelligence_Vault');
+const VAULT_DIR = path.join(BASE_DIR, '01_Areas/Codebases/ailcc/AILCC_VAULT');
 const COMET_STATE_FILE = path.join(SYNC_DIR, 'comet-state.json');
 const ANTIGRAVITY_STATE_FILE = path.join(SYNC_DIR, 'antigravity-state.json');
 
@@ -133,7 +135,9 @@ async function countFiles(dir) {
 // Watcher for iCloud Offload (Drop Zone)
 // OFFLOAD_DIR removed as it was unused
 // Using the path from previous step
-const OFFLOAD_VOLUME_DIR = '/Volumes/XDriveAlpha/iCloud_Offload_2026_01_14';
+const OFFLOAD_VOLUME_DIR = os.platform() === 'win32' 
+    ? 'D:/iCloud_Offload_2026_01_14' 
+    : '/Volumes/XDriveAlpha/iCloud_Offload_2026_01_14';
 
 if (!fs.existsSync(OFFLOAD_VOLUME_DIR)) {
   try { fs.mkdirSync(OFFLOAD_VOLUME_DIR, { recursive: true }); } catch (e) { /* ignore */ }

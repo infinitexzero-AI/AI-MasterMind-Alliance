@@ -2,7 +2,7 @@
   "name": "ailcc-dashboard",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3007",
     "agent": "node automation/playwright-server.js",
     "dev:full": "concurrently \"npm run dev\" \"npm run agent\"",
     "build": "next build",

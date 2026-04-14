@@ -10,11 +10,11 @@ interface PageContext {
 
 const PAGE_CONTEXT_MAP: Record<string, PageContext> = {
     '/': {
-        greeting: 'Welcome to The Nexus',
+        greeting: 'Alliance Strategist Online',
         tips: [
-            { title: 'Executive Overview', content: 'The Nexus displays your unified priority queue, top 3 moves, and live Neural Stream. Toggle between TECH and LIFE domains.' },
-            { title: 'Next Three Moves', content: 'These are your highest-priority actions across the Vanguard Swarm. Click any card to expand its strategic rationale.' },
-            { title: 'Manual Sync', content: 'Hit the signal icon near the task queue to force a data refresh from Linear, Airtable, and the Intelligence Vault.' },
+            { title: 'Hardware Sovereignty', content: 'Your distributed mesh is active. The MacBook (Command) orchestrates, while the ThinkPad (Vanguard) handles heavy vectorization.' },
+            { title: 'Performance Matrix', content: 'Check the Dashboard for real-time CPU/Temp metrics across both nodes. The system auto-balances based on load.' },
+            { title: 'Lobster CLI', content: 'Use the Neural Link terminal below to execute strategic commands ($openclaw doctor$, $openclaw status$) directly on your Vanguard node.' },
         ]
     },
     '/central-command': {
@@ -26,11 +26,11 @@ const PAGE_CONTEXT_MAP: Record<string, PageContext> = {
         ]
     },
     '/observability': {
-        greeting: 'System Observability Active',
+        greeting: 'Hardware Telemetry Active',
         tips: [
-            { title: 'Health Dashboard', content: 'Monitor CPU, RAM, swap, and process health in real-time. The sparklines show 60-second trends.' },
-            { title: 'Log Analysis', content: 'Color-coded logs: 🔵 Info, 🟡 Warn, 🔴 Error. Click any log entry to relay it to the Neural Stream for agent attention.' },
-            { title: 'OpenClaw Skills', content: 'View my skill inventory here — total capabilities, eligible vs blocked, and missing requirements.' },
+            { title: 'Distributed Health', content: 'Monitor both nodes here. Look for "PEAK" status to ensure your Vanguard node is contributing its max compute power.' },
+            { title: 'Console Suppression', content: 'When your Xbox is gaming (X-Series), I automatically suppress background AI tasks to preserve your FPS.' },
+            { title: 'Thermal Sovereignty', content: 'AILCC monitors temps and throttles research loops before they impact hardware longevity.' },
         ]
     },
     '/studio': {
@@ -116,7 +116,6 @@ interface OpenClawGuideProps {
 
 export const OpenClawGuide: React.FC<OpenClawGuideProps> = ({ currentPage = '/' }) => {
     const [isOpen, setIsOpen] = useState(false);
-    const [isMinimized, setIsMinimized] = useState(false);
     const [currentStep, setCurrentStep] = useState(0);
     const [isThinking, setIsThinking] = useState(false);
     const [proactiveAlert, setProactiveAlert] = useState<string | null>(null);
@@ -172,7 +171,6 @@ export const OpenClawGuide: React.FC<OpenClawGuideProps> = ({ currentPage = '/' 
             setCurrentStep(prev => prev + 1);
         } else {
             setIsOpen(false);
-            setIsMinimized(true);
         }
     }, [currentStep, steps.length]);
 
@@ -216,7 +214,6 @@ export const OpenClawGuide: React.FC<OpenClawGuideProps> = ({ currentPage = '/' 
                 }}
                 onClick={() => {
                     setIsOpen(true);
-                    setIsMinimized(false);
                 }}
                 className="pointer-events-auto cursor-pointer relative group flex justify-end"
             >
@@ -271,7 +268,7 @@ export const OpenClawGuide: React.FC<OpenClawGuideProps> = ({ currentPage = '/' 
                                 </span>
                             </div>
                             <button
-                                onClick={() => { setIsOpen(false); setIsMinimized(true); }}
+                                onClick={() => { setIsOpen(false); }}
                                 aria-label="Close guide"
                                 className="text-slate-400 hover:text-white transition-colors"
                             >

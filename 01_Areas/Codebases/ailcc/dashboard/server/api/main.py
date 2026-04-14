@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI
+from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from typing import Optional
@@ -139,6 +139,30 @@ async def update_vision_config(update: VisionConfigUpdate):
     if update.active_courses is not None:
         vision_config["active_courses"] = update.active_courses
     return {"status": "updated", "config": vision_config}
+    
+@app.get("/api/v1/academics/profile")
+async def get_academic_profile():
+    path = "../../../hippocampus_storage/academic_matrix/competency_profile.json"
+    if os.path.exists(path):
+        with open(path, "r") as f:
+            return json.load(f)
+    return {"error": "Profile not found"}
+
+@app.get("/api/v1/academics/summer")
+async def get_summer_plan():
+    path = "../../../hippocampus_storage/academic_matrix/summer_2026.json"
+    if os.path.exists(path):
+        with open(path, "r") as f:
+            return json.load(f)
+    return {"error": "Summer plan not found"}
+
+@app.get("/api/v1/tasks/registry")
+async def get_task_registry():
+    path = "tasks/consolidated_task_registry.json"
+    if os.path.exists(path):
+        with open(path, "r") as f:
+            return json.load(f)
+    return {"error": "Registry not found"}
 
 @app.get("/api/v1/health")
 async def health_check():
@@ -155,6 +179,64 @@ async def health_check():
         "redis": "connected" if redis_ok else "disconnected"
     }
 
+
+@app.get("/api/v1/skills")
+async def get_skills():
+    path = "../../../hippocampus_storage/skills.json"
+    if os.path.exists(path):
+        with open(path, "r") as f:
+            return json.load(f)
+    return {"error": "Skills not found"}
+
+@app.websocket("/ws")
+async def websocket_endpoint(websocket: WebSocket):
+    await websocket.accept()
+    try:
+        while True:
+            data = await websocket.receive_text()
+            payload = json.loads(data)
+            action = payload.get("action")
+            
+            if action == "FORGE_SKILL":
+                objective = payload.get("objective")
+                await websocket.send_json({"type": "log", "message": f"Analyzing objective: {objective}"})
+                
+                # Simulate Forge logic (In Phase 2 we connect this to an actual LLM/Agent)
+                time.sleep(1)
+                await websocket.send_json({"type": "log", "message": "Synthesizing research framework..."})
+                time.sleep(1)
+                
+                simulated_code = f"# Skill: {objective}\n# Generated for AILCC Vanguard\n\ndef execute_protocol():\n    print('Executing protocol for: {objective}')\n    return True\n"
+                await websocket.send_json({"type": "code", "content": simulated_code})
+                
+                # Persist the new skill
+                skills_path = "../../../hippocampus_storage/skills.json"
+                new_skill_id = f"S_FORGED_{int(time.time())}"
+                
+                if os.path.exists(skills_path):
+                    with open(skills_path, "r+") as f:
+                        skills_data = json.load(f)
+                        new_skill = {
+                            "id": new_skill_id,
+                            "domain": "RESEARCH",
+                            "name": objective[:30],
+                            "description": f"Synthesized skill for objective: {objective}",
+                            "level": 1,
+                            "evidence_links": [],
+                            "prerequisite_courses": []
+                        }
+                        skills_data["skills"].append(new_skill)
+                        f.seek(0)
+                        json.dump(skills_data, f, indent=2)
+                        f.truncate()
+                        await websocket.send_json({"type": "success", "message": f"Skill forged and indexed successfully: {new_skill_id}"})
+                else:
+                    await websocket.send_json({"type": "error", "message": f"Skills database not found at {skills_path}"})
+
+    except WebSocketDisconnect:
+        print("Client disconnected from Neural Forge")
+    except Exception as e:
+        await websocket.send_json({"type": "error", "message": str(e)})
 
 if __name__ == "__main__":
     import uvicorn

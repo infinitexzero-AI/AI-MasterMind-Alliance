@@ -58,35 +58,36 @@ export default async function handler(
     }
 
     try {
-        // Try local project path first, then Docker path
         const path = require('path');
-        const localPath = path.resolve(process.cwd(), '../../scripts/api/get_system_health.sh');
-        const dockerPath = `/app/scripts/api/get_system_health.sh`;
-        const fs = require('fs');
-        const scriptPath = fs.existsSync(localPath) ? localPath : dockerPath;
-        const { stdout } = await execAsync(`bash ${scriptPath}`);
-        const data: SystemHealthResponse = JSON.parse(stdout);
-        res.status(200).json(data);
-    } catch (error) {
-        console.warn('Host telemetry unavailable in Docker, using graceful proxy fallback.');
-        const fallbackData: SystemHealthResponse = {
-            memory: { freeRAM: 4096, swapUsed: "1024", swapTotal: "8192", swapPercent: 12, status: "healthy" },
-            disk: { used: "45Gi", total: "150Gi", percent: 30 },
+        const os = require('os');
+        const AILCC_ROOT = process.env.AILCC_ROOT || path.join(os.homedir(), 'AILCC_PRIME');
+        const scriptPath = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/scripts/vanguard_telemetry.py');
+        const pythonCmd = os.platform() === 'win32' ? 'python' : 'python3';
+        
+        const { stdout } = await execAsync(`${pythonCmd} "${scriptPath}"`);
+        const telemetry = JSON.parse(stdout);
+        
+        const data: SystemHealthResponse = {
+            memory: telemetry.system.memory,
+            disk: telemetry.system.disk,
             processes: {
-                languageServer: { pid: "1", memory: "120MB", status: "running" },
-                docker: { memory: "2GB", status: "running" },
-                chrome: { count: 12, memory: "1.2GB", status: "running" },
-                antigravity: { count: 3, memory: "400MB", status: "running" }
+                languageServer: { status: "running", memory: "N/A" },
+                docker: { status: telemetry.docker.status === 'HEALTHY' ? 'running' : 'degraded', memory: "N/A" },
+                chrome: { count: 0, status: "idle", memory: "N/A" },
+                antigravity: { count: 1, status: "running", memory: "N/A" }
             },
             automation: {
-                memoryOrchestrator: { status: "active", lastRun: new Date().toISOString() },
-                storageOrchestrator: { status: "active", lastRun: new Date().toISOString() },
-                processMonitor: { status: "active", lastRun: new Date().toISOString() },
-                playwrightProxy: { status: "inactive", lastRun: new Date().toISOString() },
-                duckSearchProxy: { status: "inactive", lastRun: new Date().toISOString() }
+                memoryOrchestrator: { status: "active", lastRun: telemetry.system.timestamp },
+                storageOrchestrator: { status: "active", lastRun: telemetry.system.timestamp },
+                processMonitor: { status: "active", lastRun: telemetry.system.timestamp },
+                playwrightProxy: { status: "inactive", lastRun: telemetry.system.timestamp },
+                duckSearchProxy: { status: "inactive", lastRun: telemetry.system.timestamp }
             },
-            timestamp: new Date().toISOString()
+            timestamp: telemetry.system.timestamp
         };
-        res.status(200).json(fallbackData);
+        res.status(200).json(data);
+    } catch (error) {
+        console.error('Telemetry failure:', error);
+        res.status(500).json({ error: 'Failed to retrieve system health' });
     }
 }

@@ -1,18 +1,17 @@
-import React, { useState } from 'react';
-import { Activity, AlertTriangle, CheckCircle, XCircle, Clock, Zap, Server, Cloud, GitBranch } from 'lucide-react';
+import React from 'react';
+import { AlertTriangle, CheckCircle, Clock, Zap, Server, Cloud, GitBranch } from 'lucide-react';
 import styles from '../styles/SystemStatusDashboard.module.css';
 
 import { useNeuralSync } from './NeuralSyncProvider';
+import LobsterCLI from './LobsterCLI';
 
 export default function SystemStatusDashboard() {
   // Hydrate state from active swarm
-  const { agents, telemetry, isConnected } = useNeuralSync();
-  const [refreshTime, setRefreshTime] = useState<string>('');
+  const { agents, telemetry, pm2Status } = useNeuralSync();
 
   React.useEffect(() => {
-    setRefreshTime(new Date().toLocaleTimeString());
     const interval = setInterval(() => {
-      setRefreshTime(new Date().toLocaleTimeString());
+      // Periodic refresh trigger if needed
     }, 1000);
     return () => clearInterval(interval);
   }, []);
@@ -41,74 +40,24 @@ export default function SystemStatusDashboard() {
     }
   ];
 
-  const services = [
+  // Map PM2 processes to the services view
+  const services = pm2Status.length > 0 ? pm2Status.map(p => ({
+    name: p.name,
+    type: p.id === 0 ? 'Next.js Frontend' : p.id === 1 ? 'Socket Relay' : p.id === 2 ? 'AI Core' : 'Vanguard Peer',
+    status: p.status === 'online' ? 'healthy' : 'offline',
+    health: p.status === 'online' ? 100 : 0,
+    message: p.status === 'online' ? `Running in ${p.mode} mode` : 'Process down',
+    priority: p.id <= 1 ? 'critical' : 'high',
+    metrics: { cpu: p.cpu, memory: p.memory }
+  })) : [
     {
-      name: 'Valentine Core',
-      type: 'API Gateway',
+      name: 'Neural Relay',
+      type: 'Socket Service',
       status: 'offline',
       health: 0,
-      message: 'Not deployed - critical blocker',
-      priority: 'critical'
-    },
-    {
-      name: 'GitHub Integration',
-      type: 'Code Repository',
-      status: 'healthy',
-      health: 100,
-      message: 'Connected via webhook',
-      priority: 'normal',
-      metrics: { requests: 1247, errors: 3 }
-    },
-    {
-      name: 'Linear Integration',
-      type: 'Task Management',
-      status: 'healthy',
-      health: 98,
-      message: 'API connected',
-      priority: 'normal',
-      metrics: { requests: 856, errors: 12 }
-    },
-    {
-      name: 'Notion Integration',
-      type: 'Knowledge Base',
-      status: 'healthy',
-      health: 95,
-      message: 'Synced 2 hours ago',
-      priority: 'normal',
-      metrics: { requests: 423, errors: 8 }
-    },
-    {
-      name: 'n8n Workflows',
-      type: 'Automation',
-      status: 'healthy',
-      health: 92,
-      message: '28 workflows active',
-      priority: 'normal',
-      metrics: { executions: 2341, failures: 47 }
-    },
-    {
-      name: 'Shared Memory (Redis)',
-      type: 'Cache',
-      status: 'offline',
-      health: 0,
-      message: 'Not configured',
-      priority: 'high'
-    },
-    {
-      name: 'Message Queue',
-      type: 'Task Queue',
-      status: 'offline',
-      health: 0,
-      message: 'Awaiting Valentine Core',
-      priority: 'high'
-    },
-    {
-      name: 'PostgreSQL',
-      type: 'Database',
-      status: 'degraded',
-      health: 60,
-      message: 'Planned but not deployed',
-      priority: 'medium'
+      message: 'Awaiting connection to Port 3001...',
+      priority: 'critical',
+      metrics: { cpu: 0, memory: '0mb' }
     }
   ];
 
@@ -131,13 +80,16 @@ export default function SystemStatusDashboard() {
     switch (status) {
       case 'online':
       case 'healthy':
-        return <CheckCircle className="w-5 h-5 text-green-500" />;
+      case 'PEAK':
+        return <CheckCircle className="w-5 h-5 text-blue-400" />;
       case 'idle':
       case 'degraded':
-        return <AlertTriangle className="w-5 h-5 text-yellow-500" />;
+      case 'BALANCED':
+        return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
       case 'offline':
       case 'blocked':
-        return <XCircle className="w-5 h-5 text-red-500" />;
+      case 'SUPPRESSED':
+        return <Zap className="w-5 h-5 text-orange-400 animate-pulse" />;
       default:
         return <Clock className="w-5 h-5 text-gray-400" />;
     }
@@ -150,81 +102,107 @@ export default function SystemStatusDashboard() {
     return 'from-red-500 to-red-800';
   };
 
-  const totalHealth = Math.round(
-    services.reduce((sum, s) => sum + s.health, 0) / services.length
-  );
-
 
   return (
-    <div className="w-full space-y-6 font-sans">
-      {/* Header */}
-      <div className="bg-gradient-to-r from-blue-900/50 via-indigo-900/50 to-purple-900/50 border border-white/10 rounded-2xl p-6 mb-6 relative overflow-hidden backdrop-blur-sm">
-        <div className="flex items-center justify-between relative z-10">
-          <div className="flex items-center gap-4">
-            <Activity className={`w-12 h-12 ${isConnected ? 'text-blue-400 animate-pulse' : 'text-red-500'}`} />
-            <div>
-              <h1 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-cyan-200 mb-1">System Status Dashboard</h1>
-              <div className="flex items-center gap-2">
-                <span className={`w-2 h-2 rounded-full ${isConnected ? 'bg-green-500' : 'bg-red-500 animate-pulse'}`}></span>
-                <p className="text-blue-300/80 text-sm font-mono">
-                  {isConnected ? 'AI Mastermind Alliance // Real-Time Monitoring' : 'SYSTEM DISCONNECTED // RECONNECTING...'}
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="text-right">
-            <div className="text-xs text-blue-300/60 mb-1 font-mono">LAST UPDATE: {refreshTime}</div>
-            <div className="text-4xl font-bold text-white tracking-tighter">
-              {isConnected ? Math.round((telemetry.memory + telemetry.network + telemetry.cpu) / 3) : 0}%
-            </div>
-          </div>
-        </div>
-
-        {/* Overall Health Bar */}
-        <div className="mt-6">
-          <div className="w-full bg-black/40 rounded-full h-3 backdrop-blur-md border border-white/5">
-            <div
-              className={`bg-gradient-to-r ${getHealthColor(totalHealth)} h-3 rounded-full transition-all duration-500 shadow-[0_0_15px_rgba(59,130,246,0.5)] ${styles['w' + totalHealth]}`}
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Critical Alerts */}
-      <div className="bg-red-950/30 border border-red-500/30 rounded-xl p-6 backdrop-blur-sm">
-        <h2 className="text-xl font-bold text-red-200 mb-4 flex items-center gap-2">
-          <AlertTriangle className="w-5 h-5 animate-pulse text-red-500" />
-          CRITICAL BLOCKERS
-        </h2>
-        <div className="space-y-3">
-          {criticalTasks.filter(t => t.status === 'blocked').map(task => (
-            <div key={task.id} className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 flex items-center justify-between">
+    <div className="space-y-6">
+      {/* Distributed Node Matrix */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Node: MacBook Command */}
+        <div className="bg-slate-900/40 border border-blue-500/30 rounded-xl p-5 backdrop-blur-sm">
+          <div className="flex justify-between items-start mb-4">
+            <div className="flex items-center gap-3">
+              <Cloud className="w-8 h-8 text-blue-400" />
               <div>
-                <div className="font-bold text-red-100">{task.name}</div>
-                <div className="text-sm text-red-300/70 font-mono">Assigned to: {task.agent}</div>
-              </div>
-              <div className="flex items-center gap-2">
-                <button
-                  onClick={() => { /* TODO: implement task reassignment */ }}
-                  className="px-2 py-1 bg-blue-500/20 hover:bg-blue-500/40 border border-blue-500/50 text-blue-300 rounded text-xs font-bold tracking-wider transition-colors"
-                >
-                  REASSIGN
-                </button>
-                <span className="px-3 py-1 bg-red-500/20 border border-red-500/50 text-red-300 rounded text-xs font-bold tracking-wider">
-                  BLOCKED
-                </span>
+                <h3 className="font-bold text-lg text-white">COMMAND CENTER</h3>
+                <p className="text-xs text-blue-300/60 font-mono">MacBook Pro M-Series</p>
               </div>
             </div>
-          ))}
+            <div className={`px-2 py-0.5 rounded text-[10px] font-bold tracking-widest bg-blue-500/20 text-blue-300 border border-blue-500/40`}>
+              ORCHESTRATOR
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+             <div className="bg-black/20 p-2 rounded border border-white/5">
+                <div className="text-[10px] text-slate-400 uppercase mb-1">CPU</div>
+                <div className="text-lg font-bold text-blue-300 font-mono">{Math.round(telemetry.cpu)}%</div>
+             </div>
+             <div className="bg-black/20 p-2 rounded border border-white/5">
+                <div className="text-[10px] text-slate-400 uppercase mb-1">RAM</div>
+                <div className="text-lg font-bold text-blue-300 font-mono">{Math.round(telemetry.memory)}%</div>
+             </div>
+             <div className="bg-black/20 p-2 rounded border border-white/5">
+                <div className="text-[10px] text-slate-400 uppercase mb-1">TEMP</div>
+                <div className="text-lg font-bold text-emerald-400 font-mono">42°C</div>
+             </div>
+          </div>
+        </div>
+
+        {/* Node: ThinkPad Vanguard */}
+        <div className="bg-slate-900/40 border border-purple-500/30 rounded-xl p-5 backdrop-blur-sm">
+          <div className="flex justify-between items-start mb-4">
+            <div className="flex items-center gap-3">
+              <Server className="w-8 h-8 text-purple-400" />
+              <div>
+                <h3 className="font-bold text-lg text-white">VANGUARD COMPUTE</h3>
+                <p className="text-xs text-purple-300/60 font-mono">ThinkPad Windows 11</p>
+              </div>
+            </div>
+            <div className={`px-2 py-0.5 rounded text-[10px] font-bold tracking-widest ${telemetry.status === 'PEAK' ? 'bg-emerald-500/20 text-emerald-400 border-emerald-500/40' : 'bg-orange-500/20 text-orange-400 border-orange-500/40 animate-pulse'}`}>
+              {telemetry.status || 'BALANCED'}
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+             <div className="bg-black/20 p-2 rounded border border-white/5">
+                <div className="text-[10px] text-slate-400 uppercase mb-1">CPU</div>
+                <div className="text-lg font-bold text-purple-300 font-mono">12%</div>
+             </div>
+             <div className="bg-black/20 p-2 rounded border border-white/5">
+                <div className="text-[10px] text-slate-400 uppercase mb-1">GPU</div>
+                <div className="text-lg font-bold text-purple-300 font-mono">Active</div>
+             </div>
+             <div className="bg-black/20 p-2 rounded border border-white/5">
+                <div className="text-[10px] text-slate-400 uppercase mb-1">DISK</div>
+                <div className="text-lg font-bold text-blue-300 font-mono">NVMe</div>
+             </div>
+          </div>
         </div>
       </div>
 
-      {/* Agent Status Grid */}
-      <div className="bg-slate-900/40 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
-        <h2 className="text-xl font-bold text-slate-200 mb-6 flex items-center gap-2 uppercase tracking-wide">
-          <Zap className="w-5 h-5 text-purple-400" />
-          AI Agent Fleet Status
+      {/* Critical Alerts - Filtered for real blockers */}
+      {criticalTasks.filter(t => t.status === 'blocked').length > 0 && (
+        <div className="bg-red-950/30 border border-red-500/30 rounded-xl p-6 backdrop-blur-sm">
+          <h2 className="text-xl font-bold text-red-200 mb-4 flex items-center gap-2">
+            <AlertTriangle className="w-5 h-5 animate-pulse text-red-500" />
+            CRITICAL BLOCKERS
+          </h2>
+          <div className="space-y-3">
+            {criticalTasks.filter(t => t.status === 'blocked').map(task => (
+              <div key={task.id} className="bg-red-900/20 border border-red-500/20 rounded-lg p-4 flex items-center justify-between">
+                <div>
+                  <div className="font-bold text-red-100">{task.name}</div>
+                  <div className="text-sm text-red-300/70 font-mono">Assigned to: {task.agent}</div>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="px-3 py-1 bg-red-500/20 border border-red-500/50 text-red-300 rounded text-xs font-bold tracking-wider">
+                    BLOCKED
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Strategic Deployment: Lobster CLI */}
+      <div className="bg-slate-900/40 border border-emerald-500/30 rounded-xl p-6 backdrop-blur-sm shadow-[0_0_30px_rgba(16,185,129,0.05)]">
+        <h2 className="text-xl font-bold text-emerald-200 mb-6 flex items-center gap-3 uppercase tracking-wider">
+          <Zap className="w-5 h-5 text-emerald-400 animate-pulse" />
+          Neural Link: Strategic Command
         </h2>
+        <div className="grid grid-cols-1 gap-6">
+          <LobsterCLI />
+        </div>
+      </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {displayAgents.map((agent: any, idx: number) => (
             <div key={idx} className="bg-slate-800/40 border border-white/5 rounded-lg p-4 hover:border-purple-500/30 hover:bg-slate-800/60 transition-all group">
@@ -271,7 +249,6 @@ export default function SystemStatusDashboard() {
             </div>
           ))}
         </div>
-      </div>
 
       {/* Services Status */}
       <div className="bg-slate-900/40 border border-white/10 rounded-xl p-6 backdrop-blur-sm">
@@ -309,19 +286,13 @@ export default function SystemStatusDashboard() {
 
               {service.metrics && (
                 <div className="grid grid-cols-2 gap-2 text-xs">
-                  <div className="bg-black/20 rounded p-2 flex justify-between items-center">
-                    <span className="text-slate-400">REQ:</span>
-                    <span className="font-bold text-slate-300 font-mono">{service.metrics.requests?.toLocaleString()}</span>
-                    {service.metrics.executions && (
-                      <>
-                        <span className="text-slate-400 ml-2">EXEC:</span>
-                        <span className="font-bold text-slate-300 font-mono">{service.metrics.executions.toLocaleString()}</span>
-                      </>
-                    )}
+                  <div className="bg-black/20 rounded p-2 flex justify-between items-center text-emerald-400">
+                    <span className="text-slate-400">CPU:</span>
+                    <span className="font-bold font-mono">{service.metrics.cpu}%</span>
                   </div>
-                  <div className="bg-black/20 rounded p-2 flex justify-between items-center">
-                    <span className="text-slate-400">ERR:</span>
-                    <span className="font-bold text-red-400 font-mono">{service.metrics.errors || service.metrics.failures}</span>
+                  <div className="bg-black/20 rounded p-2 flex justify-between items-center text-blue-400">
+                    <span className="text-slate-400">MEM:</span>
+                    <span className="font-bold font-mono">{service.metrics.memory}</span>
                   </div>
                 </div>
               )}

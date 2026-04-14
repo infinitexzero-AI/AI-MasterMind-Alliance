@@ -14,7 +14,10 @@ class OpenClawResearchDaemon(ReactiveDaemon):
     """
     def __init__(self):
         super().__init__(name="OpenClawResearch", role="Self-Improvement Synthesizer")
-        self.base_dir = Path("/Users/infinite27/AILCC_PRIME/01_Areas/1_percent_diary")
+        # Dynamic root resolution for cross-platform (Mac/Windows) compatibility
+        self.codebase_root = Path(__file__).resolve().parents[1] # c:\Users\infin\AILCC_PRIME\01_Areas\Codebases\ailcc
+        self.project_root = self.codebase_root.parents[4] # c:\Users\infin\AILCC_PRIME
+        self.base_dir = self.project_root / "01_Areas" / "1_percent_diary"
         self.skills_file = self.base_dir / "skills_matrix.json"
         
     async def get_channels(self):
@@ -74,7 +77,7 @@ class OpenClawResearchDaemon(ReactiveDaemon):
         await self.broadcast_status("OpenClawResearch", "COMPLETED", f"Curriculum for {skill_name} generated and stored.")
         
     def _load_heuristic(self):
-        heuristic_path = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/core/skill_templates/openclaw_heuristic.json")
+        heuristic_path = self.codebase_root / "core" / "skill_templates" / "openclaw_heuristic.json"
         if heuristic_path.exists():
             with open(heuristic_path, 'r') as f:
                 return json.load(f).get("system_prompt", "")

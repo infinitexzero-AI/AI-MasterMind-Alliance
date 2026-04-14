@@ -43,9 +43,19 @@ export default function ScholarDomain() {
   const [currentCardIdx, setCurrentCardIdx] = React.useState(0);
   const [showAnswer, setShowAnswer] = React.useState(false);
 
-  // Fetch local edge-compute output
+  // Fetch live academic and task data
+  const { data: summerMatrix } = useSWR('http://localhost:8000/api/v1/academics/summer', fetcher);
+  const { data: taskRegistry } = useSWR('http://localhost:8000/api/v1/tasks/registry', fetcher);
   const { data: flashcards } = useSWR('/data/flashcards.json', fetcher);
   
+  // Transform summer courses into research threads
+  const activeResearch = summerMatrix?.semester?.courses?.map((c: any) => ({
+      title: `${c.id} – ${c.title}`,
+      course: c.id,
+      status: c.status || "Active Analysis",
+      subTasks: taskRegistry?.registry?.filter((t: any) => t.title.includes(c.id)) || []
+  })) || ACTIVE_RESEARCH;
+
   // Scholar has different clearance levels, if guest deny completely
   if (!hasAccess('scholar')) {
       return (
@@ -61,7 +71,7 @@ export default function ScholarDomain() {
       );
   }
 
-  const activeThreadData = ACTIVE_RESEARCH.find(r => r.course === selectedThread);
+  const activeThreadData = activeResearch.find((r: any) => r.course === selectedThread);
   const filteredCards = flashcards ? flashcards.filter((c: any) => c.course === selectedThread || (selectedThread === "GENS2101" && c.course.includes("GENS"))) : [];
   
   const handleNextCard = () => {
@@ -102,14 +112,14 @@ export default function ScholarDomain() {
            <div className="flex flex-col gap-6">
                <Panel title="Active Research Threads" icon={<BrainCircuit className="w-4 h-4 text-blue-400" />} className="h-[400px]">
                   <div className="space-y-4">
-                      {ACTIVE_RESEARCH.map((res) => (
+                      {activeResearch.map((res: any) => (
                           <div key={res.course} onClick={() => { setSelectedThread(res.course); setStudyMode(false); setCurrentCardIdx(0); setShowAnswer(false); }}>
                             <Card padding="sm" className={`bg-black/40 border-l-2 group cursor-pointer hover:bg-slate-800/50 transition-all border-y-0 border-r-0 ${selectedThread === res.course ? 'border-blue-500 bg-slate-800/50' : 'border-slate-800'}`}>
                                <div className="flex justify-between items-start mb-2">
                                   <span className={`font-bold text-sm ${selectedThread === res.course ? 'text-white' : 'text-slate-400'}`}>{res.title}</span>
                                   <span className={`font-mono text-[9px] uppercase tracking-widest px-2 py-0.5 rounded-full ${
+                                      res.status === 'RETAKE_PRIORITY_HIGH' ? 'bg-rose-500/20 text-rose-400' : 
                                       res.status === 'Active Analysis' ? 'bg-blue-500/20 text-blue-400' : 
-                                      res.status === 'Indexing' ? 'bg-amber-500/20 text-amber-400' : 
                                       'bg-slate-700 text-slate-300'
                                   }`}>{res.status}</span>
                                </div>
@@ -162,7 +172,7 @@ export default function ScholarDomain() {
                    ) : activeThreadData ? (
                        <div className="space-y-4">
                            <h3 className="font-mono text-[10px] tracking-widest uppercase text-slate-500 mb-2 border-b border-slate-800 pb-2">Active Syllabus Load</h3>
-                           {activeThreadData.subTasks.map((task, i) => (
+                           {activeThreadData.subTasks.map((task: SubTask, i: number) => (
                                <Card key={i} padding="sm" className="bg-slate-900/30 border border-slate-800">
                                    <div className="flex justify-between items-start">
                                        <div>

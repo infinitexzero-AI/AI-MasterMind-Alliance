@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Head from 'next/head';
 import NexusLayout from '../components/NexusLayout';
 import { useAuth } from '../src/contexts/AuthContext';
-import { BookOpen, Calendar, Clock, MapPin, Link as LinkIcon, ExternalLink, ShieldAlert, CheckCircle2, Circle, AlertCircle, RefreshCw, Activity, Heart, Eye } from 'lucide-react';
+import { BookOpen, Calendar, Clock, MapPin, Link as LinkIcon, ExternalLink, ShieldAlert, CheckCircle2, Circle, AlertCircle, Activity, Heart, Eye, Wand2 } from 'lucide-react';
+import Link from 'next/link';
 import { SemesterSchema, CourseSchema, AssignmentSchema } from '../types/api';
 import useSWR from 'swr';
 
@@ -66,16 +67,15 @@ const CANMEDS_TARGETS = [
 
 export default function AcademicTracker() {
     const { hasAccess } = useAuth();
-    const [selectedTerm, setSelectedTerm] = useState('WINTER_2026');
-    
-    // Live data from institutional scraper daemon
-    const { data: liveMatrix, error, isLoading } = useSWR('http://localhost:5005/api/system/academics/live', fetcher, { refreshInterval: 10000 });
+    // Live data from AILCC Cortex API
+    const { data: summerMatrix } = useSWR('http://localhost:8000/api/v1/academics/summer', fetcher, { refreshInterval: 30000 });
+    useSWR('http://localhost:8000/api/v1/academics/profile', fetcher, { refreshInterval: 60000 });
     
     // Live Canonical Medical Tracker State (Local Edge-Compute)
     const { data: canmedsState } = useSWR('http://localhost:5005/api/medical/canmeds', fetcher, { refreshInterval: 5000 });
     
     // Fallback to mock if data structure isn't ready or server down
-    const currentSemester = liveMatrix?.semester || MOCK_SEMESTER;
+    const currentSemester = summerMatrix?.semester || MOCK_SEMESTER;
     const allAssignments = currentSemester.courses?.flatMap((c: CourseSchema) => c.assignments).sort((a: AssignmentSchema, b: AssignmentSchema) => new Date(a.due_date).getTime() - new Date(b.due_date).getTime()) || [];
 
     if (!hasAccess('academics')) {
@@ -118,23 +118,7 @@ export default function AcademicTracker() {
                         </p>
                     </div>
                     
-                    <div className="flex items-center justify-end gap-3 md:gap-4 mb-4 md:mb-0">
-                         {isLoading && <RefreshCw className="w-4 h-4 text-cyan-500 animate-spin" />}
-                         {!isLoading && !error && <span className="text-[10px] font-mono text-emerald-500 uppercase tracking-widest hidden md:inline">Scraper Live</span>}
-                         {error && <span className="text-[10px] font-mono text-rose-500 uppercase tracking-widest hidden md:inline">Scraper Offline</span>}
-                    </div>
-                    
                     <div className="flex items-center gap-4 bg-slate-900/50 p-2 rounded-xl border border-slate-700/50">
-                        <select 
-                            title="Select Semester"
-                            aria-label="Select Semester"
-                            value={selectedTerm} 
-                            onChange={(e) => setSelectedTerm(e.target.value)}
-                            className="bg-black/50 border border-slate-700 text-white text-sm font-bold p-2 text-center rounded-lg outline-none focus:border-indigo-500"
-                        >
-                            <option value="FALL_2025">Fall 2025</option>
-                            <option value="WINTER_2026">Winter 2026</option>
-                        </select>
                         <div className="px-4 py-2 bg-indigo-500/10 border border-indigo-500/30 rounded-lg flex flex-col items-center justify-center">
                             <span className="text-[9px] text-indigo-400 font-mono uppercase tracking-widest">GPA</span>
                             <span className="text-sm font-black text-white">{currentSemester.gpa_snapshot?.toFixed(2) || 'N/A'}</span>
@@ -225,17 +209,15 @@ export default function AcademicTracker() {
                                             <div className="flex items-center gap-2"><Clock className="w-3 h-3 text-slate-500"/> {course.instructor}</div>
                                         </div>
                                     </div>
-                                    <div className="bg-black/30 p-3 grid grid-cols-2 gap-2 text-[10px] font-mono uppercase tracking-widest">
+                                    <div className="bg-black/30 p-3 grid grid-cols-2 gap-2 text-[10px] font-mono uppercase tracking-widest border-t border-white/5">
                                         {course.links.moodle && (
                                             <a href={course.links.moodle} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 py-2 rounded bg-slate-800 hover:bg-slate-700 text-amber-400 transition-colors">
                                                 <LinkIcon className="w-3 h-3" /> Moodle
                                             </a>
                                         )}
-                                        {course.links.onedrive && (
-                                            <a href={course.links.onedrive} target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 py-2 rounded bg-slate-800 hover:bg-slate-700 text-blue-400 transition-colors">
-                                                <LinkIcon className="w-3 h-3" /> OneDrive
-                                            </a>
-                                        )}
+                                        <Link href={`/skills?objective=Forge ${course.id} Specialized Study Agent`} className="flex items-center justify-center gap-2 py-2 rounded bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 border border-indigo-500/20 transition-all group/forge">
+                                            <Wand2 className="w-3 h-3 group-hover/forge:animate-pulse" /> Forge
+                                        </Link>
                                     </div>
                                 </div>
                             ))}

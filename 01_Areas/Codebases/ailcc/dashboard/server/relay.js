@@ -9,6 +9,12 @@ const OpenAI = require('openai');
 const chokidar = require('chokidar');
 const os = require('os');
 const Redis = require('ioredis');
+// --- Path Globalization ---
+const CODEBASE_ROOT = path.resolve(__dirname, '../..'); // ailcc root
+const PROJECT_ROOT = path.resolve(CODEBASE_ROOT, '../../../../..'); // AILCC_PRIME root
+const VAULT_PATH = process.env.VAULT_PATH;
+const LOGS_DIR = path.join(CODEBASE_ROOT, 'logs');
+
 let McpServer, SSEServerTransport;
 
 // --- Grok MCP SuperAssistant Infrastructure ---
@@ -27,10 +33,37 @@ let mcpTransport;
       version: "1.0.0"
     });
 
+    // --- MCP Transport Initialization ---
+    const mcpApp = express();
+    mcpApp.use(cors());
+    
+    mcpApp.get("/health", (req, res) => {
+      res.json({ status: "healthy", service: "MCP Neural Bridge" });
+    });
+
+    mcpApp.get("/sse", async (req, res) => {
+      console.log("🔌 [MCP] New SSE Connection");
+      mcpTransport = new SSEServerTransport("/messages", res);
+      await mcpServer.connect(mcpTransport);
+    });
+
+    mcpApp.post("/messages", async (req, res) => {
+      if (mcpTransport) {
+        await mcpTransport.handlePostResponse(req, res);
+      } else {
+        res.status(400).send("No active transport");
+      }
+    });
+
+    const MCP_PORT = 3006;
+    mcpApp.listen(MCP_PORT, "0.0.0.0", () => {
+      console.log(`🚀 [MCP] Neural Bridge Listening on Port ${MCP_PORT}`);
+    });
+
     // Tool: GENS-2101 Technical Synthesis
     mcpServer.tool("get_academic_context", "Retrieves high-fidelity technical data for GENS-2101 Test 3 (Forests, Water, Metabolism)", async () => {
       try {
-        const guidePath = path.join('c:/Users/infin/AILCC_PRIME', '02_Resources/Academics/GENS-2101/GENS2101_Test3_Focused_Guide.md');
+        const guidePath = path.join(PROJECT_ROOT, '02_Resources/Academics/GENS-2101/GENS2101_Test3_Focused_Guide.md');
         const content = fs.readFileSync(guidePath, 'utf8');
         return {
           content: [{ type: "text", text: content }]
@@ -117,9 +150,13 @@ const CONSOLIDATED_TASKS_FILE = path.join(AILCC_ROOT, 'tasks/consolidated_task_r
 const STATE_FILE = path.join(__dirname, '../../dashboard_state.json');
 
 // Vault Path: Dynamic alignment with ThinkPad/MacBook patterns
-const VAULT_PATH = os.platform() === 'win32' 
-    ? path.join(AILCC_ROOT, 'AILCC_VAULT')
-    : path.join(os.homedir(), 'Library/CloudStorage/OneDrive-Personal/AILCC_VAULT');
+if (!VAULT_PATH) {
+    global.VAULT_PATH = os.platform() === 'win32' 
+        ? path.join(AILCC_ROOT, 'AILCC_VAULT')
+        : path.join(os.homedir(), 'Library/CloudStorage/OneDrive-Personal/AILCC_VAULT');
+} else {
+    global.VAULT_PATH = VAULT_PATH;
+}
 
 
 const ACADEMIC_MATRIX_FILE = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/hippocampus_storage/academic_matrix/current_semester.json');
@@ -440,14 +477,20 @@ app.get('/api/mobile/health', async (req, res) => {
 function getDockerStatus() {
   const { execSync } = require('child_process');
   try {
-    // Check if key containers are up
-    const running = execSync("/usr/local/bin/docker ps --format '{{.Names}}'", { encoding: 'utf8' }).trim().split('\n');
-    const essential = ['hippocampus-api', 'hippocampus-redis', 'nexus-dashboard', 'valentine-core'];
-    const missing = essential.filter(name => !running.includes(name));
-    
-    return missing.length === 0 ? 'HEALTHY' : `DEGRADED (Missing: ${missing.join(', ')})`;
+    const pythonCmd = os.platform() === 'win32' ? 'python' : 'python3';
+    const scriptPath = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/scripts/vanguard_telemetry.py');
+    const result = JSON.parse(execSync(`${pythonCmd} "${scriptPath}"`, { encoding: 'utf8' }).trim());
+    return result.docker.status;
   } catch (e) {
-    return 'UNAVAILABLE';
+    try {
+      const dockerPath = os.platform() === 'win32' ? 'docker' : '/usr/local/bin/docker';
+      const running = execSync(`${dockerPath} ps --format '{{.Names}}'`, { encoding: 'utf8' }).trim().split('\n');
+      const essential = ['ailcc_n8n', 'ailcc_redis', 'ailcc_qdrant', 'nexus-hippocampus'];
+      const missing = essential.filter(name => !running.includes(name));
+      return missing.length === 0 ? 'HEALTHY' : `DEGRADED (Missing: ${missing.join(', ')})`;
+    } catch (e2) {
+      return 'UNAVAILABLE';
+    }
   }
 }
 
@@ -851,6 +894,60 @@ io.on('connection', (socket) => {
   console.log('🔗 Client connected to Neural Uplink');
   broadcastRoster();
   broadcastTasks(); // Initial task sync
+
+  // --- OpenClaw (Beta) Terminal Bridge ---
+  socket.on('OPENCLAW_EXEC', async (cmdStr) => {
+    console.log(`🦞 [OpenClaw] Terminal Command: ${cmdStr}`);
+    const { spawn } = require('child_process');
+    
+    // Default to 'openclaw status' if empty
+    const fullCmd = cmdStr || 'openclaw status';
+    const args = fullCmd.split(' ');
+    const mainCmd = args.shift();
+
+    try {
+      const proc = spawn(mainCmd, args, { shell: true });
+
+      proc.stdout.on('data', (data) => {
+        socket.emit('OPENCLAW_OUTPUT', { type: 'stdout', data: data.toString() });
+      });
+
+      proc.stderr.on('data', (data) => {
+        socket.emit('OPENCLAW_OUTPUT', { type: 'stderr', data: data.toString() });
+      });
+
+      proc.on('close', (code) => {
+        socket.emit('OPENCLAW_OUTPUT', { type: 'exit', code });
+      });
+    } catch (err) {
+      socket.emit('OPENCLAW_OUTPUT', { type: 'error', data: err.message });
+    }
+  });
+
+  // --- Agent Synchronization Hub (Phase 4) ---
+  socket.on('AGENT_SYNC', async () => {
+    console.log('🔄 [Hub] Initiating Global Swarm Synchronization...');
+    try {
+      // Logic for synchronization:
+      // 1. Broadcast to all clients that sync is starting
+      io.emit('SYNC_EVENT', { status: 'STARTING', timestamp: new Date().toISOString() });
+      
+      // 2. Here we could trigger a local script to re-index vectors or clear caches
+      // For now, let's just simulate the neural broadcast
+      setTimeout(() => {
+        io.emit('SYNC_EVENT', { 
+            status: 'COMPLETED', 
+            message: 'Phase 4 Architectural Alignment Achieved.',
+            timestamp: new Date().toISOString() 
+        });
+        console.log('✅ [Hub] Global Swarm Synchronized.');
+      }, 1500);
+      
+    } catch (err) {
+      socket.emit('SYNC_EVENT', { status: 'ERROR', message: err.message });
+    }
+  });
+
   socket.on('disconnect', () => console.log('❌ Client disconnected'));
 });
 
@@ -864,7 +961,7 @@ const vaultWatcher = chokidar.watch(VAULT_PATH, {
 });
 
 // Watch for The Judge v2.0 verdicts
-const JUDGE_VERDICT_LOG = '/Users/infinite27/AILCC_PRIME/06_System/Logs/the_judge_verdict.jsonl';
+const JUDGE_VERDICT_LOG = path.join(LOGS_DIR, 'the_judge_verdict.jsonl');
 if (fs.existsSync(JUDGE_VERDICT_LOG)) {
   const judgeWatcher = chokidar.watch(JUDGE_VERDICT_LOG, { persistent: true });
   judgeWatcher.on('change', () => {
@@ -946,7 +1043,7 @@ if (fs.existsSync(EVENT_BUS_LOG)) {
 }
 
 // 3. Forge Sandbox Watcher (Phase 22)
-const SANDBOX_LOGS = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage/logic_sandbox/logs';
+const SANDBOX_LOGS = path.join(CODEBASE_ROOT, 'hippocampus_storage/logic_sandbox/logs');
 if (fs.existsSync(SANDBOX_LOGS)) {
   const sandboxWatcher = chokidar.watch(SANDBOX_LOGS, { 
     ignored: /(^|[/\\])\../,
@@ -985,10 +1082,21 @@ async function broadcastHeartbeat() {
   const minutes = Math.floor((uptimeMs % (1000 * 60 * 60)) / (1000 * 60));
   const uptimeStr = `${days}d ${hours}h ${minutes}m`;
 
-  // Real CPU Load Calculation
-  const cpus = os.cpus();
-  const load = os.loadavg();
-  const cpuUsage = Math.min(100, Math.round((load[0] / cpus.length) * 100));
+  // Real CPU Load & Memory Calculation (Unified Python Bridge)
+  let cpuUsage = 0;
+  let memUsage = 0;
+  try {
+    const pythonCmd = os.platform() === 'win32' ? 'python' : 'python3';
+    const scriptPath = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/scripts/vanguard_telemetry.py');
+    const result = JSON.parse(execSync(`${pythonCmd} "${scriptPath}"`, { encoding: 'utf8' }).trim());
+    cpuUsage = result.system.cpu;
+    // Map percent to 0-100 range
+    memUsage = result.system.memory.status === 'critical' ? 95 : result.system.memory.status === 'warning' ? 80 : 40; 
+  } catch (e) {
+    const load = os.loadavg();
+    cpuUsage = load.length > 0 ? Math.min(100, Math.round((load[0] / os.cpus().length) * 100)) : 10;
+    memUsage = Math.round((1 - os.freemem() / os.totalmem()) * 100);
+  }
 
   // Fetch Redis Namespaces
   const memories = await redis.keys("*:*");
@@ -1023,7 +1131,7 @@ async function broadcastHeartbeat() {
 
   io.emit('HEARTBEAT', {
     cpu: cpuUsage,
-    memory: Math.round((1 - os.freemem() / os.totalmem()) * 100),
+    memory: memUsage,
     namespaces: namespaces,
     network: Math.floor(Math.random() * 80),
     thermal: thermalProxy,
@@ -1034,18 +1142,50 @@ async function broadcastHeartbeat() {
   });
 }
 
-// Periodic Heartbeat (for general telemetry update)
+async function broadcastPm2Status() {
+  const { exec } = require('child_process');
+  
+  exec('pm2 jlist', (err, stdout) => {
+    if (err) return;
+    
+    try {
+      const processes = JSON.parse(stdout);
+      const filtered = processes
+        .filter(p => [0, 1, 2, 3, 4].includes(p.pm_id))
+        .map(p => ({
+          id: p.pm_id,
+          name: p.name,
+          mode: p.pm2_env.exec_mode,
+          status: p.pm2_env.status,
+          cpu: p.monit.cpu,
+          memory: Math.round(p.monit.memory / 1024 / 1024 * 10) / 10 + 'mb'
+        }));
+      
+      io.emit('PM2_STATUS', filtered);
+    } catch (e) {
+      console.error('❌ Failed to parse PM2 jlist:', e);
+    }
+  });
+}
+
+// Periodic Telemetry Pulses
 setInterval(broadcastHeartbeat, 10000);
+setInterval(broadcastPm2Status, 15000);
 
 // Global Health Pulse (60s broadcast for dashboard grid)
 setInterval(async () => {
-  const { execSync } = require('child_process');
   try {
-    const diskFree = execSync("df -h / | tail -1 | awk '{print $4}'", { encoding: 'utf8' }).trim();
+    const pythonCmd = os.platform() === 'win32' ? 'python' : 'python3';
+    const scriptPath = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/scripts/vanguard_telemetry.py');
+    const result = JSON.parse(execSync(`${pythonCmd} "${scriptPath}"`, { encoding: 'utf8' }).trim());
+    
+    const diskFree = result.system.disk.used; // Using used as a proxy or calculating free
+    const dockerStatus = result.docker.status;
+
     io.emit('SYSTEM_EVENT', {
       id: `pulse-${Date.now()}`,
       type: 'info',
-      msg: `🛰️ Global Health Pulse: SSD Free: ${diskFree} | Docker: ${getDockerStatus()}`,
+      msg: `🛰️ Global Health Pulse: SSD Used: ${diskFree} | Docker: ${dockerStatus}`,
       timestamp: new Date().toLocaleTimeString()
     });
   } catch (e) {
@@ -1056,8 +1196,16 @@ setInterval(async () => {
 // Centurion Task 5: Intelligence Vault indexing (Thermal-Aware Delegation)
 const FOUR_HOURS = 4 * 60 * 60 * 1000;
 setInterval(async () => {
-  const load = os.loadavg();
-  const cpuUsage = Math.min(100, Math.round((load[0] / os.cpus().length) * 100));
+  let cpuUsage = 0;
+  try {
+    const pythonCmd = os.platform() === 'win32' ? 'python' : 'python3';
+    const scriptPath = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/scripts/vanguard_telemetry.py');
+    const result = JSON.parse(execSync(`${pythonCmd} "${scriptPath}"`, { encoding: 'utf8' }).trim());
+    cpuUsage = result.system.cpu;
+  } catch (e) {
+    const load = os.loadavg();
+    cpuUsage = load.length > 0 ? Math.min(100, Math.round((load[0] / os.cpus().length) * 100)) : 10;
+  }
   const thermalProxy = Math.round(35 + (cpuUsage * 0.4)); // Simulated or real sensor proxy
 
   console.log(`📦 Pulse: Checking Indexing Schedule... [Thermal: ${thermalProxy}°C]`);
@@ -1211,14 +1359,17 @@ io.on('connection', (socket) => {
 
     try {
       // 1. Persist to Redis Queue
-      await redis.lpush('ailcc:vanguard_queue', JSON.stringify(task));
+      const taskId = task.id || `task_${Date.now()}`;
+      const taskWithId = { ...task, id: taskId };
+      
+      await redis.lpush('ailcc:vanguard_queue', JSON.stringify(taskWithId));
 
       // 2. Write to Vault for node discovery (Legacy compat)
-      const taskPath = path.join(VAULT_PATH, 'tasks', `task_${task.id}.json`);
+      const taskPath = path.join(VAULT_PATH, 'tasks', `task_${taskId}.json`);
       if (!fs.existsSync(path.join(VAULT_PATH, 'tasks'))) {
         fs.mkdirSync(path.join(VAULT_PATH, 'tasks'), { recursive: true });
       }
-      fs.writeFileSync(taskPath, JSON.stringify(task));
+      fs.writeFileSync(taskPath, JSON.stringify(taskWithId));
 
       io.emit('SYSTEM_EVENT', {
         id: 'dispatch-' + Date.now(),

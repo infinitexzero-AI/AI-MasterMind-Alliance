@@ -1,3 +1,4 @@
+import os
 import json
 import logging
 import asyncio
@@ -17,7 +18,6 @@ class LLMGateway:
         """Retrieve the realtime AILCC Global Context array from Redis."""
         try:
             import redis.asyncio as redis
-            import os
             r = redis.from_url(os.getenv("REDIS_URL", "redis://localhost:6379"), decode_responses=True)
             ctx = await r.get("AILCC_GLOBAL_CONTEXT")
             await r.aclose()
@@ -68,7 +68,9 @@ class LLMGateway:
         elif provider == "gemini":
             return LLMGateway._call_gemini(api_key, model, system_prompt, user_prompt)
         elif provider == "ollama":
-            url = f"http://localhost:11434/api/chat"
+            # Performance Routing: Use Vanguard URL if specified, otherwise local
+            vanguard_url = os.getenv("VANGUARD_OLLAMA_URL")
+            url = vanguard_url if vanguard_url else "http://localhost:11434/api/chat"
             return LLMGateway._call_ollama(url, model, system_prompt, user_prompt)
         else:
             raise ValueError(f"Unknown provider: {provider}")
