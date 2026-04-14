@@ -9,7 +9,7 @@ description: Launch the AI Command Center (Cortex + Dashboard)
    // turbo
    
    ```bash
-   cd 01_Areas/Codebases/ailcc/dashboard && npm run dev
+   cd /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard && npm run dev
    ```
 
 2. Notify User

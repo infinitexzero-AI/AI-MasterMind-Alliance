@@ -1,162 +1,41 @@
 {
-    "files.exclude": {
-        "**/.git": true,
-        "**/.svn": true,
-        "**/.hg": true,
-        "**/CVS": true,
-        "**/.DS_Store": true,
-        "**/Thumbs.db": true,
-        "**/node_modules": true,
-        "**/dist": true,
-        "**/.next": true,
-        "**/build": true,
-        "**/.venv": true,
-        "**/__pycache__": true,
-        "**/*.pyc": true,
-        "**/*.png": true,
-        "00_Projects": true,
-        "01_Areas": true,
-        "02_Resources": true,
-        "03_Archives": true,
-        "04_Archives": true,
-        "05_Academic": true,
-        "05_Medical": true,
-        "05_Tasks": true,
-        "05_Templates": true,
-        "06_System": true,
-        "07_Comet_Sync": true,
-        "08_Mobile_Edge": true,
-        "CloudDocs": true,
-        "Google Drive": true,
-        "Applications": true,
-        "Downloads": true,
-        "hippocampus_storage": true
-    },
-    "search.exclude": {
-        "**/node_modules": true,
-        "**/dist": true,
-        "**/.next": true,
-        "**/build": true,
-        "**/.venv": true,
-        "**/.git": true,
-        "**/.DS_Store": true,
-        "**/*.lock": true,
-        "**/*.min.js": true,
-        "00_Projects": true,
-        "01_Areas": true,
-        "02_Resources": true,
-        "03_Archives": true,
-        "04_Archives": true,
-        "05_Academic": true,
-        "05_Medical": true,
-        "05_Tasks": true,
-        "05_Templates": true,
-        "06_System": true,
-        "07_Comet_Sync": true,
-        "08_Mobile_Edge": true,
-        "CloudDocs": true,
-        "Google Drive": true,
-        "Applications": true,
-        "Downloads": true,
-        "hippocampus_storage": true
-    },
-    "files.watcherExclude": {
-        "**/.git/objects/**": true,
-        "**/.git/subtree-cache/**": true,
-        "**/node_modules/**": true,
-        "**/.next/**": true,
-        "**/.venv/**": true,
-        "**/dist/**": true,
-        "**/build/**": true,
-        "**/coverage/**": true,
-        "00_Projects/**": true,
-        "01_Areas/**": true,
-        "02_Resources/**": true,
-        "03_Archives/**": true,
-        "04_Archives/**": true,
-        "05_Academic/**": true,
-        "05_Medical/**": true,
-        "05_Tasks/**": true,
-        "05_Templates/**": true,
-        "06_System/**": true,
-        "07_Comet_Sync/**": true,
-        "08_Mobile_Edge/**": true,
-        "CloudDocs/**": true,
-        "Google Drive/**": true,
-        "Applications/**": true,
-        "Downloads/**": true,
-        "hippocampus_storage/**": true
-    },
-    
-    "typescript.tsserver.maxTsServerMemory": 8192,
-    "typescript.tsserver.log": "verbose",
-    "files.trimTrailingWhitespace": true,
-    "files.trimFinalNewlines": true,
-    "files.insertFinalNewline": true, 
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 5000,
-    
-    "workbench.editorAssociations": {
-        "*.md": "default"
-    },
-
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "vscode.typescript-language-features",
-    "[python]": {
-        "editor.defaultFormatter": "ms-python.python",
-        "editor.formatOnType": true
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-    "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
-    },
-    "terminal.integrated.defaultProfile.osx": "zsh",
-    "tailwindCSS.experimental.classRegex": [
-        [
-            "cva\\(([^)]*)\\)",
-            "[\"'`]([^\"'`]*).*?[\"'`]"
-        ],
-        [
-            "cx\\(([^)]*)\\)",
-            "(?:'|\"|`)([^']*)(?:'|\"|`)"
-        ]
-    ],
-    "files.associations": {
-        "*.md": "markdown",
-        "*.css": "tailwindcss"
-    },
-    "css.lint.unknownAtRules": "ignore",
-    "scss.lint.unknownAtRules": "ignore",
-    "[dockercompose]": {
-        "editor.defaultFormatter": "ms-azuretools.vscode-containers"
-    },
-    "extensions.experimental.affinity": {
-        "antigravity.antigravity": 1
-    },
-    "task.allowAutomaticTasks": "on",
-    "gitlens.currentLine.format": "${author} • ${agoOrDate} • ${message|75?}",
-    "gitlens.codeLens.enabled": true,
-    "gitlens.codeLens.recentChange.enabled": true,
-    "gitlens.autolinks": [
-        {
-            "prefix": "Epoch ",
-            "url": "file:///Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb/walkthrough.md"
-        },
-        {
-            "prefix": "Phase ",
-            "url": "file:///Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb/walkthrough.md"
-        },
-        {
-            "prefix": "Task ",
-            "url": "file:///Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb/task.md"
-        }
-    ]
+  "css.lint.unknownAtRules": "ignore",
+  "scss.lint.unknownAtRules": "ignore",
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "files.exclude": {
+    "node_modules": true,
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/build": true,
+    "00_Projects": true,
+    "01_Areas": true,
+    "03_Archives": true,
+    "04_Archives": true,
+    "05_Communication_Hub": true,
+    "06_System": true,
+    "07_Comet_Sync": true,
+    "08_Mobile_Edge": true
+  },
+  "search.exclude": {
+    "node_modules": true,
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "03_Archives": true,
+    "04_Archives": true,
+    "05_Communication_Hub": true
+  },
+  "files.watcherExclude": {
+    "**/node_modules/*/**": true,
+    "**/.next/*/**": true
+  },
+  "eslint.workingDirectories": [
+    "./01_Areas/Codebases/ailcc",
+    "./01_Areas/Codebases/ailcc/nexus-dashboard",
+    "./01_Areas/Codebases/ailcc-ios-bridge"
+  ],
+  "typescript.tsserver.maxTsServerMemory": 8192
 }
