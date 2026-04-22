@@ -27,8 +27,7 @@ module.exports = {
     {
       name: 'neural-relay',
       cwd: path.join(AILCC_ROOT, 'nexus-dashboard'),
-      script: 'server/relay.js',
-      interpreter: 'node',
+      script: './start_relay.sh',
       env: {
         PATH: `/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${process.env.PATH}`,
         PORT: 3001,

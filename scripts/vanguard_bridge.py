@@ -42,12 +42,18 @@ NODE_NAME = os.getenv("NODE_NAME", DEFAULT_NODE)
 AUTH_TOKEN = os.getenv("ALLIANCE_BOT_TOKEN", "antigravity_dev_key")
 
 def safe_paste():
-    """Safely fetch clipboard content, handling macOS NoneType errors."""
+    """Safely fetch clipboard content, handling macOS NoneType errors with pbpaste fallback."""
     try:
         text = pyperclip.paste()
-        return text if text is not None else ""
-    except Exception as e:
-        # print(f"⚠️ [Clipboard] Access error: {e}")
+        if text is not None:
+            return text
+    except Exception:
+        pass
+    
+    # Fallback to shell pbpaste on macOS
+    try:
+        return subprocess.check_output(['pbpaste'], text=True)
+    except Exception:
         return ""
 
 class ClipboardBridge:
