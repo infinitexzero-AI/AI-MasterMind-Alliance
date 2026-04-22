@@ -1,0 +1,62 @@
+{
+  "roles": {
+    "COMMANDER": {
+      "level": 4,
+      "domains": [
+        "nexus",
+        "war-room",
+        "mapping",
+        "observer",
+        "vault",
+        "scholar",
+        "academics",
+        "vision",
+        "skills",
+        "career",
+        "agents",
+        "settings",
+        "tycoon"
+      ],
+      "actions": ["execute_code", "trigger_transactions", "fire_agents", "modify_system"]
+    },
+    "OPERATOR": {
+      "level": 3,
+      "domains": [
+        "nexus",
+        "mapping",
+        "observer",
+        "vault",
+        "scholar",
+        "academics",
+        "vision",
+        "skills",
+        "career",
+        "agents",
+        "settings"
+      ],
+      "actions": ["execute_code", "fire_agents", "modify_system"]
+    },
+    "OBSERVER": {
+      "level": 2,
+      "domains": [
+        "nexus",
+        "mapping",
+        "observer",
+        "vault",
+        "scholar",
+        "academics",
+        "vision",
+        "skills",
+        "career"
+      ],
+      "actions": []
+    },
+    "GUEST": {
+      "level": 1,
+      "domains": [
+        "nexus"
+      ],
+      "actions": []
+    }
+  }
+}

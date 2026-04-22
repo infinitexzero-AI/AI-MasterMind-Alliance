@@ -4,9 +4,9 @@
 
 set -euo pipefail
 
-DASHBOARD_PATH="/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard"
+DASHBOARD_PATH="/Volumes/XDriveBeta/AILCC_PRIME/nexus-dashboard"
 PAGES_PATH="$DASHBOARD_PATH/pages"
-LOG_FILE="/Users/infinite27/AILCC_PRIME/logs/openclaw_upgrades.log"
+LOG_FILE="/Volumes/XDriveBeta/AILCC_PRIME/06_System/Logs/openclaw_upgrades.log"
 TIMESTAMP=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
 
 mkdir -p "$(dirname "$LOG_FILE")"
@@ -43,5 +43,13 @@ for TAB in $TARGETS; do
         git -C "$DASHBOARD_PATH" stash pop
     fi
 done
+
+# 2. OBSERVABILITY AUDIT
+log_upgrade "📡 Starting Observability Audit..."
+if curl -s http://localhost:3001/api/system/health | grep -q "ONLINE"; then
+    log_upgrade "✅ Neural Relay: ONLINE"
+else
+    log_upgrade "❌ Neural Relay: OFFLINE or UNREACHABLE"
+fi
 
 log_upgrade "📊 Global Upgrade Pulse Complete. System Status: OPTIMAL."

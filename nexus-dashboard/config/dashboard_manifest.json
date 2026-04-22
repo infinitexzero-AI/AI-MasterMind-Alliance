@@ -1,0 +1,91 @@
+{
+    "project": "AILCC_Cortex_Dashboard_V3",
+    "version": "3.0.0",
+    "status": "PHASE_3_EXECUTION",
+    "framework": "Next.js + Tailwind + Framer Motion",
+    "layout_grid": {
+        "columns": 12,
+        "rows": "auto",
+        "zones": [
+            {
+                "id": "agent_monitor",
+                "component": "AgentMonitor.tsx",
+                "position": {
+                    "col_start": 1,
+                    "col_span": 3,
+                    "row_start": 1,
+                    "row_span": 2
+                },
+                "data_source": "ws://localhost:3001/topic/agent_registry"
+            },
+            {
+                "id": "orchestration_panel",
+                "component": "OrchestrationPanel.tsx",
+                "position": {
+                    "col_start": 4,
+                    "col_span": 6,
+                    "row_start": 1,
+                    "row_span": 2
+                },
+                "description": "Visualizes Mode 6 Intent Routing and Task Classification (Type A-D)",
+                "data_source": "ws://localhost:3001/topic/orchestrator"
+            },
+            {
+                "id": "telemetry_charts",
+                "component": "TelemetryCharts.tsx",
+                "position": {
+                    "col_start": 10,
+                    "col_span": 3,
+                    "row_start": 1,
+                    "row_span": 1
+                },
+                "data_source": "ws://localhost:3001/topic/metrics"
+            },
+            {
+                "id": "state_viewer",
+                "component": "StateViewer.tsx",
+                "position": {
+                    "col_start": 1,
+                    "col_span": 12,
+                    "row_start": 3,
+                    "row_span": 1
+                },
+                "description": "Raw JSON log stream of the Corpus Callosum bridge",
+                "data_source": "ws://localhost:3001/topic/logs"
+            }
+        ]
+    },
+    "theme": {
+        "colors": {
+            "background": "#020617",
+            "primary": "#6366f1",
+            "success": "#22c55e",
+            "warning": "#eab308",
+            "error": "#ef4444",
+            "agent_active": "#22d3ee",
+            "agent_idle": "#94a3b8"
+        },
+        "physics": {
+            "gravity": 0,
+            "friction": 0.98,
+            "spring": 0.1
+        }
+    },
+    "integration_requirements": {
+        "websocket_port": 3001,
+        "mobile_bridge_endpoint": "/mobile-command",
+        "required_agent_types": [
+            "Antigravity",
+            "Comet",
+            "Claude",
+            "Grok",
+            "ChatGPT",
+            "Gemini",
+            "Perplexity",
+            "GitHub",
+            "Linear",
+            "N8N",
+            "Notion"
+        ]
+    }
+}

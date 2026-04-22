@@ -1,0 +1,4 @@
+/* TV Mode Styles - Empty Placeholder to satisfy missing TS2307 Module */
+.tv-mode-active {
+    filter: contrast(1.1) brightness(0.9);
+}

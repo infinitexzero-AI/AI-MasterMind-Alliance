@@ -1,0 +1,14 @@
+node_modules
+**/node_modules/**
+.next
+out
+build
+dist
+public
+.vercel
+**/*.test.tsx
+**/*.test.ts
+**/*.spec.tsx
+**/*.spec.ts
+**/tests/**
+**/__tests__/**

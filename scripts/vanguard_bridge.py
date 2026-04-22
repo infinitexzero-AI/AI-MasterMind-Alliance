@@ -8,10 +8,35 @@ import subprocess
 from datetime import datetime
 
 # --- Configuration ---
-RELAY_URL = os.getenv("RELAY_URL", "http://127.0.0.1:3001/api/system/clipboard")
+import socket
+
+# mDNS Discovery: Resolve the MacBook control plane dynamically.
+# Falls back to localhost (for when running ON the MacBook) or static IP.
+STATIC_FALLBACK_IP = "10.0.0.227"
+MDNS_HOSTNAME = "Macbook-1.local"
+
+def discover_relay_host():
+    """Resolve the MacBook control plane via mDNS/Bonjour, with fallback."""
+    env_url = os.getenv("RELAY_URL")
+    if env_url:
+        return env_url  # Explicit override always wins
+
+    # If we ARE the MacBook, use localhost
+    if socket.gethostname().lower().startswith("macbook"):
+        return "http://127.0.0.1:3001/api/system/clipboard"
+
+    # Try mDNS resolution first
+    try:
+        resolved_ip = socket.getaddrinfo(MDNS_HOSTNAME, 3001, socket.AF_INET)[0][4][0]
+        print(f"🔍 [mDNS] Resolved {MDNS_HOSTNAME} → {resolved_ip}")
+        return f"http://{resolved_ip}:3001/api/system/clipboard"
+    except socket.gaierror:
+        print(f"⚠️  [mDNS] Could not resolve {MDNS_HOSTNAME}, falling back to {STATIC_FALLBACK_IP}")
+        return f"http://{STATIC_FALLBACK_IP}:3001/api/system/clipboard"
+
+RELAY_URL = discover_relay_host()
 POLL_INTERVAL = 1.0  # Seconds
 FORCE_SYNC_FILE = ".vanguard_sync"  # File trigger for manual force sync
-import socket
 DEFAULT_NODE = socket.gethostname()
 NODE_NAME = os.getenv("NODE_NAME", DEFAULT_NODE)
 AUTH_TOKEN = os.getenv("ALLIANCE_BOT_TOKEN", "antigravity_dev_key")

@@ -1,0 +1,54 @@
+/* 
+   NEXUS STEALTH SKIN (Xbox Ambient Optimization)
+   Optimized for true-black backgrounds and 10ft UI legibility.
+*/
+
+.stealth-mode {
+    --bg-primary: #000000;
+    --border-dim: rgba(255, 255, 255, 0.05);
+    --text-primary: #ffffff;
+    --text-secondary: #888888;
+    --accent-stealth: #06b6d4; /* Cyan */
+}
+
+.stealth-mode body {
+    background-color: var(--bg-primary) !important;
+    overflow: hidden;
+}
+
+.stealth-mode .renaissance-panel {
+    background: transparent !important;
+    border-color: var(--border-dim) !important;
+    backdrop-filter: none !important;
+    box-shadow: none !important;
+}
+
+.stealth-mode .sidebar {
+    display: none !important;
+}
+
+.stealth-mode .main-content {
+    padding: 2rem !important;
+    max-width: 100vw !important;
+}
+
+.stealth-mode .nav-header {
+    background: transparent !important;
+    border-bottom: 2px solid var(--border-dim) !important;
+}
+
+/* 10ft UI Text Scaling */
+.stealth-mode h1 { font-size: 4rem !important; letter-spacing: -0.05em !important; }
+.stealth-mode h2 { font-size: 2.5rem !important; }
+.stealth-mode p, .stealth-mode span { font-size: 1.2rem !important; }
+
+/* Disable heavy animations */
+.stealth-mode * {
+    transition: none !important;
+    animation-duration: 0.1s !important;
+}
+
+/* Status Indicators (OLED-Safe Glow) */
+.stealth-mode .status-glow {
+    filter: drop-shadow(0 0 10px var(--accent-stealth));
+}

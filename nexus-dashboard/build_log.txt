@@ -1,0 +1,143 @@
+
+> build
+> next build
+
+⚠ `eslint` configuration in next.config.js is no longer supported. See more info here: https://nextjs.org/docs/app/api-reference/cli/next#next-lint-options
+⚠ Invalid next.config.js options detected: 
+⚠     Unrecognized key(s) in object: 'eslint'
+⚠ See more info here: https://nextjs.org/docs/messages/invalid-next-config
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/package-lock.json
+
+▲ Next.js 16.2.2 (Turbopack)
+- Environments: .env.local
+- Experiments (use with caution):
+  ✓ externalDir
+
+  Skipping validation of types
+  Finished TypeScript config validation in 734ms ...
+  Creating an optimized production build ...
+
+> build
+> next build
+
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/package-lock.json
+
+▲ Next.js 16.2.2 (Turbopack)
+- Environments: .env.local
+- Experiments (use with caution):
+  ✓ externalDir
+
+  Skipping validation of types
+  Finished TypeScript config validation in 509ms ...
+  Creating an optimized production build ...
+  Using external babel configuration from /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/.babelrc
+⚠ It looks like there is a custom Babel configuration that can be removed.
+Turbopack build encountered 1 warnings:
+./nexus-dashboard/next.config.js
+Encountered unexpected file in NFT list
+A file was traced that indicates that the whole project was traced unintentionally. Somewhere in the import trace below, there are:
+- filesystem operations (like path.join, path.resolve or fs.readFile), or
+- very dynamic requires (like require('./' + foo)).
+To resolve this, you can
+- remove them if possible, or
+- only use them in development, or
+- make sure they are statically scoped to some subfolder: path.join(process.cwd(), 'data', bar), or
+- add ignore comments: path.join(/*turbopackIgnore: true*/ process.cwd(), bar)
+
+Import trace:
+  Route:
+    ./nexus-dashboard/next.config.js
+    ./nexus-dashboard/pages/api/system/vision.ts
+
+
+
+> Build error occurred
+Error: Turbopack build failed with 1 errors:
+./nexus-dashboard/src/components/AILCC_V2/SwarmStatusPanel.tsx
+Error evaluating Node.js code
+SyntaxError: /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/src/components/AILCC_V2/SwarmStatusPanel.tsx: Expected corresponding JSX closing tag for <motion.div>. (335:8)
+
+  333 |                 ) : null}
+  334 |             </div>
+> 335 |         </div>
+      |         ^
+  336 |     );
+  337 | };
+  338 |
+  (from /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/build/babel/loader/index.js)
+    [at constructor (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:137105)]
+    [at TypeScriptParserMixin.raise (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:194164)]
+    [at TypeScriptParserMixin.jsxParseElementAt (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:268546)]
+    [at TypeScriptParserMixin.jsxParseElement (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:268987)]
+    [at TypeScriptParserMixin.parseExprAtom (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:269115)]
+    [at TypeScriptParserMixin.parseExprSubscripts (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
+    [at TypeScriptParserMixin.parseUpdate (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
+    [at TypeScriptParserMixin.parseMaybeUnary (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:355527)]
+    [at TypeScriptParserMixin.parseMaybeUnary (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:331837)]
+    [at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:352169)]
+    [at TypeScriptParserMixin.parseExprOps (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:352281)]
+    [at TypeScriptParserMixin.parseMaybeConditional (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:351760)]
+    [at TypeScriptParserMixin.parseMaybeAssign (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:350714)]
+    [at /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:330420]
+    [at TypeScriptParserMixin.tryParse (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:199742)]
+    [at TypeScriptParserMixin.parseMaybeAssign (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:330400)]
+    [at /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:350260]
+    [at TypeScriptParserMixin.allowInAnd (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:383968)]
+    [at TypeScriptParserMixin.parseMaybeAssignAllowIn (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:350239)]
+    [at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:369230)]
+    [at TypeScriptParserMixin.parseExprAtom (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:361477)]
+    [at TypeScriptParserMixin.parseExprAtom (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:269272)]
+    [at TypeScriptParserMixin.parseExprSubscripts (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
+    [at TypeScriptParserMixin.parseUpdate (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
+    [at TypeScriptParserMixin.parseMaybeUnary (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:355527)]
+    [at TypeScriptParserMixin.parseMaybeUnary (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:331837)]
+    [at TypeScriptParserMixin.parseMaybeUnaryOrPrivate (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:352169)]
+    [at TypeScriptParserMixin.parseExprOps (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:352281)]
+    [at TypeScriptParserMixin.parseMaybeConditional (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:351760)]
+    [at TypeScriptParserMixin.parseMaybeAssign (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:350714)]
+    [at TypeScriptParserMixin.parseMaybeAssign (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:330620)]
+    [at TypeScriptParserMixin.parseExpressionBase (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:349863)]
+    [at /Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:349774]
+    [at TypeScriptParserMixin.allowInAnd (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:383926)]
+    [at TypeScriptParserMixin.parseExpression (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:349753)]
+    [at TypeScriptParserMixin.parseReturnStatement (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:397586)]
+    [at TypeScriptParserMixin.parseStatementContent (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:390278)]
+    [at TypeScriptParserMixin.parseStatementContent (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:324042)]
+    [at TypeScriptParserMixin.parseStatementLike (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:389494)]
+    [at TypeScriptParserMixin.parseStatementListItem (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:389120)]
+    [at TypeScriptParserMixin.parseBlockOrModuleBlockBody (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:401423)]
+    [at TypeScriptParserMixin.parseBlockBody (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:401223)]
+    [at TypeScriptParserMixin.parseBlock (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:400923)]
+    [at TypeScriptParserMixin.parseFunctionBody (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:378053)]
+    [at TypeScriptParserMixin.parseArrowExpression (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:377398)]
+    [at TypeScriptParserMixin.parseParenAndDistinguishExpression (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:369594)]
+    [at TypeScriptParserMixin.parseExprAtom (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:361477)]
+    [at TypeScriptParserMixin.parseExprAtom (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:269272)]
+    [at TypeScriptParserMixin.parseExprSubscripts (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:356364)]
+    [at TypeScriptParserMixin.parseUpdate (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/next/dist/compiled/babel/bundle.js:191:355963)]
+
+Import traces:
+  Route:
+    ./nexus-dashboard/src/components/AILCC_V2/SwarmStatusPanel.tsx
+    ./nexus-dashboard/pages/api/system/vision.ts
+
+  Browser:
+    ./nexus-dashboard/src/components/AILCC_V2/SwarmStatusPanel.tsx
+    ./nexus-dashboard/pages/central-command.tsx
+
+  SSR:
+    ./nexus-dashboard/src/components/AILCC_V2/SwarmStatusPanel.tsx
+    ./nexus-dashboard/pages/central-command.tsx
+
+
+    at ignore-listed frames

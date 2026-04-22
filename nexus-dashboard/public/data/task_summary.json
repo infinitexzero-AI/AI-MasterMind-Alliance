@@ -1,0 +1,45 @@
+{
+  "total_tasks": 6,
+  "successful_tasks": 6,
+  "failed_tasks": 0,
+  "mock_tasks": 5,
+  "last_updated": "2026-02-06T20:01:16.789Z",
+  "recent_history": [
+    {
+      "taskId": "04005a47-57a6-4ef7-980b-a03f56a764ad",
+      "success": true,
+      "mode": "mock",
+      "timestamp": "2026-02-06T20:01:16.791Z"
+    },
+    {
+      "taskId": "26c0e734-6cdb-4223-abd6-5d23f8d583ca",
+      "success": true,
+      "mode": "mock",
+      "timestamp": "2026-02-06T20:01:16.791Z"
+    },
+    {
+      "taskId": "2aa23244-57a8-4228-8537-96f6abd7a4df",
+      "success": true,
+      "mode": "mock",
+      "timestamp": "2026-02-06T20:01:16.791Z"
+    },
+    {
+      "taskId": "67d079ac-424f-4233-a3e5-e0defa636209",
+      "success": true,
+      "mode": "mock",
+      "timestamp": "2026-02-06T20:01:16.791Z"
+    },
+    {
+      "taskId": "bc4d3754-06a7-4def-81f1-0d8e603f9d81",
+      "success": true,
+      "mode": "mock",
+      "timestamp": "2026-02-06T20:01:16.791Z"
+    },
+    {
+      "taskId": "plan-daac5e5b-b8c7-45cb-a9c8-710604806ea2",
+      "success": true,
+      "mode": "production",
+      "timestamp": "2026-01-21T20:44:32.346Z"
+    }
+  ]
+}

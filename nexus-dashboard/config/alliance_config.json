@@ -1,0 +1,63 @@
+{
+    "project_identity": {
+        "name": "AI Command Center Development",
+        "code": "CMD-CTR-001",
+        "vision": "Scalable AI collaboration with automated workflows and real-time tracking."
+    },
+    "alliance_topology": {
+        "tier_1": {
+            "orchestrator": "HUMAN",
+            "sensory_cortex": "COMET",
+            "motor_cortex": "ANTIGRAVITY"
+        },
+        "tier_2": [
+            {
+                "name": "GROK",
+                "role": "STRATEGY",
+                "capability": "DEEP_REASONING"
+            },
+            {
+                "name": "CLAUDE",
+                "role": "COMMUNICATIONS",
+                "capability": "DOCUMENTATION"
+            },
+            {
+                "name": "GEMINI",
+                "role": "ENGINEERING",
+                "capability": "MULTIMODAL"
+            }
+        ],
+        "tier_3": {
+            "persistence": {
+                "type": "airtable",
+                "baseId": "appFgj5OWiYVg6Oi0",
+                "syncInterval": 3600
+            },
+            "automation": "ZAPIER"
+        }
+    },
+    "routing_rules": [
+        {
+            "category": "RESEARCH",
+            "agent": "COMET"
+        },
+        {
+            "category": "DEVELOPMENT",
+            "agent": "ANTIGRAVITY",
+            "condition": "needs_desktop"
+        },
+        {
+            "category": "STRATEGY",
+            "agent": "GROK"
+        },
+        {
+            "category": "DOCUMENTATION",
+            "agent": "CLAUDE"
+        }
+    ],
+    "success_metrics": {
+        "delegation_success_rate": 0.95,
+        "api_response_threshold_ms": 3000,
+        "uptime_target": 0.999
+    }
+}

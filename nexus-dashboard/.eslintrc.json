@@ -1,0 +1,48 @@
+{
+    "root": true,
+    "ignorePatterns": [
+        "node_modules",
+        "**/node_modules/**",
+        ".next",
+        "out",
+        "build",
+        "dist",
+        "public",
+        ".vercel",
+        "**/*.test.tsx",
+        "**/*.test.ts",
+        "**/*.spec.tsx",
+        "**/*.spec.ts",
+        "**/tests/**",
+        "**/__tests__/**"
+    ],
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "rules": {
+        "react/no-unescaped-entities": "off",
+        "no-unused-vars": [
+            "warn",
+            {
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "no-undef": "off",
+        "no-console": "off"
+    },
+    "overrides": [
+        {
+            "files": [
+                "src/components/AILCC_V2/**/*.tsx"
+            ],
+            "rules": {
+                "react/forbid-component-props": "off",
+                "react/forbid-dom-props": "off"
+            }
+        }
+    ]
+}

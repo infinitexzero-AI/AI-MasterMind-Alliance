@@ -1,0 +1,88 @@
+◇ injecting env (17) from .env.local // tip: ⌘ override existing { override: true }
+--- RELAY CORE INITIALIZING (REDIS BYPASS MODE) ---
+
+  ╔══════════════════════════════════════════════════════╗
+  ║         🚀 AILCC NEURAL UPLINK (RELAY)               ║
+  ║         Sovereign Tier Architecture Active           ║
+  ╚══════════════════════════════════════════════════════╝
+  📡 Network: http://localhost:5005
+  📁 Vault: /Users/infinite27/Library/CloudStorage/OneDrive-Personal/AILCC_VAULT
+  🆔 Node: node_Macbook-1.local_5005
+  
+❌ Failed to load dashboard state from Redis: TypeError: redis.hgetall is not a function
+    at loadState (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/server/relay.js:179:31)
+    at Server.<anonymous> (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/server/relay.js:1089:3)
+    at Object.onceWrapper (node:events:622:28)
+    at Server.emit (node:events:520:35)
+    at emitListeningNT (node:net:1983:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:88:21)
+📖 Agents Registry loaded.
+❌ Mesh Registration failed: TypeError: redis.hset is not a function
+    at registerMeshNode (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/server/relay.js:1069:17)
+    at Server.<anonymous> (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/server/relay.js:1091:3)
+    at Object.onceWrapper (node:events:622:28)
+    at Server.emit (node:events:520:35)
+    at emitListeningNT (node:net:1983:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:88:21)
+🔨 Forge Synthesis Detected: backtest_1773516399
+🔨 Forge Synthesis Detected: backtest_1773516403
+🔨 Forge Synthesis Detected: backtest_1773706643
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: legion_cloud_init_gen
+🔨 Forge Synthesis Detected: test_logic
+/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/server/relay.js:947
+  const memories = await redis.keys("*:*");
+                               ^
+
+TypeError: redis.keys is not a function
+    at broadcastHeartbeat (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/server/relay.js:947:32)
+    at FSWatcher.<anonymous> (/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/server/relay.js:866:5)
+    at FSWatcher.emit (node:events:508:28)
+    at FSWatcher.emitWithAll (file:///Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/chokidar/index.js:455:14)
+    at FSWatcher._emit (file:///Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/chokidar/index.js:545:14)
+    at NodeFsHandler._handleFile (file:///Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/chokidar/handler.js:398:22)
+    at NodeFsHandler._addToNodeFs (file:///Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/nexus-dashboard/node_modules/chokidar/handler.js:618:31)
+
+Node.js v25.2.1

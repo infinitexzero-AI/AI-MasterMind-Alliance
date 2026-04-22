@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-03-03T05:33:16.054Z",
+  "disk": {
+    "size": "113Gi",
+    "used": "10Gi",
+    "available": "11Gi",
+    "percent": "49%"
+  },
+  "logs": [],
+  "errors": []
+}

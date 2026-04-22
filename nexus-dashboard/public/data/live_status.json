@@ -1,0 +1,182 @@
+{
+  "timestamp": "2026-04-04T19:41:40.755Z",
+  "traceId": "trace-1775320273180-cbqihi9e3",
+  "observability": {
+    "circuits": {
+      "github": {
+        "failures": 0,
+        "lastError": null,
+        "open": false
+      },
+      "linear": {
+        "failures": 0,
+        "lastError": null,
+        "open": false
+      }
+    }
+  },
+  "mode6": {
+    "connected": true,
+    "status": "IDLE",
+    "stats": {
+      "active": 0,
+      "completed": 1,
+      "failed": 0,
+      "total": 19
+    },
+    "recent_tasks": [
+      {
+        "id": "task_1765836015012_996",
+        "description": "Generate a full system status report.",
+        "source": "user",
+        "priority": "medium",
+        "status": "pending",
+        "createdAt": "2025-12-15T22:00:15.012Z",
+        "updatedAt": "2025-12-15T22:00:15.012Z"
+      },
+      {
+        "id": "task_1765836020974_97",
+        "description": "Archive all completed tasks and clear the active memory.",
+        "source": "user",
+        "priority": "medium",
+        "status": "pending",
+        "createdAt": "2025-12-15T22:00:20.974Z",
+        "updatedAt": "2025-12-15T22:00:20.974Z"
+      },
+      {
+        "id": "task_1765836025734_372",
+        "description": "Analyze the codebase and fix any linting errors found.",
+        "source": "user",
+        "priority": "medium",
+        "status": "pending",
+        "createdAt": "2025-12-15T22:00:25.734Z",
+        "updatedAt": "2025-12-15T22:00:25.734Z"
+      },
+      {
+        "id": "task_1765959926689_70",
+        "description": "Generate a full system status report.",
+        "source": "user",
+        "priority": "medium",
+        "status": "pending",
+        "createdAt": "2025-12-17T08:25:26.689Z",
+        "updatedAt": "2025-12-17T08:25:26.689Z"
+      },
+      {
+        "id": "task_1765961244643_685",
+        "description": "Analyze the codebase and fix any linting errors found.",
+        "source": "user",
+        "priority": "medium",
+        "status": "pending",
+        "createdAt": "2025-12-17T08:47:24.643Z",
+        "updatedAt": "2025-12-17T08:47:24.643Z"
+      }
+    ]
+  },
+  "whitepaper": {
+    "exists": true,
+    "lastUpdated": "2026-03-20T18:27:40.000Z",
+    "summary": "# 🌌 AI MASTERMIND ALLIANCE (AIMmA)\n\nGlobal System Blueprint & Full Stack UI/UX Manual\n\n![AILCC Core Matrix](/Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb/ailcc_core_matrix_1774020842873.png)\n\n## I. Executive Synthesis\n\nThe **AI Mastermind Alliance (AIMmA)** is the ultimate realization of a globally connected, self-healing, multi-modal intelligence network. It physically bridges edge-native React dashboards, iOS biometrics, local SQLite vector stores, and an om..."
+  },
+  "linear": {
+    "connected": true,
+    "issues": [],
+    "traceId": "trace-1775320273180-cbqihi9e3"
+  },
+  "github": {
+    "connected": true,
+    "prs": [],
+    "traceId": "trace-1775320273180-cbqihi9e3"
+  },
+  "git": {
+    "connected": true,
+    "branch": "main",
+    "status": "D .antigravity/planner_node.ts\n D .dockerignore\n M .env.example\n M .gitignore\n D .vscode/settings.json\n D GEMINI.md\n M __pycache__/autonomy_engine.cpython-313.pyc\n D agents/alchemist_daemon.py\n D agents/evaluator.py\n D agents/evaluator_agent.ts\n D agents/foreman_daemon.py\n D agents/legal_shrike.py\n D agents/maintenance_forecaster.py\n D agents/orator_agent.py\n D agents/scholar_daemon.py\n D agents/yield_oracle.py\n M ailcc-launch.sh\n M automations/core/life_library_organizer.py\n M automations/daemons/openclaw_watcher.py\n M automations/finance/tycoon_broker_bridge.py\n M automations/integrations/bio_telemetry_daemon.py\n M automations/integrations/comet_native_bridge.py\n M automations/integrations/hn_poller.py\n M automations/integrations/painting_tycoon_daemon.py\n M automations/integrations/xbox_launcher.py\n M automations/intelligence/digital_twin_engine.py\n M automations/mode6/agent-routing/agent-dispatcher.ts\n M automations/mode6/agent-routing/routing-optimizer.ts\n D automations/mode6/data/decision-ARCHON-1774744284.json\n D automations/mode6/data/decision-ARCHON-1774744681.json\n D automations/mode6/data/decision-ARCHON-1774748503.json\n D automations/mode6/data/decision-ARCHON-1774754167.json\n D automations/mode6/data/decision-ARCHON-1774757989.json\n D automations/mode6/data/decision-ARCHON-1774761624.json\n M automations/mode6/loop.ts\n M automations/physical/home_bridge.py\n M automations/python/hn_poller.py\n D backend/Dockerfile\n D backend/main.py\n D backend/requirements.txt\n D backend/services/blackboard_service.py\n D backend/services/health_monitor_service.py\n D backend/services/log_service.py\n D backend/services/mcp_service.py\n D backend/services/neural_memory_service.py\n D backend/services/strategy_service.py\n D backend/services/sync_service.py\n D backend/services/system_manager.py\n D backend/test_memory.py\n D comet-launch.command\n M comet_framework/antigravity_bridge.py\n M comet_framework/crewai_integration/setup_and_run.sh\n M comet_framework/llm_gateway.py\n M comet_framework/orchestration_engine.py\n D context/agent_sync_prompts.md\n D context/system_baseline.json\n D contracts/SPRINT_CONTRACT_TEMPLATE.json\n M core/agents/sentinel_docker_watchdog.py\n D core/biometric_sync.py\n M core/context_synthesizer.py\n D core/guardian_interlock.py\n D core/handoff.py\n D core/handoff_artifact.ts\n D core/handoff_persistence.ts\n D core/identity_vault.py\n D core/latex_orchestrator.py\n D core/orchestra_pulse.py\n D core/planner.py\n D core/robotic_maintenance_bridge.py\n M core/singularity_engine_daemon.py\n D core/sovereign_mesh.py\n D core/treasury_bridge.py\n D core/vector_ingest_v2.py\n D core/wealth_synthesizer.py\n D daemon/package-lock.json\n D daemon/package.json\n D daemon/proactive_refactor_agent.js\n D daemon/watchdog.js\n M dashboard/Dockerfile\n D dashboard/automation/playwright-server.js\n D dashboard/components/BuildingOrderList.tsx\n D dashboard/components/GlassContainer.tsx\n D dashboard/components/HardwareEntropyVisualizer.module.css\n D dashboard/components/HardwareEntropyVisualizer.tsx\n D dashboard/components/InventoryVisualizer.tsx\n M dashboard/components/MastermindHub.tsx\n M dashboard/components/NexusLayout.tsx\n M dashboard/components/OmniBar.tsx\n D dashboard/components/SovereignCharacterSheet.tsx\n D dashboard/components/SwarmNodeCard.tsx\n D dashboard/components/TaxonomyHUD.tsx\n D dashboard/components/TelemetryGraph.tsx\n M dashboard/components/widgets/BioPulseWidget.tsx\n D dashboard/components/widgets/GlobalStorageSentinel.tsx\n D dashboard/components/widgets/HippocampusVisualizer.tsx\n D dashboard/components/widgets/SentinelStatus.tsx\n D dashboard/hooks/useCortexPulse.ts\n M dashboard/hooks/useSwarmTelemetry.ts\n M dashboard/next.config.js\n M dashboard/package-lock.json\n M dashboard/package.json\n M dashboard/pages/_app.tsx\n M dashboard/pages/academics.tsx\n D dashboard/pages/api/auth/delegate.ts\n M dashboard/pages/api/hippocampus/metrics.ts\n D dashboard/pages/api/hippocampus/query.ts\n M dashboard/pages/api/omnitracker.ts\n D dashboard/pages/api/search.ts\n M dashboard/pages/api/studio/grok.ts\n M dashboard/pages/api/swarm.ts\n D dashboard/pages/api/swarm/sync.ts\n D dashboard/pages/api/system/entropy.ts\n D dashboard/pages/api/system/purge.ts\n D dashboard/pages/api/vanguard/policy.ts\n D dashboard/pages/api/vault/stats.ts\n D dashboard/pages/api/workflow.ts\n M dashboard/pages/central-command.tsx\n M dashboard/pages/index.tsx\n M dashboard/pages/scholar.tsx\n M dashboard/pages/system.tsx\n D dashboard/public/data/academic_missions.json\n M dashboard/public/data/live_status.json\n M dashboard/scripts/start-dashboard.sh\n M dashboard/scripts/touchbar_trigger.sh\n M dashboard/scripts/verify_api.sh\n M dashboard/self_healing_monitor.sh\n M dashboard/server/relay.js\n M dashboard/src/components/AILCC_V2/GlobalContextWidget.tsx\n M dashboard/src/components/AILCC_V2/ScholarPortal.tsx\n M dashboard/src/components/dashboard/shared-memory-marquee.tsx\n D dashboard/src/components/widgets/AcademicAppealWidget.tsx\n D dashboard/src/middleware.ts\n M dashboard/start_dashboard.sh\n D dashboard/styles/elite_ops.css\n M dashboard/styles/globals.css\n M dashboard/tailwind.config.js\n M dashboard_state.json\n D dashboards/alliance_status_spec.md\n D dashboards/registry_dashboard.html\n D data/biometric_history.json\n D data/hardware_health.json\n D data/scholar_vault.json\n D data/vault/SOVEREIGN_ROOT_ed25519.pem\n D data/vault_status.json\n D docs/HARNESS_SIMPLIFICATION_AUDIT_E30.md\n D ecosystem.config.cjs\n M hippocampus_storage/logic_sandbox/verification_results/legion_cloud_init_gen_verdict.json\n D infrastructure/chroma/docker-compose.yml\n M launch_all.sh\n M launch_cortex.sh\n M launch_protocol.sh\n D n8n_foundation/README.md\n D n8n_foundation/n8n_data/config\n D n8n_foundation/n8n_data/crash.journal\n D n8n_foundation/n8n_data/database.sqlite\n D n8n_foundation/n8n_data/database.sqlite-shm\n D n8n_foundation/n8n_data/database.sqlite-wal\n D n8n_foundation/n8n_data/nodes/package.json\n D n8n_workflows/linear_to_antigravity.json\n D nexus-dashboard/Dockerfile\n D output/Neural_Plasticity_Report.tex\n D output/bib/Neural_Plasticity_Report.bib\n D output/diplomacy/dispatch_AIP-500_20260327.json\n D output/diplomacy/test_dao_proposal.json\n D output/diplomacy/test_dao_proposal_20260327_162318.json\n D output/legal_audits/audit_AIP-666_20260327.json\n D output/maintenance/forecast_SOVEREIGN_NODE_THINKPAD_20260327.json\n D output/scholar_pulse_test.tex\n D output/treasury_reports/Sovereign_Wealth_Report_20260327.json\n D output/wealth/yield_Vanguard-LP-v2_150245.json\n D output/wealth/yield_Vanguard-LP-v2_150342.json\n M package.json\n M phase4.sh\n D protocols/UNIVERSAL_AGENT_PROTOCOL.md\n D protocols/agent_registry_schema.sql\n D protocols/agent_registry_v1.md\n D protocols/comet_orchestration_spec.md\n D protocols/command_library_v1.md\n D protocols/conflict_resolution.md\n D protocols/iacp_v1.1_spec.md\n D protocols/inter_agent_protocol_v1.md\n D protocols/spellbook_mcp_fix.md\n D protocols/valentine_routing_notes.md\n D protocols/valentine_routing_v1.md\n D protocols/valentine_routing_v2.md\n D reports/EVIDENCE_INVENTORY_MASTER.md\n D reports/ailcc_audit_20260125_182938.txt\n D reports/ailcc_audit_optimized.txt\n D reports/system_status.md\n D reports/wave1_completion.md\n D requirements.txt\n D roadmaps/100_task_sprint.md\n D roadmaps/2026_revision.md\n D roadmaps/INFINITE_200.md\n D roadmaps/the_infinite_100_v6.md\n M scripts/accessibility_shortcuts.sh\n M scripts/add_to_google_drive.sh\n M scripts/analyze_app_support.sh\n M scripts/boot-wrapper.sh\n M scripts/cache_cleanup.sh\n M scripts/consolidate_project.py\n M scripts/create_library_structure.py\n M scripts/credentials_manager.py\n M scripts/drive_troubleshooter.py\n M scripts/email_storage_analyzer.py\n M scripts/file_classifier.py\n M scripts/google_drive_sync.py\n M scripts/ingest_academic_plan.py\n M scripts/launch_adhd_system.sh\n M scripts/launch_hub.sh\n M scripts/organize_for_gdrive.sh\n M scripts/progressive_summarizer.py\n M scripts/query_academic_plan.py\n M scripts/scan_project.py\n M scripts/scout_commit.sh\n M scripts/start_hippocampus.sh\n M scripts/start_valentine.sh\n M scripts/storage_analyzer.py\n M scripts/storage_cleanup.py\n M scripts/storage_inventory.py\n M scripts/storage_migrator.py\n M scripts/test-chamber.sh\n M scripts/thinkpad_xbox_daemon.py\n D services/swarm_orchestrator.py\n D spellbooks/master_commands.json\n M src/automation/mcp-bridge.js\n M src/automation/mcp-server.js\n M src/valentine/package-lock.json\n M src/valentine/package.json\n M status-monitor.sh\n D tasks/100_task_master_plan.json\n D tasks/consolidated_task_registry.json\n D tasks/omnitracker_registry.json\n D tests/system_smoke_test.py\n D tests/test_biometric_interlock.py\n D tests/test_financial_alchemist.py\n D tests/test_harness_v2_pulse.py\n D tests/test_legal_audit.py\n D tests/test_maintenance_window.py\n D tests/test_physical_emergency.py\n D tests/test_scholar_pipeline.py\n D tests/test_sovereign_diplomacy.py\n D tests/test_sovereign_mesh.py\n D tests/test_zotero_sync.py\n M thejudge.py\n D thinkpad-docker-compose.yml\n M tsconfig.json\n?? dashboard/automation/playwright-server.js.DEPRECATED\n?? dashboard/src/components/AILCC_V2/CostTrackingPanel.tsx\n?? docker-compose.yml\n?? ecosystem.config.js\n?? hippocampus_storage/logic_sandbox/logs/legion_cloud_init_gen_1775330613.json\n?? hippocampus_storage/logic_sandbox/logs/legion_cloud_init_gen_1775331327.json\n?? hippocampus_storage/logic_sandbox/logs/legion_cloud_init_gen_1775331356.json"
+  },
+  "filesystem": {
+    "connected": true,
+    "projectPath": "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc",
+    "exists": true
+  },
+  "n8n": {
+    "connected": true,
+    "status": "ONLINE",
+    "url": "http://10.0.0.192:5678"
+  },
+  "health": {
+    "status": "NOMINAL",
+    "uptime": 11839.931579303,
+    "memory": {
+      "rss": 13410304,
+      "heapTotal": 29810688,
+      "heapUsed": 28626648,
+      "external": 4454015,
+      "arrayBuffers": 612722
+    },
+    "timestamp": "2026-04-04T19:41:19.441Z"
+  },
+  "agents": [
+    {
+      "name": "Valentine",
+      "role": "Orchestrator",
+      "status": "ONLINE",
+      "conversations": 0,
+      "neuromorphic": {
+        "cellType": "Glutamatergic (Excitatory)",
+        "heritage": "PFC - Supra-granular Layer",
+        "archetype": "Neuromorphic Executive (Long-range Planning)"
+      }
+    },
+    {
+      "name": "Antigravity",
+      "role": "Inner Loop (Code)",
+      "status": "ACTIVE",
+      "conversations": 0,
+      "neuromorphic": {
+        "cellType": "Glutamatergic (Excitatory)",
+        "heritage": "PFC - Supra-granular Layer",
+        "archetype": "Neuromorphic Executive (Long-range Planning)"
+      }
+    },
+    {
+      "name": "Comet",
+      "role": "Outer Loop (Web)",
+      "status": "IDLE",
+      "conversations": 19,
+      "neuromorphic": {
+        "cellType": "Glutamatergic (Excitatory)",
+        "heritage": "Occipital Cortex",
+        "archetype": "Sensory Afferent (Visual/Interface Perception)"
+      }
+    },
+    {
+      "name": "SuperGrok",
+      "role": "Strategy",
+      "status": "STANDBY",
+      "conversations": 0
+    },
+    {
+      "name": "Claude",
+      "role": "Deep Coding",
+      "status": "LINKED",
+      "conversations": 0
+    },
+    {
+      "name": "ChatGPT",
+      "role": "Backup/GitHub",
+      "status": "OFFLINE",
+      "conversations": 0
+    },
+    {
+      "name": "Gemini",
+      "role": "Multi-Modal",
+      "status": "LINKED",
+      "conversations": 0
+    },
+    {
+      "name": "N8N",
+      "role": "Automation",
+      "status": "ACTIVE",
+      "conversations": 0
+    }
+  ]
+}
