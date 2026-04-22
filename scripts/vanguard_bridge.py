@@ -41,9 +41,18 @@ DEFAULT_NODE = socket.gethostname()
 NODE_NAME = os.getenv("NODE_NAME", DEFAULT_NODE)
 AUTH_TOKEN = os.getenv("ALLIANCE_BOT_TOKEN", "antigravity_dev_key")
 
+def safe_paste():
+    """Safely fetch clipboard content, handling macOS NoneType errors."""
+    try:
+        text = pyperclip.paste()
+        return text if text is not None else ""
+    except Exception as e:
+        # print(f"⚠️ [Clipboard] Access error: {e}")
+        return ""
+
 class ClipboardBridge:
     def __init__(self):
-        self.last_text = pyperclip.paste()
+        self.last_text = safe_paste()
         self.last_sync_ts = None
         self.active = True
         self.heartbeat_interval = 30.0 # Seconds
@@ -111,11 +120,14 @@ class ClipboardBridge:
                 remote_source = data.get("source", "unknown")
                 
                 # Update if different source OR if forced
-                if (remote_source != NODE_NAME and remote_text != pyperclip.paste()) or force:
+                if (remote_source != NODE_NAME and remote_text != safe_paste()) or force:
                     print(f"📥 [Pull] {'FORCE ' if force else ''}Remote update from {remote_source}.")
-                    pyperclip.copy(remote_text)
-                    self.last_text = remote_text
-                    return True
+                    try:
+                        pyperclip.copy(remote_text)
+                        self.last_text = remote_text
+                        return True
+                    except Exception as e:
+                        print(f"⚠️ [Pull] Copy failed: {e}")
         except Exception as e:
             pass 
         return False
@@ -135,7 +147,7 @@ class ClipboardBridge:
                     self.send_heartbeat()
 
                 # 2. Check local clipboard change
-                current_text = pyperclip.paste()
+                current_text = safe_paste()
                 if current_text != self.last_text:
                     if self.push_to_relay(current_text):
                         self.last_text = current_text

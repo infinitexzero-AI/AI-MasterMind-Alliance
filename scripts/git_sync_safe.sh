@@ -7,6 +7,7 @@ set -e
 # Configuration
 BRANCH="main"
 REMOTE="origin"
+NODE_NAME=$(hostname)
 LOG_FILE="${AILCC_ROOT:-.}/logs/git_sync.log"
 
 mkdir -p "$(dirname "$LOG_FILE")"
@@ -17,17 +18,23 @@ log() {
 
 log "Starting sovereign sync cycle..."
 
-# 1. Fetch latest state
-log "Fetching $REMOTE/$BRANCH..."
+# 1. Race Condition Guard
+if [ -f .git/index.lock ]; then
+    log "⚠️ Git index is locked. Skipping sync to avoid conflict."
+    exit 0
+fi
+
+# 2. Fetch latest state
+log "Fetching $REMOTE/$BRANCH from $NODE_NAME..."
 git fetch "$REMOTE" "$BRANCH"
 
 # 2. Check for local changes
 if git diff --cached --quiet && git diff --quiet; then
     log "No local changes to commit."
 else
-    log "Committing local changes..."
+    log "Committing local changes from $NODE_NAME..."
     git add -A
-    git commit -m "auto: sovereign sync $(date -u +%Y-%m-%dT%H:%M:%SZ)" || log "Nothing to commit (already handled)"
+    git commit -m "auto: $NODE_NAME sync $(date -u +%Y-%m-%dT%H:%M:%SZ)" || log "Nothing to commit (already handled)"
 fi
 
 # 3. Check for divergence
@@ -46,7 +53,9 @@ elif [ "$UPSTREAM" = "$BASE" ]; then
 else
     log "Diverged. Attempting pull with rebase..."
     if git pull --rebase "$REMOTE" "$BRANCH"; then
-        log "Rebase successful. Pushing merged state..."
+        log "Rebase successful. Updating submodules..."
+        git submodule update --init --recursive
+        log "Pushing merged state..."
         git push "$REMOTE" "$BRANCH"
     else
         log "ERROR: Rebase failed! Manual intervention required."

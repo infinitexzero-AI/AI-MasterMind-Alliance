@@ -94,7 +94,7 @@ module.exports = {
       args: 'scripts/git_sync_safe.sh',
       interpreter: 'none',
       autorestart: false,
-      cron_restart: '0 */4 * * *',  // Every 4 hours
+      cron_restart: '0 * * * *',  // Every hour
       env: {
         PATH: `/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${process.env.PATH}`,
         AILCC_ROOT: AILCC_ROOT
