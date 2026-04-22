@@ -30,12 +30,17 @@
   },
   "files.watcherExclude": {
     "**/node_modules/*/**": true,
-    "**/.next/*/**": true
+    "**/.next/*/**": true,
+    "/Volumes/XDriveAlpha/*": true,
+    "/Volumes/XDriveBeta/cache/*": true
   },
   "eslint.workingDirectories": [
     "./01_Areas/Codebases/ailcc",
     "./01_Areas/Codebases/ailcc/nexus-dashboard",
     "./01_Areas/Codebases/ailcc-ios-bridge"
   ],
-  "typescript.tsserver.maxTsServerMemory": 8192
+  "typescript.tsserver.maxTsServerMemory": 8192,
+  "terminal.integrated.env.osx": {
+    "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${env:PATH}"
+  }
 }

@@ -5,9 +5,9 @@
 
 set -euo pipefail
 
-LOG_DIR="$HOME/AILCC_PRIME/logs"
+LOG_DIR="/Volumes/XDriveBeta/AILCC_PRIME/06_System/Logs"
 MONITOR_LOG="$LOG_DIR/dashboard_monitor.log"
-DASHBOARD_URL="http://localhost:3000"
+DASHBOARD_URL="http://localhost:3007"
 API_BASE="$DASHBOARD_URL/api"
 
 # Ensure log directory exists
@@ -96,7 +96,7 @@ if check_dashboard; then
     log_message "✅ Dashboard is running at $DASHBOARD_URL"
 else
     log_message "🚨 Dashboard is NOT running at $DASHBOARD_URL"
-    log_message "💡 Start with: cd ~/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard && npm run dev"
+    log_message "💡 Start with: cd /Volumes/XDriveBeta/AILCC_PRIME/nexus-dashboard && npm run dev"
     exit 1
 fi
 
@@ -137,7 +137,7 @@ fi
 # PROACTIVE UPGRADES (OpenClaw Engagement)
 if [[ $(bc <<< "$free_mb > 300") -eq 1 ]]; then
     log_message "🚀 System Health OPTIMAL. Dispatching OpenClaw Upgrade Engine for autonomous refinements."
-    bash /Users/infinite27/AILCC_PRIME/scripts/openclaw_upgrade_engine.sh &
+    bash /Volumes/XDriveBeta/AILCC_PRIME/scripts/openclaw_upgrade_engine.sh &
 else
     log_message "ℹ️  System resources constrained (${free_mb}MB). Skipping proactive upgrades."
 fi

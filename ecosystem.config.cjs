@@ -6,7 +6,7 @@
  */
 
 const path = require('path');
-const OS_ROOT = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc';
+const OS_ROOT = '/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc';
 
 module.exports = {
   apps: [

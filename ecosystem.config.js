@@ -1,78 +1,71 @@
+const AILCC_ROOT = process.env.AILCC_ROOT || '/Volumes/XDriveBeta/AILCC_PRIME';
+
 module.exports = {
   apps: [
     {
       name: 'nexus-dashboard',
-      cwd: '/Users/infinite27/AILCC_PRIME/nexus-dashboard',
-      script: '/usr/local/bin/npm',
+      cwd: `${AILCC_ROOT}/nexus-dashboard`,
+      script: 'npm',
       args: 'run dev -- --port 3007',
       env: {
-        PATH: '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin',
+        PATH: `/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${process.env.PATH}`,
         PORT: 3007,
         NODE_ENV: 'development',
-        AILCC_ROOT: '/Users/infinite27/AILCC_PRIME',
+        AILCC_ROOT: AILCC_ROOT,
         NEXT_TELEMETRY_DISABLED: '1'
       },
       autorestart: true,
-      watch: false,
       max_memory_restart: '800M'
     },
     {
       name: 'neural-relay',
-      cwd: '/Users/infinite27/AILCC_PRIME/nexus-dashboard',
+      cwd: `${AILCC_ROOT}/nexus-dashboard`,
       script: 'server/relay.js',
-      interpreter: '/usr/local/bin/node',
+      interpreter: 'node',
       env: {
-        PATH: '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin',
+        PATH: `/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${process.env.PATH}`,
         PORT: 3001,
         REDIS_BYPASS: 'true',
-        AILCC_ROOT: '/Users/infinite27/AILCC_PRIME'
+        AILCC_ROOT: AILCC_ROOT
       },
       autorestart: true,
-      watch: false,
       max_memory_restart: '400M'
     },
     {
       name: 'cortex-core',
       cwd: '/Volumes/XDriveBeta/AILCC_PRIME/00_Projects/Orchestration_Hub/cortex-core',
       script: 'main.py',
-      interpreter: '/usr/bin/python3',
+      interpreter: 'python3',
       args: '-m uvicorn main:app --host 0.0.0.0 --port 5005',
       env: {
-        PATH: '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin',
-        AILCC_ROOT: '/Users/infinite27/AILCC_PRIME'
+        AILCC_ROOT: AILCC_ROOT
       },
       autorestart: true,
-      watch: false,
       max_memory_restart: '300M'
     },
     {
       name: 'vanguard-bridge',
       cwd: '/Volumes/XDriveBeta/AILCC_PRIME/scripts',
       script: 'vanguard_bridge.py',
-      interpreter: '/usr/bin/python3',
+      interpreter: 'python3',
       env: {
-        PATH: '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin',
-        AILCC_ROOT: '/Users/infinite27/AILCC_PRIME'
+        AILCC_ROOT: AILCC_ROOT
       },
       autorestart: true,
-      watch: false,
       max_memory_restart: '200M'
     },
     {
       name: 'openclaw-gateway',
-      cwd: '/Users/infinite27/AILCC_PRIME/nexus-dashboard',
+      cwd: `${AILCC_ROOT}/nexus-dashboard`,
       script: './scripts/openclaw_gate.sh',
       interpreter: 'bash',
       autorestart: true,
-      watch: false,
-      max_memory_restart: '500M',
       env: {
-        PATH: '/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin',
-        AILCC_ROOT: '/Users/infinite27/AILCC_PRIME',
-        OPENCLAW_CONFIG_PATH: '/Users/infinite27/.openclaw/openclaw.json',
+        AILCC_ROOT: AILCC_ROOT,
+        OPENCLAW_CONFIG_PATH: '/Volumes/XDriveBeta/AILCC_PRIME/.openclaw/openclaw.json',
         OPENCLAW_UPDATE_CHECK: 'false'
-      }
+      },
+      max_memory_restart: '500M'
     }
   ]
 };
-
