@@ -652,3 +652,4 @@
 - [2026-04-22T21:50:47] operation: Swarm: Verifying mDNS discovery across Vanguard nodes (Pulse 005)
 - [2026-04-22T21:51:47] operation: Swarm: Verifying mDNS discovery across Vanguard nodes (Pulse 006)
 - [2026-04-22T21:52:47] operation: Swarm: Verifying mDNS discovery across Vanguard nodes (Pulse 007)
+- [2026-04-22T21:53:47] operation: Swarm: Verifying mDNS discovery across Vanguard nodes (Pulse 008)
