@@ -32,7 +32,7 @@ except ImportError:
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [SwarmDebater] %(message)s")
 logger = logging.getLogger(__name__)
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 TYCOON_REPORTS  = HIPPOCAMPUS_DIR / "tycoon_reports"
 DEBATE_DEPLOY_PATH = TYCOON_REPORTS / "crewai_quote_debate.json"
 

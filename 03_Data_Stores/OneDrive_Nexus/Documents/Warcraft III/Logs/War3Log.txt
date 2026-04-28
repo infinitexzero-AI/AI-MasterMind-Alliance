@@ -1,0 +1,542 @@
+2/4 22:50:48.477  GameMain Started
+2/4 22:50:48.477  Command Line: "C:\Program Files (x86)\Warcraft III\_retail_\x86_64\Warcraft III.exe" -launch -uid w3
+2/4 22:50:48.477  Current Directory: "C:\Program Files (x86)\Warcraft III\_retail_"
+2/4 22:50:49.477  prism: Info: name: Intel(R) Iris(R) Xe Graphics
+2/4 22:50:49.477  prism: Info: driverVersion: 0x0020000000651b72
+2/4 22:50:49.477  prism: Info: driverDate: 2025-08-19
+2/4 22:50:49.477  prism: Info: vendorId: Intel
+2/4 22:50:49.477  prism: Info: deviceId: 0x9a49
+2/4 22:50:49.477  prism: Info: subsystemVendorId: 0x17aa
+2/4 22:50:49.477  prism: Info: subsystemId: 0x5088
+2/4 22:50:49.477  prism: Info: revisionId: 0x01
+2/4 22:50:49.477  prism: Info: type: Integrated
+2/4 22:50:49.477  prism: Info: virtualizationMode: Unknown
+2/4 22:50:49.477  prism: Info: luid: 0000000000015439
+2/4 22:50:49.477  prism: Info: index: 0
+2/4 22:50:49.477  prism: Info: PCI bus slot: 0
+2/4 22:50:49.477  prism: Info: Max queues: 1 graphics, 1 compute, 1 copy
+2/4 22:50:49.477  prism: Info: Hybrid Graphics: 0
+2/4 22:50:49.477  prism: Info: api: Dx11
+2/4 22:50:49.477  prism: Info: supported: 1
+2/4 22:50:49.477  prism: Info: vendorId: Intel
+2/4 22:50:49.477  prism: Info: deviceId: 0x9a49
+2/4 22:50:49.477  prism: Info: intel.family: Gen12LP
+2/4 22:50:49.477  prism: Info: intel.maxGpuFreq: 1300 MHz
+2/4 22:50:49.477  prism: Info: intel.minGpuFreq: 100 MHz
+2/4 22:50:49.477  prism: Info: intel.euCount: 96
+2/4 22:50:49.477  prism: Info: intel.packageTDP: 28 Watts
+2/4 22:50:49.477  prism: Info: intel.maxFillRate: 24 GP/sec
+2/4 22:50:49.477  prism: Info: windowsVersion: 11
+2/4 22:50:49.477  prism: Info: windowsBuildNumber: 26200
+2/4 22:50:49.477  prism: Info: dx11.driverCommandLists: 0
+2/4 22:50:49.477  prism: Info: dxFeatureLevel: 11.1
+2/4 22:50:49.477  prism: Info: typedUavLoadAdditionalFormats: 1
+2/4 22:50:49.477  prism: Info: preferredShaderModel: Dx50
+2/4 22:50:49.477  prism: Info: supportedShaderModels:
+2/4 22:50:49.477  prism: Info:   Dx40Level91
+2/4 22:50:49.477  prism: Info:   Dx40Level93
+2/4 22:50:49.477  prism: Info:   Dx40
+2/4 22:50:49.477  prism: Info:   Dx41
+2/4 22:50:49.477  prism: Info:   Dx50
+2/4 22:50:49.477  prism: Info: maxBufferSize: 2107637760
+2/4 22:50:49.477  prism: Info: max1dTextureSize: 16384
+2/4 22:50:49.477  prism: Info: max2dTextureSize: 16384
+2/4 22:50:49.477  prism: Info: maxCubeTextureSize: 16384
+2/4 22:50:49.477  prism: Info: max3dTextureSize: 2048
+2/4 22:50:49.477  prism: Info: maxArrayLayers: 2048
+2/4 22:50:49.477  prism: Info: maxCommandBufferPageSize: 0
+2/4 22:50:49.477  prism: Info: maxConstantBufferRange: 65536
+2/4 22:50:49.477  prism: Info: maxTypedBufferRange: 2107637760
+2/4 22:50:49.477  prism: Info: maxStructuredBufferRange: 2107637760
+2/4 22:50:49.477  prism: Info: drawIndirectArgsAlign: 4
+2/4 22:50:49.477  prism: Info: dispatchIndirectArgsAlign: 4
+2/4 22:50:49.477  prism: Info: constantBufferOffsetAlign: 256
+2/4 22:50:49.477  prism: Info: constantBufferViewSizeAlign: 256
+2/4 22:50:49.477  prism: Info: typedBufferOffsetAlign: 16
+2/4 22:50:49.477  prism: Info: structuredBufferOffsetAlign: 16
+2/4 22:50:49.477  prism: Info: bufferTextureCopyRowPitchAlign: 256
+2/4 22:50:49.477  prism: Info: bufferTextureCopyOffsetAlign: 1024
+2/4 22:50:49.477  prism: Info: rwBufferClearUintSupport: 7
+2/4 22:50:49.477  prism: Info: rwBufferClearFloatSupport: 4
+2/4 22:50:49.477  prism: Info: raytracingShaderIdentifierSize: 0
+2/4 22:50:49.477  prism: Info: raytracingShaderTableAlign: 64
+2/4 22:50:49.477  prism: Info: raytracingShaderRecordAlign: 32
+2/4 22:50:49.477  prism: Info: raytracingAccelerationStructureAlign: 256
+2/4 22:50:49.477  prism: Info: raytracingInstanceAlign: 256
+2/4 22:50:49.477  prism: Info: raytracingInstanceStride: 0
+2/4 22:50:49.477  prism: Info: raytracingGeometryTransformAlign: 16
+2/4 22:50:49.477  prism: Info: raytracingGeometryTransformStride: 0
+2/4 22:50:49.477  prism: Info: raytracingBoundingBoxAlign: 8
+2/4 22:50:49.477  prism: Info: raytracingTriangleFanAlign: 0
+2/4 22:50:49.477  prism: Info: maxAnisotropy: 16
+2/4 22:50:49.477  prism: Info: maxColorAttachments: 8
+2/4 22:50:49.477  prism: Info: maxVertexShaderAttributes: 32
+2/4 22:50:49.477  prism: Info: minWaveLaneCount: 0
+2/4 22:50:49.477  prism: Info: maxWaveLaneCount: 0
+2/4 22:50:49.477  prism: Info: maxTraceRecursionDepth: 0
+2/4 22:50:49.477  prism: Info: maxViewportExtent: 65535x65535
+2/4 22:50:49.477  prism: Info: minViewportBounds: -32768
+2/4 22:50:49.477  prism: Info: maxViewportBounds: 32767
+2/4 22:50:49.477  prism: Info: minLodBias: -16
+2/4 22:50:49.477  prism: Info: maxLodBias: 15.99
+2/4 22:50:49.477  prism: Info: maxLodSnap: 0
+2/4 22:50:49.477  prism: Info: shaderRWTier: 5
+2/4 22:50:49.477  prism: Info: resourceBindingTier: 0
+2/4 22:50:49.477  prism: Info: resourceHeapTier: 0
+2/4 22:50:49.477  prism: Info: raytracingTier: 0
+2/4 22:50:49.477  prism: Info: variableRateShadingTier: 0
+2/4 22:50:49.477  prism: Info: meshShaderTier: 0
+2/4 22:50:49.477  prism: Info: synchronizationTier: 0
+2/4 22:50:49.477  prism: Info: bundleCmdListTier: 0
+2/4 22:50:49.477  prism: Info: minMaxFilterOps: 1
+2/4 22:50:49.477  prism: Info: mirrorOnce: 1
+2/4 22:50:49.477  prism: Info: borderColor: 1
+2/4 22:50:49.477  prism: Info: minLod: 1
+2/4 22:50:49.477  prism: Info: maxLod: 1
+2/4 22:50:49.477  prism: Info: fractionalMinLod: 1
+2/4 22:50:49.477  prism: Info: lodBias: 1
+2/4 22:50:49.477  prism: Info: multiMipRWTextureView: 0
+2/4 22:50:49.477  prism: Info: dualSrcBlend: 1
+2/4 22:50:49.477  prism: Info: separateAlphaBlend: 1
+2/4 22:50:49.477  prism: Info: alphaToCoverage: 1
+2/4 22:50:49.477  prism: Info: independentBlend: 1
+2/4 22:50:49.477  prism: Info: wireframe: 1
+2/4 22:50:49.477  prism: Info: depthBiasClamp: 1
+2/4 22:50:49.477  prism: Info: depthClamp: 1
+2/4 22:50:49.477  prism: Info: depthBoundsTest: 0
+2/4 22:50:49.477  prism: Info: stencilTextureView: 1
+2/4 22:50:49.477  prism: Info: geometryShader: 0
+2/4 22:50:49.477  prism: Info: tessellationShader: 0
+2/4 22:50:49.477  prism: Info: computeShader: 1
+2/4 22:50:49.477  prism: Info: tileShader: 0
+2/4 22:50:49.477  prism: Info: explicitShaderEntryPoint: 0
+2/4 22:50:49.477  prism: Info: programmableSamplePositions: 0
+2/4 22:50:49.477  prism: Info: instancing: 1
+2/4 22:50:49.477  prism: Info: baseVertex: 1
+2/4 22:50:49.477  prism: Info: baseInstance: 1
+2/4 22:50:49.477  prism: Info: drawIndirect: 1
+2/4 22:50:49.477  prism: Info: drawIndirectBaseInstance: 1
+2/4 22:50:49.477  prism: Info: drawIndirectCountBuffer: 0
+2/4 22:50:49.477  prism: Info: deviceLocalConstantBufferOffsets: 1
+2/4 22:50:49.477  prism: Info: deviceLocalQueries: 0
+2/4 22:50:49.477  prism: Info: overlappingOcclusionQueries: 1
+2/4 22:50:49.477  prism: Info: precision16Bits: 1
+2/4 22:50:49.477  prism: Info: rasterOrderViews: 1
+2/4 22:50:49.477  prism: Info: exclusiveFullscreen: 1
+2/4 22:50:49.477  prism: Info: uma: 1
+2/4 22:50:49.477  prism: Info: streamOut: 1
+2/4 22:50:49.477  prism: Info: barycentrics: 0
+2/4 22:50:49.477  prism: Info: placedUploads: 0
+2/4 22:50:49.477  prism: Info: frameCaptureToTool: 0
+2/4 22:50:49.477  prism: Info: frameCaptureToFile: 0
+2/4 22:50:49.477  prism: Info: waveOps: 0
+2/4 22:50:49.477  prism: Info: clockCalibration: 0
+2/4 22:50:49.477  prism: Info: schedulableSwapChain: 0
+2/4 22:50:49.477  prism: Info: pipelineStageFlagsIgnored: 0
+2/4 22:50:49.477  prism: Info: swapChainVsyncThresholdTop: 0
+2/4 22:50:49.477  prism: Info: swapChainVsyncThresholdBottom: 0
+2/4 22:50:49.477  prism: Info: multiShaderStageBinding: 0
+2/4 22:50:49.478  prism: Info: commonStatePromotion: 0
+2/4 22:50:49.478  prism: Info: generateMips: 1
+2/4 22:50:49.478  prism: Info: offlineBvh: 0
+2/4 22:50:49.478  prism: Info: registerSpaces: 0
+2/4 22:50:49.478  prism: Info: unboundedRanges: 0
+2/4 22:50:49.478  prism: Info: conservativeRaster: 0
+2/4 22:50:49.478  prism: Info: supportedQueries:
+2/4 22:50:49.478  prism: Info:   BinaryOcclusion
+2/4 22:50:49.478  prism: Info:   CountingOcclusion
+2/4 22:50:49.478  prism: Info:   Timestamp
+2/4 22:50:49.478  prism: Info: supportedPresentStatistics:
+2/4 22:50:49.478  prism: Info:   VBlankInterval
+2/4 22:50:49.478  prism: Info:   VBlankTime
+2/4 22:50:49.765  Searching for display mode: { display: 1, width: 1280, height: 720, bpp: 0, refreshrate: 60 }
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 800, height: 600, bpp: 32, refreshrate: 50 }, err: 2491008
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 800, height: 600, bpp: 32, refreshrate: 60 }, err: 2490368
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 800, height: 600, bpp: 32, refreshrate: 72 }, err: 2491136
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 800, height: 600, bpp: 32, refreshrate: 75 }, err: 2491328
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 800, height: 600, bpp: 32, refreshrate: 120 }, err: 2494208
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1024, height: 768, bpp: 32, refreshrate: 50 }, err: 1311360
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1024, height: 768, bpp: 32, refreshrate: 60 }, err: 1310720
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1024, height: 768, bpp: 32, refreshrate: 70 }, err: 1311360
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1024, height: 768, bpp: 32, refreshrate: 75 }, err: 1311680
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1024, height: 768, bpp: 32, refreshrate: 120 }, err: 1314560
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1152, height: 864, bpp: 32, refreshrate: 50 }, err: 1180288
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1152, height: 864, bpp: 32, refreshrate: 60 }, err: 1179648
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1152, height: 864, bpp: 32, refreshrate: 75 }, err: 1180608
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1152, height: 864, bpp: 32, refreshrate: 120 }, err: 1183488
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 600, bpp: 32, refreshrate: 50 }, err: 524928
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 600, bpp: 32, refreshrate: 60 }, err: 524288
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 600, bpp: 32, refreshrate: 120 }, err: 528128
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 720, bpp: 32, refreshrate: 50 }, err: 640
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 720, bpp: 32, refreshrate: 60 }, err: 0
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 720, bpp: 32, refreshrate: 120 }, err: 3840
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 768, bpp: 32, refreshrate: 50 }, err: 262784
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 768, bpp: 32, refreshrate: 60 }, err: 262144
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 768, bpp: 32, refreshrate: 120 }, err: 265984
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 800, bpp: 32, refreshrate: 50 }, err: 393856
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 800, bpp: 32, refreshrate: 60 }, err: 393216
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 800, bpp: 32, refreshrate: 120 }, err: 397056
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 960, bpp: 32, refreshrate: 50 }, err: 1049216
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 960, bpp: 32, refreshrate: 60 }, err: 1048576
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1280, height: 960, bpp: 32, refreshrate: 120 }, err: 1052416
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1360, height: 768, bpp: 32, refreshrate: 50 }, err: 590464
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1360, height: 768, bpp: 32, refreshrate: 60 }, err: 589824
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1360, height: 768, bpp: 32, refreshrate: 120 }, err: 593664
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1366, height: 768, bpp: 32, refreshrate: 50 }, err: 590464
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1366, height: 768, bpp: 32, refreshrate: 60 }, err: 589824
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1366, height: 768, bpp: 32, refreshrate: 120 }, err: 593664
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1400, height: 1050, bpp: 32, refreshrate: 50 }, err: 1901184
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1400, height: 1050, bpp: 32, refreshrate: 60 }, err: 1900544
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1400, height: 1050, bpp: 32, refreshrate: 120 }, err: 1904384
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1440, height: 900, bpp: 32, refreshrate: 50 }, err: 1442432
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1440, height: 900, bpp: 32, refreshrate: 60 }, err: 1441792
+2/4 22:50:49.784  Testing Display Mode: { display: 1, width: 1440, height: 900, bpp: 32, refreshrate: 120 }, err: 1445632
+2/4 22:50:49.790  Testing Display Mode: { display: 1, width: 1600, height: 900, bpp: 32, refreshrate: 50 }, err: 2097792
+2/4 22:50:49.790  Testing Display Mode: { display: 1, width: 1600, height: 900, bpp: 32, refreshrate: 60 }, err: 2097152
+2/4 22:50:49.790  Testing Display Mode: { display: 1, width: 1600, height: 900, bpp: 32, refreshrate: 120 }, err: 2100992
+2/4 22:50:49.790  Testing Display Mode: { display: 1, width: 1680, height: 1050, bpp: 32, refreshrate: 50 }, err: 3015296
+2/4 22:50:49.790  Testing Display Mode: { display: 1, width: 1680, height: 1050, bpp: 32, refreshrate: 60 }, err: 3014656
+2/4 22:50:49.790  Testing Display Mode: { display: 1, width: 1680, height: 1050, bpp: 32, refreshrate: 120 }, err: 3018496
+2/4 22:50:49.790  Testing Display Mode: { display: 1, width: 1920, height: 1080, bpp: 32, refreshrate: 50 }, err: 4129408
+2/4 22:50:49.790  Testing Display Mode: { display: 1, width: 1920, height: 1080, bpp: 32, refreshrate: 60 }, err: 4128768
+2/4 22:50:49.790  Testing Display Mode: { display: 1, width: 1920, height: 1080, bpp: 32, refreshrate: 120 }, err: 4132608
+2/4 22:50:49.816  Searching for display mode: { display: 1, width: 1280, height: 720, bpp: 32, refreshrate: 60 }
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 800, height: 600, bpp: 32, refreshrate: 50 }, err: 2491070
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 800, height: 600, bpp: 32, refreshrate: 60 }, err: 2490430
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 800, height: 600, bpp: 32, refreshrate: 72 }, err: 2491198
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 800, height: 600, bpp: 32, refreshrate: 75 }, err: 2491390
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 800, height: 600, bpp: 32, refreshrate: 120 }, err: 2494270
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1024, height: 768, bpp: 32, refreshrate: 50 }, err: 1311422
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1024, height: 768, bpp: 32, refreshrate: 60 }, err: 1310782
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1024, height: 768, bpp: 32, refreshrate: 70 }, err: 1311422
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1024, height: 768, bpp: 32, refreshrate: 75 }, err: 1311742
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1024, height: 768, bpp: 32, refreshrate: 120 }, err: 1314622
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1152, height: 864, bpp: 32, refreshrate: 50 }, err: 1180350
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1152, height: 864, bpp: 32, refreshrate: 60 }, err: 1179710
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1152, height: 864, bpp: 32, refreshrate: 75 }, err: 1180670
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1152, height: 864, bpp: 32, refreshrate: 120 }, err: 1183550
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 600, bpp: 32, refreshrate: 50 }, err: 524990
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 600, bpp: 32, refreshrate: 60 }, err: 524350
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 600, bpp: 32, refreshrate: 120 }, err: 528190
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 720, bpp: 32, refreshrate: 50 }, err: 702
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 720, bpp: 32, refreshrate: 60 }, err: 62
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 720, bpp: 32, refreshrate: 120 }, err: 3902
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 768, bpp: 32, refreshrate: 50 }, err: 262846
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 768, bpp: 32, refreshrate: 60 }, err: 262206
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 768, bpp: 32, refreshrate: 120 }, err: 266046
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 800, bpp: 32, refreshrate: 50 }, err: 393918
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 800, bpp: 32, refreshrate: 60 }, err: 393278
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 800, bpp: 32, refreshrate: 120 }, err: 397118
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 960, bpp: 32, refreshrate: 50 }, err: 1049278
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 960, bpp: 32, refreshrate: 60 }, err: 1048638
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1280, height: 960, bpp: 32, refreshrate: 120 }, err: 1052478
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1360, height: 768, bpp: 32, refreshrate: 50 }, err: 590526
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1360, height: 768, bpp: 32, refreshrate: 60 }, err: 589886
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1360, height: 768, bpp: 32, refreshrate: 120 }, err: 593726
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1366, height: 768, bpp: 32, refreshrate: 50 }, err: 590526
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1366, height: 768, bpp: 32, refreshrate: 60 }, err: 589886
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1366, height: 768, bpp: 32, refreshrate: 120 }, err: 593726
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1400, height: 1050, bpp: 32, refreshrate: 50 }, err: 1901246
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1400, height: 1050, bpp: 32, refreshrate: 60 }, err: 1900606
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1400, height: 1050, bpp: 32, refreshrate: 120 }, err: 1904446
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1440, height: 900, bpp: 32, refreshrate: 50 }, err: 1442494
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1440, height: 900, bpp: 32, refreshrate: 60 }, err: 1441854
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1440, height: 900, bpp: 32, refreshrate: 120 }, err: 1445694
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1600, height: 900, bpp: 32, refreshrate: 50 }, err: 2097854
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1600, height: 900, bpp: 32, refreshrate: 60 }, err: 2097214
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1600, height: 900, bpp: 32, refreshrate: 120 }, err: 2101054
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1680, height: 1050, bpp: 32, refreshrate: 50 }, err: 3015358
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1680, height: 1050, bpp: 32, refreshrate: 60 }, err: 3014718
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1680, height: 1050, bpp: 32, refreshrate: 120 }, err: 3018558
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1920, height: 1080, bpp: 32, refreshrate: 50 }, err: 4129470
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1920, height: 1080, bpp: 32, refreshrate: 60 }, err: 4128830
+2/4 22:50:49.855  Testing Display Mode: { display: 1, width: 1920, height: 1080, bpp: 32, refreshrate: 120 }, err: 4132670
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//5) Error, string /SimpleInfoPanelTitleTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//11) Error, string /SimpleInfoPanelTitleTextDisabledTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//15) Error, string /SimpleInfoPanelDescriptionTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//21) Error, string /SimpleInfoPanelDescriptionHighlightTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//24) Error, string /SimpleInfoPanelDescriptionDisabledTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//28) Error, string /SimpleInfoPanelLabelTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//36) Error, string /SimpleInfoPanelLabelHighlightTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//39) Error, string /SimpleInfoPanelLabelDisabledTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//43) Error, string /SimpleInfoPanelValueTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//47) Error, string /SimpleInfoPanelObserverValueTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//56) Error, string /SimpleInfoPanelAttributeTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//62) Error, string /SimpleInfoPanelAttributeDisabledTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//66) Error, string /InfoPanelIconTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//72) Error, string /ResourceIconTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//77) Error, string /ResourceTextTemplate already exists!
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//10) Warning, unknown keyword in context: FontHighlightColor
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//10) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//10) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//10) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//10) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//10) Warning, unknown keyword in context: ,
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//11) Warning, unknown keyword in context: FontDisabledColor
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//11) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//11) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//11) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//11) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//11) Warning, unknown keyword in context: ,
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//19) Warning, unknown keyword in context: FontHighlightColor
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//19) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//19) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//19) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//19) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//19) Warning, unknown keyword in context: ,
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//20) Warning, unknown keyword in context: FontDisabledColor
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//20) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//20) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//20) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//20) Warning, unknown keyword in context: Literal Float
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//20) Warning, unknown keyword in context: ,
+2/4 22:50:50.865  Error (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf:78): Expected ",", but found "}"
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//81) Warning, unknown keyword in context: Layer
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//81) Warning, unknown keyword in context: Literal String
+2/4 22:50:50.865  (UI\FrameDef\UI\ObserverSimpleInfoPanel.fdf//81) Warning, unknown keyword in context: {
+2/4 22:50:50.865  (UI\FrameDef\UI\ProductionPanelUnit.fdf//40) Error, token "LayerStyle" invalid for given frame type!
+2/4 22:50:50.865  (UI\FrameDef\UI\ProductionPanelUnit.fdf//40) Error, token "Literal String" invalid for given frame type!
+2/4 22:50:52.380  Opening map - Maps/(10)dustwallowkeys.w3m
+2/4 22:50:52.384  Opening map - Maps/(12)divideandconquer.w3m
+2/4 22:50:52.384  Opening map - Maps/(12)icecrown.w3m
+2/4 22:50:52.384  Opening map - Maps/(2)a_starter_map_losttemple_lv.w3x
+2/4 22:50:52.384  Opening map - Maps/(2)bootybay.w3m
+2/4 22:50:52.384  Opening map - Maps/(2)harrow.w3m
+2/4 22:50:52.384  Opening map - Maps/(2)hillsofglory.w3m
+2/4 22:50:52.384  Opening map - Maps/(2)ogremound.w3m
+2/4 22:50:52.384  Opening map - Maps/(2)plunderisle.w3m
+2/4 22:50:52.384  Opening map - Maps/(3)forestwalk.w3m
+2/4 22:50:52.400  Opening map - Maps/(3)isleofdread.w3m
+2/4 22:50:52.400  Opening map - Maps/(3)nighthaven.w3m
+2/4 22:50:52.400  Opening map - Maps/(4)adrenaline.w3m
+2/4 22:50:52.400  Opening map - Maps/(4)borderlands.w3m
+2/4 22:50:52.400  Opening map - Maps/(4)deadlock.w3m
+2/4 22:50:52.400  Opening map - Maps/(4)deadwaterdrop.w3m
+2/4 22:50:52.400  Opening map - Maps/(4)dragonmountain.w3m
+2/4 22:50:52.400  Opening map - Maps/(4)duskwood.w3m
+2/4 22:50:52.400  Opening map - Maps/(4)frostsabre.w3m
+2/4 22:50:52.400  Opening map - Maps/(4)harvestmoon.w3m
+2/4 22:50:52.415  Opening map - Maps/(4)hearttoheart.w3m
+2/4 22:50:52.415  Opening map - Maps/(4)legends.w3m
+2/4 22:50:52.415  Opening map - Maps/(4)losttemple.w3m
+2/4 22:50:52.415  Opening map - Maps/(4)mysticisles.w3m
+2/4 22:50:52.415  Opening map - Maps/(4)tranquilpaths.w3m
+2/4 22:50:52.415  Opening map - Maps/(5)theglaive.w3m
+2/4 22:50:52.415  Opening map - Maps/(6)darkforest.w3m
+2/4 22:50:52.415  Opening map - Maps/(6)dragonfire.w3m
+2/4 22:50:52.431  Opening map - Maps/(6)drywatergulch.w3m
+2/4 22:50:52.431  Opening map - Maps/(6)gnollwood.w3m
+2/4 22:50:52.431  Opening map - Maps/(6)moonglade.w3m
+2/4 22:50:52.431  Opening map - Maps/(6)scorchedbasin.w3m
+2/4 22:50:52.431  Opening map - Maps/(6)stromguarde.w3m
+2/4 22:50:52.431  Opening map - Maps/(6)swampofsorrows.w3m
+2/4 22:50:52.431  Opening map - Maps/(6)timbermawhold.w3m
+2/4 22:50:52.431  Opening map - Maps/(8)battleground.w3m
+2/4 22:50:52.431  Opening map - Maps/(8)blastedlands.w3m
+2/4 22:50:52.447  Opening map - Maps/(8)bloodvenomfalls.w3m
+2/4 22:50:52.447  Opening map - Maps/(8)gardenofwar.w3m
+2/4 22:50:52.447  Opening map - Maps/(8)golemsinthemist.w3m
+2/4 22:50:52.447  Opening map - Maps/(8)petrifiedforest.w3m
+2/4 22:50:52.447  Opening map - Maps/(8)plaguelands.w3m
+2/4 22:50:52.447  Opening map - Maps/(8)plainsofsnow.w3m
+2/4 22:50:52.447  Opening map - Maps/(8)richmansgarden.w3m
+2/4 22:50:52.447  Opening map - Maps/(8)thecrucible.w3m
+2/4 22:50:52.462  Opening map - Maps/(9)riverrun.w3m
+2/4 22:53:19.283  Activating WebUI
+2/4 22:53:24.447  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(4)PhantomGrove_S2_v2.0.w3x
+2/4 22:53:24.447  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(4)TidewaterGlades_S2_v1.1.w3x
+2/4 22:53:24.463  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(4)TwistedMeadows_S2_v1.1.w3x
+2/4 22:53:24.463  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(4)LostTemple_S2.w3x
+2/4 22:53:24.478  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(2)NorthernIsles_S2.w3x
+2/4 22:53:24.478  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(2)TerenasStand_LV.w3x
+2/4 22:53:24.501  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(6)GnollWood_S2.w3x
+2/4 22:53:24.510  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(6)UpperKingdom.w3x
+2/4 22:53:24.510  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(6)StranglethornVale.w3x
+2/4 22:53:24.510  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(6)Typhoon.w3x
+2/4 22:53:24.510  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(2)LastRefuge_S2_v1.5.w3x
+2/4 22:53:24.528  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(2)ConcealedHill_S2.w3x
+2/4 22:53:24.997  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)TwistedMeadows_S2_v1.1.w3x
+2/4 22:53:24.997  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)EchoIsles_S2_v2.2.w3x
+2/4 22:53:25.015  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)TerenasStand_LV.w3x
+2/4 22:53:25.015  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)LostTemple_S2.w3x
+2/4 22:53:25.030  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)LastRefuge_S2_v1.5.w3x
+2/4 22:53:25.030  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)Tidehunters_S2_v1.2.w3x
+2/4 22:53:25.043  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)TurtleRock_S2.w3x
+2/4 22:53:25.043  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)NorthernIsles_S2.w3x
+2/4 22:53:25.056  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)Hammerfall_S3.w3x
+2/4 22:53:25.056  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)AutumnLeaves_S2_v2.0.w3x
+2/4 22:53:25.073  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)ConcealedHill_S2.w3x
+2/4 22:53:25.073  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)SecretValley_S2_v2.0.w3x
+2/4 23:26:38.103  Activating WebUI
+2/4 23:26:38.103  Activating WebUI
+2/5 01:04:34.587  GameMain Ended
+ments/Warcraft III/Maps/Download/Season8/(4)LostTemple_S2.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)PhantomGrove_S2_v2.0.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)ShatteredExile_S2_v2.4.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)Synergy_S2.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)TidewaterGlades_S2_v1.1.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)TurtleRock_S2.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)TwistedMeadows_S2_v1.1.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(6)BloodstoneMesa_LV.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(6)Dragonblight.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(6)Duststorm_LV.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(6)GnollWood.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(6)Monsoon_LV.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(6)SilverpineForest.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(6)ThunderLake_LV.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(6)TimbermawHold.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(6)Typhoon.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(6)UpperKingdom.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Battleground_LV.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Deadlock_LV.w3x
+2/4 23:29:46.337  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)EkrezemsMaze_S2_v1.1.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Feralas_S2.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Ferocity_S2_v1.2.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)FullScaleAssault.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)MarketSquare.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Monopoly_S2_v1.5.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Mur'gulOasis_LV.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Northshire_S2.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)PaintedWorld_S2.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)RoyalGardens_S2_v1.2.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Sanctuary_LV_S2.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)TwilightRuins_LV.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)TwilightRuins_S2.w3x
+2/4 23:29:46.353  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)WellspringTemple_S2_v1.2.w3x
+2/4 23:29:46.353  Opening map - Maps/(10)dustwallowkeys.w3m
+2/4 23:29:46.353  Opening map - Maps/(12)divideandconquer.w3m
+2/4 23:29:46.353  Opening map - Maps/(12)icecrown.w3m
+2/4 23:29:46.353  Opening map - Maps/(2)a_starter_map_losttemple_lv.w3x
+2/4 23:29:46.369  Opening map - Maps/(2)bootybay.w3m
+2/4 23:29:46.369  Opening map - Maps/(2)harrow.w3m
+2/4 23:29:46.369  Opening map - Maps/(2)hillsofglory.w3m
+2/4 23:29:46.369  Opening map - Maps/(2)ogremound.w3m
+2/4 23:29:46.369  Opening map - Maps/(2)plunderisle.w3m
+2/4 23:29:46.369  Opening map - Maps/(3)forestwalk.w3m
+2/4 23:29:46.369  Opening map - Maps/(3)isleofdread.w3m
+2/4 23:29:46.369  Opening map - Maps/(3)nighthaven.w3m
+2/4 23:29:46.369  Opening map - Maps/(4)adrenaline.w3m
+2/4 23:29:46.369  Opening map - Maps/(4)borderlands.w3m
+2/4 23:29:46.369  Opening map - Maps/(4)deadlock.w3m
+2/4 23:29:46.369  Opening map - Maps/(4)deadwaterdrop.w3m
+2/4 23:29:46.369  Opening map - Maps/(4)dragonmountain.w3m
+2/4 23:29:46.386  Opening map - Maps/(4)duskwood.w3m
+2/4 23:29:46.386  Opening map - Maps/(4)frostsabre.w3m
+2/4 23:29:46.386  Opening map - Maps/(4)harvestmoon.w3m
+2/4 23:29:46.386  Opening map - Maps/(4)hearttoheart.w3m
+2/4 23:29:46.386  Opening map - Maps/(4)legends.w3m
+2/4 23:29:46.386  Opening map - Maps/(4)losttemple.w3m
+2/4 23:29:46.386  Opening map - Maps/(4)mysticisles.w3m
+2/4 23:29:46.386  Opening map - Maps/(4)tranquilpaths.w3m
+2/4 23:29:46.399  Opening map - Maps/(5)theglaive.w3m
+2/4 23:29:46.399  Opening map - Maps/(6)darkforest.w3m
+2/4 23:29:46.399  Opening map - Maps/(6)dragonfire.w3m
+2/4 23:29:46.399  Opening map - Maps/(6)drywatergulch.w3m
+2/4 23:29:46.399  Opening map - Maps/(6)gnollwood.w3m
+2/4 23:29:46.399  Opening map - Maps/(6)moonglade.w3m
+2/4 23:29:46.399  Opening map - Maps/(6)scorchedbasin.w3m
+2/4 23:29:46.399  Opening map - Maps/(6)stromguarde.w3m
+2/4 23:29:46.399  Opening map - Maps/(6)swampofsorrows.w3m
+2/4 23:29:46.399  Opening map - Maps/(6)timbermawhold.w3m
+2/4 23:29:46.399  Opening map - Maps/(8)battleground.w3m
+2/4 23:29:46.415  Opening map - Maps/(8)blastedlands.w3m
+2/4 23:29:46.415  Opening map - Maps/(8)bloodvenomfalls.w3m
+2/4 23:29:46.415  Opening map - Maps/(8)gardenofwar.w3m
+2/4 23:29:46.415  Opening map - Maps/(8)golemsinthemist.w3m
+2/4 23:29:46.415  Opening map - Maps/(8)petrifiedforest.w3m
+2/4 23:29:46.415  Opening map - Maps/(8)plaguelands.w3m
+2/4 23:29:46.415  Opening map - Maps/(8)plainsofsnow.w3m
+2/4 23:29:46.415  Opening map - Maps/(8)richmansgarden.w3m
+2/4 23:29:46.415  Opening map - Maps/(8)thecrucible.w3m
+2/4 23:29:46.415  Opening map - Maps/(9)riverrun.w3m
+2/4 23:30:24.982  Activating WebUI
+2/4 23:30:26.671  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(4)PhantomGrove_S2_v2.0.w3x
+2/4 23:30:26.683  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(4)TidewaterGlades_S2_v1.1.w3x
+2/4 23:30:26.683  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(4)TwistedMeadows_S2_v1.1.w3x
+2/4 23:30:26.706  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(4)LostTemple_S2.w3x
+2/4 23:30:26.719  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(2)NorthernIsles_S2.w3x
+2/4 23:30:26.731  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(2)TerenasStand_LV.w3x
+2/4 23:30:26.753  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(6)GnollWood_S2.w3x
+2/4 23:30:26.764  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(6)UpperKingdom.w3x
+2/4 23:30:26.764  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(6)StranglethornVale.w3x
+2/4 23:30:26.775  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(6)Typhoon.w3x
+2/4 23:30:26.775  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(2)LastRefuge_S2_v1.5.w3x
+2/4 23:30:26.795  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(2)ConcealedHill_S2.w3x
+2/4 23:30:27.371  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)EchoIsles_S2_v2.2.w3x
+2/4 23:30:27.371  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)TerenasStand_LV.w3x
+2/4 23:30:27.371  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)LostTemple_S2.w3x
+2/4 23:30:27.394  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)LastRefuge_S2_v1.5.w3x
+2/4 23:30:27.403  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)Tidehunters_S2_v1.2.w3x
+2/4 23:30:27.403  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)TurtleRock_S2.w3x
+2/4 23:30:27.416  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)AutumnLeaves_S2_v2.0.w3x
+2/4 23:30:27.416  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)NorthernIsles_S2.w3x
+2/4 23:30:27.432  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)TwistedMeadows_S2_v1.1.w3x
+2/4 23:30:27.432  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)Hammerfall_S3.w3x
+2/4 23:30:27.447  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)ConcealedHill_S2.w3x
+2/4 23:30:27.447  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)SecretValley_S2_v2.0.w3x
+2/4 23:30:51.900  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)EchoIsles_S2_v2.2.w3x
+2/4 23:30:51.975  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)TerenasStand_LV.w3x
+2/4 23:30:52.021  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)LostTemple_S2.w3x
+2/4 23:30:52.063  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)LastRefuge_S2_v1.5.w3x
+2/4 23:30:52.107  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)Tidehunters_S2_v1.2.w3x
+2/4 23:30:52.154  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)Hammerfall_S3.w3x
+2/4 23:30:52.205  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)SecretValley_S2_v2.0.w3x
+2/4 23:30:52.247  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)NorthernIsles_S2.w3x
+2/4 23:30:52.277  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)TurtleRock_S2.w3x
+2/4 23:30:52.317  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)ConcealedHill_S2.w3x
+2/4 23:30:52.347  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(4)TwistedMeadows_S2_v1.1.w3x
+2/4 23:30:52.387  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(2)AutumnLeaves_S2_v2.0.w3x
+2/4 23:31:08.161  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Deadlock_LV.w3x
+2/4 23:31:08.166  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Battleground_LV.w3x
+2/4 23:31:08.166  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)FullScaleAssault.w3x
+2/4 23:31:08.166  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)TwilightRuins_LV.w3x
+2/4 23:31:08.166  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)EkrezemsMaze_S2_v1.1.w3x
+2/4 23:31:08.194  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Monopoly_S2_v1.5.w3x
+2/4 23:31:08.204  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)PaintedWorld_S2.w3x
+2/4 23:31:08.204  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)MarketSquare.w3x
+2/4 23:31:08.215  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Feralas_S2.w3x
+2/4 23:31:08.215  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)RoyalGardens_S2_v1.2.w3x
+2/4 23:31:08.233  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Sanctuary_LV_S2.w3x
+2/4 23:31:08.233  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Northshire_S2.w3x
+2/4 23:31:08.264  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Deadlock_LV.w3x
+2/4 23:31:08.299  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Battleground_LV.w3x
+2/4 23:31:08.327  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)FullScaleAssault.w3x
+2/4 23:31:08.350  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)TwilightRuins_LV.w3x
+2/4 23:31:08.379  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)EkrezemsMaze_S2_v1.1.w3x
+2/4 23:31:08.412  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Monopoly_S2_v1.5.w3x
+2/4 23:31:08.448  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)PaintedWorld_S2.w3x
+2/4 23:31:08.480  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)MarketSquare.w3x
+2/4 23:31:08.515  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Feralas_S2.w3x
+2/4 23:31:08.541  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)RoyalGardens_S2_v1.2.w3x
+2/4 23:31:08.569  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Sanctuary_LV_S2.w3x
+2/4 23:31:08.597  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Northshire_S2.w3x
+2/4 23:31:38.187  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Deadlock_LV.w3x
+2/4 23:31:38.187  NetProviderBNET::PostDistFileComplete()
+2/4 23:31:39.177  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season8/(8)Deadlock_LV.w3x
+2/4 23:31:56.453  model creation failed - NEBirth.MDL
+2/4 23:31:56.453  model creation failed - NEBirth.MDL
+2/4 23:33:53.220  model creation failed - Units/Orc/HeroBladeMaster/1_HeroBladeMasterSpin.mdl
+2/4 23:39:21.805  model creation failed - Units/Orc/Samuro/1_SamuroSpin.mdl
+2/4 23:41:49.698  model creation failed - 
+2/4 23:49:59.767  OnMatchCompleted received - MM-2BB97482-0243-11F1-9EB9-FA164D13459D
+2/4 23:49:59.886  CMatchResultsCache GetData success
+2/5 00:21:27.704  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(8)Monopoly_S2_v1.5.w3x
+2/5 00:21:27.715  NetProviderBNET::PostDistFileComplete()
+2/5 00:21:28.714  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(8)Monopoly_S2_v1.5.w3x
+2/5 00:33:48.796  model creation failed - 
+2/5 00:40:04.256  Saving Game: ignoreCommand = true 
+2/5 00:40:04.256  Saving Game: ignoreCommand = true 
+2/5 00:40:04.256  Saving Game: ignoreCommand = true 
+2/5 00:40:04.256  Saving Game: ignoreCommand = true 
+2/5 00:40:04.256  Saving Game: ignoreCommand = true 
+2/5 00:40:04.256  Saving Game: ignoreCommand = true 
+2/5 00:40:07.651  OnMatchCompleted received - MM-21EEA01A-024A-11F1-9EB9-FA164D13459D
+2/5 00:40:07.781  CMatchResultsCache GetData success
+2/5 00:41:19.798  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(8)Northshire_S2.w3x
+2/5 00:41:19.798  NetProviderBNET::PostDistFileComplete()
+2/5 00:41:24.083  Opening map - C:/Users/infin/Documents/Warcraft III/Maps/Download/Season1/(8)Northshire_S2.w3x
+2/5 00:41:37.504  model creation failed - NEBirth.MDL
+2/5 00:51:21.873  model creation failed - 
+2/5 00:56:46.957  OnMatchCompleted received - MM-E885079E-024C-11F1-88DA-FA164CC2AD76
+2/5 00:56:47.103  CMatchResultsCache GetData success
+2/5 01:04:46.614  GameMain Ended

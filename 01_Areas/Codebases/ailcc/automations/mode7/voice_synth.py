@@ -2,7 +2,7 @@ import asyncio
 import edge_tts
 import os
 
-OUTPUT_FILE = "/Users/infinite27/AILCC_PRIME/03_Intelligence_Vault/valentine_voice.mp3"
+OUTPUT_FILE = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/03_Intelligence_Vault/valentine_voice.mp3"
 TEXT = "Chaos neutralized, boss."
 VOICE = "en-US-ChristopherNeural"  # Deep, calm male voice
 

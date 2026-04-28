@@ -1,0 +1,45 @@
+﻿GFX  19:48:35.351 ====================================================================================================
+GFX  19:48:35.351 StarCraft II (B96592)
+GFX  19:48:35.351 
+GFX  19:48:35.351 Executable              C:\Program Files (x86)\StarCraft II\Versions\Base95841\SC2_x64.exe
+GFX  19:48:35.351 <Parameters>            -sso=1 -launch -uid s2
+GFX  19:48:35.351 Parent Executable       \Device\HarddiskVolume3\Program Files (x86)\StarCraft II\Support64\SC2Switcher_x64.exe
+GFX  19:48:35.351 Grandparent Executable  \Device\HarddiskVolume3\Program Files (x86)\Battle.net\Battle.net.exe
+GFX  19:48:35.351 LocalTime               2026-03-30 19:48:35.353
+GFX  19:48:35.351 <ComputerUser>          infin
+GFX  19:48:35.351 <ComputerName>          THINKPAD27
+GFX  19:48:35.351 <Exe.Architecture>      x86_64
+GFX  19:48:35.351 <Version>               5.0.15.96592
+GFX  19:48:35.351 <DataBuild>             B96592
+GFX  19:48:35.351 <CodeBranch>            branches/SC2.5.0.a
+GFX  19:48:35.351 <CodeRevision>          663425
+GFX  19:48:35.351 <Locale.Assets>         enUS
+GFX  19:48:35.351 <Locale.Data>           enUS
+GFX  19:48:35.351 <Locale.Install>        enUS
+GFX  19:48:35.351 <AccountCountry>        CAN
+GFX  19:48:35.351 <AgentVersion>          not_started
+GFX  19:48:35.351 ====================================================================================================
+GFX  19:48:35.351 DXGI: Available
+GFX  19:48:35.516 Resource Cache Override Variable: 0MB
+GFX  19:48:35.516 Resource Cache: 2048MB Win64 (16082MB Physical, 10121MB Process Virtual)
+GFX  19:48:35.516 Resource Cache Sound:  204MB 
+GFX  19:48:35.516 Resource Cache Common: 1843MB 
+GFX  19:48:35.516 Resource Cache VRam:   0MB
+GFX  19:48:35.549 Selected display mode 1920x1080x0 with format D3DFMT_X8R8G8B8 and error delta 0
+GFX  19:48:35.549 Adapter [0]: Intel(R) Iris(R) Xe Graphics (VendorID 0x8086 DeviceID 0x9a49)
+GFX  19:48:35.549 Adapter [1]: Intel(R) Iris(R) Xe Graphics (VendorID 0x8086 DeviceID 0x9a49)
+GFX  19:48:35.549 Attempting CreateDevice on adapter [0] (VendorID 0x8086 DeviceID 0x9a49)
+GFX  19:48:35.594 Intel Integrated GPU using vertex processing type [Hardware]
+GFX  19:48:35.594 CreateDevice succeeded
+GFX  19:48:35.594 Using adapter [0]
+GFX  19:48:35.594 Floating point render targets supported.
+GFX  19:48:35.607 DXGI Adapter Name: Intel(R) Iris(R) Xe Graphics
+GFX  19:48:35.607 VRAM Detected: Dedicated [4020MB] Shared [4020MB] (DXGI)
+GFX  19:48:35.607 VRAM Override Variables: Dedicated [0MB] Shared [0MB]
+GFX  19:48:35.607 Initialized D3D9 GraphicsDevice: Intel(R) Iris(R) Xe Graphics (Driver Version: 32.0.101.7026, VRAM: 4020MB, SVMEM: 4020MB).
+GFX  19:48:35.620 Selected display mode 1920x1080x0 with format D3DFMT_X8R8G8B8 and error delta 0
+GFX  19:48:35.620 Hardware Depth Sampling: Available
+GFX  19:48:35.620 VRAM texture space: 2048MB
+GFX  19:48:36.784 PerfNotifiers initialized
+GFX  19:48:37.245 Selected display mode 1920x1080x0 with format D3DFMT_X8R8G8B8 and error delta 0
+GFX  20:13:23.979 Lost D3D9 device

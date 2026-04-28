@@ -14,6 +14,7 @@ const CODEBASE_ROOT = path.resolve(__dirname, '../..'); // ailcc root
 const PROJECT_ROOT = path.resolve(CODEBASE_ROOT, '../../../../..'); // AILCC_PRIME root
 const VAULT_PATH = process.env.VAULT_PATH;
 const LOGS_DIR = path.join(CODEBASE_ROOT, 'logs');
+const GHOSTWRITER_DIR = path.join(CODEBASE_ROOT, 'AILCC_VAULT/Ghostwriter_Outputs');
 
 let McpServer, SSEServerTransport;
 
@@ -82,6 +83,88 @@ let mcpTransport;
         return {
             content: [{ type: "text", text: JSON.stringify(history.map(h => JSON.parse(h)), null, 2) }]
         };
+    });
+
+    // Tool: Task Matrix Access
+    mcpServer.tool("get_task_matrix", "Retrieves the full consolidated task registry for the Vanguard Swarm", async () => {
+      try {
+        if (fs.existsSync(CONSOLIDATED_TASKS_FILE)) {
+          const content = fs.readFileSync(CONSOLIDATED_TASKS_FILE, 'utf8');
+          return { content: [{ type: "text", text: content }] };
+        }
+        return { content: [{ type: "text", text: "Task registry file not found." }], isError: true };
+      } catch (err) {
+        return { content: [{ type: "text", text: `Error: ${err.message}` }], isError: true };
+      }
+    });
+
+    // Tool: Fiscal Triage Dossier
+    mcpServer.tool("get_fiscal_dossier", "Retrieves active tax crisis and triage manifests (April 2026)", async () => {
+      try {
+        const manifestPath = path.join(PROJECT_ROOT, '03_Data_Stores/OneDrive_Nexus/01_Projects/Tax_Crisis_Defense_2026/WEEKLY_TRIAGE_MANIFEST_APRIL2026.md');
+        if (fs.existsSync(manifestPath)) {
+          const content = fs.readFileSync(manifestPath, 'utf8');
+          return { content: [{ type: "text", text: content }] };
+        }
+        return { content: [{ type: "text", text: "Fiscal manifest not found." }], isError: true };
+      } catch (err) {
+        return { content: [{ type: "text", text: `Error: ${err.message}` }], isError: true };
+      }
+    });
+
+    // Tool: Send Swarm Synapse
+    mcpServer.tool("send_synapse_intent", 
+      { 
+        agent: { type: "string", description: "Name of the agent sending the intent (e.g., Claude)" },
+        intent: { type: "string", description: "The strategic intent or action" },
+        domain: { type: "string", description: "The operational domain (e.g., TAX, ACADEMIC)" }
+      }, 
+      "Broadcasts a strategic synapse intent to the entire Vanguard mesh", 
+      async ({ agent, intent, domain }) => {
+        try {
+          const synapse = {
+            id: `syn-${Date.now()}`,
+            agent,
+            intent,
+            confidence: 0.95,
+            risk_reward: "HIGH_STRATEGIC",
+            domain: domain || "GENERAL",
+            timestamp: new Date().toISOString()
+          };
+          io.emit('NEURAL_SYNAPSE', synapse);
+          return { content: [{ type: "text", text: `Synapse broadcasted: ${intent}` }] };
+        } catch (err) {
+          return { content: [{ type: "text", text: `Broadcast failed: ${err.message}` }], isError: true };
+        }
+    });
+
+    // Tool: Write to Spectral Canvas
+    mcpServer.tool("write_to_spectral_canvas",
+      {
+        filename: { type: "string", description: "The name of the file (e.g., strategic_map.md)" },
+        content: { type: "string", description: "The markdown content to write" }
+      },
+      "Manifests a synthesized document directly onto the Spectral Canvas dashboard page",
+      async ({ filename, content }) => {
+        try {
+          if (!fs.existsSync(GHOSTWRITER_DIR)) {
+            fs.mkdirSync(GHOSTWRITER_DIR, { recursive: true });
+          }
+          const safeFilename = filename.endsWith('.md') ? filename : `${filename}.md`;
+          const filePath = path.join(GHOSTWRITER_DIR, safeFilename);
+          fs.writeFileSync(filePath, content);
+          
+          io.emit('SYSTEM_EVENT', {
+            id: `writer-${Date.now()}`,
+            msg: `🖋️ Spectral Synthesis: ${safeFilename} manifested on the canvas.`,
+            type: 'success',
+            timestamp: new Date().toLocaleTimeString()
+          });
+          
+          return { content: [{ type: "text", text: `Document successfully manifested at ${safeFilename}` }] };
+        } catch (err) {
+          return { content: [{ type: "text", text: `Synthesis failed: ${err.message}` }], isError: true };
+        }
     });
 
     console.log("🚀 [MCP] Neural Bridge Initialized");
@@ -954,7 +1037,7 @@ io.on('connection', (socket) => {
 // --- CHOKIDAR EVENT-DRIVEN SYNC (Centurion Tier) ---
 
 // 1. Vault Watcher: Sovereign Results & Node Heartbeats
-const vaultWatcher = chokidar.watch(VAULT_PATH, {
+const vaultWatcher = chokidar.watch(global.VAULT_PATH, {
   ignored: /(^|[/\\])\../,
   persistent: true,
   depth: 2 // Increased depth to capture project updates
@@ -1286,33 +1369,79 @@ server.listen(PORT, '0.0.0.0', () => {
   registerMeshNode();
 });
 
-// API: List Mesh Peers
-app.get('/api/system/mesh', async (req, res) => {
-  try {
-    const nodes = await redis.hgetall('ailcc:mesh:nodes');
-    const activeNodes = Object.values(nodes).map(n => JSON.parse(n))
-      .filter(n => (Date.now() - n.lastSeen) < 90000); // 90s timeout
-    res.json(activeNodes);
-  } catch (err) {
-    res.status(500).json({ error: 'Mesh lookup failed' });
-  }
+// --- Standardized Dashboard API ---
+
+// 1. Health Status
+app.get('/api/system/health', (req, res) => {
+    res.json({
+        status: 'healthy',
+        uptime: Math.floor((Date.now() - SERVER_START_TIME) / 1000),
+        node: NODE_ID,
+        services: {
+            redis: redis.status,
+            mcp: mcpServer ? 'connected' : 'initializing',
+            vault: fs.existsSync(VAULT_PATH) ? 'accessible' : 'error'
+        }
+    });
 });
 
-// API: Live Academic Matrix (Phase 44)
+// 2. Topology Graph
+app.get('/api/system/graph', async (req, res) => {
+    const nodes = [
+        { id: 'relay', label: 'Neural Relay', type: 'host', val: 50, status: 'ONLINE', role: 'Integration Mesh' },
+        { id: 'vault', label: 'Intelligence Vault', type: 'storage', val: 40, status: 'SYNCED', role: 'OneDrive Nexus' },
+        { id: 'grok', label: 'Grok', type: 'agent', val: 35, status: 'ACTIVE', role: 'Strategic Judge' },
+        { id: 'gemini', label: 'Gemini', type: 'agent', val: 35, status: 'ACTIVE', role: 'Master Craftsman' },
+        { id: 'comet', label: 'Comet', type: 'agent', val: 30, status: 'ONLINE', role: 'System Scout' },
+        { id: 'claude', label: 'Claude', type: 'agent', val: 35, status: 'ACTIVE', role: 'Neural Architect' },
+        { id: 'thinkpad', label: 'Vanguard ThinkPad', type: 'host', val: 45, status: 'ONLINE', role: 'Local Compute' },
+        { id: 'macbook', label: 'Command MacBook', type: 'host', val: 45, status: 'ONLINE', role: 'Executive Interface' }
+    ];
+
+    const links = [
+        { source: 'relay', target: 'vault' },
+        { source: 'relay', target: 'grok' },
+        { source: 'relay', target: 'gemini' },
+        { source: 'relay', target: 'comet' },
+        { source: 'relay', target: 'claude' },
+        { source: 'relay', target: 'thinkpad' },
+        { source: 'relay', target: 'macbook' },
+        { source: 'thinkpad', target: 'vault' },
+        { source: 'macbook', target: 'vault' }
+    ];
+
+    res.json({ nodes, links });
+});
+
+// 3. Academic Matrix (Live)
 app.get('/api/system/academics/live', (req, res) => {
-  try {
-    if (fs.existsSync(ACADEMIC_MATRIX_FILE)) {
-      const data = fs.readFileSync(ACADEMIC_MATRIX_FILE, 'utf8');
-      res.json(JSON.parse(data));
-    } else {
-      res.status(404).json({ error: 'Academic data not found' });
+    try {
+        if (fs.existsSync(ACADEMIC_MATRIX_FILE)) {
+            const data = fs.readFileSync(ACADEMIC_MATRIX_FILE, 'utf8');
+            res.json(JSON.parse(data));
+        } else {
+            res.status(404).json({ error: 'Academic matrix not found' });
+        }
+    } catch (err) {
+        res.status(500).json({ error: 'Failed to read academic matrix' });
     }
-  } catch (err) {
-    res.status(500).json({ error: 'Failed to read academic matrix', details: err.message });
-  }
 });
 
-// API: Live Vault Hydration (Phase 42)
+let currentActivePath = '/';
+
+app.get('/api/system/active-view', (req, res) => {
+    res.json({ path: currentActivePath });
+});
+
+app.post('/api/system/sync-view', (req, res) => {
+    if (req.body.path) {
+        currentActivePath = req.body.path;
+        res.json({ status: 'synced', path: currentActivePath });
+    } else {
+        res.status(400).json({ error: 'No path provided' });
+    }
+});
+
 app.get('/api/system/vault', (req, res) => {
   try {
     if (!fs.existsSync(VAULT_PATH)) {
@@ -1349,9 +1478,69 @@ app.get('/api/system/vault', (req, res) => {
   }
 });
 
+// --- Middleware: Neural Firewall ---
+const validateNexusKey = (req, res, next) => {
+    const key = req.headers['x-api-key'];
+    if (key === process.env.NEXUS_API_KEY) {
+        next();
+    } else {
+        console.warn(`🛡️ [Firewall] Unauthorized access attempt from ${req.ip}`);
+        res.status(401).json({ error: 'Unauthorized: Invalid Neural Key' });
+    }
+};
+
+// API: iOS Telemetry Bridge (Authenticated)
+app.post('/api/mobile/telemetry', validateNexusKey, async (req, res) => {
+    const { type, data, context } = req.body;
+    const timestamp = new Date().toISOString();
+
+    console.log(`📡 Mobile Telemetry Ingress: ${type}`);
+
+    try {
+        // 1. Broadcast to Dashboard
+        io.emit('MOBILE_TELEMETRY', { type, data, context, timestamp });
+
+        // 2. Specialized Logic (Focus Mode)
+        if (type === 'FOCUS_MODE' && data.mode) {
+            const statePath = path.join(CODEBASE_ROOT, 'dashboard_state.json');
+            let currentState = {};
+            if (fs.existsSync(statePath)) {
+                currentState = JSON.parse(fs.readFileSync(statePath, 'utf8'));
+            }
+            currentState.mobileFocusMode = data.mode;
+            fs.writeFileSync(statePath, JSON.stringify(currentState, null, 2));
+            
+            io.emit('SYSTEM_EVENT', {
+                id: `focus-${Date.now()}`,
+                msg: `🌙 Focus Mode Shift: iPhone entered ${data.mode} mode.`,
+                type: 'info',
+                timestamp: new Date().toLocaleTimeString()
+            });
+        }
+
+        // 3. Persist to Redis State
+        await redis.hset('ailcc:mobile:state', type, JSON.stringify({ data, context, timestamp }));
+
+        res.json({ status: 'success', received: type });
+    } catch (err) {
+        console.error('❌ Mobile Telemetry Error:', err);
+        res.status(500).json({ error: 'Telemetry ingestion failed' });
+    }
+});
+
 io.on('connection', (socket) => {
   console.log('🔌 New client connected to Neural Uplink');
+  broadcastTasks();
   broadcastRoster();
+
+  // Heartbeat for dashboard status consistency
+  setInterval(() => {
+    socket.emit('HEARTBEAT', {
+        timestamp: Date.now(),
+        status: 'alive',
+        node: NODE_ID
+    });
+  }, 10000);
 
   socket.on('DISPATCH_VANGUARD_TASK', async (task) => {
     const { exec } = require('child_process');
@@ -1363,6 +1552,7 @@ io.on('connection', (socket) => {
       const taskWithId = { ...task, id: taskId };
       
       await redis.lpush('ailcc:vanguard_queue', JSON.stringify(taskWithId));
+      await broadcastTasks(); // Immediate broadcast after dispatch
 
       // 2. Write to Vault for node discovery (Legacy compat)
       const taskPath = path.join(VAULT_PATH, 'tasks', `task_${taskId}.json`);

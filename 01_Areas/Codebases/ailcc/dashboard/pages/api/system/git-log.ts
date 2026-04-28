@@ -7,7 +7,7 @@ export default async function handler(req: any, res: any) {
     }
 
     try {
-        const cwdPath = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc';
+        const cwdPath = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc';
         
         // Execute git command natively
         const gitProcess = spawnSync('git', ['log', '-n', '10', '--pretty=format:%h|%s|%ar|%an'], {

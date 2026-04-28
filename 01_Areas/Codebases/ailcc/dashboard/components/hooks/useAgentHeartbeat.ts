@@ -61,6 +61,13 @@ export function useAgentHeartbeat(intervalMs = 15000) {
                         ...prev,
                         GROK: newGrok,
                         'GROK-ARCH': { ...newGrok, agent: 'GROK-ARCH' },
+                        ANTIGRAVITY: {
+                            agent: 'ANTIGRAVITY',
+                            alive: true, // If we are running, we are alive
+                            latencyMs: 0,
+                            lastChecked: new Date().toLocaleTimeString(),
+                            history: [...(prev.ANTIGRAVITY?.history || []), 0].slice(-10)
+                        }
                     };
                 });
             }

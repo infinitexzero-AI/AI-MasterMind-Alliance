@@ -68,11 +68,11 @@ const CANMEDS_TARGETS = [
 export default function AcademicTracker() {
     const { hasAccess } = useAuth();
     // Live data from AILCC Cortex API
-    const { data: summerMatrix } = useSWR('http://localhost:8000/api/v1/academics/summer', fetcher, { refreshInterval: 30000 });
-    useSWR('http://localhost:8000/api/v1/academics/profile', fetcher, { refreshInterval: 60000 });
+    const { data: summerMatrix } = useSWR('http://localhost:3001/api/system/academics/live', fetcher, { refreshInterval: 30000 });
+    // useSWR('http://localhost:3001/api/system/academics/profile', fetcher, { refreshInterval: 60000 });
     
     // Live Canonical Medical Tracker State (Local Edge-Compute)
-    const { data: canmedsState } = useSWR('http://localhost:5005/api/medical/canmeds', fetcher, { refreshInterval: 5000 });
+    const { data: canmedsState } = useSWR('http://localhost:3001/api/system/medical/canmeds', fetcher, { refreshInterval: 5000 });
     
     // Fallback to mock if data structure isn't ready or server down
     const currentSemester = summerMatrix?.semester || MOCK_SEMESTER;

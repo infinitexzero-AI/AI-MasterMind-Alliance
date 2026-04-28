@@ -1,4 +1,6 @@
 import os
+import sys
+import time
 import json
 import logging
 import subprocess
@@ -13,7 +15,8 @@ from uuid import uuid4
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(name)s] %(message)s")
 logger = logging.getLogger("NeuralSkillForge")
 
-FORGE_DIR = "/tmp/forge"
+import tempfile
+FORGE_DIR = os.path.join(tempfile.gettempdir(), "ailcc_forge")
 
 class NeuralSkillForge:
     def __init__(self):
@@ -31,7 +34,7 @@ class NeuralSkillForge:
         self.language_configs = {
             "python": {
                 "extension": ".py",
-                "execute_cmd": ["python3"]
+                "execute_cmd": [sys.executable]
             },
             "nodejs": {
                 "extension": ".js",
@@ -55,8 +58,9 @@ class NeuralSkillForge:
         
         system_prompt = (
             f"You are the AILCC Neural Skill Forge. Your job is to output a strictly raw, executable {language} script "
-            f"that accomplishes the exact objective requested. Do NOT wrap the code in markdown blocks like ```python. "
-            f"Output ONLY the raw code text so it can be directly saved and run."
+            f"Output ONLY the raw code text so it can be directly saved and run. "
+            f"Do NOT include infinite loops like 'while True' in the script. "
+            f"Avoid external dependencies like 'selenium' or 'playwright' unless strictly necessary; prefer built-in libraries like 'webbrowser', 'subprocess', or 'os' for browser control and environment checks."
         )
 
         # Force synchronous execution of async bridge for simplicity in orchestration loop integration if needed,
@@ -140,6 +144,34 @@ class NeuralSkillForge:
                     memory = MemoryIngestDaemon()
                     memory.ingest_forged_skill(objective, code, language)
                     if stream_cb: await stream_cb({"type": "log", "message": "Skill injected into permanent vector memory."})
+                    
+                    # Update skills.json for dashboard visibility
+                    try:
+                        skills_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'hippocampus_storage', 'skills.json'))
+                        new_skill = {
+                            "id": f"S_FORGED_{int(time.time())}",
+                            "domain": "CODING", # Default for forged scripts
+                            "name": objective[:30] + ("..." if len(objective) > 30 else ""),
+                            "description": f"Synthesized skill for objective: {objective}",
+                            "level": 1,
+                            "evidence_links": [],
+                            "prerequisite_courses": []
+                        }
+                        
+                        if os.path.exists(skills_path):
+                            with open(skills_path, 'r') as f:
+                                skills_data = json.load(f)
+                        else:
+                            skills_data = {"skills": [], "forge_history": []}
+                        
+                        skills_data["skills"].append(new_skill)
+                        with open(skills_path, 'w') as f:
+                            json.dump(skills_data, f, indent=2)
+                        
+                        if stream_cb: await stream_cb({"type": "log", "message": "Skill matrix updated successfully."})
+                    except Exception as e:
+                        logger.error(f"Failed to update skills.json: {e}")
+                        if stream_cb: await stream_cb({"type": "error", "message": f"Failed to update skill matrix: {e}"})
                 except Exception as e:
                     logger.error(f"Failed to ingest skill into memory: {e}")
                     if stream_cb: await stream_cb({"type": "error", "message": f"Failed to persist skill: {e}"})

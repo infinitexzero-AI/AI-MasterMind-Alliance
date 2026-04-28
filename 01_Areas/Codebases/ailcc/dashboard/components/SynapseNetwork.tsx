@@ -83,7 +83,8 @@ export default function SynapseNetwork() {
 
   // Socket Connection
   useEffect(() => {
-    const socket = io('http://localhost:5005');
+    const wsUrl = 'ws://localhost:3001';
+    const socket = io(wsUrl);
 
     socket.on('state:full', (state: any) => {
       if (state.agents) {

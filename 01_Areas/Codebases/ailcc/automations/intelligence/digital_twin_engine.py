@@ -24,7 +24,7 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [DigitalTwin] %(message)s")
 logger = logging.getLogger(__name__)
 
-AILCC_ROOT = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc")
+AILCC_ROOT = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc")
 RAG_SCRIPT = AILCC_ROOT / "automations" / "intelligence" / "hippocampus_rag.py"
 TRAINING_DATA = AILCC_ROOT / "hippocampus_storage" / "digital_twin_training.jsonl"
 
@@ -32,7 +32,7 @@ def get_rag_context(query: str) -> str:
     """Invokes the Hippocampus RAG to find grounded facts."""
     logger.info(f"🧠 Querying Hippocampus for context: '{query}'")
     
-    python_bin = Path("/Users/infinite27/AILCC_PRIME/.venv/bin/python")
+    python_bin = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/.venv/bin/python")
     result = subprocess.run(
         [str(python_bin), str(RAG_SCRIPT), "--query", query],
         capture_output=True,
@@ -99,7 +99,7 @@ MISSION: Provide a concise, tactical response. If the context contains specific 
     # For this implementation, we'll pipe the grounded prompt back into the RAG script
     # because it already has the Ollama/LlamaIndex settings configured.
     
-    python_bin = Path("/Users/infinite27/AILCC_PRIME/.venv/bin/python")
+    python_bin = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/.venv/bin/python")
     logger.info("⚡ Generating final grounded response...")
     
     # We use hippocampus_rag.py --query with the full prompt

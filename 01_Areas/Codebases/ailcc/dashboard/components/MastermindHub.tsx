@@ -9,21 +9,16 @@ import { TycoonYieldTracker } from './widgets/TycoonYieldTracker';
 import { useAgentHeartbeat } from './hooks/useAgentHeartbeat';
 import NeuralBriefing from './NeuralBriefing';
 import { NeuralSynapseStream } from './NeuralSynapseStream';
-import { AilccGraph } from './AilccGraph';
 import { ParaNexusView } from './widgets/ParaNexusView';
 import { SingularityReviewPanel } from './widgets/SingularityReviewPanel';
+import { AuditDefenseHUD } from './widgets/AuditDefenseHUD';
 
 import {
     Activity,
     Cpu,
     Layers,
     Terminal,
-    Clock,
     Zap,
-    Shield,
-    MessageSquare,
-    ArrowRightLeft,
-    Bot,
     Monitor,
     Ghost
 } from 'lucide-react';
@@ -105,11 +100,11 @@ const MOCK_TASKS: UnifiedTask[] = [
 ];
 
 export default function MastermindHub() {
-    const { tasks: liveTasks, agents: liveAgents, logs: liveLogs, synapses, stats, syncData } = useAllianceData();
+    const { tasks: liveTasks, agents: liveAgents, logs: liveLogs, stats, syncData } = useAllianceData();
     const [activeTrack, setActiveTrack] = useState<'TECH' | 'LIFE' | 'ALL'>('ALL');
     const [expandedTaskId, setExpandedTaskId] = useState<string | null>(null);
     const { isStealthMode, setIsStealthMode } = useStealthMode();
-    const { showToast } = useToast();
+    useToast();
     const [consentOpen, setConsentOpen] = useState(false);
     const heartbeats = useAgentHeartbeat(30000);
 
@@ -280,7 +275,7 @@ export default function MastermindHub() {
                                 {tasks
                                     .filter(t => activeTrack === 'ALL' || t.track === activeTrack)
                                     .filter(t => ['CRITICAL', 'HIGH'].includes(t.priority) || activeTrack === 'LIFE')
-                                    .map((task, index) => {
+                                    .map((task) => {
                                         const isExpanded = expandedTaskId === task.id;
                                         return (
                                             <motion.div
@@ -383,6 +378,7 @@ export default function MastermindHub() {
                         </div>
 
                         {/* Bio / Market blocks integrated cleanly */}
+                        <AuditDefenseHUD />
                         <BioPulseWidget />
                         <TycoonYieldTracker />
                     </div>

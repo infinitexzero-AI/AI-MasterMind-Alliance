@@ -1,6 +1,6 @@
 # AI Mastermind Alliance (AIMmA) — Complete System Overview
 
-**Master Definition**: [AI_MASTERMIND_ALLIANCE_MASTER_DEFINITION.md](file:///Users/infinite27/AILCC_PRIME/AI_MASTERMIND_ALLIANCE_MASTER_DEFINITION.md)
+**Master Definition**: [AI_MASTERMIND_ALLIANCE_MASTER_DEFINITION.md](file://c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/AI_MASTERMIND_ALLIANCE_MASTER_DEFINITION.md)
 
 ## The "AIMmA Page" Optimization Report
 
@@ -51,8 +51,8 @@ CHROME PROFILE ⟷ GOOGLE CLOUD ⟷ ANTIGRAVITY ⟷ COMET ASSISTANT
 **Communication & Sync Layer:**
 * **The Bridge:** Antigravity IDE — The primary local interface.
 * **The Relay:** n8n — Workflow automation and external agent routing.
-* **The Scaffolded Signal:** [system_signal.json](file:///Users/infinite27/AILCC_PRIME/06_System/State/system_signal.json) — The live "Pulse" file for persistent agent state.
-* **Intelligence Relay:** [INTELLIGENCE_RELAY_SPEC.md](file:///Users/infinite27/AILCC_PRIME/AI-MasterMind-Alliance/specs/INTELLIGENCE_RELAY_SPEC.md) — The dashboard component for real-time observability.
+* **The Scaffolded Signal:** [system_signal.json](file://c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/State/system_signal.json) — The live "Pulse" file for persistent agent state.
+* **Intelligence Relay:** [INTELLIGENCE_RELAY_SPEC.md](file://c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/AI-MasterMind-Alliance/specs/INTELLIGENCE_RELAY_SPEC.md) — The dashboard component for real-time observability.
 
 **Neural Connectivity Mesh:**
 
@@ -128,7 +128,7 @@ To maximize the efficiency of the **AI Mastermind Alliance**, the workspace has 
 
 #### 1. Singular Workspace Protocol
 
-* **Root Directory:** `/Users/infinite27/AILCC_PRIME`
+* **Root Directory:** `c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc`
 * **Context Preservation:** All agent interactions are logged and indexed within this root to ensure maximum transfer of "project memory" between sessions.
 * **Orchestration Layer:** The `ailcc-launch.sh` script acts as the primary entry point, initializing the Relay, Orchestrator, and Dashboard in a unified sequence.
 
@@ -139,7 +139,7 @@ To maximize the efficiency of the **AI Mastermind Alliance**, the workspace has 
 
 #### 3. Strategic Guidance for Human-AI Collaboration
 
-* **Boundary Definition:** Use `/Users/infinite27/AILCC_PRIME/.antigravity/guidance.md` for real-time strategic alignment and value-based goal setting.
+* **Boundary Definition:** Use `c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/.antigravity/guidance.md` for real-time strategic alignment and value-based goal setting.
 * **Entropy Detection:** "The Judge" (Grok) is tasked with continuous monitoring of system logs to identify and mitigate hardware/driver issues (like the recent AppleSMC timeout) before they cause a panic.
 
 ---

@@ -2,7 +2,8 @@ import sqlite3
 import os
 from pathlib import Path
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+ROOT = Path(__file__).resolve().parents[1]
+HIPPOCAMPUS_DIR = ROOT / "hippocampus_storage"
 GENESIS_DB_PATH = HIPPOCAMPUS_DIR / "genesis.db"
 
 # The foundational DNA of the Vanguard Swarm.

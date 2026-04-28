@@ -35,3 +35,9 @@ The technical stack supporting the AICC includes:
 - **Backend**: API services running on Node.js/Express or Python/FastAPI.
 - **Database**: PostgreSQL for persistent storage, with Redis for caching and real-time state.
 - **Cloud**: Hosted on Google Cloud Platform (GCP).
+
+## Autonomy State
+- **Current Phase**: Phase XIII (Governance)
+- **Status**: Sovereign Execution Active
+- **Overall Autonomy**: **98%**
+- **Neural Relay**: Port 3001 (WebSocket / SSE)

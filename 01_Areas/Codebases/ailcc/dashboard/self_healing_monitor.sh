@@ -6,7 +6,7 @@
 
 DASHBOARD_URL="http://localhost:3000/api/system/health"
 OPENCLAW_AGENT="main"
-LOG_FILE="/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/self_healing.log"
+LOG_FILE="c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard/self_healing.log"
 
 echo "[$(date)] Starting Proactive Observation..." >> "$LOG_FILE"
 
@@ -15,7 +15,7 @@ HTTP_STATUS=$(curl -o /dev/null -s -w "%{http_code}" "$DASHBOARD_URL")
 
 if [ "$HTTP_STATUS" -ne 200 ]; then
     echo "[$(date)] ⚠️ Dashboard Unreachable (Status: $HTTP_STATUS). Attempting Restart..." >> "$LOG_FILE"
-    cd /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard
+    cd c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard
     npm run dev > /dev/null 2>&1 &
     sleep 10
     

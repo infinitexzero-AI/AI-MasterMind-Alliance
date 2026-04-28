@@ -5,7 +5,7 @@ export default function ControlPanel() {
   const [connected, setConnected] = useState(false);
 
   useEffect(() => {
-    const ws = new WebSocket('ws://localhost:5005');
+    const ws = new WebSocket(`ws://localhost:3001/ws`);
 
     ws.onopen = () => setConnected(true);
     ws.onclose = () => setConnected(false);

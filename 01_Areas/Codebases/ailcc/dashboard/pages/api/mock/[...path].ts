@@ -12,7 +12,7 @@ import fs from 'fs';
  * passes the type schema to the local LLM, and generates a realistic mock JSON payload on the fly.
  */
 
-const WORKSPACE_DIR = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
+const WORKSPACE_DIR = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard';
 const CACHE_DIR = path.join(WORKSPACE_DIR, '.mock-cache');
 
 if (!fs.existsSync(CACHE_DIR)) fs.mkdirSync(CACHE_DIR, { recursive: true });

@@ -3,10 +3,10 @@ import os
 import subprocess
 from datetime import datetime
 
-CONFIG_PATH = "/Users/infinite27/AILCC_PRIME/antigravity_config.json"
-STATE_PATH = "/Users/infinite27/AILCC_PRIME/06_System/State/current_context.json"
-REGISTRY_PATH = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/registries/agents_registry.json"
-LEARNING_LEDGER_PATH = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage/swarm_learning_ledger.json"
+CONFIG_PATH = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/antigravity_config.json"
+STATE_PATH = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/State/current_context.json"
+REGISTRY_PATH = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/registries/agents_registry.json"
+LEARNING_LEDGER_PATH = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage/swarm_learning_ledger.json"
 
 try:
     from core.grok_router import GrokRouter

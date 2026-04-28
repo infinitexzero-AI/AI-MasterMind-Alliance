@@ -7,7 +7,7 @@ from core.tool_manager import tool_manager
 
 logger = logging.getLogger(__name__)
 
-SANDBOX_SCRIPT = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/integrations/logic_bridge_sandbox.py"
+SANDBOX_SCRIPT = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/automations/integrations/logic_bridge_sandbox.py"
 
 @tool_manager.register_tool("logic_bridge", "Generates, tests, or executes Python code in the Sovereign Logic Sandbox.")
 def logic_bridge(name: str, code: str, action: str = "execute"):

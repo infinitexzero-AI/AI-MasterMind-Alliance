@@ -29,6 +29,7 @@ memory = MemoryManager()
 
 # Global Registry Path
 REGISTRY_PATH = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'registries', 'agents_registry.json'))
+SKILLS_FILE = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'hippocampus_storage', 'skills.json'))
 
 # Allow CORS for development
 app.add_middleware(
@@ -66,6 +67,18 @@ async def health_check():
 @app.get("/system/metrics")
 async def system_metrics_check():
     return {"status": "ok", "cpu": 0, "memory": 0}
+
+@app.get("/api/v1/skills")
+async def get_skills():
+    """Returns the persistent skill matrix."""
+    try:
+        if os.path.exists(SKILLS_FILE):
+            with open(SKILLS_FILE, 'r') as f:
+                return json.load(f)
+        return {"skills": [], "forge_history": []}
+    except Exception as e:
+        logger.error(f"Failed to read skills: {e}")
+        return {"error": str(e)}
 
 @app.get("/system/graph")
 async def get_system_graph():

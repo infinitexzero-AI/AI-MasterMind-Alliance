@@ -3,7 +3,8 @@ import fs from 'fs';
 import path from 'path';
 
 // Define the absolute physical path to the Sovereign Vault
-const VAULT_DIR = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/AILCC_VAULT/Ghostwriter_Outputs';
+const AILCC_ROOT = process.env.AILCC_ROOT || (process.platform === 'win32' ? 'C:\\Users\\infin\\AILCC_PRIME' : 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc');
+const VAULT_DIR = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/AILCC_VAULT/Ghostwriter_Outputs');
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'GET') {

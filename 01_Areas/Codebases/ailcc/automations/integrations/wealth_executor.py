@@ -22,7 +22,7 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [TycoonWealth] %(message)s")
 logger = logging.getLogger(__name__)
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 WEALTH_DIR      = HIPPOCAMPUS_DIR / "tycoon_reports" / "sovereign_wealth"
 OMNI_QUEUE      = HIPPOCAMPUS_DIR / "nexus_state" / "active_tasks.json"
 

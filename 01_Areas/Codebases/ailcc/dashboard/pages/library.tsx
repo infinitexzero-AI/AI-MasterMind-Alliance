@@ -22,7 +22,7 @@ export default function IntelligenceVault() {
 
   const fetchVault = async () => {
       try {
-          const res = await fetch('http://localhost:5005/api/system/vault');
+          const res = await fetch('http://localhost:3001/api/system/vault');
           if (res.ok) {
               const data = await res.json();
               setFiles(data);

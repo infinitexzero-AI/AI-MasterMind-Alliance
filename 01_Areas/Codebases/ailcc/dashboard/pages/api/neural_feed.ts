@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Define path to the swarm log file
-const LOG_FILE_PATH = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/logs/swarm_link.log';
+const LOG_FILE_PATH = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/logs/swarm_link.log';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     try {

@@ -21,7 +21,7 @@ export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<UpgradeStatus | { success: boolean; message: string; error?: string }>
 ) {
-    const LOG_FILE = '/Users/infinite27/AILCC_PRIME/logs/openclaw_upgrades.log';
+    const LOG_FILE = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/logs/openclaw_upgrades.log';
 
     if (req.method === 'GET') {
         try {
@@ -55,7 +55,7 @@ export default async function handler(
     } else if (req.method === 'POST') {
         // Trigger a manual audit
         try {
-            exec('bash /Users/infinite27/AILCC_PRIME/scripts/openclaw_upgrade_engine.sh &');
+            exec('bash c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/scripts/openclaw_upgrade_engine.sh &');
             res.status(200).json({ success: true, message: 'OpenClaw Upgrade Engine dispatched.' });
         } catch (err) {
             res.status(500).json({ success: false, message: 'Failed to dispatch upgrade engine', error: String(err) });

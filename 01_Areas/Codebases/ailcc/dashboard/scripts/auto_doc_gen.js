@@ -3,7 +3,7 @@ const path = require('path');
 const { exec } = require('child_process');
 
 // Configuration
-const WATCH_DIR = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
+const WATCH_DIR = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard';
 const IGNORE_DIRS = ['node_modules', '.next', '.git', 'logs'];
 const WALKTHROUGH_PATH = '/Users/infinite27/.gemini/antigravity/brain/3e98b031-b917-45d4-864d-53a6f76c9ee7/walkthrough.md';
 

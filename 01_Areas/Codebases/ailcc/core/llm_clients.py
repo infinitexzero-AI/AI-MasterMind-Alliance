@@ -37,12 +37,15 @@ def get_system_context() -> str:
         
         # 2. Load Whitepaper (Hierarchical Search for Sovereign Context)
         wp_path = None
-        search_dirs = [ROOT, PROJECT_ROOT, ROOT.parents[0], ROOT.parents[1]]
+        search_dirs = [ROOT, PROJECT_ROOT] # Limit search scope to avoid permission errors
         for d in search_dirs:
-            potential_path = d / "whitepaper.md"
-            if potential_path.exists():
-                wp_path = potential_path
-                break
+            try:
+                potential_path = d / "whitepaper.md"
+                if potential_path.exists():
+                    wp_path = potential_path
+                    break
+            except Exception:
+                continue
         
         if wp_path:
             with open(wp_path, "r", encoding="utf-8") as f:
@@ -138,7 +141,7 @@ class ClaudeClient(LLMClient):
             return response.content[0].text
         except Exception as e:
             logger.error(f"Claude Generation Error: {e}")
-            return f"Error connecting to Claude: {e}"
+            return f"[Error] connecting to Claude: {e}"
 
 class GrokClient(LLMClient):
     """Client for X.AI's Grok. Supports single-agent (reasoning) and multi-agent 4.20 models."""
@@ -215,7 +218,7 @@ class GrokClient(LLMClient):
                 
         except Exception as e:
             logger.error(f"Grok Generation Error ({self.model}): {e}")
-            return f"Error connecting to Grok: {e}"
+            return f"[Error] connecting to Grok: {e}"
 
 class PerplexityClient(LLMClient):
     """Client for Perplexity (OpenAI-compatible)."""
@@ -247,7 +250,7 @@ class PerplexityClient(LLMClient):
             return response.choices[0].message.content
         except Exception as e:
             logger.error(f"Perplexity Generation Error: {e}")
-            return f"Error connecting to Perplexity: {e}"
+            return f"[Error] connecting to Perplexity: {e}"
 
 class ChatGPTClient(LLMClient):
     """Client for OpenAI's ChatGPT."""
@@ -282,7 +285,7 @@ class ChatGPTClient(LLMClient):
             return response.choices[0].message.content
         except Exception as e:
             logger.error(f"ChatGPT Generation Error: {e}")
-            return f"Error connecting to ChatGPT: {e}"
+            return f"[Error] connecting to ChatGPT: {e}"
 
 class OllamaClient(LLMClient):
     """Client for local Ollama instance (e.g., gemma3:4b)."""
@@ -311,13 +314,13 @@ class OllamaClient(LLMClient):
             
         except Exception as e:
             logger.error(f"Ollama Generation Error ({self.model}): {e}")
-            return f"Error connecting to local Ollama: {e}"
+            return f"[Error] connecting to local Ollama: {e}"
 
 class GeminiClient(LLMClient):
     """Client for Google's Gemini."""
     
-    def __init__(self, api_key: Optional[str] = None, model: str = "gemini-1.5-flash"):
-        self.api_key = api_key or os.getenv("GEMINI_API_KEY")
+    def __init__(self, api_key: Optional[str] = None, model: str = "gemma-3-27b-it"):
+        self.api_key = api_key or os.getenv("GEMINI_API_KEY") or os.getenv("GOOGLE_API_KEY")
         self.model_name = model
 
         if genai and self.api_key:
@@ -331,13 +334,18 @@ class GeminiClient(LLMClient):
             return "[Gemini Error] Library or API key missing."
         
         try:
-            full_context = f"{get_system_context()}\n\nSystem Instructions: {system_prompt or ''}\n\nUser Prompt: {prompt}"
+            full_context = f"System Instructions: {system_prompt or ''}\n\nUser Prompt: {prompt}"
             
-            response = self.model.generate_content(full_context)
+            model_to_use = self.model_name
+            if not model_to_use.startswith("models/"):
+                model_to_use = f"models/{model_to_use}"
+            
+            model_obj = genai.GenerativeModel(model_name=model_to_use)
+            response = model_obj.generate_content(full_context)
             return response.text
         except Exception as e:
             logger.error(f"Gemini Generation Error: {e}")
-            return f"Error connecting to Gemini: {e}"
+            return f"[Error] connecting to Gemini: {e}"
 
 class MockClient(LLMClient):
     """Mock client for testing without APIs."""

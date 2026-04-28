@@ -3,7 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const BRIDGE_URL = 'http://localhost:3001';
-const DIAGNOSTIC_PATH = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/ailcc-diagnostic.html';
+const DIAGNOSTIC_PATH = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/ailcc-diagnostic.html';
 
 async function checkBridge() {
   console.log('🌐 Checking Neural Uplink (Port 3001)...');

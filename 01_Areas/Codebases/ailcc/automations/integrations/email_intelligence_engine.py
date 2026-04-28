@@ -45,7 +45,7 @@ class IntelligentEmail:
         return asdict(self)
 
 class IntelligenceEngine:
-    def __init__(self, config_path: str = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/config/email_account_registry.json"):
+    def __init__(self, config_path: str = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/config/email_account_registry.json"):
         self.config_path = Path(config_path)
         self.config = self._load_config()
         self.processed_file = Path.home() / ".ailcc_processed_emails_v2.json"
@@ -157,7 +157,7 @@ class IntelligenceEngine:
         
         # In a real run, this would POST to http://localhost:5001/api/v1/logs
         # For now, we simulate by writing to a shared signal file
-        signal_file = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/logs/intelligence_signals.jsonl")
+        signal_file = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/logs/intelligence_signals.jsonl")
         signal_file.parent.mkdir(parents=True, exist_ok=True)
         with open(signal_file, 'a') as f:
             f.write(json.dumps(activity_log) + "\n")

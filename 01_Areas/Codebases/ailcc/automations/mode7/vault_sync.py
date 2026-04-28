@@ -5,8 +5,8 @@ import datetime
 import shutil
 
 # Config
-SOURCE_DIR = "/Users/infinite27/AILCC_PRIME/03_Intelligence_Vault"
-OUTPUT_DIR = "/Users/infinite27/AILCC_PRIME/03_Intelligence_Vault/Mobile_Sync"
+SOURCE_DIR = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/03_Intelligence_Vault"
+OUTPUT_DIR = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/03_Intelligence_Vault/Mobile_Sync"
 ZIP_NAME = "daily_dump.zip"
 PASSWORD = "valentine_sync" 
 

@@ -24,7 +24,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   });
 
   // 2. Scan Recent Accomplishments (Logs/Tasks)
-  const taskPath = '/Users/infinite27/AILCC_PRIME/tasks/100_task_master_plan.json';
+  const taskPath = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/tasks/100_task_master_plan.json';
   if (fs.existsSync(taskPath)) {
     const tasks = JSON.parse(fs.readFileSync(taskPath, 'utf8'));
     const completed = tasks.waves.flatMap((w: any) => w.tasks).filter((t: any) => t.status === 'completed');

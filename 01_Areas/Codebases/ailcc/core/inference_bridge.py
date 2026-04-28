@@ -40,7 +40,11 @@ class InferenceBridge:
         }
 
         for cred_key, (client_key, client_class) in providers.items():
-            key = self.creds.get_credential(cred_key)
+            key = self.creds.get_credential(cred_key) or os.getenv(f"{cred_key.upper()}_API_KEY")
+            if not key and cred_key == 'gemini':
+                key = os.getenv("GOOGLE_API_KEY")
+            if not key and cred_key == 'grok':
+                key = os.getenv("XAI_API_KEY")
             if key:
                 try:
                     self.clients[client_key] = client_class(api_key=key)
@@ -82,26 +86,22 @@ class InferenceBridge:
             # Fallback to performance if local is down
             strategy = InferenceStrategy.PERFORMANCE
 
-        # Performance Tier Logic
+        # Preference Order based on tier
+        tier_list = []
         if strategy == InferenceStrategy.PERFORMANCE:
-            # 1. Prioritize Ollama Cloud (B300 hardware / Kimi K2.5)
-            if health.get('ollama_cloud') == "online":
-                return self.clients['ollama_cloud'].generate(prompt, system_prompt)
-            # 2. Grok 4.20 or Claude 3.5
-            if health.get('grok') == "ready":
-                return self.clients['grok'].generate(prompt, system_prompt)
-            if health.get('claude') == "ready":
-                return self.clients['claude'].generate(prompt, system_prompt)
-            if health.get('perplexity') == "ready":
-                return self.clients['perplexity'].generate(prompt, system_prompt)
+            tier_list = ['gemini', 'grok', 'claude', 'perplexity', 'chatgpt', 'ollama']
+        else:
+            tier_list = ['gemini', 'chatgpt', 'claude', 'grok']
 
-
-        # Cost Optimized / Fallback
-        if health.get('gemini') == "ready":
-            return self.clients['gemini'].generate(prompt, system_prompt)
-        
-        if health.get('chatgpt') == "ready":
-            return self.clients['chatgpt'].generate(prompt, system_prompt)
+        for provider in tier_list:
+            if health.get(provider) == "ready":
+                try:
+                    res = self.clients[provider].generate(prompt, system_prompt)
+                    if res and not res.startswith("[Error]"):
+                        return res
+                except Exception as e:
+                    logger.warning(f"Provider {provider} failed: {e}")
+                    continue
 
         return "[Error] All inference endpoints failed or are unavailable."
 

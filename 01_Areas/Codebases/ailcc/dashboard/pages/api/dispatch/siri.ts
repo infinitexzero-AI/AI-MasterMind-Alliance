@@ -21,7 +21,7 @@ export default function handler(
 
     if (intent === 'OPTIMIZE_VAULT') {
         // Default to the Intelligence Vault if no target provided
-        const vaultPath = target || '/Users/infinite27/AILCC_PRIME/03_Intelligence_Vault';
+        const vaultPath = target || 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/03_Intelligence_Vault';
         const scriptPath = path.resolve(process.cwd(), '../automations/organize_vault.js');
 
         // Security check: ensure scriptPath stays within allowed bounds (basic check)

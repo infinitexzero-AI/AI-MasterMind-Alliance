@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguard Crisis Timeline</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --bg: #020617;
+            --surface: #0f172a;
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.3);
+            --success: #10b981;
+            --warning: #f59e0b;
+            --critical: #ef4444;
+            --border: rgba(255, 255, 255, 0.1);
+            --text: #f8fafc;
+            --text-dim: #94a3b8;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Outfit', sans-serif;
+            margin: 0;
+            padding: 40px;
+            overflow-x: hidden;
+        }
+
+        .container { max-width: 1100px; margin: 0 auto; position: relative; }
+
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        header h1 { font-size: 3rem; font-weight: 800; margin: 0; letter-spacing: -1px; }
+        header p { color: var(--accent); font-family: 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; }
+
+        /* THE TIMELINE VERTICAL LINE */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--accent), var(--accent), transparent);
+            transform: translateX(-50%);
+        }
+
+        /* TIMELINE NODES */
+        .node {
+            position: relative;
+            width: 50%;
+            padding: 40px;
+            box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .node:nth-child(even) { left: 50%; text-align: left; }
+        .node:nth-child(odd) { left: 0; text-align: right; }
+
+        .node-content {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 20px;
+            position: relative;
+            transition: border-color 0.3s;
+        }
+
+        .node-content:hover { border-color: var(--accent); box-shadow: 0 0 30px var(--accent-glow); }
+
+        .date-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent);
+            background: rgba(59, 130, 246, 0.1);
+            padding: 4px 12px;
+            border-radius: 10px;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+
+        .node h3 { margin: 0 0 10px; font-size: 1.4rem; font-weight: 700; }
+        .node p { color: var(--text-dim); line-height: 1.6; font-size: 0.95rem; }
+
+        /* CIRCLE INDICATORS */
+        .node::after {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: var(--bg);
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            top: 50px;
+            z-index: 1;
+        }
+
+        .node:nth-child(even)::after { left: -8px; }
+        .node:nth-child(odd)::after { right: -8px; }
+
+        /* THE CONNECTORS */
+        .impact-arrow {
+            position: absolute;
+            background: var(--accent);
+            height: 1px;
+            width: 40px;
+            top: 58px;
+        }
+        .node:nth-child(even) .impact-arrow { left: 0; }
+        .node:nth-child(odd) .impact-arrow { right: 0; }
+
+        /* DEEP ANALYSIS SIDEBAR */
+        .analysis-card {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border);
+            text-align: left;
+        }
+
+        .analysis-label { font-size: 0.75rem; color: var(--accent); font-weight: 700; text-transform: uppercase; margin-bottom: 5px; }
+        .evidence-link { color: var(--text); text-decoration: none; font-size: 0.85rem; border-bottom: 1px dotted var(--accent); }
+
+        /* LEGEND / KEY */
+        .legend {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background: var(--surface);
+            padding: 20px;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            font-size: 0.8rem;
+        }
+        .legend-item { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+        .dot { width: 10px; height: 10px; border-radius: 50%; }
+
+        /* Utility Classes */
+        .delay-01 { animation-delay: 0.1s; }
+        .delay-03 { animation-delay: 0.3s; }
+        .delay-05 { animation-delay: 0.5s; }
+        .delay-07 { animation-delay: 0.7s; }
+        .delay-09 { animation-delay: 0.9s; }
+        .success-text { color: var(--success); font-size: 0.85rem; }
+        .success-status { color: var(--success); }
+        .small-text { font-size: 0.85rem; }
+        .warning-node { border-color: var(--warning); }
+        .critical-node { border-color: var(--critical); }
+        .critical-text { font-size: 0.85rem; color: var(--critical); }
+        .success-node { background: linear-gradient(145deg, var(--surface), #1e293b); border: 2px solid var(--success); }
+        .success-tag { background: var(--success); color: #fff; }
+        .accent-dot { background: var(--accent); }
+        .warning-dot { background: var(--warning); }
+        .critical-dot { background: var(--critical); }
+        .success-dot { background: var(--success); }
+
+        @media screen and (max-width: 800px) {
+
+            .timeline::before { left: 20px; }
+            .node { width: 100%; left: 0 !important; text-align: left !important; padding-left: 50px; }
+            .node::after { left: 12px !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <p>Vanguard Forensic Intelligence</p>
+        <h1>Strategic Crisis Timeline</h1>
+    </header>
+
+    <div class="timeline">
+
+        <!-- Q4 2023 -->
+        <div class="node delay-01">
+
+            <div class="node-content">
+                <span class="date-tag">OCT 31, 2023</span>
+                <h3>The Shield: Account Closure</h3>
+                <p>Official closure of Payroll Account (RP0001). This is the "Prime Evidence" that invalidates every subsequent payroll assessment.</p>
+                <div class="analysis-card">
+                    <div class="analysis-label">Core Document</div>
+                    <a href="file:///C:/Users/infin/AILCC_PRIME/03_Data_Stores/GoogleDrive_Matrix/02_Areas/CRA_Taxes/Request to close payroll account – confirmation.pdf" class="evidence-link">CRA_Closure_Confirmation.pdf</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Q1 2024 -->
+        <div class="node delay-03">
+
+            <div class="node-content">
+                <span class="date-tag">JAN - APR 2024</span>
+                <h3>The Transition: Contractor Hub</h3>
+                <p>The business model moves fully to "Piecework" subcontractors. RBC bank records show zero payroll deductions and fixed subcontractor e-transfers.</p>
+                <div class="analysis-card">
+                    <div class="analysis-label">Proof of Model</div>
+                    <span class="success-text">Piecework Agreements Secured</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Q4 2024 -->
+        <div class="node delay-05">
+            <div class="node-content warning-node">
+
+                <span class="date-tag">NOV 21, 2024</span>
+                <h3>The Trigger: PETL NB Defense</h3>
+                <p>Provincial wage claims filed by Byron/Jacquelin (~$1,300). This regulatory signal likely triggered the CRA's arbitrary misclassification audit.</p>
+                <div class="analysis-card">
+                    <div class="analysis-label">Causal Link</div>
+                    <p class="small-text">Claim C2024-00491 → Misclassification Audit</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Q1 2026 -->
+        <div class="node delay-07">
+            <div class="node-content critical-node">
+
+                <span class="date-tag">JAN 15 - APR 15, 2026</span>
+                <h3>The Siege: Bank Freeze</h3>
+                <p>CRA issues arbitrary $40k assessment + $28k HST. CIBC corporate accounts are frozen. $133k capital "shuttle" to Coinbase reversed.</p>
+                <div class="analysis-card">
+                    <div class="analysis-label">Damage Assessment</div>
+                    <p class="critical-text">-$130,135 Negative Balance (Coinbase)</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- TODAY -->
+        <div class="node delay-09">
+            <div class="node-content success-node">
+                <span class="date-tag success-tag">APRIL 20, 2026</span>
+
+                <h3>The Resolution: Vanguard Handoff</h3>
+                <p>Consolidation of 3-Year Audit. Final Rebuttals ready. SFS Summer Aid $6k unlocked via 2024 NOA.</p>
+                <div class="analysis-card">
+                    <div class="analysis-label">Next Objective</div>
+                    <span class="success-status">Transmit Rebuttals & Restore Capital Flow</span>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="legend">
+        <div class="legend-item"><div class="dot accent-dot"></div><span>Evidence Discovered</span></div>
+        <div class="legend-item"><div class="dot warning-dot"></div><span>Regulatory Signal</span></div>
+        <div class="legend-item"><div class="dot critical-dot"></div><span>Crisis Event</span></div>
+        <div class="legend-item"><div class="dot success-dot"></div><span>Resolution Path</span></div>
+    </div>
+
+</div>
+
+</body>
+</html>

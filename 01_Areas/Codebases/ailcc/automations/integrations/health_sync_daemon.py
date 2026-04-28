@@ -23,7 +23,7 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [BioSync] %(message)s")
 logger = logging.getLogger(__name__)
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 SOVEREIGN_REPORTS = HIPPOCAMPUS_DIR / "sovereign_reports"
 HEALTH_JSON_PATH = SOVEREIGN_REPORTS / "sovereign_health_status.json"
 DOWNLOADS_DIR = Path.home() / "Downloads"

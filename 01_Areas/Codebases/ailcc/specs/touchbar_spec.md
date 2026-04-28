@@ -16,7 +16,7 @@ We will use BetterTouchTool (BTT) to add a "Smart Button" to the MacBook Touch B
 * **Icon:** 🔍 (or custom microscope icon)
 * **Label:** Research
 * **Color:** `#0EA5E9` (Neon Blue)
-
+    *  - **API Key**: `[VAULT:NEXUS_API_KEY]`
     *   **Name:** `invoke_nexus` (or "NEXUS")
     *   **Icon:** (Optional) Choose a futuristic/AI icon.
     *   **Action:** "Execute Terminal Command (Async, not blocking)".
@@ -37,7 +37,7 @@ We will use BetterTouchTool (BTT) to add a "Smart Button" to the MacBook Touch B
 ```bash
 curl -X POST "http://localhost:3000/api/tasks/create" \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: antigravity_dev_key" \
+  -H "X-API-Key: [VAULT:NEXUS_API_KEY]" \
   -d '{
     "title": "Quick Task from TouchBar",
     "context": "Triggered via BTT",

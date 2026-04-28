@@ -27,7 +27,7 @@ from playwright.sync_api import sync_playwright
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [BrowserGuide] %(message)s")
 logger = logging.getLogger(__name__)
 
-AILCC_ROOT = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc")
+AILCC_ROOT = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc")
 SCREENSHOT_DIR = AILCC_ROOT / "logs" / "browser_proofs"
 
 def wait_for_server(url: str, timeout_seconds: int = 60) -> bool:

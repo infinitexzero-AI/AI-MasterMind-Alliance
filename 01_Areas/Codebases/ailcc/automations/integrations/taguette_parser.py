@@ -35,7 +35,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ─── Config ───────────────────────────────────────────────────────────────────
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 KNOWLEDGE_MAP   = HIPPOCAMPUS_DIR / "knowledge_map"
 SCHOLAR_NOTES   = HIPPOCAMPUS_DIR / "scholar_notes"
 LEDGER_PATH     = KNOWLEDGE_MAP / "taguette_ledger.json"

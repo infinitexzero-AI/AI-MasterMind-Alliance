@@ -3,7 +3,7 @@ import fs from 'fs';
 import path from 'path';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const METRICS_PATH = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage/tycoon_reports/burn_rate_metrics.json';
+    const METRICS_PATH = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage/tycoon_reports/burn_rate_metrics.json';
 
     if (req.method !== 'GET') {
         return res.status(405).json({ error: 'Method not allowed' });

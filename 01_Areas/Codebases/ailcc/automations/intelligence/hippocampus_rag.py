@@ -31,7 +31,7 @@ except ImportError:
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [HippocampusRAG] %(message)s")
 logger = logging.getLogger(__name__)
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 INDEX_STORE_DIR = HIPPOCAMPUS_DIR / ".vector_index"
 
 def build_index():

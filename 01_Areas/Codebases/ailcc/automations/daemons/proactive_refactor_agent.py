@@ -22,7 +22,7 @@ from datetime import datetime
 from pathlib import Path
 
 # Paths
-CODEBASE_ROOT = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc")
+CODEBASE_ROOT = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc")
 HIPPOCAMPUS_DIR = CODEBASE_ROOT / "hippocampus_storage"
 NEXUS_STATE_DIR = HIPPOCAMPUS_DIR / "nexus_state"
 OUTPUT_FILE = NEXUS_STATE_DIR / "tech_debt_queue.json"

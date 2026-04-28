@@ -5,7 +5,7 @@ This shortcut enables voice control for the Agent System. It dictates your speec
 ## Configuration
 
 - **API Endpoint**: `http://YOUR_MAC_IP:3000/api/chat` (Or local network IP)
-- **API Key**: `antigravity_dev_key`
+- **API Key**: `[VAULT:NEXUS_API_KEY]`
 - **Method**: `POST`
 
 ## Shortcut Workflow
@@ -19,7 +19,7 @@ This shortcut enables voice control for the Agent System. It dictates your speec
    - *Method*: POST
    - *Headers*:
      - `Content-Type`: `application/json`
-     - `X-API-Key`: `antigravity_dev_key`
+     - `X-API-Key`: `[VAULT:NEXUS_API_KEY]`
    - *Request Body (JSON)*:
      - `message`: (Select "Dictated Text" variable)
      - `role`: `user`

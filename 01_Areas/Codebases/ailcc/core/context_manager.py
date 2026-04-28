@@ -3,7 +3,7 @@ import json
 import os
 from typing import Any, Dict, Optional
 
-STATE_FILE = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/registries/task_state.json"
+STATE_FILE = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/registries/task_state.json"
 
 class ContextManager:
     """

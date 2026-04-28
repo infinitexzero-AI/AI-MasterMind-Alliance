@@ -78,13 +78,13 @@ async function triggerDeploy(): Promise<string> {
     // Fire build in background, don't wait for full output
     exec(
         'npm run build > /tmp/deploy.log 2>&1',
-        { cwd: '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard' }
+        { cwd: 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard' }
     );
     return '🚀 Production build triggered. Check /tmp/deploy.log for output.';
 }
 
 async function triggerReboot(): Promise<string> {
-    exec('bash /Users/infinite27/AILCC_PRIME/scripts/api/.alliance_lifecycle.sh > /tmp/reboot.log 2>&1 &');
+    exec('bash c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/scripts/api/.alliance_lifecycle.sh > /tmp/reboot.log 2>&1 &');
     return '♻️ Alliance lifecycle reboot initiated.';
 }
 

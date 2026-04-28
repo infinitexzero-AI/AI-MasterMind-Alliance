@@ -15,7 +15,7 @@ const LiveTerminal: React.FC = () => {
     const scrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        const ws = new WebSocket('ws://localhost:5005');
+        const ws = new WebSocket('ws://localhost:3001');
 
         ws.onopen = () => {
             setIsConnected(true);

@@ -22,8 +22,8 @@ export interface SwarmTaskSchema {
 
 export interface NeuralSignalSchema {
     signal_id: string;
-    source: 'PYTHON_CORTEX' | 'WEBSOCKET' | 'SYSTEM' | 'EXTERNAL_API';
-    type: 'LOG' | 'ERROR' | 'METRIC' | 'STATE_CHANGE';
+    source: 'PYTHON_CORTEX' | 'WEBSOCKET' | 'SYSTEM' | 'EXTERNAL_API' | 'MOBILE';
+    type: 'LOG' | 'ERROR' | 'METRIC' | 'STATE_CHANGE' | 'TELEMETRY';
     severity: 'CRITICAL' | 'HIGH' | 'ROUTINE';
     message: string;
     timestamp: string;

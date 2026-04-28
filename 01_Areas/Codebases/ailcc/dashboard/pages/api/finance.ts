@@ -4,7 +4,7 @@ import path from 'path';
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    const filePath = path.join(process.cwd(), '../../../../06_System/State/finance_data.json');
+    const filePath = path.join(process.cwd(), '../hippocampus_storage/finance_metrics.json');
 
     if (req.method === 'POST') {
         const { amount, ticker } = req.body;

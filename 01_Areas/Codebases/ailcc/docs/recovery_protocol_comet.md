@@ -20,7 +20,7 @@ Run the existing optimization script to clear GPU and standard caches which ofte
 1. In Terminal, run:
 
 ```bash
-bash /Users/infinite27/AILCC_PRIME/scripts/optimize_browsers.sh
+bash c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/scripts/optimize_browsers.sh
 ```
 
 ## Phase 3: Restoration & Sync
@@ -31,7 +31,7 @@ Comet is asking for a sync code because it perceives itself as a new device or i
    - Launch Comet using the safe script:
 
      ```bash
-     bash /Users/infinite27/AILCC_PRIME/scripts/launch_comet_safe.sh
+     bash c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/scripts/launch_comet_safe.sh
      ```
 
    - Sign in to your **Perplexity** account. This should automatically pull down your Search Threads and Agent Settings.

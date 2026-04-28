@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Configuration
-VALENTINE_DIR="/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc"
+VALENTINE_DIR="c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc"
 LOG_FILE="$VALENTINE_DIR/src/valentine/valentine.log"
 
 echo "❤️  Initializing Valentine Core..."

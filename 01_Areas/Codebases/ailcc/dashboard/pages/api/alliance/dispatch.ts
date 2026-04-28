@@ -87,7 +87,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         try {
             const { execSync } = require('child_process');
             const safeTask = JSON.stringify(task);
-            const dockerIntel = execSync(`npx ts-node --compiler-options '{"module":"CommonJS"}' /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/scripts/docker-ai-bridge.ts "Critique this Docker-related request: ${safeTask.slice(1, -1).replace(/"/g, '\\"')}"`, { encoding: 'utf8' });
+            const dockerIntel = execSync(`npx ts-node --compiler-options '{"module":"CommonJS"}' c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard/scripts/docker-ai-bridge.ts "Critique this Docker-related request: ${safeTask.slice(1, -1).replace(/"/g, '\\"')}"`, { encoding: 'utf8' });
             systemPrompt += `\n\n=== INFRASTRUCTURE EXPERT INTELLIGENCE (GORDON) ===\n${dockerIntel}\n===================================================\n`;
         } catch (e) {
             console.warn("Failed to fetch Docker AI intel", e);

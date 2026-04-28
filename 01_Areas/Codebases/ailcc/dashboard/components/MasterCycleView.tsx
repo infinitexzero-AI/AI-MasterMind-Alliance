@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from 'react';
-import { motion } from 'framer-motion';
 import { Activity, Cpu, Layers, User, Zap } from 'lucide-react';
 import { MasterCycleData } from '../types/comet_protocol';
 
@@ -32,7 +31,7 @@ const MasterCycleView: React.FC = () => {
 
     useEffect(() => {
         const connect = () => {
-            const wsUrl = 'ws://localhost:5005';
+            const wsUrl = 'ws://localhost:3001';
             const ws = new WebSocket(wsUrl);
             wsRef.current = ws;
 

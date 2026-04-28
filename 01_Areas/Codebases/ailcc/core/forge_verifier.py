@@ -12,7 +12,7 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [ForgeVerifier] %(message)s")
 logger = logging.getLogger(__name__)
 
-SANDBOX_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage/logic_sandbox")
+SANDBOX_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage/logic_sandbox")
 VERIFICATION_LOGS = SANDBOX_DIR / "verification_results"
 
 class ForgeVerifier:

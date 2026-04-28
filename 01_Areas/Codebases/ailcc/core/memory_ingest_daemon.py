@@ -16,13 +16,19 @@ import logging
 import time
 import threading
 from pathlib import Path
-from flask import Flask, request, jsonify
+try:
+    from flask import Flask, request, jsonify
+    HAS_FLASK = True
+except ImportError:
+    HAS_FLASK = False
 
 # Setup logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [MemoryIngest] %(message)s")
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__)
+app = None
+if HAS_FLASK:
+    app = Flask(__name__)
 daemon_instance = None
 
 try:
@@ -30,13 +36,13 @@ try:
     from chromadb.utils import embedding_functions
 except ImportError:
     logger.error("ChromaDB not installed. Run `pip install chromadb sentence-transformers`.")
-    # In a prod environment, this should gracefully exit or wait
-    pass
+    chromadb = None
+    embedding_functions = None
 
 CHROMA_HOST = os.getenv("CHROMA_HOST", "localhost")
 CHROMA_PORT = int(os.getenv("CHROMA_PORT", 8001))
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 
 class MemoryIngestDaemon:
     def __init__(self):
@@ -159,36 +165,37 @@ class MemoryIngestDaemon:
             # Run every 60 minutes
             time.sleep(3600)
 
-@app.route('/mesh/sync', methods=['GET'])
-def get_mesh_sync():
-    """Returns all forged skills to peer Mastermind nodes."""
-    if not daemon_instance or not daemon_instance.client:
-        return jsonify({"error": "ChromaDB unavailable"}), 503
-        
-    try:
-        # Simplistic pull for demonstration. In prod, we filter by timestamp.
-        results = daemon_instance.skill_vault.get(
-            include=['metadatas', 'documents']
-        )
-        return jsonify({
-            "status": "success",
-            "skills": [
-                {
-                    "id": cid,
-                    "code": results['metadatas'][i].get('code'),
-                    "language": results['metadatas'][i].get('language'),
-                    "document": results['documents'][i]
-                }
-                for i, cid in enumerate(results['ids']) if 'code' in results['metadatas'][i]
-            ]
-        }), 200
-    except Exception as e:
-        logger.error(f"Mesh Sync Error: {e}")
-        return jsonify({"error": str(e)}), 500
+if app:
+    @app.route('/mesh/sync', methods=['GET'])
+    def get_mesh_sync():
+        """Returns all forged skills to peer Mastermind nodes."""
+        if not daemon_instance or not daemon_instance.client:
+            return jsonify({"error": "ChromaDB unavailable"}), 503
+            
+        try:
+            # Simplistic pull for demonstration. In prod, we filter by timestamp.
+            results = daemon_instance.skill_vault.get(
+                include=['metadatas', 'documents']
+            )
+            return jsonify({
+                "status": "success",
+                "skills": [
+                    {
+                        "id": cid,
+                        "code": results['metadatas'][i].get('code'),
+                        "language": results['metadatas'][i].get('language'),
+                        "document": results['documents'][i]
+                    }
+                    for i, cid in enumerate(results['ids']) if 'code' in results['metadatas'][i]
+                ]
+            }), 200
+        except Exception as e:
+            logger.error(f"Mesh Sync Error: {e}")
+            return jsonify({"error": str(e)}), 500
 
-@app.route('/mesh/ping', methods=['GET'])
-def get_ping():
-    return jsonify({"status": "AILCC Mesh Node Active"}), 200
+    @app.route('/mesh/ping', methods=['GET'])
+    def get_ping():
+        return jsonify({"status": "AILCC Mesh Node Active"}), 200
 
 if __name__ == "__main__":
     import argparse
@@ -204,5 +211,10 @@ if __name__ == "__main__":
         sweeper_thread.start()
         
         # Run Mesh API on main thread
-        logger.info("Starting AILCC Mesh Sync Server on port 8002...")
-        app.run(host='0.0.0.0', port=8002, use_reloader=False)
+        if app:
+            logger.info("Starting AILCC Mesh Sync Server on port 8002...")
+            app.run(host='0.0.0.0', port=8002, use_reloader=False)
+        else:
+            logger.warning("Flask not installed. Mesh Sync API disabled. Holding process for background threads.")
+            while True:
+                time.sleep(3600)

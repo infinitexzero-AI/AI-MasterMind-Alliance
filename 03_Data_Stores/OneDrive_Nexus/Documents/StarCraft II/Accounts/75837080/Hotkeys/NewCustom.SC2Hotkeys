@@ -1,0 +1,10 @@
+[Settings]
+
+[Hotkeys]
+CameraSave0=Control+F5,Control+Shift+Q
+CameraSave1=Control+F6,Control+Shift+W
+CameraSave2=Control+F7,Control+Shift+E
+CameraSave3=Control+F8,Control+Shift+R
+
+[Commands]
+

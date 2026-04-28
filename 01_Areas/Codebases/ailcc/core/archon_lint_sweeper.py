@@ -6,7 +6,7 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [ArchonLintSweeper] %(message)s")
 logger = logging.getLogger(__name__)
 
-CORE_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/core")
+CORE_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/core")
 
 class PEP2027Enforcer(ast.NodeVisitor):
     def __init__(self, filename):

@@ -10,7 +10,7 @@ import redis
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 METHODOLOGY_PATH = "/Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb/AILCC_Swarm_Methodology.md"
 TASK_PATH = "/Users/infinite27/.gemini/antigravity/brain/542d6997-c7f5-4473-a5ab-29dba653bafb/task.md"
-OMNI_QUEUE = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage/nexus_state/active_tasks.json"
+OMNI_QUEUE = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage/nexus_state/active_tasks.json"
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
 

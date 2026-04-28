@@ -1,0 +1,2 @@
+displayflyerhelper=Selected
+showalerts=false

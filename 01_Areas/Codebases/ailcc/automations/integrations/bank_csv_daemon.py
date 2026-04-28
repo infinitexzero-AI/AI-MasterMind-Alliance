@@ -40,8 +40,9 @@ try:
     from langgraph.graph import StateGraph, END
     from langgraph.checkpoint.sqlite import SqliteSaver
 except ImportError:
-    print("⚠️ LangGraph not installed.")
-    exit(1)
+    print("[WARN] LangGraph or langchain_core not installed. Graph features disabled.")
+    # Proceeding without LangGraph for basic parsing
+    pass
 
 logging.basicConfig(
     level=logging.INFO,
@@ -51,10 +52,10 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ─── Config ───────────────────────────────────────────────────────────────────
-HIPPOCAMPUS_DIR   = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR   = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
 TYCOON_REPORTS    = HIPPOCAMPUS_DIR / "tycoon_reports"
 BURN_LEDGER_PATH  = HIPPOCAMPUS_DIR / "burn_rate_ledger.json"
-WATCH_DIR         = Path.home() / "Downloads"
+WATCH_DIR         = Path("c:/Users/infin/AILCC_PRIME/03_Data_Stores/Finance_Hub/Raw_Statements")
 POLL_INTERVAL     = 30  # seconds between folder scans
 
 # ─── Spending Categories (keywords → category) ────────────────────────────────
@@ -81,6 +82,8 @@ def detect_bank_format(headers: list[str]) -> str:
         return "td"
     if "date" in h and "withdrawals" in h and "deposits" in h:
         return "scotiabank"
+    if "date" in h and "spent" in h and "received" in h:
+        return "rbc_v2"
     if "date" in h and "description" in h and "amount" in h:
         return "generic"
     return "generic"
@@ -143,7 +146,17 @@ def _normalize_row(row: dict, fmt: str) -> Optional[dict]:
                 "amount"     : amount,
                 "type"       : "credit" if amount > 0 else "debit",
             }
-        else:  # generic / rbc
+        elif fmt == "rbc_v2":
+            spent    = parse_amount(row.get("Spent", "0"))
+            received = parse_amount(row.get("Received", "0"))
+            amount   = received - spent
+            return {
+                "date"       : row.get("Date", ""),
+                "description": row.get("Bank description", row.get("Description", "")),
+                "amount"     : amount,
+                "type"       : "credit" if amount > 0 else "debit",
+            }
+        else:  # generic / rbc v1
             amount = parse_amount(row.get("Amount", row.get("CAD$", "0")))
             return {
                 "date"       : row.get("Date", row.get("Transaction Date", "")),
@@ -249,7 +262,7 @@ def deposit_tycoon_report(filepath: Path, report_md: str, metrics: dict):
     os.makedirs(TYCOON_REPORTS, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     out_file  = TYCOON_REPORTS / f"burn_rate_{timestamp}_{filepath.stem}.md"
-    out_file.write_text(report_md)
+    out_file.write_text(report_md, encoding="utf-8")
     logger.info(f"✅ Tycoon Report deposited: {out_file.name}")
 
     # Export metrics for Dashboard consumption
@@ -258,7 +271,7 @@ def deposit_tycoon_report(filepath: Path, report_md: str, metrics: dict):
         "last_updated": datetime.now().isoformat(),
         "current_month": metrics
     }
-    metrics_file.write_text(json.dumps(metrics_payload, indent=2))
+    metrics_file.write_text(json.dumps(metrics_payload, indent=2), encoding="utf-8")
     logger.info(f"📊 Dashboard metrics updated: {metrics_file.name}")
 
     # Update ledger
@@ -288,7 +301,7 @@ def load_ledger() -> dict:
 
 def save_ledger(ledger: dict):
     ledger["last_run"] = datetime.now().isoformat()
-    BURN_LEDGER_PATH.write_text(json.dumps(ledger, indent=2))
+    BURN_LEDGER_PATH.write_text(json.dumps(ledger, indent=2), encoding="utf-8")
 
 
 # ─── Main Ingestion Loop ──────────────────────────────────────────────────────
@@ -354,7 +367,7 @@ def print_report():
         print("No reports yet. Drop a bank CSV into ~/Downloads/ and run --parse")
         return
     latest = sorted(reports, key=lambda f: f.stat().st_mtime, reverse=True)[0]
-    print(latest.read_text())
+    print(latest.read_text(encoding="utf-8"))
 
 
 # ─── LangGraph Architecture ───────────────────────────────────────────────────

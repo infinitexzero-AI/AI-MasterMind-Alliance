@@ -10,7 +10,7 @@ import json
 
 from core.daemon_factory import ReactiveDaemon
 
-AILCC_PRIME = Path("/Users/infinite27/AILCC_PRIME")
+AILCC_PRIME = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc")
 LOGS_DIR = AILCC_PRIME / "06_System/Logs"
 ARCHIVE_DIR = LOGS_DIR / "archives"
 HIPPOCAMPUS_DIR = AILCC_PRIME / "01_Areas/Codebases/ailcc/hippocampus_storage"

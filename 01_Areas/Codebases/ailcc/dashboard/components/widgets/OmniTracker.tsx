@@ -16,7 +16,7 @@ import {
 import { BiometricConsent } from './BiometricConsent';
 import { uiAudio } from '../../lib/audio';
 
-export type OmniDomain = 'ALL' | 'SCHOLAR' | 'TYCOON' | 'SOVEREIGN';
+export type OmniDomain = 'ALL' | 'SCHOLAR' | 'TYCOON' | 'SOVEREIGN' | 'VANGUARD';
 
 export interface RealWorldTask {
     id: string;
@@ -38,10 +38,11 @@ interface WealthProposal {
     timestamp: string;
 }
 
-const DOMAIN_STYLES = {
+const DOMAIN_STYLES: Record<string, any> = {
     SCHOLAR: { icon: GraduationCap, color: 'text-indigo-400', border: 'border-indigo-500/30', bg: 'bg-indigo-500/10' },
     TYCOON: { icon: Landmark, color: 'text-emerald-400', border: 'border-emerald-500/30', bg: 'bg-emerald-500/10' },
-    SOVEREIGN: { icon: Briefcase, color: 'text-amber-400', border: 'border-amber-500/30', bg: 'bg-amber-500/10' }
+    SOVEREIGN: { icon: Briefcase, color: 'text-amber-400', border: 'border-amber-500/30', bg: 'bg-amber-500/10' },
+    VANGUARD: { icon: ShieldCheck, color: 'text-rose-400', border: 'border-rose-500/30', bg: 'bg-rose-500/10' }
 };
 
 const AGENT_ICONS: Record<string, React.ReactNode> = {
@@ -157,7 +158,7 @@ export const OmniTracker: React.FC = () => {
                     </p>
                 </div>
                 <div className="flex gap-1 p-1 bg-white/5 rounded-lg border border-white/10">
-                    {(['ALL', 'SCHOLAR', 'TYCOON', 'SOVEREIGN'] as const).map(domain => (
+                    {(['ALL', 'SCHOLAR', 'TYCOON', 'SOVEREIGN', 'VANGUARD'] as const).map(domain => (
                         <button
                             key={domain}
                             onClick={() => setActiveTab(domain)}
@@ -218,7 +219,7 @@ export const OmniTracker: React.FC = () => {
                 ) : (
                     <AnimatePresence mode="popLayout">
                         {filteredTasks.map(task => {
-                            const Style = DOMAIN_STYLES[task.domain];
+                            const Style = DOMAIN_STYLES[task.domain] || DOMAIN_STYLES.SOVEREIGN;
                             const Icon = Style.icon;
 
                             return (

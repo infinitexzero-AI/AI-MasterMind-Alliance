@@ -19,7 +19,7 @@ export PATH="/usr/local/bin:/opt/homebrew/bin:$PATH"
 
 export BACKEND_API_URL="http://localhost:8000"
 
-BASE_DIR="/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc"
+BASE_DIR="c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc"
 cd "$BASE_DIR"
 
 echo -e "${CYAN}================================================================${NC}"

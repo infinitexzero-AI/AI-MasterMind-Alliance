@@ -2,8 +2,8 @@ import json
 import os
 from datetime import datetime
 
-STATE_DIR = "/Users/infinite27/AILCC_PRIME/06_System/State"
-CONFIG_PATH = "/Users/infinite27/AILCC_PRIME/antigravity_config.json"
+STATE_DIR = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/State"
+CONFIG_PATH = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/antigravity_config.json"
 
 class PersistenceManager:
     @staticmethod

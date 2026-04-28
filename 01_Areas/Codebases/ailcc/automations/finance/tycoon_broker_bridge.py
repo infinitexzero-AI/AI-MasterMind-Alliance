@@ -27,8 +27,8 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [TycoonBridge] %(mes
 logger = logging.getLogger(__name__)
 
 # Constants
-AILCC_ROOT = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc")
-FINANCE_STATE_PATH = Path("/Users/infinite27/AILCC_PRIME/06_System/State/finance_data.json")
+AILCC_ROOT = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc")
+FINANCE_STATE_PATH = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/State/finance_data.json")
 LEDGER_PATH = AILCC_ROOT / "hippocampus_storage" / "tycoon_reports" / "investment_ledger.jsonl"
 
 def initialize_state():

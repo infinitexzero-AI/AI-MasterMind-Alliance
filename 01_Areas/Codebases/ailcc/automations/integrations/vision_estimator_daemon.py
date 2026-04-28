@@ -22,7 +22,7 @@ from datetime import datetime
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [VisionQuote] %(message)s")
 logger = logging.getLogger(__name__)
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 QUOTES_DIR      = HIPPOCAMPUS_DIR / "tycoon_reports" / "vision_quotes"
 
 def encode_image(image_path: Path):

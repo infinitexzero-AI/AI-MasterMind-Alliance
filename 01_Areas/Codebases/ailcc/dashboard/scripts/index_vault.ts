@@ -52,7 +52,7 @@ export async function indexVault() {
                 try {
                     const embedding = await generateEmbedding(chunk);
                     await localVectorStore.upsert(uuidv4(), embedding, {
-                        path: file.replace('/Users/infinite27/AILCC_PRIME/', ''),
+                        path: file.replace('c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/', ''),
                         chunkIndex: i,
                         content: chunk,
                         timestamp: new Date().toISOString()

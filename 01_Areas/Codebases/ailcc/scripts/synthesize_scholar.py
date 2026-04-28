@@ -18,11 +18,11 @@ import logging
 from pathlib import Path
 
 # Fix python path to allow importing from ailcc core
-sys.path.append(str(Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc").resolve()))
+sys.path.append(str(Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc").resolve()))
 
 from core.llm_clients import OllamaClient
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 SCHOLAR_NOTES_DIR = HIPPOCAMPUS_DIR / "scholar_notes"
 TARGET_NOTE_FILE = SCHOLAR_NOTES_DIR / "1_https___arxiv_org_abs_2501_12599.md"
 OUTPUT_FILE = SCHOLAR_NOTES_DIR / "1_https___arxiv_org_abs_2501_12599_summary.md"

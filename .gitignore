@@ -224,3 +224,7 @@ storage/
 
 *.tar.gz
 *.zip
+
+# OneDrive Temporary Files
+03_Data_Stores/OneDrive_Nexus/.*
+

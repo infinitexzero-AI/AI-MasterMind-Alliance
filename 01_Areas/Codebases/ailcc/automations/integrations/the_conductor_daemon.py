@@ -32,7 +32,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # ─── Config ───────────────────────────────────────────────────────────────────
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 CONDUCTOR_DIR   = HIPPOCAMPUS_DIR / "calendar_matrix"
 ICS_EXPORT_PATH = CONDUCTOR_DIR / "mastermind_routine.ics"
 ROUTINE_JSON    = CONDUCTOR_DIR / "daily_routine.json"
@@ -53,7 +53,7 @@ TASK_COSTS = {
 def load_omni_tasks() -> list:
     """Load real tasks from scholar_data.json and biological state."""
     logger.info("Ingesting tasks from OmniTracker (scholar_data.json)...")
-    SCHOLAR_DATA = Path("/Users/infinite27/AILCC_PRIME/06_System/State/scholar_data.json")
+    SCHOLAR_DATA = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/State/scholar_data.json")
     
     tasks = []
     if SCHOLAR_DATA.exists():

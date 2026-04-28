@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 # Expand user home directory securely
 USER_HOME = Path.home()
 ICLOUD_INGEST_DIR = USER_HOME / "Library/Mobile Documents/com~apple~CloudDocs/Shortcuts/AILCC_Bio_Ingest"
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 BIO_STATE_JSON = HIPPOCAMPUS_DIR / "bio_state.json"
 
 REDIS_HOST = os.environ.get("REDIS_HOST", "localhost")

@@ -2,7 +2,7 @@
 # AILCC Dashboard Auto-Launcher
 # Runs on boot via LaunchAgent: com.ailcc.dashboard.plist
 
-DASHBOARD_DIR="/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard"
+DASHBOARD_DIR="c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard"
 LOG_DIR="/tmp/ailcc"
 
 mkdir -p "$LOG_DIR"

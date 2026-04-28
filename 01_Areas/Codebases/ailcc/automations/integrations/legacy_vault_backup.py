@@ -8,8 +8,8 @@ from pathlib import Path
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [LegacyVault] %(message)s")
 logger = logging.getLogger(__name__)
 
-HIPPOCAMPUS_DIR = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage"
-VAULT_OUTPUT_DIR = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/external_drives"
+HIPPOCAMPUS_DIR = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage"
+VAULT_OUTPUT_DIR = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/external_drives"
 
 class LegacyVaultBackuper:
     """

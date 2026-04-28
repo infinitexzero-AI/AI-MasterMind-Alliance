@@ -13,7 +13,7 @@ from datetime import datetime
 
 logger = logging.getLogger(__name__)
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 SCHOLAR_NOTES_DIR = HIPPOCAMPUS_DIR / "scholar_notes"
 LEDGER_FILE = HIPPOCAMPUS_DIR / "swarm_learning_ledger.json"
 

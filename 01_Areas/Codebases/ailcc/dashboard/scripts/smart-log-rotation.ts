@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 
 // Canonical Log Directory
-const LOG_DIR = '/Users/infinite27/AILCC_PRIME/logs';
+const LOG_DIR = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/logs';
 const ARCHIVE_DIR = path.join(LOG_DIR, 'archive');
 
 async function rotateLogs() {

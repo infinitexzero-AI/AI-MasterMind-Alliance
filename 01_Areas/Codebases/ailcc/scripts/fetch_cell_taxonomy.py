@@ -47,7 +47,7 @@ def main():
     # In a full-scale environment, we would use AbcProjectCache to download snRNAseq CSVs.
     # Here, we use the scientifically verified archetypes directly.
     
-    config_dir = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/config"
+    config_dir = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/config"
     target_file = os.path.join(config_dir, "agent_personalities.json")
     
     if not os.path.exists(config_dir):

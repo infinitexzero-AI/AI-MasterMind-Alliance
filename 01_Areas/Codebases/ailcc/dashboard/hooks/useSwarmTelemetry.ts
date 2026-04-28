@@ -24,9 +24,10 @@ export interface SwarmTelemetryData {
     mediaContext: any | null;
     proposals: SingularityProposal[];
     isConnected: boolean;
-    dispatchTask: (command: any) => boolean;
+    dispatchTask: (_command: any) => boolean;
     actionPlan: any | null;
     globalContext: any | null;
+    mobileState: any | null;
 }
 
 export function useSwarmTelemetry(): SwarmTelemetryData {
@@ -36,6 +37,7 @@ export function useSwarmTelemetry(): SwarmTelemetryData {
     const [mediaContext, setMediaContext] = useState<any | null>(null);
     const [actionPlan, setActionPlan] = useState<any | null>(null);
     const [globalContext, setGlobalContext] = useState<any | null>(null);
+    const [mobileState, setMobileState] = useState<any | null>(null);
     const [proposals, setProposals] = useState<SingularityProposal[]>([]);
     const [isConnected, setIsConnected] = useState(false);
     
@@ -107,6 +109,20 @@ export function useSwarmTelemetry(): SwarmTelemetryData {
         socket.on('SWARM_PROPOSAL', (data) => {
             setProposals(prev => [data, ...prev]);
         });
+        
+        socket.on('MOBILE_TELEMETRY', (data) => {
+            setMobileState(data);
+            const normalizedSignal: NeuralSignalSchema = {
+                signal_id: `mob-${Date.now()}`,
+                source: 'MOBILE',
+                type: 'TELEMETRY',
+                severity: 'ROUTINE',
+                message: `Mobile Uplink: ${data.type} (${JSON.stringify(data.data)})`,
+                timestamp: data.timestamp || new Date().toISOString(),
+                metadata: data
+            };
+            setSignals(prev => [normalizedSignal, ...prev].slice(0, 100));
+        });
 
         socket.on('disconnect', () => {
             setIsConnected(false);
@@ -123,13 +139,13 @@ export function useSwarmTelemetry(): SwarmTelemetryData {
         };
     }, []);
 
-    const dispatchTask = (command: any) => {
+    const dispatchTask = (_command: any) => {
         if (socketRef.current && socketRef.current.connected) {
-            socketRef.current.emit('DISPATCH_VANGUARD_TASK', command);
+            socketRef.current.emit('DISPATCH_VANGUARD_TASK', _command);
             return true;
         }
         return false;
     };
 
-    return { tasks, signals, hardwareStats, mediaContext, proposals, isConnected, dispatchTask, actionPlan, globalContext };
+    return { tasks, signals, hardwareStats, mediaContext, proposals, isConnected, dispatchTask, actionPlan, globalContext, mobileState };
 }

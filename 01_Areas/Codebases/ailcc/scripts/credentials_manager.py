@@ -122,8 +122,10 @@ class CredentialsManager:
             return False
     
     def get_credential(self, service: str, account: Optional[str] = None) -> Optional[str]:
-        """Retrieve credential from macOS Keychain"""
-        
+        """Retrieve credential from macOS Keychain (macOS only)"""
+        if sys.platform != 'darwin':
+            return None
+            
         if not account:
             account = f"{service}_key"
         
@@ -143,7 +145,6 @@ class CredentialsManager:
                 return None
                 
         except Exception as e:
-            print(f"❌ Error: {e}")
             return None
     
     def delete_credential(self, service: str, account: Optional[str] = None) -> bool:

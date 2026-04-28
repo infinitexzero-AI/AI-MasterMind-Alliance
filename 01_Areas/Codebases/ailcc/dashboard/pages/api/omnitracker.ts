@@ -2,42 +2,98 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
+// Cross-platform path resolution
+const BASE_DIR = 'C:/Users/infin/AILCC_PRIME';
+const VANGUARD_DIR = path.join(BASE_DIR, '03_Data_Stores/OneDrive_Nexus/01_Projects/Tax_Crisis_Defense_2026');
+const TASK_MD = path.join(BASE_DIR, 'task.md');
+const MANIFEST_MD = path.join(VANGUARD_DIR, 'WEEKLY_TRIAGE_MANIFEST_APRIL2026.md');
+const CORRESPONDENCE_MD = path.join(VANGUARD_DIR, 'CORRESPONDENCE_DRAFTS_APRIL2026.md');
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method !== 'GET') {
         return res.status(405).json({ error: 'Method not allowed' });
     }
 
-    const HIPPOCAMPUS_DIR = path.resolve(process.env.HIPPOCAMPUS_DIR || '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage');
     const tasks: any[] = [];
 
     // Helper to generate IDs
     const genId = (prefix: string) => `${prefix}-${Math.floor(Math.random() * 9000) + 1000}`;
 
-    // 1. Tycoon: NSLSC Status
-    try {
-        const nslscPath = path.join(HIPPOCAMPUS_DIR, 'tycoon_reports', 'nslsc_status.json');
-        if (fs.existsSync(nslscPath)) {
-            const data = JSON.parse(fs.readFileSync(nslscPath, 'utf-8'));
-            if (!data.error) {
+    // Helper to parse Markdown tasks
+    const parseMarkdownTasks = (filePath: string, domain: string, defaultUrgency: string = 'ROUTINE') => {
+        if (!fs.existsSync(filePath)) return;
+        
+        const content = fs.readFileSync(filePath, 'utf-8');
+        const lines = content.split('\n');
+        
+        lines.forEach(line => {
+            // Match "- [ ] Task Description" or "- [/] Task Description"
+            const match = line.match(/^\s*-\s*\[([ x/])\]\s*(.*)/);
+            // Also match "- **Immediate Action**: Task" pattern
+            const actionMatch = line.match(/^\s*-\s*\*\*Immediate Action\*\*:\s*(.*)/);
+
+            if (match) {
+                const isCompleted = match[1] === 'x';
+                const isInProgress = match[1] === '/';
+                const title = match[2].trim();
+                
+                if (!isCompleted && title.length > 0) {
+                    let urgency = defaultUrgency;
+                    if (title.toLowerCase().includes('critical') || title.toLowerCase().includes('urgent')) urgency = 'CRITICAL';
+                    else if (title.toLowerCase().includes('high')) urgency = 'HIGH';
+
+                    tasks.push({
+                        id: genId(domain.substring(0, 3).toUpperCase()),
+                        title: title,
+                        domain: domain,
+                        urgency: urgency,
+                        status: isInProgress ? 'ACTIVE' : 'PENDING',
+                        requiredAgents: domain === 'VANGUARD' ? ['Antigravity', 'Grok'] : ['Valentine']
+                    });
+                }
+            } else if (actionMatch) {
+                const title = actionMatch[1].trim();
                 tasks.push({
-                    id: genId('NSLSC'),
-                    title: `NSLSC Payment: ${data.next_payment}`,
-                    domain: 'TYCOON',
-                    urgency: 'HIGH', // Flagging as HIGH to force biometric review
+                    id: genId('ACTION'),
+                    title: title,
+                    domain: 'VANGUARD',
+                    urgency: 'CRITICAL',
                     status: 'PENDING',
-                    requiredAgents: ['Grok', 'Valentine'],
-                    deadline: data.payment_date || null
+                    requiredAgents: ['Antigravity', 'Grok']
                 });
             }
-        }
+        });
+    };
+
+    // 1. Vanguard Tasks (From Weekly Manifest)
+    try {
+        parseMarkdownTasks(MANIFEST_MD, 'VANGUARD', 'HIGH');
     } catch (e) {
-        console.error("Error reading NSLSC", e);
+        console.error("Error parsing Vanguard Manifest", e);
     }
 
-    // 2. Scholar: Academic Progress (Knowledge Gaps)
+    // 2. Correspondence Actions (From Drafts)
     try {
-        const acadPath = path.join(HIPPOCAMPUS_DIR, 'scholar_reports', 'academic_progress.json');
-        if (fs.existsSync(acadPath)) {
+        parseMarkdownTasks(CORRESPONDENCE_MD, 'VANGUARD', 'CRITICAL');
+    } catch (e) {
+        console.error("Error parsing Correspondence Drafts", e);
+    }
+
+    // 3. Sovereign Tasks (From Root task.md)
+    try {
+        parseMarkdownTasks(TASK_MD, 'SOVEREIGN', 'ROUTINE');
+    } catch (e) {
+        console.error("Error parsing root task.md", e);
+    }
+
+    // 3. Fallback to Hippocampus (if exists and hasn't been parsed yet)
+    // Adding some legacy check but prioritized real project files
+    const HIPPOCAMPUS_DIR = path.join(BASE_DIR, '01_Areas/Codebases/ailcc/hippocampus_storage');
+    
+    // Add Academic Progress if available
+    try {
+        const acadPath = path.join(HIPPOCAMPUS_DIR, 'scholar_reports/academic_progress.json');
+        if (fs.existsSync(acadPath) && tasks.filter(t => t.domain === 'SCHOLAR').length === 0) {
             const data = JSON.parse(fs.readFileSync(acadPath, 'utf-8'));
             const gaps = data.core_courses?.missing_gaps || [];
             if (gaps.length > 0) {
@@ -51,86 +107,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
                 });
             }
         }
-    } catch (e) {
-        console.error("Error reading Academic Progress", e);
-    }
-
-    // 3. Scholar: Institutional Deadlines
-    try {
-        const instPath = path.join(HIPPOCAMPUS_DIR, 'calendar_matrix', 'institutional_deadlines.json');
-        if (fs.existsSync(instPath)) {
-            const data = JSON.parse(fs.readFileSync(instPath, 'utf-8'));
-            const deadlines = data.deadlines || [];
-            deadlines.forEach((d: any) => {
-                tasks.push({
-                    id: d.id || genId('INST'),
-                    title: d.title,
-                    domain: 'SCHOLAR',
-                    urgency: d.urgency || 'ROUTINE',
-                    status: 'PENDING',
-                    requiredAgents: ['Grok', 'Gemini'],
-                    deadline: d.dueDate || null
-                });
-            });
-        }
-    } catch (e) {
-        console.error("Error reading Institutional Deadlines", e);
-    }
-
-    // 4. Sovereign: The Conductor Routine
-    try {
-        const routinePath = path.join(HIPPOCAMPUS_DIR, 'calendar_matrix', 'daily_routine.json');
-        if (fs.existsSync(routinePath)) {
-            const data = JSON.parse(fs.readFileSync(routinePath, 'utf-8'));
-            const schedule = data.schedule || [];
-            if (schedule.length > 0) {
-                tasks.push({
-                    id: genId('EXT'),
-                    title: `Execute Conductor Daily Timeline (${schedule.length} events)`,
-                    domain: 'SOVEREIGN',
-                    urgency: 'ROUTINE',
-                    status: 'PENDING',
-                    requiredAgents: ['Valentine']
-                });
-            }
-        }
-    } catch (e) {
-        console.error("Error reading Conductor Routine", e);
-    }
-
-    // 5. Tycoon: East Coast Fresh Coats (Painting Tycoon)
-    try {
-        const pBizPath = path.join(HIPPOCAMPUS_DIR, 'tycoon_reports', 'painting_biz_status.json');
-        if (fs.existsSync(pBizPath)) {
-            const data = JSON.parse(fs.readFileSync(pBizPath, 'utf-8'));
-            const urgency = data.urgency || 'ROUTINE';
-
-            // If we have low inventory or pending quotes, bubble it up as a single actionable tracking card
-            if (urgency === 'CRITICAL' || urgency === 'HIGH') {
-                const invCount = data.low_inventory?.length || 0;
-                const quoteCount = data.quotes?.pending?.length || 0;
-
-                let title = `Review Fresh Coats Status`;
-                if (invCount > 0) title = `Order Low Inventory (${invCount} items!)`;
-                else if (quoteCount > 0) title = `Finalize Pending Quotes (${quoteCount})`;
-
-                tasks.push({
-                    id: genId('BIZ'),
-                    title: title,
-                    domain: 'TYCOON',
-                    urgency: urgency,
-                    status: 'PENDING',
-                    requiredAgents: ['Grok', 'Gemini']
-                });
-            }
-        }
-    } catch (e) {
-        console.error("Error reading Painting Biz Status", e);
-    }
+    } catch (e) { /* ignore */ }
 
     // Sort logically by Urgency
     const urgencyMap: Record<string, number> = { 'CRITICAL': 100, 'HIGH': 50, 'ROUTINE': 10, 'LOW': 1 };
     tasks.sort((a, b) => (urgencyMap[b.urgency] || 0) - (urgencyMap[a.urgency] || 0));
 
-    res.status(200).json(tasks);
+    // Limit to top 15 most important tasks
+    res.status(200).json(tasks.slice(0, 15));
 }

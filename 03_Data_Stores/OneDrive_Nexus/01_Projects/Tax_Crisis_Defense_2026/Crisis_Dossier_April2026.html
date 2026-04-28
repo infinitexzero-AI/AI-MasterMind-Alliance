@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanguard Crisis Dossier</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap');
+        
+        :root {
+            --bg: #0a0a0c;
+            --surface: rgba(20, 20, 25, 0.8);
+            --surface-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f0f4f8;
+            --text-muted: #94a3b8;
+            --critical: #ef4444;
+            --warning: #f59e0b;
+            --success: #10b981;
+            --accent: #3b82f6;
+            --legal: #d946ef;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            line-height: 1.6;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.08) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(239, 68, 68, 0.05) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; }
+        header { margin-bottom: 50px; text-align: center; border-bottom: 1px solid var(--surface-border); padding-bottom: 30px; }
+        
+        h1 {
+            font-size: 2.5rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 10px;
+            background: linear-gradient(to right, #fff, #94a3b8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle { color: var(--critical); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; font-weight: 700; }
+
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        @media (max-width: 768px) { .grid { grid-template-columns: 1fr; } }
+
+        .card {
+            background: var(--surface); 
+            -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--surface-border); border-radius: 12px; padding: 30px;
+        }
+
+        .card-full { grid-column: 1 / -1; }
+
+        .badge {
+            display: inline-block; padding: 4px 10px; border-radius: 6px; font-size: 0.75rem;
+            font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 15px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        .badge.critical { background: rgba(239, 68, 68, 0.1); color: var(--critical); border: 1px solid rgba(239, 68, 68, 0.2); }
+        .badge.success { background: rgba(16, 185, 129, 0.1); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.2); }
+        .badge.info { background: rgba(59, 130, 246, 0.1); color: var(--accent); border: 1px solid rgba(59, 130, 246, 0.2); }
+        .badge.legal { background: rgba(217, 70, 239, 0.1); color: var(--legal); border: 1px solid rgba(217, 70, 239, 0.2); }
+
+        h2 { font-size: 1.4rem; margin-top: 0; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+        .amount { font-family: 'JetBrains Mono', monospace; font-weight: 700; color: var(--text-main); }
+        .amount.negative { color: var(--critical); }
+        .amount.positive { color: var(--success); }
+        
+        p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; }
+
+        .data-list { list-style: none; padding: 0; margin: 0 0 20px 0; }
+        .data-list li { font-size: 0.9rem; padding: 10px 0; border-bottom: 1px solid var(--surface-border); display: flex; justify-content: space-between; }
+        .data-list li:last-child { border-bottom: none; }
+        .data-label { color: var(--text-muted); }
+        .data-value { font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+
+        .action-plan { background: linear-gradient(145deg, rgba(217, 70, 239, 0.05), transparent); border-color: rgba(217, 70, 239, 0.2); }
+
+        .step { display: flex; gap: 15px; margin-bottom: 20px; }
+        .step-num {
+            background: var(--legal); color: white; width: 28px; height: 28px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 0.9rem; flex-shrink: 0;
+        }
+        .step-content h4 { margin: 0 0 5px 0; color: #fff; }
+        .step-content p { margin: 0; font-size: 0.85rem; }
+
+        .liquidation-bar {
+            margin-top: 15px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            height: 12px;
+        }
+        .liq-cra { background: var(--critical); width: 22.8%; } /* 30k of 133k */
+        .liq-safe { background: var(--success); width: 77.2%; } /* 103k of 133k */
+        .liq-legend { margin-top:10px; font-size: 0.8rem; text-align: right; }
+        .action-desc { margin-bottom: 30px; }
+        .payroll-cancelled { color: var(--success); text-decoration: line-through; }
+        .hst-actual { color: var(--critical); }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>CAPITAL DEFENSE & SURVIVAL PROTOCOL</h1>
+        <div class="subtitle">OBJECTIVE: FEDERAL COMPLIANCE FIRST. CIVIL FALLOUT SECOND.</div>
+    </header>
+
+    <div class="grid">
+        
+        <!-- LIQUIDITY OVERVIEW -->
+        <div class="card card-full" style="border-left: 4px solid var(--success);">
+            <span class="badge success">Capital Reserves Established</span>
+            <h2>The ~$133,000 Liquid Pool</h2>
+            <p>You have successfully secured the ~$133,000 CAD extraction. This capital is the operational leverage required to legally clear the Federal Government. The business is permanently closed; this is purely a legal cleanup operation.</p>
+            
+            <ul class="data-list">
+                <li><span class="data-label">Verified Total Liquid</span> <span class="data-value">~$133,000.00</span></li>
+                <li><span class="data-label">Estimated CRA Allocation</span> <span class="data-value negative">-$30,363.00</span></li>
+                <li><span class="data-label">Remaining Safe Capital</span> <span class="data-value positive">~$102,637.00</span></li>
+            </ul>
+            <div class="liquidation-bar">
+                <div class="liq-cra" title="22% to CRA"></div>
+                <div class="liq-safe" title="78% Safe"></div>
+            </div>
+            <p class="liq-legend">RED: Federal Taxes | GREEN: Retained Capital</p>
+        </div>
+
+        <!-- CRA RTP -->
+        <div class="card">
+            <span class="badge critical">Federal Threat Component</span>
+            <h2>CRA Garnishment <span class="amount negative">-$68,224</span></h2>
+            <p>The arbitrary assessment that triggered the CIBC freeze.</p>
+            <ul class="data-list">
+                <li><span class="data-label">Fake Payroll Debt</span> <span class="data-value payroll-cancelled">$40,047.51</span></li>
+                <li><span class="data-label">Real HST Debt</span> <span class="data-value hst-actual">$30,362.87</span></li>
+            </ul>
+            <p><strong>Status:</strong> Awaiting you to file the returns. Once filed, the $68k drops to the true $30k, making it solvable.</p>
+        </div>
+
+        <!-- COINBASE DEFAULT -->
+        <div class="card">
+            <span class="badge info">Civil Threat Component</span>
+            <h2>Coinbase Legal <span class="amount negative">-$130,135</span></h2>
+            <p>A purely civil legal matter. Coinbase Canada is not the Federal Government; they cannot arbitrarily freeze bank accounts without winning a court judgment first.</p>
+            <p><strong>Status:</strong> Deprioritized. Once the CRA is paid and the bank is clear, we will assess if we settle with Coinbase from the remaining $100k+, or declare civil bankruptcy to discharge the $130k negative balance.</p>
+        </div>
+
+        <!-- LEGAL SURVIVAL PLAYBOOK -->
+        <div class="card card-full action-plan">
+            <span class="badge legal">Strategic Execution</span>
+            <h2>The "Federal Shield" Survival Engine</h2>
+            <p class="action-desc">The business is dead. Your only objective is staying out of federal trouble and protecting the remaining capital.</p>
+
+            <div class="step">
+                <div class="step-num">1</div>
+                <div class="step-content">
+                    <h4>Neutralize the CRA Math (TODAY)</h4>
+                    <p>Send a message via CRA My Business Account stating <em>"No employees existed. B2B Subcontractors only. Close the payroll account."</em> Then, paste the <code>HST_Filing_Template.md</code> numbers in to legally lock your real debt at ~$30,363.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">2</div>
+                <div class="step-content">
+                    <h4>Pay the Federal Tax (The Shield)</h4>
+                    <p>Once the CRA dashboard updates to $30k, allocate exactly that amount from your $133k reserve. Pay the CRA in full. This instantly, legally kills the Requirement to Pay (RTP). The Federal Government is now entirely off your back forever.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">3</div>
+                <div class="step-content">
+                    <h4>Unfreeze CIBC & Secure Capital</h4>
+                    <p>With the CIBC RTP lifted by the CRA, your accounts flow freely. You securely move your remaining ~$102,000 into a safe account entirely disconnected from the defunct business.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-num">4</div>
+                <div class="step-content">
+                    <h4>Assess the Coinbase Fallout</h4>
+                    <p>Coinbase will attempt a civil suit for the $130k reversed EFT. You have two choices: negotiate a partial settlement using your remaining capital, or retain a Licensed Insolvency Trustee and declare a hyper-clean, legal bankruptcy to entirely discharge the $130k corporate/civil debt while your personal taxes are perfect.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

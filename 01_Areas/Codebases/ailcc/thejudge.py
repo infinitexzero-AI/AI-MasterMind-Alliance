@@ -4,8 +4,8 @@ import os
 import json
 from datetime import datetime
 
-VAULT_PATH = "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault"
-VERDICT_PATH = "/Users/infinite27/AILCC_PRIME/06_System/State/judge_verdict.json"
+VAULT_PATH = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/04_Intelligence_Vault"
+VERDICT_PATH = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/State/judge_verdict.json"
 
 class ProgressBar:
     def __init__(self, total, prefix='Progress'):
@@ -28,10 +28,10 @@ import subprocess
 
 def check_system_health():
     # Check disk space on workspace drive
-    res = subprocess.run(["df", "-h", "/Users/infinite27/AILCC_PRIME/"], capture_output=True, text=True)
+    res = subprocess.run(["df", "-h", "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/"], capture_output=True, text=True)
     if "94%" in res.stdout or "90%" in res.stdout:
         print("⚠️  CRITICAL: High disk usage detected. Issuing Optimization Verdict.")
-        subprocess.run(["python3", "/Users/infinite27/AILCC_PRIME/06_System/Execution/system_optimizer.py"])
+        subprocess.run(["python3", "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/Execution/system_optimizer.py"])
         return True
     return False
 

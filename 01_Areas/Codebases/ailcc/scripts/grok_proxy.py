@@ -4,7 +4,7 @@ import json
 from datetime import datetime
 
 # Path to the shared context file used by Grok/Valentine
-CONTEXT_FILE = "/Users/infinite27/AILCC_PRIME/06_System/State/current_web_context.json"
+CONTEXT_FILE = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/State/current_web_context.json"
 
 def ingest_web_content(url, content, summary=None):
     """

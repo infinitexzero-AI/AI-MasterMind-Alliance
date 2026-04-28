@@ -48,7 +48,7 @@ const DailyBriefingRenderer = () => {
 
 export default function WarRoom() {
   const { hasAccess } = useAuth();
-  const { tasks: liveTasks, signals: liveSignals, proposals, isConnected, hardwareStats, mediaContext } = useSwarmTelemetry();
+  const { tasks: liveTasks, signals: liveSignals, proposals, isConnected, hardwareStats, mediaContext, mobileState } = useSwarmTelemetry();
   const [godPrompt, setGodPrompt] = React.useState('');
   const [isCasting, setIsCasting] = React.useState(false);
 
@@ -86,7 +86,7 @@ export default function WarRoom() {
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify({ action: 'REJECT', proposal })
           });
-      } catch(e) {}
+      } catch(e) { console.error("Proposal rejection fault", e); }
   };
   const fetcher = (url: string) => fetch(url).then(res => res.json());
   const { data: voiceBounties } = useSWR('/api/voice-ingest', fetcher, { refreshInterval: 2000 });
@@ -135,6 +135,7 @@ export default function WarRoom() {
                 )}
                 <StatusPill status="active" label="SINGULARITY MODE" />
                 <StatusPill status="critical" label="DEFCON 2" />
+                <StatusPill status={mobileState ? 'online' : 'offline'} label={mobileState ? `MOBILE: ${mobileState.type}` : 'MOBILE: OFFLINE'} />
                 <StatusPill status={isConnected ? 'online' : 'offline'} label={isConnected ? 'SWARM LINK' : 'OFFLINE'} />
                 <StatusPill status="active" label="SYNC HZ: 60" />
             </div>

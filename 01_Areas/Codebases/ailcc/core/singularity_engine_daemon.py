@@ -10,8 +10,8 @@ import redis
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
 VAULT_PATH = "/Users/infinite27/Library/CloudStorage/OneDrive-Personal/AILCC_VAULT"
-OMNI_QUEUE = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage/nexus_state/active_tasks.json"
-MODE6_DATA_DIR = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/automations/mode6/data"
+OMNI_QUEUE = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage/nexus_state/active_tasks.json"
+MODE6_DATA_DIR = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/automations/mode6/data"
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [SingularityEngine] %(message)s")
 logger = logging.getLogger(__name__)
@@ -47,7 +47,7 @@ class SingularityEngine:
             import subprocess
             result = subprocess.run(
                 ["git", "log", "-p", "-n", "3"],
-                cwd="/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc",
+                cwd="c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc",
                 capture_output=True,
                 text=True,
                 check=True
@@ -158,7 +158,7 @@ class SingularityEngine:
                         
                     # Execute Git Subprocess (Total Autonomy)
                     import subprocess
-                    cwd_root = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc"
+                    cwd_root = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc"
                     subprocess.run(["git", "add", filepath], cwd=cwd_root, check=True)
                     subprocess.run(["git", "commit", "-m", f"[Archon Auto-Merge] Synergizing Vanguard Upgrade: {proposal_title}"], cwd=cwd_root, check=True)
                     

@@ -4,7 +4,7 @@ import asyncio
 from datetime import datetime
 
 # Configuration
-LOCAL_REGISTRY_PATH = "/Users/infinite27/AILCC_PRIME/05_Tasks/Registry"
+LOCAL_REGISTRY_PATH = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/05_Tasks/Registry"
 LINEAR_TEAM_ID = "afce2df5-59c5-4889-a084-3497bba44518"
 PROJECT_ID = "364ee086-1aa6-4e0c-97fc-b422ee8edb78"
 
@@ -37,7 +37,7 @@ def generate_markdown_task(issue):
 async def main():
     print(f"[{datetime.now().strftime('%H:%M:%S')}] 🔄 Initializing Linear-Markdown Sync...")
     
-    issues_file = "/Users/infinite27/AILCC_PRIME/05_Tasks/linear_issues.json"
+    issues_file = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/05_Tasks/linear_issues.json"
     if not os.path.exists(issues_file):
         print(f"❌ Issues file not found: {issues_file}")
         return

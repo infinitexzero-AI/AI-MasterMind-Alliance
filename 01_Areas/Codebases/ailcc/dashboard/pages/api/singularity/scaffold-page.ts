@@ -15,7 +15,7 @@ import * as path from 'path';
  *   4. Logs the creation to the tamper-evident audit trail
  */
 
-const DASHBOARD_DIR = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
+const DASHBOARD_DIR = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard';
 
 const PAGE_TEMPLATE = (name: string, title: string, description: string, llmContent: string) => `import Head from 'next/head';
 import { motion } from 'framer-motion';

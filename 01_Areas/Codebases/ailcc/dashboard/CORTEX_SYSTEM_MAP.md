@@ -104,4 +104,4 @@ The bridge connecting the internal system with the external world (Apple Ecosyst
 
 **Last Synced:** 2026-02-25T17:55:00Z
 **Control Protocol:** Active (Mode 6 - Orchestration)
-**Reference Document:** [ALLIANCE_CONVERGENCE_PROTOCOL.md](file:///Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/docs/ALLIANCE_CONVERGENCE_PROTOCOL.md)
+**Reference Document:** [ALLIANCE_CONVERGENCE_PROTOCOL.md](file://c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard/docs/ALLIANCE_CONVERGENCE_PROTOCOL.md)

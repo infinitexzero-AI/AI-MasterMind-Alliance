@@ -6,7 +6,7 @@ socket.on("connect", () => {
     
     const proposal = {
         id: "prop-" + Date.now(),
-        file_path: "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/test_dummy.ts",
+        file_path: "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard/test_dummy.ts",
         description: "Autonomous Agent Intent: Re-writing active telemetry streams to fix severe performance bottleneck.",
         original_content: "export const telemetry = () => {\n  console.log('Running inefficient polling...');\n  setInterval(fetchData, 1000);\n}\n",
         proposed_content: "export const telemetry = () => {\n  console.log('Singularity Native WebSockets Active.');\n  const ws = new WebSocket('ws://localhost:5005');\n  ws.onmessage = (e) => processBuffer(e.data);\n}\n",

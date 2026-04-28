@@ -13,7 +13,7 @@ import redis
 # Autonomously polls the Century Matrix task queue to execute work.
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
-AILCC_PRIME = "/Users/infinite27/AILCC_PRIME"
+AILCC_PRIME = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc"
 PYTHON_BIN = "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3"
 REGISTRY_FILE = os.path.join(AILCC_PRIME, "tasks/consolidated_task_registry.json")
 

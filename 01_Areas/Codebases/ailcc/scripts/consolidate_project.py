@@ -51,11 +51,11 @@ DEFAULT_SEARCH_DIRS = [
     "~/Desktop/MTA MainNet",
     "~/Documents",
     "~/Downloads",
-    "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc"
+    "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc"
 ]
 
 # AILCC project root - use accessible location
-AILCC_ROOT = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc")
+AILCC_ROOT = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc")
 ARCHIVE_DIR = AILCC_ROOT / "archive" / "discovered"
 
 

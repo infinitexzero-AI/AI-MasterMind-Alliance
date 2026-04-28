@@ -6,9 +6,9 @@ echo "🚀 Initiating AILCC Auto-Scout Sync..."
 
 # Repositories to check
 REPOS=(
-    "/Users/infinite27/AILCC_PRIME"
-    "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc"
-    "/Users/infinite27/AILCC_PRIME/AI-MasterMind-Alliance"
+    "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc"
+    "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc"
+    "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/AI-MasterMind-Alliance"
 )
 
 SESSION_MSG="feat: finalize periodic table and modular sync architecture (bidirectional sync)"

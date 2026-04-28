@@ -22,7 +22,7 @@ from dataclasses import dataclass
 from typing import Optional
 from dotenv import load_dotenv
 
-load_dotenv("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/.env")
+load_dotenv("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/.env")
 
 logger = logging.getLogger(__name__)
 
@@ -141,7 +141,7 @@ class GrokRouter:
         if not self.api_key or self.api_key.startswith("PASTE_"):
             return (
                 "[GrokRouter] ❌ API key not configured.\n"
-                "→ Open /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/.env\n"
+                "→ Open c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/.env\n"
                 "→ Set XAI_API_KEY to your key from https://console.x.ai\n"
                 "→ Then run again!"
             )

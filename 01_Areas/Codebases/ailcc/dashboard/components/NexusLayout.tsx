@@ -6,11 +6,11 @@ import OmniSearch from './OmniSearch';
 import Tooltip from './Tooltip';
 import { ParticleBackground } from './ParticleBackground';
 import { useStealthMode } from './StealthModeProvider';
-import { LayoutDashboard, Network, Terminal, GraduationCap, Bot, Grid3X3, Settings2, Cog, Bolt, Activity, Plug, Brain, Wand2, Globe, Compass, Kanban, BookOpen, Menu, X, Sunrise, Swords, EyeOff, Eye, Stethoscope } from 'lucide-react';
+import { LayoutDashboard, Network, Terminal, GraduationCap, Bot, Grid3X3, Settings2, Cog, Bolt, Activity, Plug, Brain, Wand2, Globe, Compass, Kanban, BookOpen, Menu, X, Sunrise, Swords, EyeOff, Eye, Stethoscope, Landmark } from 'lucide-react';
 
 // Icon component for sidebar navigation
 const iconMap: Record<string, React.ElementType> = {
-   LayoutDashboard, Network, Terminal, GraduationCap, Bot, Grid3X3, Settings2, Cog, Bolt, Activity, Plug, Brain, Wand2, Globe, Compass, Kanban, BookOpen, Menu, X, Sunrise, Swords, EyeOff, Eye, Stethoscope
+   LayoutDashboard, Network, Terminal, GraduationCap, Bot, Grid3X3, Settings2, Cog, Bolt, Activity, Plug, Brain, Wand2, Globe, Compass, Kanban, BookOpen, Menu, X, Sunrise, Swords, EyeOff, Eye, Stethoscope, Landmark
 };
 
 function NavIcon({ name }: { name: string }) {
@@ -47,33 +47,52 @@ function SystemStatusWidget() {
    const [playwrightStatus, setPlaywrightStatus] = React.useState<'healthy' | 'degraded' | 'offline'>('offline');
    const [openClawStatus, setOpenClawStatus] = React.useState<'healthy' | 'degraded' | 'offline'>('offline');
    const [opikStatus, setOpikStatus] = React.useState<'healthy' | 'degraded' | 'offline'>('offline');
+   const [antigravityStatus, setAntigravityStatus] = React.useState<'healthy' | 'degraded' | 'offline'>('offline');
+   const [hubStatus, setHubStatus] = React.useState<'healthy' | 'degraded' | 'offline'>('offline');
    const agentHeartbeats = useAgentHeartbeat();
 
 
    React.useEffect(() => {
       const host = typeof window !== 'undefined' ? window.location.hostname : 'localhost';
       const checkServices = async () => {
-         // MCP Bridge
+         // MCP Bridge (Port 3006)
          try {
             const r = await fetch(`http://${host}:3006/health`, { signal: AbortSignal.timeout(2000) });
             setMcpStatus(r.ok ? 'healthy' : 'degraded');
          } catch { setMcpStatus('offline'); }
-         // Neural Relay
+         
+         // Neural Relay (Port 3001)
          try {
-            const r = await fetch(`http://${host}:5005/api/system/health`, { signal: AbortSignal.timeout(2000) });
+            const r = await fetch(`http://${host}:3001/api/system/health`, { signal: AbortSignal.timeout(2000) });
             setRelayStatus(r.ok ? 'healthy' : 'degraded');
          } catch { setRelayStatus('offline'); }
-         // OpenClaw Mobile (Ollama)
+         
+         // Antigravity Node (Self-check on 3000)
+         try {
+            const r = await fetch(`http://${host}:3000/api/system/health`, { signal: AbortSignal.timeout(2000) });
+            setAntigravityStatus(r.ok ? 'healthy' : 'degraded');
+         } catch { setAntigravityStatus('offline'); }
+         
+         // Vanguard Hub (OneDrive/Local Sync)
+         try {
+            const r = await fetch(`/api/monitor/health`, { signal: AbortSignal.timeout(2000) });
+            const data = await r.json();
+            setHubStatus(data.status === 'healthy' ? 'healthy' : 'degraded');
+         } catch { setHubStatus('offline'); }
+
+         // OpenClaw Mobile (Ollama - Port 11434)
          try {
             const r = await fetch(`http://${host}:11434/`, { signal: AbortSignal.timeout(2000) });
             setOpenClawStatus(r.ok ? 'healthy' : 'degraded');
          } catch { setOpenClawStatus('offline'); }
-         // Playwright
+         
+         // Beacon / Playwright (Port 3333)
          try {
             const r = await fetch(`http://${host}:3333/health`, { signal: AbortSignal.timeout(2000) });
             setPlaywrightStatus(r.ok ? 'healthy' : 'degraded');
          } catch { setPlaywrightStatus('offline'); }
-         // OPIK (Comet Opik / Metadata)
+         
+         // OPIK (Comet Opik - Port 5006)
          try {
             const r = await fetch(`http://${host}:5006/`, { signal: AbortSignal.timeout(2000) });
             setOpikStatus(r.ok ? 'healthy' : 'degraded');
@@ -109,8 +128,10 @@ function SystemStatusWidget() {
          {[
             { label: 'MCP', status: mcpStatus },
             { label: 'RELAY', status: relayStatus },
-            { label: 'OPENCLAW', status: openClawStatus },
+            { label: 'ANTIGRAVITY', status: antigravityStatus },
+            { label: 'HUB', status: hubStatus },
             { label: 'BEACON', status: playwrightStatus },
+            { label: 'OPENCLAW', status: openClawStatus },
             { label: 'OPIK', status: opikStatus },
          ].map(s => (
             <div key={s.label} className="flex items-center justify-between group">
@@ -161,7 +182,7 @@ export default function NexusLayout({ children }: { children: React.ReactNode })
       const host = window.location.hostname;
       const checkActiveView = async () => {
          try {
-            const res = await fetch(`http://${host}:5005/api/system/active-view`);
+            const res = await fetch(`http://${host}:3001/api/system/active-view`);
             if (res.ok) {
                const data = await res.json();
                if (data.path && data.path !== router.pathname) {
@@ -179,7 +200,7 @@ export default function NexusLayout({ children }: { children: React.ReactNode })
    React.useEffect(() => {
       if (!isMirrorMode) {
          const host = window.location.hostname;
-         fetch(`http://${host}:5005/api/system/sync-view`, {
+         fetch(`http://${host}:3001/api/system/sync-view`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ path: router.pathname })
@@ -322,6 +343,8 @@ export default function NexusLayout({ children }: { children: React.ReactNode })
                   </div>
                   {[
                      { name: 'The Nexus', path: '/', icon: 'LayoutDashboard', domain: 'nexus' },
+                     { name: 'Financial Command', path: '/finances', icon: 'Landmark', domain: 'nexus' },
+                     { name: 'Vanguard Ops', path: '/vanguard', icon: 'Shield', domain: 'nexus' },
                      { name: 'Spectral Writer', path: '/writer', icon: 'Wand2', domain: 'nexus' },
                      { name: 'War Room', path: '/war-room', icon: 'Swords', domain: 'war-room' },
                      { name: 'Mapping', path: '/mapping', icon: 'Network', domain: 'mapping' },
@@ -431,6 +454,8 @@ export default function NexusLayout({ children }: { children: React.ReactNode })
                      {/* Keep standard straight list for mobile for now to save space */}
                      {[
                         { name: 'The Nexus', path: '/', icon: 'LayoutDashboard', domain: 'nexus' },
+                        { name: 'Financial Command', path: '/finances', icon: 'Landmark', domain: 'nexus' },
+                        { name: 'Vanguard Ops', path: '/vanguard', icon: 'Shield', domain: 'nexus' },
                         { name: 'Spectral Writer', path: '/writer', icon: 'Wand2', domain: 'nexus' },
                         { name: 'War Room', path: '/war-room', icon: 'Swords', domain: 'war-room' },
                         { name: 'Mapping', path: '/mapping', icon: 'Network', domain: 'mapping' },

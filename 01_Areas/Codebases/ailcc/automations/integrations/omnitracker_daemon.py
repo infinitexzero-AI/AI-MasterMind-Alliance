@@ -23,7 +23,7 @@ if str(AILCC_PRIME) not in sys.path:
 
 from core.daemon_factory import ReactiveDaemon
 
-HIPPOCAMPUS_DIR = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage"
+HIPPOCAMPUS_DIR = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage"
 ACADEMIC_MATRIX_PATH = os.path.join(HIPPOCAMPUS_DIR, "academic_matrix", "current_semester.json")
 
 class OmnitrackerDaemon(ReactiveDaemon):

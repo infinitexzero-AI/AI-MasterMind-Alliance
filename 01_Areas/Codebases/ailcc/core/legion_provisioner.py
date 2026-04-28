@@ -8,7 +8,7 @@ import psutil
 import sys
 
 # Ensure import works from central point
-sys.path.append("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc")
+sys.path.append("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc")
 try:
     from automations.integrations.wealth_executor import verify_infrastructure_budget
 except ImportError:
@@ -21,7 +21,7 @@ from core.tools.logic_bridge import logic_bridge
 # scripts, proposing external Mesh Node provisioning if local resources are tapped.
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
-OMNI_QUEUE = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage/nexus_state/active_tasks.json"
+OMNI_QUEUE = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage/nexus_state/active_tasks.json"
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [LegionProvisioner] %(message)s")
 logger = logging.getLogger(__name__)

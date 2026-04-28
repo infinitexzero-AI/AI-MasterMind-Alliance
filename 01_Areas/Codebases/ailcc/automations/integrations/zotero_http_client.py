@@ -38,7 +38,7 @@ ZOTERO_BASE    = f"http://localhost:{ZOTERO_PORT}"
 CONNECTOR_BASE = f"{ZOTERO_BASE}/connector"
 ZOTERO_APP     = "/Applications/Zotero.app"
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 SCHOLAR_NOTES   = HIPPOCAMPUS_DIR / "scholar_notes"
 
 

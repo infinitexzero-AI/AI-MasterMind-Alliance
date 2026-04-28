@@ -10,12 +10,12 @@ The "AILCC Chamber" (Multi-Agent Orchestration Pipeline) has been initialized. T
 ## 2. Artifacts Created
 | Artifact | Path | Status |
 | :--- | :--- | :--- |
-| **Diagnostic Dashboard** | `/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/ailcc-diagnostic.html` | ✅ Verified (Browser) |
-| **Workflow Definition** | `/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/.github/workflows/ailcc-orchestration.yml` | ✅ Created |
-| **Env Template** | `/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/.github/workflows/env-template.md` | ✅ Created |
-| **n8n Sync Config** | `/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/n8n/ailcc-sync.json` | ✅ Created |
-| **Local Test Script** | `/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/scripts/test-chamber.sh` | ✅ Created |
-| **Workflow Template** | `/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/templates/biopsych-workflow.md` | ✅ Created |
+| **Diagnostic Dashboard** | `c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/ailcc-diagnostic.html` | ✅ Verified (Browser) |
+| **Workflow Definition** | `c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/.github/workflows/ailcc-orchestration.yml` | ✅ Created |
+| **Env Template** | `c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/.github/workflows/env-template.md` | ✅ Created |
+| **n8n Sync Config** | `c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/n8n/ailcc-sync.json` | ✅ Created |
+| **Local Test Script** | `c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/scripts/test-chamber.sh` | ✅ Created |
+| **Workflow Template** | `c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/templates/biopsych-workflow.md` | ✅ Created |
 
 ## 3. Current System State
 - **Repo Structure**: Validated.

@@ -16,7 +16,7 @@ import * as path from 'path';
  */
 
 const IMPROVEMENT_LOG = path.join(process.cwd(), 'logs', 'self-improvement.jsonl');
-const DASHBOARD_DIR = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
+const DASHBOARD_DIR = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard';
 
 interface ImprovementEntry {
     id: string;

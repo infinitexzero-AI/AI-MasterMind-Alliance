@@ -5,7 +5,7 @@ from datetime import datetime
 # AILCC Scholar Bridge: Mock API Layer
 # Connects the Scholar agent to simulated MTA and NSLSC data.
 
-BASE_DIR = "/Users/infinite27/AILCC_PRIME"
+BASE_DIR = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc"
 CREDIT_MAP_PATH = f"{BASE_DIR}/01_Areas/Codebases/ailcc/registries/CREDIT_MAP.json"
 SCHOLAR_DATA_PATH = f"{BASE_DIR}/06_System/State/scholar_data.json"
 LOG_FILE = f"{BASE_DIR}/06_System/Logs/scholar_api_mock.log"

@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
+import { withAuth } from '../../lib/apiAuth';
 
 /**
  * 📱 Mobile Bridge API
@@ -12,11 +13,11 @@ import { v4 as uuidv4 } from 'uuid';
 // In-memory registry (should be persisted to Redis/DB in a full deployment)
 const REGISTERED_DEVICES: Record<string, any> = {};
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { method } = req;
 
     switch (method) {
-        case 'POST':
+        case 'POST': {
             // 1. Device Registration
             const { deviceName, deviceType, pushToken } = req.body;
 
@@ -44,6 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                 wsEndpoint: '/api/ws',
                 message: 'Device registration initiated. Use the pairing code to link via the Nexus Dashboard.'
             });
+        }
 
         case 'GET':
             // 2. Heartbeat / Status Check
@@ -57,4 +59,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             res.setHeader('Allow', ['GET', 'POST']);
             return res.status(405).end(`Method ${method} Not Allowed`);
     }
-}
+}export default withAuth(handler);

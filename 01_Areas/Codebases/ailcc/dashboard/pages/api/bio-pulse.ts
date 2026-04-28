@@ -2,7 +2,7 @@ import { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-    const filePath = "/Users/infinite27/AILCC_PRIME/data/bio_pulse.json";
+    const filePath = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/data/bio_pulse.json";
 
     try {
         if (fs.existsSync(filePath)) {

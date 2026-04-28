@@ -153,7 +153,7 @@ export const OpenClawGuide: React.FC<OpenClawGuideProps> = ({ currentPage = '/' 
     useEffect(() => {
         const checkHealth = async () => {
             try {
-                const res = await fetch('http://localhost:5005/api/system/health');
+                const res = await fetch('http://localhost:3001/api/system/health');
                 if (!res.ok) {
                     setProactiveAlert('⚠️ Relay health check returned non-OK status');
                 }

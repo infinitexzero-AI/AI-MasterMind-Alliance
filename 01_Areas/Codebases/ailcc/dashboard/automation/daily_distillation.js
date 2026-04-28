@@ -11,9 +11,9 @@ const fs = require('fs');
 const path = require('path');
 const http = require('http');
 
-const VAULT_PATH = '/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault';
+const VAULT_PATH = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/04_Intelligence_Vault';
 const MODIFICATION_LOG = '/tmp/vault_last_sync.json';
-const LOG_PATH = '/Users/infinite27/AILCC_PRIME/logs/knowledge_distillation.log';
+const LOG_PATH = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/logs/knowledge_distillation.log';
 
 function log(msg) {
     const ts = new Date().toISOString();
@@ -48,7 +48,7 @@ function walk(dir) {
 
 async function analyzeLogTrends() {
     log('📊 Starting Log Trend Analysis...');
-    const archiveDir = '/Users/infinite27/AILCC_PRIME/logs/archive';
+    const archiveDir = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/logs/archive';
     if (!fs.existsSync(archiveDir)) return { trends: [], anomalyCount: 0 };
 
     const files = fs.readdirSync(archiveDir).filter(f => f.endsWith('.log'));
@@ -124,7 +124,7 @@ async function runDistillation() {
     req.on('error', (e) => {
         log(`API unavailable (${e.message}), triggering background re-index...`);
         const { exec } = require('child_process');
-        exec(`cd /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard && npm run index:vault`, (err, stdout) => {
+        exec(`cd c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard && npm run index:vault`, (err, stdout) => {
             if (err) log(`Re-index error: ${err.message}`);
             else log(`Re-index complete: ${stdout.slice(0, 200)}`);
         });

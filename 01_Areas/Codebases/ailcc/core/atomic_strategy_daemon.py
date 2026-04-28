@@ -15,7 +15,7 @@ class AtomicStrategyDaemon(ReactiveDaemon):
     def __init__(self):
         super().__init__(name="AtomicStrategy", role="Philosophical Vanguard")
         self.last_execution = None
-        self.base_dir = Path("/Users/infinite27/AILCC_PRIME/01_Areas/1_percent_diary")
+        self.base_dir = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/1_percent_diary")
         
     async def get_channels(self):
         return []

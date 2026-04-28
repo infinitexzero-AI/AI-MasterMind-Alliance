@@ -8,7 +8,7 @@ def check_port(port):
         return s.connect_ex(('localhost', port)) == 0
 
 def diagnose():
-    root = "/Users/infinite27/AILCC_PRIME"
+    root = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc"
     report = {
         "timestamp": datetime.datetime.now().isoformat(),
         "checks": []

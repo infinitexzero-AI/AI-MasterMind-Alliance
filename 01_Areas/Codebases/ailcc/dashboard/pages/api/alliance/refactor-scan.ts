@@ -15,7 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Security check: Ensure the file is within the AILCC_PRIME directory
     const absolutePath = path.resolve(filePath);
-    if (!absolutePath.startsWith('/Users/infinite27/AILCC_PRIME')) {
+    if (!absolutePath.startsWith('c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc')) {
         return res.status(403).json({ error: 'Access denied' });
     }
 

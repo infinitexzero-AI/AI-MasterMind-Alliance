@@ -12,7 +12,7 @@ from core.tools.logic_bridge import logic_bridge
 # and injects verified proposals into the OmniTracker.
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
-OMNI_QUEUE = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage/nexus_state/active_tasks.json"
+OMNI_QUEUE = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage/nexus_state/active_tasks.json"
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [ForgeBacktester] %(message)s")
 logger = logging.getLogger(__name__)

@@ -3,7 +3,7 @@ import os
 import logging
 
 # Add core to path
-sys.path.append("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc")
+sys.path.append("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc")
 
 from core.llm_clients import OllamaClient
 from core.grok_router import GrokRouter

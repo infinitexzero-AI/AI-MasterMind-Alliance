@@ -1,0 +1,64 @@
+﻿DIAG_BUFFER_ERROR
+[20260220T00:45:08] {6720} WRN: missing optional 'onAudioStateChanged' callback
+[20260220T00:45:08] {6720} WRN: missing optional 'onCookiesCleared' callback
+[20260220T00:45:08] {6720} ERR: failed to fetch process block size from shmem: SHMEM_NOT_FOUND
+[20260220T00:45:08] {6720} ERR: failed to read target process block for pid: '23880'
+
+DIAG_BUFFER_INFO
+[20260220T00:45:08] {6720} WRN: missing optional 'onAudioStateChanged' callback
+[20260220T00:45:08] {6720} WRN: missing optional 'onCookiesCleared' callback
+[20260220T00:45:08] {6720} ERR: failed to fetch process block size from shmem: SHMEM_NOT_FOUND
+[20260220T00:45:08] {6720} ERR: failed to read target process block for pid: '23880'
+[20260220T00:54:47] {5bcc} INF: adding network address 72.136.195.121:80 for server http://level3.blizzard.com/
+[20260220T00:54:47] {5bcc} INF: adding network address 72.136.195.123:80 for server http://level3.blizzard.com/
+[20260220T01:09:48] {5bcc} INF: adding network address 72.136.240.81:443 for server https://level3.ssl.blizzard.com/
+[20260220T01:09:48] {5bcc} INF: adding network address 72.136.240.73:443 for server https://level3.ssl.blizzard.com/
+
+DIAG_BUFFER_ALL
+[20260220T00:44:48] {5bcc} debug: HTTP: fetch ID 2: failed (FETCH_CANCELED)
+[20260220T00:44:48] {5bcc} noise: End() called for fetch ID 2 of download 1: FETCH_CANCELED
+[20260220T00:44:48] {5bcc} noise: removed fetch ID 2 from download 1 (0 fetch operations remaining)
+[20260220T00:44:48] {5bcc} noise: retired download ID 1 complete
+[20260220T00:44:48] {5bcc} noise: HTTP: notification: scheduler already posted
+[20260220T00:44:48] {5bcc} noise: HTTP: notification: scheduler already posted
+[20260220T00:44:48] {5bcc} noise: HTTP: dropping connection ID 2 (closing)
+[20260220T00:44:48] {5bcc} debug: HTTP: fetch ID 2: canceled while receiving response header
+[20260220T00:44:48] {5bcc} debug: HTTP: fetch ID 2: failed (FETCH_CANCELED)
+[20260220T00:44:48] {5bcc} noise: download ID 1 deleted
+[20260220T00:45:08] {6720} WRN: missing optional 'onAudioStateChanged' callback
+[20260220T00:45:08] {6720} WRN: missing optional 'onCookiesCleared' callback
+[20260220T00:45:08] {6720} ERR: failed to fetch process block size from shmem: SHMEM_NOT_FOUND
+[20260220T00:45:08] {6720} ERR: failed to read target process block for pid: '23880'
+[20260220T00:49:47] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T00:54:47] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T00:54:47] {5bcc} INF: adding network address 72.136.195.121:80 for server http://level3.blizzard.com/
+[20260220T00:54:47] {5bcc} INF: adding network address 72.136.195.123:80 for server http://level3.blizzard.com/
+[20260220T00:59:47] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:04:48] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:09:48] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:09:48] {5bcc} INF: adding network address 72.136.240.81:443 for server https://level3.ssl.blizzard.com/
+[20260220T01:09:48] {5bcc} INF: adding network address 72.136.240.73:443 for server https://level3.ssl.blizzard.com/
+[20260220T01:14:48] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:19:48] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:24:48] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:29:48] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:34:49] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:39:49] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:44:49] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:49:49] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:54:49] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T01:59:50] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:04:50] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:09:50] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:14:50] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:19:50] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:24:50] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:29:51] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:34:51] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:39:51] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:44:51] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:49:51] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T02:54:52] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T03:26:33] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T05:54:16] {5bcc} debug: running periodic host update (proxyBypass = false)
+[20260220T06:56:34] {5bcc} debug: running periodic host update (proxyBypass = false)

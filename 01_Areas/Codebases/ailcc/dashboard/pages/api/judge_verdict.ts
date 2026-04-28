@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 
-const VERDICT_PATH = '/Users/infinite27/AILCC_PRIME/06_System/State/judge_verdict.json';
+const VERDICT_PATH = 'c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/State/judge_verdict.json';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     try {

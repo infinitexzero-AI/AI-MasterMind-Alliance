@@ -4,7 +4,7 @@ import socket
 from datetime import datetime
 
 # Path to the shared system state
-STATUS_FILE = "/Users/infinite27/AILCC_PRIME/06_System/State/dashboard_state.json"
+STATUS_FILE = "c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/State/dashboard_state.json"
 
 def update_grok_status(online=False):
     """

@@ -26,7 +26,7 @@ from openai import OpenAI
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [Antigravity] %(message)s")
 logger = logging.getLogger(__name__)
 
-AILCC_ROOT = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc")
+AILCC_ROOT = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc")
 LOG_DIR = AILCC_ROOT / "logs"
 
 def scan_for_errors() -> list:

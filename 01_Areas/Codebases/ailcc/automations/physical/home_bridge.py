@@ -29,8 +29,8 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [HomeBridge] %(messa
 logger = logging.getLogger(__name__)
 
 # Constants
-AILCC_ROOT = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc")
-PHYSICAL_STATUS_PATH = Path("/Users/infinite27/AILCC_PRIME/06_System/State/physical_status.json")
+AILCC_ROOT = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc")
+PHYSICAL_STATUS_PATH = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/06_System/State/physical_status.json")
 
 def initialize_status():
     """Ensure the physical status state file exists."""

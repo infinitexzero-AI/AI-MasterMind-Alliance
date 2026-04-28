@@ -22,7 +22,7 @@ import logging
 from pathlib import Path
 
 # Fix python path to allow importing from ailcc core
-sys.path.append(str(Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc").resolve()))
+sys.path.append(str(Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc").resolve()))
 
 try:
     import chromadb
@@ -32,13 +32,13 @@ except ImportError:
 
 from core.llm_clients import OllamaClient
 
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 CHROMA_PATH = HIPPOCAMPUS_DIR / "chroma"
 
 import json
 
 # Paths
-HIPPOCAMPUS_DIR = Path("/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage")
+HIPPOCAMPUS_DIR = Path("c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/hippocampus_storage")
 CHROMA_PATH = HIPPOCAMPUS_DIR / "chroma"
 PRUNING_CANDIDATES_FILE = HIPPOCAMPUS_DIR / "pruning_candidates.json"
 

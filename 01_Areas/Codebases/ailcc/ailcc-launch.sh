@@ -24,11 +24,11 @@ log_status "AILCC Chamber Initiating..."
 log_status "Loading Spellbook Abilities..."
 
 # Run Quick Diagnostics
-python3 /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/scripts/full_diagnostics.py
+python3 c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/scripts/full_diagnostics.py
 
 # Launch with heartbeat
 # Using absolute path to relay.js
-node /Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/server/relay.js & 
+node c:/Users/infin/AILCC_PRIME/01_Areas/Codebases/ailcc/01_Areas/Codebases/ailcc/dashboard/server/relay.js & 
 RELAY_PID=$!
 show_progress $RELAY_PID "Anti-Gravity Relay Spinning Up"
 

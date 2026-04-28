@@ -64,21 +64,28 @@ export default async function handler(
     // Get version
     let version: string | null = null;
     try {
-      const { stdout } = await execAsync('openclaw --version 2>/dev/null');
+      const versionCmd = process.platform === 'win32' ? 'openclaw --version' : 'openclaw --version 2>/dev/null';
+      const { stdout } = await execAsync(versionCmd);
       version = stdout.trim();
     } catch { /* not installed */ }
 
     // Check gateway
     let gatewayOnline = false;
     try {
-      const { stdout } = await execAsync('lsof -i :18789 -t 2>/dev/null');
+      const gatewayCmd = process.platform === 'win32' 
+        ? 'netstat -ano | findstr :18789' 
+        : 'lsof -i :18789 -t 2>/dev/null';
+      const { stdout } = await execAsync(gatewayCmd);
       gatewayOnline = !!stdout.trim();
     } catch { /* offline */ }
 
     // Get default model
     let defaultModel: string | null = null;
     try {
-      const { stdout } = await execAsync('cat ~/.openclaw/openclaw.json 2>/dev/null');
+      const configPath = process.platform === 'win32' 
+        ? `${process.env.USERPROFILE}\\.openclaw\\openclaw.json`
+        : '~/.openclaw/openclaw.json';
+      const { stdout } = await execAsync(`cat "${configPath}" 2>/dev/null || type "${configPath}"`);
       const config = JSON.parse(stdout);
       defaultModel = config?.model || config?.defaultModel || null;
     } catch { /* no config */ }
@@ -86,7 +93,8 @@ export default async function handler(
     // Skills check
     let skills: OpenClawStatus['skills'] = { total: 0, eligible: 0, disabled: 0, blocked: 0, missingReqs: 0, entries: [] };
     try {
-      const { stdout } = await execAsync('openclaw skills check 2>/dev/null');
+      const skillsCmd = process.platform === 'win32' ? 'openclaw skills check' : 'openclaw skills check 2>/dev/null';
+      const { stdout } = await execAsync(skillsCmd);
       skills = parseSkillsCheck(stdout);
     } catch { /* skills check failed */ }
 
