@@ -84,6 +84,10 @@
 
 ### **Active Submissions:**
 
+- [x] **2026-04-28 | ACADEMIC (SFS) | NB Student Aid Portal | N/A**
+  - **Artifact**: `Program Information Request Form` & `2024 Confirmation of Earnings`
+  - **Status**: Uploaded Successfully
+  - **Notes**: Overcame HTTP 500 error; grades released today (pending Registrar SSS update).
 - [ ] **2026-04-21 | LEGAL (CRA) | CRA My Business Portal | [INSERT #]**
   - **Artifact**: `CRA_Payroll_Dispute_2026.md`
   - **Status**: Pending Verification

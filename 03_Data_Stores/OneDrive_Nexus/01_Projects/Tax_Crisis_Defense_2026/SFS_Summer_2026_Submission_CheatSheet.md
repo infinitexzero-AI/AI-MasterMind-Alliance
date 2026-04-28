@@ -19,8 +19,8 @@
 ## 🛡️ 3. MANDATORY DOCUMENTS
 
 - [x] **2024 Proof of Income Statement (CRA)**.
-- [ ] **Program Information Form (PIF)**: Must be certified by Mt. Allison Registrar.
-- [ ] **Satisfactory Scholastic Standard (SSS)**: Automated check by registrar.
+- [x] **Program Information Form (PIF)**: Must be certified by Mt. Allison Registrar.
+- [/] **Satisfactory Scholastic Standard (SSS)**: Automated check by registrar (Grades released today, pending registrar submission).
 
 ## 🚨 4. ACTION ITEMS
 
