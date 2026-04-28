@@ -9,9 +9,9 @@
 
 SFS requires school certification for the Summer Session intersession.
 
-- [ ] **Action:** Download the "Request for Program Information" form from [studentaid.gnb.ca](https://studentaid.gnb.ca).
-- [ ] **Action:** Email the form to the Mount Allison Registrar (**<advisor@mta.ca>**).
-- [ ] **Context:** They must confirm you are taking **CLAS-2501** and **MATH-1151**.
+- [x] **Action:** Download the "Request for Program Information" form from [studentaid.gnb.ca](https://studentaid.gnb.ca).
+- [x] **Action:** Email the form to the Mount Allison Registrar (**<advisor@mta.ca>**).
+- [x] **Context:** They must confirm you are taking **CLAS-2501** and **MATH-1151**.
 
 ---
 
@@ -19,9 +19,9 @@ SFS requires school certification for the Summer Session intersession.
 
 Even if you have filed your taxes, SFS needs the formal CRA data.
 
-- [ ] **Action:** Log in to **CRA MyAccount**.
-- [ ] **Action:** Download the **"Proof of Income Statement" (Option C)** for the **2024 Tax Year**.
-- [ ] **Verification:** Ensure Line 15000 matches what you put on the original application ($156k Gross / $134k Prof).
+- [x] **Action:** Log in to **CRA MyAccount**.
+- [x] **Action:** Download the **"Proof of Income Statement" (Option C)** for the **2024 Tax Year**.
+- [x] **Verification:** Ensure Line 15000 matches what you put on the original application ($156k Gross / $134k Prof).
 
 ---
 
@@ -42,4 +42,4 @@ Once you have the signed **PIF** and the **2024 Proof of Income**, upload them b
 > [!IMPORTANT]
 > **Processing Time:** Student Aid NB usually takes 2–3 weeks to process documents. If you don't submit by **May 4th**, you may face a funding gap for your tuition payment.
 
-**Checklist Initialized.**
+**Status Update (2026-04-28):** Both the Program Information Request and the 2024 Confirmation of Earnings have been successfully uploaded to the portal.
