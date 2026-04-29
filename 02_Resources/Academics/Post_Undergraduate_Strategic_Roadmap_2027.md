@@ -15,7 +15,8 @@ Your greatest advantage lies in structural holistic review frameworks. The **Dal
 ---
 
 ## Phase 1: Summer 2026 Execution Protocol
-*Target: Maximize Grade Velocity & Establish Research Footprint*
+
+Maximize Grade Velocity & Establish Research Footprint.
 
 - **Institutional Requirements:** Complete `MATH 1151`, `BIOL 3991`, and `CLAS 2501` securely.
 - **Disability/Low-Income Pipeline Setup:**
@@ -26,7 +27,8 @@ Your greatest advantage lies in structural holistic review frameworks. The **Dal
 ---
 
 ## Phase 2: Fall 2026 & Winter 2027 (Completion Phase)
-*Target: Absolute Completion of BSc Framework*
+
+Absolute Completion of BSc Framework.
 
 - **Schedule Execution:** Target high-yield laboratory modules (`BIOL 2701`, `BIOL 3401`, `BIOL 3221`).
 - **Optimization Strategy:** Utilize writing/quantitative support tools on-campus effectively. 
@@ -36,9 +38,11 @@ Your greatest advantage lies in structural holistic review frameworks. The **Dal
 ## Phase 3: Application & Admissions Architecture
 
 ### Dalhousie Faculty of Medicine (Widening Accessibility Pathway)
-*   **Actionable Self-Identification:** Check corresponding markers inside Section 2 during application deployment.
-*   **Admissions Timeline:** Opens around **June 15, 2026**. Full context questionnaires are due securely by early August.
+
+- **Actionable Self-Identification:** Check corresponding markers inside Section 2 during application deployment.
+- **Admissions Timeline:** Opens around **June 15, 2026**. Full context questionnaires are due securely by early August.
 
 ### Alternative / Fallback Targets
-*   **Dalhousie MSc in Neuroscience:** Contact supervisors directly prior to January. 
-*   **UNB Master of Environmental Management (MEM):** Strong local fallback profile.
+
+- **Dalhousie MSc in Neuroscience:** Contact supervisors directly prior to January. 
+- **UNB Master of Environmental Management (MEM):** Strong local fallback profile.
