@@ -31,7 +31,7 @@ Maximize Grade Velocity & Establish Research Footprint.
 Absolute Completion of BSc Framework.
 
 - **Schedule Execution:** Target high-yield laboratory modules (`BIOL 2701`, `BIOL 3401`, `BIOL 3221`).
-- **Optimization Strategy:** Utilize writing/quantitative support tools on-campus effectively. 
+- **Optimization Strategy:** Utilize writing/quantitative support tools on-campus effectively.
 
 ---
 
@@ -44,5 +44,5 @@ Absolute Completion of BSc Framework.
 
 ### Alternative / Fallback Targets
 
-- **Dalhousie MSc in Neuroscience:** Contact supervisors directly prior to January. 
+- **Dalhousie MSc in Neuroscience:** Contact supervisors directly prior to January.
 - **UNB Master of Environmental Management (MEM):** Strong local fallback profile.
