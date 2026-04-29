@@ -4,7 +4,7 @@
 
 set -euo pipefail
 
-WORKSPACE="/Users/infinite27/AILCC_PRIME"
+WORKSPACE="/Volumes/XDriveBeta/AILCC_PRIME"
 BRIEF_FILE="$WORKSPACE/ALLIANCE_DAILY_BRIEF.md"
 TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
 

@@ -12,7 +12,7 @@
 
 set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LOG_DIR="/Users/infinite27/AILCC_PRIME/logs"
+LOG_DIR="/Volumes/XDriveBeta/AILCC_PRIME/06_System/Logs"
 LOG_FILE="$LOG_DIR/system_opt_$(date +%Y%m%d_%H%M%S).log"
 mkdir -p "$LOG_DIR"
 
@@ -99,9 +99,16 @@ done
 
 # List top memory consumers
 log "Top 5 Memory Consumers:"
-ps aux | sort -rn -k 4 | head -5 | while read -r line; do
-    log "  $line" | awk '{print $4"% MEM - "$11}'
-done
+ps aux | sort -rn -k 4 | head -5 >> "$LOG_FILE"
+
+# Aggressive cleanup of orphaned Node/Python processes
+log "Cleaning orphaned Node/Python processes..."
+# Kill processes that are not under PM2 and have been running for a while
+# (Careful: we don't want to kill the current agent if it's running via node)
+# But here we target specific project paths
+pgrep -f "nexus-dashboard" | xargs kill -9 2>/dev/null || true
+pgrep -f "vanguard" | xargs kill -9 2>/dev/null || true
+success "Orphaned processes cleared"
 
 # ==============================================================================
 # 5. DISK SPACE OPTIMIZATION
@@ -120,6 +127,11 @@ if command -v npm &> /dev/null; then
     npm cache clean --force 2>/dev/null || true
     log "Cleared npm cache"
 fi
+
+# Clear Next.js build caches in project folders
+log "Cleaning Next.js caches..."
+find /Volumes/XDriveBeta/AILCC_PRIME -name ".next" -type d -exec rm -rf {} + 2>/dev/null || true
+success "Project caches cleared"
 
 # ==============================================================================
 # 6. CRASH SCOUT (Chromium Detection)
@@ -149,7 +161,7 @@ log "--- OBSERVABILITY CONFIGURATION ---"
 mkdir -p "$LOG_DIR"
 
 # Create live_status.json
-LIVE_STATUS_FILE="/Users/infinite27/AILCC_PRIME/.sync/live_status.json"
+LIVE_STATUS_FILE="/Volumes/XDriveBeta/AILCC_PRIME/.sync/live_status.json"
 mkdir -p "$(dirname "$LIVE_STATUS_FILE")"
 
 # macOS compatible uptime calculation

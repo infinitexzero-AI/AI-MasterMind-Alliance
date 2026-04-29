@@ -6,7 +6,7 @@ from datetime import datetime
 import psutil
 
 # Configuration
-ROOT_DIR = "/Users/infinite27/AILCC_PRIME"
+ROOT_DIR = "/Volumes/XDriveBeta/AILCC_PRIME"
 STATUS_FILE = os.path.join(ROOT_DIR, "status.json")
 LOG_DIR = os.path.join(ROOT_DIR, "06_System/Logs")
 LOG_FILE = os.path.join(LOG_DIR, "heartbeat.log")

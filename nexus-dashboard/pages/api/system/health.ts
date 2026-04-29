@@ -60,7 +60,7 @@ export default async function handler(
     try {
         // Try local project path first, then Docker path
         const path = require('path');
-        const localPath = path.resolve(process.cwd(), '../../scripts/api/get_system_health.sh');
+        const localPath = path.resolve(process.cwd(), '../scripts/api/get_system_health.sh');
         const dockerPath = `/app/scripts/api/get_system_health.sh`;
         const fs = require('fs');
         const scriptPath = fs.existsSync(localPath) ? localPath : dockerPath;
@@ -68,6 +68,7 @@ export default async function handler(
         const data: SystemHealthResponse = JSON.parse(stdout);
         res.status(200).json(data);
     } catch (error) {
+        console.error('Telemetry error:', error);
         console.warn('Host telemetry unavailable in Docker, using graceful proxy fallback.');
         const fallbackData: SystemHealthResponse = {
             memory: { freeRAM: 4096, swapUsed: "1024", swapTotal: "8192", swapPercent: 12, status: "healthy" },

@@ -14,19 +14,19 @@ echo "=========================================="
 echo ""
 
 echo "AILCC_PRIME Location:"
-[ -d "/Users/infinite27/AILCC_PRIME" ] && echo "/Users/infinite27/AILCC_PRIME" || mdfind "kMDItemFSName == 'AILCC_PRIME' && kMDItemContentType == 'public.folder'" | head -1
+[ -d "/Volumes/XDriveBeta/AILCC_PRIME" ] && echo "/Volumes/XDriveBeta/AILCC_PRIME" || mdfind "kMDItemFSName == 'AILCC_PRIME' && kMDItemContentType == 'public.folder'" | head -1
 echo ""
 
 echo "Valentine Core Location:"
-[ -d "/Users/infinite27/AILCC_PRIME/valentine-core" ] && echo "/Users/infinite27/AILCC_PRIME/valentine-core" || mdfind "kMDItemFSName == 'valentine-core' && kMDItemContentType == 'public.folder'" | head -1
+[ -d "/Volumes/XDriveBeta/AILCC_PRIME/valentine-core" ] && echo "/Volumes/XDriveBeta/AILCC_PRIME/valentine-core" || mdfind "kMDItemFSName == 'valentine-core' && kMDItemContentType == 'public.folder'" | head -1
 echo ""
 
 echo "NEXUS Dashboard Location:"
-[ -d "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard" ] && echo "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard" || mdfind "kMDItemFSName == 'dashboard' && kMDItemContentType == 'public.folder'" | head -5
+[ -d "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard" ] && echo "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard" || mdfind "kMDItemFSName == 'dashboard' && kMDItemContentType == 'public.folder'" | head -5
 echo ""
 
 echo "All Node.js Projects (package.json locations):"
-find /Users/infinite27/AILCC_PRIME -maxdepth 5 -name "package.json" -not -path "*/node_modules/*" 2>/dev/null
+find /Volumes/XDriveBeta/AILCC_PRIME -maxdepth 5 -name "package.json" -not -path "*/node_modules/*" 2>/dev/null
 echo ""
 
 # ============================================
@@ -83,15 +83,15 @@ echo "=========================================="
 echo ""
 
 echo ".env Files:"
-find /Users/infinite27/AILCC_PRIME -maxdepth 4 -name ".env*" -not -path "*/node_modules/*" 2>/dev/null
+find /Volumes/XDriveBeta/AILCC_PRIME -maxdepth 4 -name ".env*" -not -path "*/node_modules/*" 2>/dev/null
 echo ""
 
 echo "docker-compose.yml Files:"
-find /Users/infinite27/AILCC_PRIME -maxdepth 4 -name "docker-compose.yml" 2>/dev/null
+find /Volumes/XDriveBeta/AILCC_PRIME -maxdepth 4 -name "docker-compose.yml" 2>/dev/null
 echo ""
 
 echo "package.json names:"
-find /Users/infinite27/AILCC_PRIME -maxdepth 4 -name "package.json" -not -path "*/node_modules/*" -exec sh -c 'echo "---"; echo "File: $1"; cat "$1" | grep -A 2 "\"name\"" | head -3' _ {} \; 2>/dev/null
+find /Volumes/XDriveBeta/AILCC_PRIME -maxdepth 4 -name "package.json" -not -path "*/node_modules/*" -exec sh -c 'echo "---"; echo "File: $1"; cat "$1" | grep -A 2 "\"name\"" | head -3' _ {} \; 2>/dev/null
 echo ""
 
 # ============================================
@@ -101,7 +101,7 @@ echo "📦 SECTION 5: Git Status"
 echo "=========================================="
 echo ""
 
-find /Users/infinite27/AILCC_PRIME -maxdepth 3 -name ".git" -type d 2>/dev/null | while read gitdir; do
+find /Volumes/XDriveBeta/AILCC_PRIME -maxdepth 3 -name ".git" -type d 2>/dev/null | while read gitdir; do
   repo=$(dirname "$gitdir")
   branch=$(cd "$repo" && git branch --show-current 2>/dev/null)
   echo "$repo -> $branch"
@@ -126,7 +126,7 @@ echo "=========================================="
 echo ""
 
 echo "Disk Usage:"
-du -sh /Users/infinite27/AILCC_PRIME 2>/dev/null
+du -sh /Volumes/XDriveBeta/AILCC_PRIME 2>/dev/null
 echo ""
 
 # ============================================

@@ -11,7 +11,7 @@ import time
 import sqlite3
 from datetime import datetime
 
-ROOT = "/Users/infinite27/AILCC_PRIME"
+ROOT = "/Volumes/XDriveBeta/AILCC_PRIME"
 SCHOLAR_STATE = f"{ROOT}/06_System/State/scholar_data.json"
 OUTBOX = f"{ROOT}/06_System/AILCC/outbox"
 LOG_FILE = f"{ROOT}/06_System/Logs/clearance_negotiator.log"

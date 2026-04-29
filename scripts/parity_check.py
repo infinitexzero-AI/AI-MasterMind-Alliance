@@ -6,12 +6,12 @@ from datetime import datetime
 # Verifies presence of critical files across local and virtual hubs.
 
 CRITICAL_PATHS = [
-    "/Users/infinite27/AILCC_PRIME/antigravity_config.json",
-    "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/registries/agents_registry.json",
-    "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/registries/CREDIT_MAP.json",
-    "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault/VAULT_INDEX.json",
-    "/Users/infinite27/AILCC_PRIME/06_System/Execution/mcp_proxy.sh",
-    "/Users/infinite27/AILCC_PRIME/06_System/Execution/autonomy_engine.py",
+    "/Volumes/XDriveBeta/AILCC_PRIME/antigravity_config.json",
+    "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/registries/agents_registry.json",
+    "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/registries/CREDIT_MAP.json",
+    "/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault/VAULT_INDEX.json",
+    "/Volumes/XDriveBeta/AILCC_PRIME/06_System/Execution/mcp_proxy.sh",
+    "/Volumes/XDriveBeta/AILCC_PRIME/06_System/Execution/autonomy_engine.py",
     "/Users/infinite27/Library/Application Support/Valentine/watcher.py"
 ]
 

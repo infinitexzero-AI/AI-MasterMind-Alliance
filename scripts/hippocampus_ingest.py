@@ -8,8 +8,8 @@ from tqdm import tqdm
 import PyPDF2
 
 # Configuration
-VAULT_PATH = "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault"
-STORAGE_PATH = "/Users/infinite27/AILCC_PRIME/06_System/Hippocampus/qdrant_storage"
+VAULT_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/Conversation_Logs"
+STORAGE_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/Hippocampus/qdrant_storage"
 COLLECTION_NAME = "hippocampus_v1"
 
 def extract_text_from_pdf(filepath: str) -> str:

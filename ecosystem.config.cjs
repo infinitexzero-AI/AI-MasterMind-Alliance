@@ -67,6 +67,15 @@ module.exports = {
       autorestart: false, // Prevents infinite looping
       cron_restart: '0 4 * * *', // Trigger strictly at 04:00 AM locally
       max_memory_restart: '500M'
+    },
+    {
+      name: 'vanguard_inventory_updater',
+      script: '/Volumes/XDriveBeta/AILCC_PRIME/scripts/update_alliance_inventory.py',
+      interpreter: 'python3',
+      watch: false,
+      autorestart: false,
+      cron_restart: '*/15 * * * *', // Run every 15 minutes
+      max_memory_restart: '100M'
     }
   ]
 };

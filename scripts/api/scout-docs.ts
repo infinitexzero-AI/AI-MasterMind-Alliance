@@ -9,7 +9,7 @@ import * as path from 'path';
  * Prompts the local LLM to generate documentation and injects it back in safely via ts-morph.
  */
 
-const WORKSPACE_DIR = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
+const WORKSPACE_DIR = '/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
 const POLL_INTERVAL_MS = 60000 * 30; // 30 minutes
 
 async function emitEvent(type: string, message: string, severity: 'info' | 'warning' | 'error' | 'success' = 'info') {

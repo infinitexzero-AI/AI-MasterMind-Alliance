@@ -6,8 +6,8 @@ from datetime import datetime
 
 # Configuration
 HIPPOCAMPUS_URL = "http://localhost:8090" # Port mapping 8090:8000
-OUTPUT_DIR = "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault/Hardship_Chronicles/Academic_Records/APPEAL_SUBMISSION_READY"
-TEMPLATE_PATH = "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault/Hardship_Chronicles/Academic_Records/EVIDENCE_BUNDLE_V2.md"
+OUTPUT_DIR = "/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault/Hardship_Chronicles/Academic_Records/APPEAL_SUBMISSION_READY"
+TEMPLATE_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault/Hardship_Chronicles/Academic_Records/EVIDENCE_BUNDLE_V2.md"
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 

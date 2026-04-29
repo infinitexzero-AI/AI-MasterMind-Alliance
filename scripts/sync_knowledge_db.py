@@ -6,8 +6,8 @@ from datetime import datetime
 
 # Configuration
 DB_PATH = "/Users/infinite27/Antigravity/knowledge.db"
-JSON_PATH = "/Users/infinite27/AILCC_PRIME/web_tasks.json"
-REGISTRY_JSON_PATH = "/Users/infinite27/AILCC_PRIME/agents/registry.json"
+JSON_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/web_tasks.json"
+REGISTRY_JSON_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/agents/registry.json"
 
 DRY_RUN = False
 

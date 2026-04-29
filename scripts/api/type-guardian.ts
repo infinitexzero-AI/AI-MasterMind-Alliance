@@ -13,7 +13,7 @@ import * as path from 'path';
  */
 
 const execAsync = promisify(exec);
-const WORKSPACE_DIR = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
+const WORKSPACE_DIR = '/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
 
 async function emitEvent(type: string, message: string, severity: 'info' | 'warning' | 'error' | 'success' = 'info') {
     try {

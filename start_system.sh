@@ -4,7 +4,7 @@
 # Mission: "Alliance Prime" Contextual Wake-Up
 # Targets: Docker, n8n, MCP, Linear, Airtable, GitHub
 
-BASE_DIR="/Users/infinite27/AILCC_PRIME"
+BASE_DIR="/Volumes/XDriveBeta/AILCC_PRIME"
 LOG_FILE="$BASE_DIR/06_System/Logs/alliance_launch.log"
 
 log() {

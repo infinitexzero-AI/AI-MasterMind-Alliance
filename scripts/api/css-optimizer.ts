@@ -10,7 +10,7 @@ import * as path from 'path';
  * orphaned variable and produces a clean, consolidated list.
  */
 
-const WORKSPACE_DIR = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
+const WORKSPACE_DIR = '/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
 const GLOBALS_CSS = path.join(WORKSPACE_DIR, 'styles', 'globals.css');
 const POLL_INTERVAL_MS = 60000 * 20; // 20 minutes
 

@@ -6,7 +6,7 @@ from datetime import datetime
 import re
 
 # Configuration
-ROOT_DIR = "/Users/infinite27/AILCC_PRIME"
+ROOT_DIR = "/Volumes/XDriveBeta/AILCC_PRIME"
 VAULT_DIR = os.path.join(ROOT_DIR, "04_Intelligence_Vault")
 DB_PATH = os.path.join(ROOT_DIR, "06_System/State/knowledge-base.db")
 

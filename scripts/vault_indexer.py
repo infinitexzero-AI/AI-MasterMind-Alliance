@@ -7,7 +7,7 @@ from pathlib import Path
 # Configuration
 REDIS_HOST = os.getenv('REDIS_HOST', 'localhost')
 REDIS_PORT = int(os.getenv('REDIS_PORT', 6379))
-VAULT_PATH = '/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault'
+VAULT_PATH = '/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault'
 REDIS_KEY = 'vault:index'
 
 def extract_metadata(file_path):

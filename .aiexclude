@@ -1,0 +1,21 @@
+# Gemini Code Assist Context Exclusions
+# Protects token bandwidth and optimizes AI accuracy
+
+node_modules/
+.next/
+dist/
+build/
+cache/
+logs/
+tmp/
+
+# Archives & Large Data
+03_Archives/
+04_Archive/
+04_Archives/
+
+# File types
+*.log
+*.jsonl
+*.zip
+*.backup

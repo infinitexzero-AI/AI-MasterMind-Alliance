@@ -14,7 +14,7 @@ import sys, os, json, subprocess
 from datetime import datetime
 from pathlib import Path
 
-VAULT = Path("/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault")
+VAULT = Path("/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault")
 DAILY_FILE = VAULT / "daily_entries.json"
 
 NUDGES = {

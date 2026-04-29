@@ -5,7 +5,7 @@ import sys
 from datetime import datetime
 
 # Canonical Paths
-ROOT = "/Users/infinite27/AILCC_PRIME"
+ROOT = "/Volumes/XDriveBeta/AILCC_PRIME"
 STATE_PATH = f"{ROOT}/06_System/State/current_context.json"
 VAULT_PATH = f"{ROOT}/04_Intelligence_Vault/Hardship_Chronicles"
 CODE_PATH = f"{ROOT}/01_Areas/Codebases"

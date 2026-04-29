@@ -10,7 +10,7 @@ import * as path from 'path';
  * fires a [BUNDLE_BLOAT] warning to the observability dashboard.
  */
 
-const WORKSPACE_DIR = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
+const WORKSPACE_DIR = '/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
 const PKG_LOCK = path.join(WORKSPACE_DIR, 'package-lock.json');
 const BLOAT_THRESHOLD_PACKAGES = 10; // Alert if we exceed baseline by 10+ packages
 const POLL_INTERVAL_MS = 60000 * 15; // 15 minutes

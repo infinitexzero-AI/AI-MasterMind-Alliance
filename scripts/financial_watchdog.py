@@ -3,8 +3,8 @@ import os
 import time
 from datetime import datetime
 
-FINANCE_DATA = "/Users/infinite27/AILCC_PRIME/06_System/State/finance_data.json"
-LOG_FILE = "/Users/infinite27/AILCC_PRIME/logs/financial_watchdog.log"
+FINANCE_DATA = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/finance_data.json"
+LOG_FILE = "/Volumes/XDriveBeta/AILCC_PRIME/logs/financial_watchdog.log"
 
 def log_event(message):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")

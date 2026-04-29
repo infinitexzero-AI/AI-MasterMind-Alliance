@@ -2,7 +2,7 @@
 # Step 2: verify_paths.sh
 # Audits all scripts in AILCC_PRIME for hardcoded legacy paths.
 
-ROOT="/Users/infinite27/AILCC_PRIME"
+ROOT="/Volumes/XDriveBeta/AILCC_PRIME"
 LEGACY_PATHS=("/Users/infinite27/Documents" "/Users/infinite27/Antigravity" "/Users/infinite27/AIMmA")
 
 printf "\n\033[1;36m🔍 AUDITING SYSTEM PATHS...\033[0m\n"

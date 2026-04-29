@@ -3,7 +3,7 @@ import json
 import os
 from datetime import datetime, timedelta
 
-STATE_FILE = "/Users/infinite27/AILCC_PRIME/sync_state.json"
+STATE_FILE = "/Volumes/XDriveBeta/AILCC_PRIME/sync_state.json"
 
 def validate():
     print(f"[*] Validating {STATE_FILE}...")

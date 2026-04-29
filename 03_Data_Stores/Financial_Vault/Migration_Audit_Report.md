@@ -1,0 +1,118 @@
+# Financial Vault Migration Audit Report
+
+Execution Date: 2026-04-23 18:42:30
+
+**Total files discovered by mdfind matching keywords:** 57
+
+## Migration Log
+
+- [x] `/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AILCC_ARCHIVE/Documents/AI_Mastermind_Exports/_Aggregated/Inbox/1764714698_4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2024-04-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2024-04.csv`
+- [x] `/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AILCC_ARCHIVE/Documents/AI_Mastermind_Exports/_Aggregated/Inbox/1764714699_4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2024-02-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2024-02.csv`
+- [x] `/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AILCC_ARCHIVE/Documents/AI_Mastermind_Exports/_Aggregated/Inbox/1764714695_4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2024-05-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2024-05.csv`
+- [x] `/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/AILCC_ARCHIVE/Documents/AI_Mastermind_Exports/_Aggregated/Inbox/1764714696_4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2024-03-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2024-03.csv`
+- [x] `/Users/infinite27/Library/CloudStorage/OneDrive-Personal/AILCC_VAULT/TAX_SWEEP_2026/Royal_Bank of Canada expenses 24-26.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2026-04.csv`
+- [x] `/Users/infinite27/Library/Containers/com.microsoft.Excel/Data/Library/Application Support/Microsoft/ALL%20PHONE%20CONTACTS%20XLS310052280050396512/ALL%20PHONE%20CONTACTS%20XLS((Autorecovered-310051942073864576)).xls` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/ALL%20PHONE%20CONTACTS%20XLS((Autorecovered-310051942073864576)).xls`
+- [x] `/Users/infinite27/Library/Containers/com.microsoft.Excel/Data/Library/Application Support/Microsoft/ALL%20PHONE%20CONTACTS%20XLS310052280050396512/ALL%20PHONE%20CONTACTS%20XLS((Autorecovered-310051942193864576)).xls` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/ALL%20PHONE%20CONTACTS%20XLS((Autorecovered-310051942193864576)).xls`
+- [x] `/Users/infinite27/Library/Containers/com.microsoft.Excel/Data/Library/Application Support/Microsoft/ALL%20PHONE%20CONTACTS%20XLS310052280050396512/ALL%20PHONE%20CONTACTS%20XLS((Autorecovered-310051942313864576)).xls` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/ALL%20PHONE%20CONTACTS%20XLS((Autorecovered-310051942313864576)).xls`
+- [x] `/Users/infinite27/Library/Containers/com.microsoft.Excel/Data/Library/Application Support/Microsoft/ALL%20PHONE%20CONTACTS%20XLS310052280050396512/ALL%20PHONE%20CONTACTS%20XLS((Autorecovered-310051942423864576)).xls` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/ALL%20PHONE%20CONTACTS%20XLS((Autorecovered-310051942423864576)).xls`
+- [x] `/Users/infinite27/Library/Containers/com.microsoft.Excel/Data/Library/Application Support/Microsoft/ALL%20PHONE%20CONTACTS%20XLS310052280050396512/ALL%20PHONE%20CONTACTS%20XLS((Autorecovered-310051942653864576)).xls` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/ALL%20PHONE%20CONTACTS%20XLS((Autorecovered-310051942653864576)).xls`
+- [x] `/Users/infinite27/Library/CloudStorage/GoogleDrive-eastcoastfreshcoats@gmail.com/My Drive/Crypto/coinbase statement 02-03 2026.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/05_Coinbase/Statements/Coinbase_Statements_2026.pdf`
+- [x] `/Users/infinite27/Library/CloudStorage/OneDrive-Personal/AILCC_VAULT/TAX_SWEEP_2026/09_Tasks_&_Open_Issues/2025/Updated-taxInformationSlips.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/Updated-taxInformationSlips.pdf`
+- [x] `/Users/infinite27/Library/CloudStorage/OneDrive-Personal/AILCC_VAULT/TAX_SWEEP_2026/01_Identity_&_Access/2025/Business Void Cheque - RBC Online Banking 2023.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Statements/RBC_Statements_2023.pdf`
+- [x] `/Users/infinite27/Library/CloudStorage/OneDrive-Personal/AILCC_VAULT/TAX_SWEEP_2026/06_Business_Painting_Income_&_Expenses/Categorized_T2125_Books_24_25.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/03_Simplii/Raw_Transactions/Simplii_Transactions_2026-04.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2022-07-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2022-07.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2022-09-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2022-09.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2022-10-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2022-10.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2023-06-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2023-06.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2023-07-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2023-07.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2023-08-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2023-08.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2023-12-en.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2023-12.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2024-06-en.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/4d19eaad-3680-4158-abd0-41c6685fc740-monthly-report-2024-06-en.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/Feb. 2024.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/Feb. 2024.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/July 2024 .pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/July 2024 .pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/KOHO EXPENSES June 2024.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2024.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/KOHOexpenseFeb.2024.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2024_v1.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/KOHOexpensesApr.2024.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2024_v2.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/KOHOexpensesAug.2023.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2023.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/KOHOexpensesDec.2023.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2023_v1.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/KOHOexpensesJuly.2023.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2023_v2.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/KOHOexpensesJune.2023.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2023_v3.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/KOHOexpensesMAR.2024.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2024_v3.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/KOHOexpensesSept.2023.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2023_v4.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/Mar. 2024.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/Mar. 2024.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/actually may 2024.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2024_v4.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/KOHO Expenses/koho May 2024.csv` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/01_RBC/Raw_Transactions/RBC_Transactions_2024_v5.csv`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/RBC Business Bank Account/1001122_2024_04_01_2024_05_01.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/1001122_2024_04_01_2024_05_01.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/ECFC Expenses/RBC Business Bank Account/ECFC Chequing Statement-1122 2024-05-01.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/ECFC Chequing Statement-1122 2024-05-01.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/Financial Analysis/Extra Expenses/KOHO: Credit Account /August statement .pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/August statement .pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/Financial Analysis/Extra Expenses/KOHO: Credit Account /July Statement.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/July Statement.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/Financial Analysis/Extra Expenses/KOHO: Credit Account /June Statement .pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/June Statement .pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/Financial Analysis/Extra Expenses/KOHO: Credit Account /September Statement.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/September Statement.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/Financial Analysis/Extra Expenses/Sherwin-Williams/Customer Contact List Report March 28 2024.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/Customer Contact List Report March 28 2024.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/ECFC Recruiting/Hiring Process/2022-2024 Painting Prospects /Painter Prospects Jan. 2024/ResumeJamieCormier.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/ResumeJamieCormier.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/ECFC Recruiting/Door to Door Marketing Prospects 2024/Alishia Perry-Nowlan 506-871-9736.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/Alishia Perry-Nowlan 506-871-9736.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/ECFC Recruiting/Door to Door Marketing Prospects 2024/Haleigh Steeves 506 295 7400.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/Haleigh Steeves 506 295 7400.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/04_Stability_Backups/Desktop_Snapshot/ Entrepreneurship 2025-2026/ECFC General Documents/Accounting/Financial Analysis/Extra Expenses/Sub-Contractor Invoices /GoToFlooring/GO FLOORING - 2023 Subtrade-Subcontractor Agreement NB.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/GO FLOORING - 2023 Subtrade-Subcontractor Agreement NB.pdf`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/06_Legacy_Review/CLIENT LIST 02:09:25.xlsx` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/CLIENT LIST 02:09:25.xlsx`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/06_Legacy_Review/Client EXCEL List Dec. 12 2024.xlsx` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/Client EXCEL List Dec. 12 2024.xlsx`
+- [x] `/Volumes/XDriveBeta/XDrive-Alpha_Migration/06_Legacy_Review/UpdatedClientListFeb9th2025.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/UpdatedClientListFeb9th2025.pdf`
+- [x] `/Volumes/XDriveBeta/Offloads/Mail/V10/9F8A7894-A45B-4D7E-ADE4-51F63E04C53D/EastCoastFreshCoats.mbox/BE8A6545-B438-4974-8BE3-0106DCD86408/Data/5/Attachments/5698/2.2/Deposit Account Details | CIBC Online Banking.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/02_CIBC/Statements/CIBC_Statements_2026-04.pdf`
+- [x] `/Volumes/XDriveBeta/Offloads/Mail/V10/9F8A7894-A45B-4D7E-ADE4-51F63E04C53D/Sent Items.mbox/BE8A6545-B438-4974-8BE3-0106DCD86408/Data/6/Attachments/6389/2.2/Deposit Account Details | CIBC Online Banking.pdf` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/02_CIBC/Statements/CIBC_Statements_2026-04_v1.pdf`
+- [x] `/Volumes/XDriveBeta/Vault/Migration_Archive/com~apple~CloudDocs/00-Inbox/Client EXCEL List Dec. 12 2024.xlsx` 
+  -> `/Volumes/XDriveBeta/AILCC_PRIME/03_Data_Stores/Financial_Vault/99_Uncategorized_Orphans/Client EXCEL List Dec. 12 2024.xlsx`
+
+## Summary
+- Total successfully migrated: 53
+- Total orphaned: 25

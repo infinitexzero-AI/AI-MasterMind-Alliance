@@ -9,7 +9,7 @@ import re
 import json
 from datetime import datetime
 
-ROOT = "/Users/infinite27/AILCC_PRIME"
+ROOT = "/Volumes/XDriveBeta/AILCC_PRIME"
 LOGS_DIR = f"{ROOT}/06_System/Logs"
 STATE_DIR = f"{ROOT}/06_System/State"
 

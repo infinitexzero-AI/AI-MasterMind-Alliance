@@ -8,7 +8,7 @@ import uvicorn
 
 app = FastAPI(title="AILCC Vault RAG Server", version="1.0.0")
 
-VAULT_DIR = "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault"
+VAULT_DIR = "/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault"
 CHROMA_HOST = "localhost"
 CHROMA_PORT = 8000
 COLLECTION_NAME = "vault_knowledge_base"

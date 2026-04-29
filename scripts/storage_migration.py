@@ -10,7 +10,7 @@ import json
 import shutil
 from datetime import datetime
 
-ROOT = "/Users/infinite27/AILCC_PRIME"
+ROOT = "/Volumes/XDriveBeta/AILCC_PRIME"
 ARCHIVE_ROOT = f"{ROOT}/04_Intelligence_Vault/Archive"
 AUDIT_FILE = f"{ROOT}/06_System/State/hippocampus_audit_results.json"
 LOG_FILE = f"{ROOT}/06_System/Logs/storage_migration.log"

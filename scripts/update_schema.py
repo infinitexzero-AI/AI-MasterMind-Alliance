@@ -1,7 +1,7 @@
 import sqlite3
 import os
 
-DB_PATH = "/Users/infinite27/AILCC_PRIME/06_System/State/knowledge-base.db"
+DB_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/knowledge-base.db"
 
 def update_schema():
     conn = sqlite3.connect(DB_PATH)

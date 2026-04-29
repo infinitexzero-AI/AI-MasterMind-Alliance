@@ -2,19 +2,18 @@ import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import NexusLayout from '../components/NexusLayout';
 import { OrchestrationPanel } from '../components/OrchestrationPanel';
-import SystemGraph from '../components/SystemGraph';
 import { StrategicAdvisory } from '../components/StrategicAdvisory';
 import { SwarmHeartbeat } from '../components/SwarmHeartbeat';
 import { TerminalStream } from '../components/TerminalStream';
 import { TaskClassification, Agent } from '../types/DashboardInterfaces';
+import HealthPanel from '../components/HealthPanel';
+import { StrategicMap } from '../components/StrategicMap';
 
 type WsMessage =
   | { type: 'INTENT_ROUTER'; status?: string; payload: string; id?: string; timestamp?: string }
   | { type: 'PROCESS_TASK'; status?: string; payload: { prompt: string }; id?: string; timestamp?: string }
   | { type: 'AGENT_ROSTER'; status?: string; payload: Agent[]; id?: string; timestamp?: string }
   | { type: 'TERMINAL_SIGNAL'; status?: string; payload: { message: string; type?: 'OUT' | 'CMD' | 'ERR' }; id?: string; timestamp?: string };
-
-import HealthPanel from '../components/HealthPanel';
 
 export default function AntigravityPage() {
   // --- STATE (Ported from SystemHUD) ---
@@ -121,9 +120,8 @@ export default function AntigravityPage() {
 
         {/* RIGHT: Physics/Graph + Intel */}
         <div className="col-span-1 xl:col-span-4 h-full flex flex-col gap-6 overflow-y-auto custom-scrollbar">
-          <div className="h-[300px] flex-shrink-0 renaissance-panel p-4">
-            <div className="font-mono text-xs text-purple-400 mb-2 opacity-75">MODULE: GOD MODE</div>
-            <SystemGraph />
+          <div className="h-[350px] flex-shrink-0">
+            <StrategicMap telemetry={{ activeStep, agents }} />
           </div>
 
           {/* Health Panel (Option B) */}

@@ -6,7 +6,7 @@ from datetime import datetime
 # AILCC Status Aggregator (Cycle 2)
 # Merges all specialized agent states into a unified live_status.json
 
-BASE_DIR = "/Users/infinite27/AILCC_PRIME"
+BASE_DIR = "/Volumes/XDriveBeta/AILCC_PRIME"
 DASHBOARD_DATA = f"{BASE_DIR}/01_Areas/Codebases/ailcc/dashboard/public/data/live_status.json"
 
 STATE_SCHOLAR = f"{BASE_DIR}/06_System/State/scholar_data.json"

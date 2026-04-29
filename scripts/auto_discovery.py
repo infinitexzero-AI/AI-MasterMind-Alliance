@@ -6,8 +6,8 @@ import argparse
 from datetime import datetime
 
 # Configuration
-DB_PATH = "/Users/infinite27/AILCC_PRIME/06_System/State/knowledge-base.db"
-METRICS_FILE = "/Users/infinite27/AILCC_PRIME/06_System/State/agent_metrics.json"
+DB_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/knowledge-base.db"
+METRICS_FILE = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/agent_metrics.json"
 
 def log_metrics_history(agent_id, cpu, memory):
     if not os.path.exists(METRICS_FILE):

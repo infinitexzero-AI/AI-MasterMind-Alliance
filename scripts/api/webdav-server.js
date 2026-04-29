@@ -2,7 +2,7 @@ const { v2: webdav } = require('webdav-server');
 const express = require('express');
 
 const PORT = process.env.WEBDAV_PORT || 8080;
-const VAULT_PATH = '/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault';
+const VAULT_PATH = '/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault';
 
 const app = express();
 

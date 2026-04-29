@@ -8,7 +8,7 @@ import sqlite3
 import os
 import time
 
-DB_PATH = "/Users/infinite27/AILCC_PRIME/06_System/State/knowledge-base.db"
+DB_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/knowledge-base.db"
 
 def maintenance():
     print(f"[{time.strftime('%H:%M:%S')}] 🧹 Starting Database Maintenance...")

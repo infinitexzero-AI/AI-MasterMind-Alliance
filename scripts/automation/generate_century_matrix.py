@@ -2,7 +2,7 @@ import json
 import os
 from datetime import datetime
 
-REGISTRY_PATH = "/Users/infinite27/AILCC_PRIME/tasks/consolidated_task_registry.json"
+REGISTRY_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/tasks/consolidated_task_registry.json"
 
 DOMAINS = [
     ("TECH", "DEVELOPMENT", "Architect"),

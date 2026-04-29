@@ -9,8 +9,8 @@ import os
 import re
 from datetime import datetime
 
-HEARTBEAT_LOG = "/Users/infinite27/AILCC_PRIME/06_System/Logs/system_heartbeat.log"
-DASHBOARD_LOG = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/dev_log.txt"
+HEARTBEAT_LOG = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/Logs/system_heartbeat.log"
+DASHBOARD_LOG = "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/dev_log.txt"
 
 ALERT_KEYWORDS = ["ERROR", "CRITICAL", "Link severed", "Traceback", "Failed to fetch"]
 

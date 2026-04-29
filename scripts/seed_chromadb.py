@@ -3,7 +3,7 @@ import chromadb
 from pathlib import Path
 
 # Paths
-LEGACY_MEMORY_FILE = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/mode6_semantic.json"
+LEGACY_MEMORY_FILE = "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/src/lib/mode6/mode6_semantic.json"
 
 print(f"🔱 Initiating AILCC Memory Engine Migration Pipeline...")
 

@@ -35,7 +35,7 @@ async function run() {
             console.error(`Failed ${q.name}:`, e);
         }
     }
-    fs.writeFileSync('/Users/infinite27/AILCC_PRIME/AI-MasterMind-Alliance/02_Resources/Academics/exa_intelligence_results.json', JSON.stringify(results, null, 2));
+    fs.writeFileSync('/Volumes/XDriveBeta/AILCC_PRIME/AI-MasterMind-Alliance/02_Resources/Academics/exa_intelligence_results.json', JSON.stringify(results, null, 2));
     console.log("Intelligence payload saved to exa_intelligence_results.json");
 }
 

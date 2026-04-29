@@ -54,6 +54,6 @@ def find_duplicates():
 
 if __name__ == "__main__":
     dupes = find_duplicates()
-    with open("/Users/infinite27/AILCC_PRIME/06_System/State/icloud_duplicates.json", 'w') as f:
+    with open("/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/icloud_duplicates.json", 'w') as f:
         json.dump(dupes, f, indent=2)
     print(f"Found {len(dupes)} duplicate sets.")

@@ -27,7 +27,7 @@ fi
 
 # 3. Log Archival / Cleanup
 # Find logs older than 7 days in Area 06 or tmp and compress them
-find /Users/infinite27/AILCC_PRIME/06_System/Logs -name "*.log" -mtime +7 -exec gzip {} \; 2>/dev/null
+find /Volumes/XDriveBeta/AILCC_PRIME/06_System/Logs -name "*.log" -mtime +7 -exec gzip {} \; 2>/dev/null
 echo "[$(date)] Maintenance complete." >> "$LOG_FILE"
 
 echo "{\"status\": \"success\", \"freed_ram\": true, \"docker_cleaned\": $([ "$DOCKER_SIZE_GB" -gt 15 ] && echo "true" || echo "false"), \"timestamp\": \"$(date -u +"%Y-%m-%dT%H:%M:%SZ")\"}"

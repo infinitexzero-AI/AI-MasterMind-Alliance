@@ -4,7 +4,7 @@ from datetime import datetime
 
 class FridayHomeBridge:
     def __init__(self):
-        self.log_file = "/Users/infinite27/AILCC_PRIME/logs/home_bridge.log"
+        self.log_file = "/Volumes/XDriveBeta/AILCC_PRIME/logs/home_bridge.log"
 
     def set_environment_scene(self, state):
         scenes = {

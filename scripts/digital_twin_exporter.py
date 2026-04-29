@@ -3,7 +3,7 @@ import json
 import re
 from pathlib import Path
 
-CONFIG_PATH = "/Users/infinite27/AILCC_PRIME/06_System/State/digital_twin_config.json"
+CONFIG_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/digital_twin_config.json"
 
 def load_config():
     with open(CONFIG_PATH, 'r') as f:

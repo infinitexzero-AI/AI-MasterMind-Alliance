@@ -5,6 +5,7 @@ import { useAuth } from '../src/contexts/AuthContext';
 import { Network, ShieldAlert, Star, Link as LinkIcon, BookOpen, BrainCircuit, Terminal, Play, Loader2, Code2 } from 'lucide-react';
 import { SkillNodeSchema } from '../types/api';
 import { motion, AnimatePresence } from 'framer-motion';
+import { SkillMapFrame } from '../components/antigravity/SkillMapFrame';
 
 const MOCK_SKILLS: SkillNodeSchema[] = [
     {
@@ -48,6 +49,7 @@ const MOCK_SKILLS: SkillNodeSchema[] = [
 export default function SkillTree() {
     const { hasAccess } = useAuth();
     const [selectedDomain, setSelectedDomain] = useState<SkillNodeSchema['domain'] | 'ALL'>('ALL');
+    const [viewMode, setViewMode] = useState<'MATRIX' | 'MAP'>('MATRIX');
     const [forgeObjective, setForgeObjective] = useState('');
     const [isForging, setIsForging] = useState(false);
     const [forgeLogs, setForgeLogs] = useState<{type: string, message?: string, content?: string}[]>([]);
@@ -136,7 +138,29 @@ export default function SkillTree() {
                     </div>
                     
                     <div className="flex flex-wrap gap-2 bg-slate-900/50 p-2 rounded-xl border border-slate-700/50">
-                        {['ALL', 'BIOPSYCH', 'RESEARCH', 'CODING', 'BUSINESS', 'WELLNESS'].map(domain => (
+                        <div className="flex gap-1 border-r border-white/10 pr-2 mr-2">
+                            <button
+                                onClick={() => setViewMode('MATRIX')}
+                                className={`px-4 py-2 rounded-lg text-xs font-bold uppercase transition-all tracking-widest ${
+                                    viewMode === 'MATRIX' 
+                                    ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30'
+                                    : 'text-slate-500 hover:text-slate-300'
+                                }`}
+                            >
+                                Matrix
+                            </button>
+                            <button
+                                onClick={() => setViewMode('MAP')}
+                                className={`px-4 py-2 rounded-lg text-xs font-bold uppercase transition-all tracking-widest ${
+                                    viewMode === 'MAP' 
+                                    ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30 shadow-[0_0_15px_rgba(168,85,247,0.2)]'
+                                    : 'text-slate-500 hover:text-slate-300'
+                                }`}
+                            >
+                                Life Map
+                            </button>
+                        </div>
+                        {viewMode === 'MATRIX' && ['ALL', 'BIOPSYCH', 'RESEARCH', 'CODING', 'BUSINESS', 'WELLNESS'].map(domain => (
                             <button
                                 key={domain}
                                 onClick={() => setSelectedDomain(domain as any)}
@@ -214,60 +238,71 @@ export default function SkillTree() {
                     )}
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-                    {filteredSkills.map((skill, index) => (
-                        <motion.div 
-                            key={skill.id}
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.4, delay: index * 0.05 }}
-                            className="group bg-slate-900/40 rounded-2xl border border-white/5 p-6 flex flex-col gap-4 hover:border-cyan-500/30 transition-all hover:shadow-[0_4px_30px_rgba(6,182,212,0.1)] hover:-translate-y-1 relative overflow-hidden"
-                        >
-                             <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-colors" />
-                             
-                             <div className="flex items-start justify-between relative z-10">
-                                 <div className={`p-2 rounded-xl border ${getDomainColor(skill.domain)}`}>
-                                     <BrainCircuit className="w-5 h-5" />
-                                 </div>
-                                 <div className="flex gap-1" title={`Mastery Level ${skill.level}`}>
-                                     {[1, 2, 3].map(lvl => (
-                                         <Star key={lvl} className={`w-4 h-4 ${lvl <= skill.level ? 'text-amber-400 fill-amber-400' : 'text-slate-700'}`} />
-                                     ))}
-                                 </div>
-                             </div>
+                {viewMode === 'MATRIX' ? (
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                        {filteredSkills.map((skill, index) => (
+                            <motion.div 
+                                key={skill.id}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.4, delay: index * 0.05 }}
+                                className="group bg-slate-900/40 rounded-2xl border border-white/5 p-6 flex flex-col gap-4 hover:border-cyan-500/30 transition-all hover:shadow-[0_4px_30px_rgba(6,182,212,0.1)] hover:-translate-y-1 relative overflow-hidden"
+                            >
+                                <div className="absolute top-0 right-0 w-24 h-24 bg-cyan-500/5 rounded-full blur-2xl group-hover:bg-cyan-500/10 transition-colors" />
+                                
+                                <div className="flex items-start justify-between relative z-10">
+                                    <div className={`p-2 rounded-xl border ${getDomainColor(skill.domain)}`}>
+                                        <BrainCircuit className="w-5 h-5" />
+                                    </div>
+                                    <div className="flex gap-1" title={`Mastery Level ${skill.level}`}>
+                                        {[1, 2, 3].map(lvl => (
+                                            <Star key={lvl} className={`w-4 h-4 ${lvl <= skill.level ? 'text-amber-400 fill-amber-400' : 'text-slate-700'}`} />
+                                        ))}
+                                    </div>
+                                </div>
 
-                             <div className="relative z-10 mt-2">
-                                 <span className="text-[8px] font-mono tracking-widest uppercase text-slate-500 mb-1 block">
-                                     {skill.domain} // {skill.id}
-                                 </span>
-                                 <h3 className="text-lg font-bold text-white leading-tight">{skill.name}</h3>
-                                 <p className="text-xs text-slate-400 mt-2 line-clamp-3">{skill.description}</p>
-                             </div>
+                                <div className="relative z-10 mt-2">
+                                    <span className="text-[8px] font-mono tracking-widest uppercase text-slate-500 mb-1 block">
+                                        {skill.domain} // {skill.id}
+                                    </span>
+                                    <h3 className="text-lg font-bold text-white leading-tight">{skill.name}</h3>
+                                    <p className="text-xs text-slate-400 mt-2 line-clamp-3">{skill.description}</p>
+                                </div>
 
-                             <div className="mt-auto pt-4 border-t border-white/5 flex flex-col gap-2 relative z-10">
-                                  {skill.prerequisite_courses.length > 0 && (
-                                      <div className="flex items-center gap-2 text-[10px] font-mono text-indigo-400 bg-indigo-500/10 px-2 py-1.5 rounded">
-                                          <BookOpen className="w-3 h-3" /> Origin: {skill.prerequisite_courses.join(', ')}
-                                      </div>
-                                  )}
-                                  
-                                  <div className={`flex flex-col gap-1 text-[10px] font-mono ${skill.evidence_links.length > 0 ? 'text-emerald-400 bg-emerald-500/10' : 'text-rose-400 bg-rose-500/10'} px-2 py-1.5 rounded`}>
-                                       <div className="flex items-center justify-between">
-                                            <span className="flex items-center gap-1">
-                                                <Network className="w-3 h-3" /> Evidence Linked ({skill.evidence_links.length})
-                                            </span>
-                                            {skill.evidence_links.length === 0 && <span className="uppercase text-[8px] border border-rose-500/30 px-1 rounded">Missing</span>}
-                                       </div>
-                                       {skill.evidence_links.map((link, i) => (
-                                           <a key={i} href={link} className="truncate hover:underline text-[9px] mt-1 flex items-center gap-1 opacity-80 pl-4">
-                                               <LinkIcon className="w-2 h-2" /> Ext. Object {i+1}
-                                           </a>
-                                       ))}
-                                  </div>
-                             </div>
-                        </motion.div>
-                    ))}
-                </div>
+                                <div className="mt-auto pt-4 border-t border-white/5 flex flex-col gap-2 relative z-10">
+                                    {skill.prerequisite_courses.length > 0 && (
+                                        <div className="flex items-center gap-2 text-[10px] font-mono text-indigo-400 bg-indigo-500/10 px-2 py-1.5 rounded">
+                                            <BookOpen className="w-3 h-3" /> Origin: {skill.prerequisite_courses.join(', ')}
+                                        </div>
+                                    )}
+                                    
+                                    <div className={`flex flex-col gap-1 text-[10px] font-mono ${skill.evidence_links.length > 0 ? 'text-emerald-400 bg-emerald-500/10' : 'text-rose-400 bg-rose-500/10'} px-2 py-1.5 rounded`}>
+                                        <div className="flex items-center justify-between">
+                                                <span className="flex items-center gap-1">
+                                                    <Network className="w-3 h-3" /> Evidence Linked ({skill.evidence_links.length})
+                                                </span>
+                                                {skill.evidence_links.length === 0 && <span className="uppercase text-[8px] border border-rose-500/30 px-1 rounded">Missing</span>}
+                                        </div>
+                                        {skill.evidence_links.map((link, i) => (
+                                            <a key={i} href={link} className="truncate hover:underline text-[9px] mt-1 flex items-center gap-1 opacity-80 pl-4">
+                                                <LinkIcon className="w-2 h-2" /> Ext. Object {i+1}
+                                            </a>
+                                        ))}
+                                    </div>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
+                ) : (
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.5 }}
+                        className="w-full h-full"
+                    >
+                        <SkillMapFrame />
+                    </motion.div>
+                )}
 
             </div>
         </NexusLayout>

@@ -1,7 +1,7 @@
 import os
 import json
 
-DUPLICATES_FILE = "/Users/infinite27/AILCC_PRIME/06_System/State/icloud_duplicates.json"
+DUPLICATES_FILE = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/icloud_duplicates.json"
 
 def purge_duplicates():
     if not os.path.exists(DUPLICATES_FILE):

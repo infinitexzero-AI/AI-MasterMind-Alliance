@@ -1,0 +1,16 @@
+{
+    "totals": {
+        "income": 119647.52000000012,
+        "expenditures": 133702.41000000003
+    },
+    "categories": {
+        "Income / Client Deposit": 119647.52000000012,
+        "Other Expenses": 23765.429999999997,
+        "Bank Fees": 46167.040000000015,
+        "Materials & Software": 24154.460000000014,
+        "Travel, Meals & Gas": 3129.880000000002,
+        "Crypto / Investment": 34300.0,
+        "Subcontractors": 1350.0,
+        "Personal / Non-Business": 835.6
+    }
+}

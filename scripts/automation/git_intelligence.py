@@ -9,7 +9,7 @@ import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 
 # Locate the dashboard .env.local to steal the OpenAI API key securely
-ENV_PATH = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
+ENV_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
 OPENAI_API_KEY = None
 
 if os.path.exists(ENV_PATH):

@@ -7,7 +7,7 @@ import os
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [APPLE-NOTES] %(message)s")
 
 # Load Linear API Key
-ENV_PATH = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
+ENV_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
 LINEAR_API_KEY = None
 
 try:

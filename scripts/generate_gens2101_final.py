@@ -113,7 +113,7 @@ def generate_assignment_docx(md_path, docx_path):
     print(f"File saved to: {docx_path}")
 
 if __name__ == "__main__":
-    ACADEMIC_DIR = "/Users/infinite27/AILCC_PRIME/AI-MasterMind-Alliance/02_Resources/Academics/GENS-2101"
+    ACADEMIC_DIR = "/Volumes/XDriveBeta/AILCC_PRIME/AI-MasterMind-Alliance/02_Resources/Academics/GENS-2101"
     
     # 1. Vision Assignment
     MD_VISION = os.path.join(ACADEMIC_DIR, "Assignment_1_Vision_Refined.md")

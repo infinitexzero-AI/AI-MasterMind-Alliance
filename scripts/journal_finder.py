@@ -308,7 +308,7 @@ def main():
         save_results(results, args.save)
     else:
         # Default save location
-        default_path = "/Users/infinite27/AILCC_PRIME/02_Resources/Academics/journal_finder_results.json"
+        default_path = "/Volumes/XDriveBeta/AILCC_PRIME/02_Resources/Academics/journal_finder_results.json"
         save_results(results, default_path)
 
 

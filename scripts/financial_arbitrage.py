@@ -8,7 +8,7 @@ import json
 import os
 from datetime import datetime
 
-ROOT = "/Users/infinite27/AILCC_PRIME"
+ROOT = "/Volumes/XDriveBeta/AILCC_PRIME"
 FINANCE_STATE = f"{ROOT}/06_System/State/finance_data.json"
 OUTBOX = f"{ROOT}/06_System/AILCC/outbox"
 LOG_FILE = f"{ROOT}/06_System/Logs/financial_arbitrage.log"

@@ -6,7 +6,7 @@ import json
 
 # Configuration
 HIPPOCAMPUS_URL = "http://localhost:8090"
-ENV_PATH = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
+ENV_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
 API_KEY = None
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [SCHOLAR-INT] %(message)s")

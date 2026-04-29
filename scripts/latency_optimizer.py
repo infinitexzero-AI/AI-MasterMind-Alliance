@@ -7,7 +7,7 @@ from datetime import datetime
 # AILCC Optimizer: Latency & Performance Tuner
 # Target: <30ms system-wide synchronization latency.
 
-BASE_DIR = "/Users/infinite27/AILCC_PRIME"
+BASE_DIR = "/Volumes/XDriveBeta/AILCC_PRIME"
 LATENCY_REPORT = f"{BASE_DIR}/06_System/State/latency_report.json"
 RELAY_WS = "ws://localhost:3001"
 

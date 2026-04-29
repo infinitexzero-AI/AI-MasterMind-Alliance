@@ -9,7 +9,7 @@ import os
 import sqlite3
 from datetime import datetime
 
-ROOT = "/Users/infinite27/AILCC_PRIME"
+ROOT = "/Volumes/XDriveBeta/AILCC_PRIME"
 STATE_FILE = f"{ROOT}/06_System/State/scholar_data.json"
 DB_PATH = f"{ROOT}/06_System/State/knowledge-base.db"
 

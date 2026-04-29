@@ -7,7 +7,7 @@ Tests the performance of the RAG index and retrieval.
 import time
 import json
 import sys
-sys.path.append("/Users/infinite27/AILCC_PRIME/06_System/Execution")
+sys.path.append("/Volumes/XDriveBeta/AILCC_PRIME/06_System/Execution")
 from vault_rag import query_vault, build_index
 
 def benchmark():
@@ -43,5 +43,5 @@ def benchmark():
 if __name__ == "__main__":
     # Add Execution path to sys.path to find vault_rag
     import sys
-    sys.path.append("/Users/infinite27/AILCC_PRIME/06_System/Execution")
+    sys.path.append("/Volumes/XDriveBeta/AILCC_PRIME/06_System/Execution")
     benchmark()

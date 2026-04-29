@@ -13,7 +13,7 @@ import path from 'path';
  */
 
 const execAsync = promisify(exec);
-const WORKSPACE_DIR = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
+const WORKSPACE_DIR = '/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard';
 const POLL_INTERVAL_MS = 60000 * 5; // Every 5 minutes
 
 async function emitEvent(type: string, message: string, payload: Record<string, unknown>, severity: 'info' | 'warning' | 'error' | 'critical' = 'info') {

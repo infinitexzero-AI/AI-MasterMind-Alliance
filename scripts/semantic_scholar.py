@@ -5,7 +5,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [SEMANTIC-SCHOLAR] %(message)s")
 
 # Load Semantic Scholar API Key
-ENV_PATH = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
+ENV_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
 API_KEY = None
 
 try:

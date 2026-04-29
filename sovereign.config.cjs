@@ -41,7 +41,7 @@ module.exports = {
       name: 'cortex-core',
       cwd: '/Volumes/XDriveBeta/AILCC_PRIME/00_Projects/Orchestration_Hub/cortex-core',
       script: 'main.py',
-      interpreter: 'python3',
+      interpreter: '/Volumes/XDriveBeta/AILCC_PRIME/.venv/bin/python',
       args: '-m uvicorn main:app --host 0.0.0.0 --port 5005',
       env: {
         AILCC_ROOT: AILCC_ROOT
@@ -55,7 +55,7 @@ module.exports = {
       name: 'vanguard-bridge',
       cwd: path.join(AILCC_ROOT, 'scripts'),
       script: 'vanguard_bridge.py',
-      interpreter: 'python3',
+      interpreter: '/Volumes/XDriveBeta/AILCC_PRIME/.venv/bin/python',
       env: {
         AILCC_ROOT: AILCC_ROOT
       },
@@ -134,7 +134,7 @@ module.exports = {
       name: 'team-sync-daemon',
       cwd: path.join(AILCC_ROOT, 'scripts'),
       script: 'team_sync_daemon.py',
-      interpreter: 'python3',
+      interpreter: '/Volumes/XDriveBeta/AILCC_PRIME/.venv/bin/python',
       env: {
         PATH: `/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${process.env.PATH}`,
         AILCC_ROOT: AILCC_ROOT,

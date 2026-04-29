@@ -3,7 +3,7 @@
 # Designed for hardware-limited environments (damaged keys)
 # Reclaims RAM, clears caches, and restarts all alliance services
 
-BASE_DIR="/Users/infinite27/AILCC_PRIME"
+BASE_DIR="/Volumes/XDriveBeta/AILCC_PRIME"
 LOG_FILE="$BASE_DIR/logs/system_recovery.log"
 
 echo "🔱 AILCC SYSTEM RECOVERY INITIATED: $(date)" | tee -a "$LOG_FILE"

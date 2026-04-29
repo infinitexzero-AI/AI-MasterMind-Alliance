@@ -5,7 +5,7 @@ from pathlib import Path
 
 # Configuration
 API_URL = os.getenv('BACKEND_API_URL', 'http://localhost:8090')
-WORKSPACE_ROOT = '/Users/infinite27/AILCC_PRIME'
+WORKSPACE_ROOT = '/Volumes/XDriveBeta/AILCC_PRIME'
 DIRS_TO_INDEX = ['01_Areas', '00_Projects', 'agents', 'backend', 'scripts']
 EXTENSIONS = ['.md', '.txt', '.py', '.ts', '.tsx', '.js', '.json']
 

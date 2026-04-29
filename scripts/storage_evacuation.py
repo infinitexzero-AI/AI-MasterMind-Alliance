@@ -10,7 +10,7 @@ logging.basicConfig(level=logging.INFO, format="%(asctime)s [STORAGE-BREAKER] %(
 CRITICAL_THRESHOLD = 10 * (1024 ** 3)
 PRIMARY_DRIVE = "/"
 EXTERNAL_DRIVE = "/Volumes/XDriveAlpha"
-AILCC_ROOT = "/Users/infinite27/AILCC_PRIME"
+AILCC_ROOT = "/Volumes/XDriveBeta/AILCC_PRIME"
 
 # Directories we consider safe to evacuate when memory runs out
 EVACUATE_TARGETS = [

@@ -5,7 +5,7 @@ from datetime import datetime
 
 class BioSyncDaemon:
     def __init__(self):
-        self.state_file = "/Users/infinite27/AILCC_PRIME/data/bio_pulse.json"
+        self.state_file = "/Volumes/XDriveBeta/AILCC_PRIME/data/bio_pulse.json"
         
     def generate_mock_vitals(self):
         """Simulates ingestion from Apple Health/Whoop."""

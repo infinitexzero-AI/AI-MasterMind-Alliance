@@ -6,7 +6,7 @@ import os
 app = FastAPI()
 
 # Connect to the Local Embedded Storage
-STORAGE_PATH = "/Users/infinite27/AILCC_PRIME/06_System/Hippocampus/qdrant_storage"
+STORAGE_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/Hippocampus/qdrant_storage"
 client = QdrantClient(path=STORAGE_PATH)
 
 @app.get("/collections")

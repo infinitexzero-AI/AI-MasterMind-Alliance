@@ -7,7 +7,7 @@ Generates a JSON graph of the BSc Biopsychology degree path and prerequisites.
 import json
 import os
 
-ROOT = "/Users/infinite27/AILCC_PRIME"
+ROOT = "/Volumes/XDriveBeta/AILCC_PRIME"
 OUTPUT_FILE = f"{ROOT}/06_System/State/degree_graph.json"
 
 def generate_graph():

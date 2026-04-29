@@ -8,8 +8,8 @@ import json
 import os
 from datetime import datetime
 
-SIGNAL_FILE = "/Users/infinite27/AILCC_PRIME/06_System/State/system_signal.json"
-LOG_FILE = "/Users/infinite27/AILCC_PRIME/06_System/Logs/scholar_bridge.log"
+SIGNAL_FILE = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/system_signal.json"
+LOG_FILE = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/Logs/scholar_bridge.log"
 
 def log(message):
     timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')

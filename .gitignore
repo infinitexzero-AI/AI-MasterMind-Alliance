@@ -270,3 +270,6 @@ storage/
 **/*.db-shm
 **/__pycache__/
 **/*.pyc
+
+# OpenClaw Exclusions
+.openclaw/

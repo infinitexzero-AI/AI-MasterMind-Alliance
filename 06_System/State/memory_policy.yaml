@@ -27,6 +27,11 @@ policy:
       description: "Interaction history and specific session outcomes."
       retention: "30 days (Unless flagged for strategy insight)"
       criteria: "Feeds back into strategy, constraints, or long-term growth."
+      context_density: high
+      search_protocol:
+        mode: relentless
+        strategy: multi_node_context_mirroring
+        fallback: ask_once_never_guess
       prune_rules:
         - "Prune one-off chats or dead-end experiments nightly."
 

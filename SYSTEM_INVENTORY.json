@@ -1,0 +1,40 @@
+{
+  "timestamp": "2026-04-23T17:25:39.979091",
+  "pm2": [
+    {
+      "name": "neural-relay",
+      "status": "stopped",
+      "memory": 0,
+      "cpu": 0
+    },
+    {
+      "name": "nexus-dashboard",
+      "status": "stopped",
+      "memory": 0,
+      "cpu": 0
+    }
+  ],
+  "docker": [],
+  "directories": {
+    "nexus-dashboard": {
+      "files": 635,
+      "size_mb": 7.74
+    },
+    "valentine-core": {
+      "files": 0,
+      "size_mb": 0
+    },
+    "daemon": {
+      "files": 4,
+      "size_mb": 0.01
+    },
+    "n8n_foundation": {
+      "files": 4,
+      "size_mb": 0.56
+    }
+  },
+  "mounts": {
+    "XDriveBeta": "Mounted",
+    "GoogleDrive": "Disconnected"
+  }
+}

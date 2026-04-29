@@ -6,7 +6,7 @@ import logging
 from datetime import datetime
 
 # Configuration
-VAULT_INBOX = "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault/Mobile_Inbox"
+VAULT_INBOX = "/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault/Mobile_Inbox"
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [VOICE-DROP] %(message)s")
 
 def process_voice_note(text, context=None):

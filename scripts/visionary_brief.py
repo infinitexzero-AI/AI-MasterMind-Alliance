@@ -7,7 +7,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [VISIONARY-BRIEF] %(message)s")
 
 # Load Linear API Key from the dashboard .env.local
-ENV_PATH = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
+ENV_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
 LINEAR_API_KEY = None
 
 try:
@@ -22,7 +22,7 @@ if not LINEAR_API_KEY:
     logging.error("No Linear API Key found. Aborting Visionary Brief.")
     exit(1)
 
-VAULT_DIR = "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault/Visionary_Briefs"
+VAULT_DIR = "/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault/Visionary_Briefs"
 os.makedirs(VAULT_DIR, exist_ok=True)
 
 GRAPHQL_URL = "https://api.linear.app/graphql"

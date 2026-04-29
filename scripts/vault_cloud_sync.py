@@ -11,7 +11,7 @@ CLOUD_SOURCES = [
     os.path.expanduser("~/Library/Mobile Documents/com~apple~CloudDocs/01-Projects"),
     os.path.expanduser("~/Library/Mobile Documents/com~apple~CloudDocs/02-Areas")
 ]
-VAULT_TARGET = "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault/Cloud_Mirror"
+VAULT_TARGET = "/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault/Cloud_Mirror"
 EXTENSIONS = [".md", ".pdf", ".txt", ".json"]
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [CLOUD-SYNC] %(message)s')

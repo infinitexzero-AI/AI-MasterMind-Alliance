@@ -7,7 +7,7 @@
 #          optimal environment for Chromium-based browsers (Comet & Chrome).
 # ==============================================================================
 
-LOG_FILE="/Users/infinite27/AILCC_PRIME/logs/browser_opt_$(date +%Y%m%d_%H%M%S).log"
+LOG_FILE="/Volumes/XDriveBeta/AILCC_PRIME/logs/browser_opt_$(date +%Y%m%d_%H%M%S).log"
 mkdir -p "$(dirname "$LOG_FILE")"
 
 log() {

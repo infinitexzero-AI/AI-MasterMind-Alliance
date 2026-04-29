@@ -2,7 +2,7 @@
 # Step 16: Automated Maintenance Scheduler
 # Performs nightly DB optimization and log rotation.
 
-ROOT="/Users/infinite27/AILCC_PRIME"
+ROOT="/Volumes/XDriveBeta/AILCC_PRIME"
 SCRIPTS="$ROOT/scripts"
 LOGS="$ROOT/06_System/Logs"
 

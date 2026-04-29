@@ -2,7 +2,7 @@
 # AILCC Protocol Alpha - System Health Watchdog
 # Monitors critical services and disk space
 
-LOG_FILE="/Users/infinite27/AILCC_PRIME/logs/system_health.log"
+LOG_FILE="/Volumes/XDriveBeta/AILCC_PRIME/logs/system_health.log"
 DATE=$(date '+%Y-%m-%d %H:%M:%S')
 
 # 1. Check Disk Space
@@ -24,7 +24,7 @@ if [ "$COMPRESSED" -gt 500000 ]; then
 fi
 
 # 4. Update status.json (New)
-STATUS_JSON="/Users/infinite27/AILCC_PRIME/status.json"
+STATUS_JSON="/Volumes/XDriveBeta/AILCC_PRIME/status.json"
 if [ -f "$STATUS_JSON" ]; then
     # Use jq to update available_gb and last_check
     # Note: Using temporary file for safe write

@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [ENTROPY-JUDGE] %(message)s")
 
-PRIME_DIR = "/Users/infinite27/AILCC_PRIME"
+PRIME_DIR = "/Volumes/XDriveBeta/AILCC_PRIME"
 LOG_DIR = os.path.join(PRIME_DIR, "logs")
 STALE_THRESHOLD_DAYS = 7
 LARGE_LOG_THRESHOLD_MB = 50

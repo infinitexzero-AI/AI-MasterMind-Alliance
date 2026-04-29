@@ -11,7 +11,7 @@ import redis
 # progress payload events to the React UI.
 
 REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
-AILCC_PRIME = "/Users/infinite27/AILCC_PRIME"
+AILCC_PRIME = "/Volumes/XDriveBeta/AILCC_PRIME"
 REGISTRY_FILE = os.path.join(AILCC_PRIME, "tasks/consolidated_task_registry.json")
 
 def main():

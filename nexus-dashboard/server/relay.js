@@ -8,14 +8,6 @@ require('dotenv').config({ path: path.join(__dirname, '../.env.local') });
 const OpenAI = require('openai');
 const chokidar = require('chokidar');
 const os = require('os');
-const Redis = require('ioredis');
-// const { Opik } = require('opik');
-// 
-// const opik = new Opik({
-//   apiKey: process.env.OPIK_API_KEY || 'gl7pjDFBvMQcTpL6VNqDC97u9',
-//   workspaceName: process.env.OPIK_WORKSPACE || 'AILCC_PRIME',
-//   projectName: 'Nexus-Dashboard-Relay'
-// });
 
 // Mocked Redis for stability diagnostic
 const redis = {
@@ -80,7 +72,7 @@ const STATE_FILE = path.join(__dirname, '../../dashboard_state.json');
 // Vault Path Localization (Cross-Platform)
 const VAULT_PATH = process.env.AILCC_VAULT || (os.platform() === 'win32' 
   ? path.join(os.homedir(), 'AILCC_PRIME/AILCC_VAULT')
-  : path.join(os.homedir(), 'Library/CloudStorage/OneDrive-Personal/AILCC_VAULT'));
+  : path.join(AILCC_ROOT, 'AILCC_VAULT')); // Dynamic root discovery
 
 const ACADEMIC_MATRIX_FILE = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/hippocampus_storage/academic_matrix/current_semester.json');
 
@@ -411,8 +403,15 @@ app.get('/api/mobile/health', async (req, res) => {
 function getDockerStatus() {
   const { execSync } = require('child_process');
   try {
+    // Check if docker is available first
+    try {
+      execSync('docker --version', { stdio: 'ignore' });
+    } catch (e) {
+      return 'UNAVAILABLE (Docker not in PATH)';
+    }
+
     // Check if key containers are up
-    const running = execSync("/usr/local/bin/docker ps --format '{{.Names}}'", { encoding: 'utf8' }).trim().split('\n');
+    const running = execSync("docker ps --format '{{.Names}}'", { encoding: 'utf8' }).trim().split('\n');
     const essential = ['hippocampus-api', 'hippocampus-redis', 'nexus-dashboard', 'valentine-core'];
     const missing = essential.filter(name => !running.includes(name));
     
@@ -949,17 +948,20 @@ io.on('connection', (socket) => {
 
 // --- CHOKIDAR EVENT-DRIVEN SYNC (Centurion Tier) ---
 
+/*
 // 1. Vault Watcher: Sovereign Results & Node Heartbeats
 const vaultWatcher = chokidar.watch(VAULT_PATH, {
   ignored: /(^|[/\\])\../,
   persistent: true,
+  usePolling: true,
+  interval: 2000,
   depth: 2 // Increased depth to capture project updates
 });
 
 // Watch for The Judge v2.0 verdicts
-const JUDGE_VERDICT_LOG = '/Users/infinite27/AILCC_PRIME/06_System/Logs/the_judge_verdict.jsonl';
+const JUDGE_VERDICT_LOG = path.join(AILCC_ROOT, '06_System/Logs/the_judge_verdict.jsonl');
 if (fs.existsSync(JUDGE_VERDICT_LOG)) {
-  const judgeWatcher = chokidar.watch(JUDGE_VERDICT_LOG, { persistent: true });
+  const judgeWatcher = chokidar.watch(JUDGE_VERDICT_LOG, { persistent: true, usePolling: true, interval: 2000 });
   judgeWatcher.on('change', () => {
     try {
       const data = fs.readFileSync(JUDGE_VERDICT_LOG, 'utf8').trim().split('\n');
@@ -973,7 +975,7 @@ if (fs.existsSync(JUDGE_VERDICT_LOG)) {
           timestamp: new Date().toLocaleTimeString()
         });
       }
-    } catch (e) { /* skip */ }
+    } catch (e) {  }
   });
 }
 
@@ -998,7 +1000,7 @@ vaultWatcher.on('add', (filePath) => {
 
       // Cleanup
       fs.unlinkSync(filePath);
-    } catch (e) { /* skip */ }
+    } catch (e) { }
   }
 
   // Handle Dynamic Node Discovery (Heartbeats)
@@ -1022,7 +1024,7 @@ vaultWatcher.on('unlink', (filePath) => {
 
 // 2. Event Bus Watcher
 if (fs.existsSync(EVENT_BUS_LOG)) {
-  const busWatcher = chokidar.watch(EVENT_BUS_LOG, { persistent: true });
+  const busWatcher = chokidar.watch(EVENT_BUS_LOG, { persistent: true, usePolling: true, interval: 2000 });
   busWatcher.on('change', () => {
     try {
       const data = fs.readFileSync(EVENT_BUS_LOG, 'utf8').trim().split('\n');
@@ -1039,11 +1041,13 @@ if (fs.existsSync(EVENT_BUS_LOG)) {
 }
 
 // 3. Forge Sandbox Watcher (Phase 22)
-const SANDBOX_LOGS = '/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/hippocampus_storage/logic_sandbox/logs';
+const SANDBOX_LOGS = path.join(AILCC_ROOT, '01_Areas/Codebases/ailcc/hippocampus_storage/logic_sandbox/logs');
 if (fs.existsSync(SANDBOX_LOGS)) {
   const sandboxWatcher = chokidar.watch(SANDBOX_LOGS, { 
     ignored: /(^|[/\\])\../,
-    persistent: true 
+    persistent: true,
+    usePolling: true,
+    interval: 2000
   });
   sandboxWatcher.on('add', (filePath) => {
     if (filePath.endsWith('.json')) {
@@ -1066,10 +1070,11 @@ if (fs.existsSync(SANDBOX_LOGS)) {
         
         io.emit('NEURAL_SYNAPSE', synapse);
         io.emit('FORGE_EVENT', log);
-      } catch (e) { /* skip */ }
+      } catch (e) { }
     }
   });
 }
+*/
 
 async function broadcastHeartbeat() {
   const uptimeMs = Date.now() - SERVER_START_TIME;

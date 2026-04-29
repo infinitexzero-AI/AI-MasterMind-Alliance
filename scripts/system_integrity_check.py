@@ -9,7 +9,7 @@ import os
 import json
 from datetime import datetime
 
-ROOT = "/Users/infinite27/AILCC_PRIME"
+ROOT = "/Volumes/XDriveBeta/AILCC_PRIME"
 CHKSUM_FILE = f"{ROOT}/06_System/State/script_integrity.json"
 
 CORE_SCRIPTS = [

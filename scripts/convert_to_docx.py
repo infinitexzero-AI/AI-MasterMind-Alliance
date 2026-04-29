@@ -156,5 +156,5 @@ def create_docx(md_path, docx_path):
 
 if __name__ == "__main__":
     md_file = "/Users/infinite27/.gemini/antigravity/brain/ac330fb6-353a-4aee-857b-0c5c9d27d604/final_draft_mini_lit_review.md"
-    docx_file = "/Users/infinite27/AILCC_PRIME/AI-MasterMind-Alliance/02_Resources/Academics/HLTH-1011/Palk-Ricard_HLTH1011_Final_Draft.docx"
+    docx_file = "/Volumes/XDriveBeta/AILCC_PRIME/AI-MasterMind-Alliance/02_Resources/Academics/HLTH-1011/Palk-Ricard_HLTH1011_Final_Draft.docx"
     create_docx(md_file, docx_file)

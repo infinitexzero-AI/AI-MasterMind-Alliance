@@ -42,7 +42,15 @@ NODE_NAME = os.getenv("NODE_NAME", DEFAULT_NODE)
 AUTH_TOKEN = os.getenv("ALLIANCE_BOT_TOKEN", "antigravity_dev_key")
 
 def safe_paste():
-    """Safely fetch clipboard content, handling macOS NoneType errors with pbpaste fallback."""
+    """Safely fetch clipboard content, prioritizing native pbpaste on macOS."""
+    # 1. Try native macOS pbpaste first (most reliable for headless/locked states)
+    if sys.platform == 'darwin':
+        try:
+            return subprocess.check_output(['pbpaste'], text=True)
+        except Exception:
+            pass
+
+    # 2. Fallback to pyperclip for other platforms or if pbpaste fails
     try:
         text = pyperclip.paste()
         if text is not None:
@@ -50,11 +58,7 @@ def safe_paste():
     except Exception:
         pass
     
-    # Fallback to shell pbpaste on macOS
-    try:
-        return subprocess.check_output(['pbpaste'], text=True)
-    except Exception:
-        return ""
+    return ""
 
 class ClipboardBridge:
     def __init__(self):

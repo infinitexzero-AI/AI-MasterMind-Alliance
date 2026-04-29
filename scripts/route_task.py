@@ -6,7 +6,7 @@ import sqlite3
 from datetime import datetime
 
 # Canonical Paths
-ROOT = "/Users/infinite27/AILCC_PRIME"
+ROOT = "/Volumes/XDriveBeta/AILCC_PRIME"
 INBOX = f"{ROOT}/context/handoffs/inbox"
 ACTIVE = f"{ROOT}/context/handoffs/active"
 DB_PATH = "/Users/infinite27/Antigravity/knowledge.db"

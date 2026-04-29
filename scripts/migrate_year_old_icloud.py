@@ -4,7 +4,7 @@ import shutil
 from pathlib import Path
 
 # Paths
-AUDIT_RESULTS = "/Users/infinite27/AILCC_PRIME/06_System/State/hippocampus_audit_results.json"
+AUDIT_RESULTS = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/hippocampus_audit_results.json"
 TARGET_BASE = "/Volumes/XDriveAlpha/Archive/iCloud_Deep_Archive"
 ICLOUD_PREFIX = "/Users/infinite27/Library/Mobile Documents/com~apple~CloudDocs"
 

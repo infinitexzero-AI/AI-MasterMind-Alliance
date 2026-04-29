@@ -7,7 +7,7 @@ from datetime import datetime
 # Configuration
 REDIS_HOST = os.getenv("REDIS_HOST", "localhost")
 REDIS_PORT = int(os.getenv("REDIS_PORT", 6379))
-SCHOLAR_DATA_PATH = "/Users/infinite27/AILCC_PRIME/06_System/State/scholar_data.json"
+SCHOLAR_DATA_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/State/scholar_data.json"
 
 # Container awareness for state path
 if os.path.exists("/app/06_System/State/scholar_data.json"):

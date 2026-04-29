@@ -7,11 +7,11 @@ import sys
 from datetime import datetime
 
 # Ensure we can import from scripts dir
-sys.path.append("/Users/infinite27/AILCC_PRIME/scripts")
+sys.path.append("/Volumes/XDriveBeta/AILCC_PRIME/scripts")
 from neural_relay_query import query_unified_memory
 
 # Configuration
-LOG_FILE = "/Users/infinite27/AILCC_PRIME/06_System/Logs/event_bus.jsonl"
+LOG_FILE = "/Volumes/XDriveBeta/AILCC_PRIME/06_System/Logs/event_bus.jsonl"
 RELAY_WS = "ws://localhost:3001"
 
 async def watch_bus():

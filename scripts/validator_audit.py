@@ -7,7 +7,7 @@ from datetime import datetime
 # AILCC Validator: Integrity & Audit Pipeline
 # Performs structural, logical, and security audits across the codebase.
 
-BASE_DIR = "/Users/infinite27/AILCC_PRIME"
+BASE_DIR = "/Volumes/XDriveBeta/AILCC_PRIME"
 AUDIT_REPORT = f"{BASE_DIR}/06_System/State/audit_report.json"
 VAULT_INDEX = f"{BASE_DIR}/04_Intelligence_Vault/VAULT_INDEX.json"
 REGISTRY = f"{BASE_DIR}/01_Areas/Codebases/ailcc/registries/agents_registry.json"

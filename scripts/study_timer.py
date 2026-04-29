@@ -3,7 +3,7 @@
 import time, sys, os, json
 from datetime import datetime
 
-VAULT_PATH = "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault"
+VAULT_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault"
 LOG_FILE = os.path.join(VAULT_PATH, "study_sessions.jsonl")
 
 def notify(title, message):

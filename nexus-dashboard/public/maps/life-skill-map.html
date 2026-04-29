@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Antigravity Life Skill Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="antigravity-life-skill-map.css">
+</head>
+<body>
+  <div class="wrap">
+    <div class="topbar">
+      <div class="brand">
+        <div class="logo" aria-label="Antigravity mark">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true">
+            <circle cx="24" cy="24" r="18"></circle>
+            <path d="M14 28c5-1 7-8 10-8s5 7 10 8"></path>
+            <path d="M18 17h12"></path>
+          </svg>
+        </div>
+        <div>
+          <div class="eyebrow">Antigravity Alignment</div>
+          <strong>AI Mastermind Alliance × Joel's Life</strong>
+        </div>
+      </div>
+      <div class="pill">Signal mode: optimize what compounds</div>
+    </div>
+
+    <section class="hero">
+      <div class="hero-card">
+        <div class="eyebrow">Life optimization map</div>
+        <h1 class="hero-title">Develop the skills that unlock leverage.</h1>
+        <p>This dashboard visualizes the strongest growth areas across alliance building, personal stability, research execution, and income resilience. It is tuned for a life where systems, health, learning, and agency need to reinforce each other instead of competing.</p>
+        <div class="stats">
+          <div class="stat"><small>Primary domains</small><strong>6</strong><span>Health, AI, finance, communication, operations, meaning</span></div>
+          <div class="stat"><small>High-leverage skills</small><strong>18</strong><span>Selected for compounding effect across multiple life areas</span></div>
+          <div class="stat"><small>Priority horizon</small><strong>90d</strong><span>Focus on skills that reduce friction fast and scale later</span></div>
+        </div>
+      </div>
+      <div class="panel detail" id="detailPanel">
+        <div class="eyebrow">Selected node</div>
+        <h3>Executive self-regulation</h3>
+        <p>Stabilize energy, attention, emotions, and recovery so every other system has a clean operating floor.</p>
+        <div class="bars" id="detailBars"></div>
+        <div class="matrix" id="detailMatrix"></div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="panel span-7">
+        <div class="eyebrow">Skill constellation</div>
+        <h2 class="font-display text-2xl my-1">Antigravity field map</h2>
+        <p class="text-muted max-w-70ch">Larger nodes carry more strategic leverage. Click any node to inspect why it matters, where it applies, and what micro-practices would make it real.</p>
+        <div class="constellation" id="constellation"></div>
+      </div>
+
+      <div class="panel span-5">
+        <div class="eyebrow">Current architecture</div>
+        <h2 class="font-display text-xl my-1">Leverage profile</h2>
+        <div class="radar-wrap"><canvas id="radar"></canvas></div>
+        <p class="footer-note">The strongest optimization pattern is to lift the weakest foundations enough that AI leverage, research systems, and income execution stop fighting nervous-system overload.</p>
+      </div>
+
+      <div class="panel span-4">
+        <div class="eyebrow">Mission Control: Alliance</div>
+        <div class="path-list">
+          <div class="path"><strong>AI Orchestration</strong> <span class="pill status-pill status-drafted">[DRAFTED]</span><br><span class="text-muted">Prompt design, agent routing, tool-chains.</span></div>
+          <div class="path"><strong>Knowledge Capital</strong> <span class="pill status-pill status-drafted">[DRAFTED]</span><br><span class="text-muted">Second brain, note architecture, SOPs.</span></div>
+          <div class="path"><strong>Alliance Communication</strong> <span class="pill status-pill status-queued">[QUEUED]</span><br><span class="text-muted">Clear directives, feedback loops.</span></div>
+        </div>
+      </div>
+
+      <div class="panel span-4">
+        <div class="eyebrow">Mission Control: Life</div>
+        <div class="path-list">
+          <div class="path"><strong>Stability & Care</strong> <span class="pill status-pill status-drafted">[DRAFTED]</span><br><span class="text-muted">Sleep, emotional regulation, medication.</span></div>
+          <div class="path"><strong>Education Mastery</strong> <span class="pill status-pill status-drafted">[DRAFTED]</span><br><span class="text-muted">Biopsychology, research, academic recovery.</span></div>
+          <div class="path"><strong>Meaning & Identity</strong> <span class="pill status-pill status-queued">[QUEUED]</span><br><span class="text-muted">Values review, anti-shame journaling.</span></div>
+        </div>
+      </div>
+
+      <div class="panel span-4">
+        <div class="eyebrow">Mission Control: Resilience</div>
+        <div class="path-list">
+          <div class="path"><strong>CRA Compliance</strong> <span class="pill status-pill status-priority">[PRIORITY]</span><br><span class="text-muted">2020-2026 backlog, worker classification.</span></div>
+          <div class="path"><strong>Rent & Business</strong> <span class="pill status-pill status-drafted">[DRAFTED]</span><br><span class="text-muted">Low-chaos income, execution loops.</span></div>
+          <div class="path"><strong>Financial Resilience</strong> <span class="pill status-pill status-drafted">[DRAFTED]</span><br><span class="text-muted">Trade rules, cash buffer, risk management.</span></div>
+        </div>
+      </div>
+
+      <div class="panel span-12">
+        <div class="eyebrow">Suggested 90-day path</div>
+        <div class="path-list grid-3">
+          <div class="path"><strong>Month 1 — stabilize & comply</strong><span class="text-muted">Initiate `compliance.cra.worker_classification_2020_2026.v1`, stabilize sleep anchors, and centralize task/note command center.</span></div>
+          <div class="path"><strong>Month 2 — sharpen the stack</strong><span class="text-muted">Refine agent orchestration, research habit loops, academic presentation quality, and consistent mid-task scouting.</span></div>
+          <div class="path"><strong>Month 3 — convert to leverage</strong><span class="text-muted">Archive graduation arc artifacts, productize business templates, and verify long-arc reliability of the Sovereign OS.</span></div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script>
+    const skills = [
+      {id:'regulation', label:'Executive\nself-regulation', x:22, y:28, size:108, color:'#6daa45', leverage:96, urgency:94, compounding:99, difficulty:72, domains:['Health','Focus','Relationships'], actions:['AM/PM check-in ritual','Mood + energy tracking','Sleep anchor and reset protocol']},
+      {id:'ai', label:'AI\norchestration', x:52, y:16, size:102, color:'#4f98a3', leverage:94, urgency:82, compounding:96, difficulty:78, domains:['Alliance','Research','Income'], actions:['Agent role map','Prompt library cleanup','Decision routing rules']},
+      {id:'knowledge', label:'Knowledge\narchitecture', x:73, y:30, size:96, color:'#a86fdf', leverage:91, urgency:80, compounding:95, difficulty:70, domains:['Study','Projects','Memory'], actions:['Second-brain simplification','Template stack by genre','Weekly synthesis note']},
+      {id:'financial', label:'Risk-managed\nfinance', x:81, y:60, size:92, color:'#e8af34', leverage:88, urgency:90, compounding:83, difficulty:76, domains:['Rent','Stress','Autonomy'], actions:['Trade rules with hard limits','Cash buffer habit','Weekly money review']},
+      {id:'academic', label:'Academic\nstorytelling', x:57, y:52, size:88, color:'#bb653b', leverage:84, urgency:86, compounding:79, difficulty:67, domains:['School','Presentations','Confidence'], actions:['Narrative slide flow','Source synthesis drills','Teach-back summaries']},
+      {id:'ops', label:'Operational\nexecution', x:38, y:60, size:90, color:'#4f98a3', leverage:90, urgency:88, compounding:92, difficulty:66, domains:['Weekly systems','Tasks','Output'], actions:['Weekly reset ritual','Single inbox triage','Daily top-3 commitments']},
+      {id:'communication', label:'Alliance\ncommunication', x:32, y:83, size:84, color:'#a86fdf', leverage:79, urgency:74, compounding:81, difficulty:58, domains:['Collaboration','Leadership','Trust'], actions:['Clear directive format','Feedback loops','Delegation templates']},
+      {id:'identity', label:'Meaning &\nidentity repair', x:62, y:84, size:86, color:'#6daa45', leverage:83, urgency:85, compounding:88, difficulty:74, domains:['Motivation','Recovery','Direction'], actions:['Values review','Anti-shame journaling','Future-self planning']},
+      {id:'compliance', label:'Forensic Tax\nCompliance', x:15, y:55, size:94, color:'#f43f5e', leverage:98, urgency:99, compounding:85, difficulty:82, domains:['CRA','Legality','Resilience'], actions:['Worker classification audit','2020-2026 expense reconstruction','Audit-ready vault management']},
+      {id:'sleep', label:'Circadian\nOptimization', x:10, y:20, size:88, color:'#3b82f6', leverage:92, urgency:95, compounding:97, difficulty:65, domains:['Energy','Health','Clarity'], actions:['Darkness protocol (22:00)','AM light exposure','Restorative sleep scoring']},
+      {id:'graduation', label:'Graduation\nArc Strategy', x:85, y:20, size:90, color:'#10b981', leverage:89, urgency:75, compounding:94, difficulty:72, domains:['Graduation','Future','Archive'], actions:['Course credit mapping','Thesis synthesis','Graduation artifact vault']},
+      {id:'vanguard', label:'Vanguard Swarm\nMastery', x:45, y:35, size:98, color:'#6366f1', leverage:95, urgency:80, compounding:98, difficulty:85, domains:['Automation','Telemetry','Efficiency'], actions:['Agentic delegation flow','Cross-node bridge health','Telemetry pattern matching']}
+    ];
+    const links = [
+      ['regulation','ops'],['regulation','identity'],['regulation','financial'],
+      ['ops','ai'],['ops','knowledge'],['ai','knowledge'],
+      ['knowledge','academic'],['academic','communication'],['financial','identity'],
+      ['communication','ai'],
+      ['compliance', 'ops'], ['compliance', 'financial'],
+      ['sleep', 'regulation'], ['sleep', 'ops'],
+      ['graduation', 'knowledge'], ['graduation', 'academic'],
+      ['vanguard', 'ai'], ['vanguard', 'ops']
+    ];
+
+    // Real-time Telemetry Bridge
+    window.addEventListener('message', (event) => {
+      const { type, payload } = event.data;
+      if (type === 'TELEMETRY_SYNC') {
+        console.log('[SkillMap] Live Sync:', payload);
+        // Update radar chart or individual node status based on payload
+        if (payload.focusNode) {
+          selectSkill(payload.focusNode);
+        }
+      }
+    });
+
+    const constellation = document.getElementById('constellation');
+    const detailPanel = document.getElementById('detailPanel');
+    const detailBars = document.getElementById('detailBars');
+    const detailMatrix = document.getElementById('detailMatrix');
+
+    function centerOf(skill){
+      const w = constellation.clientWidth;
+      const h = constellation.clientHeight;
+      return {x: w*(skill.x/100), y: h*(skill.y/100)};
+    }
+
+    function drawConstellation(){
+      constellation.innerHTML = '';
+      links.forEach(([a,b])=>{
+        const A = skills.find(s=>s.id===a), B = skills.find(s=>s.id===b);
+        if(!A || !B) return;
+        const p1 = centerOf(A), p2 = centerOf(B);
+        const dx = p2.x-p1.x, dy = p2.y-p1.y;
+        const len = Math.hypot(dx,dy), ang = Math.atan2(dy,dx)*180/Math.PI;
+        const line = document.createElement('div');
+        line.className='line';
+        line.style.left = p1.x+'px';
+        line.style.top = p1.y+'px';
+        line.style.width = len+'px';
+        line.style.transform = `rotate(${ang}deg)`;
+        constellation.appendChild(line);
+      });
+      skills.forEach(skill=>{
+        const p = centerOf(skill);
+        const node = document.createElement('button');
+        node.className='node';
+        node.style.left = p.x+'px';
+        node.style.top = p.y+'px';
+        node.style.setProperty('--size', skill.size+'px');
+        node.style.background = `radial-gradient(circle at 30% 30%, ${skill.color}, rgba(23,22,20,.92))`;
+        node.innerHTML = `<span>${skill.label.replace(/\n/g,'<br>')}</span>`;
+        node.setAttribute('aria-label', skill.label.replace(/\n/g,' '));
+        node.addEventListener('click', ()=>selectSkill(skill.id));
+        node.dataset.id = skill.id;
+        constellation.appendChild(node);
+      });
+    }
+
+    function selectSkill(id){
+      const skill = skills.find(s=>s.id===id);
+      if(!skill) return;
+      document.querySelectorAll('.node').forEach(n=>n.classList.toggle('active', n.dataset.id===id));
+      detailPanel.querySelector('h3').textContent = skill.label.replace(/\n/g,' ');
+      detailPanel.querySelector('p').textContent = `Why it matters: leverage ${skill.leverage}/100, urgency ${skill.urgency}/100, compounding ${skill.compounding}/100. This skill improves ${skill.domains.join(', ')}.`;
+      detailBars.innerHTML = ['leverage','urgency','compounding','difficulty'].map(k=>`
+        <div class="bar">
+          <label><span>${k[0].toUpperCase()+k.slice(1)}</span><span>${skill[k]}</span></label>
+          <div class="track"><div class="fill" style="width:${skill[k]}%; background:linear-gradient(90deg, ${skill.color}, var(--secondary));"></div></div>
+        </div>`).join('');
+      detailMatrix.innerHTML = `
+        <div class="micro"><h4>Domains touched</h4><ul>${skill.domains.map(d=>`<li>${d}</li>`).join('')}</ul></div>
+        <div class="micro"><h4>Micro-practices</h4><ul>${skill.actions.map(a=>`<li>${a}</li>`).join('')}</ul></div>`;
+    }
+
+    const radar = new Chart(document.getElementById('radar'), {
+      type:'radar',
+      data:{
+        labels:['Self-regulation','AI systems','Knowledge mgmt','Finance discipline','Academic communication','Execution loops'],
+        datasets:[
+          {label:'Current strategic importance', data:[96,94,91,88,84,90], borderColor:'#4f98a3', backgroundColor:'rgba(79,152,163,.22)', pointBackgroundColor:'#4f98a3', pointRadius:3},
+          {label:'Recommended focus intensity', data:[98,86,83,85,79,92], borderColor:'#e8af34', backgroundColor:'rgba(232,175,52,.12)', pointBackgroundColor:'#e8af34', pointRadius:3}
+        ]
+      },
+      options:{
+        maintainAspectRatio:false,
+        scales:{r:{angleLines:{color:'rgba(255,255,255,.08)'},grid:{color:'rgba(255,255,255,.08)'},pointLabels:{color:'#d7d2c7',font:{size:12}},ticks:{display:false},suggestedMin:0,suggestedMax:100}},
+        plugins:{legend:{labels:{color:'#e5e2db'}}}
+      }
+    });
+
+    window.addEventListener('resize', drawConstellation);
+    drawConstellation();
+    selectSkill('regulation');
+  </script>
+</body>
+</html>
+</html>

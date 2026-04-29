@@ -8,7 +8,7 @@ import logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s [AUDIT-DAEMON] %(message)s")
 
 # Load Linear API Key
-ENV_PATH = "/Users/infinite27/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
+ENV_PATH = "/Volumes/XDriveBeta/AILCC_PRIME/01_Areas/Codebases/ailcc/dashboard/.env.local"
 LINEAR_API_KEY = None
 
 try:
@@ -23,7 +23,7 @@ if not LINEAR_API_KEY:
     logging.error("No Linear API Key found. Aborting Audit Daemon.")
     exit(1)
 
-VAULT_DIR = "/Users/infinite27/AILCC_PRIME/04_Intelligence_Vault/Audits"
+VAULT_DIR = "/Volumes/XDriveBeta/AILCC_PRIME/04_Intelligence_Vault/Audits"
 os.makedirs(VAULT_DIR, exist_ok=True)
 STATE_FILE = os.path.join(VAULT_DIR, ".audit_state.json")
 
