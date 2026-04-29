@@ -4,7 +4,7 @@
 **BSc Major in Biology** (Catalog 21/FW)  
 **Psychology Minor + Certificate in Biopsychology**  
 **Report Date:** April 29, 2026  
-**Anticipated Graduation:** December 2026  
+**Anticipated Graduation:** May 2027  
 
 ---
 
