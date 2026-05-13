@@ -11,7 +11,7 @@ const AgentPanelBase: React.FC = () => {
   const error = null; // Controlled by sync status
 
   if (loading) return (
-    <div className="glass-panel p-6 rounded-xl animate-pulse">
+    <div className="glass-card p-6 rounded-xl animate-pulse">
       <div className="h-6 bg-white/10 rounded w-1/4 mb-4"></div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {[1, 2, 3].map(i => <div key={i} className="h-40 bg-white/5 rounded-lg border border-white/5"></div>)}
@@ -29,7 +29,7 @@ const AgentPanelBase: React.FC = () => {
   const showLoading = loading && !error;
 
   if (showLoading) return (
-    <div className="glass-panel p-6 rounded-xl animate-pulse">
+    <div className="glass-card p-6 rounded-xl animate-pulse">
       <div className="h-6 bg-white/10 rounded w-1/4 mb-4"></div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {[1, 2, 3].map(i => <div key={i} className="h-40 bg-white/5 rounded-lg border border-white/5"></div>)}
@@ -38,7 +38,7 @@ const AgentPanelBase: React.FC = () => {
   );
 
   return (
-    <section className="glass-panel p-6 rounded-xl">
+    <section className="glass-card p-6 rounded-xl">
       <header className="flex justify-between items-center mb-6">
         <h2 className="text-xl font-bold text-white flex items-center gap-3">
           <span className="relative flex h-3 w-3">

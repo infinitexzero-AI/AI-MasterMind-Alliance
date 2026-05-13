@@ -15,9 +15,9 @@ module.exports = {
       name: 'nexus-dashboard',
       cwd: path.join(AILCC_ROOT, 'nexus-dashboard'),
       script: 'npm',
-      args: 'run dev -- --port 3008',
+      args: 'run dev -- --port 3007',
       env: {
-        PORT: 3008,
+        PORT: 3007,
         NODE_ENV: 'development',
         AILCC_ROOT: AILCC_ROOT,
         NEXT_TELEMETRY_DISABLED: '1'

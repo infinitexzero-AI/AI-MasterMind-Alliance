@@ -71,9 +71,8 @@ const SystemHUDBase: React.FC = () => {
         setActiveStep('ROUTER');
     };
 
-    // --- RENDER (12-Column Grid) ---
     return (
-        <div className="min-h-screen bg-[#020617] text-slate-200 p-4 font-sans selection:bg-indigo-500/30">
+        <div className="min-h-screen bg-transparent text-slate-200 p-4 font-sans selection:bg-cyan-500/30">
             {/* Header */}
             <header className="mb-4 flex justify-between items-center border-b border-slate-800 pb-4">
                 <div className="flex items-center gap-3">

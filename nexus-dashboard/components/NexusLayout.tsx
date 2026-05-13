@@ -317,8 +317,8 @@ export default function NexusLayout({ children }: { children: React.ReactNode })
          </div>
 
          {/* Sidebar Navigation */}
-         <aside className={`${isSidebarCollapsed ? 'w-20' : 'w-20 lg:w-64'} fixed h-full renaissance-panel border-r border-slate-700/30 z-40 hidden md:flex flex-col bg-slate-950/60 backdrop-blur-xl transition-all duration-300`}>
-            <div className="h-16 flex items-center justify-center lg:justify-start lg:px-6 border-b border-slate-700/30">
+         <aside className={`${isSidebarCollapsed ? 'w-20' : 'w-20 lg:w-64'} fixed h-full renaissance-panel border-r border-white/10 z-40 hidden md:flex flex-col transition-all duration-300`}>
+            <div className="h-16 flex items-center justify-center lg:justify-start lg:px-6 border-b border-white/10">
                <span className={`font-bold tracking-widest hidden ${isSidebarCollapsed ? 'lg:hidden' : 'lg:block'} text-slate-100 text-xl`}>NEXUS</span>
             </div>
 
@@ -420,7 +420,7 @@ export default function NexusLayout({ children }: { children: React.ReactNode })
                </div>
             </nav>
 
-            <div className="p-4 border-t border-slate-700/30">
+            <div className="p-4 border-t border-white/10">
                <div className="flex items-center gap-3">
                   <SystemStatusWidget />
                </div>
@@ -475,7 +475,7 @@ export default function NexusLayout({ children }: { children: React.ReactNode })
 
          {/* Main Content */}
          <div className={`flex-1 ${isSidebarCollapsed ? 'md:ml-20' : 'md:ml-20 lg:ml-64'} flex flex-col relative z-10 transition-all duration-300`} >
-            <header className="h-16 renaissance-panel sticky top-0 z-30 px-6 flex items-center justify-between border-b border-slate-700/30 bg-slate-950/60 backdrop-blur-xl">
+            <header className="h-16 renaissance-panel sticky top-0 z-30 px-6 flex items-center justify-between border-b border-white/10">
                <div className="md:hidden">
                   <button onClick={() => setIsMobileNavOpen(true)} aria-label="Open navigation" className="text-slate-400 hover:text-white">
                      <Menu className="w-6 h-6" />

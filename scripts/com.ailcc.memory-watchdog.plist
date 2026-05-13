@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.ailcc.memory-watchdog</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/infinite27/AILCC_PRIME/scripts/memory_watchdog_hardened.sh</string>
+    </array>
+    <key>RunAtLoad</key>
+    <true/>
+    <key>KeepAlive</key>
+    <true/>
+    <key>ProcessType</key>
+    <string>Interactive</string>
+    <key>Nice</key>
+    <integer>-20</integer>
+    <key>StandardOutPath</key>
+    <string>/tmp/ailcc_memory_watchdog.stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/tmp/ailcc_memory_watchdog.stderr.log</string>
+</dict>
+</plist>

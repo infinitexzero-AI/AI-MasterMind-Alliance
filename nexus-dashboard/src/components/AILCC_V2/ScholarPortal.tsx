@@ -123,8 +123,8 @@ export default function ScholarPortal() {
                             <p className="text-[10px] font-mono text-slate-500">Natural Resource Management · Dr. Larry Swatuk</p>
                         </div>
                     </div>
-                    <span className="px-2 py-1 text-[9px] font-mono font-bold bg-teal-500/10 text-teal-400 border border-teal-500/20 rounded-full uppercase tracking-wider">
-                        IN PROGRESS
+                    <span className="px-2 py-1 text-[9px] font-mono font-bold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 rounded-full uppercase tracking-wider">
+                        COMPLETED
                     </span>
                 </div>
 
