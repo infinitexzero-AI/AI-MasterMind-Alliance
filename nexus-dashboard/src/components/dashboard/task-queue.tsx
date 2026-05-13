@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Globe, Smartphone, Terminal, User, Monitor } from 'lucide-react';
 
-import { useSwarmTelemetry } from '../../../hooks/useSwarmTelemetry';
+import { useSwarmTelemetry } from '@/hooks/useSwarmTelemetry';
 
 interface Task {
   id: string;

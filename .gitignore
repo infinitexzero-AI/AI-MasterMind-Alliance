@@ -273,3 +273,9 @@ storage/
 
 # OpenClaw Exclusions
 .openclaw/
+
+# Hardening Exclusions
+*_backup/
+*.log
+logs/
+ssd_cache/
