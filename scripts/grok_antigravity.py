@@ -363,9 +363,12 @@ def main():
         print("=" * 60)
         sys.exit(0)
         
-    grok_bin = HOME_DIR / ".grok" / "bin" / "grok"
+    # Use agent binary for headless single-turn prompts to prevent TTY hangs, otherwise use grok TUI
+    is_headless = "-p" in sys.argv or "--single" in sys.argv
+    binary_name = "agent" if is_headless else "grok"
+    grok_bin = HOME_DIR / ".grok" / "bin" / binary_name
     if not grok_bin.exists():
-        grok_bin = Path("grok")
+        grok_bin = Path(binary_name)
 
     # Prepare execution arguments
     cmd = [str(grok_bin)] + grok_args
