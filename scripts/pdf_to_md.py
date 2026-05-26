@@ -34,6 +34,7 @@ def extract_pdf(pdf_path):
                 else:
                     md_lines.append(text)
     
+    num_pages = len(doc)
     doc.close()
     
     # Write output
@@ -42,7 +43,7 @@ def extract_pdf(pdf_path):
     with open(out_path, "w") as f:
         f.write("\n".join(md_lines))
     
-    print(f"Extracted {len(doc)} pages -> {out_path}")
+    print(f"Extracted {num_pages} pages -> {out_path}")
     return out_path
 
 if __name__ == "__main__":
