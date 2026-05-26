@@ -187,6 +187,39 @@
 
 ---
 
+## ☁️ CLOUD STORAGE TRIAGE (SSD Buffer + Valentine System Triage – CRITICAL PARALLEL TRACK)
+**Owner**: Antigravity (local exec) + Grok (strategy) via Valentine routing.  
+**Master Doc**: [docs/05_Templates/valentine_cloud_storage_triage_strategy.md](/Volumes/XDriveBeta/AILCC_PRIME/docs/05_Templates/valentine_cloud_storage_triage_strategy.md) (formulated 2026-05-26 under safe ls-1 rules only).  
+**Goal**: Reclaim 20-40+ GB on 112 GB boot SSD (currently ~10.7 GB free) via macOS File Provider online-only + clean Academic structure + selective cold archive to Google. Directly enables smooth academics + physical move decisions (cloud-cold items = lower physical priority).  
+**Method**: 100% safe shallow ops (no du / recursive find / deep scans on CloudStorage or com~apple~CloudDocs – hydration risk). Trust size reports.
+
+### 4-Cloud Roles (Exact)
+- **OneDrive-MountAllisonUniversity (Academic Hot)**: Active Summer 2026 only (PSYC 3141 / BIOL 3991 / CLAS 2501 + in-progress + Obsidian academic vault). New master template: `_ACTIVE_2026_Summer/` + `_SYSTEM/` + `_ARCHIVE_Past_Terms/` staging.
+- **OneDrive-Personal (Warm)**: Identity, current Resume, active personal finance summaries, AILCC_VAULT (audited non-academic).
+- **GoogleDrive-eastcoastfreshcoats@gmail.com (Cold Archive)**: All pre-2026 terms, MATH-1151 (dropped), AILCC_ARCHIVE/DATA/Mirror, old media, bills, books. 6 stale dated mounts = immediate cleanup target.
+- **iCloud com~apple~CloudDocs (Apple Mirror / Edge)**: Desktop + Documents + Photos (Optimize ON) + Shortcuts + AILCC small core + PARA capture. Bulk never here.
+
+### Daily Integration (Add to Existing Pack / Academic Blocks)
+- **Day 1 (26 May)**: 30-45 min storage block (parallel with pack 1 or post-lunch). Create `_ACTIVE_2026_Summer/` skeleton in Academic. Migrate loose current files (CLAS A1, CitSci, Social Neuro, Week 3 iNat) + existing PSYC/BIOL/CLAS subs into it. Batch "Remove Download" (Finder) on all legacy "1st-4th Year" folders, Pictures, Recordings, Notebooks, MATH_PHYS, Attachments. Obsidian vault decision + first test move/link. iCloud Photos Optimize + Remove Download on non-essentials. Commit strategy + any manifest.
+- **Day 2-3**: First archive (MATH-1151 or one old term) from Academic _ARCHIVE staging → Google (manual small batch or new Antigravity script dry-run). Install rclone. Draft `valentine_archive_term.sh` + `storage_daily_snapshot.sh` in `agents/antigravity_calls/bin/`. Cleanup stale Google mounts. Personal old payrolls → online-only.
+- **Day 4-5**: Bulk archive remaining past terms (script-assisted). Full 4-cloud shallow manifests. Final online-only sweep (only _ACTIVE + minimal identity local). pre_move_freeze.sh (or manual) – force hot data local, everything else cloud/online-only. Verify SSD ≥25 GB free.
+- **Day 6 (31 May)**: Freeze confirmation. Git push all artifacts. Physical "Keep" boxes = only hot-tier + first-night essentials.
+
+### Automation (Antigravity Layer – Extend Immediately)
+- New scripts live in `agents/antigravity_calls/bin/` (currently only `check_status`).
+- Core: `valentine_archive_term.sh` (rclone or mv + manifest + Obsidian log entry + --dry-run).
+- Support: `cleanup_stale_cloud_mounts.sh`, `storage_daily_snapshot.sh` (df + shallow ls counts, low-space alert), `pre_move_freeze.sh`.
+- Hooks: Tie to `valentine-core/daily-sprint.sh` or Vanguard morning blocks. Route "archive term" tasks via Valentine to Antigravity.
+- rclone: `brew install rclone` (or static ~/bin) – required for robust cross-cloud moves with verify.
+
+**Risks (Move Window)**: Hydration hangs (small batches + dry-run only), Obsidian-OneDrive churn (pause sync during vault moves; consider iCloud/Git primary long-term), quota, data loss (always manifest first).
+
+**Win Condition (EOD 31 May)**: SSD ≥25 GB free, clean `_ACTIVE_2026_Summer` live + Obsidian co-located or decided, ≥1-2 terms archived, zero stale mounts, manifests + strategy synced to ThinkPad via git, move proceeds with cloud tiers mapped to physical boxes.
+
+**See full strategy doc for inventory tables, exact folder template, classification rules, script sketches, and complete 6-day checklist.** Execute in parallel with academics/pack – this is the SSD buffer enabler.
+
+---
+
 ## 🧠 SWARM COORDINATION & SUPPORT
 - **Comet (web_research_orchestration)**: Any missing rubric details, iNat tutorials, public LiDAR datasets, or specific study citations for PSYC.
 - **Valentine (task_routing)**: Interruptions? Route to correct agent or defer.
@@ -199,9 +232,10 @@
 ## ⚡ IMMEDIATE ZERO-FRICTION ACTION LIST (START NOW)
 1. **Right now (next 5 min)**: Open Obsidian/Moodle for any CLAS A2/A3 rubrics + PSYC quiz study guides. Screenshot or note gaps. Reply here with 1-2 key details (site for LiDAR? experiment chosen for A2?).
 2. **06:00-08:30 Day 1 block**: Execute PSYC Quiz 3 + start A3.
-3. **EOD every day**: 5-min log + update this plan status (or new file).
-4. **If blocked**: Tag @Antigravity or specific swarm member with exact blocker + data needed.
-5. **Move supplies**: Check tape/boxes/markers tonight (add to Day 1 pack block if missing).
+3. **Day 1 parallel 30-45 min Storage Triage block** (see new ☁️ section above + full [valentine_cloud_storage_triage_strategy.md](/Volumes/XDriveBeta/AILCC_PRIME/docs/05_Templates/valentine_cloud_storage_triage_strategy.md)): Create `_ACTIVE_2026_Summer/` skeleton in Academic OneDrive; migrate loose current Summer files + course subs; batch "Remove Download" on legacy folders (target 20-30 GB reclaim). Obsidian vault location decision. iCloud Photos Optimize.
+4. **EOD every day**: 5-min log + update this plan status (or new file). Include storage wins (GB freed, folders cleaned).
+5. **If blocked**: Tag @Antigravity or specific swarm member with exact blocker + data needed.
+6. **Move supplies**: Check tape/boxes/markers tonight (add to Day 1 pack block if missing).
 
 **You are not behind. The swarm has the plan. Execute the next block. We clear this together.**
 
