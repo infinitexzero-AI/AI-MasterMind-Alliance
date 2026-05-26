@@ -36,7 +36,7 @@ if IS_MAC:
     NODE_NAME = "MacBook-Control-Plane"
     CLOUD_SYNC_DIR = HOME_DIR / "Library/Mobile Documents/com~apple~CloudDocs/AILCC_Nexus"
     ACADEMIC_DATA_PATH = HOME_DIR / "Documents/academic_data.json"
-    OBSIDIAN_VAULT = HOME_DIR / "Documents/Claude/Projects/AI Mastermind Academic Alliance/Obsidian Vault"
+    OBSIDIAN_VAULT = HOME_DIR / "Library/CloudStorage/OneDrive-MountAllisonUniversity/_ACTIVE_2026_Summer/Obsidian_Academic_Vault"
 else:
     NODE_NAME = "ThinkPad-Primary-Compute"
     CLOUD_SYNC_DIR = HOME_DIR / "OneDrive" / "AILCC_Nexus"
@@ -144,6 +144,73 @@ def get_swarm_registry():
             pass
     return "Active Swarm: Antigravity (Codebase), Grok (Strategy), Valentine (Task Router)"
 
+def get_active_academic_materials():
+    """Scans OneDrive Academic active course directories and extracts high-signal course reading/lecture context."""
+    if not IS_MAC:
+        return ""
+        
+    active_dir = HOME_DIR / "Library/CloudStorage/OneDrive-MountAllisonUniversity/_ACTIVE_2026_Summer"
+    if not active_dir.exists():
+        return ""
+        
+    lines = []
+    lines.append("\n## 📖 Active Course Lecture & Reading Materials (Week 4 Focus)")
+    materials_found = False
+    
+    # Safe import pdf_to_md
+    sys.path.append(str(AILCC_ROOT / "scripts"))
+    try:
+        from pdf_to_md import extract_pdf
+    except ImportError:
+        extract_pdf = None
+        
+    try:
+        for course_folder in active_dir.iterdir():
+            if course_folder.is_dir() and course_folder.name != "Obsidian_Academic_Vault":
+                course_code = course_folder.name.split("_")[0]
+                lines.append(f"\n### Course: {course_code}")
+                
+                # Check for readings and lectures subdirs
+                subdirs = ["02_Readings_Papers", "03_Lectures_Slides"]
+                for subdir_name in subdirs:
+                    subdir_path = course_folder / subdir_name
+                    if subdir_path.exists() and subdir_path.is_dir():
+                        for file_path in subdir_path.iterdir():
+                            if file_path.is_file():
+                                ext = file_path.suffix.lower()
+                                
+                                # Silent PDF text-extraction trigger
+                                if ext == ".pdf" and extract_pdf:
+                                    md_equiv = file_path.with_suffix(".md")
+                                    if not md_equiv.exists():
+                                        try:
+                                            print(f"📄 [Antigravity Ingestion] Converting PDF to clean Markdown: {file_path.name}...")
+                                            extract_pdf(str(file_path))
+                                        except Exception as e:
+                                            print(f"⚠️ PDF extraction failed on {file_path.name}: {e}")
+                                
+                                # Read converted MD or TXT summaries
+                                if ext in (".md", ".txt"):
+                                    try:
+                                        content = file_path.read_text().splitlines()
+                                        summary = "\n".join(content[:60]) # First 60 lines for overview
+                                        if len(content) > 60:
+                                            summary += "\n... (truncated for token economy)"
+                                        
+                                        lines.append(f"\n* **File: {file_path.name} (Abstract / Excerpt)**:")
+                                        lines.append("```markdown")
+                                        lines.append(summary)
+                                        lines.append("```")
+                                        materials_found = True
+                                    except Exception as e:
+                                        pass
+    except Exception as e:
+        print(f"⚠️ Safe academic materials scan failed: {e}")
+        
+    if materials_found:
+        return "\n".join(lines)
+    return ""
+
 # ──────────────────────────────────────────────────────────────────────────────
 # 3. Cross-Device Continuity (Last Synced Session Ingestion)
 # ──────────────────────────────────────────────────────────────────────────────
@@ -241,6 +308,7 @@ def compile_grok_rules(enable_telemetry=True):
     obsidian_info = get_obsidian_tasks()
     swarm_info = get_swarm_registry()
     last_session_info = get_last_session_context()
+    academic_materials = get_active_academic_materials()
     
     rules = f"""
 # ⚡️ ANTIGRAVITY DYNAMIC SYSTEM CONTEXT
@@ -261,6 +329,7 @@ def compile_grok_rules(enable_telemetry=True):
 {academic_info}
 {obsidian_info}
 {last_session_info}
+{academic_materials}
 
 ## 🎯 Directives for Grok Terminal Agent
 1. You are the **Strategy & Strategy Swarm Lead** operating as a collaborative client within the Antigravity ecosystem.
