@@ -191,8 +191,8 @@ def check_git_status():
     print("🔍 [Antigravity Synapse] Checking repository sync status...")
     try:
         # Check if local branch is behind remote
-        subprocess.run(["git", "fetch"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=5)
-        status_res = subprocess.run(["git", "status", "-uno"], capture_output=True, text=True, check=True)
+        subprocess.run(["git", "fetch"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, timeout=5, cwd=str(AILCC_ROOT))
+        status_res = subprocess.run(["git", "status", "-uno"], capture_output=True, text=True, check=True, cwd=str(AILCC_ROOT))
         
         if "your branch is behind" in status_res.stdout.lower():
             print("⚠️  [CONFLICT WARNING] Your local branch is behind the remote repository.")
@@ -202,11 +202,11 @@ def check_git_status():
             if sys.stdin.isatty():
                 ans = input("   Would you like to run `git pull --rebase` now? (y/N): ").strip().lower()
                 if ans == 'y':
-                    subprocess.run(["git", "pull", "--rebase"])
+                    subprocess.run(["git", "pull", "--rebase"], cwd=str(AILCC_ROOT))
                     print("✅ Pulled remote successfully.")
         
         # Check if dirty
-        diff_res = subprocess.run(["git", "diff", "--name-only"], capture_output=True, text=True, check=True)
+        diff_res = subprocess.run(["git", "diff", "--name-only"], capture_output=True, text=True, check=True, cwd=str(AILCC_ROOT))
         if diff_res.stdout.strip():
             print("⚠️  [DIRTY STATE] You have uncommitted changes in the workspace.")
             print("   Transcripts will still be saved, but resolve working tree dirty states promptly.")
