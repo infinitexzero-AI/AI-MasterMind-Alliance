@@ -11,8 +11,8 @@ LAST_NOTIFY_FILE="/tmp/ailcc_last_notify"
 
 # Thresholds
 # On macOS, "Free" is deceptive. We look at "Available" (Free + Inactive + Speculative)
-AVAIL_RAM_CRITICAL=400         # MB
-THRASHING_THRESHOLD=500       # Delta in thrashing detected count
+AVAIL_RAM_CRITICAL=800         # MB (Increased from 400 for earlier intervention)
+THRASHING_THRESHOLD=250       # events (Decreased from 500 to catch thrashing faster)
 
 # Initial State
 LAST_THRASH_COUNT=$(/usr/sbin/sysctl -n vm.compressor_swapper_swapout_thrashing_detected 2>/dev/null || echo "0")
@@ -45,9 +45,9 @@ check_memory() {
 
     log "Status: Avail RAM: ${AVAIL_MB}MB (Free: ${FREE_MB}MB) | Thrash Delta: ${THRASH_DELTA}"
 
-    if [ "$AVAIL_MB" -lt "$AVAIL_RAM_CRITICAL" ]; then
+    if [[ -n "$AVAIL_MB" && "$AVAIL_MB" -lt "$AVAIL_RAM_CRITICAL" ]]; then
         handle_critical "Low Available RAM: ${AVAIL_MB}MB"
-    elif [ "$THRASH_DELTA" -gt "$THRASH_THRESHOLD" ]; then
+    elif [[ -n "$THRASH_DELTA" && "$THRASH_DELTA" -gt "$THRASH_THRESHOLD" ]]; then
         handle_critical "Compressor Thrashing Detected: +${THRASH_DELTA} events"
     fi
 }
@@ -66,14 +66,24 @@ handle_critical() {
     log "  - Restarting PM2 services..."
     /usr/local/bin/pm2 restart all --max-memory-restart 400M 2>/dev/null || true
 
-    # 3. Target huge Antigravity/Language processes
+    # 3. Aggressive System Purge
+    log "  - Attempting system memory purge..."
+    sudo /usr/sbin/purge 2>/dev/null || log "    ! Purge failed (requires sudo or system permission)"
+
+    # 4. Target huge Antigravity/Language processes
     log "  - Pruning runaway helpers..."
-    /bin/ps -eo pid,rss,comm | /usr/bin/grep -E "Antigravity Helper|language_server" | while read -r pid rss comm; do
-        if [ "$rss" -gt 1048576 ]; then # 1GB
+    /bin/ps -eo pid,rss,comm | /usr/bin/grep -E "Antigravity Helper|language_server|Code Helper" | while read -r pid rss comm; do
+        if [[ -n "$rss" && "$rss" -gt 1048576 ]]; then # 1GB
             log "    - Killing $comm (PID $pid) - RSS: $((rss/1024))MB"
             /bin/kill -9 "$pid" 2>/dev/null
         fi
     done
+
+    # 5. Docker Cleanup if extreme
+    if [[ -n "$AVAIL_MB" && "$AVAIL_MB" -lt 300 ]]; then
+        log "  - Extreme load: Pruning Docker containers..."
+        /usr/local/bin/docker container prune -f 2>/dev/null || true
+    fi
 
     # 4. Notify user (with 2-minute cooldown)
     CURRENT_TIME=$(date +%s)

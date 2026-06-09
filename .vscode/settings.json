@@ -31,10 +31,10 @@
   "files.watcherExclude": {
     "**/node_modules/*/**": true,
     "**/.next/*/**": true,
-    "/Volumes/XDriveBeta/*": true,
     "/Volumes/XDriveBeta/cache/*": true
   },
   "eslint.workingDirectories": [
+    "./nexus-dashboard",
     "./01_Areas/Codebases/ailcc",
     "./01_Areas/Codebases/ailcc/nexus-dashboard",
     "./01_Areas/Codebases/ailcc-ios-bridge"
@@ -43,8 +43,10 @@
   "terminal.integrated.env.osx": {
     "PATH": "/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:${env:PATH}"
   },
-  "python.defaultInterpreterPath": "/usr/local/bin/python3",
-  "python.interpreterPath": "/usr/local/bin/python3",
+  "typescript.tsdk": "/Users/infinite27/AILCC_PRIME/ssd_cache/node_modules/typescript/lib",
+  "python.defaultInterpreterPath": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+  "python.interpreterPath": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
   "python.analysis.extraPaths": [
     "./scripts"
   ],

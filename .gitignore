@@ -279,3 +279,9 @@ storage/
 *.log
 logs/
 ssd_cache/
+
+# Machine-specific symlinks and heavy/temporary directories
+_archive/
+scratch/
+node_modules
+ui
