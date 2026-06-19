@@ -1,26 +1,26 @@
 {
-  "timestamp": "2026-05-25T21:02:48.228717Z",
+  "timestamp": "2026-06-19T04:56:27.869057Z",
   "ssd": {
-    "free_gb": 10.67,
+    "free_gb": 14.79,
     "total_gb": 112.7,
     "status": "healthy"
   },
   "drives": {
     "Alpha": {
       "mounted": true,
-      "free_gb": 1360.78,
+      "free_gb": 1326.13,
       "total_gb": 1863.0
     },
     "Beta": {
       "mounted": true,
-      "free_gb": 1586.05,
+      "free_gb": 1587.92,
       "total_gb": 1862.8
     }
   },
   "cloud": {
     "iCloud": {
       "active": true,
-      "local_size_gb": 0.52
+      "local_size_gb": 0.64
     },
     "OneDrive": {
       "active": false,
