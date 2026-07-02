@@ -231,3 +231,11 @@ storage/
 # Executables
 *.exe
 
+
+
+# --- AMA cleanup 2026-07-02 ---
+.DS_Store
+*_results.txt
+scratch/
+snapshots/
+_archive/
