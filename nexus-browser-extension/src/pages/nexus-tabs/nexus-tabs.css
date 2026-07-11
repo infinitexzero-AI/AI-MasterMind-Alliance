@@ -1,0 +1,66 @@
+:root[data-theme="dark"] {
+  --bg: #070a0f;
+  --bg-gradient: radial-gradient(circle at top right, #0c121e, #06090d);
+  --panel: rgba(17, 25, 40, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.08);
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --accent: #10b981;
+  --secondary: #3b82f6;
+  --shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+* { box-sizing: border-box; }
+html, body {
+  margin: 0; padding: 0; min-height: 100vh;
+  font-family: -apple-system, sans-serif;
+  background: var(--bg-gradient);
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 1200px; margin: 0 auto; padding: 40px 24px;
+}
+
+header {
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--glass-border);
+  padding-bottom: 24px;
+}
+
+h1 { margin: 0; font-size: 28px; }
+.sub { color: var(--muted); margin-top: 8px; }
+
+.glass-card {
+  background: var(--panel);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.tab-group-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--glass-border);
+}
+.tab-group-header h2 { margin: 0; font-size: 18px; }
+.tab-list { list-style: none; padding: 0; margin: 0; }
+.tab-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.tab-item:last-child { border-bottom: none; }
+.tab-item img { width: 16px; height: 16px; border-radius: 4px; }
+.tab-item a { color: var(--secondary); text-decoration: none; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tab-item a:hover { text-decoration: underline; color: var(--text); }
+.tab-actions button {
+  background: transparent; border: none; color: var(--muted); cursor: pointer;
+}
+.tab-actions button:hover { color: var(--danger); }
+.group-actions button {
+  background: var(--secondary); color: white; border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-size: 14px;
+}
+.group-actions button:hover { opacity: 0.9; }

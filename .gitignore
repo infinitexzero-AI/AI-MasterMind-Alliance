@@ -285,3 +285,13 @@ _archive/
 scratch/
 node_modules
 ui
+
+# Local Workspace configurations & system caches (MacBook vs. ThinkPad specific)
+.obsidian/
+.vscode/
+claude_desktop_config.json
+crash_bytes.bin
+draft_copy.md
+nexus-dashboard/.next/
+nexus-dashboard/build/
+nexus-dashboard/dist/

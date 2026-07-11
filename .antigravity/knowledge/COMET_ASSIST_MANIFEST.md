@@ -112,10 +112,10 @@ interface CometResponse {
     ↓
 [Webhook to Comet]
     ↓
-[Comet Verification]
+[Comet Verification (Independent Grader)]
     ↓ (Decision)
-    ├─→ [Approve] → Memory Store
-    ├─→ [Retry] → Dispatcher (new attempt)
+    ├─→ [Approve] → Distill Lesson → Memory Store (`fable_state_memory.md`)
+    ├─→ [Retry] → Dispatcher (new attempt with corrected rubric)
     ├─→ [Reject] → Secondary Agent
     └─→ [Escalate] → Human Review Queue
 ```
@@ -126,6 +126,7 @@ interface CometResponse {
 |-------|---------|---------|--------|
 | `task-pending` | Dispatch begins | Comet logs start time | Cost pre-calculation |
 | `task-complete` | Agent finishes | Comet verifies output | Approval/retry decision |
+| `lesson-learned` | Comet Verifies | Comet distills rule | Writes to `fable_state_memory.md` |
 | `task-failed` | Agent error | Comet analyzes error | Escalation or retry |
 | `escalation` | Manual trigger | Comet routes to human | Ticket creation |
 

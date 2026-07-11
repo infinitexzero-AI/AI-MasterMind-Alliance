@@ -2,34 +2,36 @@
 
 ## 1. Agent Roster & Capabilities
 
-### 🧠 Antigravity (The Architect)
-*   **Role:** Primary autonomous pair-programmer and task executor.
+### 🧠 Antigravity (The Architect & Maker)
+*   **Role:** Primary autonomous pair-programmer, task executor, and "Maker" in the Golden Rule framework.
 *   **Core Abilities:**
     *   Complex coding & refactoring.
     *   System command execution (terminal).
     *   File system manipulation.
     *   Browser automation (via sub-agent).
     *   Tool use (MCP servers: GitKraken, CloudRun, Linear).
-*   **Specialization:** Deep workspace integration, "hands-on" development.
+*   **Specialization:** Deep workspace integration, "hands-on" development. Never grades its own output.
 
-### ☄️ Comet Assist (The Supervisor)
-*   **Role:** Multi-agent supervisor, research coordinator, and quality assurance.
+### ☄️ Comet Assist (The Supervisor & Verifier)
+*   **Role:** Independent Grader, multi-agent supervisor, research coordinator, and quality assurance.
 *   **Core Abilities:**
-    *   **Verification:** Validates output from other agents (accuracy, safety, completeness).
+    *   **Verification (Maker != Verifier):** Strictly grades output from the Maker (Antigravity/Claude) against a rubric. Does not generate the output itself.
+    *   **Lesson Distillation:** Writes lessons learned into the Memory Layer (fable_state_memory.md) after verification (Self-Improvement Loop).
     *   **Research:** Real-time web research & fact-checking.
     *   **Routing:** Dispatches tasks to appropriate agents (Claude vs. OpenAI vs. Grok).
     *   **Cost/Rate Monitoring:** Tracks token usage and API costs; prevents overruns.
     *   **Escalation:** Triggers human review for critical failures or high-risk decisions.
-*   **Key Workflows:** `web_research`, `incident_escalation`, `task_verification`.
+*   **Key Workflows:** `web_research`, `incident_escalation`, `task_verification`, `lesson_distillation`.
 
-### 🧠 Claude (The Analyst)
-*   **Role:** Deep analysis, code generation, and security auditing.
+### 🧠 Claude / Fable 5 (The Analyst & Mythos-Tier Engine)
+*   **Role:** Deep analysis, Fable 5 logic abstraction, and memory-aware reasoning via Claude Desktop.
 *   **Core Abilities:**
-    *   **Architecture Review:** Analyzes code structure, design patterns, and scalability.
-    *   **Code Generation:** Produces production-ready TypeScript/Python modules.
+    *   **Mythos-Tier Reasoning:** Leverages the Four-Layer Architecture (Primitives, Orchestration, Memory, Self-Improvement).
+    *   **Architecture Review:** Analyzes code structure, design patterns, and scalability using distilled rules from `fable_state_memory.md`.
+    *   **Code Generation:** Produces production-ready modules based on strict rubrics.
     *   **Security Auditing:** Checks for OWASP vulnerabilities and data protection issues.
     *   **Documentation:** Generates comprehensive API docs and guides.
-*   **Prompts:** `C1_Code_Architecture_Review`, `C3_Security_Audit`, `C2_Generate_TS_Module`.
+*   **Prompts:** `C1_Code_Architecture_Review`, `C3_Security_Audit`, `C2_Generate_TS_Module`, `F5_State_Injection`.
 
 ### ⚡ OpenAI / ChatGPT (The Accelerator)
 *   **Role:** Rapid task execution, summarization, and integration.

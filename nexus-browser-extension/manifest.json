@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Nexus Browser Assistant",
+  "version": "1.0.0",
+  "description": "Tab management, routines, and agentic Teach Mode for the Nexus ecosystem.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/content/teach-mode.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "storage",
+    "activeTab",
+    "scripting",
+    "tabGroups"
+  ],
+  "host_permissions": [
+    "http://localhost/*",
+    "http://127.0.0.1/*",
+    "<all_urls>"
+  ]
+}

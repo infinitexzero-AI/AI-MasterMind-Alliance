@@ -99,11 +99,8 @@ def get_academic_context():
             pass
             
     return (
-        "Active Load (Summer 2026):\n"
-        "  * PSYC 3141 (Social Neuroscience) - Active\n"
-        "  * BIOL 3991 (Applied Citizen Science) - Active\n"
-        "  * CLAS 2501 (Intro to Archaeology) - Active\n"
-        "  * (MATH 1151 is dropped/paused)"
+        "Active Load: None (Summer 2026 completed successfully. Passed CLAS 2501, BIOL 3991, PSYC 3141).\n"
+        "Pre-registered for Fall 2026: COMP 1631, BIOL 2701 (+labs), PSYC 4101."
     )
 
 def get_obsidian_tasks():
@@ -323,7 +320,7 @@ def compile_grok_rules(enable_telemetry=True):
 {swarm_info}
 
 ## Current Life Context & Tasks
-- Joel Alfred Palk-Ricard (Joel) Move-out deadline: June 1, 2026 (URGENT - frontload buffers!)
+- Move belongings to Sackville, NB for Fall 2026 (housing search pending)
 
 ## Course Workload Context (Summer 2026)
 {academic_info}

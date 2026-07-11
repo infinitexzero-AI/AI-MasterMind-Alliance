@@ -9,6 +9,7 @@ const path = require('path');
 
 const DISCOVERY_REPORT = '/Users/infinite27/AILCC_PRIME/AI_Mastermind_Exports/_Aggregated/artifacts/discovery_report.md';
 const LOG_FILE = '/Users/infinite27/AILCC_PRIME/06_System/Logs/refactor_agent_task101_v3.log';
+const FABLE_STATE_MEMORY = '/Users/infinite27/AILCC_PRIME/.antigravity/knowledge/fable_state_memory.md';
 
 function log(msg) {
     const timestamp = new Date().toISOString();
@@ -84,6 +85,16 @@ const TARGETS = [
 ];
 
 log('🚀 Starting Task 101 - Sovereign Audit (Self-Healing Loop)...');
+
+// Mythos-Tier Memory Injection
+if (fs.existsSync(FABLE_STATE_MEMORY)) {
+    const memory = fs.readFileSync(FABLE_STATE_MEMORY, 'utf8');
+    log('🧠 Inheriting sharpened system rules from fable_state_memory.md');
+    // In a full LLM integration, 'memory' would be prepended to the system prompt here.
+} else {
+    log('⚠️ fable_state_memory.md not found. Starting from zero (Not Mythos-Tier).');
+}
+
 TARGETS.forEach(target => {
     if (fs.existsSync(target)) {
         splitMarkdown(target);
