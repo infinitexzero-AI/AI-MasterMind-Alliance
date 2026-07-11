@@ -127,8 +127,10 @@ def get_academic_context():
             pass
             
     return (
-        "Active Load: None (Summer 2026 completed successfully. Passed CLAS 2501, BIOL 3991, PSYC 3141).\n"
-        "Pre-registered for Fall 2026: COMP 1631, MATH 1151 (+lab), PSYC 4601. (Note: BIOL 2701 biostats gap identified)."
+        "Active Load: None (Summer 2026 completed successfully. Passed CLAS 2501 with A, BIOL 3991 with A, PSYC 3141 with B. Term GPA: 3.667).\n"
+        "Registered for Fall 2026: COMP 1631, PSYC 4101. (BIOL 2701 biostats is NOT registered; this is a gap to resolve during degree audit).\n"
+        "Registered for Winter 2027: BIOL 2201 + Lab, BIOL 3041, BIOL 3221, BIOL 3631.\n"
+        "Total Credits Earned: 129. Cumulative GPA: 2.0 (Cleared academic probation)."
     )
 
 def get_obsidian_tasks():
