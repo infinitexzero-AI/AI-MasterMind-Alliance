@@ -20,6 +20,14 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
+# Force UTF-8 output encoding on Windows to support emojis in console print statements
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 # ──────────────────────────────────────────────────────────────────────────────
 # 1. Device Hostname Detection & Path Mapping
 # ──────────────────────────────────────────────────────────────────────────────
@@ -35,13 +43,22 @@ AILCC_ROOT = HOME_DIR / "AILCC_PRIME"
 if IS_MAC:
     NODE_NAME = "MacBook-Control-Plane"
     CLOUD_SYNC_DIR = HOME_DIR / "Library/Mobile Documents/com~apple~CloudDocs/AILCC_Nexus"
-    ACADEMIC_DATA_PATH = HOME_DIR / "Documents/academic_data.json"
+    ACADEMIC_DATA_PATH = AILCC_ROOT / "06_System" / "State" / "scholar_data.json"
     OBSIDIAN_VAULT = HOME_DIR / "Library/CloudStorage/OneDrive-MountAllisonUniversity/_ACTIVE_2026_Summer/Obsidian_Academic_Vault"
 else:
     NODE_NAME = "ThinkPad-Primary-Compute"
     CLOUD_SYNC_DIR = HOME_DIR / "OneDrive" / "AILCC_Nexus"
-    ACADEMIC_DATA_PATH = AILCC_ROOT / "docs" / "03_Data_Stores" / "academic_data.json"
-    OBSIDIAN_VAULT = AILCC_ROOT / "04_Intelligence_Vault" / "Obsidian_Vault"
+    ACADEMIC_DATA_PATH = AILCC_ROOT / "06_System" / "State" / "scholar_data.json"
+    
+    # Resolve ThinkPad Obsidian vault path via OneDrive
+    mta_vault = HOME_DIR / "OneDrive - Mount Allison University" / "_ACTIVE_2026_Summer" / "Obsidian_Academic_Vault"
+    generic_vault = HOME_DIR / "OneDrive" / "_ACTIVE_2026_Summer" / "Obsidian_Academic_Vault"
+    if mta_vault.exists():
+        OBSIDIAN_VAULT = mta_vault
+    elif generic_vault.exists():
+        OBSIDIAN_VAULT = generic_vault
+    else:
+        OBSIDIAN_VAULT = AILCC_ROOT / "04_Intelligence_Vault" / "Obsidian_Vault"
 
 # Git repository session storage path (synced via git push/pull)
 GIT_SESSION_DIR = AILCC_ROOT / "docs" / "05_Tasks" / "Grok_Sessions"
@@ -78,16 +95,27 @@ def get_academic_context():
     if ACADEMIC_DATA_PATH.exists():
         try:
             data = json.loads(ACADEMIC_DATA_PATH.read_text())
-            courses = data.get("courses", {})
-            grades = data.get("grades", {})
-            
             lines = []
-            lines.append("Active Load (Summer 2026):")
-            for code, details in courses.items():
-                status = "Dropped/Paused" if details.get("paused") else "Active"
-                if status == "Active":
-                    grade = grades.get(code, {}).get("current", "N/A")
-                    lines.append(f"  * {code} ({details.get('name')}) | Grade: {grade}")
+            
+            # Support 06_System/State/scholar_data.json schema
+            progress = data.get("degree_progress", {})
+            if progress:
+                lines.append(f"Degree: {progress.get('degree')} | GPA: {progress.get('current_gpa')} (Probation Cleared) | Credits: {progress.get('credits_completed')}/120")
+            
+            courses = data.get("courses", [])
+            if isinstance(courses, list):
+                lines.append("Active Load (Fall 2026):")
+                for course in courses:
+                    lines.append(f"  * {course.get('code')} ({course.get('name')})")
+            elif isinstance(courses, dict):
+                # Support legacy academic_data.json schema
+                lines.append("Active Load:")
+                grades = data.get("grades", {})
+                for code, details in courses.items():
+                    status = "Dropped/Paused" if details.get("paused") else "Active"
+                    if status == "Active":
+                        grade = grades.get(code, {}).get("current", "N/A")
+                        lines.append(f"  * {code} ({details.get('name')}) | Grade: {grade}")
             
             deadlines = data.get("upcoming_deadlines", [])
             if deadlines:
@@ -100,7 +128,7 @@ def get_academic_context():
             
     return (
         "Active Load: None (Summer 2026 completed successfully. Passed CLAS 2501, BIOL 3991, PSYC 3141).\n"
-        "Pre-registered for Fall 2026: COMP 1631, BIOL 2701 (+labs), PSYC 4101."
+        "Pre-registered for Fall 2026: COMP 1631, MATH 1151 (+lab), PSYC 4601. (Note: BIOL 2701 biostats gap identified)."
     )
 
 def get_obsidian_tasks():

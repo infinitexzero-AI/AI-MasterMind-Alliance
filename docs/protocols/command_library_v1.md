@@ -1,27 +1,25 @@
-# 📖 The Spell Book (Command Library) v1.0
+# 📖 The Spell Book (Command Library) v1.1
 
-The "Spell Book" stores recurring, high-impact commands designed for an intuitive environment based on your usage patterns.
+The "Spell Book" maps live "Moves" (Workflows) in the AILCC Prime ecosystem to their triggers and targets.
 
 ## 🔮 Command Schema
 
 | Field | Description |
 | :--- | :--- |
-| `name` | Human-readable name (e.g., "Full System Sync"). |
-| `trigger` | CLI or Webhook alias. |
-| `target` | The agent or system component executing the spell. |
-| `spell_string` | The actual executable code/command. |
+| `name` | Human-readable name (e.g., "Grok strategy session"). |
+| `trigger` | CLI or chat command trigger (e.g., `/grok`). |
+| `target` | The active agent or system component executing the action. |
+| `description` | The specific outcome of the command. |
 
-## 🧪 Initial Spells
+## 🧪 Live Moves
 
-| Name | Trigger | Target | Effect |
+| Name | Trigger | Target | Description |
 | :--- | :--- | :--- | :--- |
-| **Pulsar Sync** | `spell_sync` | Antigravity | Syncs all local markdown state to knowledge.db. |
-| **Evidence Scan** | `spell_scan` | Comet | Initiates MTA email search parameters. |
-| **Judge Audit** | `spell_audit` | Grok | Streams the last 100 log lines for strategic review. |
-| **Nexus Reboot** | `spell_reboot` | System | Restarts the Orchestrator and core services. |
+| **Grok Session** | `/grok` | Grok (Strategy) | Initiates an interactive strategic session utilizing `scripts/grok_antigravity.py` with dynamic workspace and academic context. |
+| **Vanguard Mesh** | `/mesh` | System (Mesh) | Queries status and manages the local Vanguard orchestrator daemons (`scripts/vanguard_bridge.py`). |
+| **Dual-Channel Sync** | `/sync` | Git (Repo) | Checks sync status and executes dual-channel synchronization via `scripts/git_sync_agent.py`. |
+| **Valentine Mobile** | `/valentine-mobile` | Grok (Mobile) | Interfaces with the iOS Valentine capture and Siri voice-status hook via `procedures/git_sync_voice.txt`. |
 
 ## 🛠️ Usage
 
-Spells can be cast via:
-1. `scripts/cast_spell.py <spell_name>`
-2. Nexus Dashboard "Spell Book" widget.
+Cast spells by running the target python/bash scripts directly, or calling them via the command center console.
