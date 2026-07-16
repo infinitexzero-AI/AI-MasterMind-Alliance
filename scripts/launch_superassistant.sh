@@ -33,4 +33,4 @@ echo "---------------------------------------------------"
 
 # Using npx to run the proxy interactively
 # We assume node is available in the environment
-npx -y @srbhptl39/mcp-superassistant-proxy@latest --config "$SUPERASSISTANT_CONFIG" --port $PORT
+npx -y @srbhptl39/mcp-superassistant-proxy@latest --config "$SUPERASSISTANT_CONFIG" --port $PORT --outputTransport ws
